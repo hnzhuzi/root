@@ -1,0 +1,38 @@
+node('master') {
+    try {
+        stage('代码拉取') {
+			git branch: "${BranchName}",  credentialsId: '62d4e2d1-2de5-4bf1-8cd5-5aada5dff4f1', url: 'http://bqjr@git.bqjr.club/FSSD/APS.git'
+		}
+        stage('项目部署') {
+			if ("$MODULE".contains('msgmgr')) {
+				dir('aps') {
+					sh "cp -a /jenkins_nfs/data/conf/aps/bq_aps_sit/env.properties msgmgr-base/src/main/resources/config/"
+					sh "/usr/local/apache-maven-3.3.9-jdk1.8/bin/mvn -Dmaven.test.skip=true clean package"
+					sh "scp -P 10022 msgmgr-base/target/bqjr.war weblogic@10.83.64.127:/home/weblogic/sftp/msgmgr"
+					sh "ssh -p 10022 weblogic@10.83.64.127 'sh -x /home/weblogic/shell/tomcat_deploy.sh'"
+	         	}
+			}
+
+			if ("$MODULE".contains('job-executor')) {
+				dir('aps') {
+					sh "cp -a /jenkins_nfs/data/conf/aps/bq_aps_sit/{application.yml,application-sit.yml} aps-xxl-job-executor/src/main/resources/"
+					sh "/usr/local/apache-maven-3.3.9-jdk1.8/bin/mvn -Dmaven.test.skip=true clean package"
+					sh "scp -P 10022 aps-xxl-job-executor/target/aps-xxl-job-executor-*.jar weblogic@10.83.64.127:/home/weblogic/sftp/job-executor"
+					sh "ssh -p 10022 weblogic@10.83.64.127 'sh -x /home/weblogic/shell/springboot_deploy_1.sh'"
+				}
+			}
+
+			if ("$MODULE".contains('cts-vue')) {
+				dir('bqjr-cts/bqjr-cts-admin-vue') {
+					sh "/usr/local/node-v10.16.0-linux-x64/bin/npm --registry=https://registry.npm.taobao.org --cache=/root/.npm/.cache/cnpm --disturl=https://npm.taobao.org/dist --userconfig=/root/.cnpmrc install; /usr/local/node-v10.16.0-linux-x64/bin/npm run test; cd dist; zip -r admin-vue.zip ./"
+					sh "scp -P 10022 dist/*.zip weblogic@10.83.64.118:/home/weblogic/sftp/admin-vue"
+					sh "ssh -p 10022 weblogic@10.83.64.118 'sudo sh -x /home/weblogic/shell/web_deploy.sh'"
+				}
+			}
+		}
+    } 
+	catch(any) {
+        currentBuild.result = 'FAILURE'
+        throw any
+	}
+}

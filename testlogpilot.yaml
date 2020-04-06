@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tomcat
+spec:
+  containers:
+  - name: tomcat
+    image: "harbor.k8s.maimaiti.site/library/tomcat:8-jre8-alpine"
+    env:
+    # 1、stdout为约定关键字，表示采集标准输出日志
+    # 2、配置标准输出日志采集到ES的catalina索引下
+    - name: aliyun_logs_catalina
+      value: "stdout"
+    # 1、配置采集容器内文件日志，支持通配符
+    # 2、配置该日志采集到ES的access索引下
+    - name: aliyun_logs_access
+      value: "/usr/local/tomcat/logs/localhost_access_log.*.txt"
+    # 容器内文件日志路径需要配置emptyDir
+    volumeMounts:
+      - name: tomcat-log
+        mountPath: /usr/local/tomcat/logs
+  volumes:
+    - name: tomcat-log
+      emptyDir: {}

@@ -1,0 +1,82 @@
+Name:               10.83.75.9
+Roles:              node
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=10.83.75.9
+                    kubernetes.io/os=linux
+                    kubernetes.io/role=node
+Annotations:        node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Fri, 11 Oct 2019 00:37:35 +0800
+Taints:             <none>
+Unschedulable:      false
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Fri, 25 Oct 2019 09:24:49 +0800   Fri, 11 Oct 2019 00:37:36 +0800   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Fri, 25 Oct 2019 09:24:49 +0800   Fri, 11 Oct 2019 00:37:36 +0800   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Fri, 25 Oct 2019 09:24:49 +0800   Fri, 11 Oct 2019 00:37:36 +0800   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Fri, 25 Oct 2019 09:24:49 +0800   Fri, 11 Oct 2019 00:37:36 +0800   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  10.83.75.9
+  Hostname:    10.83.75.9
+Capacity:
+ cpu:                32
+ ephemeral-storage:  103775748Ki
+ hugepages-1Gi:      0
+ hugepages-2Mi:      0
+ memory:             65789936Ki
+ pods:               110
+Allocatable:
+ cpu:                31800m
+ ephemeral-storage:  94565987375
+ hugepages-1Gi:      0
+ hugepages-2Mi:      0
+ memory:             65073136Ki
+ pods:               110
+System Info:
+ Machine ID:                 b08f5c7d718d463eb52576e7cea3870e
+ System UUID:                422BBABB-AA72-50D2-C476-8F6894A4263A
+ Boot ID:                    d5ba2cc0-91fa-4519-a968-d4327eecfa66
+ Kernel Version:             3.10.0-957.el7.x86_64
+ OS Image:                   CentOS Linux 7 (Core)
+ Operating System:           linux
+ Architecture:               amd64
+ Container Runtime Version:  docker://18.9.6
+ Kubelet Version:            v1.15.2
+ Kube-Proxy Version:         v1.15.2
+PodCIDR:                     10.220.3.0/24
+Non-terminated Pods:         (22 in total)
+  Namespace                  Name                                                      CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                  ----                                                      ------------  ----------  ---------------  -------------  ---
+  cattle-system              cattle-node-agent-5wh54                                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         3d23h
+  default                    eureka-service-78857bc589-z497x                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         40h
+  default                    rx-credit-64994fd569-jw6h7                                0 (0%)        0 (0%)      0 (0%)           0 (0%)         2d10h
+  kube-system                calico-kube-controllers-5cc7769cdb-s2vjg                  0 (0%)        0 (0%)      100Mi (0%)       0 (0%)         8d
+  kube-system                calico-node-d9hck                                         250m (0%)     0 (0%)      100Mi (0%)       0 (0%)         8d
+  kube-system                coredns-797455887b-6frt2                                  100m (0%)     0 (0%)      70Mi (0%)        170Mi (0%)     14d
+  kube-system                elasticsearch-master-0                                    0 (0%)        0 (0%)      1536Mi (2%)      0 (0%)         7d22h
+  kube-system                fluentd-elasticsearch-vtmts                               0 (0%)        0 (0%)      200Mi (0%)       0 (0%)         7d21h
+  kube-system                gitlab-ce-postgresql-6756d749dd-x948m                     100m (0%)     0 (0%)      256Mi (0%)       0 (0%)         8d
+  kube-system                harbor-harbor-adminserver-5bc6965dc-lvh98                 0 (0%)        0 (0%)      20Mi (0%)        0 (0%)         8d
+  kube-system                harbor-harbor-core-584845d844-d74l2                       0 (0%)        0 (0%)      20Mi (0%)        0 (0%)         8d
+  kube-system                harbor-harbor-database-0                                  0 (0%)        0 (0%)      300Mi (0%)       0 (0%)         8d
+  kube-system                harbor-harbor-jobservice-6f9fb4d788-zt2q7                 0 (0%)        0 (0%)      20Mi (0%)        0 (0%)         8d
+  kube-system                harbor-harbor-notary-signer-7d49b66586-hhczq              0 (0%)        0 (0%)      20Mi (0%)        0 (0%)         8d
+  kube-system                harbor-harbor-registry-5d4dd74dd6-qsn58                   0 (0%)        0 (0%)      1000Mi (1%)      0 (0%)         8d
+  kube-system                metallb-speaker-7ptgg                                     0 (0%)        0 (0%)      100Mi (0%)       0 (0%)         8d
+  kube-system                metrics-server-988f49d89-mxvhs                            0 (0%)        0 (0%)      100Mi (0%)       0 (0%)         13d
+  kube-system                nginx-ingress-controller-zl97q                            0 (0%)        0 (0%)      500Mi (0%)       0 (0%)         8d
+  kube-system                prometheus-operator-kube-state-metrics-c5f866dcd-d4dr4    0 (0%)        0 (0%)      0 (0%)           0 (0%)         5d18h
+  kube-system                prometheus-operator-prometheus-node-exporter-ps5sb        0 (0%)        0 (0%)      30Mi (0%)        0 (0%)         5d18h
+  kube-system                prometheus-prometheus-operator-prometheus-0               200m (0%)     200m (0%)   850Mi (1%)       50Mi (0%)      5d18h
+  kube-system                tiller-deploy-747cd4c745-c4rzp                            0 (0%)        0 (0%)      100Mi (0%)       0 (0%)         8d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                650m (2%)    200m (0%)
+  memory             5322Mi (8%)  220Mi (0%)
+  ephemeral-storage  0 (0%)       0 (0%)
+Events:              <none>

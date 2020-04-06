@@ -1,0 +1,2 @@
+FROM harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1
+USER root

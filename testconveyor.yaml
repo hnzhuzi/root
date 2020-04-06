@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ngx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: ngx
+  template:
+    metadata:
+      labels:
+        run: ngx
+    spec:
+      containers:
+      - image: harbor.k8s.maimaiti.site/library/tomcat:8-jre8-alpine
+        # 可另外挂载空白卷追踪自定义日志文件
+        volumeMounts:
+         - mountPath: /usr/local/tomcat/logs
+           name: tomcat-log
+        name: ngx
+        env:
+        - name: CONVEYOR_ENABLED
+          value: "true"
+        # 定义自定义日志路径
+        - name: CONVEYOR_PATH
+          value: "access-index:/usr/local/tomcat/logs/localhost_access_log.*.txt;catalina-index:/usr/local/tomcat/logs/catalina.*.log;stdout-index:stdout"
+      # 声明空白卷
+      volumes:
+      - emptyDir: {}
+        name: tomcat-log

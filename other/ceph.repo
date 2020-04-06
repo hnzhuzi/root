@@ -1,0 +1,10 @@
+[ceph-noarch]
+name=Ceph noarch packages
+baseurl=https://mirrors.aliyun.com/ceph/rpm-mimic/el7/noarch
+enabled=1
+gpgcheck=0
+[ceph-x86_64]
+name=Ceph x86_64 packages
+baseurl=https://mirrors.aliyun.com/ceph/rpm-mimic/el7/x86_64
+enabled=1
+gpgcheck=0

@@ -1,0 +1,187 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+# kind: DaemonSet
+metadata:
+  name: nginx-1
+spec:
+  replicas: 1
+  # minReadySeconds: 5
+  # strategy:
+    # type: RollingUpdate
+    # rollingUpdate:
+      # maxSurge: 1
+      # maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: nginx-1
+    spec:
+      containers:
+      - name: nginx-1
+        image: harbor.k8s.maimaiti.site/library/nginx:alpine
+        ports:
+        - containerPort: 80
+          # hostPort: 81
+        # livenessProbe:
+          # httpGet:
+            # path: /
+            # port: http
+        # readinessProbe:
+          # httpGet:
+            # path: /
+            # port: http
+        # command: [ "/bin/sh", "-c", "echo $(MY_CACHE_HOST)" ]
+        # args:
+        # - sh
+        # - -c
+        # - sleep 360000
+        # env:
+          # - name: MY_CACHE_HOST
+            # valueFrom:
+              # configMapKeyRef:
+                # name: testconfigmap
+                # key: key1
+          # - name: DEMO_GREETING
+            # value: "Hello from the environment"
+          # - name: MY_POD_NAME
+            # valueFrom:
+              # fieldRef:
+                # fieldPath: metadata.name
+        # volumeMounts:
+          # - name: data1
+            # mountPath: "/usr/share/nginx/html/data1"
+          # - name: data2
+            # mountPath: "/usr/share/nginx/html/data2"
+          # - name: filebeat-config
+            # mountPath: /etc/filebeat/filebeat.yaml
+            # subPath: filebeat.yaml
+        resources:
+          limits:
+            cpu: 100m
+            memory: 100Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        # resources:
+          # requests:
+            # memory: 30Mi
+      hostNetwork: true
+      # volumes:
+      # - name: data1
+        # persistentVolumeClaim:
+          # claimName: cephfspvc
+      # - name: data2
+        # persistentVolumeClaim:
+          # claimName: rbdpvc
+        # # emptyDir: {}
+        # # hostPath:
+          # # path: /root/dir
+        # secret:
+          # secretName: testsecret
+        # configMap:
+          # name: testconfigmap
+          # items:
+          # - key: test1.html
+            # path: test11.html
+        # - name: filebeat-config
+          # configMap:
+            # name: filebeat-config
+      # nodeSelector:
+        # node-role.kubernetes.io/master: ""
+        # kubernetes.io/hostname: 10.83.75.10
+      # affinity:
+        # nodeAffinity:
+          # requiredDuringSchedulingIgnoredDuringExecution:
+            # nodeSelectorTerms:
+            # - matchExpressions:
+              # - key: kubernetes.io/hostname
+                # operator: NotIn
+                # values:
+                # - 192.168.1.140
+                # - 192.168.1.161
+              # - key: node-role.kubernetes.io/master
+                # operator: Exists
+          # preferredDuringSchedulingIgnoredDuringExecution:
+          # - weight: 1
+            # preference:
+              # matchExpressions:
+              # - key: source
+                # operator: In
+                # values:
+                # - qikqiak
+        # podAffinity:
+          # requiredDuringSchedulingIgnoredDuringExecution:
+          # - labelSelector:
+              # matchExpressions:
+              # - key: app
+                # operator: In
+                # values:
+                # - busybox-pod
+            # topologyKey: kubernetes.io/hostname
+        # podAntiAffinity:
+          # preferredDuringSchedulingIgnoredDuringExecution:
+          # - weight: 1
+            # podAffinityTerm:
+              # labelSelector:
+                # matchExpressions:
+                # - key: app
+                  # operator: In
+                  # values:
+                  # - node-affinity-pod
+              # topologyKey: kubernetes.io/hostname
+      # tolerations:
+      # - key: node-role.kubernetes.io/master
+        # operator: Exists
+        # value: value
+        # effect: NoSchedule #NoSchedule PreferNoSchedule NoExecute
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-1
+spec:
+  # type: NodePort
+  # clusterIP: 10.0.171.239
+  # type: LoadBalancer
+  # loadBalancerIP: 78.11.24.19
+  # externalIPs:
+  # - 10.83.22.224
+  selector:
+    app: nginx-1
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      # nodePort: 30000
+---
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+  # name: nginx
+  # annotations:
+    # kubernetes.io/ingress.class: "nginx" #指定使用ingress controller的类别
+    # nginx.ingress.kubernetes.io/rewrite-target: web.com #testdomain.com/path/(.*)转向web.com/$1
+    # nginx.ingress.kubernetes.io/use-regex: "true" #path可以使用正则表达式
+    # nginx.ingress.kubernetes.io/proxy-connect-timeout: "600" #连接超时时间，默认为5s
+    # nginx.ingress.kubernetes.io/proxy-send-timeout: "600" #后端服务器回转数据超时时间，默认为60s
+    # nginx.ingress.kubernetes.io/proxy-read-timeout: "600" #后端服务器响应超时时间，默认为60s
+    # nginx.ingress.kubernetes.io/proxy-body-size: "10m" #客户端上传文件，最大大小，默认为1m
+    # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS" #后端端口是443
+    # nginx.ingress.kubernetes.io/ssl-redirect: "false" #若tls开启，则默认为true
+
+# spec:
+  # rules:
+  # - host: nginx.testdomain.com
+    # http:
+      # paths:
+      # - path: /
+        # backend:
+          # serviceName: nginx
+          # servicePort: 80
+  # tls:
+  # - hosts:
+    # - rancher.mysite
+    # secretName: tls-rancher-ingress
