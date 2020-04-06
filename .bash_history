@@ -48009,3 +48009,9 @@ git remote add gitlab http://gitlab.k8s.maimaiti.site/root/root1.git
 git push gitlab master
 #1585905106
 rm -rf traefik traefik1
+#1586169686
+git status
+#1586169709
+git add ./ && git commit -m '20200406'
+#1586169712
+

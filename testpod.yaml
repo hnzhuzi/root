@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 # kind: DaemonSet
 metadata:
-  name: nginx-2
+  name: nginx-1
 spec:
   replicas: 1
   # minReadySeconds: 5
