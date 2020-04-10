@@ -36,7 +36,6 @@ spec:
     - ReadWriteOnce
     # - ReadWriteMany/ReadOnlyMany
   storageClassName: cephfs
-  # volumeName: pvc-0146268f-f3bd-4f05-86e8-53069942236c #delete claimRef in pv
   resources:
     requests:
       storage: 10Gi

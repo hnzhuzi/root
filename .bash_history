@@ -48015,3 +48015,973 @@ git status
 git add ./ && git commit -m '20200406'
 #1586169712
 
+#1585900226
+du --max-depth=1 -h ./ | sort -hr
+#1585900248
+du -sh ./
+#1585900258
+du -sh dir1/
+#1585900261
+cd dir1
+#1585900262
+ls
+#1585900266
+du --max-depth=1 -h ./ | sort -hr
+#1585900277
+cd ../
+#1585900278
+ls
+#1585900291
+git push gitlab master
+#1585900330
+git add ./ && git commit -m 'v1'
+#1585900360
+git push gitlab master
+#1585900436
+git add ./
+#1585900440
+git status
+#1585900513
+git remote show
+#1585900517
+git remote show gitlab
+#1585900979
+git status
+#1585901047
+git push
+#1585901056
+git remote show gitlab 
+#1585901883
+rm -frv .git
+#1585901887
+git status
+#1585901897
+git init
+#1585901903
+git status
+#1585901933
+git add ./ && git commit -m 'v1'
+#1585901940
+git status
+#1585902001
+git remote add gitlab  http://gitlab.k8s.maimaiti.site/root/root.git
+#1585902019
+git status
+#1585902027
+git push gitlab master
+#1585902093
+cd dir1
+#1585902095
+ls
+#1585902106
+mkdir test1
+#1585902109
+cd test1
+#1585902110
+ls
+#1585902114
+rm -f Jenkinsfile 
+#1585902114
+ls
+#1585902125
+echo test1 > test1.txt
+#1585902127
+ls
+#1585902132
+git init
+#1585902154
+git remote add gitlab http://gitlab.k8s.maimaiti.site/root/test1.git
+#1585902163
+git add ./ && git commit -m 'v1'
+#1585902199
+git push gitlab master
+#1585902212
+ls
+#1585902334
+cd ../
+#1585902336
+ls
+#1585902341
+rm -rf test1
+#1585902345
+cd ../
+#1585902345
+ls
+#1585902373
+git push gitlab master
+#1585902868
+ls
+#1585902889
+find -type d
+#1585902896
+find -type d -maxdepth 1
+#1585902939
+find -type d -maxdepth 1 -path '.*' -prune -o -print
+#1585902957
+find -maxdepth 1 -type d -path '.*' -prune -o -print
+#1585902978
+find -maxdepth 1 -type d -path '.*' -prune
+#1585902990
+find -maxdepth 1 -type d -path './.*' -prune
+#1585902998
+find -maxdepth 1 -type d -path './.*' -prune -o print
+#1585903005
+find -maxdepth 1 -type d -path './.*'
+#1585903044
+find -maxdepth 1 -type d ! -path './.*'
+#1585903123
+find -maxdepth 1 -type d -prune
+#1585903150
+find -maxdepth 1 -type d -path '/.*'
+#1585903159
+find -maxdepth 1 -type d -path './.*'
+#1585903164
+find -maxdepth 1 -type d -path './.*' -prune
+#1585903189
+find -maxdepth 1 -type d -path './.*' -prune -o print
+#1585903192
+find -maxdepth 1 -type d -path './.*' -prune -o -print
+#1585903203
+ls
+#1585903272
+cd test1
+#1585903273
+ls
+#1585903278
+git status
+#1585903286
+ls -a
+#1585903299
+ls
+#1585903300
+pwd
+#1585903327
+cd ../
+#1585903329
+git status
+#1585903383
+git add ./
+#1585903416
+git add --all ./
+#1585903855
+ls 
+#1585903859
+ls images/
+#1585903923
+ls
+#1585903937
+ls easzup 
+#1585903940
+ll easzup
+#1585903967
+rm -f easzup 
+#1585903974
+vim anaconda-ks.cfg 
+#1585904549
+rm -rf anaconda-ks.cfg fluentd-elasticsearch.bak/ calico-node.yaml  node11 passwd 
+#1585904585
+mv k8s.yaml testk8s.yaml
+#1585904746
+vim sshd_config 
+#1585904784
+ls ssl
+#1585905005
+ls maven
+#1585905013
+tree maven
+#1585905020
+rm -rf maven
+#1585905029
+rm -rf maven1
+#1585905037
+vim exclude.txt 
+#1585905042
+rm -f exclude.txt
+#1585905120
+ls
+#1585905501
+vim testfile.txt 
+#1585905506
+rm -f testfile.txt 
+#1585905614
+ls .vim
+#1585905617
+du -sh .vim
+#1585905712
+ls
+#1585905776
+cp -a .fzf .fzf.bash  .vimrc .bashrc  other/
+#1585905781
+vim .bashrc 
+#1585905789
+ls other
+#1585905799
+cd dir1
+#1585905800
+ls
+#1585905828
+cd ../
+#1585905829
+test
+#1585905832
+ls
+#1585905933
+rm -f test1.*
+#1585906007
+cd dir1
+#1585906008
+ls
+#1585906013
+ls tmp 
+#1585906017
+rm -rf tmp
+#1585906018
+ls
+#1585906036
+du -sh jenkins-demo/
+#1585906049
+du -sh kubernetes-ci-cd-master/
+#1585906064
+cd kubernetes-ci-cd-master/
+#1585906064
+ls
+#1585906073
+git log
+#1585906100
+ls
+#1585906108
+cd ../
+#1585906108
+ls
+#1585906133
+ls other
+#1585906137
+ls /other
+#1585906139
+cd ../
+#1585906581
+ls
+#1585906619
+cd cert_before/
+#1585906620
+ls
+#1585906649
+cd
+#1585906661
+cp -a /etc/ansible/hosts other/
+#1585906671
+ls /usr/local/
+#1585906721
+cp -a /etc/profile.d/java.sh /etc/profile.d/path.sh other/
+#1585906734
+yum repolist
+#1585906767
+cp -a /etc/yum.repos.d/* other/
+#1585906770
+ls other/
+#1585906839
+ls .ssh
+#1585906851
+vim .ssh/authorized_keys 
+#1585906863
+vim .ssh/id_rsa 
+#1585906901
+cp -a .ssh/id_rsa .ssh/authorized_keys other/
+#1585906903
+ls other
+#1585906983
+cd other
+#1585906985
+ll init.sh 
+#1585906988
+vim init.sh
+#1585907890
+rz -y
+#1585907914
+ll
+#1585907935
+vim init.sh 
+#1585908188
+ls
+#1585908358
+vim springboot_deploy.sh 
+#1585908423
+vim tomcat_deploy.sh 
+#1586134302
+ls
+#1586134403
+vim pipeline_pcs 
+#1586134438
+git status
+#1586134704
+cd ../
+#1586134712
+rm -rf .git
+#1586134745
+git init
+#1586134769
+git add ./ && git commit -m '20200406'
+#1586134790
+git remote add origin https://github.com/hnzhuzi/root.git
+#1586134796
+git push
+#1586134809
+git push origin master
+#1586135038
+git config --global user.email "test@gmail.com"
+#1586135056
+git config --global user.name "hnzhuzi"
+#1586135088
+git push
+#1586135096
+git push --set-upstream origin master
+#1586135254
+git remote add gitlab http://gitlab.k8s.maimaiti.site/root/test1.git
+#1586135279
+git push gitlab master
+#1586135324
+git config --global credential.helper store
+#1586135347
+vim tmp.txt
+#1586135364
+git status
+#1586135383
+git add ./ && git commit -m 'test1'
+#1586135390
+git push gitlab master
+#1586135554
+rm -rf .git
+#1586135605
+git config --global user.name "hnzhuzi"
+#1586135623
+git config --global user.email "test@gmail.com"
+#1586135630
+git config --global credential.helper store
+#1586135636
+git init
+#1586135646
+git add ./ && git commit -m '20200406'
+#1586135681
+git remote add origin https://github.com/hnzhuzi/root.git
+#1586135695
+git push --set-upstream origin master
+#1586135712
+git status
+#1586135725
+vim tmp.txt
+#1586135732
+git status
+#1586136944
+ls
+#1586136951
+vim .gitignore 
+#1586137020
+git status
+#1586137035
+rm -rf .git
+#1586137046
+git add ./ && git commit -m '20200406'
+#1586137050
+git init
+#1586137051
+git add ./ && git commit -m '20200406'
+#1586137064
+git remote add origin https://github.com/hnzhuzi/root.git
+#1586137067
+git push --set-upstream origin master
+#1586137091
+git pull
+#1586137129
+git branch --set-upstream-to=origin/master master
+#1586137135
+git pull
+#1586137147
+ls
+#1586137155
+rm -rf .git
+#1586137216
+git init 
+#1586137219
+git add ./ && git commit -m '20200406'
+#1586137232
+git remote add origin https://github.com/hnzhuzi/root.git
+#1586137238
+git push --set-upstream origin master
+#1586140366
+cd other
+#1586140367
+ls
+#1586140373
+ls -a
+#1586140422
+ls -a | grep '\.*'
+#1586140428
+ls -a | grep '^\.*'
+#1586140438
+ls -a | grep '^\.+'
+#1586140448
+ls -a | grep '^\.*'
+#1586140487
+mv .vimrc _vimrc
+#1586140493
+mv .bashrc _bashrc
+#1586140509
+mv .fzf _fzf
+#1586140517
+mv .fzf.bash _fzf.bash
+#1586140532
+ls -a | grep '^\.*'
+#1586140538
+git status
+#1586140557
+git add ./ && git commit -m '20200406'
+#1586140583
+git push
+#1586140621
+ls -a
+#1586140626
+ls _fzf
+#1586140633
+du -sh _fzf
+#1586140647
+rm -rf _fzf _fzf.bash 
+#1586140662
+git add --all ./
+#1586140675
+git commit -m '20200406'
+#1586140680
+git push
+#1586244131
+cd
+#1586244135
+cd dir1
+#1586244135
+ls
+#1586244137
+cd jenkins-demo/
+#1586244139
+git status
+#1586244166
+git pull
+#1586244196
+git remote show origin
+#1586244215
+git remote show github
+#1586244294
+git remote set-url origin https://github.com/hnzhuzi/mydemo1.git
+#1586244298
+git remote show origin
+#1586244335
+git remote remove github 
+#1586244339
+git pull
+#1586244362
+git status
+#1586244436
+telnet github.com 443
+#1586244443
+git pull
+#1586244581
+git branch
+#1586244592
+git branch -d dev2
+#1586244596
+git branch
+#1586244600
+git pull
+#1586244773
+git remote set-url origin http://gitlab.k8s.maimaiti.site/root/jenkins-demo.git
+#1586244940
+git status
+#1586245077
+rm -rf .git/
+#1586245397
+vim .gitignore
+#1586245417
+git init
+#1586245442
+git add ./ && git commit -m 'v1'
+#1586245453
+du -sh ./
+#1586245560
+cd vue/
+#1586245561
+ls
+#1586245564
+du -sh node_modules/
+#1586245597
+vim /root/dir1/jenkins-demo/.gitignore 
+#1586245608
+cd ../
+#1586245611
+du --max-depth=1 -h ./ | sort -hr
+#1586245633
+rm -rf .git
+#1586245637
+git init
+#1586245645
+git add ./ && git commit -m 'v1'
+#1586245713
+git remote add origin https://github.com/hnzhuzi/mydemo1.git
+#1586245719
+git push --set-upstream origin master
+#1586245768
+vim vue/.dockerignore 
+#1586247756
+git remote set-url origin http://gitlab.k8s.maimaiti.site/root/jenkins-demo.git
+#1586247761
+git pull
+#1586248032
+git status
+#1586248039
+ls
+#1586248053
+vim .gitignore 
+#1586248065
+du -sh ./
+#1586248073
+cd springcloud/
+#1586248074
+ls
+#1586248077
+cd eureka-server/
+#1586248077
+ls
+#1586249723
+cd
+#1586249736
+git staus
+#1586249738
+git status
+#1586249843
+kubectl get service | grep eureka
+#1586249866
+curl -I 10.221.231.173:8761
+#1586251178
+vim testconfigmap.yaml 
+#1586252247
+git status
+#1586252868
+kubectl delete -f testpod.yaml 
+#1586253247
+kubectl run -ti --rm alpine --image=harbor.k8s.maimaiti.site/library/nginx:alpine -- sh
+#1586310713
+kubectl delete -f testpod.yaml 
+#1585813441
+cd dir1/jenkins-demo/
+#1585813444
+vim Jenkinsfile 
+#1586169786
+git push
+#1586252278
+vim testconfigmap.yaml 
+#1585885452
+git add Jenkinsfile && git commit -m 'local v3'
+#1585885466
+cat README.md 
+#1585885470
+git push
+#1585897839
+cd
+#1585897840
+ls
+#1585897985
+du -sh ./
+#1585897998
+git init 
+#1585898007
+ls -a
+#1585898014
+ls -a 
+#1585898019
+ls -a  | grep ignore
+#1585898043
+vim .gitignore
+#1586135839
+ls
+#1586169612
+vim testpod.yaml 
+#1585817720
+git branch dev3
+#1585817724
+git checkout dev3
+#1585817733
+git push --set-upstream origin dev3
+#1585817741
+git branch -a
+#1585818003
+ git push origin --delete dev3
+#1585818013
+git checkout master
+#1585818024
+ git push origin --delete dev2
+#1585818031
+git branch -a
+#1585818035
+git fetch
+#1585818036
+git branch -a
+#1585818086
+git branch -d dev3
+#1585818087
+git branch -a
+#1585818096
+git remote -v
+#1585818113
+git remote show origin
+#1585882857
+ls
+#1585882896
+git branch
+#1585882920
+git branch -d dev1
+#1585882931
+git branch
+#1585882941
+git branch dev2
+#1585882954
+vim Jenkinsfile 
+#1586310798
+vim testpod.yaml 
+#1586254123
+kubectl apply -f testconfigmap.yaml 
+#1586254127
+kubectl apply -f testpod.yaml 
+#1586312420
+sz testk8s.yaml 
+#1586312657
+kubectl api-resources 
+#1586312664
+kubectl api-versions 
+#1586312699
+kubectl api-resources | grep deployment
+#1586312743
+kubectl api-versions | grep apps
+#1586312754
+kubectl api-versions | grep exten
+#1586316321
+cd dir1/jenkins-demo/
+#1586316322
+ls
+#1586316335
+cd springcloud/
+#1586316335
+ls
+#1586316344
+cd eureka-server/
+#1586316346
+ls
+#1586316351
+vim k8s.yaml 
+#1586316374
+kubectl delete -f k8s.yaml 
+#1586316422
+git pull
+#1586316435
+git status
+#1586316462
+cd ../
+#1586316472
+git status
+#1586316546
+cd springcloud/eureka-server/
+#1586316546
+ls
+#1586316551
+vim Dockerfile 
+#1586316626
+git pull
+#1586316634
+ls
+#1586316636
+vim k8s.yaml 
+#1586316664
+git log
+#1586316704
+ls
+#1586316744
+ls target/
+#1586316777
+ls
+#1586316788
+mvn -Dmaven.test.skip=true clean package
+#1586316844
+docker build -t harbor.k8s.maimaiti.site/library/eureka-server:v4 ./
+#1586316858
+docker push harbor.k8s.maimaiti.site/library/eureka-server:v4
+#1586316872
+docker pull
+#1586316875
+git pull
+#1586316912
+vim k8s.yaml 
+#1586317031
+ls
+#1586317036
+cd target/
+#1586317036
+ls
+#1586317400
+cd classes/
+#1586317401
+ls
+#1586317410
+tree com/
+#1586317420
+cd ../
+#1586317423
+ls
+#1586317430
+kubectl apply -f k8s.yaml 
+#1586318548
+kbuectl delete -f k8s.yaml 
+#1586318553
+kubectl delete -f k8s.yaml 
+#1586318565
+ls
+#1586318577
+vim k8s.yaml 
+#1586318607
+kubectl apply -f k8s.yaml 
+#1586318768
+kubectl delete -f k8s.yaml 
+#1586318834
+ls
+#1586318837
+kubectl apply -f k8s.yaml 
+#1586323783
+kubectl delete -f k8s.yaml 
+#1586323831
+kubectl apply -f k8s.yaml 
+#1586323956
+kubectl get service | grep eureka
+#1586323968
+curl -I 10.221.32.86:8761
+#1586324627
+kubectl delete -f k8s.yaml 
+#1586324639
+git status
+#1586324752
+kubectl apply -f k8s.yaml 
+#1586327317
+git status
+#1586327339
+git checkout -- ./
+#1586327341
+git status
+#1586327346
+git pull
+#1586327350
+ls
+#1586327353
+vim k8s.yaml 
+#1586327376
+kubectl delete -f k8s.yaml 
+#1586327476
+kubectl apply -f k8s.yaml 
+#1586327551
+cd ../eureka-client/
+#1586327551
+ls
+#1586327559
+kubectl delete -f k8s.yaml 
+#1586327685
+ls
+#1586327689
+mvn -Dmaven.test.skip=true clean package
+#1586328173
+ping app.bcyj99.com
+#1586328780
+ping 172.16.3.129
+#1586318785
+cd /root/dir1/jenkins-demo/
+#1586318786
+ls
+#1586318790
+cd springcloud/
+#1586318791
+ls
+#1586318796
+cd eureka-server/
+#1586318796
+ls
+#1586318802
+vim k8s.yaml 
+#1586134361
+vim
+#1586250553
+kubectl run -ti --rm alpine --image=alpine -- sh
+#1586309454
+k9s
+#1586324994
+kubectl delete -f k8s.yaml 
+#1586325008
+kubectl apply -f k8s.yaml 
+#1586325395
+kubectl run -ti --rm alpine --image=alpine -- sh
+#1586325739
+cd
+#1586325742
+vim testpod.yaml 
+#1586325810
+cd -
+#1586325811
+ls
+#1586325828
+vim k8s.yaml 
+#1586332786
+cd dir1/jenkins-demo/springcloud/eureka-client/
+#1586332787
+ls
+#1586332794
+mvn -Dmaven.test.skip=true clean package
+#1586332817
+docker build -t harbor.k8s.maimaiti.site/library/eureka-client:v3 ./
+#1586332831
+docker push harbor.k8s.maimaiti.site/library/eureka-client:v3
+#1586332863
+kubectl apply -f k8s.yaml 
+#1586333379
+kubectl delete -f k8s.yaml 
+#1586403198
+vim dir1/jenkins-demo/.gitignore 
+#1586403723
+rm -rf dir1/jenkins-demo/
+#1586403730
+cd dir1
+#1586403731
+ls
+#1586403744
+git clone http://gitlab.k8s.maimaiti.site/root/jenkins-demo.git
+#1586403747
+ls -a
+#1586403754
+cd jenkins-demo/
+#1586403754
+ls
+#1586403756
+ls -a
+#1586403765
+git status
+#1586403773
+vim .gitignore 
+#1586403792
+git status
+#1586403802
+cd dir1/jenkins-demo/
+#1586403803
+ls
+#1586403808
+git status
+#1586403817
+git checkout -- .gitignore
+#1586403825
+git status
+#1586403885
+cd springcloud/eureka-server/
+#1586403885
+ls
+#1586403931
+mvn -Dmaven.test.skip=true clean package
+#1586410135
+ls
+#1586410143
+kubectl delete -f k8s.yaml 
+#1586410148
+cd ../eureka-client/
+#1586410149
+ls
+#1586410153
+kubectl delete -f k8s.yaml 
+#1586410324
+cd
+#1586410331
+kubectl delete -f teststateful.yaml 
+#1586411119
+cd dir1/jenkins-demo/
+#1586411119
+ls
+#1586411123
+cd tomcat/
+#1586411125
+ls
+#1586411128
+kubectl delete -f k8s.yaml 
+#1586411145
+cd ../springboot/
+#1586411146
+kubectl delete -f k8s.yaml 
+#1586411155
+cd ../vue/
+#1586411155
+ls
+#1586411158
+kubectl delete -f k8s.yaml 
+#1586412036
+du -sh /root/.m2/
+#1586412043
+du -sh /root/.m2/repository/
+#1586412056
+cd /root/.m2/
+#1586412057
+ls
+#1586412063
+du -sh repository/
+#1586412099
+vim /usr/local/apache-maven-3.6.1/conf/settings.xml 
+#1586412111
+du -sh /app
+#1586412402
+kubectl  rollout status statefulset eureka 
+#1586412492
+kubectl  rollout status statefulset elasticsearch-master 
+#1586412869
+cd
+#1586412992
+kubectl  rollout status statefulset eureka 
+#1586412998
+kubectl  rollout status statefulset harbor-harbor-database 
+#1586413009
+kubectl  rollout status statefulset harbor-harbor-redis 
+#1586413018
+echo $?
+#1586413402
+kubectl  rollout status statefulset eureka 
+#1586414242
+vim teststateful.yaml 
+#1586415212
+cd dir1/jenkins-demo/
+#1586415212
+ls
+#1586415220
+cd springcloud/eureka-server/
+#1586415221
+ls
+#1586415225
+kubectl delete -f k8s.yaml 
+#1586415496
+kubectl explain nginxrancher
+#1586415531
+kubectl explain statefulset
+#1586415555
+kubectl explain statefulset.spec.updateStrategy
+#1586415588
+kubectl api-resources 
+#1586415590
+kubectl api-resources  
+#1586415596
+kubectl api-resources | grep apps
+#1586415607
+kubectl api-versions | grep apps
+#1586415647
+kubectl explain statefulsets.apps/v1beta1
+#1586415655
+kubectl explain statefulsets
+#1586415681
+
+#1586415725
+kubectl explain statefulset.spec.updateStrategy
+#1586416842
+cd
+#1586416844
+vim testpod.yaml 

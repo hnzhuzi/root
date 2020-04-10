@@ -4,6 +4,9 @@ metadata:
   name: nginxdemo
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: nginxdemo
   template:
     metadata:
       labels:
@@ -16,7 +19,21 @@ spec:
         - containerPort: 80
         resources:
           requests:
-            memory: 512Mi
+            memory: 100Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
 
 ---
 
@@ -28,9 +45,9 @@ spec:
   selector:
     app: nginxdemo
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+  - protocol: TCP
+    port: 80
+    targetPort: 80
 
 ---
 

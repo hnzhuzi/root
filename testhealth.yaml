@@ -23,5 +23,6 @@ spec:
         # port: 80
       tcpSocket:
         port: 80
-      initialDelaySeconds: 5
-      periodSeconds: 5
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      timeoutSeconds: 5

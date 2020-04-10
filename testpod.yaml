@@ -1,10 +1,14 @@
 apiVersion: extensions/v1beta1
+# apiVersion: apps/v1
 kind: Deployment
 # kind: DaemonSet
 metadata:
   name: nginx-1
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-1
   # minReadySeconds: 5
   # strategy:
     # type: RollingUpdate
@@ -25,18 +29,18 @@ spec:
         # livenessProbe:
           # httpGet:
             # path: /
-            # port: http
+            # port: 80
         # readinessProbe:
           # httpGet:
             # path: /
-            # port: http
-        # command: [ "/bin/sh", "-c", "echo $(MY_CACHE_HOST)" ]
+            # port: 80
+        # command: [ "/bin/sh", "-c", "echo $(KEY1)" ]
         # args:
         # - sh
         # - -c
         # - sleep 360000
         # env:
-          # - name: MY_CACHE_HOST
+          # - name: KEY1
             # valueFrom:
               # configMapKeyRef:
                 # name: testconfigmap
@@ -52,20 +56,20 @@ spec:
             # mountPath: "/usr/share/nginx/html/data1"
           # - name: data2
             # mountPath: "/usr/share/nginx/html/data2"
-          # - name: filebeat-config
-            # mountPath: /etc/filebeat/filebeat.yaml
-            # subPath: filebeat.yaml
-        resources:
-          limits:
-            cpu: 100m
-            memory: 100Mi
-          requests:
-            cpu: 100m
-            memory: 100Mi
+          # - name: default-conf
+            # mountPath: /etc/nginx/conf.d/default.conf
+            # subPath: default.conf
+        # resources:
+          # limits:
+            # cpu: 100m
+            # memory: 100Mi
+          # requests:
+            # cpu: 100m
+            # memory: 100Mi
         # resources:
           # requests:
             # memory: 30Mi
-      hostNetwork: true
+      # hostNetwork: true
       # volumes:
       # - name: data1
         # persistentVolumeClaim:
@@ -83,9 +87,9 @@ spec:
           # items:
           # - key: test1.html
             # path: test11.html
-        # - name: filebeat-config
-          # configMap:
-            # name: filebeat-config
+      # - name: default-conf
+        # configMap:
+          # name: testconfigmap
       # nodeSelector:
         # node-role.kubernetes.io/master: ""
         # kubernetes.io/hostname: 10.83.75.10
@@ -137,25 +141,25 @@ spec:
 
 ---
 
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx-1
-spec:
-  # type: NodePort
-  # clusterIP: 10.0.171.239
-  # type: LoadBalancer
-  # loadBalancerIP: 78.11.24.19
-  # externalIPs:
-  # - 10.83.22.224
-  selector:
-    app: nginx-1
-  ports:
-    - name: http
-      protocol: TCP
-      port: 80
-      targetPort: 80
-      # nodePort: 30000
+# apiVersion: v1
+# kind: Service
+# metadata:
+  # name: nginx-1
+# spec:
+  # # type: NodePort
+  # # clusterIP: 10.0.171.239
+  # # type: LoadBalancer
+  # # loadBalancerIP: 78.11.24.19
+  # # externalIPs:
+  # # - 10.83.22.224
+  # selector:
+    # app: nginx-1
+  # ports:
+    # - name: http
+      # protocol: TCP
+      # port: 80
+      # targetPort: 80
+      # # nodePort: 30000
 ---
 # apiVersion: extensions/v1beta1
 # kind: Ingress

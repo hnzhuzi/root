@@ -26,13 +26,17 @@ spec:
 
 ---
 
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: nginx
 spec:
-  serviceName: nginx-headless
+  # podManagementPolicy: Parallel
   replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  serviceName: nginx-headless
   template:
     metadata:
       labels:
@@ -44,16 +48,17 @@ spec:
         ports:
         - containerPort: 80
           name: web
-        volumeMounts:
-        - name: www
-          mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
-  - metadata:
-      name: www
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
-      storageClassName: cephfs
-
+        # volumeMounts:
+        # - name: www
+          # mountPath: /usr/share/nginx/html
+  # updateStrategy:
+    # type: RollingUpdate
+  # volumeClaimTemplates:
+  # - metadata:
+      # name: www
+    # spec:
+      # accessModes: [ "ReadWriteOnce" ]
+      # resources:
+        # requests:
+          # storage: 1Gi
+      # storageClassName: cephfs
