@@ -1,18 +1,29 @@
 global:
   resolve_timeout: 5m
   smtp_smarthost: 'smtp.qq.com:25'
-  smtp_from: '@qq.com'
+  smtp_from: '454576310@qq.com'
   smtp_auth_username: '454576310@qq.com'
   smtp_auth_password: 'nqfjknltrqwvbjdg'
   smtp_require_tls: false
 route:
   group_by: ['job', 'severity']
+  # 这里的标签列表是接收到报警信息后的重新分组标签，例如，接收到的报警信息里面有许多具有
+  # cluster=A 和 alertname=LatncyHigh 这样的标签的报警信息将会批量被聚合到一个分组里面
   group_wait: 30s
   group_interval: 5m
   repeat_interval: 12h
   receiver: default
+  # 上面所有的属性都由所有子路由继承，并且可以在每个子路由上进行覆盖。
+  routes:
+  - receiver: webhook
+    match:
+      alertname: CoreDNSDown
 receivers:
 - name: 'default'
   email_configs:
   - to: '454576310@qq.com'
+    send_resolved: true
+- name: 'webhook'
+  webhook_configs:
+  - url: 'http://dingtalk-hook.kube-ops:5000'
     send_resolved: true

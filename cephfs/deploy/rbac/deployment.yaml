@@ -25,6 +25,7 @@ spec:
         args:
         - "-id=cephfs-provisioner-1"
         - '-disable-ceph-namespace-isolation=true'
+        # - '-enable-quota=true'
         resources:
           requests:
             memory: 100Mi

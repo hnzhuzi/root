@@ -245,7 +245,7 @@ controller:
 
 
   stats:
-    enabled: false
+    enabled: true
 
     service:
       annotations: {}
@@ -264,7 +264,7 @@ controller:
   ## If controller.stats.enabled = true and controller.metrics.enabled = true, Prometheus metrics will be exported
   ##
   metrics:
-    enabled: false
+    enabled: true
 
     service:
       annotations:
@@ -284,8 +284,10 @@ controller:
       type: ClusterIP
 
     serviceMonitor:
-      enabled: false
-      additionalLabels: {}
+      enabled: true
+      # additionalLabels: {}
+      additionalLabels:
+        release: prometheus-operator
       namespace: ""
 
   lifecycle: {}
@@ -394,6 +396,18 @@ imagePullSecrets: []
 ##
 tcp:
   8000: "default/nginxdemo:80"
+  8001: "default/mall-admin:8001"
+  7001: "default/mall-api:7001"
+  5004: "default/mall-goods:5004"
+  8081: "default/mall-job:8081"
+  5003: "default/mall-order:5003"
+  5001: "default/mall-page:5001"
+  5002: "default/mall-promotion:5002"
+  9092: "default/wallet-admin:9092"
+  9091: "default/wallet-cash:9091"
+  9200: "default/wallet-ipc:9200"
+  9100: "default/wallet-loan:9100"
+  9096: "default/wallet-sso:9096"
 
 # UDP service key:value pairs
 # Ref: https://github.com/kubernetes/contrib/tree/master/ingress/controllers/nginx/examples/udp

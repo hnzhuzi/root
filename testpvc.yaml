@@ -12,30 +12,30 @@
     # server: 10.151.30.57
     # path: /data/k8s
 
-# apiVersion: v1
-# kind: PersistentVolumeClaim
-# metadata:
-  # name: rbdpvc
-# spec:
-  # accessModes:
-    # - ReadWriteOnce
-    # # - ReadWriteMany/ReadOnlyMany
-  # storageClassName: rbd
-  # # volumeName: pvc-0146268f-f3bd-4f05-86e8-53069942236c #delete claimRef in pv
-  # resources:
-    # requests:
-      # storage: 1Gi
-
-# ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: jnlp
+  name: prometheus-operator-grafana
 spec:
   accessModes:
     - ReadWriteOnce
     # - ReadWriteMany/ReadOnlyMany
-  storageClassName: cephfs
+  # storageClassName: rbd
+  volumeName: pvc-707b2ac0-7444-4744-b70e-b50113978086 #delete claimRef in pv
   resources:
     requests:
       storage: 10Gi
+
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+  # name: jnlp
+# spec:
+  # accessModes:
+    # - ReadWriteOnce
+    # # - ReadWriteMany/ReadOnlyMany
+  # storageClassName: cephfs
+  # resources:
+    # requests:
+      # storage: 10Gi

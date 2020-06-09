@@ -25221,7 +25221,7 @@ mvn -Dtest clean package
 #1570528340
 mvn -Dmaven.test.skip=true clean package
 #1570528340
-vim pom.xml 
+vim pom.xml
 #1570528340
 find /root/.m2/repository/ -name '*fastdfs*' -type f
 #1570528340
@@ -25237,7 +25237,7 @@ cd /usr/local/tomcat/webapps/
 #1570528340
 ll
 #1570528340
-rm -rf ncp-0.0.1-SNAPSHOT.war 
+rm -rf ncp-0.0.1-SNAPSHOT.war
 #1570528340
 ll
 #1570528340
@@ -25257,13 +25257,13 @@ ll
 #1570528340
 netstat -tnlp
 #1570528340
-tail ../logs/localhost_access_log.2019-06-27.txt 
+tail ../logs/localhost_access_log.2019-06-27.txt
 #1570528340
-tail ../webapps/ncp/WEB-INF/classes/log4j.properties 
+tail ../webapps/ncp/WEB-INF/classes/log4j.properties
 #1570528340
-tail ../webapps/ncp/WEB-INF/classes/application.xml 
+tail ../webapps/ncp/WEB-INF/classes/application.xml
 #1570528340
-tail ../webapps/ncp/WEB-INF/classes/config.properties 
+tail ../webapps/ncp/WEB-INF/classes/config.properties
 #1570528340
 find /root/.m2/repository/ -name fastdfs-client-java -type d
 #1570528340
@@ -25273,7 +25273,7 @@ md5sum /root/.m2/repository/cn/bestwu/fastdfs-client-java/1.27/fastdfs-client-ja
 #1570528340
 ll -h /root/.m2/repository/cn/bestwu/fastdfs-client-java/1.27/fastdfs-client-java-1.27.jar
 #1570528340
-git branch 
+git branch
 #1570528340
 cd ../
 #1570528340
@@ -25287,7 +25287,7 @@ git clone --branch dev 'http://TANKUI@git.bqjr.club/NCP/new_crm_platform.git'
 #1570528340
 cd new_crm_platform/
 #1570528340
-git branch 
+git branch
 #1570528340
 git branch master
 #1570528340
@@ -25295,17 +25295,17 @@ git branch
 #1570528340
 git checkout master
 #1570528340
-git branch 
+git branch
 #1570528340
 git branch
 #1570528340
-git branch 
+git branch
 #1570528340
 git branch dev
 #1570528340
 git checkout dev
 #1570528340
-vim pom.xml 
+vim pom.xml
 #1570528340
 mvn -Dmaven.test.skip=true clean package
 #1570528340
@@ -25329,11 +25329,11 @@ cd ../
 #1570528340
 ll
 #1570528340
-rm -rf ncp ncp.war 
+rm -rf ncp ncp.war
 #1570528340
 ll
 #1570528340
-rm -rf trucks trucks.war 
+rm -rf trucks trucks.war
 #1570528340
 ll
 #1570528340
@@ -25347,7 +25347,7 @@ netstat -tnlp
 #1570528340
 netstat -tnlp
 #1570528340
-tail /usr/local/tomcat/logs/catalina.out 
+tail /usr/local/tomcat/logs/catalina.out
 #1570528340
 ll
 #1570528340
@@ -25371,7 +25371,7 @@ cd new_crm_platform/
 #1570528340
 ll
 #1570528340
-vim pom.xml 
+vim pom.xml
 #1570528340
 mvn -v
 #1570528340
@@ -25437,7 +25437,7 @@ cd pcs-manage/
 #1570528340
 ll
 #1570528340
-cnpm install 
+cnpm install
 #1570528340
 cnpm -h
 #1570528340
@@ -25499,7 +25499,7 @@ git clone --branch dev 'http://TANKUI@git.bqjr.club/WCP/PCS.git'
 #1570528340
 cd PCS/
 #1570528340
-git branch 
+git branch
 #1570528340
 ls
 #1570528340
@@ -25521,7 +25521,7 @@ git pull
 #1570528340
 ls
 #1570528340
-git checkout 
+git checkout
 #1570528340
 ls
 #1570528340
@@ -25541,9 +25541,9 @@ cd test1/
 #1570528340
 ls
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
-echo hello test1 > 1.txt 
+echo hello test1 > 1.txt
 #1570528340
 cat 1.txt
 #1570528340
@@ -25553,7 +25553,7 @@ git status
 #1570528340
 git checkout -- 1.txt
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
 git status
 #1570528340
@@ -25601,17 +25601,17 @@ git reset --hard f4f2
 #1570528340
 ls
 #1570528340
-git reset –hard origin/master  
+git reset –hard origin/master
 #1570528340
-git reset –-hard origin/master  
+git reset –-hard origin/master
 #1570528340
 git clean -xdf
 #1570528340
 ls
 #1570528340
-echo hello 1 >1.txt 
+echo hello 1 >1.txt
 #1570528340
-echo hello 2 > 2.txt 
+echo hello 2 > 2.txt
 #1570528340
 git diff
 #1570528340
@@ -25621,7 +25621,7 @@ git checkout ./
 #1570528340
 ll
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
 cat 2.txt
 #1570528340
@@ -25659,7 +25659,7 @@ git clean -h
 #1570528340
 git clean -f
 #1570528340
-ls 
+ls
 #1570528340
 ls testdir/
 #1570528340
@@ -25667,17 +25667,17 @@ git clean -fd
 #1570528340
 ls
 #1570528340
-echo hello 1 > 1.txt 
+echo hello 1 > 1.txt
 #1570528340
 git status
 #1570528340
 git checkout .
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
 git status
 #1570528340
-echo hello 1 > 1.txt 
+echo hello 1 > 1.txt
 #1570528340
 git status
 #1570528340
@@ -25711,11 +25711,11 @@ git reset --hard f4f2
 #1570528340
 git status
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
 git status
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
 ls
 #1570528340
@@ -25773,7 +25773,7 @@ ls
 #1570528340
 git status
 #1570528340
-rm -f 1.txt 
+rm -f 1.txt
 #1570528340
 ls
 #1570528340
@@ -25785,7 +25785,7 @@ ls
 #1570528340
 git clean -h
 #1570528340
-git reset --hard HEAD^ 
+git reset --hard HEAD^
 #1570528340
 git log
 #1570528340
@@ -25841,7 +25841,7 @@ git clean -xdf
 #1570528340
 git status
 #1570528340
-git checkout 
+git checkout
 #1570528340
 git status
 #1570528340
@@ -25873,7 +25873,7 @@ find /root/.m2/repository/ -name 'pcs-server*.jar' -type f
 #1570528340
 find /root/.m2/repository/ -name '*pcs-server*.jar' -type f
 #1570528340
-find /root/.m2/repository/ -name 'pcs-server*' 
+find /root/.m2/repository/ -name 'pcs-server*'
 #1570528340
 ls
 #1570528340
@@ -25933,11 +25933,11 @@ du -sh ./
 #1570528340
 du -sh /download/
 #1570528340
-du -h 
+du -h
 #1570528340
-du --max-depth=1 -h 
+du --max-depth=1 -h
 #1570528340
-du --max-depth=1 -ha 
+du --max-depth=1 -ha
 #1570528340
 rsync -avp -n ./ /root/dir2
 #1570528340
@@ -26037,7 +26037,7 @@ ls /root
 #1570528340
 ls
 #1570528340
-rm -rf tmp.sh 
+rm -rf tmp.sh
 #1570528340
 cd
 #1570528340
@@ -26059,7 +26059,7 @@ mvn install -h
 #1570528340
 cd -
 #1570528340
-cd 
+cd
 #1570528340
 cd /root/dir1/PCS/
 #1570528340
@@ -26081,13 +26081,13 @@ ls /root/.m2/repository/
 #1570528340
 ls
 #1570528340
-vim pom.xml 
+vim pom.xml
 #1570528340
 cd dir1/PCS/pcs-manage/
 #1570528340
 ls
 #1570528340
-vim package.json 
+vim package.json
 #1570528340
 cd .ssh
 #1570528340
@@ -26095,7 +26095,7 @@ ls
 #1570528340
 ll -h
 #1570528340
-cat authorized_keys 
+cat authorized_keys
 #1570528340
 alias grep
 #1570528340
@@ -26109,7 +26109,7 @@ cd .ssh
 #1570528340
 ll
 #1570528340
-vim known_hosts 
+vim known_hosts
 #1570528340
 sz
 #1570528340
@@ -26257,7 +26257,7 @@ yum install rabbitmq-server
 #1570528340
 erl -v
 #1570528340
-systemctl start rabbitmq-server.service 
+systemctl start rabbitmq-server.service
 #1570528340
 netstat -tnlp
 #1570528340
@@ -26309,11 +26309,11 @@ netstat -tnlp
 #1570528340
 netstat -tnlp
 #1570528340
-tail /usr/local/tomcat/logs/catalina.out 
+tail /usr/local/tomcat/logs/catalina.out
 #1570528340
 tail /usr/local/tomcat/logs/catalina.out -20
 #1570528340
-tail -20 /usr/local/tomcat/logs/catalina.out 
+tail -20 /usr/local/tomcat/logs/catalina.out
 #1570528340
 ls /usr/local/tomcat/webapps/
 #1570528340
@@ -26345,11 +26345,11 @@ echo hello test2 > test2.html
 #1570528340
 ls
 #1570528340
-mv test2.html{,.bak} 
+mv test2.html{,.bak}
 #1570528340
 ls
 #1570528340
-mv test1.html{,.bak} 
+mv test1.html{,.bak}
 #1570528340
 ls
 #1570528340
@@ -26365,7 +26365,7 @@ ll
 #1570528340
 ls
 #1570528340
-tail -20 /usr/local/tomcat/logs/catalina.out 
+tail -20 /usr/local/tomcat/logs/catalina.out
 #1570528340
 netstat -tnlp
 #1570528340
@@ -26373,7 +26373,7 @@ netstat -tnlp
 #1570528340
 netstat -tnlp
 #1570528340
-tail -20 /usr/local/tomcat/logs/catalina.out 
+tail -20 /usr/local/tomcat/logs/catalina.out
 #1570528340
 netstat -tnlp
 #1570528340
@@ -26383,13 +26383,13 @@ netstat -tnlp
 #1570528340
 ls
 #1570528340
-mv test2.html{,.bak} 
+mv test2.html{,.bak}
 #1570528340
 ls
 #1570528340
 curl -I 172.16.20.11:8080/test2.html
 #1570528340
-cd 
+cd
 #1570528340
 ls
 #1570528340
@@ -26401,7 +26401,7 @@ vim
 #1570528340
 netstat -tnlp
 #1570528340
-systemctl status rabbitmq-server.service 
+systemctl status rabbitmq-server.service
 #1570528340
 rabbitmq-server -h
 #1570528340
@@ -26417,7 +26417,7 @@ rabbitmqctl list_user_permissions admin
 #1570528340
 yum install rabbitmq-server
 #1570528340
-systemctl start rabbitmq-server.service 
+systemctl start rabbitmq-server.service
 #1570528340
 netstat -tnlp
 #1570528340
@@ -26437,7 +26437,7 @@ ls /usr/local
 #1570528340
 netstat -tnlp
 #1570528340
-systemctl start rabbitmq-server.service 
+systemctl start rabbitmq-server.service
 #1570528340
 netstat -tnlp
 #1570528340
@@ -26475,13 +26475,13 @@ ls
 #1570528340
 cd test2/
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 git pull
 #1570528340
 git status
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 git status
 #1570528340
@@ -26499,7 +26499,7 @@ cd test2/
 #1570528340
 ls
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 git status
 #1570528340
@@ -26507,17 +26507,17 @@ git fetch
 #1570528340
 git status
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 git pull
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
  git checkout -b dev1
 #1570528340
 git branch
 #1570528340
-vim src/main/java/com/example/demo/HelloController.java 
+vim src/main/java/com/example/demo/HelloController.java
 #1570528340
 git add .
 #1570528340
@@ -26531,11 +26531,11 @@ git status
 #1570528340
 git push
 #1570528340
-git branch -d dev1 
+git branch -d dev1
 #1570528340
  git checkout -b dev2
 #1570528340
-vim src/main/java/com/example/demo/HelloController.java 
+vim src/main/java/com/example/demo/HelloController.java
 #1570528340
 git add .
 #1570528340
@@ -26551,29 +26551,29 @@ git branch
 #1570528340
 git status
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 git branch master
 #1570528340
-git branch 
+git branch
 #1570528340
 git checkout master
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 git pull
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 git checkout dev2
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 git pull
 #1570528340
 git pull origin dev2
 #1570528340
-cat src/main/java/com/example/demo/HelloController.java 
+cat src/main/java/com/example/demo/HelloController.java
 #1570528340
 ls
 #1570528340
@@ -26719,7 +26719,7 @@ bg %1
 #1570528340
 jobs
 #1570528340
-sh tmp.sh 
+sh tmp.sh
 #1570528340
 jobs
 #1570528340
@@ -26769,9 +26769,9 @@ ls /root/dir3
 #1570528340
 jar xf ../pcs-server-1.0-SNAPSHOT.jar -C /root/dir3
 #1570528340
-tail /root/tmp.txt 
+tail /root/tmp.txt
 #1570528340
-tail -f /root/tmp.txt 
+tail -f /root/tmp.txt
 #1570528340
 cd
 #1570528340
@@ -26823,7 +26823,7 @@ kill -9 34831
 #1570528340
 ps aux | grep tmp.sh
 #1570528340
-java -jar target/rabbitmq-hello-0.0.1-SNAPSHOT.jar 
+java -jar target/rabbitmq-hello-0.0.1-SNAPSHOT.jar
 #1570528340
 java -jar target/rabbitmq-hello-0.0.1-SNAPSHOT.jar &
 #1570528340
@@ -26915,7 +26915,7 @@ cd ../
 #1570528340
 tar zcf dir3.tar.gz dir3
 #1570528340
-tar tf dir3.tar.gz 
+tar tf dir3.tar.gz
 #1570528340
 rm -rf dir2/*
 #1570528340
@@ -26925,7 +26925,7 @@ tree dir2
 #1570528340
 rm -rf dir2/*
 #1570528340
-rm -rf dir3.tar.gz 
+rm -rf dir3.tar.gz
 #1570528340
 zip -r dir3.zip dir3
 #1570528340
@@ -26951,7 +26951,7 @@ jar cvf src.jar -C src/ .
 #1570528340
 ls
 #1570528340
-jar tf src.jar 
+jar tf src.jar
 #1570528340
 tree src
 #1570528340
@@ -26963,11 +26963,11 @@ ll
 #1570528340
 jar cvf dir3.jar -C . .
 #1570528340
-jar tf dir3.jar 
+jar tf dir3.jar
 #1570528340
 tree
 #1570528340
-rm -rf dir3.jar 
+rm -rf dir3.jar
 #1570528340
 tree
 #1570528340
@@ -26975,17 +26975,17 @@ cd ../
 #1570528340
 jar cvMf dir3.jar -C dir3 ./
 #1570528340
-jar tf dir3.jar 
+jar tf dir3.jar
 #1570528340
-rm -rf dir3.jar dir3.zip 
+rm -rf dir3.jar dir3.zip
 #1570528340
 jar cvMf dir3.jar dir3
 #1570528340
-jar tf dir3.jar 
+jar tf dir3.jar
 #1570528340
 ls
 #1570528340
-rm -rf dir3.jar 
+rm -rf dir3.jar
 #1570528340
 cd dir1/test3/
 #1570528340
@@ -26993,17 +26993,17 @@ ll
 #1570528340
 tree
 #1570528340
-jar tf target/rabbitmq-hello-0.0.1-SNAPSHOT.jar 
+jar tf target/rabbitmq-hello-0.0.1-SNAPSHOT.jar
 #1570528340
 ls
 #1570528340
-java -jar target/rabbitmq-hello-0.0.1-SNAPSHOT.jar 
+java -jar target/rabbitmq-hello-0.0.1-SNAPSHOT.jar
 #1570528340
 netstat -tnlp
 #1570528340
 ls
 #1570528340
-vim src/main/resources/application.properties 
+vim src/main/resources/application.properties
 #1570528340
 sh tmp.sh
 #1570528340
@@ -27045,9 +27045,9 @@ crontab -e
 #1570528340
 crontab -l
 #1570528340
-tail -f tmp.txt 
+tail -f tmp.txt
 #1570528340
-tail  tmp.txt 
+tail  tmp.txt
 #1570528340
 cat tmp.txt
 #1570528340
@@ -27055,35 +27055,35 @@ crontab -e
 #1570528340
 tail /var/log/cron
 #1570528340
-tail tmp.txt 
+tail tmp.txt
 #1570528340
 vim
 #1570528340
-tail tmp.txt 
+tail tmp.txt
 #1570528340
 crontab -e
 #1570528340
 cat tmp.sh
 #1570528340
-tail -f tmp.txt 
+tail -f tmp.txt
 #1570528340
-> tmp.txt 
-#1570528340
-crontab -e
-#1570528340
-tail -f tmp.txt 
-#1570528340
-tail  tmp.txt 
-#1570528340
-> tmp.txt 
+> tmp.txt
 #1570528340
 crontab -e
 #1570528340
-tail -f tmp.txt 
+tail -f tmp.txt
+#1570528340
+tail  tmp.txt
+#1570528340
+> tmp.txt
 #1570528340
 crontab -e
 #1570528340
-tail -f tmp.txt 
+tail -f tmp.txt
+#1570528340
+crontab -e
+#1570528340
+tail -f tmp.txt
 #1570528340
 which date
 #1570528340
@@ -27091,9 +27091,9 @@ which echo
 #1570528340
 crontab -e
 #1570528340
-tail -f tmp.txt 
+tail -f tmp.txt
 #1570528340
-systemctl is-enabled crond.service 
+systemctl is-enabled crond.service
 #1570528340
 tail -f /var/log/cron
 #1570528340
@@ -27105,7 +27105,7 @@ vim /etc/rsyslog.d/50-default.conf
 #1570528340
 ls /etc/rsyslog.d/50-default.conf
 #1570528340
-ls /etc/rsyslog.conf 
+ls /etc/rsyslog.conf
 #1570528340
 tail -f /var/spool/mail/root
 #1570528340
@@ -27115,7 +27115,7 @@ ls /var/spool/mail
 #1570528340
 cat /var/log/cron
 #1570528340
-cat /var/log/cron-20190623 
+cat /var/log/cron-20190623
 #1570528340
 cat /var/log/cron-20190701
 #1570528340
@@ -27125,13 +27125,13 @@ cat /var/log/cron-20190714
 #1570528340
 ls /etc/rsyslog.d/
 #1570528340
-ls /etc/rsyslog.conf 
+ls /etc/rsyslog.conf
 #1570528340
 tail -f tmp.txt
 #1570528340
-tail -f tmp.log 
+tail -f tmp.log
 #1570528340
-systemctl restart rsyslog.service 
+systemctl restart rsyslog.service
 #1570528340
 /root/tmp.h >>/root/tmp.log 2>&
 #1570528340
@@ -27157,23 +27157,23 @@ systemctl start postfix
 #1570528340
 tail -f /var/log/cron
 #1570528340
-cat /var/spool/mail/zhuzi 
+cat /var/spool/mail/zhuzi
 #1570528340
 systemctl stat postfi
 #1570528340
 tail -f /var/log/cron
 #1570528340
-h /root/tmp.h >>/root/tmp.log 2>&1 
+h /root/tmp.h >>/root/tmp.log 2>&1
 #1570528340
 tail -f /var/log/cron
 #1570528340
-systemctl restart crond.service 
+systemctl restart crond.service
 #1570528340
 tail -f /var/log/cron
 #1570528340
 cat /var/log/cron
 #1570528340
-/root/tmp.h >>/root/tmp.log 2>&1 
+/root/tmp.h >>/root/tmp.log 2>&1
 #1570528340
 /root/tmp.h >>/root/tmp.log 2>
 #1570528340
@@ -27185,27 +27185,27 @@ tail -f /var/log/cron
 #1570528340
 ls /var/spool/mail/
 #1570528340
-tail -f /var/spool/mail/root 
+tail -f /var/spool/mail/root
 #1570528340
 tail -f /var/log/cron
 #1570528340
-systemctl restart rsyslog.service 
+systemctl restart rsyslog.service
 #1570528340
 tail -f /var/log/cron
 #1570528340
 tail /var/log/cron
 #1570528340
-systemctl restart crond.service 
+systemctl restart crond.service
 #1570528340
 ll  /var/log/cron
 #1570528340
 ls  /var/log/cron
 #1570528340
-systemctl restart rsyslog.service 
+systemctl restart rsyslog.service
 #1570528340
 tail -f /var/log/cron
 #1570528340
-systemctl status postfix.service 
+systemctl status postfix.service
 #1570528340
 ls
 #1570528340
@@ -27227,7 +27227,7 @@ rm -rf /var/log/cron
 #1570528340
 ll /var/log/cron
 #1570528340
-systemctl restart crond.service 
+systemctl restart crond.service
 #1570528340
 systemctl restart rsyslog.service
 #1570528340
@@ -27245,13 +27245,13 @@ systemctl start rsyslog
 #1570528340
 /usr/bin/echo hello $(date +%T) >>/root/tmp.log 2>&1
 #1570528340
-tail tmp.log 
+tail tmp.log
 #1570528340
-echo hello $(date +%T) 
+echo hello $(date +%T)
 #1570528340
 ls
 #1570528340
-tail -f tmp.log 
+tail -f tmp.log
 #1570528340
 systemctl stop postfix
 #1570528340
@@ -27263,17 +27263,17 @@ tail /var/log/cron
 #1570528340
 grep CRON /var/log/syslog
 #1570528340
-> tmp.log 
+> tmp.log
 #1570528340
-tail -f tmp.log 
+tail -f tmp.log
 #1570528340
 systemctl start postfix
 #1570528340
-tail -f /var/spool/mail/root 
+tail -f /var/spool/mail/root
 #1570528340
 systemctl status postfix
 #1570528340
-tail -f tmp.log 
+tail -f tmp.log
 #1570528340
 tail -f /var/log/cron
 #1570528340
@@ -27323,7 +27323,7 @@ rsync -avhnP --exclude-from=/root/exclude.txt ./ /root/dir2/
 #1570528340
 ll -d .ssh
 #1570528340
-cd 
+cd
 #1570528340
 ll -d .ssh
 #1570528340
@@ -27341,7 +27341,7 @@ cd .ssh
 #1570528340
 ll
 #1570528340
-rm -rf known_hosts  id_rsa.pub 
+rm -rf known_hosts  id_rsa.pub
 #1570528340
 ll
 #1570528340
@@ -27367,7 +27367,7 @@ iptable -L
 #1570528340
 iptables -L
 #1570528340
-man iptables-extensions 
+man iptables-extensions
 #1570528340
 netstat -tnlp
 #1570528340
@@ -27399,13 +27399,13 @@ iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 81
 #1570528340
 nslookup pcs_sit.maimaiti.cn
 #1570528340
-cat .ssh/authorized_keys 
+cat .ssh/authorized_keys
 #1570528340
 ssh -p 10022 10.10.1.121
 #1570528340
 ls
 #1570528340
-man iptables-extensions 
+man iptables-extensions
 #1570528340
 mkdir testdir
 #1570528340
@@ -27425,7 +27425,7 @@ cd .ssh
 #1570528340
 ls
 #1570528340
-rm -rf known_hosts 
+rm -rf known_hosts
 #1570528340
 ls
 #1570528340
@@ -27499,7 +27499,7 @@ ssh -p 10022 10.10.0.153
 #1570528340
 crontab -u zhuzi -l
 #1570528340
-du -h /home/zhuzi/tmp.txt 
+du -h /home/zhuzi/tmp.txt
 #1570528340
 crontab -u zhuzi -r
 #1570528340
@@ -27507,7 +27507,7 @@ crontab -u zhuzi -l
 #1570528340
 crontab -l
 #1570528340
-mv /var/spool/cron/root{,.bak} 
+mv /var/spool/cron/root{,.bak}
 #1570528340
 crontab -l
 #1570528340
@@ -27537,15 +27537,15 @@ ls
 #1570528340
 ls | xargs
 #1570528340
-ls | xargs -i mv {} {}.bak 
+ls | xargs -i mv {} {}.bak
 #1570528340
 ls
 #1570528340
-ls dir1 | xargs -i mv {} {}.bak 
+ls dir1 | xargs -i mv {} {}.bak
 #1570528340
 ls dir1
 #1570528340
-ls /root/dir1 | xargs -i mv {} {}.bak 
+ls /root/dir1 | xargs -i mv {} {}.bak
 #1570528340
 ls
 #1570528340
@@ -27697,21 +27697,21 @@ ls /var/spool/cron
 #1570528340
 id zhuzi
 #1570528340
-cat tmp.txt 
+cat tmp.txt
 #1570528340
-cat -v tmp.txt 
+cat -v tmp.txt
 #1570528340
 rz
 #1570528340
-cat -v exclude1.txt 
+cat -v exclude1.txt
 #1570528340
 dos2unix exclude1.txt
 #1570528340
-cat -v exclude1.txt 
+cat -v exclude1.txt
 #1570528340
 ls
 #1570528340
-rm -rf exclude1.txt 
+rm -rf exclude1.txt
 #1570528340
 nslookup tmk.maimaiti.site
 #1570528340
@@ -27735,11 +27735,11 @@ ping 10.10.1.34
 #1570528340
 wget -O /root/tmp.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 #1570528340
-vim tmp.repo 
+vim tmp.repo
 #1570528340
 du -sh /usr/local/jdk1.8.0_211/
 #1570528340
-du -sh /download/jdk-8u211-linux-x64.tar.gz 
+du -sh /download/jdk-8u211-linux-x64.tar.gz
 #1570528340
 date +%F
 #1570528340
@@ -27753,7 +27753,7 @@ touch `date +%F_%T`.txt
 #1570528340
 ls
 #1570528340
-rm -rf 2019-07-30_17\:37\:02.txt 
+rm -rf 2019-07-30_17\:37\:02.txt
 #1570528340
 ls
 #1570528340
@@ -27871,19 +27871,19 @@ netstat -tnlp
 #1570528340
 ps aux | grep 971
 #1570528340
-systemctl is-enabled postfix.service 
+systemctl is-enabled postfix.service
 #1570528340
-systemctl stop  postfix.service && systemctl disable postfix.service 
+systemctl stop  postfix.service && systemctl disable postfix.service
 #1570528340
 netstat -tnlp
 #1570528340
 ls /download/
 #1570528340
-vim /root/.bash_history 
+vim /root/.bash_history
 #1570528340
 netstat -tnlp
 #1570528340
-vim /usr/local/redis-5.0.5/redis.conf 
+vim /usr/local/redis-5.0.5/redis.conf
 #1570528340
 rm -rf /usr/local/redis-5.0.5/
 #1570528340
@@ -27945,7 +27945,7 @@ redis-cli  -h 172.16.20.11 -a 123 shutdown
 #1570528340
 netstat -tnlp
 #1570528340
-vim /usr/local/redis-5.0.5/redis.conf 
+vim /usr/local/redis-5.0.5/redis.conf
 #1570528340
 crontab -e
 #1570528340
@@ -27975,17 +27975,17 @@ cd /usr/local/tomcat7/logs/
 #1570528340
 ls
 #1570528340
-tail catalina.out 
+tail catalina.out
 #1570528340
 ls
 #1570528340
-tail catalina.2019-07-31.log 
+tail catalina.2019-07-31.log
 #1570528340
 ls
 #1570528340
-tail catalina.2019-07-31.log 
+tail catalina.2019-07-31.log
 #1570528340
-tail catalina.out 
+tail catalina.out
 #1570528340
 cd /usr/local/tomcat/logs
 #1570528340
@@ -28003,11 +28003,11 @@ yum history list 67
 #1570528340
 yum history info 67
 #1570528340
-which cronolog 
+which cronolog
 #1570528340
 ls /download/
 #1570528340
-vim /usr/local/tomcat7/bin/catalina.sh 
+vim /usr/local/tomcat7/bin/catalina.sh
 #1570528340
 ls
 #1570528340
@@ -28019,7 +28019,7 @@ redis-cli shutdown
 #1570528340
 netstat -tnlp
 #1570528340
-redis-server 
+redis-server
 #1570528340
 /usr/local/redis-5.0.5/src/redis-server /usr/local/redis-5.0.5/redis.conf
 #1570528340
@@ -28027,7 +28027,7 @@ ls /download/
 #1570528340
 ls /usr/local/redis-5.0.5/
 #1570528340
-ls /etc/rc.local 
+ls /etc/rc.local
 #1570528340
 ls /etc/init.d/
 #1570528340
@@ -28043,7 +28043,7 @@ ll /etc/rc.d
 #1570528340
 ll -d /etc/init.d
 #1570528340
-ls /etc/inittab 
+ls /etc/inittab
 #1570528340
 vim /etc/inittab
 #1570528340
@@ -28051,7 +28051,7 @@ vim .bashrc
 #1570528340
 ls /etc/init.d/
 #1570528340
-tail -f /usr/local/tomcat/logs/catalina.out 
+tail -f /usr/local/tomcat/logs/catalina.out
 #1570528340
 cd /usr/local/tomcat/logs/
 #1570528340
@@ -28059,7 +28059,7 @@ ls
 #1570528340
 df -h
 #1570528340
-ll 
+ll
 #1570528340
 ll -h
 #1570528340
@@ -28067,21 +28067,21 @@ ll -h catalina.*
 #1570528340
 tail catalina.out
 #1570528340
-tail catalina.2019-07-16.log 
+tail catalina.2019-07-16.log
 #1570528340
-tail -20 catalina.2019-07-16.log 
+tail -20 catalina.2019-07-16.log
 #1570528340
-tail -50 catalina.2019-07-16.log 
+tail -50 catalina.2019-07-16.log
 #1570528340
-tail -50 catalina.out 
+tail -50 catalina.out
 #1570528340
-tail catalina.2019-07-15.log 
+tail catalina.2019-07-15.log
 #1570528340
 ls
 #1570528340
-ll 
+ll
 #1570528340
-tail -f catalina.out 
+tail -f catalina.out
 #1570528340
 ls
 #1570528340
@@ -28119,7 +28119,7 @@ cd /usr/local/tomcat7/logs/
 #1570528340
 ls
 #1570528340
-tail -f catalina.out 
+tail -f catalina.out
 #1570528340
 ls
 #1570528340
@@ -28143,7 +28143,7 @@ tail catalina.out.2019-07-31.out
 #1570528340
 ls
 #1570528340
-rm -rf catalina.2019-07-31.log 
+rm -rf catalina.2019-07-31.log
 #1570528340
 ls
 #1570528340
@@ -28237,7 +28237,7 @@ ls
 #1570528340
 ls
 #1570528340
-tail catalina.2019-08-01.out 
+tail catalina.2019-08-01.out
 #1570528340
 ls
 #1570528340
@@ -28263,9 +28263,9 @@ tree dir12
 #1570528340
 tree
 #1570528340
-echo dir11 > dir11/dir11.txt 
+echo dir11 > dir11/dir11.txt
 #1570528340
-echo dir12 > dir12/dir11.txt 
+echo dir12 > dir12/dir11.txt
 #1570528340
 tree
 #1570528340
@@ -28273,7 +28273,7 @@ rsync -av --delete dir11/ dir12
 #1570528340
 tree
 #1570528340
-cat dir12/dir11.txt 
+cat dir12/dir11.txt
 #1570528340
 tree
 #1570528340
@@ -28285,7 +28285,7 @@ tree
 #1570528340
 cd ../
 #1570528340
-rsync -av --delete dir1/dir11/ dir1/dir12 
+rsync -av --delete dir1/dir11/ dir1/dir12
 #1570528340
 cd dir1
 #1570528340
@@ -28311,7 +28311,7 @@ mkdir dir1
 #1570528340
 echo dir2 > dir1.dir1.txt
 #1570528340
-rm -rf dir1.dir1.txt 
+rm -rf dir1.dir1.txt
 #1570528340
 tree
 #1570528340
@@ -28333,9 +28333,9 @@ tree dir13
 #1570528340
 tree dir14
 #1570528340
-rsync -av --delete dir13/ dir14/ 
+rsync -av --delete dir13/ dir14/
 #1570528340
-cat dir14/dir1/dir1.txt 
+cat dir14/dir1/dir1.txt
 #1570528340
 ping 10.83.22.30
 #1570528340
@@ -28421,7 +28421,7 @@ ls /usr/local/bin | grep zabbix
 #1570528340
 ls /usr/local/bin | grep redis
 #1570528340
-vim /usr/local/redis-5.0.5/redis.conf 
+vim /usr/local/redis-5.0.5/redis.conf
 #1570528340
 vim
 #1570528340
@@ -28447,7 +28447,7 @@ rm -f ./*
 #1570528340
 ls
 #1570528340
-../bin/startup.sh 
+../bin/startup.sh
 #1570528340
 ls
 #1570528340
@@ -28457,7 +28457,7 @@ rm -f ./*
 #1570528340
 ls
 #1570528340
-../bin/startup.sh 
+../bin/startup.sh
 #1570528340
 ls
 #1570528340
@@ -28467,7 +28467,7 @@ ls
 #1570528340
 netstat -tnlp
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 ls
 #1570528340
@@ -28491,7 +28491,7 @@ ls
 #1570528340
 ls
 #1570528340
-which cronolog 
+which cronolog
 #1570528340
 cd /usr/local/tomcat/webapps/
 #1570528340
@@ -28507,7 +28507,7 @@ rm -f ./*
 #1570528340
 ls
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 ls
 #1570528340
@@ -28521,7 +28521,7 @@ ls
 #1570528340
 rm -f ./*
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 ls
 #1570528340
@@ -28535,7 +28535,7 @@ ls
 #1570528340
 rm -f ./*
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 ls
 #1570528340
@@ -28543,7 +28543,7 @@ ls
 #1570528340
 ls
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 cd /usr/local/tomcat/logs/
 #1570528340
@@ -28557,7 +28557,7 @@ ls
 #1570528340
 ls
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 cd /usr/local/tomcat/logs/
 #1570528340
@@ -28571,7 +28571,7 @@ ls
 #1570528340
 netstat -tnlp
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 /usr/local/tomcat/bin/startup.sh
 #1570528340
@@ -28579,7 +28579,7 @@ cd /usr/local/tomcat/logs/
 #1570528340
 ls
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 /usr/local/tomcat/bin/startup.sh
 #1570528340
@@ -28609,7 +28609,7 @@ ln -sv apache-tomcat-8.5.42/ tomcat
 #1570528340
 ls
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 cd /usr/local/tomcat/logs/
 #1570528340
@@ -28629,7 +28629,7 @@ ls
 #1570528340
 tail catalina.out
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 /usr/local/tomcat/bin/startup.sh
 #1570528340
@@ -28637,7 +28637,7 @@ cd /usr/local/tomcat/logs/
 #1570528340
 ls
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 ls
 #1570528340
@@ -28651,7 +28651,7 @@ cd /usr/local/tomcat/logs/
 #1570528340
 ls
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 cd /usr/local/tomcat/logs/
 #1570528340
@@ -28665,7 +28665,7 @@ rm -rf ./*
 #1570528340
 pwd
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 /usr/local/tomcat/bin/startup.sh
 #1570528340
@@ -28695,7 +28695,7 @@ ls
 #1570528340
 netstat -tnlp
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 ls
 #1570528340
@@ -28711,7 +28711,7 @@ rm -rf ./*
 #1570528340
 netstat -tnlp
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
 ls
 #1570528340
@@ -28719,7 +28719,7 @@ ls
 #1570528340
 ls
 #1570528340
-vim                                                                                                                 
+vim
 #1570528340
 vim /usr/local/apache-tomcat-8.5.42/bin/catalina.sh
 #1570528340
@@ -28799,13 +28799,13 @@ echo 1 > /tmp/tmp.txt
 #1570528340
 cat /tmp/tmp.txt
 #1570528340
-rsync -avn /tmp/tmp.txt node11 
+rsync -avn /tmp/tmp.txt node11
 #1570528340
-rsync -avn /tmp/tmp.txt node11: 
+rsync -avn /tmp/tmp.txt node11:
 #1570528340
 rsync -av /tmp/tmp.txt node11
 #1570528340
-cat /tmp/tmp.txt 
+cat /tmp/tmp.txt
 #1570528340
 nslookup cms.bqjr.cn
 #1570528340
@@ -28827,11 +28827,11 @@ ls
 #1570528340
 mv 1.txt{,.bak}
 #1570528340
-mv 2.txt{,.bak} 
+mv 2.txt{,.bak}
 #1570528340
 ls
 #1570528340
-echo 1.txt.bak >> 1.txt.bak 
+echo 1.txt.bak >> 1.txt.bak
 #1570528340
 echo 1.txt > 1.txt
 #1570528340
@@ -28841,11 +28841,11 @@ rename ".bak" "" *
 #1570528340
 ls
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
 rename -h
 #1570528340
-echo 1.txt > 1.txt 
+echo 1.txt > 1.txt
 #1570528340
 echo 1.txt.bak > 1.txt.bak
 #1570528340
@@ -28853,13 +28853,13 @@ ls
 #1570528340
 cat 1.txt
 #1570528340
-cat 1.txt.bak 
+cat 1.txt.bak
 #1570528340
 rename -v ".bak" "" *
 #1570528340
 ls
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
 ls
 #1570528340
@@ -28881,11 +28881,11 @@ kill -9 16398
 #1570528340
 ls
 #1570528340
-../bin/startup.sh 
+../bin/startup.sh
 #1570528340
 ls
 #1570528340
-tail catalina.2019-08-09.out 
+tail catalina.2019-08-09.out
 #1570528340
 nslookup crm.bqjr.cn
 #1570528340
@@ -28939,11 +28939,11 @@ tree
 #1570528340
 nslookup mq.maimaiti.tech
 #1570528340
-systemctl start rabbitmq-server.service 
+systemctl start rabbitmq-server.service
 #1570528340
 netstat -tnlp
 #1570528340
-systemctl stop rabbitmq-server.service 
+systemctl stop rabbitmq-server.service
 #1570528340
 ls
 #1570528340
@@ -28967,7 +28967,7 @@ tree dir12
 #1570528340
 nslookup mssqlbis.bf.cn
 #1570528340
-nslookup 
+nslookup
 #1570528340
 nslookup cis.bqjr.cn
 #1570528340
@@ -28983,9 +28983,9 @@ systemctl start mariadb httpd zabbix-server.service zabbix-agent.service
 #1570528340
 netstat -tnlp
 #1570528340
-vim /etc/zabbix/zabbix_agentd.conf 
+vim /etc/zabbix/zabbix_agentd.conf
 #1570528340
-systemctl restart zabbix-agent.service 
+systemctl restart zabbix-agent.service
 #1570528340
 zabbix_get -s 127.0.0.1 -k vm.memory.size[total] | awk '{print $1/1024/1024"M"}'
 #1570528340
@@ -28997,17 +28997,17 @@ kill -9 2295
 #1570528340
 netstat -tnlp
 #1570528340
-systemctl stop zabbix-agent.service 
+systemctl stop zabbix-agent.service
 #1570528340
 zabbix_get -s 127.0.0.1 -k vm.memory.size[total] | awk '{print $1/1024/1024"M"}'
 #1570528340
-systemctl start zabbix-agent.service 
+systemctl start zabbix-agent.service
 #1570528340
 zabbix_get -s 127.0.0.1 -k vm.memory.size[total] | awk '{print $1/1024/1024"M"}'
 #1570528340
 free -h
 #1570528340
-systemctl restart zabbix-agent.service 
+systemctl restart zabbix-agent.service
 #1570528340
 zabbix_get -s 127.0.0.1 -k vm.memory.size[total] | awk '{print $1/1024/1024"M"}'
 #1570528340
@@ -29019,7 +29019,7 @@ cd dir1
 #1570528340
 ls
 #1570528340
-tree 
+tree
 #1570528340
 cp dir11/1.txt 1.txt
 #1570528340
@@ -29029,13 +29029,13 @@ cp -af dir11/1.txt 1.txt
 #1570528340
 \cp -a dir11/1.txt 1.txt
 #1570528340
-echo dir11 > dir11/1.txt 
+echo dir11 > dir11/1.txt
 #1570528340
-echo dir1 > 1.txt 
+echo dir1 > 1.txt
 #1570528340
 \cp -a dir11/1.txt 1.txt
 #1570528340
-cat 1.txt 
+cat 1.txt
 #1570528340
 echo dir1 > 1.txt
 #1570528340
@@ -29073,9 +29073,9 @@ netsat -tnlp
 #1570528340
 netstat -tnlp
 #1570528340
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1570528340
-rm -rf .ssh/known_hosts 
+rm -rf .ssh/known_hosts
 #1570528340
 ssh node11
 #1570528340
@@ -29087,7 +29087,7 @@ ping oauth.bqjr.cn
 #1570528340
 grep -r '10\.36\.1\.2[01]' ./
 #1570528340
-grep -r '10\.36\.1\.2[01]' tmp.txt 
+grep -r '10\.36\.1\.2[01]' tmp.txt
 #1570528340
 cd /var/ftp/
 #1570528340
@@ -29193,7 +29193,7 @@ rm -rf anaconda-ks.cfg dir1 epel-release-latest-7.noarch.rpm  logs root.text tmp
 #1567143887
 ls
 #1567144443
-ll .bash_history 
+ll .bash_history
 #1567144499
 rpm -qa | grep docker
 #1567147484
@@ -29215,13 +29215,13 @@ yum list | grep kubeadm
 #1567147878
 yum repolist
 #1567148092
-vim /root/.ssh/authorized_keys 
+vim /root/.ssh/authorized_keys
 #1567150694
 cd /etc/yum.repos.d/
 #1567150694
 ls
 #1567150784
-ls /etc/yum.repos.d/kubernetes.repo 
+ls /etc/yum.repos.d/kubernetes.repo
 #1567150833
 ansible nodes -m synchronize -a 'src=/etc/yum.repos.d/kubernetes.repo dest=/etc/yum.repos.d/'
 #1567150857
@@ -29243,7 +29243,7 @@ ansible all -m shell -a 'rpm -qa |grep kube'
 #1567151448
 ansible all -m shell -a 'yum install -y kubelet kubeadm kubectl'
 #1567151764
-getenforce 
+getenforce
 #1567151769
 iptables -L
 #1567151796
@@ -29251,7 +29251,7 @@ cd /etc/sysctl.d
 #1567151797
 ls
 #1567151805
-vim 95-k8s-sysctl.conf 
+vim 95-k8s-sysctl.conf
 #1567152126
  kubeadm init --image-repository gcr.azk8s.cn/google_containers --pod-network-cidr=10.244.0.0/16
 #1567152651
@@ -29263,7 +29263,7 @@ docker image ls | grep -v azk
 #1567152754
 docker image ls | grep -v azk | awk '{print $3}'
 #1567152782
-docker image ls | grep -v azk | awk '{print $3}' | xargs docker rmi 
+docker image ls | grep -v azk | awk '{print $3}' | xargs docker rmi
 #1567152820
 docker image ls
 #1567152871
@@ -29341,7 +29341,7 @@ ansible all -m shell -a 'systemctl enable docker && kubectl start docker'
 #1567154565
 ansible all -m shell -a 'systemctl enable docker && systemctl start docker'
 #1567154575
-vim /etc/docker/daemon.json 
+vim /etc/docker/daemon.json
 #1567154589
  kubeadm init --image-repository gcr.azk8s.cn/google_containers --pod-network-cidr=10.244.0.0/16
 #1567155122
@@ -29361,7 +29361,7 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/a70459be008450
 #1567156105
 . /root/.bashrc
 #1567156120
-echo $KUBECONFIG 
+echo $KUBECONFIG
 #1567156189
 ansible nodes -m synchronize -a 'src=/root/.bashrc dest=/root'
 #1567156209
@@ -29389,11 +29389,11 @@ cat /root/tmp.txt
 #1567156426
 kubectl get node
 #1567156498
-kubectl get all --all-namespaces 
+kubectl get all --all-namespaces
 #1567156676
 kubectl get node
 #1567156684
-kubectl get pod --all-namespaces 
+kubectl get pod --all-namespaces
 #1567156691
 kubectl get pod --all-namespaces -o wide
 #1567156737
@@ -29435,7 +29435,7 @@ cd /etc/docker/
 #1567147438
 ls
 #1567147443
-vim daemon.json 
+vim daemon.json
 #1567157228
 ls
 #1567157231
@@ -29449,7 +29449,7 @@ ls
 #1567157826
 tar xf k9s_0.8.4_Linux_arm64.tar.gz -C /usr/local
 #1567157844
-ln -s /usr/local/k9s /usr/bin 
+ln -s /usr/local/k9s /usr/bin
 #1567157847
 k9s -h
 #1567157856
@@ -29473,11 +29473,11 @@ ls
 #1567157995
 ls k9s
 #1567158002
-ls k9s 
+ls k9s
 #1567158006
 ll
 #1567158015
-rm -rf k9s 
+rm -rf k9s
 #1567158017
 ls
 #1567158022
@@ -29485,7 +29485,7 @@ cd /download/
 #1567158022
 ls
 #1567158028
-tar xf k9s_0.8.4_Linux_arm64.tar.gz 
+tar xf k9s_0.8.4_Linux_arm64.tar.gz
 #1567158031
 ls
 #1567158079
@@ -29493,7 +29493,7 @@ ll
 #1567158095
 k9s
 #1567158110
-rm -f /usr/bin/k9s 
+rm -f /usr/bin/k9s
 #1567158113
 k9s
 #1567158135
@@ -29527,7 +29527,7 @@ cd /download/
 #1567158429
 ls
 #1567158433
-rm -rf k9s_0.8.4_Linux_arm64.tar.gz 
+rm -rf k9s_0.8.4_Linux_arm64.tar.gz
 #1567158461
 wget https://github.com/derailed/k9s/releases/download/0.8.4/k9s_0.8.4_Linux_x86_64.tar.gz
 #1567158724
@@ -29535,7 +29535,7 @@ ls
 #1567158740
 rm -rf k9s_0.8.4_Linux_x86_64.tar.gz
 #1567158743
-rm -rf k9s_0.8.4_Linux_x86_64.tar.gz.1 
+rm -rf k9s_0.8.4_Linux_x86_64.tar.gz.1
 #1567158743
 ls
 #1567158756
@@ -29555,7 +29555,7 @@ wget https://storage.googleapis.com/kubernetes-helm/helm-v2.12.3-linux-amd64.tar
 #1567159671
 ls
 #1567159675
-rm -rf helm-v2.12.3-linux-amd64.tar.gz 
+rm -rf helm-v2.12.3-linux-amd64.tar.gz
 #1567159676
 ls
 #1567160974
@@ -29563,7 +29563,7 @@ wget https://get.helm.sh/helm-v3.0.0-alpha.1-linux-amd64.tar.gz && tar -xvf helm
 #1567161093
 ls
 #1567161104
-rm -rf helm-v3.0.0-alpha.1-linux-amd64.tar.gz 
+rm -rf helm-v3.0.0-alpha.1-linux-amd64.tar.gz
 #1567161162
 ls
 #1567161412
@@ -29571,13 +29571,13 @@ kubectl get pod
 #1567161435
 kubectl -n kube-system top pod etcd-node11
 #1567161492
-kubectl -n kube-system top pod etcd-node11 
+kubectl -n kube-system top pod etcd-node11
 #1567162226
 rz
 #1567162238
 ls
 #1567162301
-tar xf helm-v3.0.0-alpha.1-linux-amd64.tar.gz 
+tar xf helm-v3.0.0-alpha.1-linux-amd64.tar.gz
 #1567162302
 ls
 #1567162320
@@ -29587,7 +29587,7 @@ helm
 #1567162335
 helm init --help
 #1567162491
-helm init  --stable-repo-url=http://mirror.azure.cn/kubernetes/charts/ 
+helm init  --stable-repo-url=http://mirror.azure.cn/kubernetes/charts/
 #1567162497
 helm ls
 #1567162501
@@ -29651,11 +29651,11 @@ helm ls
 #1567394310
 ls
 #1567394358
-vim rbac-config.yaml 
+vim rbac-config.yaml
 #1567394373
-kubectl apply -f rbac-config.yaml 
+kubectl apply -f rbac-config.yaml
 #1567393588
- 
+
 #1567393614
 helm ls
 #1567393638
@@ -29687,7 +29687,7 @@ cd /download/
 #1567394118
 ls
 #1567394123
-rm -rf helm-v3.0.0-alpha.1-linux-amd64.tar.gz 
+rm -rf helm-v3.0.0-alpha.1-linux-amd64.tar.gz
 #1567394125
 ls
 #1567394163
@@ -29697,7 +29697,7 @@ wget https://storage.googleapis.com/kubernetes-helm/helm-v2.14.2-linux-amd64.tar
 #1567394385
 ls
 #1567394399
-rm -rf helm-v2.12.3-linux-amd64.tar.gz 
+rm -rf helm-v2.12.3-linux-amd64.tar.gz
 #1567394401
 ls
 #1567394417
@@ -29707,9 +29707,9 @@ rm -rf linux-amd64/
 #1567394421
 ls
 #1567394433
-tar helm-v2.14.2-linux-amd64.tar.gz 
+tar helm-v2.14.2-linux-amd64.tar.gz
 #1567394436
-tar xf helm-v2.14.2-linux-amd64.tar.gz 
+tar xf helm-v2.14.2-linux-amd64.tar.gz
 #1567394438
 ls
 #1567394453
@@ -29795,15 +29795,15 @@ kubectl config current-context
 #1567400672
 k9s
 #1567400737
-echo $KUBECONFIG 
+echo $KUBECONFIG
 #1567400741
-vim /etc/kubernetes/admin.conf 
+vim /etc/kubernetes/admin.conf
 #1567400853
 ls .kube/
 #1567400856
 ll .kube/
 #1567400867
-vim .kube/config 
+vim .kube/config
 #1567401191
 kubectl config current-context
 #1567401210
@@ -29821,7 +29821,7 @@ kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed'
 #1567401551
 kubectl get deployment | grep tiller
 #1567401558
-kubectl delete deployment tiller-deploy 
+kubectl delete deployment tiller-deploy
 #1567401563
 kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed'
 #1567401578
@@ -29855,11 +29855,11 @@ helm ls
 #1567401833
 vim metrics-server/
 #1567402889
-kubectl get service nginxtest1 
+kubectl get service nginxtest1
 #1567404269
 docker image ls | grep metri
 #1567404272
-docker image ls 
+docker image ls
 #1567404990
 vim metrics-server/templates/metrics-server-deployment.yaml
 #1567405440
@@ -29875,11 +29875,11 @@ helm install --help
 #1567405248
 kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed'
 #1567405279
-kubectl get pod metrics-server-d58fdc7b8-j22g2 
+kubectl get pod metrics-server-d58fdc7b8-j22g2
 #1567405290
-kubectl describe pod metrics-server-d58fdc7b8-j22g2 
+kubectl describe pod metrics-server-d58fdc7b8-j22g2
 #1567405352
-kubectl logs metrics-server-d58fdc7b8-j22g2 
+kubectl logs metrics-server-d58fdc7b8-j22g2
 #1567405366
 kubectl top node
 #1567405533
@@ -29895,9 +29895,9 @@ kubectl  get pod  -o wide --all-namespaces | grep status
 #1567413503
 helm uninstall nginx-ingress
 #1567413536
-kubectl delete deployment httpdtest1 
+kubectl delete deployment httpdtest1
 #1567413539
-kubectl delete deployment nginxtest1 
+kubectl delete deployment nginxtest1
 #1567413546
 helm upgrade nginx-ingress --install nginx-ingress/
 #1567413575
@@ -29947,7 +29947,7 @@ helm upgrade nginx-ingress --install nginx-ingress/
 #1567415114
 curl -I http://10.83.22.224:10254/healthz
 #1567415315
-kubectl describe pod nginx-ingress-controller-5f59749f56-pngsp 
+kubectl describe pod nginx-ingress-controller-5f59749f56-pngsp
 #1567415493
 helm uninstall nginx-ingress
 #1567416099
@@ -29955,13 +29955,13 @@ rsync -av nginx-ingress/values.yaml 10.83.22.223:/root/valuestest.yaml
 #1567416111
 ls
 #1567416125
-rm -rf valuestest.yaml 
+rm -rf valuestest.yaml
 #1567416158
-vim valuestest.yaml 
+vim valuestest.yaml
 #1567416172
-diff valuestest.yaml nginx-ingress/values.yaml 
+diff valuestest.yaml nginx-ingress/values.yaml
 #1567416240
-vimdiff valuestest.yaml nginx-ingress/values.yaml 
+vimdiff valuestest.yaml nginx-ingress/values.yaml
 #1567416409
 helm uninstall nginx-ingress
 #1567416434
@@ -30005,7 +30005,7 @@ nginx -h
 #1567421457
 nginx -t
 #1567422257
-yum -y install keepalived.x86_64 
+yum -y install keepalived.x86_64
 #1567422307
 killall -0 nginx
 #1567422313
@@ -30041,11 +30041,11 @@ yum -y install nginx
 #1567419972
 vim /etc/nginx/nginx.conf
 #1567423033
-systemctl start keepalived.service 
+systemctl start keepalived.service
 #1567423038
 ip a
 #1567401841
-vim metrics-server/values.yaml 
+vim metrics-server/values.yaml
 #1567423324
 helm upgrade nginxtest --install helm/
 #1567407586
@@ -30053,7 +30053,7 @@ ls
 #1567407595
 vim nginx-ingress/
 #1567407605
-vim nginx-ingress/values.yaml 
+vim nginx-ingress/values.yaml
 #1567401910
 helm upgrade metrics-server --install metrics-server/
 #1567401915
@@ -30063,7 +30063,7 @@ kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80
 #1567402016
 kubectl get pod --all-namespaces -o wide | grep nginxtest1
 #1567402058
-kubectl get pod --all-namespaces -o wide 
+kubectl get pod --all-namespaces -o wide
 #1567402074
 kubectl get all --all-namespaces | grep nginxtest1
 #1567402137
@@ -30075,17 +30075,17 @@ kubeclt delete service tiller-deploy
 #1567402206
 kubectl delete service tiller-deploy
 #1567402239
-kubectl get service nginxtest1 
+kubectl get service nginxtest1
 #1567402252
-kubectl describe service nginxtest1 
+kubectl describe service nginxtest1
 #1567402290
 kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed'
 #1567402303
-kubectl  get pod  -o wide --all-namespaces 
+kubectl  get pod  -o wide --all-namespaces
 #1567402359
-kubectl describe service nginxtest1 
+kubectl describe service nginxtest1
 #1567402388
-kubectl get service nginxtest1 
+kubectl get service nginxtest1
 #1567402397
 curl 10.104.189.65
 #1567402533
@@ -30105,21 +30105,21 @@ kubectl exec -ti httpdtest1-77999965cf-5zn29 sh
 #1567403036
 helm ls
 #1567403048
-kubectl top pod nginxtest1-77dfdf4847-4v9j7 
+kubectl top pod nginxtest1-77dfdf4847-4v9j7
 #1567403114
-kubectl get pod metrics-server-76dbb7ddb9-47sdd 
+kubectl get pod metrics-server-76dbb7ddb9-47sdd
 #1567403129
-kubectl describe pod metrics-server-76dbb7ddb9-47sdd 
+kubectl describe pod metrics-server-76dbb7ddb9-47sdd
 #1567403200
-kubectl logs metrics-server-76dbb7ddb9-47sdd 
+kubectl logs metrics-server-76dbb7ddb9-47sdd
 #1567403338
 helm install --help
 #1567403348
 helm install --help | grep name
 #1567403368
-helm install --help 
+helm install --help
 #1567403419
-vim metrics-server/values.yaml 
+vim metrics-server/values.yaml
 #1567403472
 helm get metrics-server
 #1567403564
@@ -30127,7 +30127,7 @@ helm get metrics-server
 #1567403567
  kubectl get pods -n kube-system -l release=metric-server
 #1567403585
-kubectl describe pod metrics-server-76dbb7ddb9-47sdd 
+kubectl describe pod metrics-server-76dbb7ddb9-47sdd
 #1567403616
  kubectl get pods -n kube-system -l release=metrics-server
 #1567404059
@@ -30135,9 +30135,9 @@ kubectl top node
 #1567404076
 helm get metrics-server
 #1567404083
-kubectl describe pod metrics-server-76dbb7ddb9-47sdd 
+kubectl describe pod metrics-server-76dbb7ddb9-47sdd
 #1567404093
-kubectl logs metrics-server-76dbb7ddb9-47sdd 
+kubectl logs metrics-server-76dbb7ddb9-47sdd
 #1567404194
 cat /etc/hosts
 #1567404231
@@ -30149,7 +30149,7 @@ kubectl exec -ti metrics-server-76dbb7ddb9-47sdd sh
 #1567404732
 helm uninstall metrics-server
 #1567404742
-vim metrics-server/values.yaml 
+vim metrics-server/values.yaml
 #1567411326
 kubectl get node
 #1567411366
@@ -30165,13 +30165,13 @@ passwd root
 #1567413052
 k9s
 #1567423166
-vim helm/values.yaml 
+vim helm/values.yaml
 #1567420352
 ifconfig
 #1567420414
 vim /etc/nginx/nginx.conf
 #1567420029
-systemctl start nginx.service 
+systemctl start nginx.service
 #1567420039
 curl localhost
 #1567420049
@@ -30187,9 +30187,9 @@ kubectl get service
 #1567575058
 curl 10.100.35.246
 #1567575538
-kubectl edit pod nginx-ingress-controller-69db6b6f77-8b5lx 
+kubectl edit pod nginx-ingress-controller-69db6b6f77-8b5lx
 #1567575586
-kubectl edit pod nginxtest-helm-85565f6678-lx77p 
+kubectl edit pod nginxtest-helm-85565f6678-lx77p
 #1567575650
 kubectl edit pod nginxtest-helm-85565f6678-lx77p
 #1567575738
@@ -30205,7 +30205,7 @@ curl 10.105.173.88
 #1567580978
 kubectl edit ingress nginxtest-helm
 #1567581065
-kubectl describe ingress nginxtest-helm 
+kubectl describe ingress nginxtest-helm
 #1567581166
 tail -f /var/log/nginx/access.log
 #1567581505
@@ -30247,13 +30247,13 @@ ping 10.83.22.250
 #1567583491
 systemctl restart nginx
 #1567575774
-vim helm/templates/deployment.yaml 
+vim helm/templates/deployment.yaml
 #1567591030
-systemctl restart keepalived.service 
+systemctl restart keepalived.service
 #1567591036
 ip a
 #1567591052
-systemctl status keepalived.service 
+systemctl status keepalived.service
 #1567591074
 ip a
 #1567591086
@@ -30263,11 +30263,11 @@ tail -f /var/log/nginx/access.log
 #1567650819
 kubectl get ns
 #1567594784
-kubectl  get pod  -o wide --all-namespaces 
+kubectl  get pod  -o wide --all-namespaces
 #1567594802
 kubectl  get pod   -o wide | grep nginxtest1
 #1567594808
-kubectl  get pod   -o wide 
+kubectl  get pod   -o wide
 #1567649905
 kubectl get service
 #1567649948
@@ -30309,7 +30309,7 @@ helm uninstall nginxtest
 #1567651445
 helm ls
 #1567651501
-kubectl config set-context kubernetes-admin@kubernetes --namespace default 
+kubectl config set-context kubernetes-admin@kubernetes --namespace default
 #1567651520
 helm install nginxtest  helm/
 #1567651573
@@ -30319,9 +30319,9 @@ helm ls --help
 #1567651959
 helm ls -a
 #1567651979
-helm ls -a --all-namespaces 
+helm ls -a --all-namespaces
 #1567652063
-helm ls -a --all-namespaces --debug 
+helm ls -a --all-namespaces --debug
 #1567652152
 helm ls -a --all-namespaces --home
 #1567652305
@@ -30331,9 +30331,9 @@ ls /nfs
 #1567652313
 ll -d /nfs
 #1567652351
-systemctl status nfs-server.service 
+systemctl status nfs-server.service
 #1567652364
-systemctl start nfs-server.service 
+systemctl start nfs-server.service
 #1567652367
 ls /nfs
 #1567652368
@@ -30349,19 +30349,19 @@ kubectl get volume
 #1567653734
 ls
 #1567653746
-vim pvc.yaml 
+vim pvc.yaml
 #1567660424
 kubectl config show
 #1567660432
 kubectl config --help
 #1567660539
-vim .kube/config 
+vim .kube/config
 #1567660610
-echo $KUBECONFIG 
+echo $KUBECONFIG
 #1567660622
 vim /etc/kubernetes/admin.conf
 #1567660939
-kubectl config current-context 
+kubectl config current-context
 #1567660975
 kubectl config view
 #1567662831
@@ -30369,25 +30369,25 @@ kubectl config --kubeconfig=.kube/config set-context context1 --namespace kube-s
 #1567662255
 kubectl config --help
 #1567662645
-vim .kube/config 
+vim .kube/config
 #1567667910
 kubectl get storageclass
 #1567653796
-vim pvc-pod.yaml 
+vim pvc-pod.yaml
 #1567653963
-vim pvc.yaml 
+vim pvc.yaml
 #1567654011
-cat dashboard.txt 
+cat dashboard.txt
 #1567654081
 ls
 #1567660174
 kubectl describe node node11
 #1567661410
-kubectl  get pod   -o wide 
+kubectl  get pod   -o wide
 #1567661420
-kubectl  get pod   -o wide -n kube-system 
+kubectl  get pod   -o wide -n kube-system
 #1567669055
-kubectl  get pod   -o wide -n default 
+kubectl  get pod   -o wide -n default
 #1567669079
 curl 10.244.2.43
 #1567669112
@@ -30395,7 +30395,7 @@ cd /nfs
 #1567669113
 ls
 #1567669121
-rm -rf 1.txt 2.txt 
+rm -rf 1.txt 2.txt
 #1567669122
 ls
 #1567669128
@@ -30403,13 +30403,13 @@ cd default-nfspvc-pvc-e9630d41-070e-49e8-b584-35dd0cca4fb3/
 #1567669129
 ls
 #1567668806
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1567668823
 kubectl get pv
 #1567668927
 kubectl get pvc
 #1567668955
-kubectl get pvc --all-namespaces 
+kubectl get pvc --all-namespaces
 #1567652249
 vim /etc/exports
 #1567669271
@@ -30421,17 +30421,17 @@ cd default-nfspvc-pvc-e9630d41-070e-49e8-b584-35dd0cca4fb3/
 #1567669298
 ls
 #1567669444
-cat index.html 
+cat index.html
 #1567669686
-kubectl apply pvc-pod.yaml 
+kubectl apply pvc-pod.yaml
 #1567669693
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1567669238
-kubectl get pod -o wide -n default 
+kubectl get pod -o wide -n default
 #1567669253
 curl 10.244.2.43
 #1567669721
-kubectl get pod -o wide -n default 
+kubectl get pod -o wide -n default
 #1567669734
 curl 10.244.1.28
 #1567669740
@@ -30447,35 +30447,35 @@ curl 10.244.1.28
 #1567670014
 kubectl -n default delete pod testpvc1 testpvc2
 #1567670039
-kubectl -n default delete pvc nfspvc 
+kubectl -n default delete pvc nfspvc
 #1567670156
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1567670180
 kubectl get pvc
 #1567670184
-kubectl get pvc -n default 
+kubectl get pvc -n default
 #1567670272
-helm delete -f pvc-pod.yaml 
+helm delete -f pvc-pod.yaml
 #1567670312
-kubectl delete -f pvc-pod.yaml 
+kubectl delete -f pvc-pod.yaml
 #1567670329
 kubectl get pv
 #1567670332
 kubectl get pvc
 #1567670346
-kubectl get pvc -n default 
+kubectl get pvc -n default
 #1567670671
 systemctl restart nginx
 #1567669316
 kubectl get pv
 #1567669327
-kubectl get pvc -n kube-system 
+kubectl get pvc -n kube-system
 #1567669332
-kubectl get pvc 
+kubectl get pvc
 #1567669340
 kubectl get pv
 #1567669347
-kubectl get pvc -n default 
+kubectl get pvc -n default
 #1567669893
 cd /nfs
 #1567669894
@@ -30485,7 +30485,7 @@ cd default-nfspvc-pvc-e9630d41-070e-49e8-b584-35dd0cca4fb3/
 #1567669902
 ls
 #1567669904
-cat index.html 
+cat index.html
 #1567670190
 ls
 #1567670193
@@ -30497,7 +30497,7 @@ cd default-nfspvc-pvc-7dbc3992-c8ce-419b-b31c-97699ad256ff/
 #1567670198
 ls
 #1567670249
-kubectl  get pod   -o wide -n default 
+kubectl  get pod   -o wide -n default
 #1567670257
 curl 10.244.1.29
 #1567670368
@@ -30511,7 +30511,7 @@ df -h
 #1567671779
 kubectl get pod --all-namespaces -o wide
 #1567671786
-kubectl get pod --all-namespaces -o wide 
+kubectl get pod --all-namespaces -o wide
 #1567673350
 helm status --help
 #1567673382
@@ -30529,29 +30529,29 @@ kubectl -n default get ingress
 #1567673613
 kubectl get all --all-namespaces | grep test
 #1567673634
-kubectl get ingress --all-namespaces 
+kubectl get ingress --all-namespaces
 #1567673652
-kubectl describe ingress harbor-harbor-ingress 
+kubectl describe ingress harbor-harbor-ingress
 #1567671330
 helm upgrade harbor --install harbor/
 #1567671438
 helm status harbor
 #1567674434
-kubectl edit ingress harbor-harbor-ingress 
+kubectl edit ingress harbor-harbor-ingress
 #1567664770
-echo $KUBECONFIG 
+echo $KUBECONFIG
 #1567664781
 kubectl config view
 #1567666384
 kubectl config --help
 #1567666406
-kubectl config use-context context1 
+kubectl config use-context context1
 #1567666420
 kubectl config view
 #1567666429
 kubectl get node
 #1567666515
-kubectl config use-context kubernetes-admin@kubernetes 
+kubectl config use-context kubernetes-admin@kubernetes
 #1567666520
 kubectl get node
 #1567667686
@@ -30569,7 +30569,7 @@ kubeclt get pv
 #1567667848
 kubectl get pv
 #1567667881
-vim pvc.yaml 
+vim pvc.yaml
 #1567674818
 ls
 #1567674869
@@ -30577,7 +30577,7 @@ cd harbor/
 #1567674870
 ls
 #1567674877
-diff values.yaml values.yaml.bak 
+diff values.yaml values.yaml.bak
 #1567676216
 ls
 #1567676244
@@ -30585,41 +30585,41 @@ vim
 #1567675803
 ls
 #1567675825
-vim cert.yaml 
+vim cert.yaml
 #1567675921
-vim .bash_history 
+vim .bash_history
 #1567675936
 cat .bashrc
 #1567675966
 ls
 #1567675982
-vim .bash_history 
+vim .bash_history
 #1567676455
 kubectl get service
 #1567676528
-kubectl describe ingress harbor-harbor-ingress 
+kubectl describe ingress harbor-harbor-ingress
 #1567677302
-vim pvc.yaml 
+vim pvc.yaml
 #1567677330
-rm -rf pvc.yaml 
+rm -rf pvc.yaml
 #1567683188
 kubectl apply -f 00-crds.yaml
 #1567677261
 ls
 #1567677267
-vim issuer.yaml 
+vim issuer.yaml
 #1567677345
-vim issuer.yaml cert.yaml 
+vim issuer.yaml cert.yaml
 #1567584386
 vim
 #1567683291
 helm upgrade cert-manager --install cert-manager/
 #1567683671
-vim issuer.yaml 
+vim issuer.yaml
 #1567683702
 kubectl get clusterissuer
 #1567683777
-kubectl apply -f issuer.yaml 
+kubectl apply -f issuer.yaml
 #1567683805
 helm upgrade cert-manager --install cert-manager/
 #1567684073
@@ -30639,7 +30639,7 @@ mv 00-crds.yaml issuer.yaml certother/
 #1567684310
 ls
 #1567684332
-vim cert.yaml 
+vim cert.yaml
 #1567684374
 mv cert.yaml cert.yaml.manual
 #1567684380
@@ -30679,15 +30679,15 @@ helm uninstall nginxtest
 #1567685995
 helm ls
 #1567686034
-helm ls --all-namespaces 
+helm ls --all-namespaces
 #1567686049
 helm uninstall nginxtest -n default
 #1567686054
-helm uninstall nginxtest 
+helm uninstall nginxtest
 #1567686058
-kubectl config set-context kubernetes-admin@kubernetes --namespace default 
+kubectl config set-context kubernetes-admin@kubernetes --namespace default
 #1567686064
-helm uninstall nginxtest 
+helm uninstall nginxtest
 #1567686143
 helm upgrade nginxtest --install helm/
 #1567733595
@@ -30703,15 +30703,15 @@ helm ls
 #1567733638
 helm upgrade cert-manager --install cert-manager/
 #1567733950
-kubectl get secret --all-namespaces 
+kubectl get secret --all-namespaces
 #1567733967
-kubectl config set-context kubernetes-admin@kubernetes --namespace default 
+kubectl config set-context kubernetes-admin@kubernetes --namespace default
 #1567733970
-helm uninstall nginxtest 
+helm uninstall nginxtest
 #1567733986
 kubectl config set-context kubernetes-admin@kubernetes --namespace kube-system
 #1567733993
-kubectl get secret --all-namespaces 
+kubectl get secret --all-namespaces
 #1567734001
 kubectl get secret --all-namespaces  | grep cert
 #1567734076
@@ -30729,11 +30729,11 @@ helm repo ls
 #1567734189
 helm repo list
 #1567734208
-helm repo remove harbor 
+helm repo remove harbor
 #1567734211
 helm repo list
 #1567734217
-helm repo update 
+helm repo update
 #1567734258
 helm repo remove local
 #1567734263
@@ -30749,11 +30749,11 @@ helm fetch --untar   jetstack/cert-manager
 #1567734564
 helm upgrade cert-manager --install cert-manager/
 #1567734589
-kubectl apply cert_before/issuer.yaml 
+kubectl apply cert_before/issuer.yaml
 #1567734597
-kubectl apply -f cert_before/issuer.yaml 
+kubectl apply -f cert_before/issuer.yaml
 #1567734617
-kubectl delete -f cert_before/00-crds.yaml 
+kubectl delete -f cert_before/00-crds.yaml
 #1567734625
 kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.10/deploy/manifests/00-crds.yaml
 #1567734655
@@ -30765,7 +30765,7 @@ cd cert-manager
 #1567734888
 ls
 #1567734894
-vim Chart.yaml 
+vim Chart.yaml
 #1567734417
 vim
 #1567734941
@@ -30773,13 +30773,13 @@ cd cert-manager.bak/
 #1567734942
 ls
 #1567734949
-vim Chart.yaml 
+vim Chart.yaml
 #1567735030
 cd ../cert-manager
 #1567735031
 ls
 #1567735037
-vim Chart.yaml 
+vim Chart.yaml
 #1567735049
 helm upgrade cert-manager --install cert-manager/
 #1567735062
@@ -30791,11 +30791,11 @@ helm uninstall cert-manager
 #1567746915
 kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.10/deploy/manifests/00-crds.yaml
 #1567746924
-kubectl apply -f cert_before/issuer.yaml 
+kubectl apply -f cert_before/issuer.yaml
 #1567748434
 helm upgrade cert-manager --install cert-manager/
 #1567748501
-diff cert-manager/values.yaml cert-manager.bak/values.yaml 
+diff cert-manager/values.yaml cert-manager.bak/values.yaml
 #1567748575
 kubectl describe pod cert-manager-webhook-654f5bbd46-97979
 #1567748704
@@ -30807,7 +30807,7 @@ cd cert_before/
 #1567748738
 ls
 #1567748741
-ll 
+ll
 #1567748768
 helm repo list
 #1567748771
@@ -30823,11 +30823,11 @@ helm
 #1567750695
 helm ls
 #1567750742
-helm uninstall metrics-server cert-manager 
+helm uninstall metrics-server cert-manager
 #1567750746
 helm ls
 #1567750767
-helm uninstall nginx-ingress nginxtest 
+helm uninstall nginx-ingress nginxtest
 #1567750770
 helm ls
 #1567750787
@@ -30845,7 +30845,7 @@ rm -rf /usr/bin/helm
 #1567750849
 ls
 #1567750886
-tar xf helm-v2.14.2-linux-amd64.tar.gz 
+tar xf helm-v2.14.2-linux-amd64.tar.gz
 #1567750912
 cp -a linux-amd64/helm /usr/bin
 #1567750915
@@ -30857,7 +30857,7 @@ docker pull gcr.azk8s.cn/google_containers/tiller:v2.14.3
 #1567750968
 docker pull gcr.azk8s.cn/google_containers/tiller:v2.14.1
 #1567750992
-helm 
+helm
 #1567750997
 helm ls
 #1567751001
@@ -30867,7 +30867,7 @@ docker pull registry.aliyuncs.com/google_containers/tiller:v2.14.3
 #1567751055
 ls
 #1567751059
-rm -rf helm-v2.14.2-linux-amd64.tar.gz 
+rm -rf helm-v2.14.2-linux-amd64.tar.gz
 #1567751069
 rm -rf linux-amd64/
 #1567751076
@@ -30879,7 +30879,7 @@ wget https://storage.googleapis.com/kubernetes-helm/helm-v2.14.3-linux-amd64.tar
 #1567751212
 ls
 #1567751219
-tar xf helm-v2.14.3-linux-amd64.tar.gz 
+tar xf helm-v2.14.3-linux-amd64.tar.gz
 #1567751236
 cp -a linux-amd64/helm /usr/bin/
 #1567751321
@@ -30887,7 +30887,7 @@ cd ../
 #1567751336
 cd
 #1567751345
-kubectl apply -f rbac-config.yaml 
+kubectl apply -f rbac-config.yaml
 #1567751427
 helm init --tiller-image=registry.aliyuncs.com/google_containers/tiller:v2.14.3 --stable-repo-url=http://mirror.azure.cn/kubernetes/charts/ --service-account=tiller --upgrade
 #1567751446
@@ -30897,7 +30897,7 @@ helm ls
 #1567751544
 helm repo list
 #1567751556
-helm repo update 
+helm repo update
 #1567751737
 helm upgrade nginx-ingress --install --namespace=kube-system nginx-ingress/
 #1567751866
@@ -30923,59 +30923,59 @@ helm status harbor
 #1567752792
 kubectl config view
 #1567752812
-kubectl config set-context kubernetes-admin@kubernetes --namespace default 
+kubectl config set-context kubernetes-admin@kubernetes --namespace default
 #1567752842
 helm upgrade nginxtest --install  helm/
 #1567752883
 helm status nginxtest
 #1567754020
-kubectl describe service nginxtest-helm 
+kubectl describe service nginxtest-helm
 #1567754756
 helm delete nginxtest --purge
 #1567754760
 helm ls
 #1567755195
-kubelct apply -f ingresstest.yaml 
+kubelct apply -f ingresstest.yaml
 #1567755200
-kubectl apply -f ingresstest.yaml 
+kubectl apply -f ingresstest.yaml
 #1567755256
-kubectl get pod  -o wide 
+kubectl get pod  -o wide
 #1567755276
 curl 10.244.2.64
 #1567755283
 curl 10.244.2.64:443
 #1567756146
-kubectl delete -f ingresstest.yaml 
+kubectl delete -f ingresstest.yaml
 #1567756166
-kubectl apply -f ingresstest.yaml 
+kubectl apply -f ingresstest.yaml
 #1567759226
 helm delete nginxtest --purge
 #1567759237
 helm ls
 #1567759270
-helm ls --all 
+helm ls --all
 #1567759295
-helm delete cert-manager --purge 
+helm delete cert-manager --purge
 #1567759299
-helm ls --all 
+helm ls --all
 #1567759331
-kubectl describe ns kube-system 
+kubectl describe ns kube-system
 #1567759361
 kubectl label -h
 #1567759424
 kubectl label namespace kube-system certmanager.k8s.io/disable-validation-
 #1567759430
-kubectl describe ns kube-system 
+kubectl describe ns kube-system
 #1567759454
 helm upgrade cert-manager --install --namespace=kube-system cert-manager/
 #1567759594
-kubectl delete -f ingresstest.yaml 
+kubectl delete -f ingresstest.yaml
 #1567676316
-vim cert.yaml 
+vim cert.yaml
 #1567682756
-kubectl get pod --all-namespaces -o wide 
+kubectl get pod --all-namespaces -o wide
 #1567686623
-kubectl get all -n default 
+kubectl get all -n default
 #1567733246
 ls /download/
 #1567733275
@@ -30993,7 +30993,7 @@ helm upgrade --help
 #1567749454
 helm version
 #1567755421
-kubectl get ingress my-nginx 
+kubectl get ingress my-nginx
 #1567755520
 kubectl get service
 #1567755549
@@ -31009,7 +31009,7 @@ curl -I https://10.104.38.90
 #1567759695
 helm upgrade nginxtest --install  helm/
 #1567759725
-helm status nginxtest 
+helm status nginxtest
 #1567759811
 helm ls
 #1567746946
@@ -31031,7 +31031,7 @@ ip a
 #1567574654
 k9s
 #1567761567
-helm delete harbor --purge 
+helm delete harbor --purge
 #1567761900
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1567761942
@@ -31039,27 +31039,27 @@ helm status harbor
 #1567762259
 kubectl get service
 #1567762269
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1567762296
 kubectl get service --all-namespaces  | grep harbor
 #1567762346
 kubectl get ingress --all-namespaces
 #1567762383
-kubectl describe ingress -n kube-system harbor-harbor-ingress 
+kubectl describe ingress -n kube-system harbor-harbor-ingress
 #1567763029
-helm delete harbor --purge 
+helm delete harbor --purge
 #1567763056
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1567763101
-helm delete harbor --purge 
+helm delete harbor --purge
 #1567763105
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1567763415
-helm delete harbor --purge 
+helm delete harbor --purge
 #1567763485
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1567763963
-helm delete harbor --purge 
+helm delete harbor --purge
 #1567764255
 systemctl restart nginx
 #1567764344
@@ -31107,13 +31107,13 @@ wget https://github.com/michaelliao/itranswarp.js/blob/master/conf/ssl/gencert.s
 #1567765752
 ls
 #1567765760
-ls gencert.sh 
+ls gencert.sh
 #1567765763
 ll gencert.sh
 #1567765766
-sh gencert.sh 
+sh gencert.sh
 #1567765777
-vim gencert.sh 
+vim gencert.sh
 #1567765813
 wget https://raw.githubusercontent.com/michaelliao/itranswarp.js/master/conf/ssl/gencert.sh
 #1567765822
@@ -31121,9 +31121,9 @@ rm -rf gencert.sh*
 #1567765824
 wget https://raw.githubusercontent.com/michaelliao/itranswarp.js/master/conf/ssl/gencert.sh
 #1567765838
-ll gencert.sh 
+ll gencert.sh
 #1567765841
-sh gencert.sh 
+sh gencert.sh
 #1567765912
 ls
 #1567766410
@@ -31159,7 +31159,7 @@ systemctl restart nginx
 #1567764035
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1567764728
-helm delete harbor --purge 
+helm delete harbor --purge
 #1567764815
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1567766576
@@ -31183,7 +31183,7 @@ netstat -tnlp | grep 443
 #1567817176
 systemctl restart nginx
 #1567818421
-helm delete harbor --purge 
+helm delete harbor --purge
 #1567818813
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1567819419
@@ -31203,11 +31203,11 @@ kubectl get service -n kube-system
 #1567819771
 kubectl describe service harbor-harbor-core
 #1567819813
-kubectl describe service harbor-harbor-core 
+kubectl describe service harbor-harbor-core
 #1567819820
-kubectl edit service harbor-harbor-core 
+kubectl edit service harbor-harbor-core
 #1567819865
-kubectl edit pod harbor-harbor-core-7bb4ff77f-4cf45 
+kubectl edit pod harbor-harbor-core-7bb4ff77f-4cf45
 #1567820029
 kubectl get service
 #1567766497
@@ -31243,7 +31243,7 @@ ansible nodes -m shell -a 'sed -i "\$a 10.83.22.250 nginxtest.site harbor.site" 
 #1567821654
 systemctl restart docker
 #1567821702
-ls /etc/docker/daemon.json 
+ls /etc/docker/daemon.json
 #1567821732
 ansible nodes -m synchronize -a 'src=/etc/docker/daemon.json dest=/etc/docker/daemon.json'
 #1567821762
@@ -31323,7 +31323,7 @@ ls
 #1567830357
 helm fetch --untar harbor/nginx-ingress
 #1567830371
-helm repo update 
+helm repo update
 #1567830395
 helm repo list
 #1567830418
@@ -31339,7 +31339,7 @@ ls
 #1567830487
 ls ../nginx-ingress/
 #1567838955
-helm delete harbor --purge 
+helm delete harbor --purge
 #1567839831
 cd /nfs
 #1567839832
@@ -31347,9 +31347,9 @@ ls
 #1567839835
 ll
 #1567839941
-kubectl get pvc -n default 
+kubectl get pvc -n default
 #1567839945
-kubectl get pvc 
+kubectl get pvc
 #1567839993
 kubectl get pv
 #1567840217
@@ -31423,7 +31423,7 @@ ll
 #1567842359
 ls  kube-system-nfspvc-pvc-74c6fab1-8d2a-450d-945a-b18b541ab2cf
 #1567842367
-cat kube-system-nfspvc-pvc-74c6fab1-8d2a-450d-945a-b18b541ab2cf/index.html 
+cat kube-system-nfspvc-pvc-74c6fab1-8d2a-450d-945a-b18b541ab2cf/index.html
 #1567815051
 tail -f /var/log/nginx/access.log
 #1567820141
@@ -31495,7 +31495,7 @@ cd system/
 #1567830546
 ls
 #1567830552
-tar -tf nginx-ingress-1.6.0.tgz 
+tar -tf nginx-ingress-1.6.0.tgz
 #1567838972
 cd /nfs
 #1567838973
@@ -31507,9 +31507,9 @@ echo $TMOUT
 #1567839894
 cd
 #1567839900
-kubectp apply -f pvc-pod.yaml 
+kubectp apply -f pvc-pod.yaml
 #1567839904
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1567840265
 kubectl get service
 #1567840287
@@ -31519,7 +31519,7 @@ kubectl get pod -o wide | grep pvc
 #1567840360
 curl 10.244.1.104
 #1567840605
-kubectl delete -f pvc-pod.yaml 
+kubectl delete -f pvc-pod.yaml
 #1567840843
 hlem delete nfs-client-provisioner --purge
 #1567840849
@@ -31527,13 +31527,13 @@ helm delete nfs-client-provisioner --purge
 #1567840869
 helm upgrade nfs-client-provisioner --install --namespace=kube-system nfs-client-provisioner/
 #1567840937
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1567840996
 kubectl get pod -o wide | grep pvc
 #1567841006
 curl 10.244.1.106
 #1567841015
-kubectl delete -f pvc-pod.yaml 
+kubectl delete -f pvc-pod.yaml
 #1567841438
 kubectl get pv
 #1567842080
@@ -31541,25 +31541,25 @@ helm delete nfs-client-provisioner --purge
 #1567842088
 helm upgrade nfs-client-provisioner --install --namespace=kube-system nfs-client-provisioner/
 #1567842116
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1567842153
 kubectl get pod -o wide | grep pvc
 #1567842172
 curl 10.244.1.108
 #1567842223
-kubectl delete -f pvc-pod.yaml 
+kubectl delete -f pvc-pod.yaml
 #1567842643
 kubectl get pv
 #1567842692
-kubectl apply -f tmp1.yaml 
+kubectl apply -f tmp1.yaml
 #1567842701
 kubectl get pvc
 #1567843423
 kubectl exec --help
 #1567843914
-kubectl apply -f tmp1.yaml 
+kubectl apply -f tmp1.yaml
 #1567844730
-echo $TMOUT 
+echo $TMOUT
 #1567844846
 vim /etc/profile
 #1567844943
@@ -31635,7 +31635,7 @@ helm search gitlab
 #1567859730
 helm inspect values gitlab/gitlab > test1.yaml
 #1567859747
-vimdiff test1.yaml gitlab-ce/values.yaml 
+vimdiff test1.yaml gitlab-ce/values.yaml
 #1567860161
 rm -rf gitlab-ce
 #1567860175
@@ -31657,7 +31657,7 @@ helm status gitlab
 #1567865486
 df -h
 #1567844150
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1567844158
 kubectl get pod -o wide | grep pvc
 #1567844171
@@ -31677,19 +31677,19 @@ df -h
 #1567865621
 kubectl get pod -o wide | grep pvc
 #1567865660
-kubectl delete -f pvc-pod.yaml 
+kubectl delete -f pvc-pod.yaml
 #1567865896
 helm upgrade gitlab --install --namespace=kube-system gitlab/
 #1567867414
 kubectl get storageclass
 #1567867425
-kubectl describe storageclass nfs 
+kubectl describe storageclass nfs
 #1567867447
 kubectl edit storageclass nfs
 #1567867469
 helm upgrade nfs-client-provisioner --install --namespace=kube-system nfs-client-provisioner/
 #1567867493
-kubectl describe storageclass nfs 
+kubectl describe storageclass nfs
 #1567868172
 helm upgrade gitlab --install --namespace=kube-system gitlab/
 #1567869834
@@ -31729,9 +31729,9 @@ helm ls
 #1567876722
 helm upgrade gitlab-ce --install --namespace=kube-system gitlab-ce
 #1567761377
-vim /etc/nginx/nginx.conf.default 
+vim /etc/nginx/nginx.conf.default
 #1567865684
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1567865970
 helm status gitlab
 #1567866935
@@ -31795,19 +31795,19 @@ helm search gitlab
 #1567900888
 helm fetch --untar gitlab/gitlab-omnibus
 #1567903272
-kubectl apply -f gitlab-deploy/redis-deploy.yaml 
+kubectl apply -f gitlab-deploy/redis-deploy.yaml
 #1567904082
-rm -rf gitlab-deploy/redis-svc.yaml 
+rm -rf gitlab-deploy/redis-svc.yaml
 #1567904987
-kubectl apply -f gitlab-deploy/postgresql-deploy.yaml 
+kubectl apply -f gitlab-deploy/postgresql-deploy.yaml
 #1567905023
-kubectl delete -f gitlab-deploy/postgresql-deploy.yaml 
+kubectl delete -f gitlab-deploy/postgresql-deploy.yaml
 #1567905057
-kubectl apply -f gitlab-deploy/postgresql-deploy.yaml 
+kubectl apply -f gitlab-deploy/postgresql-deploy.yaml
 #1567905465
-rm -rf gitlab-deploy/postgresql-svc.yaml 
+rm -rf gitlab-deploy/postgresql-svc.yaml
 #1567905915
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1567900899
 vim
 #1567902048
@@ -31839,31 +31839,31 @@ helm delete gitlab-ce --purge
 #1567998949
 ls
 #1567999433
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1567999489
-kubectl delete -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl delete -f gitlab-deploy/gitlab-deploy.yaml
 #1567999699
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1567999733
-docker image ls 
+docker image ls
 #1568006927
 systemctl restart nginx
 #1568006977
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1568008888
-kubectl delete -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl delete -f gitlab-deploy/gitlab-deploy.yaml
 #1568008912
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1568009129
-kubectl delete -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl delete -f gitlab-deploy/gitlab-deploy.yaml
 #1568009194
-docker 
+docker
 #1568010088
-kubectl delete -f gitlab-deploy/postgresql-deploy.yaml  gitlab-deploy/redis-deploy.yaml 
+kubectl delete -f gitlab-deploy/postgresql-deploy.yaml  gitlab-deploy/redis-deploy.yaml
 #1568010095
-kubectl delete -f gitlab-deploy/postgresql-deploy.yaml  
+kubectl delete -f gitlab-deploy/postgresql-deploy.yaml
 #1568010115
-kubectl delete -f gitlab-deploy/redis-deploy.yaml 
+kubectl delete -f gitlab-deploy/redis-deploy.yaml
 #1568012337
 git add .
 #1568012339
@@ -31871,11 +31871,11 @@ git status
 #1568012360
 git commit -m 'update test1.txt'
 #1568012369
-git push origin master 
+git push origin master
 #1567994592
 docker system prune -h
 #1567994636
-docker system prune -a 
+docker system prune -a
 #1568005886
 helm ls
 #1568005910
@@ -31895,15 +31895,15 @@ kubectl get pv | grep Released
 #1568009660
 kubectl get pv | grep Released | awk '{print $1}'
 #1568009688
-kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv 
+kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv
 #1568010174
 kubectl apply -f *.yaml
 #1568010191
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1568010199
-kubectl apply -f gitlab-deploy/postgresql-deploy.yaml 
+kubectl apply -f gitlab-deploy/postgresql-deploy.yaml
 #1568010204
-kubectl apply -f gitlab-deploy/redis-deploy.yaml 
+kubectl apply -f gitlab-deploy/redis-deploy.yaml
 #1568011898
 cd dir1
 #1568011899
@@ -31915,7 +31915,7 @@ cd test1
 #1568011942
 ls
 #1568011950
-cat README.md 
+cat README.md
 #1568011968
 echo test1 > test1.txt
 #1568011969
@@ -31943,11 +31943,11 @@ git pull
 #1568012145
 ls
 #1568012152
-cat test1.txt 
+cat test1.txt
 #1568012223
 ls
 #1568012231
-vim test1.txt 
+vim test1.txt
 #1568011605
 cd dir1
 #1568011606
@@ -31993,9 +31993,9 @@ kubectl describe service redis
 #1568014334
 kubectl run -h
 #1568014698
-kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80 --dry-run 
+kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80 --dry-run
 #1568014775
-kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80 
+kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80
 #1568014976
 kubectl config view
 #1568015197
@@ -32027,11 +32027,11 @@ kubectl delete deployment,service test1 test2 test3
 #1568021919
 man -k dockerfile
 #1568021939
-man Dockerfile 
+man Dockerfile
 #1568021994
 man -h
 #1568022070
-man apropos 
+man apropos
 #1568078674
 kubectl run ubuntu --image=ubuntu --replicas=1  sh -c "sleep 36000"
 #1568078682
@@ -32047,7 +32047,7 @@ mv sources.list ubuntu-sources.list
 #1568080973
 docker ps | less -S
 #1568081010
-docker ps 
+docker ps
 #1568081021
 docker ps | less -S
 #1568081036
@@ -32073,9 +32073,9 @@ yum provides netstat
 #1568100796
 kubectl delete deployment,service ubuntu
 #1568101033
-kubectl delete -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl delete -f gitlab-deploy/gitlab-deploy.yaml
 #1568101068
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1568106851
 helm upgrade gitlab-runner --install --namespace=kube-system gitlab-runner/
 #1568113165
@@ -32083,11 +32083,11 @@ k9s
 #1568187791
 vim
 #1568203138
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1568425699
-vim deployment.yaml 
+vim deployment.yaml
 #1568425815
-kubectl run nginxtest1 --image=nginx:alpine  
+kubectl run nginxtest1 --image=nginx:alpine
 #1568425937
 docker cp 5642:/etc/nginx/conf.d/default.conf ./
 #1568426012
@@ -32095,7 +32095,7 @@ kubectl run -h
 #1568426139
 kubectl create configmap testconfigmap --from-file default.conf
 #1568426366
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1568187949
 helm upgrade gitlab-runner --install --namespace=kube-system gitlab-runner/
 #1568188628
@@ -32129,23 +32129,23 @@ git remote show
 #1568189229
 git remote show origin
 #1568189295
-git remote show origin 
+git remote show origin
 #1568189336
 git push -h
 #1568189350
-git push origin 
+git push origin
 #1568189367
-git push -u origin 
+git push -u origin
 #1568189373
 git push -u origin master
 #1568189530
-git remote show origin 
+git remote show origin
 #1568189551
 git push -u origin --all
 #1568190177
 ls
 #1568190204
-git remote remove origin 
+git remote remove origin
 #1568190228
 cd ..
 #1568190232
@@ -32203,7 +32203,7 @@ ls
 #1568193650
 kubectl config view
 #1568193707
-  kubectl scale deployment --replicas=0 postgresql 
+  kubectl scale deployment --replicas=0 postgresql
 #1568193775
   kubectl scale deployment --replicas=0 postgresql redis
 #1568193784
@@ -32233,7 +32233,7 @@ git add ./
 #1568194503
 git commit -m 'add 2 file'
 #1568194511
-git push origin master 
+git push origin master
 #1568194535
 git status
 #1568194572
@@ -32241,11 +32241,11 @@ git logs
 #1568194588
 git status
 #1568194631
-git log 
+git log
 #1568194737
 git reset --hard a567
 #1568194741
-git log 
+git log
 #1568194749
 ls
 #1568194774
@@ -32257,7 +32257,7 @@ git add ./
 #1568194815
 git commit -m 'add test1 1'
 #1568194823
-git push 
+git push
 #1568194853
 ls
 #1568194872
@@ -32285,23 +32285,23 @@ nginx -h
 #1568195622
 nginx -v
 #1568197577
-git push origin master 
+git push origin master
 #1568198023
 helm ls
 #1568198047
 helm status nginx-ingress
 #1568426440
-curl 10.244.2.161 
+curl 10.244.2.161
 #1568426444
 curl 10.244.2.161:81
 #1568426713
-curl  10.244.1.169 
+curl  10.244.1.169
 #1568427311
-curl  10.244.1.169 
+curl  10.244.1.169
 #1568427318
-curl  10.244.1.169:83 
+curl  10.244.1.169:83
 #1568101556
-kubectl get service 
+kubectl get service
 #1568102372
 docker run -h
 #1568102375
@@ -32311,7 +32311,7 @@ yun provides postgresql
 #1568102707
 yum provides postgresql
 #1568103259
-vim .ssh/authorized_keys 
+vim .ssh/authorized_keys
 #1568103648
 cd /nfs
 #1568103649
@@ -32335,11 +32335,11 @@ helm fetch --untar gitlab/gitlab-runner
 #1568105685
 kubectl cluster-info
 #1568107702
-kubectl describe service gitlab 
+kubectl describe service gitlab
 #1568107750
 kubectl run alpine --image=alpine --replicas=1 -- sh -c "sleep 36000"
 #1568107786
-kubectl get service gitlab 
+kubectl get service gitlab
 #1568113143
 kubectl run alpine --image=alpine --replicas=1 -- sh -c "sleep 36000"
 #1568190295
@@ -32361,7 +32361,7 @@ cd test1
 #1568190367
 ls
 #1568190378
-rm -rf test1.txt 
+rm -rf test1.txt
 #1568190379
 ls
 #1568190384
@@ -32391,7 +32391,7 @@ git init
 #1568190605
 ls
 #1568190621
-git show remote HEAD 
+git show remote HEAD
 #1568190642
 echo test2 > test2.txt
 #1568190642
@@ -32427,9 +32427,9 @@ cd test2
 #1568192084
 ls
 #1568192106
-ll -h /download/apache-tomcat-8.5.42.tar.gz 
+ll -h /download/apache-tomcat-8.5.42.tar.gz
 #1568192114
-ll -h /download/jdk-8u211-linux-x64.tar.gz 
+ll -h /download/jdk-8u211-linux-x64.tar.gz
 #1568192123
 cp -a /download/jdk-8u211-linux-x64.tar.gz ./
 #1568192124
@@ -32483,7 +32483,7 @@ ls /tmp/k9s-screens-root/kubernetes/Pods-all-1568427975956781935.csv
 #1568427988
 vim /tmp/k9s-screens-root/kubernetes/Pods-all-1568427975956781935.csv
 #1568428061
-vim /tmp/k9s-screens-root/kubernetes/Pods-all-1568428051125641377.csv 
+vim /tmp/k9s-screens-root/kubernetes/Pods-all-1568428051125641377.csv
 #1568428087
 cd /tmp/k9s-screens-root/kubernetes/
 #1568428087
@@ -32493,25 +32493,25 @@ diff Pods-all-1568427975956781935.csv Pods-all-1568428051125641377.csv
 #1568428248
 cd
 #1568428254
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1568428283
 curl 10.244.1.175:83
 #1568428549
 echo -n YWRtaW4z | encode
 #1568428563
-echo -n YWRtaW4z | base64 --decode 
+echo -n YWRtaW4z | base64 --decode
 #1568428805
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1568429433
-kubectl delete deployment nginxtest1 
+kubectl delete deployment nginxtest1
 #1568431776
-kubectl apply -f test1.yaml 
+kubectl apply -f test1.yaml
 #1568431785
- 
+
 #1568431813
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1568428637
-echo -n MTIz | base64 --decode 
+echo -n MTIz | base64 --decode
 #1568433773
 vim
 #1568770714
@@ -32525,7 +32525,7 @@ helm get manifest helm
 #1568771330
 helm upgrade helmtest --install  helmtest/
 #1568771336
-cd 
+cd
 #1568771339
 helm upgrade helmtest --install  helmtest/
 #1568771371
@@ -32533,13 +32533,13 @@ ls helmtest/
 #1568771388
 ls helmtest/templates/
 #1568771393
-vim helmtest/templates/configmap.yaml 
+vim helmtest/templates/configmap.yaml
 #1568771416
 helm upgrade helmtest --install  helmtest/
 #1568771443
 helm install --name helmtest helmtest/
 #1568771454
-helm delete helmtest --purge 
+helm delete helmtest --purge
 #1568771456
 helm install --name helmtest helmtest/
 #1568771469
@@ -32547,11 +32547,11 @@ cd helmtest/
 #1568771469
 ls
 #1568771478
-vim Chart.yaml 
+vim Chart.yaml
 #1568771499
-vim values.yaml 
+vim values.yaml
 #1568771513
-rm -rf values.yaml 
+rm -rf values.yaml
 #1568771518
 helm install --name helmtest helmtest/
 #1568771165
@@ -32581,11 +32581,11 @@ cd templates/
 #1568771284
 vim configmap.yaml
 #1568433706
-helm install -n test1 helm/ --debug --dry-run 
+helm install -n test1 helm/ --debug --dry-run
 #1568433750
 helm install -n test1 helm/ --debug --dry-run  > test1.txt
 #1568433758
-vim test1.txt 
+vim test1.txt
 #1567998878
 vim
 #1568771996
@@ -32601,17 +32601,17 @@ ls
 #1568772024
 rm -rf tests
 #1568772028
-cd 
+cd
 #1568772033
 helm install ./mychart
 #1568772073
 helm get manifest lunging-albatross
 #1568772124
-helm delete lunging-albatross --purge 
+helm delete lunging-albatross --purge
 #1568771540
 helm install --name helmtest helmtest/
 #1568771548
-helm delete helmtest --purge 
+helm delete helmtest --purge
 #1568771550
 helm install --name helmtest helmtest/
 #1568771783
@@ -32643,7 +32643,7 @@ helm install --dry-run --debug ./mychart
 #1568785411
 helm install --dry-run --debug mychart/charts/mysubchart
 #1568785419
-cd 
+cd
 #1568785421
 helm install --dry-run --debug mychart/charts/mysubchart
 #1568785173
@@ -32665,7 +32665,7 @@ ls mysubchart/templates/
 #1568785237
 rm -rf mysubchart/templates/*
 #1568785268
-vim mysubchart/values.yaml 
+vim mysubchart/values.yaml
 #1568772395
 vim
 #1568785733
@@ -32685,11 +32685,11 @@ k9s
 #1568792735
 vim
 #1568792820
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1568793009
-kubectl delete -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl delete -f gitlab-deploy/gitlab-deploy.yaml
 #1568793032
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1568801701
 java -version
 #1568801728
@@ -32697,7 +32697,7 @@ rpm -qa | grep java
 #1568801758
 which java
 #1568801772
-cat /etc/profile.d/java.sh 
+cat /etc/profile.d/java.sh
 #1568801810
 ls /download/
 #1568801885
@@ -32709,9 +32709,9 @@ netstat -tnlp | grep 443
 #1568801947
 yum repolist
 #1568803037
-rpm -ql jenkins 
+rpm -ql jenkins
 #1568803181
-vim /etc/sysconfig/jenkins 
+vim /etc/sysconfig/jenkins
 #1568792414
 helm ls
 #1568792482
@@ -32719,7 +32719,7 @@ helm upgrade nginx-ingress --install --namespace=kube-system nginx-ingress/
 #1568798423
 kubectl run alpine --image=alpine --replicas=1 -- sh -c "sleep 36000"
 #1568800843
-kubectl delete deployment ubuntu 
+kubectl delete deployment ubuntu
 #1568800875
 cat /etc/timezone
 #1568801965
@@ -32751,7 +32751,7 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 #1568802927
 systemctl status jenkins
 #1568802979
-vim /etc/yum.repos.d/jenkins.repo 
+vim /etc/yum.repos.d/jenkins.repo
 #1568854958
 systemctl restart jenkins
 #1568854966
@@ -32795,7 +32795,7 @@ git push origin master
 #1568859144
 docker version
 #1568859224
-git rev-parse --short HEAD 
+git rev-parse --short HEAD
 #1568859229
 git rev-parse --short HEAD
 #1568793621
@@ -32813,7 +32813,7 @@ git remote show
 #1568793675
 git remote show origin
 #1568793726
-git push origin 
+git push origin
 #1568793737
 git push origin master
 #1568796778
@@ -32861,13 +32861,13 @@ cd /download/
 #1568868164
 yum install jenkins-2.176.3-1.1.noarch.rpm
 #1568868178
-rpm -Uvh jenkins-2.176.3-1.1.noarch.rpm 
+rpm -Uvh jenkins-2.176.3-1.1.noarch.rpm
 #1568868196
-yum -y remove jenkins.noarch 
+yum -y remove jenkins.noarch
 #1568868210
 yum -y install jenkins
 #1568868227
-rpm -Uvh jenkins-2.176.3-1.1.noarch.rpm 
+rpm -Uvh jenkins-2.176.3-1.1.noarch.rpm
 #1568868264
 systemctl start jenkins
 #1568868300
@@ -32885,11 +32885,11 @@ ls .docker/
 #1568870285
 cat config.json
 #1568870290
-cat .docker/config.json 
+cat .docker/config.json
 #1568875150
 ll .ssh
 #1568875155
-cat .ssh/authorized_keys 
+cat .ssh/authorized_keys
 #1568875631
 useradd user11
 #1568875642
@@ -32899,15 +32899,15 @@ echo 123 | passwd --stdin user11
 #1568875725
 su - user11
 #1568875763
-vim .ssh/authorized_keys 
+vim .ssh/authorized_keys
 #1568875784
-vim /home/user11/.ssh/authorized_keys 
+vim /home/user11/.ssh/authorized_keys
 #1568875808
-su - user11 
+su - user11
 #1568875843
 ssh user11@node11
 #1568875888
-cp -a .ssh/id_rsa{,.bak} 
+cp -a .ssh/id_rsa{,.bak}
 #1568875890
 ll .ssh
 #1568875911
@@ -32969,7 +32969,7 @@ cd /var/lib/jenkins/jobs/project1/workspace
 #1568874382
 ls
 #1568874482
-cat commit-id 
+cat commit-id
 #1568878147
 docker image ls
 #1568878164
@@ -32981,9 +32981,9 @@ docker push harbor.site/system/hello-kenzan:4ac8b13
 #1568878243
 cat /var/lib/jenkins/secrets/initialAdminPassword
 #1568879007
-cat commit-id 
+cat commit-id
 #1568879276
-cp -a /etc/kubernetes/admin.conf /root/.kube/config 
+cp -a /etc/kubernetes/admin.conf /root/.kube/config
 #1568879284
 vim /root/.kube/config
 #1568882681
@@ -32995,9 +32995,9 @@ helm delete nginxtest --purge
 #1568882975
 helm upgrade nginxtest --install --set image.repository=harbor.site/system/hello-kenzan,image.tag=775a08c helm/
 #1568883432
-kubectl get ingress 
+kubectl get ingress
 #1568883445
-kubectl describe ingress nginxtest-helm 
+kubectl describe ingress nginxtest-helm
 #1568884735
 helm upgrade nginxtest --install --set image.repository=harbor.site/system/hello-kenzan,image.tag=775a08c helm/
 #1568884814
@@ -33023,13 +33023,13 @@ helm push nginx-ingress harbor
 #1568885326
 helm push helm/ harbor
 #1568885358
-kubectl delete deployment,service hello-kenzan 
+kubectl delete deployment,service hello-kenzan
 #1568883548
 tail -f /var/log/nginx/access.log
 #1568885525
 helm repo list
 #1568885542
-helm delete nginxtest --purge 
+helm delete nginxtest --purge
 #1568876078
 ssh user11@node11
 #1568876086
@@ -33059,11 +33059,11 @@ kubectl exec -ti gitlab-runner-gitlab-runner-c86d5bc4f-8r54x sh
 #1568797042
 kubectl exec -ti -h
 #1568880687
-kubectl rollout history deployment hello-kenzan 
+kubectl rollout history deployment hello-kenzan
 #1568880701
 kubectl rollout history -h
 #1568881473
-kubectl rollout history deployment hello-kenzan 
+kubectl rollout history deployment hello-kenzan
 #1568881480
 kubectl rollout history deployment hello-kenzan  --revision=1
 #1568881513
@@ -33127,7 +33127,7 @@ helm rollback nginxtest 3
 #1568959001
 helm history nginxtest
 #1568959045
-kubectl rollout history deployment nginxtest-helm 
+kubectl rollout history deployment nginxtest-helm
 #1568946424
 cd dir1/kubernetes-ci-cd/
 #1568946424
@@ -33141,7 +33141,7 @@ git push
 #1568946665
 helm ls
 #1568946737
-kubectl rollout history deployment nginxtest-helm 
+kubectl rollout history deployment nginxtest-helm
 #1568946783
 kubectl rollout history deployment nginxtest-helm --revision=3
 #1568946858
@@ -33151,7 +33151,7 @@ helm un
 #1568947961
 helm history -h
 #1568947993
-helm history nginxtest-helm 
+helm history nginxtest-helm
 #1568948001
 helm history nginxtest
 #1568948063
@@ -33189,11 +33189,11 @@ helm search rancher
 #1569027206
 helm upgrade rancher --install --namespace=kube-system rancher/
 #1569027221
-helm delete rancher --purge 
+helm delete rancher --purge
 #1569027884
 systemctl restart nginx
 #1568950107
-cat /etc/docker/daemon.json 
+cat /etc/docker/daemon.json
 #1569027997
 cat /etc/hosts
 #1569028054
@@ -33203,7 +33203,7 @@ ssh node12
 #1569028468
 ssh node13
 #1569029603
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569029628
 systemctl restart nginx
 #1569029953
@@ -33231,7 +33231,7 @@ kubectl get pvc
 #1569030608
 kubectl get pv
 #1569030625
-kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv 
+kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv
 #1569030630
 kubectl get pv
 #1569030715
@@ -33289,7 +33289,7 @@ kubectl get pvc
 #1569032137
 find -maxdepth 1 ! \( -name '*68ab9a8e*' -o -name '*a4caafa0*'  -o -name '*4f2ae436*'  -o -name '*21dd2395*'  -o -name '*9911e7d1*' \) | ll
 #1569032172
-find -maxdepth 1 ! \( -name '*68ab9a8e*' -o -name '*a4caafa0*'  -o -name '*4f2ae436*'  -o -name '*21dd2395*'  -o -name '*9911e7d1*' \) | xargs rm -rf 
+find -maxdepth 1 ! \( -name '*68ab9a8e*' -o -name '*a4caafa0*'  -o -name '*4f2ae436*'  -o -name '*21dd2395*'  -o -name '*9911e7d1*' \) | xargs rm -rf
 #1569032178
 ls
 #1569032341
@@ -33305,7 +33305,7 @@ kubectl get pv
 #1569032398
 kubectl get pvc
 #1569032420
-kubectl delete pvc data-harbor-harbor-redis-0  database-data-harbor-harbor-database-0  
+kubectl delete pvc data-harbor-harbor-redis-0  database-data-harbor-harbor-database-0
 #1569032424
 kubectl get pv
 #1569032460
@@ -33317,7 +33317,7 @@ kubectl get pvc
 #1569032470
 ls
 #1569032499
-rm -rf kube-system-database-data-harbor-harbor-database-0-pvc-a4caafa0-34b9-49b9-9791-23f79c27fe33 
+rm -rf kube-system-database-data-harbor-harbor-database-0-pvc-a4caafa0-34b9-49b9-9791-23f79c27fe33
 #1569032509
 rm -rf kube-system-data-harbor-harbor-redis-0-pvc-68ab9a8e-f938-4ab7-9baa-0a12a4bc56d5
 #1569032512
@@ -33351,7 +33351,7 @@ ls
 #1569044672
 ./create_self-signed-cert.sh --ssl-domain=rancher.local
 #1569044694
-chmod +x create_self-signed-cert.sh 
+chmod +x create_self-signed-cert.sh
 #1569044696
 ./create_self-signed-cert.sh --ssl-domain=rancher.local
 #1569044701
@@ -33359,7 +33359,7 @@ ls
 #1569044717
 ll
 #1569044761
-rm -rf gencert.sh 
+rm -rf gencert.sh
 #1569044763
 ls
 #1569044764
@@ -33373,13 +33373,13 @@ netstat -tnlp
 #1569045996
 netstat -tnlp | grep 80
 #1569046010
-/usr/local/tomcat/bin/shutdown.sh 
+/usr/local/tomcat/bin/shutdown.sh
 #1569046015
 netstat -tnlp | grep 80
 #1569046030
 pkill java
 #1569046033
-netstat -tnlp 
+netstat -tnlp
 #1569046042
 netstat -tnlp
 #1569046048
@@ -33389,7 +33389,7 @@ systemctl restart nginx
 #1569047351
 kubectl config view
 #1569047405
-kubectl create secret generic tls-ca --from-file=/etc/nginx/ssl/cacerts.pem 
+kubectl create secret generic tls-ca --from-file=/etc/nginx/ssl/cacerts.pem
 #1569047419
 kubectl get secret
 #1569047450
@@ -33413,7 +33413,7 @@ kubectl get pv
 #1569047942
 kubectl get pvc
 #1569047954
-kubectl delete pvc data-harbor-harbor-redis-0  database-data-harbor-harbor-database-0  
+kubectl delete pvc data-harbor-harbor-redis-0  database-data-harbor-harbor-database-0
 #1569048006
 kubectl get pv | grep harbor
 #1569048030
@@ -33443,11 +33443,11 @@ helm upgrade harbor --install --namespace=kube-system harbor/
 #1569048451
 helm delete harbor --delete
 #1569048457
-helm delete harbor --purge 
+helm delete harbor --purge
 #1569048461
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1569048466
-cd 
+cd
 #1569048473
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1569048771
@@ -33489,9 +33489,9 @@ kubectl get secret | grep tls-ca
 #1569057738
 kubectl get issuers
 #1569057815
-kubectl describe issuer rancher 
+kubectl describe issuer rancher
 #1569057837
-kubectl edit issuer rancher 
+kubectl edit issuer rancher
 #1569057925
 kubectl get secret
 #1569057934
@@ -33513,9 +33513,9 @@ kubectl get pvc
 #1569050311
 tail -f /var/log/nginx/access.log
 #1569053294
-kubectl create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key 
+kubectl create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
 #1569053341
-kubectl create secret generic tls-ca --from-file=cacerts.pem 
+kubectl create secret generic tls-ca --from-file=cacerts.pem
 #1569055318
 ls /etc/nginx/ssl/rancher.local.crt
 #1569055332
@@ -33525,7 +33525,7 @@ cd /usr/share/nginx/html/
 #1569056209
 ls
 #1569056224
-mv index.html{,.bak} 
+mv index.html{,.bak}
 #1569056225
 ls
 #1569056230
@@ -33539,9 +33539,9 @@ cd ssl
 #1569043948
 ls
 #1569044187
-vim gencert.sh 
+vim gencert.sh
 #1569044987
-vim create_self-signed-cert.sh 
+vim create_self-signed-cert.sh
 #1569058215
 helm upgrade rancher --install --namespace=kube-system rancher/
 #1569058148
@@ -33563,7 +33563,7 @@ cd .ssh
 #1569028569
 ls
 #1569028573
-> known_hosts 
+> known_hosts
 #1569028575
 ll
 #1569028582
@@ -33607,13 +33607,13 @@ helm status rancher
 #1569205891
 iptables -L
 #1569205941
-systemctl status firewalld.service 
+systemctl status firewalld.service
 #1569205947
-systemctl is-enabled firewalld.service 
+systemctl is-enabled firewalld.service
 #1569205962
-systemctl status iptables.service 
+systemctl status iptables.service
 #1569205967
-systemctl is-enabled iptables.service 
+systemctl is-enabled iptables.service
 #1569205976
 iptalbes -nL
 #1569205980
@@ -33621,7 +33621,7 @@ iptables -nL
 #1569206352
 kubectl exec -ti rancher-685f7d749d-4hthp sh
 #1569207010
-cat .kube/config 
+cat .kube/config
 #1569207952
 helm delete rancher --purge
 #1569208372
@@ -33629,7 +33629,7 @@ helm upgrade rancher --install --namespace=kube-system rancher/
 #1569209204
 helm status rancher
 #1569209246
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569209626
 kubectl -n cattle-system patch deployments cattle-cluster-agent --patch '{
 #1570528340
@@ -33709,19 +33709,19 @@ helm delete rancher
 #1569216267
 helm delete rancher --purge
 #1569216313
-kubectl delete ns cattle-system 
+kubectl delete ns cattle-system
 #1569216380
-kubectl get ns cattle-system 
+kubectl get ns cattle-system
 #1569216399
 kubectl delete ns -h
 #1569216432
 kubectl get ns
 #1569216617
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569216624
-kubectl get all -n cattle-global-data 
+kubectl get all -n cattle-global-data
 #1569216635
-kubectl delete ns cattle-global-data 
+kubectl delete ns cattle-global-data
 #1569216676
 kubectl get ns
 #1569216818
@@ -33745,9 +33745,9 @@ netstat -tnlp | grep 443
 #1569216949
 kubectl get ns
 #1569216964
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569216972
-kubectl get all -n cattle-global-data 
+kubectl get all -n cattle-global-data
 #1569217604
 mkdir /var/lib/rancher
 #1569217709
@@ -33765,7 +33765,7 @@ systemctl restart nginx
 #1569220941
 kubectl get service
 #1569220945
-kubectl get service -n default 
+kubectl get service -n default
 #1569220960
 curl 10.101.251.168:31831
 #1569220969
@@ -33775,15 +33775,15 @@ nginx -v
 #1569221924
 kubectl get ns
 #1569221940
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569223652
 helm delete rancher --purge
 #1569223668
-kubectl create secret generic tls-ca --from-file=cacerts.pem 
+kubectl create secret generic tls-ca --from-file=cacerts.pem
 #1569223688
 cd /etc/nginx/ssl
 #1569223693
-kubectl create secret generic tls-ca --from-file=cacerts.pem 
+kubectl create secret generic tls-ca --from-file=cacerts.pem
 #1569223775
 helm upgrade rancher --install --namespace=kube-system rancher/
 #1569224238
@@ -33793,13 +33793,13 @@ helm delete rancher --purge
 #1569226491
 kubectl edit namespaces cattle-system
 #1569226566
-kubectl delete ns cattle-system 
+kubectl delete ns cattle-system
 #1569226571
 kubectl edit namespaces cattle-system
 #1569226598
 kubectl get ns
 #1569226612
-kubectl get all -n cattle-global-data 
+kubectl get all -n cattle-global-data
 #1569226923
 systemctl restart nginx
 #1569226939
@@ -33817,9 +33817,9 @@ netstat -tnlp | grep 443
 #1569217912
 kubectl get ns
 #1569227149
-kubectl get ns cattle-system 
+kubectl get ns cattle-system
 #1569227159
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569227460
 helm delete rancher --purge
 #1569227619
@@ -33831,7 +33831,7 @@ nginx -V | grep stream
 #1569228149
 cp -a /etc/nginx /tmp/nginx.bak
 #1569228169
-wget http://nginx.org/download/nginx-1.12.2.tar.gz 
+wget http://nginx.org/download/nginx-1.12.2.tar.gz
 #1569228196
 mv nginx-1.12.2.tar.gz /download/
 #1569228198
@@ -33841,7 +33841,7 @@ ls
 #1569228214
 nginx -V
 #1569228221
-tar xf nginx-1.12.2.tar.gz 
+tar xf nginx-1.12.2.tar.gz
 #1569228224
 cd nginx-1.12.2/
 #1569228250
@@ -33879,11 +33879,11 @@ yum -y install gperftools-devel
 #1569228706
 make
 #1569228863
-cp -a objs/nginx /usr/sbin/nginx 
+cp -a objs/nginx /usr/sbin/nginx
 #1569228887
 systemctl stop nginx
 #1569228892
-cp -a objs/nginx /usr/sbin/nginx 
+cp -a objs/nginx /usr/sbin/nginx
 #1569228909
 which nginx
 #1569228915
@@ -33905,7 +33905,7 @@ nginx -V | grep stream
 #1569230991
 systemctl restart nginx
 #1569231678
-nginx -t 
+nginx -t
 #1569231729
 systemctl restart nginx
 #1569231762
@@ -33961,15 +33961,15 @@ kubectl get service | grep nginx
 #1569207020
 vim
 #1569291277
-kubectl apply -f pvc-pod.yaml 
+kubectl apply -f pvc-pod.yaml
 #1569292255
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569292313
 kubectl get service testpod
 #1569229376
 kubectl get ns
 #1569229392
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569229402
 helm ls
 #1569229422
@@ -33979,11 +33979,11 @@ tail -f /var/log/nginx/access.log
 #1569289174
 ls /etc/kubernetes/manifests
 #1569289206
-vim /etc/kubernetes/manifests/etcd.yaml 
+vim /etc/kubernetes/manifests/etcd.yaml
 #1569292555
 kubectl get service testpod
 #1569315449
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569315459
 kubectl get service testpod
 #1569315527
@@ -33997,7 +33997,7 @@ kubetl delete service,pod testpod
 #1569316053
 kubectl delete service,pod testpod
 #1569316630
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569316636
 kubectl get service nginx
 #1569217502
@@ -34007,17 +34007,17 @@ curl 10.83.22.251
 #1569316849
 ping 10.83.22.251
 #1569317292
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569317513
 kubectl get service nginx
 #1569324950
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569324977
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/a70459be0084506e4ec919aa1c114638878db11b/Documentation/kube-flannel.yml
 #1569324994
 wget https://raw.githubusercontent.com/coreos/flannel/a70459be0084506e4ec919aa1c114638878db11b/Documentation/kube-flannel.yml
 #1569317647
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569317655
 kubectl get service nginx
 #1569318919
@@ -34025,19 +34025,19 @@ kubectl delete service,ingress nginx
 #1569318988
  kubectl port-forward nginx-5c69f5ccbf-hwm2s 8900:80
 #1569324392
-kubectl get node --show-labels 
+kubectl get node --show-labels
 #1569324932
 kubectl label node node13 disktype=ssd
 #1569375559
-kubectl get node --show-labels 
+kubectl get node --show-labels
 #1569376832
 ls /etc/cni/net.d
 #1569376851
-vim /etc/cni/net.d/10-flannel.conflist 
+vim /etc/cni/net.d/10-flannel.conflist
 #1569377285
 kubectl get all | grep testpod
 #1569377292
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569377721
 kubectl delete pod testpod
 #1569377727
@@ -34047,7 +34047,7 @@ kubectl get all | grep test
 #1569377743
 kubectl get all | grep testpod
 #1569377751
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569377832
 kubectl get all | grep nginx
 #1569377865
@@ -34055,9 +34055,9 @@ kubectl delete deployment nginx
 #1569377906
 kubectl get all | grep nginx
 #1569377920
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569380977
-kubectl run alpine --image=alpine --replicas=1 -- sh -c "sleep 36000"  --dry-run 
+kubectl run alpine --image=alpine --replicas=1 -- sh -c "sleep 36000"  --dry-run
 #1569381012
 kubectl delete deployment,service,ingress alpine
 #1569381023
@@ -34065,19 +34065,19 @@ kubectl run --help
 #1569381375
 kubectl run -i -t busybox --image=busybox --restart=Never
 #1569381586
-kubectl get pod busybox 
+kubectl get pod busybox
 #1569381626
 kubectl run -i -t busybox --image=busybox
 #1569381652
-kubectl get deployment busybox 
+kubectl get deployment busybox
 #1569381687
 kubectl run -i -t busybox --image=busybox
 #1569386677
-kubectl delete deployment busybox 
+kubectl delete deployment busybox
 #1569386703
 kubectl run -i -t busybox --image=busybox
 #1569386736
-kubectl delete deployment busybox 
+kubectl delete deployment busybox
 #1569388769
 kubectl get service
 #1569388795
@@ -34085,13 +34085,13 @@ netstat -tnlp
 #1569388802
 netstat -tnlp | grep kube-proxy
 #1569388829
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1569388851
 kubectl get service --all-namespaces | grep nodeport
 #1569388860
 kubectl get service --all-namespaces | grep -i nodeport
 #1569388017
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569388026
 kubectl get service nginx
 #1569388042
@@ -34123,7 +34123,7 @@ netstat -tnlp | grep -E '443|80'
 #1569394418
 helm install --name=nginx-ingress --namespace=kube-system nginx-ingress/
 #1569394513
-kubectl delete pod busybox 
+kubectl delete pod busybox
 #1569394898
 helm ls
 #1569395011
@@ -34131,7 +34131,7 @@ vim
 #1569395191
 systemctl restart nginx
 #1569395378
-helm delete nginxtest --purge 
+helm delete nginxtest --purge
 #1569395487
 netstat -tnlp
 #1569395492
@@ -34147,7 +34147,7 @@ top
 #1569205233
 k9s
 #1569381791
-vim .k9s/config.yml 
+vim .k9s/config.yml
 #1569381863
 k9s
 #1569319008
@@ -34205,11 +34205,11 @@ kubectl -n default get service
 #1569402828
 kubectl get pvc
 #1569404450
-kubectl get node --show-labels 
+kubectl get node --show-labels
 #1569406501
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569409119
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569409782
 helm delete rancher --purge
 #1569409860
@@ -34217,13 +34217,13 @@ helm get ns
 #1569409864
 kubectl get ns
 #1569461385
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569461396
 helm ls
 #1569461454
 find / -name 'rancher' -type d
 #1569461522
-docker ps -a 
+docker ps -a
 #1569461526
 docker ps -a  | grep rancher
 #1569461727
@@ -34245,9 +34245,9 @@ kubectl -n default delete pod,deployment,service,ingress nginx
 #1569461914
 kubectl -n default delete pod,deployment,service,ingress nginx-demo
 #1569462217
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569462993
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569463805
 ls
 #1569464104
@@ -34281,9 +34281,9 @@ kubectl edit deployment  kube-flannel-ds-amd64
 #1569466911
 kubectl edit daemonset  kube-flannel-ds-amd64
 #1569481097
-kubectl apply -f test.ymal 
+kubectl apply -f test.ymal
 #1569481163
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569481323
 kubectl -n cattle-system patch deployments cattle-cluster-agent --patch '{
 #1570528340
@@ -34353,7 +34353,7 @@ kubectl -n cattle-system patch  daemonsets cattle-node-agent --patch '{
 #1570528340
 }'
 #1569481370
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569465311
 kubetl top node node13
 #1569465317
@@ -34369,11 +34369,11 @@ helm install --name=rancher --namespace=kube-system rancher/
 #1569473304
 kubectl get ns
 #1569473312
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569474655
 kubectl get ns
 #1569474666
-kubectl get all -n cattle-system 
+kubectl get all -n cattle-system
 #1569480433
 kubectl get clusterrolebindings
 #1569480443
@@ -34389,7 +34389,7 @@ ansible nodes -m synchronize -a 'src=/etc/hosts dest=/etc/'
 #1569480843
 wget  https://rancher.mysite/v3/import/n2vjf67gtkd7gck9g5wjlptlkvn4ln29brznrkflsbm8wm7j6r58gm.yaml
 #1569480903
-kubectl get clusterrole 
+kubectl get clusterrole
 #1569480913
 kubectl get clusterrole | grep proxy-clusterrole-kubeapiserver
 #1569480940
@@ -34407,13 +34407,13 @@ kubectl get pod
 #1569486470
  kubectl describe limitrange
 #1569486480
- kubectl describe limitrange -n default 
+ kubectl describe limitrange -n default
 #1569486496
- kubectl describe limitranges 
+ kubectl describe limitranges
 #1569487580
- kubectl describe ns default 
+ kubectl describe ns default
 #1569488728
-kubectl get pod -n default 
+kubectl get pod -n default
 #1569488736
 kubectl get service
 #1569488739
@@ -34423,7 +34423,7 @@ kubectl get service -n default -o wide
 #1569488763
 kubectl get pod -n default -o wide
 #1569488798
-curl 10.110.210.26 
+curl 10.110.210.26
 #1569489352
 ps aux | grep jenkins
 #1569489368
@@ -34487,7 +34487,7 @@ systemctl status jenkins
 #1569491293
 ps aux | grep java
 #1569491327
-vim /etc/sysconfig/jenkins 
+vim /etc/sysconfig/jenkins
 #1569491452
 docker login -u admin -p Harbor12345 harbor.site
 #1569491463
@@ -34497,7 +34497,7 @@ ansible nodes -m synchronize -a 'src=/etc/docker/daemon.json dest=/etc/docker/da
 #1569491548
 docker login -u admin -p Harbor12345 harbor.mysite
 #1569491614
-systemctl restart docker.service 
+systemctl restart docker.service
 #1569491632
 docker login -u admin -p Harbor12345 harbor.mysite
 #1569491663
@@ -34585,19 +34585,19 @@ docker rm 3132
 #1569548168
 kubectl create ns testns
 #1569548217
-kubectl apply -f testresource.yaml 
+kubectl apply -f testresource.yaml
 #1569500123
 docker run --name stress -ti -m 200M --memory-swap=300M progrium/stress --vm 1 --vm-bytes 280M
 #1569500703
 cat testresource.yaml | kubectl apply -f -
 #1569500841
-kubectl delete pod memory-demo 
+kubectl delete pod memory-demo
 #1569500851
 cat testresource.yaml | kubectl apply -f -
 #1569500906
-kubectl delete pod memory-demo 
+kubectl delete pod memory-demo
 #1569501112
-kubectl apply -f testresource.yaml 
+kubectl apply -f testresource.yaml
 #1569501142
 kubectl top pod cpu-demo
 #1569501242
@@ -34605,35 +34605,35 @@ kubectl top node node11
 #1569501271
 kubectl top pod cpu-demo
 #1569548469
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569548980
 kubectl -n testns get pod
 #1569548984
 kubectl -n testns get pod -o wide
 #1569549011
-kubectl -n testns describe pod nginx 
+kubectl -n testns describe pod nginx
 #1569549082
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569554446
 helm install --name=metrics-server --namespace=kube-system metrics-server/
 #1569552603
-kubectl apply -f testresource.yaml 
+kubectl apply -f testresource.yaml
 #1569552606
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569553184
 kubectl get node
 #1569553193
-kubectl top node 
+kubectl top node
 #1569553981
 kubectl get node
 #1569554120
-kubectl top node 
+kubectl top node
 #1569554331
 helm ls
 #1569554348
 helm delete metrics-server --purge
 #1569554525
-kubectl top node 
+kubectl top node
 #1569554541
 kubectl top node
 #1569554617
@@ -34653,9 +34653,9 @@ kubectl top node
 #1569558877
 kubectl drain node12 --delete-local-data --force --ignore-daemonsets
 #1569558951
-kubectl get pod --all-namespaces 
+kubectl get pod --all-namespaces
 #1569558977
-kubectl get pod -o wide --all-namespaces 
+kubectl get pod -o wide --all-namespaces
 #1569558987
 kubectl get pod -o wide --all-namespaces | grep 224
 #1569559132
@@ -34665,9 +34665,9 @@ ls
 #1569559309
 kubectl get node
 #1569560666
-kubectl cluster-info 
+kubectl cluster-info
 #1569560695
-vim .kube/config 
+vim .kube/config
 #1569560861
 kubeadm token create --ttl 0
 #1569560905
@@ -34677,7 +34677,7 @@ kubectl top node
 #1569562579
 kubectl delete deployment gitlab
 #1569562857
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569563248
 docker image ls | grep harbor.site
 #1569563941
@@ -34685,11 +34685,11 @@ cd gitlab-deploy/
 #1569563942
 ls
 #1569563946
-kubectl apply -f gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy.yaml
 #1569563952
-kubectl apply -f postgresql-deploy.yaml 
+kubectl apply -f postgresql-deploy.yaml
 #1569563962
-kubectl apply -f redis-deploy.yaml 
+kubectl apply -f redis-deploy.yaml
 #1569564248
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1569564254
@@ -34705,19 +34705,19 @@ ls /nfs
 #1569564425
 kubectl get pv
 #1569564432
-kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv 
+kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv
 #1569564442
 kubectl get pvc
 #1569564507
-kubectl delete pvc data-harbor-harbor-redis-0  database-data-harbor-harbor-database-0  
+kubectl delete pvc data-harbor-harbor-redis-0  database-data-harbor-harbor-database-0
 #1569564513
-kubectl delete pvc harbor-harbor-chartmuseum 
+kubectl delete pvc harbor-harbor-chartmuseum
 #1569564517
 kubectl delete pv
 #1569564522
 kubectl get pv
 #1569564529
-kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv 
+kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv
 #1569564531
 kubectl get pv
 #1569564569
@@ -34729,7 +34729,7 @@ ls
 #1569564586
 ls *harbor*
 #1569564602
-ll 
+ll
 #1569564617
 find -name '*harbor*' | xargs rm -rf
 #1569564619
@@ -34741,7 +34741,7 @@ cd
 #1569564643
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1569564659
-helm delete harbor --purge 
+helm delete harbor --purge
 #1569564661
 helm upgrade harbor --install --namespace=kube-system harbor/
 #1569564923
@@ -34751,13 +34751,13 @@ helm upgrade nginx-ingress --install --namespace=kube-system nginx-ingress/
 #1569565543
 helm upgrade nginx-ingress --install --set controller.image.repository=harbor.mysite/library/nginx-ingress-controller --namespace=kube-system nginx-ingress/
 #1569565956
-helm delete nginx-ingress --purge 
+helm delete nginx-ingress --purge
 #1569566007
 helm install --name=nginx-ingress --namespace=kube-system nginx-ingress/
 #1569566507
 kubectl delete deployment gitlab postgresql redis
 #1569566515
-helm delete nginx-ingress --purge 
+helm delete nginx-ingress --purge
 #1569566717
 helm delete nginxtest --purge
 #1569566790
@@ -34765,11 +34765,11 @@ cd gitlab-deploy/
 #1569566790
 ls
 #1569566797
-kubectl apply -f gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy.yaml
 #1569566806
-kubectl apply -f redis-deploy.yaml 
+kubectl apply -f redis-deploy.yaml
 #1569566809
-kubectl apply -f postgresql-deploy.yaml 
+kubectl apply -f postgresql-deploy.yaml
 #1569566829
 helm install --name=nginx-ingress --namespace=kube-system nginx-ingress/
 #1569566833
@@ -34799,17 +34799,17 @@ cd /etc/yum.repos.d/
 #1569568306
 ls
 #1569568311
-sz kubernetes.repo 
+sz kubernetes.repo
 #1569568322
 ls
 #1569568915
-cat /etc/sysctl.d/95-k8s-sysctl.conf 
+cat /etc/sysctl.d/95-k8s-sysctl.conf
 #1569569691
-ulimit 
+ulimit
 #1569569694
 ulimit  -n
 #1569569735
-ls /etc/docker/daemon.json 
+ls /etc/docker/daemon.json
 #1569569821
 rsync -av /etc/sysctl.d/95-k8s-sysctl.conf node14:/etc/sysctl.d/95-k8s-sysctl.conf
 #1569569882
@@ -34831,7 +34831,7 @@ ansible node14 -m shell -a 'yum -y install docker-ce-18.09.0'
 #1569568884
 ansible node14 -m shell -a 'systemctl enable kubelet docker && systemctl start docker'
 #1569570461
-systemctl restart docker.service 
+systemctl restart docker.service
 #1569570494
 docker info
 #1569570503
@@ -34855,11 +34855,11 @@ systemctl status docker
 #1569570717
 systemctl status kubelet
 #1569570754
-systemctl restart docker.service 
+systemctl restart docker.service
 #1569570774
-systemctl status docker.service 
+systemctl status docker.service
 #1569570779
-systemctl start docker.service 
+systemctl start docker.service
 #1569570800
 systemctl stop docker
 #1569570806
@@ -34879,7 +34879,7 @@ kubectl get pod
 #1569572950
 helm inspect values  stable/nginx-ingress
 #1569574504
-helm delete nginx-ingress --purge 
+helm delete nginx-ingress --purge
 #1569575515
 helm install --name=nginx-ingress --namespace=kube-system nginx-ingress/
 #1569575737
@@ -34895,7 +34895,7 @@ rsync -av kubernetes.repo docker-ce.repo  node14:/etc/yum.repos.d/
 #1569576821
 kubectl get node
 #1569738319
-kubectl get -n default 
+kubectl get -n default
 #1569738326
 kubectl get all -n default
 #1569741038
@@ -34917,7 +34917,7 @@ kubectl get pod
 #1569748924
 kubectl get pod -o wide
 #1569748945
-kubectl describe service nginx 
+kubectl describe service nginx
 #1569749077
 kubectl get service
 #1569749585
@@ -34947,7 +34947,7 @@ curl 10.244.1.59
 #1569750557
 curl 10.244.4.24
 #1569750612
-kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80 
+kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80
 #1569750639
 kubectl get service
 #1569750848
@@ -34963,7 +34963,7 @@ cd /nfs/default-nfspvc-pvc-062a1253-6baa-4a98-ad84-f65368ea7192/
 #1569752314
 ls
 #1569752320
-cat index.html 
+cat index.html
 #1569752536
 echo hello test1 > index.html
 #1569754374
@@ -34979,7 +34979,7 @@ kubectl get node
 #1569571183
 kubectl get cs
 #1569571207
-kubectl get tokens.management.cattle.io 
+kubectl get tokens.management.cattle.io
 #1569571220
 kubectl get token
 #1569571610
@@ -35013,9 +35013,9 @@ helm inspect values  stable/nginx-ingress
 #1569575364
 ls *.img
 #1569575367
-rm -rf backend.img 
+rm -rf backend.img
 #1569575376
-rm -rf ingress.img 
+rm -rf ingress.img
 #1569575427
 ansible nodes -m synchronize -a 'src=/root/ingress.img dest=/root/'
 #1569575487
@@ -35033,113 +35033,113 @@ kubectl top node
 #1569577114
 free -h
 #1569577286
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569577817
 kubectl delete deployment nginx-2
 #1569577832
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569578153
 kubectl delete deployment nginx-2 nginx-1
 #1569578291
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569578679
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569578823
 kubectl delete deployment nginx-2 nginx-1
 #1569578857
-kubectl delete deployment gitlab 
+kubectl delete deployment gitlab
 #1569578896
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569579091
 kubectl describe deployment gitlab
 #1569579104
 kubectl describe replicaset gitlab
 #1569579124
-kubectl delete deployment gitlab 
+kubectl delete deployment gitlab
 #1569579127
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569579165
-kubectl delete deployment gitlab 
+kubectl delete deployment gitlab
 #1569579208
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569580463
-kubectl delete deployment gitlab 
+kubectl delete deployment gitlab
 #1569580501
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569580625
-kubectl delete deployment gitlab 
+kubectl delete deployment gitlab
 #1569580645
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569581150
-kubectl delete deployment gitlab 
+kubectl delete deployment gitlab
 #1569581173
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569581361
-kubectl delete deployment gitlab 
+kubectl delete deployment gitlab
 #1569581411
-kubectl apply -f gitlab-deploy/gitlab-deploy.yaml 
+kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1569582174
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569582561
 kubectl delete deployment nginx-1 nginx-2
 #1569582622
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569582625
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569582730
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569582856
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569583269
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569583386
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569583887
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569720316
 docker run --rm -it polinux/stress stress --help
 #1569720344
 docker search stress
 #1569721100
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569721536
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569721614
 docker search stress
 #1569721779
-cat /proc/cpuinfo 
+cat /proc/cpuinfo
 #1569722102
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569722353
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569722366
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569723955
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569724045
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569724513
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569724542
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569724615
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569727442
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569732497
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569732612
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569732665
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569732706
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569733132
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569733525
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569733643
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569734565
 kubectl run limit-test --image=busybox --command -- /bin/sh -c "while true; do sleep 2; done"
 #1569734645
@@ -35157,11 +35157,11 @@ kubectl label node node13 disktype-
 #1569739373
 kubectl label node node13 zone-
 #1569739657
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569739803
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569739939
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569740115
 kubectl get pod -o wide | grep nginx-1
 #1569740123
@@ -35231,7 +35231,7 @@ ls
 #1569746692
 kubectl run -i --tty --image busybox dns-test --restart=Never --rm /bin/sh
 #1569746745
-kubectl delete deployment nginx-1 
+kubectl delete deployment nginx-1
 #1569746998
 docker history busybox
 #1569747029
@@ -35243,13 +35243,13 @@ docker history busybox
 #1569747439
 kubectl run -h
 #1569748112
-kubectl describe storageclass nfs 
+kubectl describe storageclass nfs
 #1569748269
 kubectl apply -h
 #1569748347
 kubectl apply -f teststateful.yaml --namespace=default
 #1569748372
-kubectl config set-context kubernetes-admin@kubernetes --namespace default 
+kubectl config set-context kubernetes-admin@kubernetes --namespace default
 #1569748402
 kubectl get pod -w -l app=nginx
 #1569748428
@@ -35269,7 +35269,7 @@ kubectl get all
 #1569751706
 kubectl delete deployment,service,ingress nginxtest1
 #1569751733
-kubectl get pvc --all-namespaces 
+kubectl get pvc --all-namespaces
 #1569751762
 cd /nfs/default-nfspvc-pvc-062a1253-6baa-4a98-ad84-f65368ea7192/
 #1569751763
@@ -35281,13 +35281,13 @@ echo hello from nfspvc > index.html
 #1569751796
 ls
 #1569751798
-cat index.html 
+cat index.html
 #1569752253
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569752257
 cd
 #1569752260
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1569752458
 kubectl get service
 #1569752474
@@ -35295,7 +35295,7 @@ curl 10.103.64.248
 #1569752488
 kubectl get pod -o wide
 #1569752500
-curl  10.244.4.29 
+curl  10.244.4.29
 #1569752506
 curl  10.244.2.74
 #1569752513
@@ -35329,7 +35329,7 @@ curl 10.244.4.28
 #1569755091
 kubectl scale statefulset web --replicas=2
 #1569755107
-curl 10.244.1.66 
+curl 10.244.1.66
 #1569807448
 ls
 #1569807612
@@ -35347,7 +35347,7 @@ helm install --name=elasticsearch --namespace=kube-system elasticsearch/
 #1569827349
 kubectl get pvc
 #1569827363
-kubectl get pvc -n kube-system 
+kubectl get pvc -n kube-system
 #1569827779
 curl http://10.244.2.75:9200/_cluster/state?pretty
 #1569828422
@@ -35371,19 +35371,19 @@ kubectl create configmap game-config-2 --from-file=docs/user-guide/configmap/kub
 #1570064999
 kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm
 #1570065123
-kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm --from-file=/etc/nginx/nginx.conf.tcpbak 
+kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm --from-file=/etc/nginx/nginx.conf.tcpbak
 #1570065135
-kubectl delete configmap special-config 
+kubectl delete configmap special-config
 #1570065137
-kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm --from-file=/etc/nginx/nginx.conf.tcpbak 
+kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm --from-file=/etc/nginx/nginx.conf.tcpbak
 #1570065447
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1570065673
-kubectl edit configmaps special-config 
+kubectl edit configmaps special-config
 #1570065721
 k9s
 #1570065751
-kubectl edit configmaps special-config 
+kubectl edit configmaps special-config
 #1569836760
 kubectl get all -n kube-system | grep elastic
 #1570070922
@@ -35393,7 +35393,7 @@ helm install --name=fluentd-elasticsearch --namespace=kube-system fluentd-elasti
 #1570071638
 helm lint fluentd-elasticsearch
 #1570067445
-kubectl delete configmap special-config 
+kubectl delete configmap special-config
 #1570067915
 helm install --name=kibana --namespace=kube-system kibana/
 #1570070388
@@ -35465,13 +35465,13 @@ docker exec -ti nginx1 sh
 #1570115590
 docker ps -a | grep nginx1
 #1570115598
-docker logs nginx1 
+docker logs nginx1
 #1570151637
 docker exec -ti nginx1 sh
 #1570115371
 vim
 #1570254341
-kubectl  create secret generic etcd-certs --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.crt --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.key --from-file=/etc/kubernetes/pki/etcd/ca.crt 
+kubectl  create secret generic etcd-certs --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.crt --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.key --from-file=/etc/kubernetes/pki/etcd/ca.crt
 #1570255285
 helm delete prometheus-operator --purge
 #1570255366
@@ -35493,7 +35493,7 @@ netstat -tnlp | grep kube-proxy
 #1570256841
 kubectl get service | grep coredns
 #1570256889
-kubectl edit service prometheus-operator-coredns 
+kubectl edit service prometheus-operator-coredns
 #1570256995
 netstat -tnlp | grep etc
 #1570257149
@@ -35511,7 +35511,7 @@ netstat -tnlp | grep contr
 #1570257429
 netstat -tnlp | grep sche
 #1570257867
-kubectl edit service prometheus-operator-kube-controller-manager 
+kubectl edit service prometheus-operator-kube-controller-manager
 #1570257945
 kubectl get service | grep promethues
 #1570257947
@@ -35525,15 +35525,15 @@ netstat -tnlp | grep proxy
 #1570258532
 netstat -tnlp | grep kube-proxy
 #1570258643
-kubectl edit daemonset kube-proxy 
+kubectl edit daemonset kube-proxy
 #1570259468
 netstat -tnlp | grep kube-proxy
 #1570259520
-kubectl edit daemonset kube-proxy 
+kubectl edit daemonset kube-proxy
 #1570260363
 netstat -tnlp | grep 10249
 #1570260408
-kubectl edit daemonset kube-proxy 
+kubectl edit daemonset kube-proxy
 #1570180234
 rm -rf .
 #1570180243
@@ -35543,9 +35543,9 @@ vim
 #1570259277
 kube-proxy -h
 #1570259288
-/usr/local/bin/kube-proxy 
+/usr/local/bin/kube-proxy
 #1570259298
-ls /usr/local/bin/kube-proxy 
+ls /usr/local/bin/kube-proxy
 #1570260867
 kubectl get daemonset kube-proxy -o yaml > kube-proxy.yaml
 #1570261104
@@ -35557,11 +35557,11 @@ helm lint fluentd-elasticsearch
 #1570078108
 helm lint -h
 #1570078164
-helm install --name=kibana --namespace=kube-system kibana/ --dry-run --debug 
+helm install --name=kibana --namespace=kube-system kibana/ --dry-run --debug
 #1570078199
-helm install test  fluentd-elasticsearch/ --dry-run --debug 
+helm install test  fluentd-elasticsearch/ --dry-run --debug
 #1570078215
-helm install -n test  fluentd-elasticsearch/ --dry-run --debug 
+helm install -n test  fluentd-elasticsearch/ --dry-run --debug
 #1570081045
 rm -rf elasticsearch/
 #1570081050
@@ -35587,7 +35587,7 @@ helm search fluen
 #1570081662
 helm fetch --untar kiwigrid/fluentd-elasticsearch
 #1570081694
-rm -rf /tmp/configmap.yaml.bak 
+rm -rf /tmp/configmap.yaml.bak
 #1570081700
 cd fluentd-elasticsearch/templates/
 #1570081701
@@ -35595,7 +35595,7 @@ ls
 #1570081716
 helm lint ./
 #1570081722
-cd 
+cd
 #1570081736
 helm lint fluentd-elasticsearch
 #1570081989
@@ -35617,19 +35617,19 @@ du --max-depth=1 -h ./ | sort -hr
 #1570082827
 kubectl get all -n default
 #1570082852
-kubectl delete statefulsets.apps web 
+kubectl delete statefulsets.apps web
 #1570082871
-kubectl delete deployments.apps alpine 
+kubectl delete deployments.apps alpine
 #1570083002
-kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80 
+kubectl run nginxtest1 --image=nginx:alpine --replicas=2 --expose --port=80
 #1570083030
 kubebel get service nginxtest1
 #1570083036
 kubectl get service nginxtest1
 #1570083258
-kubectl logs nginxtest1-77dfdf4847-k8928 
+kubectl logs nginxtest1-77dfdf4847-k8928
 #1570083267
-kubectl logs -f nginxtest1-77dfdf4847-k8928 
+kubectl logs -f nginxtest1-77dfdf4847-k8928
 #1570084848
 kubectl run httpdtest1 --image=httpd:alpine --replicas=2 --expose --port=80
 #1570084860
@@ -35637,7 +35637,7 @@ kubectl get service httpdtest1
 #1570084881
 curl 10.111.128.110
 #1570085363
-kubectl logs httpdtest1-77999965cf-8prn9 
+kubectl logs httpdtest1-77999965cf-8prn9
 #1570085398
 curl 10.111.128.110
 #1570085694
@@ -35645,29 +35645,29 @@ kubectl run alpine --image=alpine --replicas=1 -- sh -c "while true; sleep 5; ec
 #1570085750
 kubectl run alpine --image=alpine --replicas=1 -- sh -c "while true; do sleep 5; echo $(date +%F); done"
 #1570085763
-kubectl delete pod alpine-564dd968f7-wbv5s 
+kubectl delete pod alpine-564dd968f7-wbv5s
 #1570085776
-kubectl delete deployment alpine 
+kubectl delete deployment alpine
 #1570085792
 kubectl run alpine --image=alpine --replicas=1 -- sh -c "while true; do sleep 5; echo $(date +%F); done"
 #1570085827
 kubectl run alpine --image=alpine --replicas=1 -- sh -c "while true; do sleep 5; echo $(date +%T); done"
 #1570085837
-kubectl delete deployment alpine 
+kubectl delete deployment alpine
 #1570085842
 kubectl run alpine --image=alpine --replicas=1 -- sh -c "while true; do sleep 5; echo $(date +%T); done"
 #1570085894
-kubectl delete deployment alpine 
+kubectl delete deployment alpine
 #1570085919
 while true; do sleep 5; echo $(date +%T); done
 #1570085968
-kubectl delete deployment alpine 
+kubectl delete deployment alpine
 #1570085999
 kubectl run alpine --image=alpine --replicas=1 -- sh -c "while true; do sleep 5; echo $(date +%T); done"
 #1570086059
-kubectl delete deployment alpine 
+kubectl delete deployment alpine
 #1570090115
-cat /etc/docker/daemon.json 
+cat /etc/docker/daemon.json
 #1570090195
 docker  info |grep  "Logging Driver"
 #1570090778
@@ -35681,7 +35681,7 @@ docker ps | grep -i kubelet
 #1570090851
 docker ps | grep -i schedule
 #1570090924
-cat /var/log/containers/kube-scheduler-node11_kube-system_kube-scheduler-a22b77ec9f6d997a8ee9243fa89166ed315dfaf3f88f1ce183c6f0c5f4240314.log 
+cat /var/log/containers/kube-scheduler-node11_kube-system_kube-scheduler-a22b77ec9f6d997a8ee9243fa89166ed315dfaf3f88f1ce183c6f0c5f4240314.log
 #1570091570
 docker history nginx:alpine
 #1570091734
@@ -35695,7 +35695,7 @@ kubectl run -h | grep port
 #1570096728
 kubectl run tomcattest1 --image=tomcat:alpine --replicas=2 --expose --port=8080
 #1570096955
-kubectl get service tomcattest1 
+kubectl get service tomcattest1
 #1570096964
 curl 10.109.87.177:8080
 #1570114588
@@ -35743,7 +35743,7 @@ curl localhost:81
 #1570152168
 docker logs nginx1
 #1570156637
-kubectl get service tomcattest1 
+kubectl get service tomcattest1
 #1570156657
 curl 10.109.87.177:8080
 #1570157071
@@ -35753,7 +35753,7 @@ du --max-depth=1 -h ./ | sort -hr
 #1570173300
 du -sh /nfs
 #1570174331
-kubectl get service 
+kubectl get service
 #1570174390
 kubectl -n kube-system get service elasticsearch-master
 #1570174433
@@ -35775,7 +35775,7 @@ du -sh /nfs
 #1570175746
 cd
 #1570175752
-helm delete fluentd-elasticsearch --purge 
+helm delete fluentd-elasticsearch --purge
 #1570175821
 helm install --name=fluentd-elasticsearch --namespace=kube-system fluentd-elasticsearch
 #1570176160
@@ -35791,9 +35791,9 @@ kubectl delete deployment,service nginxtest1 httpdtest1 tomcattest1
 #1570177357
 helm search promethus
 #1570178461
-helm search Prometheus 
+helm search Prometheus
 #1570178468
-helm search prometheus 
+helm search prometheus
 #1570179572
 helm repo list
 #1570179893
@@ -35805,7 +35805,7 @@ helm fetch --untar stable/prometheus-operator
 #1570184420
 helm install --name=prometheus-operator --namespace=kube-system prometheus-operator/
 #1570184453
-helm delete prometheus-operator --purge 
+helm delete prometheus-operator --purge
 #1570184498
 kubectl get csf
 #1570196940
@@ -35843,11 +35843,11 @@ kubectl get crd | grep alert
 #1570249300
 kubectl get servicemonitor
 #1570249313
-kubectl get servicemonitor --all-namespaces 
+kubectl get servicemonitor --all-namespaces
 #1570249462
 kubectl config set-context kubernetes-admin@kubernetes --namespace kube-system
 #1570249529
-kubectl get prometheus 
+kubectl get prometheus
 #1570249548
 kubectl get CRD | grep coreos
 #1570249555
@@ -35865,9 +35865,9 @@ kubectl get crd | grep pod
 #1570249831
 kubectl get prometheus
 #1570249837
-kubectl get prometheus --all-namespaces 
+kubectl get prometheus --all-namespaces
 #1570249876
-kubectl edit prometheus prometheus-operator-prometheus 
+kubectl edit prometheus prometheus-operator-prometheus
 #1570250194
 helm status prometheus-operator
 #1570253189
@@ -35877,7 +35877,7 @@ kubectl get statefulset | grep prometheus
 #1570253247
 kubectl get statefulset --all-namespaces | grep prometheus
 #1570253365
-kubectl edit prometheus prometheus-operator-prometheus 
+kubectl edit prometheus prometheus-operator-prometheus
 #1570253573
 kubectl get statefulset --all-namespaces | grep prometheus
 #1570260447
@@ -35889,25 +35889,25 @@ kubectl get all --all-namespaces |grep proxy
 #1570261006
 kubectl scale daemonset kube-proxy --replicas=0
 #1570261084
-kubectl delete daemonset kube-proxy 
+kubectl delete daemonset kube-proxy
 #1570261133
-kubectl apply -f kube-proxy.yaml 
+kubectl apply -f kube-proxy.yaml
 #1570261416
 kubectl edit daemonset kube-proxy
 #1570261467
-kubectl delete daemonset kube-proxy 
+kubectl delete daemonset kube-proxy
 #1570261484
-kubectl apply -f kube-proxy.yaml 
+kubectl apply -f kube-proxy.yaml
 #1570261585
-kubectl delete daemonset kube-proxy 
+kubectl delete daemonset kube-proxy
 #1570261588
-kubectl apply -f kube-proxy.yaml 
+kubectl apply -f kube-proxy.yaml
 #1570261878
 kubectl edit configmap kube-proxy
 #1570262079
 kubectl scale daemonset kube-proxy --replicas=0
 #1570262787
-kubectl create configmap testconfigmap  --from-file=/root/dir1/nginx.conf 
+kubectl create configmap testconfigmap  --from-file=/root/dir1/nginx.conf
 #1570262838
 docker run --name nginx1 -d -p 81:80 -v /root/dir1/nginx.conf:/etc/nginx/nginx.conf nginx:alpine
 #1570262859
@@ -35925,7 +35925,7 @@ docker stop nginx1
 #1570263018
 docker rm nginx1
 #1570263022
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1570263098
 kubeclt get configmap
 #1570263103
@@ -35937,11 +35937,11 @@ kubectl get configmap | grep test
 #1570263148
 kubectl get configmap | grep testconfigmap
 #1570263165
-kubectl edit configmap testconfigmap 
+kubectl edit configmap testconfigmap
 #1570263252
-kubectl delete -n default pod nginx 
+kubectl delete -n default pod nginx
 #1570263301
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1570263437
 docker run -ti --rm  nginx:alpine
 #1570263451
@@ -35961,17 +35961,17 @@ docerk cp 319:/etc/nginx/conf.d/default.conf dir1
 #1570264597
 docker cp 319:/etc/nginx/conf.d/default.conf dir1
 #1570264610
-rm -rf dir1/nginx.conf 
+rm -rf dir1/nginx.conf
 #1570264677
-kubectl delete configmap testconfigmap 
+kubectl delete configmap testconfigmap
 #1570264694
-kubectl create configmap testconfigmap  --from-file=/root/dir1/default.conf 
+kubectl create configmap testconfigmap  --from-file=/root/dir1/default.conf
 #1570324291
 kubectl get daemonset kube-proxy -o yaml > kube-proxy.yaml
 #1570324301
-kubectl delete daemonset kube-proxy 
+kubectl delete daemonset kube-proxy
 #1570324309
-kubectl apply -f kube-proxy.yaml 
+kubectl apply -f kube-proxy.yaml
 #1570326264
 helm status prometheus-operator
 #1570326525
@@ -35995,7 +35995,7 @@ kubectl get pvc --all-namespaces | grep pro
 #1570326872
 kubectl get pvc --all-namespaces | grep prome
 #1570328289
-kubectl edit statefulset alertmanager-prometheus-operator-alertmanager 
+kubectl edit statefulset alertmanager-prometheus-operator-alertmanager
 #1570328928
 kubectl get crd | grep alertmanager
 #1570329926
@@ -36073,11 +36073,11 @@ systemctl list-unit-files  | grep calico
 #1570499907
 ls /etc/rc.d/
 #1570499911
-ls /etc/rc.d/rc.local 
+ls /etc/rc.d/rc.local
 #1570499917
 cat /etc/rc.d/rc.local
 #1570499979
-ls /etc/rc.d/rc.local 
+ls /etc/rc.d/rc.local
 #1570499984
 vim /etc/rc.d/rc.local
 #1570500170
@@ -36093,9 +36093,9 @@ kubectl get serive
 #1570510830
 kubectl get service
 #1570511376
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1570511708
-cat /etc/docker/daemon.json 
+cat /etc/docker/daemon.json
 #1570498509
 vim -u .vimrc_tankui -N
 #1570450602
@@ -36107,7 +36107,7 @@ cd /etc/ansible/
 #1570503209
 ls
 #1570503212
-vim hosts 
+vim hosts
 #1570500670
 kubectl get nodes
 #1570501009
@@ -36115,11 +36115,11 @@ cd /etc/ansible/
 #1570501009
 ls
 #1570501011
-vim hosts 
+vim hosts
 #1570501200
 ls
 #1570501208
-cat 01.prepare.yml 
+cat 01.prepare.yml
 #1570501215
 ls
 #1570501221
@@ -36129,9 +36129,9 @@ ls
 #1570501222
 ll
 #1570501226
-cat ex-lb.yml 
+cat ex-lb.yml
 #1570501235
-cat clean-ex-lb.yml 
+cat clean-ex-lb.yml
 #1570502010
 ll
 #1570502012
@@ -36139,11 +36139,11 @@ cd tasks/
 #1570502012
 ll
 #1570502014
-cat main.yml 
+cat main.yml
 #1570502130
 ll
 #1570502133
-cat offline.yml 
+cat offline.yml
 #1570503174
 ll
 #1570503176
@@ -36155,13 +36155,13 @@ cd templates/
 #1570503179
 ll
 #1570503182
-cat haproxy.cfg.j2 
+cat haproxy.cfg.j2
 #1570503297
-cat keepalived-master.conf.j2 
+cat keepalived-master.conf.j2
 #1570503523
 ll
 #1570503526
-cd 
+cd
 #1570503527
 ll
 #1570503529
@@ -36187,21 +36187,21 @@ cd ..
 #1570503554
 ll
 #1570503556
-cat 01.prepare.yml 
+cat 01.prepare.yml
 #1570503558
 ll
 #1570503562
-cat 01.prepare.yml 
+cat 01.prepare.yml
 #1570504191
 ll
 #1570504210
-cat 01.prepare.yml 
+cat 01.prepare.yml
 #1570504214
 cd roles/ex-lb/
 #1570504218
 ll
 #1570504222
-vim ex-lb.yml 
+vim ex-lb.yml
 #1570504236
 cd ..
 #1570504236
@@ -36211,7 +36211,7 @@ cd ex-lb/
 #1570504239
 ll
 #1570504241
-cat ex-lb.yml 
+cat ex-lb.yml
 #1570504244
 cd ..
 #1570504244
@@ -36221,9 +36221,9 @@ cd ..
 #1570504246
 ll
 #1570504249
-vim hosts 
+vim hosts
 #1570504277
-cat roles/ex-lb/ex-lb.yml 
+cat roles/ex-lb/ex-lb.yml
 #1570504291
 ll
 #1570504292
@@ -36235,9 +36235,9 @@ cd ansible/
 #1570504298
 ll
 #1570504308
-vim 01.prepare.yml 
+vim 01.prepare.yml
 #1570504325
-vim 05.kube-node.yml 
+vim 05.kube-node.yml
 #1570504333
 ll
 #1570504334
@@ -36253,11 +36253,11 @@ cd tasks/
 #1570504342
 ll
 #1570504346
-vim main.yml 
+vim main.yml
 #1570504705
 ll
 #1570504706
-cat node_lb.yml 
+cat node_lb.yml
 #1570504873
 ll
 #1570511875
@@ -36291,7 +36291,7 @@ netstat -tnlp
 #1570515958
 netstat -tnlp | grep api
 #1570516209
-systemctl status kubelet.service 
+systemctl status kubelet.service
 #1570516220
 vim /etc/systemd/system/kubelet.service
 #1570516339
@@ -36299,7 +36299,7 @@ ps aux | grep kubelet
 #1570516381
 docker ps
 #1570516577
-systemctl status kube-scheduler.service 
+systemctl status kube-scheduler.service
 #1570516688
 netstat -tnlp | grep api
 #1570517686
@@ -36307,9 +36307,9 @@ kubectl get node
 #1570520293
 ip a
 #1570521571
-systemctl status kube-apiserver.service 
+systemctl status kube-apiserver.service
 #1570522360
-kubectl delete deployment,service nginxtest1 
+kubectl delete deployment,service nginxtest1
 #1570522494
 ls
 #1570522524
@@ -36339,7 +36339,7 @@ ls
 #1570522768
 cat hosts
 #1570522787
-cat hosts-201910081618 
+cat hosts-201910081618
 #1570522794
 ls
 #1570522822
@@ -36355,11 +36355,11 @@ vim -u /root/.vimrc_tankui -N
 #1570527260
 tail -f /var/log/cron
 #1570527280
-systemctl restart crond.service 
+systemctl restart crond.service
 #1570527284
 tail -f /var/log/cron
 #1570527307
-systemctl restart rsyslog.service 
+systemctl restart rsyslog.service
 #1570527310
 tail -f /var/log/cron
 #1570431835
@@ -36369,15 +36369,15 @@ ansible all -m ping
 #1570432269
 ls
 #1570432302
-tar zcvf vim.tar.gz .fzf .fzf.bash .vim .vimrc .bashrc 
+tar zcvf vim.tar.gz .fzf .fzf.bash .vim .vimrc .bashrc
 #1570432314
-tar tf vim.tar.gz 
+tar tf vim.tar.gz
 #1570432329
 cd dir1
 #1570432329
 ls
 #1570432347
-tar xf ../vim.tar.gz 
+tar xf ../vim.tar.gz
 #1570432349
 ls
 #1570432353
@@ -36387,7 +36387,7 @@ rm -rf ./*
 #1570432389
 ls -a
 #1570432437
-find -maxdepth 1 
+find -maxdepth 1
 #1570432444
 find -maxdepth 1 | rm -rfv
 #1570432447
@@ -36407,7 +36407,7 @@ ansible nodes -m shell -a 'pwd'
 #1570432731
 ansible nodes -m shell -a 'tar xf vim.tar.gz && rm -rf vim.tar.gz'
 #1570432798
-rm -rf vim.tar.gz 
+rm -rf vim.tar.gz
 #1570432818
 ls /usr/local/vim8/
 #1570432866
@@ -36453,7 +36453,7 @@ export release=2.0.3
 #1570435142
 curl -C- -fLO --retry 3 https://github.com/easzlab/kubeasz/releases/download/${release}/easzup
 #1570435179
-rm -rf easzup 
+rm -rf easzup
 #1570435188
 curl -C- -fLO --retry 3 https://github.com/easzlab/kubeasz/releases/download/${release}/easzup
 #1570435201
@@ -36467,7 +36467,7 @@ cd /etc/ansible && cp example/hosts.multi-node hosts
 #1570447969
 ansible-playbook 90.setup.yml
 #1570448153
-cat /etc/ansible/hosts 
+cat /etc/ansible/hosts
 #1570448462
 yum list | grep  python-netaddr
 #1570448475
@@ -36543,23 +36543,23 @@ kubectl get all
 #1570524942
 kubectl get pod
 #1570524998
-kubectl describe pod httpdtest1-7859b67998-brmq2 
+kubectl describe pod httpdtest1-7859b67998-brmq2
 #1570525011
-kubectl logs pod httpdtest1-7859b67998-brmq2 
+kubectl logs pod httpdtest1-7859b67998-brmq2
 #1570525020
-kubectl log pod httpdtest1-7859b67998-brmq2 
+kubectl log pod httpdtest1-7859b67998-brmq2
 #1570525026
-kubectl log  httpdtest1-7859b67998-brmq2 
+kubectl log  httpdtest1-7859b67998-brmq2
 #1570525029
-kubectl logs  httpdtest1-7859b67998-brmq2 
+kubectl logs  httpdtest1-7859b67998-brmq2
 #1570525053
-kubectl logs nginxtest1-6fdc9bf8c8-bz8bb 
+kubectl logs nginxtest1-6fdc9bf8c8-bz8bb
 #1570525061
-kubectl logs nginxtest1-6fdc9bf8c8-wg5sw 
+kubectl logs nginxtest1-6fdc9bf8c8-wg5sw
 #1570525092
  kubectl run mytest1 --image=nginx:alpine --replicas=1
 #1570525136
-kubectl delete deployment mytest1 
+kubectl delete deployment mytest1
 #1570525169
 ls
 #1570525171
@@ -36591,7 +36591,7 @@ ls
 #1570525476
 ll
 #1570525534
-find -newer hosts 
+find -newer hosts
 #1570525552
 ls
 #1570525573
@@ -36627,7 +36627,7 @@ kubectl run test --rm -it --image=alpine /bin/sh
 #1570528040
 cd
 #1570528057
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1570527325
 vim -u /root/.vimrc_tankui -N
 #1570528186
@@ -36635,7 +36635,7 @@ echo test1
 #1570528186
 echo test1
 #1570528223
-vim .bash_history 
+vim .bash_history
 #1570528252
 vim -u /root/.vimrc_tankui -N
 #1570528337
@@ -36653,7 +36653,7 @@ k9s
 #1570529430
 k9s -h
 #1570529450
-k9s 
+k9s
 #1570584008
 cd /etc/ansible/
 #1570584008
@@ -36663,7 +36663,7 @@ ll
 #1570584844
 kubectl get node
 #1570584854
-kubectl get pods 
+kubectl get pods
 #1570584861
 kubectl get pods -n kube-system
 #1570584879
@@ -36697,7 +36697,7 @@ echo test3
 #1570528656
 history -w
 #1570528949
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1570529024
 kubectl run test --rm -it --image=alpine /bin/sh
 #1570531270
@@ -36705,13 +36705,13 @@ kubectl get pod
 #1570531275
 kubectl get all
 #1570533171
-rm -rf /usr/bin/k9s 
+rm -rf /usr/bin/k9s
 #1570533175
 cd /download/
 #1570533176
 ls
 #1570533179
-rm -rf k9s_0.8.4_Linux_x86_64.tar.gz 
+rm -rf k9s_0.8.4_Linux_x86_64.tar.gz
 #1570533726
 wget https://github.com/derailed/k9s/releases/download/0.9.1/k9s_0.9.1_Linux_x86_64.tar.gz
 #1570533796
@@ -36727,7 +36727,7 @@ cd /download/
 #1570533818
 ls
 #1570533829
-rm -rf k9s_0.9.1_Linux_x86_64.tar.gz 
+rm -rf k9s_0.9.1_Linux_x86_64.tar.gz
 #1570533830
 rz
 #1570533845
@@ -36743,7 +36743,7 @@ kubectl get deployment
 #1570590691
 kubectl get pod
 #1570590699
-kubectl get deployment --all-namespaces 
+kubectl get deployment --all-namespaces
 #1570590735
 ls /etc/ansible/.cluster/backup/
 #1570590754
@@ -36761,7 +36761,7 @@ man 5 exports
 #1570599483
 ip a
 #1570599535
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1570599831
 docker ps
 #1570599933
@@ -36785,7 +36785,7 @@ cd tasks/
 #1570604748
 ll
 #1570604755
-vim node_lb.yml 
+vim node_lb.yml
 #1570604768
 cd ..
 #1570604769
@@ -36795,7 +36795,7 @@ cd templates/
 #1570604770
 ll
 #1570604774
-vim haproxy.cfg.j2 
+vim haproxy.cfg.j2
 #1570604803
 cd ..
 #1570604804
@@ -36805,9 +36805,9 @@ cd tasks/
 #1570604809
 ll
 #1570604815
-vim main.yml 
+vim main.yml
 #1570604834
-vim node_lb.yml 
+vim node_lb.yml
 #1570604889
 cd ..
 #1570604890
@@ -36819,13 +36819,13 @@ cd ex-lb/
 #1570604893
 ll
 #1570604895
-vim ex-lb.yml 
+vim ex-lb.yml
 #1570604899
 cd tasks/
 #1570604900
 ll
 #1570604902
-vim main.yml 
+vim main.yml
 #1570604908
 cd ..
 #1570604908
@@ -36835,11 +36835,11 @@ cd templates/
 #1570604911
 ll
 #1570604914
-vim haproxy.cfg.j2 
+vim haproxy.cfg.j2
 #1570616772
 cd /etc/ansible/
 #1570616775
-cat hosts 
+cat hosts
 #1570616782
 cat hosts |grep chrony
 #1570616789
@@ -36849,7 +36849,7 @@ cd /etc/ansible/roles/chrony/
 #1570616688
 ls
 #1570616691
-vim chrony.yml 
+vim chrony.yml
 #1570616619
 kubectl get nodes
 #1570616635
@@ -36859,7 +36859,7 @@ cd /etc/ansible/
 #1570616642
 ls
 #1570616650
-vim 01.prepare.yml 
+vim 01.prepare.yml
 #1570616826
 ll
 #1570616831
@@ -36877,9 +36877,9 @@ cd ingress/
 #1570616867
 ll
 #1570616872
-vim whoami.ing.yaml 
+vim whoami.ing.yaml
 #1570616882
-vim test-hello.ing.yaml 
+vim test-hello.ing.yaml
 #1570616910
 kubectl get pods -n kube-system
 #1570616931
@@ -36891,7 +36891,7 @@ cd prometheus-operator/
 #1570616959
 ll
 #1570616965
-vim values.yaml 
+vim values.yaml
 #1570616997
 kubectl get pods -n kube-system
 #1570706397
@@ -36901,13 +36901,13 @@ k9s
 #1570529044
 kubectl get service
 #1570529055
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1570529145
 cat /etc/hosts
 #1570529152
-cat /etc/resolv.conf 
+cat /etc/resolv.conf
 #1570532605
-kubectl get all 
+kubectl get all
 #1570599875
 docker ps
 #1570599903
@@ -36917,7 +36917,7 @@ kubectl lable -h
 #1570603440
 kubectl label -h
 #1570604220
-ansible node11 
+ansible node11
 #1570609094
 ansible --version
 #1570689803
@@ -37007,7 +37007,7 @@ rpm -ql python-ipaddress
 #1570703088
 ll /etc/kubernetes/kubelet.kubeconfig
 #1570703112
-ll /root/.kube/config 
+ll /root/.kube/config
 #1570703124
 diff /root/.kube/config /etc/kubernetes/kubelet.kubeconfig
 #1570706654
@@ -37031,7 +37031,7 @@ cd kube-system/
 #1570707017
 ls
 #1570707028
-vim calico.yaml 
+vim calico.yaml
 #1570707233
 ls
 #1570707235
@@ -37047,7 +37047,7 @@ cd /etc/ansible/down/
 #1570708373
 ls
 #1570708419
-ls offline_images 
+ls offline_images
 #1570708438
 ll -h
 #1570708492
@@ -37071,17 +37071,17 @@ ls
 #1570710497
 kubectl -n kube-system get daemonset calico-node -o yaml > calico-node.yaml
 #1570710506
-vim calico-node.yaml 
+vim calico-node.yaml
 #1570710531
-kubectl -n kube-system delete daemonset calico-node 
+kubectl -n kube-system delete daemonset calico-node
 #1570710576
-kubectl apply -f calico-node.yaml 
+kubectl apply -f calico-node.yaml
 #1570719115
 ansible-playbook /etc/ansible/99.clean.yml
 #1570723603
 ansible all -m ping
 #1570723880
-ip link 
+ip link
 #1570723947
 ip route|grep bird
 #1570723961
@@ -37093,11 +37093,11 @@ vim
 #1570723839
 vim -u /root/.vimrc_tankui -N
 #1570724754
-ansible-playbook /etc/ansible/90.setup.yml 
+ansible-playbook /etc/ansible/90.setup.yml
 #1570725999
 top
 #1570726044
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1570726118
 ls /download/
 #1570726135
@@ -37127,11 +37127,11 @@ ansible-playbook /etc/ansible/23.backup.yml
 #1570726499
 ls
 #1570726624
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1570726628
 cd
 #1570726629
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1570756489
 ping 10.83.75.12
 #1570757565
@@ -37141,7 +37141,7 @@ cd backup/
 #1570757569
 ls
 #1570757831
-ls /etc/docker/daemon.json 
+ls /etc/docker/daemon.json
 #1570757889
 ansible all -m synchronize -a 'src=/etc/docker/daemon.json dest=/etc/docker/daemon.json'
 #1570770614
@@ -37171,7 +37171,7 @@ cd dir1
 #1570780013
 ls
 #1570780017
-rm -rf backup.db 
+rm -rf backup.db
 #1570780044
 ETCDCTL_API=3 etcdctl snapshot save backup.db
 #1570780049
@@ -37183,7 +37183,7 @@ ls
 #1570780057
 cd ../
 #1570780061
-rm -rf backup.db 
+rm -rf backup.db
 #1570780073
 ls /etcd_backup
 #1570780077
@@ -37201,13 +37201,13 @@ ll /etc/ansible/.cluster/backup/
 #1570781141
 for ip in ${NODE_IPS}; do   ETCDCTL_API=3 etcdctl   --endpoints=https://${ip}:2379    --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/etcd/ssl/etcd.pem   --key=/etc/etcd/ssl/etcd-key.pem   endpoint health; done | grep "is healthy"|sed -n "1p"|cut -d: -f2|cut -d/ -f3
 #1570781156
-for ip in ${NODE_IPS}; do   ETCDCTL_API=3 etcdctl   --endpoints=https://${ip}:2379    --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/etcd/ssl/etcd.pem   --key=/etc/etcd/ssl/etcd-key.pem   endpoint health; done 
+for ip in ${NODE_IPS}; do   ETCDCTL_API=3 etcdctl   --endpoints=https://${ip}:2379    --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/etcd/ssl/etcd.pem   --key=/etc/etcd/ssl/etcd-key.pem   endpoint health; done
 #1570781165
 export NODE_IPS="10.83.75.1 10.83.75.2 10.83.75.3"
 #1570781167
 for ip in ${NODE_IPS}; do   ETCDCTL_API=3 etcdctl   --endpoints=https://${ip}:2379    --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/etcd/ssl/etcd.pem   --key=/etc/etcd/ssl/etcd-key.pem   endpoint health; done | grep "is healthy"|sed -n "1p"|cut -d: -f2|cut -d/ -f3
 #1570781213
-cat /etc/hostname 
+cat /etc/hostname
 #1570781478
 cd /etc/ansible/.cluster/backup/
 #1570781479
@@ -37235,13 +37235,13 @@ cd
 #1570786917
 ls /download/
 #1570786942
-tar xf helm-v2.14.3-linux-amd64.tar.gz 
+tar xf helm-v2.14.3-linux-amd64.tar.gz
 #1570786943
 ls
 #1570786946
 cd /download/
 #1570786949
-tar xf helm-v2.14.3-linux-amd64.tar.gz 
+tar xf helm-v2.14.3-linux-amd64.tar.gz
 #1570786952
 ls
 #1570786955
@@ -37263,7 +37263,7 @@ cd
 #1570787092
 ls
 #1570787130
-kubectl apply -f rbac-config.yaml 
+kubectl apply -f rbac-config.yaml
 #1570787959
 helm init --tiller-image=registry.aliyuncs.com/google_containers/tiller:v2.14.3 --stable-repo-url=http://mirror.azure.cn/kubernetes/charts/ --service-account=tiller --upgrade
 #1570787987
@@ -37285,7 +37285,7 @@ mv metrics-server metrics-server.bak
 #1570789274
 helm fetch --untar  stable/metrics-server
 #1570789318
-diff metrics-server/values.yaml metrics-server.bak/values.yaml 
+diff metrics-server/values.yaml metrics-server.bak/values.yaml
 #1570789410
 rm -rf metrics-server
 #1570789416
@@ -37319,9 +37319,9 @@ cd /etc/ansible/
 #1570797109
 ll
 #1570797117
-ls hosts 
+ls hosts
 #1570797125
-cat hosts 
+cat hosts
 #1570797133
 ssh 10.83.75.1
 #1570867708
@@ -37339,15 +37339,15 @@ cat ceph.conf
 #1570868082
 ls
 #1570868093
-cat ceph.conf 
+cat ceph.conf
 #1570868102
 cat /etc/ceph/ceph.c
 #1570868106
-cat /etc/ceph/ceph.conf 
+cat /etc/ceph/ceph.conf
 #1570868123
 ls
 #1570868148
-rm -rf ceph.conf ceph-deploy-ceph.log ceph.mon.keyring 
+rm -rf ceph.conf ceph-deploy-ceph.log ceph.mon.keyring
 #1570868159
 ls
 #1570869597
@@ -37359,7 +37359,7 @@ df -h
 #1570869638
 df -h
 #1570869700
-mkfs /dev/rbd0 
+mkfs /dev/rbd0
 #1570869721
 mount /dev/rbd0 /mnt/
 #1570869725
@@ -37377,7 +37377,7 @@ du -sh ./
 #1570870977
 ls
 #1570873145
-rm -rf testfile1 
+rm -rf testfile1
 #1570873147
 ls
 #1570873156
@@ -37433,15 +37433,15 @@ dd if=/dev/zero of=testfile1 bs=2G count=1
 #1570874449
 rbd list
 #1570874497
-rbd showmapped 
+rbd showmapped
 #1570874672
 rbd info foo
 #1570874883
-rbd showmapped 
+rbd showmapped
 #1570874896
 rbd unmap /dev/rbd0
 #1570874900
-rbd showmapped 
+rbd showmapped
 #1570874904
 rbd ls
 #1570874913
@@ -37459,7 +37459,7 @@ ls
 #1570875664
 umount /mnt
 #1570875667
-cd 
+cd
 #1570875669
 umount /mnt
 #1570875688
@@ -37499,7 +37499,7 @@ rbd create -h
 #1571017672
 rbd info foo
 #1571017701
-rbd showmapped 
+rbd showmapped
 #1571017730
 
 #1571017771
@@ -37509,11 +37509,11 @@ rbd help create
 #1571017979
 rbd create --pool testpool testblock --size 4028M
 #1571017988
-rbd showmapped 
+rbd showmapped
 #1571018014
 rbd rm testblock
 #1571018043
-rbd ls 
+rbd ls
 #1571018073
 rbd status
 #1571018081
@@ -37539,11 +37539,11 @@ rbd map testpool/testblock1
 #1571018250
 rbd ls
 #1571018258
-rbd showmapped 
+rbd showmapped
 #1571018269
 fdisk -l
 #1571018304
-rbd showmapped 
+rbd showmapped
 #1571018345
 mkfs /dev/rbd1
 #1571018368
@@ -37613,11 +37613,11 @@ umount /mnt/rbd
 #1571038243
 rbd unmap /dev/rbd1
 #1571038249
-rbd showmapped 
+rbd showmapped
 #1571038254
 rbd unmap /dev/rbd0
 #1571038256
-rbd showmapped 
+rbd showmapped
 #1571038288
 rbd rm foo
 #1571038350
@@ -37633,21 +37633,21 @@ rm -rf ./*
 #1571038385
 ls
 #1571038461
-cat ceph-key 
+cat ceph-key
 #1571038465
-rm -rf ceph-key 
+rm -rf ceph-key
 #1571042254
-kubectl apply -f rbd/examples/secrets.yaml 
+kubectl apply -f rbd/examples/secrets.yaml
 #1571042280
-kubectl apply -f rbd/examples/class.yaml 
+kubectl apply -f rbd/examples/class.yaml
 #1571043631
 which rbd
 #1571053308
-kubectl apply -f cephfs/example/class.yaml 
+kubectl apply -f cephfs/example/class.yaml
 #1571038470
 vim
 #1571188760
-rm -rf tutorial-2.yaml 
+rm -rf tutorial-2.yaml
 #1571145903
 cd /etc
 #1571145904
@@ -37663,17 +37663,17 @@ ls
 #1571145930
 kubectl get svc -n kube-system
 #1571145940
-kubectl get svc 
+kubectl get svc
 #1571146115
 ll
 #1571146120
-vim values.yaml 
+vim values.yaml
 #1571146200
 cd templates/
 #1571146201
 ll
 #1571146207
-cat config.yaml 
+cat config.yaml
 #1571146215
 cd ..
 #1571146216
@@ -37687,22 +37687,22 @@ cd ..
 #1571146236
 ls
 #1571146245
-ls metallb-layer2-config.yaml 
+ls metallb-layer2-config.yaml
 #1571146253
-cat metallb-layer2-config.yaml 
+cat metallb-layer2-config.yaml
 #1571146282
 grep '
 data:
 #1571146295
-grep 'metallb-config' metallb/values.yaml 
+grep 'metallb-config' metallb/values.yaml
 #1571146337
-vim metallb/values.yaml 
+vim metallb/values.yaml
 #1571222847
 cd images/
 #1571222847
 ls
 #1571222926
-ls 
+ls
 #1571222991
 helm search elastisearch
 #1571223058
@@ -37710,9 +37710,9 @@ ls
 #1571277083
 helm fetch --untar elastic/kibana
 #1571277137
-vimdiff kibana/values.yaml kibana.bak/values.yaml 
+vimdiff kibana/values.yaml kibana.bak/values.yaml
 #1571213997
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1571215168
 helm install --name=gitlab-ce --namespace=kube-system gitlab-ce/
 #1571219423
@@ -37722,7 +37722,7 @@ cd dir1
 #1571219427
 ls
 #1571219432
-rm -rf backup.db 
+rm -rf backup.db
 #1571219509
 ls
 #1571219512
@@ -37800,7 +37800,7 @@ docker-tag nginx
 #1571043101
 docker-tag library/nginx
 #1571043227
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571043243
 kubectl get pvc
 #1571044499
@@ -37814,7 +37814,7 @@ kubectl kube-master -m ping
 #1571044679
 ansible kube-master -m ping
 #1571044696
-ls /etc/yum.repos.d/ceph.repo 
+ls /etc/yum.repos.d/ceph.repo
 #1571044745
 ansible kube-master -m synchronize -a 'src=/etc/yum.repos.d/ceph.repo dest=/etc/yum.repos.d/'
 #1571044798
@@ -37826,13 +37826,13 @@ kubectl get pvc
 #1571045196
 kubectl get pv
 #1571045249
-kubectl get pvc -n kube-system 
+kubectl get pvc -n kube-system
 #1571045253
 kubectl get pvc -n default
 #1571045311
 kubectl delete deployment nginx-1
 #1571045322
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571045427
 rbd ls
 #1571045438
@@ -37844,19 +37844,19 @@ rbd info k8s/ubernetes-dynamic-pvc-92f4d335-c06b-4dea-8f2f-da00c8cea971
 #1571045508
 rbd ls -p k8s
 #1571045515
-rbd showmapped 
+rbd showmapped
 #1571045527
 rbd ls -l
 #1571045532
 rbd ls -l -p k8s
 #1571045552
-kubectl delete pvc rbdpvc 
+kubectl delete pvc rbdpvc
 #1571045644
 rbd ls
 #1571045648
 rbd ls -p k8s
 #1571045703
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571045741
 ansible kube-node -m shell -a 'yum clean all && yum -y install ceph'
 #1571045811
@@ -37878,27 +37878,27 @@ rbd info kubernetes-dynamic-pvc-60e928d9-c532-403c-9cb0-85cd08322b5d
 #1571046502
 rbd info kubernetes-dynamic-pvc-60e928d9-c532-403c-9cb0-85cd08322b5d -p k8s
 #1571046519
-rbd showmapped 
+rbd showmapped
 #1571046526
 rbd showmapped -p k8s
 #1571046530
-rbd showmapped 
+rbd showmapped
 #1571046538
 rbd ls
 #1571046690
-rbd showmapped 
+rbd showmapped
 #1571046699
 rbd showmapped -h
 #1571046709
-rbd help showmapped 
+rbd help showmapped
 #1571046723
-rbd showmapped 
+rbd showmapped
 #1571046734
-rbd showmapped  
+rbd showmapped
 #1571046741
 rbd ls -p k8s
 #1571046751
-rbd showmapped  
+rbd showmapped
 #1571046862
 lsblk
 #1571046883
@@ -37928,11 +37928,11 @@ kubectl delete deployment nginx-1
 #1571052537
 kubectl delete deployment nginx-1
 #1571052576
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571052753
 kubectl delete deployment nginx-1
 #1571052771
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571053010
 rbd ls -l -p k8s
 #1571053031
@@ -37940,7 +37940,7 @@ kubectl get pvc
 #1571053126
 kubectl delete deployment nginx-1
 #1571053406
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571053606
 helm search cephfs
 #1571053617
@@ -37958,7 +37958,7 @@ kubectl -n kube-system get deployment
 #1571053941
 kubectl delete deployment nginx-1
 #1571055653
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571055766
 mount -t ceph 10.83.75.6:6789,10.83.75.7:6789,10.83.75.8:6789:/ /mnt/cephfs/ -o name=admin,secret=AQBJT6FdDHd+JhAAGF2sAqUcmpv33MT49MVjrw==
 #1571055772
@@ -38000,7 +38000,7 @@ kubectl get pv
 #1571105433
 kubectl delete pvc pvc-6cf8c751-2e12-417c-b48f-e7ea8d85e149
 #1571105500
-kubectl delete pvc rbdpvc 
+kubectl delete pvc rbdpvc
 #1571105505
 kubectl get pvc
 #1571105507
@@ -38012,7 +38012,7 @@ kubectl delete pvc cephfspvc
 #1571105591
 kubectl get pv
 #1571105941
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571106086
 kubectl get pv,pvc
 #1571106196
@@ -38022,7 +38022,7 @@ kubectl delete pvc cephfspvc
 #1571106204
 kubectl get pv,pvc
 #1571106283
-kubectl delete pv pvc-6cf8c751-2e12-417c-b48f-e7ea8d85e149 
+kubectl delete pv pvc-6cf8c751-2e12-417c-b48f-e7ea8d85e149
 #1571106289
 kubectl get pv
 #1571106459
@@ -38062,7 +38062,7 @@ kubectl apply -f rbd/examples/class.yaml
 #1571109124
 kubectl get pvc
 #1571109147
-kubectl get storageclass -n kube-system 
+kubectl get storageclass -n kube-system
 #1571109199
 kubectl -n kube-system delete storageclass rbd
 #1571109205
@@ -38076,15 +38076,15 @@ kubectl apply -f rbd/examples/class.yaml
 #1571111195
 kubectl get storageclasses
 #1571111215
-kubectl describe storageclasses.storage.k8s.io 
+kubectl describe storageclasses.storage.k8s.io
 #1571111223
-kubectl edit storageclasses.storage.k8s.io 
+kubectl edit storageclasses.storage.k8s.io
 #1571111253
 kubectl edit storageclasses.storage.k8s.io rbd
 #1571111341
 kubectl get storageclasses
 #1571111459
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571111514
 rbd ls -l -p k8s
 #1571118304
@@ -38094,17 +38094,17 @@ kubectl config view
 #1571119608
 kubectl delete deployment nginx-1
 #1571119616
-kubectl delete pvc rbdpvc1 
+kubectl delete pvc rbdpvc1
 #1571119758
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571120279
 kubectl delete deployment nginx-1
 #1571120291
-kubectl delete pvc cephfspvc1 
+kubectl delete pvc cephfspvc1
 #1571120839
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571121125
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571124180
 kubectl get pvc
 #1571124190
@@ -38118,11 +38118,11 @@ kubectl apply -f rbd/examples/class.yaml
 #1571126472
 kubectl apply -f cephfs/example/class.yaml
 #1571126730
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571126765
 kubectl get pv,pvc
 #1571126872
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571126885
 kubectl get pv,pvc
 #1571126915
@@ -38130,13 +38130,13 @@ rbd ls -l -p k8s
 #1571127021
 rbd info kubernetes-dynamic-pvc-8c3f4e92-6dc0-44f1-8182-9f80f363200a -p k8s
 #1571127174
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571127293
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571127311
 kubectl get pv,pvc
 #1571127323
-kubectl delete pv pvc-0146268f-f3bd-4f05-86e8-53069942236c 
+kubectl delete pv pvc-0146268f-f3bd-4f05-86e8-53069942236c
 #1571127335
 rbd ls -l -p k8s
 #1571127387
@@ -38164,31 +38164,31 @@ helm fetch --untar  stable/metallb
 #1571141808
 helm install --name=metallb --namespace=kube-system metallb/
 #1571142490
-kubectl apply -f metallb-layer2-config.yaml 
+kubectl apply -f metallb-layer2-config.yaml
 #1571142542
 wget https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/tutorial-2.yaml
 #1571142546
 ls
 #1571142890
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571142935
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571142973
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571142985
 kubectl get service
 #1571143120
  kubectl logs -l component=speaker
 #1571143126
- kubectl logs -l component=speaker -n kube-system 
+ kubectl logs -l component=speaker -n kube-system
 #1571143141
- kubectl logs -f -l component=speaker -n kube-system 
+ kubectl logs -f -l component=speaker -n kube-system
 #1571143178
 kubectl get service
 #1571187959
 ls
 #1571189332
-kubectl delete -f metallb-layer2-config.yaml 
+kubectl delete -f metallb-layer2-config.yaml
 #1571189359
 kubectl config view
 #1571189383
@@ -38198,7 +38198,7 @@ kubectl config view
 #1571189402
 kubectl get pod
 #1571189405
-kubectl get pod -n default 
+kubectl get pod -n default
 #1571189453
 helm delete metallb --purge
 #1571189482
@@ -38206,11 +38206,11 @@ helm install --name=metallb --namespace=kube-system metallb/
 #1571189529
 kubectl get service
 #1571189540
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571189554
 kubectl delete -f testpod.yaml -n default
 #1571189577
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571189616
 kubectl get service
 #1571189682
@@ -38228,7 +38228,7 @@ cd
 #1571190040
 kubectl delete -f testpod.yaml -n default
 #1571190047
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571190054
 kubectl get service
 #1571190133
@@ -38244,11 +38244,11 @@ helm ls
 #1571192206
 helm search metrics-server
 #1571192443
-cat /etc/docker/daemon.json 
+cat /etc/docker/daemon.json
 #1571192535
 helm search nginx-ingress
 #1571192816
-ls ingress.img 
+ls ingress.img
 #1571193228
 ansible kube-node -m synchronize -a 'src=ingress.img dest=/root'
 #1571193358
@@ -38270,7 +38270,7 @@ ip a
 #1571194114
 kubectl get service
 #1571194178
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571194182
 kubectl get service
 #1571194211
@@ -38280,31 +38280,31 @@ arp k8s-master01
 #1571194247
 arp k8s-node01
 #1571195332
-cat /etc/docker/daemon.json 
+cat /etc/docker/daemon.json
 #1571196186
 helm install --name=nginx-ingress --namespace=kube-system nginx-ingress/
 #1571196254
-helm delete nginx-ingress --purge 
+helm delete nginx-ingress --purge
 #1571196290
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571196442
 helm install --name=nginx-ingress --namespace=kube-system nginx-ingress/
 #1571196893
 kubectl describe node 10.83.75.1
 #1571197108
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571197233
 kubectl get node
 #1571198262
 kubectl edit daemonset calicao-node
 #1571198278
-kubectl edit daemonset calico-node 
+kubectl edit daemonset calico-node
 #1571204153
 ansible kube-master -m synchronize -a 'src=images/ingress.img dest=/root'
 #1571204235
 ansible kube-master -m shell -a 'docker load -i ingress.img && rm -f ingress.img'
 #1571204269
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571204603
 helm delete nginx-ingress --purge
 #1571204635
@@ -38440,7 +38440,7 @@ curl -X GET 'http://10.221.250.84:9200/_cat/indices'
 #1571294543
 echo {1..10}
 #1571294679
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571294686
 kbuetl get jobs
 #1571294689
@@ -38452,9 +38452,9 @@ kubectl get pods | grep job
 #1571294864
 kubectl get jobs
 #1571294902
-kubectl delete -f testjob.yaml 
+kubectl delete -f testjob.yaml
 #1571294910
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571294913
 kubectl get jobs
 #1571043279
@@ -38522,9 +38522,9 @@ netstat -tnlp | grep 10252
 #1571381896
 ps aux | grep kube-con
 #1571382319
-systemctl daemon-reload 
+systemctl daemon-reload
 #1571382332
-systemctl restart kube-controller-manager.service 
+systemctl restart kube-controller-manager.service
 #1571382339
 ps aux | grep kube-con
 #1571384366
@@ -38538,7 +38538,7 @@ kubectl get jobs
 #1571297032
 kubectl get pod | grep job
 #1571297058
-kubectl delete -f testjob.yaml 
+kubectl delete -f testjob.yaml
 #1571297061
 kubectl get jobs
 #1571297064
@@ -38546,91 +38546,91 @@ kubectl get pod | grep job
 #1571297070
 kubectl get pod | grep job-demo
 #1571297116
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571297133
 kubectl get pod | grep job
 #1571297142
 kubectl get jobs
 #1571297166
-kubectl edit pod job-demo-4hswl 
+kubectl edit pod job-demo-4hswl
 #1571297197
-kubectl delete -f testjob.yaml 
+kubectl delete -f testjob.yaml
 #1571297478
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571298835
 kubectl get jobs
 #1571298841
 kubectl get pod | grep job
 #1571298867
-kubectl delete job job-demo 
+kubectl delete job job-demo
 #1571298872
 kubectl get pod | grep job
 #1571298896
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571298901
 kubectl get jobs
 #1571298907
 kubectl get pod | grep job
 #1571298939
-kubectl delete job job-demo 
+kubectl delete job job-demo
 #1571298941
 kubectl get pod | grep job
 #1571298996
 kubectl get jobs
 #1571299021
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571299044
 kubectl get jobs
 #1571299059
-kubectl logs job-demo-jq9rx 
+kubectl logs job-demo-jq9rx
 #1571299067
 kubectl get pod | grep job
 #1571299212
-kubectl delete job job-demo 
+kubectl delete job job-demo
 #1571299444
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571299456
 kubectl get pod | grep job
 #1571299587
-kubectl delete job job-demo 
+kubectl delete job job-demo
 #1571299593
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571299597
 kubectl get pod | grep job
 #1571299782
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571299899
 find / -name 'kube-apiserver.yaml'
 #1571299906
 find / -name 'kube-apiserver.yaml' -type f
 #1571299975
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571300084
 kubectl get pod | grep job
 #1571300099
 kubectl get job
 #1571300131
-kubectl delete cronjobs.batch cronjob-demo 
+kubectl delete cronjobs.batch cronjob-demo
 #1571300134
 kubectl get job
 #1571300145
-kubectl delete job job-demo 
+kubectl delete job job-demo
 #1571300154
 kubectl get job
 #1571300235
-kubectl apply -f testjob.yaml 
+kubectl apply -f testjob.yaml
 #1571300348
 kubectl get job
 #1571300356
-kubectl get cronjobs.batch cronjob-demo 
+kubectl get cronjobs.batch cronjob-demo
 #1571300373
 kubectl get pod | grep job
 #1571300946
-kubectl delete cronjob cronjob-demo 
+kubectl delete cronjob cronjob-demo
 #1571300952
 kubectl get pod | grep job
 #1571301214
-kubectl api-versions 
+kubectl api-versions
 #1571301237
 kubectl api-versions | grep batch
 #1571301308
@@ -38642,7 +38642,7 @@ kubectl get job
 #1571301444
 
 #1571301457
-kubectl get cronjobs.batch 
+kubectl get cronjobs.batch
 #1571301504
 kubectl get job
 #1571301519
@@ -38654,19 +38654,19 @@ kubectl get job
 #1571301624
 kubectl get pod | grep job
 #1571301636
-kubectl delete cronjob cronjob-demo 
+kubectl delete cronjob cronjob-demo
 #1571301877
 #kubectl run hello --schedule="*/1 * * * *" --restart=OnFailure --image=busybox -- /bin/sh -c "date; echo Hello from the Kubernetes cluster"
 #1571302618
 kubectl get jobs
 #1571302624
-kubectl get cronjobs.batch 
+kubectl get cronjobs.batch
 #1571302626
 kubectl get jobs
 #1571302631
 kubectl get pod | grep job
 #1571303483
-kubectl get cronjobs.batch 
+kubectl get cronjobs.batch
 #1571304916
 kubectl apply -f /etc/ansible/manifests/efk/es-index-rotator/rotator.yaml
 #1571304981
@@ -38688,7 +38688,7 @@ ls docker/
 #1571306603
 ll -h
 #1571306609
-ls -l docker/rotate.sh 
+ls -l docker/rotate.sh
 #1571306692
 cd docker/
 #1571306816
@@ -38720,7 +38720,7 @@ kubectl delete -f /etc/ansible/manifests/efk/es-index-rotator/rotator.yaml
 #1571311863
 kubectl apply -f /etc/ansible/manifests/efk/es-index-rotator/rotator.yaml
 #1571311869
-kubectl get cronjobs.batch 
+kubectl get cronjobs.batch
 #1571312236
 kubectl delete -f /etc/ansible/manifests/efk/es-index-rotator/rotator.yaml
 #1571312267
@@ -38732,13 +38732,13 @@ kubectl get service | grep nginxtest
 #1571312416
 curl 10.221.74.87
 #1571312821
-kubectl delete deployment,service nginxtest1 
+kubectl delete deployment,service nginxtest1
 #1571318416
 kubectl get secret | grep etcd
 #1571318434
 kubectl describe secret calico-etcd-secrets
 #1571369555
-kubectl get cronjobs.batch 
+kubectl get cronjobs.batch
 #1571369567
 kubectl get job
 #1571369579
@@ -38776,7 +38776,7 @@ cd images/
 #1571377153
 ls
 #1571377163
-docker load -i prometheus-operator.img 
+docker load -i prometheus-operator.img
 #1571377177
 docker push harbor.k8s.maimaiti.site/library/prometheus-operator:v0.32.0
 #1571377464
@@ -38784,7 +38784,7 @@ ls
 #1571377474
 docker rmi harbor.k8s.maimaiti.site/library/prometheus-operator:v0.32.0
 #1571377487
-docker load -i prometheus.img 
+docker load -i prometheus.img
 #1571377498
 docker push harbor.k8s.maimaiti.site/library/prometheus:v2.12.0
 #1571377517
@@ -38802,7 +38802,7 @@ cd
 #1571380160
 helm install --name=prometheus-operator --namespace=kube-system prometheus-operator
 #1571381312
-docker load -i images/grafana.img 
+docker load -i images/grafana.img
 #1571381323
 docker push harbor.k8s.maimaiti.site/library/grafana:6.3.5
 #1571381395
@@ -38810,13 +38810,13 @@ docker rmi harbor.k8s.maimaiti.site/library/grafana:6.3.5
 #1571382165
  ps aux | grep kube-contr
 #1571382241
-systemctl status kube-controller-manager.service 
+systemctl status kube-controller-manager.service
 #1571382618
-systemctl status kube-scheduler.service 
+systemctl status kube-scheduler.service
 #1571382674
 vim /etc/systemd/system/kube-scheduler.service
 #1571382743
-systemctl daemon-reload && systemctl restart kube-scheduler.service 
+systemctl daemon-reload && systemctl restart kube-scheduler.service
 #1571383413
 netstat -tnlp | grep kube-proxy
 #1571383690
@@ -38828,19 +38828,19 @@ systemctl status kube-proxy
 #1571383889
 vim /etc/systemd/system/kube-proxy.service
 #1571384721
-systemctl daemon-reload && systemctl restart kube-proxy.service 
+systemctl daemon-reload && systemctl restart kube-proxy.service
 #1571384734
 netstat -tnlp | grep kube-proxy
 #1571384748
 netstat -tnlp | grep 10249
 #1571384782
-systemctl daemon-reload && systemctl restart kube-proxy.service 
+systemctl daemon-reload && systemctl restart kube-proxy.service
 #1571384789
 
 #1571384796
 
 #1571384800
-netstat -tnlp 
+netstat -tnlp
 #1571384809
 
 #1571384918
@@ -38930,13 +38930,13 @@ helm delete prometheus-operator --purge
 #1571392468
 helm install --name=prometheus-operator --namespace=kube-system prometheus-operator --dry-run --de
 #1571392492
-helm install --name=prometheus-operator --namespace=kube-system prometheus-operator --dry-run --debug 
+helm install --name=prometheus-operator --namespace=kube-system prometheus-operator --dry-run --debug
 #1571392507
 helm install --name=prometheus-operator --namespace=kube-system prometheus-operator --dry-run --debug > tmp.txt
 #1571390712
 kubectl get pvc | grep prome
 #1571391125
-kubectl get endpoints 
+kubectl get endpoints
 #1571391133
 kubectl get endpoints  | grep prometheus
 #1571391219
@@ -38964,13 +38964,13 @@ kubectl get endpoints | grep contro
 #1571393982
 kubectl get endpoints | grep prometh
 #1571394030
-kubectl describe endpoints prometheus-operator-kubelet 
+kubectl describe endpoints prometheus-operator-kubelet
 #1571394059
 kubectl delete endpoints prometheus-operator-kubelet
 #1571394065
 helm install --name=prometheus-operator --namespace=kube-system prometheus-operator --dry-run --debug > tmp.txt
 #1571394072
-vim tmp.txt 
+vim tmp.txt
 #1571394140
 helm install --name=prometheus-operator --namespace=kube-system prometheus-operator
 #1571394179
@@ -38992,15 +38992,15 @@ vim tmp.txt
 #1571394681
 helm install --name=prometheus-operator --namespace=kube-system prometheus-operator
 #1571394979
-kubectl edit service prometheus-operator-kube-controller-manager 
+kubectl edit service prometheus-operator-kube-controller-manager
 #1571395066
-kubectl edit servicemonitor prometheus-operator-kube-controller-manager 
+kubectl edit servicemonitor prometheus-operator-kube-controller-manager
 #1571395089
-kubectl edit service prometheus-operator-kube-controller-manager 
+kubectl edit service prometheus-operator-kube-controller-manager
 #1571395307
-kubectl edit servicemonitor prometheus-operator-kube-controller-manager 
+kubectl edit servicemonitor prometheus-operator-kube-controller-manager
 #1571395329
-kubectl edit service prometheus-operator-kube-controller-manager 
+kubectl edit service prometheus-operator-kube-controller-manager
 #1571395700
 kubectl get ep
 #1571395707
@@ -39010,7 +39010,7 @@ kubectl get ep | grep proxy
 #1571395736
 kubectl get ep | grep prometheus
 #1571395873
-kubectl edit service prometheus-operator-kube-controller-manager 
+kubectl edit service prometheus-operator-kube-controller-manager
 #1571395920
 kubectl edit service prometheus-operator-kube-controller-manager -o yaml > /tmp/service.yaml
 #1571397170
@@ -39018,35 +39018,35 @@ cd /tmp
 #1571397171
 ls
 #1571397183
-vimdiff service.yaml endpoints.yaml 
+vimdiff service.yaml endpoints.yaml
 #1571397344
-kubectl edit service prometheus-operator-kube-controller-manager 
+kubectl edit service prometheus-operator-kube-controller-manager
 #1571397389
-kubectl edit endpoints prometheus-operator-kube-controller-manager 
+kubectl edit endpoints prometheus-operator-kube-controller-manager
 #1571397439
 kubectl get service prometheus-operator-kube-controller-manager > /tmp/con_service
 #1571397456
-rm -rf /tmp/con_service 
+rm -rf /tmp/con_service
 #1571397474
 kubectl get service prometheus-operator-kube-controller-manager > /tmp/con_service.yaml
 #1571397507
 kubectl get endpoints prometheus-operator-kube-controller-manager > /tmp/con_endpoint.yaml
 #1571397523
-vimdiff con_service.yaml con_endpoint.yaml 
+vimdiff con_service.yaml con_endpoint.yaml
 #1571397548
 kubectl get service prometheus-operator-kube-controller-manager -o yaml > /tmp/con_service.yaml
 #1571397555
 kubectl get endpoints prometheus-operator-kube-controller-manager -o yaml > /tmp/con_endpoint.yaml
 #1571397560
-vimdiff con_service.yaml con_endpoint.yaml 
+vimdiff con_service.yaml con_endpoint.yaml
 #1571395952
 kubectl get service prometheus-operator-kube-controller-manager -o yaml > /tmp/service.yaml
 #1571395979
 kubectl get endpoints prometheus-operator-kube-controller-manager -o yaml > /tmp/endpoints.yaml
 #1571395990
-vimdiff /tmp/service.yaml /tmp/endpoints.yaml 
+vimdiff /tmp/service.yaml /tmp/endpoints.yaml
 #1571396142
-kubectl edit service prometheus-operator-kube-proxy 
+kubectl edit service prometheus-operator-kube-proxy
 #1571396207
 cd prometheus-operator/templates/exporters/node-exporter/
 #1571396207
@@ -39082,13 +39082,13 @@ kubectl get ep | grep prometheus
 #1571446757
 kubectl get ep | grep nginxtest1
 #1571446791
-kubectl edit ep nginxtest1 
+kubectl edit ep nginxtest1
 #1571447909
-kubectl edit ep prometheus-operator-kube-controller-manager 
+kubectl edit ep prometheus-operator-kube-controller-manager
 #1571447926
-kubectl edit ep nginxtest1 
+kubectl edit ep nginxtest1
 #1571447988
-kubectl delete deployment,service nginxtest1 
+kubectl delete deployment,service nginxtest1
 #1571448251
 vim /etc/systemd/system/kube-proxy.service
 #1571296910
@@ -39166,15 +39166,15 @@ kubectl get service | grep alertmanager
 #1571473694
 k9s
 #1571475776
-kubectl delete deployment test 
+kubectl delete deployment test
 #1571471063
 k9s
 #1571622794
-vim .k9s/config.yml 
+vim .k9s/config.yml
 #1571475818
 kubectl run test  --image=alpine --command -- sh -c 'echo hello; sleep 3600'
 #1571619898
-kubectl delete deployment test 
+kubectl delete deployment test
 #1571620573
 mkdir ssl
 #1571620574
@@ -39184,15 +39184,15 @@ cd ssl
 #1571620652
 ls
 #1571621205
-kubectl create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key 
+kubectl create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
 #1571621225
-kubectl create secret generic tls-ca --from-file=cacerts.pem 
+kubectl create secret generic tls-ca --from-file=cacerts.pem
 #1571621803
 cd /root/images
 #1571621803
 ls
 #1571621812
-docker load -i rancher.img 
+docker load -i rancher.img
 #1571621826
 docker push harbor.k8s.maimaiti.site/library/rancher:v2.2.8
 #1571622218
@@ -39202,7 +39202,7 @@ helm install --name=rancher --namespace=kube-system rancher/
 #1571624372
 kubectl delete deployment,service,ingress nginx-demo
 #1571624376
-kubectl delete deployment,service,ingress nginx-demo -n default 
+kubectl delete deployment,service,ingress nginx-demo -n default
 #1571624398
 kubectl config set-context  context-cluster1-admin --namespace default
 #1571624406
@@ -39214,7 +39214,7 @@ helm ls
 #1571624868
 yum repolist
 #1571624924
-rm -rf /etc/yum.repos.d/jenkins.repo 
+rm -rf /etc/yum.repos.d/jenkins.repo
 #1571625131
 netstat -tnlp | grep 8080
 #1571625140
@@ -39236,7 +39236,7 @@ exit
 #1571641054
 top
 #1571641067
-cat /proc/cpuinfo 
+cat /proc/cpuinfo
 #1571641074
 exit
 #1571652540
@@ -39270,15 +39270,15 @@ curl  http://prometheus.k8s.maimaiti.site/
 #1571707062
 ping prometheus.k8s.maimaiti.site
 #1571707525
-cat /etc/resolv.conf 
+cat /etc/resolv.conf
 #1571708395
 netstat -tnlp | grep 9090
 #1571708560
 kubectl -n kube-system get service | grep 9090
 #1571709310
-kubectl -n kube-system get servicemonitors.monitoring.coreos.com | grep apiserver 
+kubectl -n kube-system get servicemonitors.monitoring.coreos.com | grep apiserver
 #1571709320
-kubectl -n kube-system get service | grep apiserver 
+kubectl -n kube-system get service | grep apiserver
 #1571709326
 kubectl -n kube-system get service | grep api
 #1571709348
@@ -39290,11 +39290,11 @@ kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-apiserver
 #1571709547
 kubectl get servicemonitors.monitoring.coreos.com | grep core
 #1571709560
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns
 #1571709592
-kubectl edit service prometheus-operator-coredns 
+kubectl edit service prometheus-operator-coredns
 #1571709677
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-kube-controller-manager 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-kube-controller-manager
 #1571709706
 kubectl edit service prometheus-operator-kube-controller-manager
 #1571710068
@@ -39322,13 +39322,13 @@ echo Z2xvYmFsOgogIHJlc29sdmVfdGltZW91dDogNW0KICByZWNlaXZlcnM6CiAgLSBuYW1lOiAibnV
 #1571709406
 kubectl get service | grep api
 #1571709408
-kubectl get service 
+kubectl get service
 #1571709438
 kubectl get service | grep -i api
 #1571709488
 kubectl get service --all-namespaces | grep -i api
 #1571712977
-kubectl apply -f prometheus-redis-exporter.yaml 
+kubectl apply -f prometheus-redis-exporter.yaml
 #1571713117
 ansible kube-master -m synchronize -a 'src=/etc/docker/daemon.json dest=/etc/docker/daemon.json'
 #1571713177
@@ -39364,7 +39364,7 @@ kubectl edit servicemonitors prometheus-operator-grafana
 #1571715307
 kubectl get servicemonitor prometheus-operator-kube-state-metrics -o yaml > dir1/kube-state.yaml
 #1571715411
-kubectl apply -f dir1/kube-state.yaml 
+kubectl apply -f dir1/kube-state.yaml
 #1571715514
 helm status prometheus-operator
 #1571715550
@@ -39376,7 +39376,7 @@ kubectl get service | grep dns
 #1571715626
 kubectl get pod -l app=redis
 #1571715659
-kubectl delete -f dir1/kube-state.yaml 
+kubectl delete -f dir1/kube-state.yaml
 #1571716004
 kubectl get service | grep redis
 #1571716023
@@ -39398,13 +39398,13 @@ kubectl run test --rm -it --image=nginx:alpine
 #1571725761
 kubectl run test --rm -it --image=nginx:alpine sh
 #1571725942
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571725955
-kubectl apply -f testsecret.yaml 
+kubectl apply -f testsecret.yaml
 #1571727404
-kubectl delete -f testsecret.yaml 
+kubectl delete -f testsecret.yaml
 #1571727409
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571727514
 cd dir1
 #1571727515
@@ -39416,37 +39416,37 @@ echo hello test2 > test2.html
 #1571727557
 ls
 #1571727561
-cat test1.html 
+cat test1.html
 #1571727564
-cat test2.html 
+cat test2.html
 #1571727610
-kubectl create configmap testconfigmap  --from-file=test1.html --from-file=test2.html 
+kubectl create configmap testconfigmap  --from-file=test1.html --from-file=test2.html
 #1571727624
 kubectl edit configmap testconfigmap
 #1571727735
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571727742
 cd
 #1571727746
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571728373
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571728468
 kubectl delete deployment nginx-1
 #1571728472
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571728613
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571728660
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571728734
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1571728755
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571731825
 kubectl get service
 #1571731830
-kubectl get service -n default 
+kubectl get service -n default
 #1571731851
 curl 10.221.37.201:9900/rx-api
 #1571731861
@@ -39462,7 +39462,7 @@ telnet 10.221.37.201 9900
 #1571712862
 vim
 #1571724252
-kubectl describe secret prometheus-operator-alertmanager-token-t6gmb 
+kubectl describe secret prometheus-operator-alertmanager-token-t6gmb
 #1571724284
 kubectl get secret | grep alert
 #1571724300
@@ -39482,11 +39482,11 @@ echo MTIzCg== | base64 -d
 #1571747027
 kubectl get node
 #1571747040
-vim .kube/config 
+vim .kube/config
 #1571810106
 kubectl config view
 #1571810210
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1571810941
 kubectl delete deployment nginx-1
 #1571810964
@@ -39494,7 +39494,7 @@ kubectl apply -f testpod.yaml
 #1571815887
 kubectl delete deployment nginx-1
 #1571815948
-kubectl delete configmap testconfigmap 
+kubectl delete configmap testconfigmap
 #1571816039
 kubectl create configmap testconfigmap  --from-file=test1.html --from-file=test2.html --from-literal=key1=value1
 #1571816047
@@ -39502,7 +39502,7 @@ cd dir1
 #1571816049
 kubectl create configmap testconfigmap  --from-file=test1.html --from-file=test2.html --from-literal=key1=value1
 #1571889495
-kubectl apply -f redis.yaml 
+kubectl apply -f redis.yaml
 #1571885316
  kubectl  get secret prometheus-prometheus-operator-prometheus  -o jsonpath={.data.prometheus.yaml.gz}|base64 -d
 #1571885327
@@ -39528,7 +39528,7 @@ kubectl get secret prometheus-prometheus-operator-prometheus -o jsonpath="{.data
 #1571885661
 kubectl get secret prometheus-prometheus-operator-prometheus -o jsonpath="{.data.prometheus\.yaml\.gz}" | base64 -d
 #1571885707
-kubectl get secret prometheus-prometheus-operator-prometheus -o jsonpath="{.data.prometheus\.yaml\.gz}" | base64 --decode 
+kubectl get secret prometheus-prometheus-operator-prometheus -o jsonpath="{.data.prometheus\.yaml\.gz}" | base64 --decode
 #1571885765
 cd dir1
 #1571885765
@@ -39536,21 +39536,21 @@ ls
 #1571885776
 kubectl get secret prometheus-prometheus-operator-prometheus -o jsonpath="{.data.prometheus\.yaml\.gz}" | base64 --decode > prometheus.yaml.gz
 #1571885790
-gunxip prometheus.yaml.gz 
+gunxip prometheus.yaml.gz
 #1571885801
-gunzip prometheus.yaml.gz 
+gunzip prometheus.yaml.gz
 #1571885802
 ls
 #1571885806
-cat prometheus.yaml 
+cat prometheus.yaml
 #1571885818
 ls
 #1571885826
 ll -h
 #1571887526
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns
 #1571887551
-kubectl edit service kube-dns 
+kubectl edit service kube-dns
 #1571889084
 kubectl get service | grep redis
 #1571889131
@@ -39560,7 +39560,7 @@ ls
 #1571889209
 kubectl get servicemonitors.monitoring.coreos.com prometheus-operator-alertmanager -o yaml > redis.yaml
 #1571889224
-vim redis.yaml 
+vim redis.yaml
 #1571889663
 kubectl get secret prometheus-prometheus-operator-prometheus -o jsonpath="{.data.prometheus\.yaml\.gz}" | base64 --decode | gunzip > prometheus.yaml
 #1571889673
@@ -39570,7 +39570,7 @@ cd dir1
 #1571889732
 ls
 #1571889736
-rm -rf prometheus.yaml 
+rm -rf prometheus.yaml
 #1571889737
 ls
 #1571889742
@@ -39578,25 +39578,25 @@ kubectl get secret prometheus-prometheus-operator-prometheus -o jsonpath="{.data
 #1571889743
 ls
 #1571889753
-vim prometheus.yaml 
+vim prometheus.yaml
 #1571889346
-kubectl edit service prometheus-operator-alertmanager 
+kubectl edit service prometheus-operator-alertmanager
 #1571897836
 kubectl get pod -l app=redis
 #1571810030
 vim
 #1571816977
-vim tmp.sh 
+vim tmp.sh
 #1571880144
 kubectl get secret
 #1571880154
 kubectl get secret | grep test
 #1571880219
-kubectl apply -f testconfigmap.yaml 
+kubectl apply -f testconfigmap.yaml
 #1571880270
 kubectl edit testconfigmap testconfigmap
 #1571880314
-kubectl edit configmap testconfigmap 
+kubectl edit configmap testconfigmap
 #1571880349
 kubectl apply -f testpod.yaml
 #1571880728
@@ -39628,13 +39628,13 @@ kubectl edit ed prometheus-operator-kubelet
 #1571887234
 kubectl edit endpoints prometheus-operator-kubelet
 #1571887283
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-grafana 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-grafana
 #1571887316
-kubectl edit service prometheus-operator-grafana 
+kubectl edit service prometheus-operator-grafana
 #1571887379
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns
 #1571887393
-kubectl edit service prometheus-operator-coredns 
+kubectl edit service prometheus-operator-coredns
 #1571887416
 kubectl get service | grep coredns
 #1571887423
@@ -39642,7 +39642,7 @@ kubectl get service --all-namespaces | grep coredns
 #1571887439
 
 #1571887571
-kubectl edit service prometheus-operator-coredns 
+kubectl edit service prometheus-operator-coredns
 #1571887834
 cd dir1
 #1571887835
@@ -39656,31 +39656,31 @@ lsm
 #1571887898
 ls
 #1571887909
-vimdiff kube-dns.txt pro-coredns.txt 
+vimdiff kube-dns.txt pro-coredns.txt
 #1571888903
-kubectl edit servicemonitor prometheus-operator-alertmanager 
+kubectl edit servicemonitor prometheus-operator-alertmanager
 #1571888933
-kubectl edit service prometheus-operator-alertmanager 
+kubectl edit service prometheus-operator-alertmanager
 #1571888960
-kubectl edit servicemonitor prometheus-operator-alertmanager 
+kubectl edit servicemonitor prometheus-operator-alertmanager
 #1571888976
-kubectl edit service prometheus-operator-alertmanager 
+kubectl edit service prometheus-operator-alertmanager
 #1571889039
-kubectl edit servicemonitor prometheus-operator-alertmanager 
+kubectl edit servicemonitor prometheus-operator-alertmanager
 #1571889094
 kubectl edit service redis
 #1571889588
 curl -X POST "http://10.221.252.138:9090/-/reload"
 #1571896269
-vim prometheus.yaml 
+vim prometheus.yaml
 #1571897306
 kubectl edit servicemonitor redis
 #1571897934
-kubectl edit servicemonitor prometheus-operator-alertmanager 
+kubectl edit servicemonitor prometheus-operator-alertmanager
 #1571898764
 kubectl edit servicemonitor redis
 #1571898785
-kubectl edit servicemonitor prometheus-operator-alertmanager 
+kubectl edit servicemonitor prometheus-operator-alertmanager
 #1571898797
 kubectl edit servicemonitor redis
 #1571898909
@@ -39720,11 +39720,11 @@ ls dir1
 #1571899436
 vim redis.yaml
 #1571899453
-vim dir1/redis.yaml 
+vim dir1/redis.yaml
 #1571899471
 ls
 #1571899494
-vim prometheus-redis-exporter.yaml 
+vim prometheus-redis-exporter.yaml
 #1571899699
 kubectl edit servicemonitor redis
 #1571904489
@@ -39748,35 +39748,35 @@ uname -r
 #1571907205
 rbd ls -l -p k8s
 #1571908455
-kubectl edit servicemonitor prometheus-operator-alertmanager 
+kubectl edit servicemonitor prometheus-operator-alertmanager
 #1571908240
 vim
 #1571908664
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-kube-scheduler 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-kube-scheduler
 #1571908899
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns
 #1571908943
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-alertmanager 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-alertmanager
 #1571909686
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns
 #1571909707
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-kube-scheduler 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-kube-scheduler
 #1571909835
-kubectl edit service prometheus-operator-kube-scheduler 
+kubectl edit service prometheus-operator-kube-scheduler
 #1571910105
-kubectl edit endpoints prometheus-operator-kube-scheduler 
+kubectl edit endpoints prometheus-operator-kube-scheduler
 #1571910531
-kubectl edit servicemonitor prometheus-operator-kube-controller-manager 
+kubectl edit servicemonitor prometheus-operator-kube-controller-manager
 #1571910637
-kubectl edit servicemonitor prometheus-operator-coredns 
+kubectl edit servicemonitor prometheus-operator-coredns
 #1571910664
-kubectl edit service prometheus-operator-coredns 
+kubectl edit service prometheus-operator-coredns
 #1571910357
-kubectl apply -f prometheus-ceph.yaml 
+kubectl apply -f prometheus-ceph.yaml
 #1571910861
 vim
 #1571915785
-kubectl cluster-info 
+kubectl cluster-info
 #1571897398
 kubectl edit service redis
 #1571897950
@@ -39784,23 +39784,23 @@ kubectl get service prometheus-operator-alertmanager
 #1571897956
 kubectl edit service prometheus-operator-alertmanager
 #1571899084
-kubectl edit service redis 
+kubectl edit service redis
 #1571899377
-kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns 
+kubectl edit servicemonitors.monitoring.coreos.com prometheus-operator-coredns
 #1571899857
 cd dir1
 #1571899857
 ls
 #1571899878
-rm -rf prometheus-operator-alertmanager.yaml 
+rm -rf prometheus-operator-alertmanager.yaml
 #1571899878
 ls
 #1571899893
-rm -rf kube-dns.txt pro-coredns.txt 
+rm -rf kube-dns.txt pro-coredns.txt
 #1571899894
 ls
 #1571899910
-rm -rf kube-state.yaml 
+rm -rf kube-state.yaml
 #1571899911
 ls
 #1571899923
@@ -39808,7 +39808,7 @@ kubectl get secret prometheus-prometheus-operator-prometheus -o jsonpath="{.data
 #1571899925
 ls
 #1571899927
-vim prometheus.yaml 
+vim prometheus.yaml
 #1571902342
 rbd ls -l -p k8s
 #1571902356
@@ -39832,9 +39832,9 @@ rbd ls -l -p k8s | grep 2b89
 #1571905375
 rbd info k8s/kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39
 #1571910021
-ceph mgr services 
+ceph mgr services
 #1571970823
-vim 9.txt 
+vim 9.txt
 #1571912468
  kubectl get crd
 #1571913708
@@ -39904,11 +39904,11 @@ kubectl get service --all-namespaces | grep database
 #1571973460
 kubectl get service --all-namespaces | grep database
 #1571973500
-kubectl edit statefulsets.apps harbor-harbor-database 
+kubectl edit statefulsets.apps harbor-harbor-database
 #1571973528
 kubectl edit service harbor-harbor-database
 #1571974025
-kubectl edit statefulsets.apps harbor-harbor-database 
+kubectl edit statefulsets.apps harbor-harbor-database
 #1571974153
 kubectl run test --rm -it --image=nginx:alpine
 #1571974172
@@ -39922,7 +39922,7 @@ kubectl get node
 #1571976021
 kubectl get cs
 #1571978190
-kubectl edit statefulsets.apps harbor-harbor-database 
+kubectl edit statefulsets.apps harbor-harbor-database
 #1571979604
 kubectl drain 10.83.75.9 --delete-local-data --force --ignore-daemonsets
 #1571979846
@@ -40018,11 +40018,11 @@ ceph -s
 #1571987246
 kubectl get service
 #1571987250
-ceph mgr services 
+ceph mgr services
 #1571987273
 ceph -s
 #1571987458
-ls /etc/yum.repos.d/ceph.repo 
+ls /etc/yum.repos.d/ceph.repo
 #1571989107
 df -h
 #1571989118
@@ -40044,7 +40044,7 @@ kubectl apply -f testpod.yaml
 #1572244579
 kubectl get pvc | grep ceph
 #1572244596
-kubectl delete pvc cephfspvc 
+kubectl delete pvc cephfspvc
 #1572244603
 kubectl get pvc | grep ceph
 #1572244612
@@ -40102,7 +40102,7 @@ kubectl edit pvc cephpvc
 #1572247198
 kubectl edit pvc cephfspvc
 #1572249003
-rpm -ql ceph-common 
+rpm -ql ceph-common
 #1572249011
 rpm -ql ceph-common  | grep service
 #1572249022
@@ -40224,49 +40224,49 @@ ansible kube-node -m shell -a 'docker load -i harbor.img && rm -f harbor.img'
 #1572501543
 ls
 #1572501557
-rm -rf harbor.txt 
+rm -rf harbor.txt
 #1572501558
 ls
 #1572501589
 ansible kube-node -m shell -a 'docker image ls | grep goharbor | wc -l'
 #1572502549
-ceph mgr services 
+ceph mgr services
 #1572508817
-kubectl get prometheusrules.monitoring.coreos.com 
+kubectl get prometheusrules.monitoring.coreos.com
 #1572508834
 kubectl describe  prometheusrules.monitoring.coreos.com prometheus-operator-etcd
 #1572508848
 kubectl edit  prometheusrules.monitoring.coreos.com prometheus-operator-etcd
 #1572512194
-kubectl get prometheusrules.monitoring.coreos.com 
+kubectl get prometheusrules.monitoring.coreos.com
 #1572512212
 kubectl describe prometheusrules.monitoring.coreos.com prometheus-operator-etcd
 #1572512577
 kubectl edit  prometheusrules.monitoring.coreos.com prometheus-operator-etcd
 #1572512668
-kubectl apply testprometheusrule.yaml 
+kubectl apply testprometheusrule.yaml
 #1572512674
-kubectl apply -f testprometheusrule.yaml 
+kubectl apply -f testprometheusrule.yaml
 #1572512923
-kubectl delete -f testprometheusrule.yaml 
+kubectl delete -f testprometheusrule.yaml
 #1572512929
-kubectl apply -f testprometheusrule.yaml 
+kubectl apply -f testprometheusrule.yaml
 #1572513239
 kubectl edit  prometheusrules.monitoring.coreos.com prometheus-operator-etcd
 #1572513318
-kubectl delete -f testprometheusrule.yaml 
+kubectl delete -f testprometheusrule.yaml
 #1572513324
-kubectl apply -f testprometheusrule.yaml 
+kubectl apply -f testprometheusrule.yaml
 #1572513373
-kubectl delete -f testprometheusrule.yaml 
+kubectl delete -f testprometheusrule.yaml
 #1572513462
-kubectl apply -f testprometheusrule.yaml 
+kubectl apply -f testprometheusrule.yaml
 #1572513502
-kubectl delete -f testprometheusrule.yaml 
+kubectl delete -f testprometheusrule.yaml
 #1572513571
-kubectl apply -f testprometheusrule.yaml 
+kubectl apply -f testprometheusrule.yaml
 #1572514329
-kubectl get configmap 
+kubectl get configmap
 #1572514335
 kubectl get configmap  | grep prometheus
 #1572514357
@@ -40294,21 +40294,21 @@ kubectl get secret alertmanager-prometheus-operator-alertmanager -o jsonpath="{.
 #1572516663
 kubectl delete secret alertmanager-prometheus-operator-alertmanager
 #1572516720
-kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml 
+kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml
 #1572516747
-kubectl get secret alertmanager-prometheus-operator-alertmanager -o jsonpath="{.data.alertmanager\.yaml}" | base64 -d 
+kubectl get secret alertmanager-prometheus-operator-alertmanager -o jsonpath="{.data.alertmanager\.yaml}" | base64 -d
 #1572521986
 ping 10.10.1.100
 #1572524024
-kubectl get secret alertmanager-prometheus-operator-alertmanager -o jsonpath="{.data.alertmanager\.yaml}" | base64 -d 
+kubectl get secret alertmanager-prometheus-operator-alertmanager -o jsonpath="{.data.alertmanager\.yaml}" | base64 -d
 #1572524280
 kubectl delete secret alertmanager-prometheus-operator-alertmanager
 #1572524292
-kubectl apply -f dir1/alertmanager.yaml 
+kubectl apply -f dir1/alertmanager.yaml
 #1572525028
-kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml 
+kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml
 #1572525043
-kubectl get secret alertmanager-prometheus-operator-alertmanager -o jsonpath="{.data.alertmanager\.yaml}" | base64 -d 
+kubectl get secret alertmanager-prometheus-operator-alertmanager -o jsonpath="{.data.alertmanager\.yaml}" | base64 -d
 #1572580524
 cd dir1
 #1572580525
@@ -40324,7 +40324,7 @@ git push origin master
 #1572581093
 ls
 #1572581182
-vim Jenkinsfile 
+vim Jenkinsfile
 #1572602708
 wget -h
 #1572602721
@@ -40362,13 +40362,13 @@ helm fetch harbor/helm
 #1572581574
 ls
 #1572581589
-rm -f helm-0.1.0.tgz 
+rm -f helm-0.1.0.tgz
 #1572581600
 helm fetch --untar  harbor/helm
 #1572581602
 ls
 #1572581606
-vim helm/values.yaml 
+vim helm/values.yaml
 #1572581677
 ls
 #1572581921
@@ -40386,7 +40386,7 @@ ls
 #1572581935
 git add ./
 #1572581952
-vim applications/hello-kenzan/index.html 
+vim applications/hello-kenzan/index.html
 #1572581971
 git add ./
 #1572581982
@@ -40406,7 +40406,7 @@ rsync -av /download/helm-v2.14.3-linux-amd64.tar.gz k8s-master03:/root
 #1572582286
 cd
 #1572582290
-vim .bash_history 
+vim .bash_history
 #1572586445
 rsync -av .helm k8s-master03:/root
 #1572586569
@@ -40426,11 +40426,11 @@ cd kubernetes-ci-cd-master/
 #1572586600
 ls
 #1572586617
-rm -rf LICENSE.md package.json part*.yml 
+rm -rf LICENSE.md package.json part*.yml
 #1572586618
 ls
 #1572586642
-rm -rf manifests/ readme.js README.md scripts/ start.js steps.yml 
+rm -rf manifests/ readme.js README.md scripts/ start.js steps.yml
 #1572586642
 ls
 #1572586645
@@ -40466,9 +40466,9 @@ cd kubernetes-ci-cd-master/
 #1572586811
 ls
 #1572586825
-rm -rf LICENSE.md package.json part*.yml 
+rm -rf LICENSE.md package.json part*.yml
 #1572586829
-rm -rf manifests/ readme.js README.md scripts/ start.js steps.yml 
+rm -rf manifests/ readme.js README.md scripts/ start.js steps.yml
 #1572586833
 ls
 #1572586837
@@ -40518,15 +40518,15 @@ cd hello-kenzan/
 #1572587006
 ls
 #1572587026
-rm -rf k8s Jenkinsfile 
+rm -rf k8s Jenkinsfile
 #1572587027
 ls
 #1572587037
-rm -rf DockerFileEx.jpg 
+rm -rf DockerFileEx.jpg
 #1572587037
 ls
 #1572587043
-vim Dockerfile 
+vim Dockerfile
 #1572587067
 git add ./
 #1572587072
@@ -40564,7 +40564,7 @@ git config --global push.default simple
 #1572587399
 git push
 #1572587476
-vim nginxtest/index.html 
+vim nginxtest/index.html
 #1572587488
 git commit -m 'v2'
 #1572587494
@@ -40576,7 +40576,7 @@ git push
 #1572588990
 ls
 #1572588998
-vim nginxtest/index.html 
+vim nginxtest/index.html
 #1572589013
 git add ./
 #1572589025
@@ -40600,9 +40600,9 @@ kubectl get service nginxtest -n default
 #1572589704
 kubectl get service -n default
 #1572590063
-helm history nginxtest-helm 
+helm history nginxtest-helm
 #1572590068
-helm history 
+helm history
 #1572590075
 helm ls
 #1572590094
@@ -40622,7 +40622,7 @@ helm rollout -h
 #1572590239
 helm rollback -h
 #1572590245
-helm history 
+helm history
 #1572590249
 helm history  nginxtest
 #1572590263
@@ -40634,31 +40634,31 @@ cd
 #1572599970
 kubectl edit prometheusrules.monitoring.coreos.com
 #1572600020
-kubectl edit prometheusrules.monitoring.coreos.com etcd-rules 
+kubectl edit prometheusrules.monitoring.coreos.com etcd-rules
 #1572601460
-kubectl -n default describe pod nginxtest-helm-697767f4cd-bg95x 
+kubectl -n default describe pod nginxtest-helm-697767f4cd-bg95x
 #1572601466
-kubectl -n default edit pod nginxtest-helm-697767f4cd-bg95x 
+kubectl -n default edit pod nginxtest-helm-697767f4cd-bg95x
 #1572602566
  kubectl run nginxtest1 --image=nginx:alpine --replicas=3 --expose --port=80
 #1572602598
 kubectl run test --rm -it --image=alpine sh
 #1572603142
-kubectl apply -f testnetworkpolicy.yaml 
+kubectl apply -f testnetworkpolicy.yaml
 #1572603202
 kubectl get service nginxtest1
 #1572603446
-kubectl describe pod nginxtest1-77dfdf4847-dzxtc 
+kubectl describe pod nginxtest1-77dfdf4847-dzxtc
 #1572603509
-kubectl apply -f testnetworkpolicy.yaml 
+kubectl apply -f testnetworkpolicy.yaml
 #1572603786
 kubectl get service nginxtest1
 #1572603794
 curl 10.221.241.66
 #1572603831
-kubectl delete networkpolicy default-deny 
+kubectl delete networkpolicy default-deny
 #1572603834
-kubectl delete networkpolicy access-nginx 
+kubectl delete networkpolicy access-nginx
 #1572603842
 kubectl get service nginxtest1
 #1572603847
@@ -40668,13 +40668,13 @@ ls
 #1572839204
 telnet 10.83.22.164 30040
 #1573019294
-kubeclt get service 
+kubeclt get service
 #1573019298
 kubectl get service
 #1573019306
 kubectl get service | grep ingress
 #1573019793
-vim testpod.yaml 
+vim testpod.yaml
 #1573020132
 ls
 #1573020136
@@ -40688,7 +40688,7 @@ kubectl get service | grep ingress
 #1573020211
 kubectl get service nginxtest1
 #1573020353
-kubectl apply -f tmp.yaml 
+kubectl apply -f tmp.yaml
 #1573020415
 kubectl get ingress nginxtest1
 #1573020428
@@ -40714,7 +40714,7 @@ cd /tmp
 #1573092335
 ls
 #1573092346
-vim helm/templates/deployment.yaml 
+vim helm/templates/deployment.yaml
 #1573092355
 ls
 #1573092364
@@ -40722,7 +40722,7 @@ helm install helm1
 #1573092374
 helm create helm1
 #1573092381
-vim helm1/templates/deployment.yaml 
+vim helm1/templates/deployment.yaml
 #1573094931
 ping rx-credit.maimaiti.cn
 #1573095020
@@ -40734,15 +40734,15 @@ cd
 #1573096267
 ls
 #1573096276
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1573096664
 ping rx-credit.maimaiti.cn
 #1573096744
-kubectl api-versions 
+kubectl api-versions
 #1573097442
 kubectl api-resources -o wide
 #1573097500
-kubectl api-resources 
+kubectl api-resources
 #1573097547
 kubectl api-resources  | grep false
 #1573097566
@@ -40752,7 +40752,7 @@ kubectl get pv
 #1573097586
 kubectl get pv | wc -l
 #1573097592
-kubectl get pv -n default 
+kubectl get pv -n default
 #1573097595
 kubectl get pv -n default  | wc -l
 #1573097678
@@ -40766,19 +40766,19 @@ kubectl explain replicaset --api-version apps/v1
 #1573098098
 kubectl api-resources -o wide | grep deployment
 #1573098122
-kubectl api-resources -o wide 
+kubectl api-resources -o wide
 #1573098171
 kubectl api-resources -o wide | grep deployment
 #1573098206
-kubectl get deployments.apps 
+kubectl get deployments.apps
 #1573098212
-kubectl get deployments.extensions 
+kubectl get deployments.extensions
 #1573098355
 kubectl get service,ingress,deployment nginxtest1
 #1573098369
 kubectl delete service,ingress,deployment nginxtest1
 #1573098684
-kubectl api-versions 
+kubectl api-versions
 #1573098720
 kubectl get deployments.v1.apps
 #1573098750
@@ -40810,23 +40810,23 @@ kubectl api-resources -o wide | grep 'pods\>'
 #1573104803
 kubectl api-resources -o wide | grep 'service'
 #1573104818
-kubectl api-resources -o wide 
+kubectl api-resources -o wide
 #1573104847
-kubectl api-resources 
+kubectl api-resources
 #1573105671
 kubectl get ingress nginxdemo
 #1573105679
 kubectl describe ingress nginxdemo
 #1573106233
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1573106239
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1573106954
 kubectl api-resources -o wide | grep ingress
 #1573107324
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1573107352
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1573107427
 kubectl get ingress
 #1573107430
@@ -40846,7 +40846,7 @@ vim /etc/systemd/system/docker.service
 #1573115978
 ps -ef | grep dockerd
 #1573116006
-docker info 
+docker info
 #1573116022
 docker info  | grep storage
 #1573116027
@@ -40856,11 +40856,11 @@ docker info  | grep -i driver
 #1573118944
 kubectl get service nginxdemo
 #1573118950
-kbuectl delete -f k8s.yaml 
+kbuectl delete -f k8s.yaml
 #1573118956
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1573118969
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1573183037
 cd dir1/kubernetes-ci-cd-master/
 #1573183038
@@ -40872,7 +40872,7 @@ git commit -m 'commit'
 #1573183058
 git push
 #1573183147
-git remote show origin 
+git remote show origin
 #1573183176
 git config --global credential.helper store
 #1573183184
@@ -40916,7 +40916,7 @@ ls
 #1573524933
 ll
 #1573524938
-cat 06.network.yml 
+cat 06.network.yml
 #1573524944
 cd roles/
 #1573524945
@@ -40928,21 +40928,21 @@ cd calico/
 #1573524959
 ll
 #1573524964
-cat tasks/main.yml 
+cat tasks/main.yml
 #1573524989
  ll
 #1573524992
-cat defaults/main.yml 
+cat defaults/main.yml
 #1573525002
 ll
 #1573525035
-cat templates/calico-v3.4.yaml.j2 
+cat templates/calico-v3.4.yaml.j2
 #1573524931
 cd /etc/ansible/roles/calico/defaults/
 #1573524931
 ls
 #1573524933
-vim main.yml 
+vim main.yml
 #1573643218
 cd dir1
 #1573643219
@@ -40968,7 +40968,7 @@ git push
 #1573643417
 git add ./ && git commit -m 'commit' && git push
 #1573643463
-vim Jenkinsfile 
+vim Jenkinsfile
 #1573640597
 vim
 #1573711418
@@ -41006,7 +41006,7 @@ git add ./ && git commit -m 'commit' && git push
 #1573709072
 git add ./ && git commit -m 'commit1' && git push
 #1573709964
-vim Jenkinsfile 
+vim Jenkinsfile
 #1573710892
 java -version
 #1573711213
@@ -41018,7 +41018,7 @@ mkdir test1
 #1573711283
 cd test1
 #1573711289
-git init 
+git init
 #1573711328
 vim Jenkinsfile
 #1573712050
@@ -41038,19 +41038,19 @@ vim
 #1573711738
 ls
 #1573711750
-vim dir1/test1/Jenkinsfile 
+vim dir1/test1/Jenkinsfile
 #1573712275
 cd dir1/test1/
 #1573712276
 ls
 #1573712286
-vim Jenkinsfile 
+vim Jenkinsfile
 #1573714894
 cd dir1/test1
 #1573714894
 ls
 #1573714898
-vim  Jenkinsfile 
+vim  Jenkinsfile
 #1573732647
 vim
 #1573734875
@@ -41062,11 +41062,11 @@ git add ./ && git commit -m 'commit1' && git push
 #1573734980
 ls
 #1573734993
-vim main.go 
+vim main.go
 #1573735369
 git brancher
 #1573735372
-git branch 
+git branch
 #1573735450
 git status
 #1573735456
@@ -41090,13 +41090,13 @@ cd fluentd-elasticsearch
 #1573816180
 ls
 #1573816183
-vim values.yaml 
+vim values.yaml
 #1573816262
 ll
 #1573816292
-cat /root/.vimrc 
+cat /root/.vimrc
 #1573816488
-vim values.yaml 
+vim values.yaml
 #1573816531
 ll
 #1573816169
@@ -41106,13 +41106,13 @@ cd fluentd-elasticsearch
 #1573816180
 ls
 #1573816183
-vim values.yaml 
+vim values.yaml
 #1573816262
 ll
 #1573816292
-cat /root/.vimrc 
+cat /root/.vimrc
 #1573816488
-vim values.yaml 
+vim values.yaml
 #1573816531
 ll
 #1573781433
@@ -41134,7 +41134,7 @@ rbd du kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39 -p k8s
 #1574068704
 k9s
 #1574321535
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1574321562
 vim testpod.yaml
 #1574321620
@@ -41142,15 +41142,15 @@ kubectl edit deployment nginx-1
 #1574321705
 kubectl delete -f nginx-1
 #1574321712
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1574321723
 vim testpod.yaml
 #1574321756
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1574321781
 kubectl edit deployment nginx-1
 #1574320566
-vim testpod.yaml 
+vim testpod.yaml
 #1574321543
 k9s
 #1574418691
@@ -41158,7 +41158,7 @@ exit
 #1574768544
 ls
 #1574768552
-vim init.sh 
+vim init.sh
 #1574770476
 fdisk -l
 #1574837322
@@ -41184,7 +41184,7 @@ fdisk -l
 #1574846540
 ssh 10.41.2.11
 #1574846633
-vim /etc/ansible/hosts 
+vim /etc/ansible/hosts
 #1574846652
 du -sh /etc/ansible/
 #1574846766
@@ -41192,11 +41192,11 @@ ansible -av /etc/ansible/ 10.41.2.11:/etc/ansible/
 #1574846798
 rsync -av /etc/ansible/ 10.41.2.11:/etc/ansible/
 #1574847829
-cat .bash_history 
+cat .bash_history
 #1574847837
 cat .bash_history  | grep yum
 #1574847841
-cat .bash_history  | grep yum | grep ansible 
+cat .bash_history  | grep yum | grep ansible
 #1574847848
 cat .bash_history  | grep yum | grep ansible  | grep ip
 #1574847858
@@ -41210,7 +41210,7 @@ cd /etc/ansible/
 #1574849844
 ls
 #1574849854
-vim roles/etcd/tasks/main.yml 
+vim roles/etcd/tasks/main.yml
 #1574906915
 yum repolist
 #1574906966
@@ -41228,11 +41228,11 @@ du -sh ./
 #1574907102
 ls
 #1574907106
-ls 10.83.22.223 
+ls 10.83.22.223
 #1574907108
 cat 10.83.22.223
 #1574907114
-rm -f 10.83.22.223 
+rm -f 10.83.22.223
 #1574907116
 ls
 #1574907218
@@ -41300,7 +41300,7 @@ cd /tmp
 #1575273042
 ls
 #1575273046
-tar xf helm-v2.14.3-linux-amd64.tar.gz 
+tar xf helm-v2.14.3-linux-amd64.tar.gz
 #1575273050
 ls
 #1575273073
@@ -41316,7 +41316,7 @@ helm status
 #1575273132
 helm ls
 #1575273142
-helm ls 
+helm ls
 #1575273152
 helm repo list
 #1575273156
@@ -41348,15 +41348,15 @@ cd examples/
 #1575963220
 ll
 #1575963226
-cat class.yaml 
+cat class.yaml
 #1575963250
 ll
 #1575963252
-cat secrets.yaml 
+cat secrets.yaml
 #1575963257
 ll
 #1575963265
-cat claim.yaml 
+cat claim.yaml
 #1575963267
 ll
 #1575426033
@@ -41364,7 +41364,7 @@ ll
 #1575426054
  kubectl get crd | grep coreos
 #1575426078
-kubectl get servicemonitors.monitoring.coreos.com 
+kubectl get servicemonitors.monitoring.coreos.com
 #1575426600
 kubectl get pod -l app=alertmanager
 #1575426735
@@ -41384,7 +41384,7 @@ kbuectl get prometheus
 #1575428369
 kubectl get prometheus
 #1575428384
-kubectl get statefulsets.apps 
+kubectl get statefulsets.apps
 #1575428519
 kubectl get prometheusrules
 #1575428539
@@ -41392,7 +41392,7 @@ k9s
 #1575428863
 vim
 #1575430063
-kubectl get podmonitors.monitoring.coreos.com 
+kubectl get podmonitors.monitoring.coreos.com
 #1575430102
 ls
 #1575430107
@@ -41406,29 +41406,29 @@ kubectl get secret alertmanager-prometheus-operator-alertmanager -o jsonpath="{.
 #1575430352
 ls
 #1575431082
-vim alertmanager.yaml 
+vim alertmanager.yaml
 #1575431320
 ls
 #1575431327
-vim prometheus.yaml 
+vim prometheus.yaml
 #1575431490
-vim alertmanager.yaml 
+vim alertmanager.yaml
 #1575431619
-cat /root/.kube/config 
+cat /root/.kube/config
 #1575431773
 kubectl describe secrets alertmanager-prometheus-operator-alertmanager
 #1575431862
-vim alertmanager.yaml 
+vim alertmanager.yaml
 #1575437828
 kubectl delete secret alertmanager-prometheus-operator-alertmanager
 #1575437842
 cd
 #1575437848
-kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml 
+kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml
 #1575447968
 id jenkins
 #1575536808
-vim k8s.yaml 
+vim k8s.yaml
 #1575616587
 cd dir1
 #1575616588
@@ -41444,11 +41444,11 @@ helm ls
 #1575366810
 helm version
 #1575366828
-helm ls --all 
+helm ls --all
 #1575366848
 helm ls --all
 #1575367266
-vim .bash_history 
+vim .bash_history
 #1575376718
 cd images/
 #1575376718
@@ -41460,7 +41460,7 @@ docker save harbor.k8s.maimaiti.site/library/gitlab-ce:12.3.5-ce.0 -o gitlab.img
 #1575376812
 rsync -av gitlab.img 10.41.2.11:/root/images
 #1575377193
-ll -h gitlab.img 
+ll -h gitlab.img
 #1575377219
 rsync -avPh gitlab.img 10.41.2.11:/root/images
 #1575424472
@@ -41492,7 +41492,7 @@ cd /download/
 #1576463017
 ls
 #1576463023
-tar xf helm-v3.0.0-linux-amd64.tar.gz 
+tar xf helm-v3.0.0-linux-amd64.tar.gz
 #1576463025
 ls
 #1576463047
@@ -41512,7 +41512,7 @@ rm -f /usr/local/bin/helm
 #1576463141
 ls
 #1576463149
-tar xf helm-v3.0.0-linux-amd64.tar.gz 
+tar xf helm-v3.0.0-linux-amd64.tar.gz
 #1576463151
 ls
 #1576463158
@@ -41534,11 +41534,11 @@ kubectl -n kube-system get all
 #1576463401
 kubectl config view
 #1576463424
-vim /root/.kube/config 
+vim /root/.kube/config
 #1576463559
 kubectl get all -n kube-system -l app=helm -o name
 #1576463578
-kubectl delete service tiller-deploy 
+kubectl delete service tiller-deploy
 #1576463586
 helm version
 #1576463698
@@ -41568,7 +41568,7 @@ rm -f /usr/bin/helm
 #1576463935
 ls
 #1576463945
-tar xf helm-v3.0.0-linux-amd64.tar.gz 
+tar xf helm-v3.0.0-linux-amd64.tar.gz
 #1576463951
 mv linux-amd64/helm /usr/local/bin/helm
 #1576463955
@@ -41610,11 +41610,11 @@ ansible 'kube-*' -m shell -a 'docker image ls | grep goharbor'
 #1576466668
 ansible 'kube-*' -m shell -a 'docker image ls | grep -c goharbor'
 #1576466703
-helm uninstall nginx-ingress 
+helm uninstall nginx-ingress
 #1576466772
 kubectl get all | grep jenkins
 #1576466798
-kubectl delete deployment jenkins-demo 
+kubectl delete deployment jenkins-demo
 #1576466835
 helm install nginx-ingress -n kube-system nginx-ingress/
 #1576466892
@@ -41642,7 +41642,7 @@ cd /download/
 #1576467135
 ls
 #1576467171
-rpm -ivh jenkins-2.190.3-1.1.noarch.rpm 
+rpm -ivh jenkins-2.190.3-1.1.noarch.rpm
 #1576467179
 yum repolist
 #1576467209
@@ -41650,7 +41650,7 @@ netstat -tnlp | grep 80
 #1576467233
 cd
 #1576467251
-id jenkins 
+id jenkins
 #1576467264
 id ceph
 #1576467337
@@ -41738,25 +41738,25 @@ ls /usr/local/
 #1576485397
 docker version
 #1576487291
-kubectl api-resources 
+kubectl api-resources
 #1576487301
-kubectl api-versions 
+kubectl api-versions
 #1576487359
 kubectl api-resources | grep deployment
 #1576487377
 kubectl api-versions | grep exten
 #1576487405
-vim /root/k8s.yaml 
+vim /root/k8s.yaml
 #1576487419
 kubectl api-resources | grep service
 #1576487440
-kubectl api-versions 
+kubectl api-versions
 #1576487459
-vim /root/k8s.yaml 
+vim /root/k8s.yaml
 #1576487473
 kubectl api-resources | grep ingress
 #1576487487
-kubectl api-versions 
+kubectl api-versions
 #1576487567
 kubectl get ingresses.networking.k8s.io.v1
 #1576487573
@@ -41776,13 +41776,13 @@ kubectl get pvc -n default
 #1576487661
 kubectl get pvc -n kube-system
 #1576487718
-vim /root/k8s.yaml 
+vim /root/k8s.yaml
 #1576490013
 kubectl get service | grep ingress
 #1576490147
 kubectl get service | grep LoadBalancer
 #1576490787
-helm uninstall nginx-ingress 
+helm uninstall nginx-ingress
 #1576490866
 kubectl get service | grep ingress
 #1576490903
@@ -41792,7 +41792,7 @@ kubectl get pod -l workloadID_ingress=true
 #1576491086
 kubectl -n default get pod -l workloadID_ingress=true
 #1576491114
-kubectl get pod --all-namespaces 
+kubectl get pod --all-namespaces
 #1576491121
 kubectl get pod --all-namespaces  -l workloadID_ingress=true
 #1576491145
@@ -41802,9 +41802,9 @@ kubectl get all | grep ingress
 #1576491187
 kubectl get service | grep LoadBalancer
 #1576491433
-kubectl -n default apply -f /root/k8s.yaml 
+kubectl -n default apply -f /root/k8s.yaml
 #1576491557
-helm uninstall metallb 
+helm uninstall metallb
 #1576491609
 helm install metallb -n kube-system metallb/
 #1576491630
@@ -41840,7 +41840,7 @@ helm install metallb -n kube-system metallb/
 #1576492167
 kubectl get service | grep LoadBalancer
 #1576492175
-helm uninstall nginx-ingress 
+helm uninstall nginx-ingress
 #1576492244
 helm install nginx-ingress -n kube-system nginx-ingress/
 #1576492254
@@ -41860,15 +41860,15 @@ kubectl get service -n kube-system | grep nginx
 #1576496303
 kubectl get service -n default | grep nginx
 #1576496323
-helm uninstall nginx-ingress 
+helm uninstall nginx-ingress
 #1576496378
 helm install nginx-ingress -n kube-system nginx-ingress/
 #1576496397
 kubectl get service | grep LoadBalancer
 #1576496557
-helm uninstall nginx-ingress 
+helm uninstall nginx-ingress
 #1576496566
-helm uninstall metallb 
+helm uninstall metallb
 #1576496596
 ping 10.83.75.13
 #1576496601
@@ -41898,13 +41898,13 @@ helm ls
 #1576545184
 ping 10.83.75.12
 #1576545213
-kubectl get service --all-namespaces 
+kubectl get service --all-namespaces
 #1576545221
 kubectl get service --all-namespaces | grep load
 #1576545225
 kubectl get service --all-namespaces | grep -i load
 #1576545415
-kubectl -n default delete service rx-credit-loadbalancer 
+kubectl -n default delete service rx-credit-loadbalancer
 #1576545417
 kubectl get service --all-namespaces | grep -i load
 #1576545435
@@ -41940,7 +41940,7 @@ kubectl delete -n default service admin-goods-service-loadbalancer
 #1576545703
 kubectl get service --all-namespaces | grep -i load
 #1576545727
-helm uninstall metallb 
+helm uninstall metallb
 #1576545733
 kubectl get service --all-namespaces | grep -i load
 #1576545766
@@ -41976,31 +41976,31 @@ kubectl get service -n default | grep -i load
 #1576548853
 kubectl get pod --all-namespaces -l  workload.user.cattle.io/workloadselector=deployment-default-admin-goods-service
 #1576548888
-kubectl delete deployment -n default admin-goods-service 
+kubectl delete deployment -n default admin-goods-service
 #1576548893
 kubectl get pod --all-namespaces -l  workload.user.cattle.io/workloadselector=deployment-default-admin-goods-service
 #1576548969
-kubectl delete deployment -n default admin-goods-service 
+kubectl delete deployment -n default admin-goods-service
 #1576549020
 kubectl get service -n default | grep -i load
 #1576550622
 kubectl get pod --all-namespaces -l  workload.user.cattle.io/workloadselector=deployment-default-api-gateway
 #1576550637
-kubectl -n default delete deployment api-gateway 
+kubectl -n default delete deployment api-gateway
 #1576550665
 kubectl get pod --all-namespaces -l  workload.user.cattle.io/workloadselector=deployment-default-eureka-service
 #1576550680
-kubectl -n default delete deployment eureka-service 
+kubectl -n default delete deployment eureka-service
 #1576550701
 kubectl get pod --all-namespaces -l   workload.user.cattle.io/workloadselector:deployment-default-page-service
 #1576550716
 kubectl get pod --all-namespaces -l   workload.user.cattle.io/workloadselector=deployment-default-page-service
 #1576550723
-kubectl -n default delete deployment page-service 
+kubectl -n default delete deployment page-service
 #1576550751
 kubectl get pod --all-namespaces -l   workload.user.cattle.io/workloadselector=deployment-default-rx-credit
 #1576550758
-kubectl -n default delete deployment rx-credit 
+kubectl -n default delete deployment rx-credit
 #1576550763
 kubectl get service -n default | grep -i load
 #1576550767
@@ -42092,7 +42092,7 @@ kubectl get deployment nginx-ingress-controller --watch
 #1576583850
 kubectl logs my-pod  -p
 #1576633599
-kubectl rollout status deployment jenkins-demo 
+kubectl rollout status deployment jenkins-demo
 #1576653462
 printenv
 #1576653517
@@ -42116,29 +42116,29 @@ cd /usr/local
 #1576656696
 ls
 #1576656735
-echo $JAVA_HOME 
+echo $JAVA_HOME
 #1576657688
 ls /usr/local/
 #1576720029
 ls /usr/local
 #1576720062
-echo $PATH 
+echo $PATH
 #1576491368
 vim
 #1576743805
-kubectl options 
+kubectl options
 #1576744097
 kubectl get all --all-namespaces | grep nginxdemo
 #1576744108
-kubectl get all --all-namespaces -o name | grep nginxdemo 
+kubectl get all --all-namespaces -o name | grep nginxdemo
 #1576744152
-kubectl get all --all-namespaces -o name | grep nginxdemo | xargs kubectl delete 
+kubectl get all --all-namespaces -o name | grep nginxdemo | xargs kubectl delete
 #1576744301
 kubectl get -n kube-system deployment,service,ingress -o name | grep nginxdemo
 #1576744312
 kubectl get all --all-namespaces -o name | grep nginxdemo
 #1576744369
-kubectl get all --all-namespaces -o name 
+kubectl get all --all-namespaces -o name
 #1576744377
 kubectl get all --all-namespaces -o name | grep nginxdemo
 #1576744450
@@ -42146,7 +42146,7 @@ kubectl get all --all-namespaces -o name | grep nginxdemo | xargs kubectl -n def
 #1576744480
 vim
 #1576744665
-kubectl --kubeconfig=/tmp/whconfig -n default apply -f k8s.yaml 
+kubectl --kubeconfig=/tmp/whconfig -n default apply -f k8s.yaml
 #1576749882
 vim
 #1577242207
@@ -42154,7 +42154,7 @@ cd /tmp/dev1/
 #1577242208
 ls
 #1577242210
-vim main.go 
+vim main.go
 #1577254586
 cat /etc/security/limits.d/20-nproc.conf
 #1577257123
@@ -42172,13 +42172,13 @@ ceph df
 #1577262278
 rbd du k8s/kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39
 #1577262370
-rbd showmapped 
+rbd showmapped
 #1577262765
 rbd du k8s/kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39
 #1576749851
 kubectl --kubeconfig=/root/.kube/config -n default apply -f k8s.yaml --record
 #1576750008
-kubectl --kubeconfig=/root/.kube/config -n default delete -f k8s.yaml 
+kubectl --kubeconfig=/root/.kube/config -n default delete -f k8s.yaml
 #1577069887
 ls /download/
 #1577159552
@@ -42186,15 +42186,15 @@ cd /var/lib/jenkins/workspace/jenkins-demo
 #1577159553
 ls
 #1577159556
-vim k8s.yaml 
+vim k8s.yaml
 #1577159578
 
 #1577159581
-vim k8s.yaml 
+vim k8s.yaml
 #1577159624
 sed -i 's/<Build_Tag>/${BuildTag}/' k8s.yaml
 #1577159627
-vim k8s.yaml 
+vim k8s.yaml
 #1577159673
 sed  's/<BUILD_TAG>/${BuildTag}/' k8s.yaml
 #1577159690
@@ -42208,7 +42208,7 @@ kubectl get pvc
 #1577169798
 kubectl config view
 #1577169805
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1577170696
 rbd ls -l -p k8s
 #1577170708
@@ -42218,7 +42218,7 @@ rbd status kubernetes-dynamic-pvc-7307f1da-0671-41d4-9d20-4b6d26d15339
 #1577170767
 rbd status k8s/kubernetes-dynamic-pvc-7307f1da-0671-41d4-9d20-4b6d26d15339
 #1577170979
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1577170986
 rbd status k8s/kubernetes-dynamic-pvc-7307f1da-0671-41d4-9d20-4b6d26d15339
 #1577171012
@@ -42244,7 +42244,7 @@ rbd rm k8s/kubernetes-dynamic-pvc-7307f1da-0671-41d4-9d20-4b6d26d15339
 #1577171296
 mount -t ceph 10.83.75.6:6789,10.83.75.7:6789,10.83.75.8:6789:/ /mnt/cephfs/ -o name=admin,secret=AQBJT6FdDHd+JhAAGF2sAqUcmpv33MT49MVjrw==
 #1577171337
-echo /pvc-volumes/kubernetes/kubernetes-dynamic-pvc-55df046e-f94d-11e9-b5cd-221b852177b0 
+echo /pvc-volumes/kubernetes/kubernetes-dynamic-pvc-55df046e-f94d-11e9-b5cd-221b852177b0
 #1577171373
 mount -t ceph 10.83.75.6:6789,10.83.75.7:6789,10.83.75.8:6789:/ /mnt/cephfs/ -o name=admin,secret=AQBJT6FdDHd+JhAAGF2sAqUcmpv33MT49MVjrw==
 #1577171386
@@ -42266,11 +42266,11 @@ ls
 #1577171642
 cd
 #1577171648
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1577172421
 kubectl explain deployment.spec
 #1577172451
-kubectl explain 
+kubectl explain
 #1577172503
 kubectl explain deployment.spec.template.spec.volumes
 #1577174836
@@ -42288,7 +42288,7 @@ chown -R 1000:1000 kubernetes-dynamic-pvc-da4280e5-25f6-11ea-bfd6-32eb11c00af4
 #1577174882
 ll -d kubernetes-dynamic-pvc-da4280e5-25f6-11ea-bfd6-32eb11c00af4
 #1577178948
-id jenkins 
+id jenkins
 #1577179894
 cd
 #1577179908
@@ -42296,7 +42296,7 @@ cd dir1/jenkins-demo/
 #1577179908
 ls
 #1577179915
-vim Jenkinsfile 
+vim Jenkinsfile
 #1577179931
 git status
 #1577179938
@@ -42304,7 +42304,7 @@ git pull
 #1577179943
 ls
 #1577179946
-vim Jenkinsfile 
+vim Jenkinsfile
 #1577179993
  git checkout -b dev1
 #1577180000
@@ -42312,7 +42312,7 @@ git status
 #1577180009
 ls
 #1577180023
-vim Jenkinsfile 
+vim Jenkinsfile
 #1577180060
 git add ./ && git commit -m 'commit1' && git push
 #1577180067
@@ -42328,7 +42328,7 @@ git add ./ && git commit -m 'commit1' && git push
 #1577180186
 git show origin
 #1577180197
-git remote show origin 
+git remote show origin
 #1577180427
 cd ../
 #1577180428
@@ -42344,11 +42344,11 @@ cd nginxtest/
 #1577180473
 ls
 #1577180475
-vim Dockerfile 
+vim Dockerfile
 #1577180495
 ls
 #1577180500
-vim index.html 
+vim index.html
 #1577180549
 ls
 #1577180562
@@ -42366,15 +42366,15 @@ git status
 #1577180908
 ls
 #1577180914
-vim Jenkinsfile 
+vim Jenkinsfile
 #1577180934
-vim main.go 
+vim main.go
 #1577181141
 git add ./ && git commit -m 'commit1' && git push
 #1577181153
 git checkout master
 #1577181166
-vim main.go 
+vim main.go
 #1577181175
 git add ./ && git commit -m 'commit1' && git push
 #1577182952
@@ -42382,11 +42382,11 @@ cd /var/lib/jenkins/workspace/test2_master
 #1577182952
 ls
 #1577182956
-vim main.go 
+vim main.go
 #1577183208
 ls
 #1577183224
-cd 
+cd
 #1577183225
 ls
 #1577183232
@@ -42394,7 +42394,7 @@ cd dir1/jenkins-demo/
 #1577183233
 ls
 #1577183247
-git branch -d dev1 
+git branch -d dev1
 #1577183291
 git branch -d orgin dev1
 #1577183302
@@ -42406,7 +42406,7 @@ git branch -r -d origin/dev1
 #1577183476
 git push orgin :dev1
 #1577183484
-git push 
+git push
 #1577183530
 git push -d origin dev1
 #1577183568
@@ -42422,7 +42422,7 @@ git push origin --delete origin/dev1
 #1577236446
 git status
 #1577236453
-git show 
+git show
 #1577236461
 git push origin --delete origin/dev1
 #1577236465
@@ -42440,7 +42440,7 @@ git branch -ar
 #1577237319
  git checkout -b dev1
 #1577237326
-vim main.go 
+vim main.go
 #1577237351
  git push --set-upstream origin dev1
 #1577237363
@@ -42448,13 +42448,13 @@ git add ./ && git commit -m 'commit1' && git push
 #1577237908
 ls /tmp/master/
 #1577237914
-vim main.go 
+vim main.go
 #1577237985
 cd /tmp/master/
 #1577237985
 ls
 #1577237987
-vim main.go 
+vim main.go
 #1577238050
 ls /var/lib/jenkins/workspace/test2_master
 #1577238332
@@ -42466,7 +42466,7 @@ git branch
 #1577238346
 git checkout master
 #1577238355
-git branch -d dev1 
+git branch -d dev1
 #1577238372
  git push --set-upstream origin dev1
 #1577238385
@@ -42474,23 +42474,23 @@ git branch -d dev1
 #1577238408
  git checkout -b dev1
 #1577238412
-vim Jenkinsfile 
+vim Jenkinsfile
 #1577238440
 git branch
 #1577238463
 git checkout master
 #1577238466
-vim Jenkinsfile 
+vim Jenkinsfile
 #1577238495
  git push origin --delete dev1
 #1577238512
 git branch
 #1577238517
-git branch -d dev1 
+git branch -d dev1
 #1577238523
 git branch
 #1577238527
-vim Jenkinsfile 
+vim Jenkinsfile
 #1577238598
 git status
 #1577238600
@@ -42498,11 +42498,11 @@ git pull
 #1577238605
 ls
 #1577238608
-vim Jenkinsfile 
+vim Jenkinsfile
 #1577238638
  git checkout -b dev1
 #1577238643
-vim main.go 
+vim main.go
 #1577238668
  git push --set-upstream origin dev1
 #1577238680
@@ -42512,7 +42512,7 @@ git add ./ && git commit -m 'commit1' && git push
 #1577239020
 git status
 #1577239028
-git log 
+git log
 #1577239042
 git status
 #1577241739
@@ -42520,11 +42520,11 @@ cd /tmp/master
 #1577241739
 ls
 #1577241742
-vim main.go 
+vim main.go
 #1577242154
 ls
 #1577242156
-vim main.go 
+vim main.go
 #1577246071
 ansible -h
 #1577246108
@@ -42566,9 +42566,9 @@ docker image ls | grep elastic
 #1577262687
 docker image ls | grep gitlab
 #1577262845
-docker push harbor.k8s.maimaiti.site/library/gitlab-ce:12.3.5-ce.0 
+docker push harbor.k8s.maimaiti.site/library/gitlab-ce:12.3.5-ce.0
 #1577262989
-docker push harbor.k8s.maimaiti.site/library/elasticsearch:7.4.0 
+docker push harbor.k8s.maimaiti.site/library/elasticsearch:7.4.0
 #1576462042
 df -h
 #1576462052
@@ -42612,7 +42612,7 @@ ls dir2
 #1577673868
 ls dir1
 #1577676710
-helm uninstall gitlab-ce 
+helm uninstall gitlab-ce
 #1577676714
 helm ls
 #1577676836
@@ -42664,9 +42664,9 @@ kubectl get pv | grep gitlab
 #1577683757
 kubectl get pv | grep gitlab | xargs kubectl delete pv
 #1577683788
-kubectl get pv | grep gitlab 
+kubectl get pv | grep gitlab
 #1577683819
-kubectl get pv -o name | grep gitlab 
+kubectl get pv -o name | grep gitlab
 #1577683823
 kubectl get pv -o name
 #1577683831
@@ -42700,7 +42700,7 @@ docker tag postgres:9.6.2 harbor.k8s.maimaiti.site/library/postgres:9.6.2
 #1577684788
 docker push harbor.k8s.maimaiti.site/library/postgres:9.6.2
 #1577684826
-docker rmi harbor.k8s.maimaiti.site/library/postgres:9.6.2 
+docker rmi harbor.k8s.maimaiti.site/library/postgres:9.6.2
 #1577684830
 docker rmi postgres:9.6.2
 #1577684917
@@ -42712,7 +42712,7 @@ docker pull harbor.k8s.maimaiti.site/library/postgres:9.6.2
 #1577685212
 helm uninstall gitlab-ce
 #1577685258
-helm install gitlab-ce -n kube-system gitlab-ce/ --dry-run --debug 
+helm install gitlab-ce -n kube-system gitlab-ce/ --dry-run --debug
 #1577685527
 cd gitlab-ce/
 #1577685536
@@ -42740,7 +42740,7 @@ git status
 #1577686202
 git branch
 #1577686215
-git branch -d dev1 
+git branch -d dev1
 #1577686223
 git branch master
 #1577686233
@@ -42774,9 +42774,9 @@ ll
 #1577686623
 ll /root/dir2/test-php/58
 #1577686637
-vim /root/dir2/test-php/58/Dockerfile 
+vim /root/dir2/test-php/58/Dockerfile
 #1577686646
-vim /root/dir2/test-php/58/main.go 
+vim /root/dir2/test-php/58/main.go
 #1577687132
 ls
 #1577687136
@@ -42786,7 +42786,7 @@ ls /root/dir2/test-php
 #1577688132
 ll
 #1577688159
-vim /root/dir2/test-php/61/main.go 
+vim /root/dir2/test-php/61/main.go
 #1577688438
 ls -lt /root/dir2/test-php | sed -n '3p'" | awk '{print \$9}'
 #1577688445
@@ -42794,11 +42794,11 @@ ls -lt /root/dir2/test-php | sed -n '3p' | awk '{print $9}'
 #1577688518
 ls /root/dir2/test-php
 #1577688533
-vim tmp/main.go 
+vim tmp/main.go
 #1577688624
 ls /root/dir2/test-php
 #1577688680
-vim tmp/main.go 
+vim tmp/main.go
 #1577688688
 ll
 #1577690125
@@ -42872,7 +42872,7 @@ docker push harbor.k8s.maimaiti.site/library/openjdk:8-jre-alpine
 #1578366588
 docker rmi openjdk:8-jre-alpine
 #1578292929
-vim k8s.yaml 
+vim k8s.yaml
 #1578294597
 docker version
 #1578363611
@@ -42908,7 +42908,7 @@ cd jenkins-demo/
 #1578363743
 ls
 #1578363774
-rm -rf main.go README.md 
+rm -rf main.go README.md
 #1578363803
 ls
 #1578363930
@@ -42920,25 +42920,25 @@ ll -a
 #1578363956
 ls
 #1578363985
-vim k8s.yaml 
+vim k8s.yaml
 #1578365337
 ls
 #1578365352
 mvn -version
 #1578365371
-vim Dockerfile 
+vim Dockerfile
 #1578365959
 cd dir1/jenkins-demo/
 #1578365960
 ls
 #1578365965
-vim Dockerfile 
+vim Dockerfile
 #1578367613
 ls
 #1578367616
-ll 
+ll
 #1578367627
-vim Dockerfile 
+vim Dockerfile
 #1578367857
 ls
 #1578367863
@@ -42984,7 +42984,7 @@ git checkout -- ./
 #1578370458
 ls
 #1578370471
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578374306
 git rm main.go README.md target/
 #1578374310
@@ -43006,7 +43006,7 @@ cd jenkins-demo/
 #1578374409
 ls
 #1578374411
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578374421
 git pull
 #1578374449
@@ -43022,7 +43022,7 @@ git push
 #1578374695
 ls
 #1578374734
-rm main.go 
+rm main.go
 #1578374737
 ls
 #1578374747
@@ -43048,7 +43048,7 @@ cd dir2
 #1578374928
 ls
 #1578374931
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578374959
 rm -rf /root/dir1/jenkins-demo/
 #1578374967
@@ -43070,9 +43070,9 @@ cd /root/dir1/jenkins-demo/
 #1578375060
 ls
 #1578375064
-vim Dockerfile 
+vim Dockerfile
 #1578375082
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578375327
 ls
 #1578375371
@@ -43136,9 +43136,9 @@ cd /var/lib/jenkins/workspace/jenkins-demo
 #1578377286
 ls
 #1578377298
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578377303
-vim Dockerfile 
+vim Dockerfile
 #1578377381
 ls
 #1578377449
@@ -43146,25 +43146,25 @@ docker build -t springbootdemo:v1 ./
 #1578377496
 netstat -tnlp | grep 8080
 #1578377549
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578377560
 netstat -tnlp | grep 80
 #1578377568
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578377576
 docker ps | grep spri
 #1578377582
 docker ps -a | grep spri
 #1578377601
-docker ps -a 
+docker ps -a
 #1578377613
 docker ps | grep spring
 #1578377642
-vim Dockerfile 
+vim Dockerfile
 #1578377772
 docker build -t springbootdemo:v1 ./
 #1578377783
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578377793
 docker ps | grep a279
 #1578377809
@@ -43180,13 +43180,13 @@ cd /var/lib/jenkins/workspace/jenkins-demo
 #1578377866
 ls
 #1578377871
-vim Dockerfile 
+vim Dockerfile
 #1578377971
 docker build -t springbootdemo:v1 ./
 #1578377982
 ls
 #1578377998
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578378008
 docker ps | grep 788
 #1578378098
@@ -43200,11 +43200,11 @@ docker ps -a | grep 788
 #1578378116
 ls
 #1578378133
-docker rmi springbootdemo:v1 
+docker rmi springbootdemo:v1
 #1578379242
 docker build -t springbootdemo:v1 ./
 #1578379249
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578379258
 docker ps -a | grep sprin
 #1578379262
@@ -43212,7 +43212,7 @@ docker ps -a | grep spring
 #1578379303
 docker build -t springbootdemo:v1 ./
 #1578379312
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578379320
 docker ps -a | grep b2c
 #1578378538
@@ -43220,13 +43220,13 @@ cd /var/lib/jenkins/workspace/jenkins-demo
 #1578378539
 ls
 #1578380941
-docker image history harbor.k8s.maimaiti.site/library/openjdk:8-jre-alpine 
+docker image history harbor.k8s.maimaiti.site/library/openjdk:8-jre-alpine
 #1578381178
 ls
 #1578381183
 docker build -t springbootdemo:v1 ./
 #1578381206
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578381221
 docker ps -a | grep 788
 #1578381224
@@ -43234,7 +43234,7 @@ docker ps -a | grep spring
 #1578381231
 docker stop b2cb
 #1578381235
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578381242
 docker ps -a | grep 82fa
 #1578386167
@@ -43242,29 +43242,29 @@ git add ./ && git commit -m 'commit1' && git push
 #1578378162
 cd /var/lib/jenkins/workspace/jenkins-demo
 #1578378165
-vim Dockerfile 
+vim Dockerfile
 #1578293142
 vim
 #1578367119
-docker image history harbor.k8s.maimaiti.site/library/openjdk:8-jre-alpine 
+docker image history harbor.k8s.maimaiti.site/library/openjdk:8-jre-alpine
 #1578376201
 cd dir1/jenkins-demo/
 #1578376202
 ls
 #1578376205
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578388229
 ls
 #1578388239
 tree src
 #1578388253
-vim src/main/java/docker_spring_boot/Application.java 
+vim src/main/java/docker_spring_boot/Application.java
 #1578388377
 ls
 #1578388383
 git add ./ && git commit -m 'commit1' && git push
 #1578388486
-vim src/main/java/docker_spring_boot/Application.java 
+vim src/main/java/docker_spring_boot/Application.java
 #1578388490
 vim src/main/java/docker_spring_boot/Application.java
 #1578388507
@@ -43282,9 +43282,9 @@ kubectl rollout undo deployment jenkins-demo --revision=3
 #1578388767
 kubectl rollout undo deployment jenkins-demo --to-revision=3
 #1578388791
-kubectl rollout history deployment jenkins-demo 
+kubectl rollout history deployment jenkins-demo
 #1578388878
-kubectl rollout status deployment jenkins-demo 
+kubectl rollout status deployment jenkins-demo
 #1578375644
 cd dir1/jenkins-demo/
 #1578375645
@@ -43320,7 +43320,7 @@ cd dir1/jenkins-demo/
 #1578391481
 ls
 #1578391490
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578279122
 k9s
 #1578448143
@@ -43338,11 +43338,11 @@ ls
 #1578452495
 docker build -t springbootdemo:v1 ./
 #1578452708
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578452742
 docker stop springbootdemo
 #1578452746
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578452753
 docker ps -a | grep spring
 #1578452767
@@ -43352,17 +43352,17 @@ docker ps -a | grep spring
 #1578453409
 docker ps  | grep spring
 #1578453423
-docker stop springbootdemo 
+docker stop springbootdemo
 #1578453427
 docker ps  | grep spring
 #1578453435
 docker build -t springbootdemo:v1 ./
 #1578453488
-docker run -ti  --rm -p 8082:8080 springbootdemo:v1 
+docker run -ti  --rm -p 8082:8080 springbootdemo:v1
 #1578453506
-docker run -ti -d --rm -p 8082:8080 springbootdemo:v1 
+docker run -ti -d --rm -p 8082:8080 springbootdemo:v1
 #1578453522
-docker stop springbootdemo 
+docker stop springbootdemo
 #1578453526
 docker run -ti -d --rm -p 8082:8080 springbootdemo:v1 sh
 #1578453550
@@ -43380,29 +43380,29 @@ docker run -ti --rm -p 8082:8080 springbootdemo:v1 sh
 #1578453615
 docker ps | grep spring
 #1578453631
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578453642
 docker exec -ti springbootdemo sh
 #1578453804
 docker build -t springbootdemo:v1 ./
 #1578454320
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578454329
-docker stop springbootdemo 
+docker stop springbootdemo
 #1578454331
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578454345
-docker exec springbootdemo 
+docker exec springbootdemo
 #1578454347
 
 #1578454358
 docker exec -ti springbootdemo sh
 #1578455125
-docker stop springbootdemo 
+docker stop springbootdemo
 #1578455129
 docker build -t springbootdemo:v1 ./
 #1578455166
-docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8082:8080 springbootdemo:v1
 #1578455169
 docker exec -ti springbootdemo sh
 #1578455746
@@ -43410,7 +43410,7 @@ docker image ls | grep spring
 #1578455803
 docker exec -ti springbootdemo sh
 #1578463750
-docker stop springbootdemo 
+docker stop springbootdemo
 #1578469538
 printenv HOSTNAME KUBERNETES_PORT
 #1578478759
@@ -43434,7 +43434,7 @@ git pull
 #1578478905
 ls
 #1578478911
-vim k8s.yaml 
+vim k8s.yaml
 #1578478937
 ls
 #1578478980
@@ -43490,11 +43490,11 @@ cd ../
 #1578483424
 ls
 #1578483426
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578483544
 ls
 #1578483550
-vim springboot/src/main/java/docker_spring_boot/Application.java 
+vim springboot/src/main/java/docker_spring_boot/Application.java
 #1578483582
 git add ./ && git commit -m 'commit-v1' && git push
 #1578557735
@@ -43530,7 +43530,7 @@ docker exec -ti tomcatdemo sh
 #1578561401
 docker ps | grep tomcat
 #1578561506
-docker run --name tomcatdemo -d --rm -p 8082:8080 harbor.k8s.maimaiti.site/library/tomcat:8-jre8-alpine 
+docker run --name tomcatdemo -d --rm -p 8082:8080 harbor.k8s.maimaiti.site/library/tomcat:8-jre8-alpine
 #1578561542
 docker exec -ti tomcatdemo sh
 #1578483653
@@ -43620,7 +43620,7 @@ cd tomcat/
 #1578561253
 ls
 #1578561294
-vim Dockerfile 
+vim Dockerfile
 #1578618296
 cd /var/lib/jenkins/workspace/jenkins-demo
 #1578618304
@@ -43630,13 +43630,13 @@ cd tomcat/
 #1578618312
 ls
 #1578618316
-vim Dockerfile 
+vim Dockerfile
 #1578618341
 cd /root/dir1/jenkins-demo/
 #1578618341
 ls
 #1578618345
-vim Jenkinsfile 
+vim Jenkinsfile
 #1578618450
 cd /var/lib/jenkins/workspace/jenkins-demo/tomcat/
 #1578618450
@@ -43654,11 +43654,11 @@ ls
 #1578618782
 docker build -t tomcatdemo:v1 ./
 #1578618880
-docker run --name tomcatdemo -d --rm -p 8082:8080 tomcatdemo:v1 
+docker run --name tomcatdemo -d --rm -p 8082:8080 tomcatdemo:v1
 #1578618889
 docker stop tomcatdemo
 #1578618893
-docker run --name tomcatdemo -d --rm -p 8082:8080 tomcatdemo:v1 
+docker run --name tomcatdemo -d --rm -p 8082:8080 tomcatdemo:v1
 #1578618898
 docker image ls | grep tomcat
 #1578618910
@@ -43668,7 +43668,7 @@ docker ps | grep tomcat
 #1578619058
 docker exec -ti tomcatdemo sh
 #1578619703
-docker logs tomcatdemo 
+docker logs tomcatdemo
 #1578619818
 docker exec -ti tomcatdemo sh
 #1578618358
@@ -43676,7 +43676,7 @@ cd dir1/jenkins-demo/
 #1578618358
 ls
 #1578618363
-vim tomcat/Dockerfile 
+vim tomcat/Dockerfile
 #1578618405
 cd /var/lib/jenkins/workspace/jenkins-demo
 #1578618406
@@ -43686,19 +43686,19 @@ cd tomcat/
 #1578618409
 ls
 #1578618411
-vim Dockerfile 
+vim Dockerfile
 #1578452426
 cd /var/lib/jenkins/workspace/jenkins-demo
 #1578452427
 ls
 #1578452433
-vim Dockerfile 
+vim Dockerfile
 #1578446708
 cd dir1/jenkins-demo/
 #1578446708
 ls
 #1578446713
-vim Dockerfile 
+vim Dockerfile
 #1578462256
 git add ./ && git commit -m 'commitv7' && git push
 #1578462329
@@ -43724,7 +43724,7 @@ docker exec -ti springbootdemo sh
 #1578966640
 docker build -t springbootdemo:v1 ./
 #1578966661
-docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1
 #1578966666
 netstat -tnlp
 #1578966670
@@ -43746,7 +43746,7 @@ ps -ef | grep 1471339
 #1578967229
 kill -9 1471339
 #1578967244
-vim /etc/sysconfig/jenkins 
+vim /etc/sysconfig/jenkins
 #1578967260
 sytemctl restart jenkins
 #1578967267
@@ -43754,23 +43754,23 @@ systemctl restart jenkins
 #1578967305
 netstat -tnlp | grep 80
 #1578967317
-docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1
 #1578967323
 docker exec -ti springbootdemo sh
 #1578967333
 docker ps | grep spring
 #1578967357
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578967359
 docker ps | grep spring
 #1578967662
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578967666
 docker ps | grep spring
 #1578967760
 docker build -t springbootdemo:v1 ./
 #1578967790
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578967794
 docker ps | grep spring
 #1578967810
@@ -43786,19 +43786,19 @@ ls
 #1578973464
 docker build -t springbootdemo:v1 ./
 #1578973477
-docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1
 #1578973483
 docker exec -ti springbootdemo sh
 #1578973497
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578973500
 docker exec -ti springbootdemo sh
 #1578974275
-docker rmi springbootdemo:v1 
+docker rmi springbootdemo:v1
 #1578974280
 docker build -t springbootdemo:v1 ./
 #1578974302
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578974309
 docker exec -ti springbootdemo sh
 #1578974316
@@ -43808,7 +43808,7 @@ docker ps -a | grep spring
 #1578974386
 docker build -t springbootdemo:v1 ./
 #1578974392
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578974396
 docker exec -ti springbootdemo sh
 #1578974411
@@ -43820,7 +43820,7 @@ pwd
 #1578979854
 docker build -t springbootdemo:v1 ./
 #1578979891
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578979899
 docker ps -a | grep dbd
 #1578979902
@@ -43832,27 +43832,27 @@ docker ps
 #1578980119
 docker build -t springbootdemo:v1 ./
 #1578980137
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578980145
 docker ps | grep f21
 #1578980152
-docker run --name springboot -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springboot -d --rm -p 8081:8080 springbootdemo:v1
 #1578980157
 docker ps | grep add
 #1578980165
-docker run --name springboot -d --rm  springbootdemo:v1 
+docker run --name springboot -d --rm  springbootdemo:v1
 #1578980174
 docker ps | grep ec3
 #1578980276
-vim Dockerfile 
+vim Dockerfile
 #1578980284
 docker build -t springbootdemo:v1 ./
 #1578980308
-docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8080 springbootdemo:v1
 #1578980314
 docker ps | grep spring
 #1578980327
-docker run --name springbootdemo -d  -p 8081:8080 springbootdemo:v1 
+docker run --name springbootdemo -d  -p 8081:8080 springbootdemo:v1
 #1578980334
 docker ps -a | grep 542
 #1578980351
@@ -43860,25 +43860,25 @@ docker logs 542
 #1578981021
 docker build -t springbootdemo:v1 ./
 #1578981036
-docker run --name springbootdemo -d  -p 8081:8081 springbootdemo:v1 
+docker run --name springbootdemo -d  -p 8081:8081 springbootdemo:v1
 #1578981042
 
 #1578982338
-docker run --name springbootdemo -d  -p 8081:8081 springbootdemo:v1 
+docker run --name springbootdemo -d  -p 8081:8081 springbootdemo:v1
 #1578982358
-docker rm springbootdemo 
+docker rm springbootdemo
 #1578982371
-docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1
 #1578982375
 docker exec -ti springbootdemo sh
 #1578982400
-docker stop springbootdemo 
+docker stop springbootdemo
 #1578982442
-docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8081:8081 springbootdemo:v1
 #1578982445
 docker exec -ti springbootdemo sh
 #1578982491
-docker stop springbootdemo 
+docker stop springbootdemo
 #1578964541
 kubectl get all  -o name | grep jenkinsdemo
 #1578964547
@@ -43886,19 +43886,19 @@ kubectl get all  -o name | grep jenkins
 #1578964576
 kubectl get all  -o name | grep jenkins-demo
 #1578964603
-kubectl get all  -o name | grep jenkins-demo | xargs kubectl delete 
+kubectl get all  -o name | grep jenkins-demo | xargs kubectl delete
 #1578966149
 cd /var/lib/jenkins/workspace/jenkins-demo/springboot/
 #1578966149
 ls
 #1578966153
-vim Dockerfile 
+vim Dockerfile
 #1578967737
 ls
 #1578967739
 pwd
 #1578967751
-vim Dockerfile 
+vim Dockerfile
 #1578912105
 cd /var/lib/jenkins/workspace/jenkins-demo
 #1578912106
@@ -43918,7 +43918,7 @@ ls
 #1578913201
 docker exec -ti tomcatdemo sh
 #1578966933
-docker stop tomcatdemo 
+docker stop tomcatdemo
 #1578986405
 cd /usr/local/
 #1578986406
@@ -43978,7 +43978,7 @@ which node
 #1579069352
 ll /usr/local/node-v10.16.0-linux-x64/bin/node
 #1579069410
-vim package.json 
+vim package.json
 #1579069535
 vim /etc/profile
 #1579069651
@@ -43986,9 +43986,9 @@ which cnpm
 #1579070120
 vim /etc/profile
 #1579070621
-vim /etc/profile.d/path.sh 
+vim /etc/profile.d/path.sh
 #1579070753
-echo $PATH 
+echo $PATH
 #1579078330
 docker build -t vuedemo:v1 ./
 #1579071350
@@ -44034,19 +44034,19 @@ du -sh node_modules/
 #1579076712
 pwd
 #1579078266
-vim Dockerfile 
+vim Dockerfile
 #1579070864
-vim /etc/profile.d/java.sh 
+vim /etc/profile.d/java.sh
 #1579070876
-vim /etc/profile.d/vim.sh 
+vim /etc/profile.d/vim.sh
 #1579070918
 vim /etc/profile.d/vim.sh
 #1579070935
-vim .bash_profile 
+vim .bash_profile
 #1579070946
-vim .bashrc 
+vim .bashrc
 #1579070985
-echo $PATH 
+echo $PATH
 #1579071029
 cd /var/lib/jenkins/workspace/jenkins-demo
 #1579071031
@@ -44066,7 +44066,7 @@ docker build -t vuedemo:v1 ./
 #1579071223
 netstat -tnlp | grep 8003
 #1579071261
-docker run --name vuedemo -d --rm -p 8003:8003 vuedemo:v1 
+docker run --name vuedemo -d --rm -p 8003:8003 vuedemo:v1
 #1579071269
 docker exec vuedemo sh
 #1579071280
@@ -44082,17 +44082,17 @@ docker build -t vuedemo:v1 ./
 #1579076760
 ls -a
 #1579076778
-vim .gitignore 
+vim .gitignore
 #1579077010
 cp -a .dockerignore /root/dir1/jenkins-demo/vue
 #1579080336
 
 #1579080351
-docker image history harbor.k8s.maimaiti.site/library/nginx:alpine --no-trunc 
+docker image history harbor.k8s.maimaiti.site/library/nginx:alpine --no-trunc
 #1579080371
 docker image history harbor.k8s.maimaiti.site/library/nginx:alpine
 #1579080395
-docker image history harbor.k8s.maimaiti.site/library/tomcat:8-jre8-alpine 
+docker image history harbor.k8s.maimaiti.site/library/tomcat:8-jre8-alpine
 #1579080851
 passwd root
 #1579139237
@@ -44228,7 +44228,7 @@ ls
 #1579077170
 git pull
 #1579077394
-vim Dockerfile 
+vim Dockerfile
 #1579077400
 git pull
 #1579077407
@@ -44254,7 +44254,7 @@ cd springboot/
 #1579160771
 ls
 #1579160776
-vim Dockerfile 
+vim Dockerfile
 #1579160857
 cd /var/lib/jenkins/workspace/jenkins-demo
 #1579160860
@@ -44264,9 +44264,9 @@ ls
 #1579160867
 docker build -t springbootdemo:v1 ./
 #1579160936
-docker run --name springbootdemo -d --rm -p 8001:8001 springbootdemo:v1 
+docker run --name springbootdemo -d --rm -p 8001:8001 springbootdemo:v1
 #1579160942
-docker exec springbootdemo 
+docker exec springbootdemo
 #1579160949
 docker exec -ti springbootdemo sh
 #1579169062
@@ -44282,7 +44282,7 @@ ls
 #1578910287
 ls target/
 #1578910296
-vim Dockerfile 
+vim Dockerfile
 #1578965791
 netstat -tnlp
 #1578965795
@@ -44296,7 +44296,7 @@ docker ps | grep pause
 #1581928470
 docker ps | grep infrastructure
 #1581929562
-vim /etc/ansible/roles/ex-lb/defaults/main.yml 
+vim /etc/ansible/roles/ex-lb/defaults/main.yml
 #1581929612
 vim /etc/ansible/roles/ex-lb/templates/haproxy.cfg.j2
 #1581930018
@@ -44304,19 +44304,19 @@ cd /etc/ansible/roles/ex-lb/
 #1581930019
 ls
 #1581930027
-vim tasks/main.yml 
+vim tasks/main.yml
 #1581930668
 ls
 #1581930695
 vim ../../hosts
 #1582248763
-kubectl apply -f testenv.yaml 
+kubectl apply -f testenv.yaml
 #1582249211
 kubectl explain pod.spec
 #1582249245
 kubectl explain pod.spec.restartPolicy
 #1582249545
-kubectl apply -f testenv.yaml 
+kubectl apply -f testenv.yaml
 #1582035823
 curl elasticsearch-master:9200/_cat/indices?
 #1582035857
@@ -44332,13 +44332,13 @@ docker image history --no-trunc harbor.k8s.maimaiti.site/library/es-index-rotato
 #1582036795
 vim tmp.txt
 #1582037068
-vim docker/Dockerfile 
+vim docker/Dockerfile
 #1582037143
 cd docker
 #1582037143
 ls
 #1582037146
-vim rotate.sh 
+vim rotate.sh
 #1582082574
 cd
 #1582082594
@@ -44368,7 +44368,7 @@ rbd ls -l -p k8s
 #1582088796
 rbd ls -l -p k8s | grep 9ecd421c
 #1582088809
-rbd showmapped 
+rbd showmapped
 #1582097650
 cat /etc/fstab
 #1582097659
@@ -44378,7 +44378,7 @@ df -h
 #1582170860
 rbd info k8s/kubernetes-dynamic-pvc-f17d816c-7054-4cbf-9c9b-c37389110d2f
 #1582171034
-vim .bash_history 
+vim .bash_history
 #1582171279
 df -h | grep rbd
 #1582172132
@@ -44386,9 +44386,9 @@ df -h | grep rbd
 #1582247087
 docker stats
 #1582247374
-vim testpod.yaml 
+vim testpod.yaml
 #1582170593
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1582245391
 ceph df
 #1582246316
@@ -44396,11 +44396,11 @@ helm ls
 #1582246344
 helm delete fluentd-elasticsearch --purge
 #1582246348
-helm delete fluentd-elasticsearch 
+helm delete fluentd-elasticsearch
 #1582246352
 helm ls
 #1582246493
-vim testpod.yaml 
+vim testpod.yaml
 #1582246756
 ls
 #1582246766
@@ -44414,7 +44414,7 @@ echo -en '\n'
 #1582248694
 echo -e '\n'
 #1582018432
-vim elasticsearch/values.yaml 
+vim elasticsearch/values.yaml
 #1582018859
 kubectl get pod | grep elastic
 #1582019001
@@ -44432,13 +44432,13 @@ kubectl get service | grep elas
 #1582020228
 kubectl api-resources | grep depl
 #1582020239
-kubectl api-resources 
+kubectl api-resources
 #1582020289
 kubectl api-resources | grep depl
 #1582020306
-kubectl api-versions 
+kubectl api-versions
 #1582020478
-vim k8s.yaml 
+vim k8s.yaml
 #1582020633
 kubectl get customresourcedefinitions
 #1582020691
@@ -44448,17 +44448,17 @@ kubectl get customresourcedefinitions | coreos
 #1582020718
 kubectl get customresourcedefinitions | grep coreos
 #1582020783
-vim k8s.yaml 
+vim k8s.yaml
 #1582030095
-vim /etc/docker/daemon.json 
+vim /etc/docker/daemon.json
 #1582030247
 kubectl get service | grep elast
 #1582030284
-vim kibana/values.yaml 
+vim kibana/values.yaml
 #1582030527
-vim fluentd-elasticsearch/values.yaml 
+vim fluentd-elasticsearch/values.yaml
 #1582033457
-vim fluentd-elasticsearch/templates/configmaps.yaml 
+vim fluentd-elasticsearch/templates/configmaps.yaml
 #1582034752
 ceph df
 #1582034833
@@ -44488,15 +44488,15 @@ du -sh ./
 #1582082292
 k9s
 #1582165701
-vim testpod.yaml 
+vim testpod.yaml
 #1582250258
-kubectl apply dir1/log-pilot.yaml 
+kubectl apply dir1/log-pilot.yaml
 #1582250264
-kubectl apply -f dir1/log-pilot.yaml 
+kubectl apply -f dir1/log-pilot.yaml
 #1582249988
-vim kibana/values.yaml 
+vim kibana/values.yaml
 #1582251044
-kubectl apply -f testlogpilot.yaml 
+kubectl apply -f testlogpilot.yaml
 #1582251883
 kubectl get service | grep elast
 #1582277380
@@ -44510,13 +44510,13 @@ cd efk
 #1582277393
 ls
 #1582277872
-kubectl apply -f dir1/log-pilot.yaml 
+kubectl apply -f dir1/log-pilot.yaml
 #1582278188
-kubectl delete -f dir1/log-pilot.yaml 
+kubectl delete -f dir1/log-pilot.yaml
 #1582278521
-kubectl apply -f dir1/log-pilot.yaml 
+kubectl apply -f dir1/log-pilot.yaml
 #1582278598
-kubectl apply -f testlogpilot.yaml 
+kubectl apply -f testlogpilot.yaml
 #1582278621
 mv dir1/log-pilot.yaml /root
 #1582278623
@@ -44524,9 +44524,9 @@ ls
 #1582279166
 kub
 #1582279170
-kubectl delete -f dir1/log-pilot.yaml 
+kubectl delete -f dir1/log-pilot.yaml
 #1582279177
-kubectl delete -f log-pilot.yaml 
+kubectl delete -f log-pilot.yaml
 #1582279357
 kubectl apply -f log-pilot.yml
 #1582279435
@@ -44536,7 +44536,7 @@ kubectl apply -f log-pilot.yml
 #1582279474
 kubectl get daemonsets
 #1582279504
-kubectl delete -f log-pilot.yml 
+kubectl delete -f log-pilot.yml
 #1582279534
 vim log-pilot.yml
 #1582279609
@@ -44544,37 +44544,37 @@ kubectl apply -f log-pilot.yml
 #1582279624
 kubectl get daemonsets
 #1582279652
-kubectl describe daemonset log-pilot 
+kubectl describe daemonset log-pilot
 #1582279719
 kubectl apply -f log-pilot.yml
 #1582279735
-kubectl describe daemonset log-pilot 
+kubectl describe daemonset log-pilot
 #1582279744
-kubectl delete -f log-pilot.yml 
+kubectl delete -f log-pilot.yml
 #1582279749
 kubectl apply -f log-pilot.yml
 #1582279963
-kubectl apply -f testlogpilot.yaml 
+kubectl apply -f testlogpilot.yaml
 #1582280981
 kubectl delete -f log-pilot.yml
 #1582281035
 kubectl apply -f log-pilot.yml
 #1582281102
-kubectl apply -f testlogpilot.yaml 
+kubectl apply -f testlogpilot.yaml
 #1582281957
-kubectl apply -f log-pilot.yaml 
+kubectl apply -f log-pilot.yaml
 #1582281984
-kubectl apply -f testlogpilot.yaml 
+kubectl apply -f testlogpilot.yaml
 #1582282158
 kubectl delete -f log-pilot.yml
 #1582282161
 kubectl delete -f log-pilot.yaml
 #1582282173
-rm -f log-pilot.yml 
+rm -f log-pilot.yml
 #1582282276
-kubectl apply -f log-pilot.yaml 
+kubectl apply -f log-pilot.yaml
 #1582282346
-kubectl apply -f testlogpilot.yaml 
+kubectl apply -f testlogpilot.yaml
 #1582251145
 kubectl get pod | grep tomcat
 #1582251155
@@ -44584,9 +44584,9 @@ curl 10.220.135.159
 #1582251255
 curl 10.220.135.159:8080
 #1582251501
-vim dir1/log-pilot.yaml 
+vim dir1/log-pilot.yaml
 #1582251706
-kubectl apply -f dir1/log-pilot.yaml 
+kubectl apply -f dir1/log-pilot.yaml
 #1582251896
 curl 'http://10.221.250.84:9200/_cat/indices?pretty' -u elastic:"changeme"
 #1582251912
@@ -44596,23 +44596,23 @@ curl 'http://10.221.250.84:9200/_cat/indices?pretty' -u elasti:"changem"
 #1582251921
 curl 'http://10.221.250.84:9200/_cat/indices?pretty'
 #1582278268
-kubectl delete pod  log-pilot-rb4xd 
+kubectl delete pod  log-pilot-rb4xd
 #1582278306
 kubectl delte -h
 #1582278314
 kubectl delete -h
 #1582278402
-kubectl delete pod  log-pilot-rb4xd --force 
+kubectl delete pod  log-pilot-rb4xd --force
 #1582278466
 kubectl delete pod  log-pilot-rb4xd --force --grace-period=0
 #1582279057
 wget https://acs-logging.oss-cn-hangzhou.aliyuncs.com/log-pilot.yml
 #1582279064
-vim log-pilot.yml 
+vim log-pilot.yml
 #1582281841
-kubectl delete testlogpilot.yaml 
+kubectl delete testlogpilot.yaml
 #1582281849
-kubectl delete -f testlogpilot.yaml 
+kubectl delete -f testlogpilot.yaml
 #1582281863
 kubectl delete -f log-pilot.yml
 #1582282234
@@ -44626,23 +44626,23 @@ helm ls
 #1582284647
 kubectl delete -f log-pilot.yml
 #1582284659
-kubectl delete -f log-pilot.yaml 
+kubectl delete -f log-pilot.yaml
 #1582284664
-kubectl delete -f testlogpilot.yaml 
+kubectl delete -f testlogpilot.yaml
 #1582249902
-vim dir1/log-pilot.yaml 
+vim dir1/log-pilot.yaml
 #1582284885
 helm install --name=fluentd-elasticsearch --namespace=kube-system fluentd-elasticsearch/
 #1582285019
 helm install fluentd-elasticsearch  fluentd-elasticsearch/
 #1582285029
-helm status fluentd-elasticsearch 
+helm status fluentd-elasticsearch
 #1582285040
 helm fullstatus fluentd-elasticsearch
 #1582009099
 kubectl get ed
 #1582009105
-kubectl get endpoints 
+kubectl get endpoints
 #1582009114
 kubectl get endpoints  | grep nginx
 #1582009136
@@ -44650,7 +44650,7 @@ kubectl get pod | grep nginx
 #1582009189
 kubectl get endpoints | grep nginxran
 #1582009206
-kubectl describe endpoints nginxrancher 
+kubectl describe endpoints nginxrancher
 #1582009264
 k9s
 #1582010045
@@ -44660,25 +44660,25 @@ k9s
 #1582521906
 ceph df
 #1582522106
-helm delete fluentd-elasticsearch 
+helm delete fluentd-elasticsearch
 #1582522457
-kubectl apply -f log-pilot.yaml 
+kubectl apply -f log-pilot.yaml
 #1582522760
-kubectl apply -f testlogpilot.yaml 
+kubectl apply -f testlogpilot.yaml
 #1582523993
-kubectl apply -f conveyor.yaml 
+kubectl apply -f conveyor.yaml
 #1582524025
-kubectl apply -f testconveyor.yaml 
+kubectl apply -f testconveyor.yaml
 #1582524608
-kubectl delete -f testconveyor.yaml 
+kubectl delete -f testconveyor.yaml
 #1582524708
-kubectl delete -f conveyor.yaml 
+kubectl delete -f conveyor.yaml
 #1582525910
-kubectl apply -f conveyor.yaml 
+kubectl apply -f conveyor.yaml
 #1582525935
-kubectl apply -f testconveyor.yaml 
+kubectl apply -f testconveyor.yaml
 #1582522233
-vim log-pilot.yaml 
+vim log-pilot.yaml
 #1582535690
 cd dir1/jenkins-demo/
 #1582535691
@@ -44690,7 +44690,7 @@ ls
 #1582535820
 git status
 #1582535830
-git remote show origin 
+git remote show origin
 #1582535849
 git logs
 #1582535853
@@ -44716,7 +44716,7 @@ cd dir1/jenkins-demo/
 #1582599449
 ls
 #1582599455
-vim Jenkinsfile 
+vim Jenkinsfile
 #1582599499
 git status
 #1582599502
@@ -44724,17 +44724,17 @@ git pull
 #1582599538
 ls
 #1582599540
-vim Jenkinsfile 
+vim Jenkinsfile
 #1582605666
 ping www.dolajucai.com
 #1582768085
-vim testpod.yaml 
+vim testpod.yaml
 #1582773530
 kubectl get deployment,service,ingress nginx-1
 #1582773542
 kubectl delete deployment nginx-1
 #1582773569
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1582773596
 kubectl rollout history deployment nginx-1
 #1582773610
@@ -44752,7 +44752,7 @@ kubectl rollout history deployment nginx-1 --revision=2
 #1582773176
 kubectl rollout history deployment nginx-1 --revision=1
 #1582773196
-kubectl rollout status deployment nginx-1 
+kubectl rollout status deployment nginx-1
 #1582773233
 kubectl edit deployment nginx-1
 #1582773642
@@ -44760,7 +44760,7 @@ kubectl apply -f testconveyor.yaml --record
 #1582773649
 kubectl rollout history deployment nginx-1
 #1582773669
-kubectl delete -f testconveyor.yaml 
+kubectl delete -f testconveyor.yaml
 #1582773682
 kubectl apply -f testpod.yaml --record
 #1582773686
@@ -44792,13 +44792,13 @@ kubectl get deployment nginx-1
 #1582775692
 kubectl get replicaset nginx-1
 #1582775706
-kubectl get replicaset nginx-1-84dbb79bcc 
+kubectl get replicaset nginx-1-84dbb79bcc
 #1582775713
-kubectl get replicaset nginx-1-6c9d6f4854 
+kubectl get replicaset nginx-1-6c9d6f4854
 #1582775862
-kubectl describe pod nginx-1-6c9d6f4854-22wqk 
+kubectl describe pod nginx-1-6c9d6f4854-22wqk
 #1582776083
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1582776112
 kubectl describe service nginx-1
 #1582776210
@@ -44828,31 +44828,31 @@ kubectl rollout undo deployment nginx-1
 #1582782481
 kubectl rollout status deployment nginx-1
 #1582790289
-kubectl apply -f testhealth.yaml 
+kubectl apply -f testhealth.yaml
 #1582790301
-kubectl describe pod liveness-exec 
+kubectl describe pod liveness-exec
 #1582790436
-kubectl get pod liveness-exec 
+kubectl get pod liveness-exec
 #1582791148
 docker image history harbor.k8s.maimaiti.site/library/nginx:alpinea
 #1582791151
 docker image history harbor.k8s.maimaiti.site/library/nginx:alpine
 #1582791207
-kubectl delete pod liveness-exec 
+kubectl delete pod liveness-exec
 #1582791224
-kubectl get pod liveness-exec 
+kubectl get pod liveness-exec
 #1582791389
-kubectl apply -f testhealth.yaml 
+kubectl apply -f testhealth.yaml
 #1582791444
-kubectl describe pod liveness-exec 
+kubectl describe pod liveness-exec
 #1582791459
-kubectl get pod liveness-exec 
+kubectl get pod liveness-exec
 #1582791651
-kubectl delete pod liveness-exec 
+kubectl delete pod liveness-exec
 #1582791756
-kubectl apply -f testhealth.yaml 
+kubectl apply -f testhealth.yaml
 #1582791762
-kubectl get pod liveness-exec 
+kubectl get pod liveness-exec
 #1582863334
 kubectl get service
 #1582863341
@@ -44886,15 +44886,15 @@ curl -H Host:hello.test.com 192.168.1.1:23456
 #1582773803
 k9s
 #1583120249
-vim dashboard/values.yaml 
+vim dashboard/values.yaml
 #1583141791
 helm ls
 #1583141798
-vim dashboard/values.yaml 
+vim dashboard/values.yaml
 #1583141877
-vim elasticsearch/values.yaml 
+vim elasticsearch/values.yaml
 #1583142969
-vim gitlab-ce/values.yaml 
+vim gitlab-ce/values.yaml
 #1583203986
 kubectl get service | grep nginx
 #1583204002
@@ -44910,13 +44910,13 @@ kubectl run test --rm -it --image=alpine --labels="access=true" sh
 #1583214414
 kubectl get networkpolicy
 #1583214474
-kubectl apply -f testnetworkpolicy.yaml 
+kubectl apply -f testnetworkpolicy.yaml
 #1583214570
 kubectl get pod -l app=nginx-1
 #1583214619
 kubectl run test --rm -it --image=alpine --labels="access=true" sh
 #1583216462
-kubectl delete networkpolicy default-deny 
+kubectl delete networkpolicy default-deny
 #1583216522
 kubectl run test --rm -it --image=alpine --labels="access=true" sh
 #1583120689
@@ -44926,7 +44926,7 @@ helm install dashboard dashboard
 #1583120909
 helm fullstatus dashboard
 #1583121039
-kubectl delete pod liveness-exec 
+kubectl delete pod liveness-exec
 #1583121253
 kubectl get secret | grep dash
 #1583121395
@@ -44934,7 +44934,7 @@ kubectl describe secrets dashboard-kubernetes-dashboard-token-9mcb6
 #1583121441
 kubectl get secret dashboard-kubernetes-dashboard-token-9mcb6 -o jsonpath="{.data.token}" | base64 -d
 #1583121635
-sz .kube/config 
+sz .kube/config
 #1583121676
 vim .kube/config
 #1583121880
@@ -44948,7 +44948,7 @@ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | gre
 #1583128084
 kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | grep dash
 #1583129606
-helm status dashboard 
+helm status dashboard
 #1583129611
 helm fullstatus dashboard
 #1583129652
@@ -44974,9 +44974,9 @@ ll
 #1583132309
 ./create_self-signed-cert.sh --ssl-domain=dashboard.k8s.maimaiti.site
 #1583132462
-kubectl create secret tls kubernetes-dashboard-tls --cert=tls.crt --key=tls.key 
+kubectl create secret tls kubernetes-dashboard-tls --cert=tls.crt --key=tls.key
 #1583132484
-helm delete dashboard 
+helm delete dashboard
 #1583132636
 helm install dashboard dashboard
 #1583132645
@@ -44994,23 +44994,23 @@ netstat -tnlp
 #1583199749
 netstat -tnlp | grep java
 #1583203817
-kubectl apply -f testnetworkpolicy.yaml 
+kubectl apply -f testnetworkpolicy.yaml
 #1583203855
 kubectl run -ti --rm alpine --image=alpine -- sh
 #1583207873
-kubectl delete -f testnetworkpolicy.yaml 
+kubectl delete -f testnetworkpolicy.yaml
 #1583207882
 kubectl run -ti --rm alpine --image=alpine -- sh
 #1583208052
-kubectl apply -f testnetworkpolicy.yaml 
+kubectl apply -f testnetworkpolicy.yaml
 #1583208067
 kubectl run -ti --rm alpine --image=alpine -- sh
 #1583208129
-kubectl apply -f testnetworkpolicy.yaml 
+kubectl apply -f testnetworkpolicy.yaml
 #1583208147
 kubectl get networkpolicy
 #1583214226
-kubectl apply -f testnetworkpolicy.yaml 
+kubectl apply -f testnetworkpolicy.yaml
 #1583214241
 kubectl run -ti --rm alpine --image=alpine -- sh
 #1583222307
@@ -45034,7 +45034,7 @@ wget --spider --timeout=1 www.baidu.com
 #1583113980
 kubectl get secret | grep rancher
 #1583114006
-kubectl describe secrets tls-rancher-ingress 
+kubectl describe secrets tls-rancher-ingress
 #1583114040
 kubectl get secret | grep ingress
 #1583114439
@@ -45052,7 +45052,7 @@ helm search repo dashboard
 #1583114635
 cd ../
 #1583114654
-cat dashboard.txt 
+cat dashboard.txt
 #1583114724
 helm fetch --untar apphub/kubernetes-dashboard
 #1583114730
@@ -45064,7 +45064,7 @@ helm fetch --untar stable/kubernetes-dashboard
 #1583114891
 mv kubernetes-dashboard/ dashboard2
 #1583114906
-vimdiff dashboard1/values.yaml dashboard2/values.yaml 
+vimdiff dashboard1/values.yaml dashboard2/values.yaml
 #1583117384
 rm -rf dashboard2
 #1583117393
@@ -45078,7 +45078,7 @@ watch kubectl get hpa php-apache
 #1583289381
 wget www.baidu.com
 #1583289384
-vim index.html 
+vim index.html
 #1583289403
 rm -f index.html
 #1583289409
@@ -45088,7 +45088,7 @@ echo ?
 #1583289416
 echo $?
 #1583289421
-ls index.html 
+ls index.html
 #1583289423
 vim index.html
 #1583289731
@@ -45096,9 +45096,9 @@ watch kubectl get hpa php-apache
 #1583286991
 kubectl rollout undo deployment jenkins-demo-springboot
 #1583289104
-kubectl delete hpa php-apache 
+kubectl delete hpa php-apache
 #1583289121
-kubectl delete deployment php-apache 
+kubectl delete deployment php-apache
 #1583289177
 kubectl help run
 #1583289268
@@ -45112,7 +45112,7 @@ kubectl api-resources | grep hpa
 #1583290440
 wget -q -O- www.baidu.com
 #1583290455
-rm -f index.html 
+rm -f index.html
 #1583290457
 wget -q -O- www.baidu.com
 #1583290480
@@ -45120,25 +45120,25 @@ man wget
 #1583290610
 wget www.baidu.com
 #1583290629
-rm -f index.html 
+rm -f index.html
 #1583290936
-kubectl top pod php-apache-6d7bffb5c7-sg547 
+kubectl top pod php-apache-6d7bffb5c7-sg547
 #1583292716
 kubectl api-resources | grep hpa
 #1583292737
 kubectl api-versions | grep autoscaling
 #1583293178
-kubectl help autoscale 
+kubectl help autoscale
 #1583301194
-kubectl get networkpolicy access-nginx 
+kubectl get networkpolicy access-nginx
 #1583301205
-kubectl delete networkpolicy access-nginx 
+kubectl delete networkpolicy access-nginx
 #1583301393
-kubectl apply -f testhpa.yaml 
+kubectl apply -f testhpa.yaml
 #1583301404
-kubectl get hpa nginx-hpa 
+kubectl get hpa nginx-hpa
 #1583301409
-watch kubectl get hpa nginx-hpa 
+watch kubectl get hpa nginx-hpa
 #1583304389
 ping http://jenkins.k8s.maimaiti.site/
 #1583304405
@@ -45204,13 +45204,13 @@ ln -s 9.txt dir12/dir12.txt
 #1583543101
 ln -s 9.txt dir11/dir11.txt
 #1583315231
-kubectl edit configmaps nginx-ingress-controller 
+kubectl edit configmaps nginx-ingress-controller
 #1583315793
 docker image ls | grep nginx
 #1583315825
 docker image ls | grep tomcat
 #1583316180
-docker push harbor.k8s.maimaiti.site/library/nginx:alpine 
+docker push harbor.k8s.maimaiti.site/library/nginx:alpine
 #1583316208
 
 #1583316240
@@ -45218,7 +45218,7 @@ dokcer image as
 #1583316244
 docker image ls
 #1583316325
-docker push harbor.k8s.maimaiti.site/library/nginx-ingress-controller:0.24.1 
+docker push harbor.k8s.maimaiti.site/library/nginx-ingress-controller:0.24.1
 #1583371671
 docker push harbor.k8s.maimaiti.site/library/nginx-ingress-controller:0.24.1
 #1583372010
@@ -45238,7 +45238,7 @@ docker tag jenkins/jenkins:lts harbor.k8s.maimaiti.site/library/jenkins:lts
 #1583373064
 docker push harbor.k8s.maimaiti.site/library/jenkins:lts
 #1583374073
-kubectl edit ingress harbor-harbor-ingress 
+kubectl edit ingress harbor-harbor-ingress
 #1583374408
 docker push harbor.k8s.maimaiti.site/library/jenkins:lts
 #1583375611
@@ -45258,15 +45258,15 @@ vimdiff nginx-ingress/values.yaml tmp.txt
 #1583378371
 docker push harbor.k8s.maimaiti.site/library/jenkins:lts
 #1583386461
-vimdiff /etc/ansible/manifests/jenkins/values.yaml jenkins/values.yaml 
+vimdiff /etc/ansible/manifests/jenkins/values.yaml jenkins/values.yaml
 #1583386839
-kubectl cluster-info 
+kubectl cluster-info
 #1583386879
-kubectl get service 
+kubectl get service
 #1583386886
-kubectl get service -n default kubernetes 
+kubectl get service -n default kubernetes
 #1583386921
-kubectl get endpoints -n default kubernetes 
+kubectl get endpoints -n default kubernetes
 #1583390932
 helm fullstatus jenkins
 #1583392000
@@ -45292,13 +45292,13 @@ vim Dockerfile
 #1583396197
 kubectl get --all-namespaces pod | grep jenkins
 #1583396241
-kubectl get all -n jenkins 
+kubectl get all -n jenkins
 #1583396371
-kubectl detete all -n jenkins 
+kubectl detete all -n jenkins
 #1583396379
-kubectl delete all -n jenkins 
+kubectl delete all -n jenkins
 #1583396387
-kubectl delete --all -n jenkins 
+kubectl delete --all -n jenkins
 #1583396534
 kubectl delete namespace jenkins
 #1583396610
@@ -45372,7 +45372,7 @@ kubectl get pvc --all-namespaces | grep jenkins
 #1583462674
 kubectl delete pvc -n default pvc-9b4113b1-f749-480b-9cdf-28e84f957420
 #1583462692
-kubectl delete pvc -n default jenkins 
+kubectl delete pvc -n default jenkins
 #1583462704
 kubectl get pvc --all-namespaces | grep jenkins
 #1583462728
@@ -45394,7 +45394,7 @@ ls /root/m2
 #1583481934
 ls /root/.m2
 #1583482004
-vim /usr/local/apache-maven-3.6.1/conf/settings.xml 
+vim /usr/local/apache-maven-3.6.1/conf/settings.xml
 #1583486046
 cd /mnt/cephfs/pvc-volumes/kubernetes/kubernetes-dynamic-pvc-c5c64fc1-5f7b-11ea-96a3-c6d2dc5f42fb/
 #1583486047
@@ -45434,7 +45434,7 @@ ls
 #1583486414
 ll
 #1583487775
-cd 
+cd
 #1583487777
 cd docker/
 #1583487777
@@ -45458,15 +45458,15 @@ docker image ls | grep jnlp
 #1583544578
 ls
 #1583544588
-vim docker.sock 
+vim docker.sock
 #1583544593
 ll
 #1583543688
-vim /root/.kube/config 
+vim /root/.kube/config
 #1583543719
-cp -a /root/.kube/config FROM harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1                                                                                  
+cp -a /root/.kube/config FROM harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1
 #1583543719
-USER root                                                                                                                                
+USER root
 #1583543736
 cp -a /root/.kube/config /var/run/docker.sock ./
 #1583543746
@@ -45474,7 +45474,7 @@ ls
 #1583543752
 vim config/
 #1583543762
-rm -f config docker.sock 
+rm -f config docker.sock
 #1583543771
 ls config/
 #1583543789
@@ -45488,17 +45488,17 @@ kubectl get hpa php-apache
 #1583286739
 kubectl run --rm -it load-generator --image=busybox /bin/sh
 #1583300343
-kubectl apply -f testhpa.yaml 
+kubectl apply -f testhpa.yaml
 #1583300356
-kubectl get hpa nginx-hpa 
+kubectl get hpa nginx-hpa
 #1583300617
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1583301012
-kubectl get hpa nginx-hpa 
+kubectl get hpa nginx-hpa
 #1583301057
-kubectl delete hpa nginx-hpa 
+kubectl delete hpa nginx-hpa
 #1583301067
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1583301113
 kubectl run --rm -it load-generator --image=busybox /bin/sh
 #1583307102
@@ -45528,13 +45528,13 @@ kubectl cp nginx-ingress-controller-855d95df48-ckkb2:/etc/nginx/nginx.conf ./ngi
 #1583314753
 ls
 #1583314767
-vim nginx.conf 
+vim nginx.conf
 #1583315376
 kubectl cp nginx-ingress-controller-855d95df48-ckkb2:/etc/nginx/nginx.conf /root/dir1
 #1583315562
 kubectl cp nginx-ingress-controller-855d95df48-ckkb2:/etc/nginx/nginx.conf /root/dir1/nginx.conf
 #1583315574
-ll nginx.conf 
+ll nginx.conf
 #1583315583
 vim nginx.conf
 #1583371753
@@ -45566,7 +45566,7 @@ helm fullstatus install jenkins jenkins
 #1583378585
 helm fullstatus jenkins
 #1583378685
-kubectl get ingress dashboard-kubernetes-dashboard 
+kubectl get ingress dashboard-kubernetes-dashboard
 #1583379706
 helm delete jenkins
 #1583379732
@@ -45578,9 +45578,9 @@ kubectl delete hpa nginx-hpa
 #1583387096
 kubectl edit deployment nginx-1
 #1583387176
-kubectl get networkpolicies.extensions 
+kubectl get networkpolicies.extensions
 #1583387181
-kubectl get networkpolicies.networking.k8s.io 
+kubectl get networkpolicies.networking.k8s.io
 #1583387680
 kubectl get pod | grep jenkins
 #1583387687
@@ -45626,7 +45626,7 @@ vim /etc/ansible/hosts
 #1583463305
 ansible kube-node -m ping
 #1583463346
-docker iamge ls 
+docker iamge ls
 #1583463349
 docker image ls
 #1583463353
@@ -45634,13 +45634,13 @@ docker image ls | grep jenkins
 #1583463370
 docker image ls | grep jenkins | awk '{print $1}'
 #1583463385
-docker image ls | grep jenkins | awk '{print $1}' | xargs docker rmi 
+docker image ls | grep jenkins | awk '{print $1}' | xargs docker rmi
 #1583463403
-docker image ls | grep jenkins | awk '{print $1:$2}' | xargs docker rmi 
+docker image ls | grep jenkins | awk '{print $1:$2}' | xargs docker rmi
 #1583463409
-docker image ls | grep jenkins | awk '{print $1:$2}' 
+docker image ls | grep jenkins | awk '{print $1:$2}'
 #1583463420
-docker image ls | grep jenkins | awk '{print $1":"$2}' 
+docker image ls | grep jenkins | awk '{print $1":"$2}'
 #1583463428
 docker image ls | grep jenkins | awk '{print $1":"$2}' | xargs docker rmi
 #1583463447
@@ -45694,7 +45694,7 @@ cd bin
 #1583479187
 ls
 #1583479199
-ll 
+ll
 #1583479208
 pwd
 #1583479215
@@ -45704,7 +45704,7 @@ pwd
 #1583479564
 cd
 #1583479578
-kubectl apply -f testpvc.yaml 
+kubectl apply -f testpvc.yaml
 #1583479586
 kubectl get pvc jnlp
 #1583479801
@@ -45714,7 +45714,7 @@ ls /var/run/docker.sock
 #1583480673
 ll /var/run/docker.sock
 #1583483207
-kubectl get pvc jnlp 
+kubectl get pvc jnlp
 #1583488438
 docker pull ubuntu
 #1583488477
@@ -45768,7 +45768,7 @@ k9s -v
 #1583633459
 ls
 #1583633530
-vim /root/.bash_history 
+vim /root/.bash_history
 #1583633577
 which k8s
 #1583633579
@@ -45782,7 +45782,7 @@ rm -rf /usr/bin/k9s
 #1583633622
 ls
 #1583633640
-rm -f k9s_0.9.3_Linux_x86_64.tar.gz 
+rm -f k9s_0.9.3_Linux_x86_64.tar.gz
 #1583633677
 tar xf k9s_Linux_x86_64.tar.gz -C /usr/local/bin/
 #1583633684
@@ -45804,9 +45804,9 @@ kubectl get pods
 #1583545956
 kubectl get pod
 #1583546275
-vim /etc/ansible/roles/ex-lb/templates/haproxy.cfg.j2 
+vim /etc/ansible/roles/ex-lb/templates/haproxy.cfg.j2
 #1583546341
-vim .kube/config 
+vim .kube/config
 #1583547094
 ls /download/
 #1583548206
@@ -45826,7 +45826,7 @@ helm ls
 #1583630585
 helm version
 #1583630653
-ls -l /download/helm-v3.0.0-linux-amd64.tar.gz 
+ls -l /download/helm-v3.0.0-linux-amd64.tar.gz
 #1583632495
 cd /download/
 #1583632496
@@ -45840,7 +45840,7 @@ wget https://get.helm.sh/helm-v3.1.1-linux-amd64.tar.gz
 #1583633203
 ls
 #1583633215
-rm -f helm-v3.0.0-linux-amd64.tar.gz 
+rm -f helm-v3.0.0-linux-amd64.tar.gz
 #1583633216
 ls
 #1583633220
@@ -45848,11 +45848,11 @@ helm version
 #1583633236
 
 #1583633261
-tar xf helm-v3.1.1-linux-amd64.tar.gz 
+tar xf helm-v3.1.1-linux-amd64.tar.gz
 #1583633266
 rm -rf linux-amd64/
 #1583633268
-tar xf helm-v3.1.1-linux-amd64.tar.gz 
+tar xf helm-v3.1.1-linux-amd64.tar.gz
 #1583633307
 tar xf helm-v3.1.1-linux-amd64.tar.gz -C /usr/local
 #1583633313
@@ -45870,13 +45870,13 @@ cd /download/
 #1583636545
 ls
 #1583636557
-tar xf helm-v3.1.1-linux-amd64.tar.gz 
+tar xf helm-v3.1.1-linux-amd64.tar.gz
 #1583636567
 rm -rf linux-amd64/
 #1583636577
 ls /usr/local/bin
 #1583636595
-tar xf helm-v3.1.1-linux-amd64.tar.gz 
+tar xf helm-v3.1.1-linux-amd64.tar.gz
 #1583636608
 cp -a linux-amd64/helm /usr/local/bin
 #1583636614
@@ -45888,7 +45888,7 @@ helm repol list
 #1583636627
 helm repo list
 #1583636665
-helm status dashboard 
+helm status dashboard
 #1583636671
 helm version
 #1583636726
@@ -45950,7 +45950,7 @@ vim
 #1583633693
 k9s
 #1583641669
-vim .bash_history 
+vim .bash_history
 #1583642652
 cd /download/
 #1583642653
@@ -45972,7 +45972,7 @@ cp -a .bash_history rbd/ cephfs/ testpod.yaml testpvc.yaml tmp1
 #1583646283
 rm -rf tmp1
 #1583636414
-vim .k9s/config.yml 
+vim .k9s/config.yml
 #1583636535
 k9s
 #1583650794
@@ -45980,13 +45980,13 @@ vim
 #1583654885
 ping jss.bqjr.cn
 #1583666013
-vim /etc/fstab 
+vim /etc/fstab
 #1583666017
 df -h
 #1583666027
 df -h | grep cephfs
 #1583721073
-vim .kube/config 
+vim .kube/config
 #1583721104
 sz .kube/config
 #1583724200
@@ -46010,7 +46010,7 @@ cd docker
 #1583745745
 ls
 #1583745753
-rm -f .bashrc 
+rm -f .bashrc
 #1583724974
 cd /mnt/cephfs/pvc-volumes/kubernetes/kubernetes-dynamic-pvc-c5c64fc1-5f7b-11ea-96a3-c6d2dc5f42fb/
 #1583724975
@@ -46018,7 +46018,7 @@ ls
 #1583725032
 ls -l
 #1583725055
-chown root:root docker 
+chown root:root docker
 #1583725057
 ls -l
 #1583726082
@@ -46026,11 +46026,11 @@ iptables -L
 #1583726175
 cd
 #1583726717
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1583731324
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1583731369
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1583731467
 netstat -tnlp | grep 80
 #1583731487
@@ -46146,7 +46146,7 @@ alias cnpm
 #1583739863
 which npm
 #1583739884
-vim /etc/profile.d/path.sh 
+vim /etc/profile.d/path.sh
 #1583741012
 cd
 #1583741013
@@ -46206,7 +46206,7 @@ docker rmi harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1-my
 #1583741787
 docker image ls | grep slave
 #1583741821
-docker rmi harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1-my1 
+docker rmi harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1-my1
 #1583741953
 ls
 #1583743342
@@ -46238,7 +46238,7 @@ vim /root/docker/bashrc
 #1583803703
 kubectl get deployment -n default
 #1583803727
-kubectl -n default rollout status deployment api-gateway 
+kubectl -n default rollout status deployment api-gateway
 #1583809036
 cd /var/lib/jenkins/workspace/jenkins-demo
 #1583809036
@@ -46286,7 +46286,7 @@ cp -a /usr/local/apache-maven-3.6.1 ./
 #1583812199
 ls
 #1583812208
-vim apache-maven-3.6.1/conf/settings.xml 
+vim apache-maven-3.6.1/conf/settings.xml
 #1583813503
 cd
 #1583813517
@@ -46306,7 +46306,7 @@ ls
 #1583819434
 netstat -tnlp
 #1583819438
-netstat -tnlp 
+netstat -tnlp
 #1583819443
 netstat -tnlp | grep 808
 #1583743900
@@ -46348,7 +46348,7 @@ cd conf
 #1583810621
 ls
 #1583810661
-vim settings.xml 
+vim settings.xml
 #1583813885
 docker build -t harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1-myv3 -f /root/docker/Dockerfile2 /root/docker
 #1583813903
@@ -46356,9 +46356,9 @@ docker push harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1-myv3
 #1583817796
 ping 10.83.64.127
 #1583821339
-kubectl rollout status deployment jenkins-demo-springboot 
+kubectl rollout status deployment jenkins-demo-springboot
 #1583821345
-kubectl rollout history deployment jenkins-demo-springboot 
+kubectl rollout history deployment jenkins-demo-springboot
 #1583821406
 kubectl rollout history deployment jenkins-demo-springboot --revision=9
 #1583823040
@@ -46434,13 +46434,13 @@ cd ../
 #1583824072
 ls dist
 #1583824084
-rm -f dist/dist.tar.gz 
+rm -f dist/dist.tar.gz
 #1583824103
 tar zcf dist.tar.gz dist/
 #1583824121
 tar tf dist.tar.gz
 #1583824445
-rm -f dist.tar.gz 
+rm -f dist.tar.gz
 #1583824448
 cd dist/
 #1583824449
@@ -46464,7 +46464,7 @@ tar zcf dist.tar.gz *
 #1583824658
 ls
 #1583824669
-tar tf dist.tar.gz 
+tar tf dist.tar.gz
 #1583824724
 ls
 #1583824878
@@ -46472,19 +46472,19 @@ cd ../
 #1583824879
 ls
 #1583824997
-rm -f dist/dist.tar.gz 
+rm -f dist/dist.tar.gz
 #1583825020
 tar zcf dist.tar.gz -C dist/ .
 #1583825021
 ls
 #1583825035
-tar tf dist.tar.gz 
+tar tf dist.tar.gz
 #1583825098
 ls
 #1583825101
 ls dist
 #1583825130
-tar tf dist.tar.gz 
+tar tf dist.tar.gz
 #1583825147
 ls
 #1583826883
@@ -46582,7 +46582,7 @@ ls
 #1584321898
 cd
 #1584321986
-kubectl apply -f testconveyor.yaml 
+kubectl apply -f testconveyor.yaml
 #1584322004
 kubectl get pod | grep ngx
 #1584322015
@@ -46592,7 +46592,7 @@ curl 10.220.135.134
 #1584323793
 kubectl delete deployment ngx
 #1584323799
-kubectl apply -f testconveyor.yaml 
+kubectl apply -f testconveyor.yaml
 #1584323872
 kubectl get pod -o wide | grep ngx
 #1584323881
@@ -46600,7 +46600,7 @@ curl 10.220.135.138
 #1584323887
 curl 10.220.135.138:8080
 #1584324437
-kubectl apply -f testconveyor.yaml 
+kubectl apply -f testconveyor.yaml
 #1584325559
 kubectl get pod -o wide | grep ngx
 #1584325577
@@ -46662,9 +46662,9 @@ kubectl get all -l 'app=nginx'
 #1585301502
 kubectl help get
 #1585301896
-kubectl get storageclasses.storage.k8s.io 
+kubectl get storageclasses.storage.k8s.io
 #1585302145
-kubectl apply -f teststateful.yaml 
+kubectl apply -f teststateful.yaml
 #1585302451
 kubectl run -ti --rm alpine --image=alpine -- sh
 #1585302560
@@ -46682,9 +46682,9 @@ ls
 #1585535250
 tree springboot/
 #1585535265
-vim springboot/src/main/java/docker_spring_boot/Application.java 
+vim springboot/src/main/java/docker_spring_boot/Application.java
 #1585535336
-vim springboot/pom.xml 
+vim springboot/pom.xml
 #1585535416
 git pull
 #1585535481
@@ -46700,9 +46700,9 @@ cd eureka
 #1585535564
 ls
 #1585535566
-vim pom.xml 
+vim pom.xml
 #1585535728
-vim src/main/java/docker_spring_boot/Application.java 
+vim src/main/java/docker_spring_boot/Application.java
 #1585535848
 ls
 #1585535858
@@ -46736,9 +46736,9 @@ cp -a ../jenkins-demo/springboot/src ./
 #1585538041
 ls
 #1585538047
-vim pom.xml 
+vim pom.xml
 #1585302978
-ping 10.83.22.140 
+ping 10.83.22.140
 #1585533211
 kubectl get statefulsets.apps
 #1585553057
@@ -46746,7 +46746,7 @@ mvn -version
 #1585553074
 ls /usr/local/
 #1585555064
-vim /usr/local/apache-maven-3.6.1/conf/settings.xml 
+vim /usr/local/apache-maven-3.6.1/conf/settings.xml
 #1585558764
 cd .m2/
 #1585558765
@@ -46760,11 +46760,11 @@ du -sh ./
 #1585558775
 pwd
 #1585558781
-ls 
+ls
 #1585558787
 pwd
 #1585558806
-vim /usr/local/apache-maven-3.6.1/conf/settings.xml 
+vim /usr/local/apache-maven-3.6.1/conf/settings.xml
 #1585558848
 cd /app/.m2/repository
 #1585558849
@@ -46784,11 +46784,11 @@ ls
 #1585559021
 unzip demo3.rar
 #1585559033
-rm -f demo3.rar 
+rm -f demo3.rar
 #1585559055
 rz -E
 #1585559060
-unzip demo3.zip 
+unzip demo3.zip
 #1585559063
 ls
 #1585559065
@@ -46798,9 +46798,9 @@ ls
 #1585559084
 mvn -Dmaven.test.skip=true clean package
 #1585559196
-vim /root/dir1/jenkins-demo/springboot/pom.xml 
+vim /root/dir1/jenkins-demo/springboot/pom.xml
 #1585559943
-vim pom.xml 
+vim pom.xml
 #1585559954
 mvn -Dmaven.test.skip=true clean package
 #1585560320
@@ -46808,7 +46808,7 @@ ping 10.83.74.230
 #1585560902
 ping m.maimaiti.cn
 #1585560959
-cat /etc/resolv.conf 
+cat /etc/resolv.conf
 #1585560985
 ping m.maimaiti.cn
 #1585704591
@@ -46818,7 +46818,7 @@ git pull
 #1585704642
 git status
 #1585704891
-sh -n init.sh 
+sh -n init.sh
 #1585704897
 man sh
 #1585705060
@@ -46844,7 +46844,7 @@ rbd status k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
 #1585710384
 vim /etc/ansible/hosts
 #1585710403
-ansible kube-node -m ping 
+ansible kube-node -m ping
 #1585710416
 ansible kube-node -m shell -a 'df -h | grep 44e42b9c'
 #1585710862
@@ -46868,9 +46868,9 @@ helm fullstatus prometheus-operator
 #1585711791
 helm fullstatus prometheus-operator | grep state
 #1585711833
-helm fullstatus prometheus-operator 
+helm fullstatus prometheus-operator
 #1585711895
-helm delete prometheus-operator 
+helm delete prometheus-operator
 #1585724596
 cd dir1/jenkins-demo/
 #1585724596
@@ -46898,7 +46898,7 @@ cd eureka-server/
 #1585729364
 ls
 #1585729372
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1585729395
 docker pull
 #1585729402
@@ -46908,7 +46908,7 @@ git pull
 #1585729417
 ls
 #1585729420
-vim Dockerfile 
+vim Dockerfile
 #1585729445
 ls
 #1585729499
@@ -46920,7 +46920,7 @@ mvn -Dmaven.test.skip=true clean package
 #1585729533
 docker build -t harbor.k8s.maimaiti.site/library/eureka-server:v3 ./
 #1585729576
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1585729606
 docker push harbor.k8s.maimaiti.site/library/eureka-server:v3
 #1585730003
@@ -46938,7 +46938,7 @@ kubectl get ingress | grep eureka
 #1585730911
 ping kibana.k8s.maimaiti.site
 #1585538285
-vim dir1/eureka/src/main/java/docker_spring_boot/Application.java 
+vim dir1/eureka/src/main/java/docker_spring_boot/Application.java
 #1585538407
 cd dir1/eureka/
 #1585538408
@@ -46952,7 +46952,7 @@ rm -rf pom.xml src
 #1585538530
 ls
 #1585538554
-vim K8S.yaml 
+vim K8S.yaml
 #1585539281
 ls
 #1585541338
@@ -46976,13 +46976,13 @@ git pull
 #1585541383
 ls
 #1585549436
-vim /usr/local/apache-maven-3.6.1/conf/settings.xml 
+vim /usr/local/apache-maven-3.6.1/conf/settings.xml
 #1585561005
 ping m.maimaiti.cn
 #1585618225
 ls
 #1585618232
-vim springboot/src/main/java/docker_spring_boot/Application.java 
+vim springboot/src/main/java/docker_spring_boot/Application.java
 #1585627907
 cd /root/dir1
 #1585627907
@@ -47020,15 +47020,15 @@ tar xf ../dir2.tar.gz -C ./
 #1585628040
 ls
 #1585628046
-rm -f ../dir2.tar.gz 
+rm -f ../dir2.tar.gz
 #1585628048
 ll
 #1585633085
-vim pom1.xml 
+vim pom1.xml
 #1585633111
-vim pom2.xml 
+vim pom2.xml
 #1585634409
-vim pom1.xml 
+vim pom1.xml
 #1585645693
 ls
 #1585645695
@@ -47040,7 +47040,7 @@ cd eureka/
 #1585645711
 ls
 #1585645722
-vim application.yaml 
+vim application.yaml
 #1585647691
 ls
 #1585647756
@@ -47050,7 +47050,7 @@ ls
 #1585647789
 tar zcvf eureka.tar.gz *
 #1585647794
-sz eureka.tar.gz 
+sz eureka.tar.gz
 #1585648008
 cd ../
 #1585648015
@@ -47088,7 +47088,7 @@ ls
 #1585649723
 docker build -t harbor.k8s.maimaiti.site/library/eureka-server:v1 ./
 #1585649752
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1585649822
 docker push harbor.k8s.maimaiti.site/library/eureka-server:v1
 #1585704119
@@ -47100,7 +47100,7 @@ man shell
 #1585704364
 man sh
 #1585704415
-vim init.sh 
+vim init.sh
 #1585294370
 yum repo list
 #1585294381
@@ -47110,7 +47110,7 @@ helm search repo eureka
 #1585294487
  helm repo add apphub https://apphub.aliyuncs.com
 #1585294501
-helm repo update 
+helm repo update
 #1585294588
 helm search repo eureka
 #1585294735
@@ -47144,19 +47144,19 @@ git log
 #1585713257
 ls
 #1585713267
-vim k8s.yaml 
+vim k8s.yaml
 #1585713274
 git pull
 #1585713280
 git status
 #1585713324
-vim k8s.yaml 
+vim k8s.yaml
 #1585713334
-vim Dockerfile 
+vim Dockerfile
 #1585713344
-vim k8s.yaml 
+vim k8s.yaml
 #1585713389
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1585720108
 kubectl get service -n kube-system
 #1585724915
@@ -47210,7 +47210,7 @@ docker build -t harbor.k8s.maimaiti.site/library/eureka-client:v1 ./
 #1585725812
 docker push harbor.k8s.maimaiti.site/library/eureka-client:v1
 #1585725831
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1585799052
 git status
 #1585799086
@@ -47228,7 +47228,7 @@ git status
 #1585799194
 git log
 #1585799211
-git reset --hard 
+git reset --hard
 #1585799236
 git log
 #1585799456
@@ -47382,7 +47382,7 @@ git staus
 #1585810083
 git status
 #1585810101
-git remote show 
+git remote show
 #1585810112
 git remote -v
 #1585810122
@@ -47392,7 +47392,7 @@ git push
 #1585810144
 git push --set-upstream origin dev1
 #1585810153
-git remote show 
+git remote show
 #1585810157
 git remote show -v
 #1585810159
@@ -47426,7 +47426,7 @@ git pull
 #1585811545
 git stash list
 #1585811547
-git stash pop 
+git stash pop
 #1585811377
 git push
 #1585811647
@@ -47458,17 +47458,17 @@ ls
 #1585810301
 git branch
 #1585810307
-git branch 
+git branch
 #1585810310
 cd jenkins-demo/
 #1585810312
 git branch
 #1585810353
-git remote show 
+git remote show
 #1585810357
-git remote show origin 
+git remote show origin
 #1585810396
-git branch dev1 origin/dev1 
+git branch dev1 origin/dev1
 #1585810408
 git branch
 #1585810422
@@ -47480,7 +47480,7 @@ git checkout dev1
 #1585810458
 git branch
 #1585810836
-vim Jenkinsfile 
+vim Jenkinsfile
 #1585812211
 git checkout master
 #1585812215
@@ -47512,13 +47512,13 @@ cd springcloud/eureka-client/
 #1585734299
 ls
 #1585734310
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1585734514
 git pull
 #1585734524
 ls
 #1585734529
-vim k8s.yaml 
+vim k8s.yaml
 #1585734559
 mvn -Dmaven.test.skip=true clean package
 #1585734570
@@ -47526,7 +47526,7 @@ docker build -t harbor.k8s.maimaiti.site/library/eureka-client:v2 ./
 #1585734597
 docker push harbor.k8s.maimaiti.site/library/eureka-client:v2
 #1585734615
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1585734762
 kubectl -n default get service | grep eureka
 #1585797435
@@ -47550,7 +47550,7 @@ git log
 #1585799005
 ls
 #1585799016
-vim Jenkinsfile 
+vim Jenkinsfile
 #1585812798
 cd dir1/jenkins-demo/
 #1585812798
@@ -47576,7 +47576,7 @@ git merge dev1
 #1585812867
 cd dir1/jenkins-demo/
 #1585812871
-vim Jenkinsfile 
+vim Jenkinsfile
 #1585813021
 git add Jenkinsfile && git commit -m 'dev-v4'
 #1585813242
@@ -47584,7 +47584,7 @@ git status
 #1585813255
 git log
 #1585813297
-git reset --hard 
+git reset --hard
 #1585813304
 git log
 #1585813391
@@ -47642,11 +47642,11 @@ cd /tmp/dir1/jenkins-demo/
 #1585812242
 ls
 #1585812245
-vim Jenkinsfile 
+vim Jenkinsfile
 #1585812279
 git add Jenkinsfile && git commit -m 'master-v2'
 #1585812328
-git push 
+git push
 #1585815541
 git branch
 #1585815548
@@ -47656,7 +47656,7 @@ git branch -a
 #1585815655
 git checkout dev2
 #1585815662
-git push 
+git push
 #1585815688
 git branch --set-upstream-to=origin/dev2
 #1585815747
@@ -47688,7 +47688,7 @@ git checkout master
 #1585883009
 git pull
 #1585883015
-vim Jenkinsfile 
+vim Jenkinsfile
 #1585883434
 git status
 #1585883447
@@ -47728,7 +47728,7 @@ git pull
 #1585883957
 ls
 #1585883984
-git stash pop 
+git stash pop
 #1585884166
 git status
 #1585884234
@@ -47738,11 +47738,11 @@ git push
 #1585884995
 git add Jenkinsfile && git commit -m 'local v3'
 #1585885119
-cat README.md 
+cat README.md
 #1585885201
 git pull
 #1585885205
-cat README.md 
+cat README.md
 #1585885432
 git status
 #1585898117
@@ -47830,7 +47830,7 @@ cd eureka-server/
 #1585708705
 ls
 #1585708712
-vim Dockerfile 
+vim Dockerfile
 #1585708720
 ls
 #1585708725
@@ -47838,19 +47838,19 @@ git status
 #1585708775
 docker build -t harbor.k8s.maimaiti.site/library/eureka-server:v1 ./
 #1585708814
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1585708951
 
 #1585708984
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1585709016
 docker build -t harbor.k8s.maimaiti.site/library/eureka-server:v2 ./
 #1585709027
 docker push harbor.k8s.maimaiti.site/library/eureka-server:v2
 #1585709050
-vim k8s.yaml 
+vim k8s.yaml
 #1585709069
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1585709603
 k9s
 #1585731892
@@ -47866,19 +47866,19 @@ mv CentOS7.x_init_final.sh other/
 #1585904111
 du -sh go
 #1585904136
-vim nginxtest.txt 
+vim nginxtest.txt
 #1585904147
 rm -f nginxtest.txt
 #1585904168
-ls node11 
+ls node11
 #1585904171
 tree node11
 #1585904177
-tree node11 
+tree node11
 #1585904186
 ls -l node11
 #1585904192
-vim node11 
+vim node11
 #1585904223
 ls cert_before
 #1585904237
@@ -47886,57 +47886,57 @@ ls helm/
 #1585904246
 cat passwd
 #1585904265
-vim hostnetwork.yaml 
+vim hostnetwork.yaml
 #1585904276
 rm -f hostnetwork.yaml
 #1585904292
-vim clear.sh 
+vim clear.sh
 #1585904304
 mv clear.sh other/
 #1585904313
-vim pull.txt 
+vim pull.txt
 #1585904354
 mv pull.txt other/
 #1585904422
 mv conveyor.yaml other/
 #1585904432
-vim ingresstest.yaml 
+vim ingresstest.yaml
 #1585904445
-rm -f ingresstest.yaml 
+rm -f ingresstest.yaml
 #1585904462
-vim init.sh 
+vim init.sh
 #1585904471
 mv init.sh other/
 #1585904484
-vim rbac-config.yaml 
+vim rbac-config.yaml
 #1585904495
 mv rbac-config.yaml other
 #1585904506
-vim dashboard.txt 
+vim dashboard.txt
 #1585904514
 rm -f dashboard.txt
 #1585904533
-vim default.conf 
+vim default.conf
 #1585904539
 rm -f default.conf
 #1585904594
-vim rbd.yaml 
+vim rbd.yaml
 #1585904614
-rm -f rbd.yaml 
+rm -f rbd.yaml
 #1585904624
-vim deployment.yaml 
+vim deployment.yaml
 #1585904635
-rm -f deployment.yaml 
+rm -f deployment.yaml
 #1585904646
-vim restart.sh 
+vim restart.sh
 #1585904673
 rm -f restart.sh
 #1585904699
-vim kube-proxy.yaml 
+vim kube-proxy.yaml
 #1585904734
 rm -f kube-proxy.yaml
 #1585904753
-rm -f sshd_config 
+rm -f sshd_config
 #1585904773
 mv log-pilot.yaml other
 #1585904801
@@ -47944,39 +47944,39 @@ vim tmp.sh
 #1585904868
 rm -f dump.rdb
 #1585904871
-vim master01.txt 
+vim master01.txt
 #1585904878
-rm -f master01.txt 
+rm -f master01.txt
 #1585904886
 tree test1
 #1585904898
 rm -rf test1
 #1585905130
-vim filebeat-kubernetes.yaml 
+vim filebeat-kubernetes.yaml
 #1585905153
-rm -f filebeat-kubernetes.yaml  filebeat.reference.yml 
+rm -f filebeat-kubernetes.yaml  filebeat.reference.yml
 #1585905166
-rm -f flannel.yml 
+rm -f flannel.yml
 #1585905210
-vim metallb-layer2-config.yaml 
+vim metallb-layer2-config.yaml
 #1585905227
 rm -f metallb-layer2-config.yaml
 #1585905256
-vim ubuntu-sources.list 
+vim ubuntu-sources.list
 #1585905262
-rm -f ubuntu-sources.list 
+rm -f ubuntu-sources.list
 #1585905275
-vim user 
+vim user
 #1585905279
-rm -f user 
+rm -f user
 #1585905285
-vim valuestest.yaml 
+vim valuestest.yaml
 #1585905299
-rm -f valuestest.yaml 
+rm -f valuestest.yaml
 #1585905306
-vim xpack.txt 
+vim xpack.txt
 #1585905319
-rm -f xpack.txt 
+rm -f xpack.txt
 #1585905322
 ls
 #1585905406
@@ -48050,7 +48050,7 @@ git status
 #1585901047
 git push
 #1585901056
-git remote show gitlab 
+git remote show gitlab
 #1585901883
 rm -frv .git
 #1585901887
@@ -48080,7 +48080,7 @@ cd test1
 #1585902110
 ls
 #1585902114
-rm -f Jenkinsfile 
+rm -f Jenkinsfile
 #1585902114
 ls
 #1585902125
@@ -48164,25 +48164,25 @@ git add ./
 #1585903416
 git add --all ./
 #1585903855
-ls 
+ls
 #1585903859
 ls images/
 #1585903923
 ls
 #1585903937
-ls easzup 
+ls easzup
 #1585903940
 ll easzup
 #1585903967
-rm -f easzup 
+rm -f easzup
 #1585903974
-vim anaconda-ks.cfg 
+vim anaconda-ks.cfg
 #1585904549
-rm -rf anaconda-ks.cfg fluentd-elasticsearch.bak/ calico-node.yaml  node11 passwd 
+rm -rf anaconda-ks.cfg fluentd-elasticsearch.bak/ calico-node.yaml  node11 passwd
 #1585904585
 mv k8s.yaml testk8s.yaml
 #1585904746
-vim sshd_config 
+vim sshd_config
 #1585904784
 ls ssl
 #1585905005
@@ -48194,15 +48194,15 @@ rm -rf maven
 #1585905029
 rm -rf maven1
 #1585905037
-vim exclude.txt 
+vim exclude.txt
 #1585905042
 rm -f exclude.txt
 #1585905120
 ls
 #1585905501
-vim testfile.txt 
+vim testfile.txt
 #1585905506
-rm -f testfile.txt 
+rm -f testfile.txt
 #1585905614
 ls .vim
 #1585905617
@@ -48212,7 +48212,7 @@ ls
 #1585905776
 cp -a .fzf .fzf.bash  .vimrc .bashrc  other/
 #1585905781
-vim .bashrc 
+vim .bashrc
 #1585905789
 ls other
 #1585905799
@@ -48232,7 +48232,7 @@ cd dir1
 #1585906008
 ls
 #1585906013
-ls tmp 
+ls tmp
 #1585906017
 rm -rf tmp
 #1585906018
@@ -48282,9 +48282,9 @@ ls other/
 #1585906839
 ls .ssh
 #1585906851
-vim .ssh/authorized_keys 
+vim .ssh/authorized_keys
 #1585906863
-vim .ssh/id_rsa 
+vim .ssh/id_rsa
 #1585906901
 cp -a .ssh/id_rsa .ssh/authorized_keys other/
 #1585906903
@@ -48292,7 +48292,7 @@ ls other
 #1585906983
 cd other
 #1585906985
-ll init.sh 
+ll init.sh
 #1585906988
 vim init.sh
 #1585907890
@@ -48300,17 +48300,17 @@ rz -y
 #1585907914
 ll
 #1585907935
-vim init.sh 
+vim init.sh
 #1585908188
 ls
 #1585908358
-vim springboot_deploy.sh 
+vim springboot_deploy.sh
 #1585908423
-vim tomcat_deploy.sh 
+vim tomcat_deploy.sh
 #1586134302
 ls
 #1586134403
-vim pipeline_pcs 
+vim pipeline_pcs
 #1586134438
 git status
 #1586134704
@@ -48374,7 +48374,7 @@ git status
 #1586136944
 ls
 #1586136951
-vim .gitignore 
+vim .gitignore
 #1586137020
 git status
 #1586137035
@@ -48400,7 +48400,7 @@ ls
 #1586137155
 rm -rf .git
 #1586137216
-git init 
+git init
 #1586137219
 git add ./ && git commit -m '20200406'
 #1586137232
@@ -48444,7 +48444,7 @@ ls _fzf
 #1586140633
 du -sh _fzf
 #1586140647
-rm -rf _fzf _fzf.bash 
+rm -rf _fzf _fzf.bash
 #1586140662
 git add --all ./
 #1586140675
@@ -48472,7 +48472,7 @@ git remote set-url origin https://github.com/hnzhuzi/mydemo1.git
 #1586244298
 git remote show origin
 #1586244335
-git remote remove github 
+git remote remove github
 #1586244339
 git pull
 #1586244362
@@ -48510,7 +48510,7 @@ ls
 #1586245564
 du -sh node_modules/
 #1586245597
-vim /root/dir1/jenkins-demo/.gitignore 
+vim /root/dir1/jenkins-demo/.gitignore
 #1586245608
 cd ../
 #1586245611
@@ -48526,7 +48526,7 @@ git remote add origin https://github.com/hnzhuzi/mydemo1.git
 #1586245719
 git push --set-upstream origin master
 #1586245768
-vim vue/.dockerignore 
+vim vue/.dockerignore
 #1586247756
 git remote set-url origin http://gitlab.k8s.maimaiti.site/root/jenkins-demo.git
 #1586247761
@@ -48536,7 +48536,7 @@ git status
 #1586248039
 ls
 #1586248053
-vim .gitignore 
+vim .gitignore
 #1586248065
 du -sh ./
 #1586248073
@@ -48558,27 +48558,27 @@ kubectl get service | grep eureka
 #1586249866
 curl -I 10.221.231.173:8761
 #1586251178
-vim testconfigmap.yaml 
+vim testconfigmap.yaml
 #1586252247
 git status
 #1586252868
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1586253247
 kubectl run -ti --rm alpine --image=harbor.k8s.maimaiti.site/library/nginx:alpine -- sh
 #1586310713
-kubectl delete -f testpod.yaml 
+kubectl delete -f testpod.yaml
 #1585813441
 cd dir1/jenkins-demo/
 #1585813444
-vim Jenkinsfile 
+vim Jenkinsfile
 #1586169786
 git push
 #1586252278
-vim testconfigmap.yaml 
+vim testconfigmap.yaml
 #1585885452
 git add Jenkinsfile && git commit -m 'local v3'
 #1585885466
-cat README.md 
+cat README.md
 #1585885470
 git push
 #1585897839
@@ -48588,11 +48588,11 @@ ls
 #1585897985
 du -sh ./
 #1585897998
-git init 
+git init
 #1585898007
 ls -a
 #1585898014
-ls -a 
+ls -a
 #1585898019
 ls -a  | grep ignore
 #1585898043
@@ -48600,7 +48600,7 @@ vim .gitignore
 #1586135839
 ls
 #1586169612
-vim testpod.yaml 
+vim testpod.yaml
 #1585817720
 git branch dev3
 #1585817724
@@ -48640,19 +48640,19 @@ git branch
 #1585882941
 git branch dev2
 #1585882954
-vim Jenkinsfile 
+vim Jenkinsfile
 #1586310798
-vim testpod.yaml 
+vim testpod.yaml
 #1586254123
-kubectl apply -f testconfigmap.yaml 
+kubectl apply -f testconfigmap.yaml
 #1586254127
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 #1586312420
-sz testk8s.yaml 
+sz testk8s.yaml
 #1586312657
-kubectl api-resources 
+kubectl api-resources
 #1586312664
-kubectl api-versions 
+kubectl api-versions
 #1586312699
 kubectl api-resources | grep deployment
 #1586312743
@@ -48672,9 +48672,9 @@ cd eureka-server/
 #1586316346
 ls
 #1586316351
-vim k8s.yaml 
+vim k8s.yaml
 #1586316374
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586316422
 git pull
 #1586316435
@@ -48688,13 +48688,13 @@ cd springcloud/eureka-server/
 #1586316546
 ls
 #1586316551
-vim Dockerfile 
+vim Dockerfile
 #1586316626
 git pull
 #1586316634
 ls
 #1586316636
-vim k8s.yaml 
+vim k8s.yaml
 #1586316664
 git log
 #1586316704
@@ -48714,7 +48714,7 @@ docker pull
 #1586316875
 git pull
 #1586316912
-vim k8s.yaml 
+vim k8s.yaml
 #1586317031
 ls
 #1586317036
@@ -48732,37 +48732,37 @@ cd ../
 #1586317423
 ls
 #1586317430
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1586318548
-kbuectl delete -f k8s.yaml 
+kbuectl delete -f k8s.yaml
 #1586318553
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586318565
 ls
 #1586318577
-vim k8s.yaml 
+vim k8s.yaml
 #1586318607
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1586318768
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586318834
 ls
 #1586318837
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1586323783
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586323831
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1586323956
 kubectl get service | grep eureka
 #1586323968
 curl -I 10.221.32.86:8761
 #1586324627
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586324639
 git status
 #1586324752
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1586327317
 git status
 #1586327339
@@ -48774,17 +48774,17 @@ git pull
 #1586327350
 ls
 #1586327353
-vim k8s.yaml 
+vim k8s.yaml
 #1586327376
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586327476
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1586327551
 cd ../eureka-client/
 #1586327551
 ls
 #1586327559
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586327685
 ls
 #1586327689
@@ -48806,7 +48806,7 @@ cd eureka-server/
 #1586318796
 ls
 #1586318802
-vim k8s.yaml 
+vim k8s.yaml
 #1586134361
 vim
 #1586250553
@@ -48814,21 +48814,21 @@ kubectl run -ti --rm alpine --image=alpine -- sh
 #1586309454
 k9s
 #1586324994
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586325008
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1586325395
 kubectl run -ti --rm alpine --image=alpine -- sh
 #1586325739
 cd
 #1586325742
-vim testpod.yaml 
+vim testpod.yaml
 #1586325810
 cd -
 #1586325811
 ls
 #1586325828
-vim k8s.yaml 
+vim k8s.yaml
 #1586332786
 cd dir1/jenkins-demo/springcloud/eureka-client/
 #1586332787
@@ -48840,11 +48840,11 @@ docker build -t harbor.k8s.maimaiti.site/library/eureka-client:v3 ./
 #1586332831
 docker push harbor.k8s.maimaiti.site/library/eureka-client:v3
 #1586332863
-kubectl apply -f k8s.yaml 
+kubectl apply -f k8s.yaml
 #1586333379
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586403198
-vim dir1/jenkins-demo/.gitignore 
+vim dir1/jenkins-demo/.gitignore
 #1586403723
 rm -rf dir1/jenkins-demo/
 #1586403730
@@ -48864,7 +48864,7 @@ ls -a
 #1586403765
 git status
 #1586403773
-vim .gitignore 
+vim .gitignore
 #1586403792
 git status
 #1586403802
@@ -48886,17 +48886,17 @@ mvn -Dmaven.test.skip=true clean package
 #1586410135
 ls
 #1586410143
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586410148
 cd ../eureka-client/
 #1586410149
 ls
 #1586410153
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586410324
 cd
 #1586410331
-kubectl delete -f teststateful.yaml 
+kubectl delete -f teststateful.yaml
 #1586411119
 cd dir1/jenkins-demo/
 #1586411119
@@ -48906,17 +48906,17 @@ cd tomcat/
 #1586411125
 ls
 #1586411128
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586411145
 cd ../springboot/
 #1586411146
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586411155
 cd ../vue/
 #1586411155
 ls
 #1586411158
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586412036
 du -sh /root/.m2/
 #1586412043
@@ -48928,27 +48928,27 @@ ls
 #1586412063
 du -sh repository/
 #1586412099
-vim /usr/local/apache-maven-3.6.1/conf/settings.xml 
+vim /usr/local/apache-maven-3.6.1/conf/settings.xml
 #1586412111
 du -sh /app
 #1586412402
-kubectl  rollout status statefulset eureka 
+kubectl  rollout status statefulset eureka
 #1586412492
-kubectl  rollout status statefulset elasticsearch-master 
+kubectl  rollout status statefulset elasticsearch-master
 #1586412869
 cd
 #1586412992
-kubectl  rollout status statefulset eureka 
+kubectl  rollout status statefulset eureka
 #1586412998
-kubectl  rollout status statefulset harbor-harbor-database 
+kubectl  rollout status statefulset harbor-harbor-database
 #1586413009
-kubectl  rollout status statefulset harbor-harbor-redis 
+kubectl  rollout status statefulset harbor-harbor-redis
 #1586413018
 echo $?
 #1586413402
-kubectl  rollout status statefulset eureka 
+kubectl  rollout status statefulset eureka
 #1586414242
-vim teststateful.yaml 
+vim teststateful.yaml
 #1586415212
 cd dir1/jenkins-demo/
 #1586415212
@@ -48958,7 +48958,7 @@ cd springcloud/eureka-server/
 #1586415221
 ls
 #1586415225
-kubectl delete -f k8s.yaml 
+kubectl delete -f k8s.yaml
 #1586415496
 kubectl explain nginxrancher
 #1586415531
@@ -48966,9 +48966,9 @@ kubectl explain statefulset
 #1586415555
 kubectl explain statefulset.spec.updateStrategy
 #1586415588
-kubectl api-resources 
+kubectl api-resources
 #1586415590
-kubectl api-resources  
+kubectl api-resources
 #1586415596
 kubectl api-resources | grep apps
 #1586415607
@@ -48984,4 +48984,2858 @@ kubectl explain statefulset.spec.updateStrategy
 #1586416842
 cd
 #1586416844
+vim testpod.yaml
+#1586741796
+cd /tmp
+#1586741810
+git clone http://gitlab.k8s.maimaiti.site/root/mydemo1.git
+#1586741813
+ls
+#1586741817
+rm -rf mydemo1/
+#1586741885
+git clone http://gitlab.k8s.maimaiti.site/root/mydemo1.git
+#1586741982
+rm -rf mydemo1/
+#1586742076
+cd
+#1586742079
+cd dir1
+#1586742079
+ls
+#1586742105
+kubectl get pod | grep api
+#1586742113
+kubectl get pod -o wide | grep api
+#1586742134
+curl 10.220.135.162:9200/user/1
+#1586742151
+telnet 10.220.135.162 9200
+#1586742165
+telnet 10.220.135.162 9201
+#1586742177
+curl 10.220.135.162:9201/user/1
+#1586742196
+kubectl get pod -o wide | grep user
+#1586742210
+curl 10.220.135.131:8201/user/1
+#1586742263
+curl 10.220.135.162:9201/user-service/user/1
+#1586742696
+curl 10.220.58.193:9201/user-service/user/1
+#1586742727
+curl 10.220.58.222:9201/user-service/user/1
+#1586743459
+kubectl get pod -o wide | grep api
+#1586743470
+curl 10.220.58.222:9201/user-service/user/1
+#1586743745
+kubectl get pod -o wide | grep api
+#1586743758
+curl 10.220.135.148:9201/user-service/user/1
+#1586743864
+curl 10.220.135.148:9201/user/1
+#1586744060
+kubectl get pod -o wide | grep user
+#1586744087
+curl 10.220.135.131:8201/user/1
+#1586744112
+curl 10.220.58.193:8201/user/1
+#1586744152
+kubectl get pod -o wide | grep api
+#1586744178
+curl 10.220.58.210:9201/user-service/user/1
+#1586746476
+kubectl get pod -o wide | grep zuul
+#1586746500
+curl 10.220.58.241:8801/user-service/user/1
+#1586746517
+kubectl get pod -o wide | grep user
+#1586746538
+curl 10.220.135.131:8201/user/1
+#1586746561
+curl 10.220.58.241:8801/user-service/user/1
+#1586501630
+ls
+#1586501673
+docker build -t harbor.k8s.maimaiti.site/library/openjdk:8-jre-alpine-time ./
+#1586501751
+
+#1586501774
+docker image ls | grep alpine
+#1586501807
+docker image ls | grep openjdk
+#1586501840
+docker push harbor.k8s.maimaiti.site/library/openjdk:8-jre-alpine-time
+#1586504027
+cd /root/dir1/mydemo2
+#1586504030
+git pull
+#1586504033
+ls
+#1586504952
+cd eureka-client/
+#1586504952
+ls
+#1586504959
+kubectl delete -f k8s.yaml
+#1586504967
+cd ../eureka-server/
+#1586504967
+ls
+#1586504969
+kubectl delete -f k8s.yaml
+#1586509391
+kubectl get pod -o wide | grep user
+#1586509428
+curl 10.220.135.131:8201/user/1
+#1586509510
+curl 10.220.58.193:8201/user/1
+#1586512584
+kubectl get pod -o wide | grep api
+#1586512643
+curl 10.220.135.162:9201/user-service/user/1
+#1586513202
+cd
+#1586513204
+rz
+#1586513236
+ls
+#1586513243
+git status
+#1586513308
+git add ./ && git commit -m '20200410' && git push
+#1586513355
+git add --all ./ && git commit -m '20200410' && git push
+#1586741445
+passwd
+#1586757830
+kubectl get pod -o wide | grep api
+#1586757859
+curl 10.220.135.163/user-service/user/1
+#1586757870
+curl 10.220.135.163:9201/user-service/user/1
+#1586757953
+curl 10.220.58.207:9201/user-service/user/1
+#1586757966
+kubectl get service | grep api
+#1586757985
+curl 10.221.71.30:9201/user-service/user/1
+#1586758401
+kubectl get ingress | grep api
+#1586758424
+curl api-gateway.k8s.maimaiti.site/user-service/user/1
+#1586333514
+kubectl apply -f k8s.yaml
+#1586334212
+kubectl delete -f k8s.yaml
+#1586334219
+docker pull
+#1586334222
+git pull
+#1586334231
+ls
+#1586334272
+git pull
+#1586334283
+git staus
+#1586334286
+git status
+#1586334292
+git checkout -- ./
+#1586334295
+git pull
+#1586334301
+vim k8s.yaml
+#1586334308
+ls
+#1586334310
+mvn -Dmaven.test.skip=true clean package
+#1586334336
+docker build -t harbor.k8s.maimaiti.site/library/eureka-client:v4 ./
+#1586334345
+docker push harbor.k8s.maimaiti.site/library/eureka-client:v4
+#1586334357
+kubectl apply -f k8s.yaml
+#1586334447
+vim k8s.yaml
+#1586335052
+kubectl get pod | grep client
+#1586335057
+kubectl get pod -o wide | grep client
+#1586335069
+curl 10.220.58.244
+#1586335076
+curl 10.220.58.244:8101
+#1586335172
+curl 10.220.85.240:8101
+#1586335288
+curl -I 10.220.85.240:8101
+#1586401697
+kubectl describe deployment
+#1586401708
+kubectl describe deployment.spec.management:
+#1586401708
+  server:
+#1586401708
+    port: 8081
+#1586401708
+  endpoints:
+#1586401708
+    web:
+#1586401708
+      exposure:
+#1586401708
+        include: "*"
+#1586401725
+kubectl describe management:
+#1586401725
+  server:
+#1586401725
+    port: 8081
+#1586401725
+  endpoints:
+#1586401725
+    web:
+#1586401725
+      exposure:
+#1586401725
+        include: "*"
+#1586401748
+  kubectl describe StatefulSet
+#1586401771
+  kubectl describe StatefulSet.spec.template.spec
+#1586401780
+  kubectl describe statefulset.spec.template.spec
+#1586401797
+  kubectl describe statefulsets.spec.template.spec
+#1586401804
+kubectl describe deployment
+#1586401883
+kubectl explain StatefulSet.spec.template.spec
+#1586402337
+cd ../
+#1586402339
+pwd
+#1586402349
+cd ../
+#1586402351
+ls
+#1586402352
+ls -a
+#1586402361
+vim .gitignore
+#1586402488
+git pull
+#1586402500
+git status
+#1586402607
+git log
+#1586402966
+git status
+#1586402991
+ls -a
+#1586403035
+git add .gitignore
+#1586403039
+git status
+#1586403051
+git add -h
+#1586403096
+git add -f .gitignore
+#1586403105
+git status
+#1586403431
+git config --global user.name "root"
+#1586403461
+git config --global user.email "root@gmail.com"
+#1586403464
+git config --global credential.helper store
+#1586411356
+cd
+#1586411363
+kubectl delete -f testconveyor.yaml
+#1586412875
+cd dir1/jenkins-demo/
+#1586412875
+ls
+#1586412881
+git pull
+#1586412932
+kubectl rollout status statefulset elasticsearch-master
+#1586413032
+ls
+#1586413035
+cd springcloud/
+#1586413036
+ls
+#1586413039
+cd eureka-server/
+#1586413054
+kubectl delete -f k8s.yaml
+#1586414271
+kubectl get service | grep elastic
+#1586414292
+k9s
+#1586415340
+kubectl delete /root/testlogpilot.yaml
+#1586415363
+kubectl delete pod tomcat
+#1586415394
+kubectl get all | grep rancher
+#1586415399
+kubectl get all | grep nginxrancher
+#1586415418
+kubectl delete deployment,service nginxrancher
+#1586416091
+kubectl api-versions | grep apps
+#1586416187
+cd
+#1586416192
+kubectl apply -f teststateful.yaml
+#1586416258
+kubectl explain statefulset.spec.selector
+#1586416373
+kubectl api-versions | grep extensions
+#1586416435
+
+#1586416495
+kubectl api-versions | grep apps
+#1586416772
+kubectl apply -f testpod.yaml
+#1586417202
+kubectl apply -f teststateful.yaml
+#1586417208
+kubectl delete -f teststateful.yaml
+#1586417333
+kubectl delete -f testpod.yaml
+#1586417941
+kubectl pod -o wide | grep eureka
+#1586417946
+kubectl get pod -o wide | grep eureka
+#1586418188
+curl 10.220.85.249:8081/actuator/health
+#1586418199
+curl 10.220.85.249:8082/actuator/health
+#1586497451
+cd dir1/jenkins-demo/
+#1586497452
+ls
+#1586497455
+git pull
+#1586497610
+cd ../
+#1586497616
+rm -rf jenkins-demo/
+#1586497626
+git clone http://gitlab.k8s.maimaiti.site/root/mydemo1.git
+#1586497751
+git clone http://gitlab.k8s.maimaiti.site/root/jenkins-demo.git
+#1586497756
+cd jenkins-demo/
+#1586497756
+ls
+#1586497800
+git remote set-url origin http://gitlab.k8s.maimaiti.site/root/mydemo1.git
+#1586497805
+git push
+#1586497841
+cd ../
+#1586497849
+rm -rf jenkins-demo/
+#1586497859
+git clone http://gitlab.k8s.maimaiti.site/root/mydemo1.git
+#1586497863
+cd mydemo1/
+#1586497863
+ls
+#1586497885
+vim Jenkinsfile
+#1586500099
+cd ../
+#1586500104
+git clone http://gitlab.k8s.maimaiti.site/root/mydemo2.git
+#1586500110
+ls
+#1586500126
+cd mydemo1
+#1586500127
+ls
+#1586500131
+cd springboot/
+#1586500132
+ls
+#1586500155
+cp -a Dockerfile Dockerfile1
+#1586500158
+vim Dockerfile1
+#1586500209
+rm -f Dockerfile1
+#1586500212
+vim Dockerfile
+#1586333409
+cd dir1/jenkins-demo/
+#1586333410
+ls
+#1586333417
+cd springboot/
+#1586333417
+ls
+#1586333421
+git status
+#1586333427
+ls
+#1586333430
+vim k8s.yaml
+#1586333453
+cd ../springcloud/eureka-client/
+#1586333453
+ls
+#1586333456
+git status
+#1586333467
+vim k8s.yaml
+#1586401031
+vim testpod.yaml
+#1586765567
+k9s
+#1586332763
+k9s
+#1586830589
+vim
+#1586834482
+rbd du k8s/kubernetes-dynamic-pvc-e357d6fe-047f-4233-ae86-0c5be1439b1e
+#1586834490
+rbd status k8s/kubernetes-dynamic-pvc-e357d6fe-047f-4233-ae86-0c5be1439b1e
+#1586834560
+rbd du -p k8s kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39
+#1586834584
+rbd status -p k8s kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39
+#1586834675
+rbd du -p k8s kubernetes-dynamic-pvc-de8a1fa1-c5d0-4323-9008-af5ff5c5e219
+#1586834691
+rbd status -p k8s kubernetes-dynamic-pvc-de8a1fa1-c5d0-4323-9008-af5ff5c5e219
+#1586834768
+rbd status -p k8s kubernetes-dynamic-pvc-230d7441-5fef-4665-988e-625174bf3752
+#1586834774
+rbd du -p k8s kubernetes-dynamic-pvc-230d7441-5fef-4665-988e-625174bf3752
+#1586834810
+rbd du -p k8s kubernetes-dynamic-pvc-373f8efc-d51d-4e43-9b71-62fd6a4ae4eb
+#1586834975
+rbd du -p k8s  kubernetes-dynamic-pvc-a7ddd3c9-1421-4993-aeb3-1c7bcaa3c721
+#1586835009
+rbd du -p k8s  kubernetes-dynamic-pvc-4a301552-41e4-435c-8bb1-0b82c4b449ac
+#1586835066
+rbd du -p k8s  kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1586835096
+helm install prometheus-operator prometheus-operator/
+#1586835151
+rbd du -p k8s  kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39
+#1586835169
+rbd status -p k8s  kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39
+#1586835195
+rbd du -p k8s  kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39
+#1586835256
+rbd du -p k8s  kubernetes-dynamic-pvc-230d7441-5fef-4665-988e-625174bf3752
+#1586835271
+rbd du -p k8s  kubernetes-dynamic-pvc-a7d3fd23-e6b7-44cc-a380-986ac5f6997e
+#1586835311
+rbd status -p k8s  kubernetes-dynamic-pvc-a7d3fd23-e6b7-44cc-a380-986ac5f6997e
+#1586835344
+rbd du -p k8s  kubernetes-dynamic-pvc-a7d3fd23-e6b7-44cc-a380-986ac5f6997e
+#1586835455
+rbd status -p k8s  kubernetes-dynamic-pvc-82ab1864-b167-498c-86b1-5148b4ef96a8
+#1586835483
+rbd status -p k8s  kubernetes-dynamic-pvc-e357d6fe-047f-4233-ae86-0c5be1439b1e
+#1586835511
+rbd status -p k8s  kubernetes-dynamic-pvc-8eadcca1-9f54-430b-84ad-ee5a42fd2da6
+#1586836754
+rbd status -p k8s kubernetes-dynamic-pvc-d78f8cb2-0f8f-4315-bfec-a2c8c891ef9a
+#1586836780
+rbd status -p k8s kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1586836825
+rbd status -p k8s kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1586836927
+rbd status -p k8s kubernetes-dynamic-pvc-be1976f6-3c14-40d1-b9eb-1c03945707a7
+#1586836935
+rbd du -p k8s kubernetes-dynamic-pvc-be1976f6-3c14-40d1-b9eb-1c03945707a7
+#1586837030
+cd /mnt/cephfs/
+#1586837031
+ls
+#1586837033
+du -sh ./
+#1586837388
+ceph df
+#1586844764
+vim
+#1586914619
+ivim
+#1586914620
+vim
+#1586939666
+rbd status k8s/kubernetes-dynamic-pvc-d78f8cb2-0f8f-4315-bfec-a2c8c891ef9a
+#1586943620
+kubectl get node
+#1586943625
+kubectl get cs
+#1586829008
+cd dir1
+#1586829014
+cd mydemo1
+#1586829015
+ls
+#1586829019
+git pull
+#1586829092
+git remote add github https://github.com/hnzhuzi/mydemo1.git
+#1586829104
+git push github master
+#1586829127
+cd ../mydemo2
+#1586829130
+git pull
+#1586829141
+git remote add github https://github.com/hnzhuzi/mydemo2.git
+#1586829154
+git push github master
+#1586830197
+cd ../mydemo1
+#1586830198
+ls
+#1586830217
+rm -rf springcloud/
+#1586830247
+git add --all ./ && git commit -m 'test1' && git push
+#1586830309
+git push gitlab master
+#1586830318
+git push github master
+#1586830434
+cd ../mydemo2
+#1586830435
+ls
+#1586830443
+rm -f README.md
+#1586830460
+git add --all ./ && git commit -m 'test1' && git push github master
+#1586830527
+git push
+#1586830615
+helm ls
+#1586830773
+kubectl get all --all-namespaces | grep prome
+#1586830983
+kubectl get pv | grep prome
+#1586831179
+kubectl get pvc | grep prome
+#1586831203
+kubectl get pvc | grep grafa
+#1586831514
+cd
+#1586831521
+kubectl apply -f testpvc.yaml
+#1586831871
+rbd df k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1586831876
+rbd du k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1586831912
+rbd df
+#1586831991
+rbd ls
+#1586832008
+ceph df
+#1586832200
+kubectl get pv | grep prome
+#1586832210
+kubectl get all --all-namespaces | grep prome
+#1586832241
+kubectl get ns
+#1586832638
+ceph df
+#1586832715
+rbd du k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1586833268
+helm install prometheus-operator prometheus-operator/
+#1586833880
+helm delete prometheus-operator
+#1586833948
+rbd du k8s/kubernetes-dynamic-pvc-e357d6fe-047f-4233-ae86-0c5be1439b1e
+#1586833987
+rbd info k8s/kubernetes-dynamic-pvc-e357d6fe-047f-4233-ae86-0c5be1439b1e
+#1586834009
+rbd status k8s/kubernetes-dynamic-pvc-e357d6fe-047f-4233-ae86-0c5be1439b1e
+#1586834398
+rbd status k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1586834409
+rbd du k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1586836878
+ceph df
+#1586844462
+cd dir1
+#1586844463
+ls
+#1586844476
+vim alertmanager.yaml
+#1586844491
+vim prometheus.yaml
+#1586844510
+rm -rf kubernetes-ci-cd-master/
+#1586844598
+ls
+#1586844600
+vim alertmanager.yaml
+#1586844637
+kubectl edit prometheusrules.monitoring.coreos.com etcd-rules
+#1586845080
+kubectl get ingress | grep prome
+#1586847538
+helm ls
+#1586853545
+cd
+#1586853547
+cd prometheus-operator/
+#1586853547
+ls
+#1586853641
+helm search repo prometh
+#1586853664
+helm ls
+#1586853685
+helm get values stable/prometheus-operator
+#1586853695
+helm repo list
+#1586853699
+helm repo update
+#1586853749
+helm ls
+#1586853758
+helm get values stable/prometheus-operator
+#1586853846
+helm version
+#1586853867
+helm pull -h
+#1586853914
+helm get -h
+#1586853980
+helm get values stable/prometheus-operator
+#1586854011
+helm inspect -h
+#1586854046
+helm show values stable/prometheus-operator > tmp.txt
+#1586854075
+mv tmp.txt values-ori.yaml
+#1586854085
+vimdiff values.yaml values-ori.yaml
+#1586854708
+cd templates/prometheus-operator/
+#1586854709
+ls
+#1586854720
+pwd
+#1586854734
+cd ../
+#1586854734
+ls
+#1586854752
+ls prometheus
+#1586915514
+kubectl get service | grep ingress
+#1586915728
+helm upgrade -h
+#1586915773
+cd
+#1586915780
+helm upgrade nginx-ingress nginx-ingress/
+#1586916283
+helm fullstatus nginx-ingress
+#1586916345
+helm uninstall nginx-ingress
+#1586916385
+helm install nginx-ingress nginx-ingress/
+#1586916489
+kubectl get servcie | grep ingress
+#1586916496
+kubectl get service | grep ingress
+#1586916516
+helm fullstatus nginx-ingress
+#1586917364
+curl http://10.220.135.166:10254/metrics
+#1586918828
+helm uninstall nginx-ingress
+#1586918836
+helm install nginx-ingress nginx-ingress/
+#1586918871
+helm uninstall nginx-ingress
+#1586918909
+helm install nginx-ingress nginx-ingress/
+#1586919065
+kubectl get service | grep ingress
+#1586929185
+ curl 127.0.0.1:9100/metrics
+#1586929697
+ping 10.83.36.127
+#1586930945
+rm -rf /tmp/k9s-screens-root/cluster1/*
+#1586930959
+cd /tmp/k9s-screens-root/cluster1/
+#1586930959
+ls
+#1586930962
+vim servicemonitors-all-1586930950340407369.csv
+#1586931066
+helm uninstall prometheus-operator
+#1586931137
+cd
+#1586931154
+helm install nginx-ingress nginx-ingress/
+#1586931160
+helm uninstall prometheus-operator
+#1586931180
+helm install prometheus-operator prometheus-operator/
+#1586931285
+cd /tmp/k9s-screens-root/cluster1/
+#1586931285
+ls
+#1586931291
+vimdiff servicemonitors-*
+#1586935248
+cd /mnt/cephfs/
+#1586935249
+ls
+#1586935251
+cd pvc-volumes/
+#1586935251
+ls
+#1586935256
+cd kubernetes/
+#1586935256
+ls
+#1586935265
+ll
+#1586935285
+ls kubernetes-dynamic-pvc-c5c64fc1-5f7b-11ea-96a3-c6d2dc5f42fb
+#1586935297
+ls bin
+#1586935682
+cd /root/dir1/mydemo1/springboot/
+#1586935682
+ls
+#1586935685
+vim Dockerfile
+#1586935698
+git pull
+#1586935701
+vim Dockerfile
+#1586935724
+cd ../tomcat/
+#1586935725
+ls
+#1586935727
+vim Dockerfile
+#1586937358
+cd ../vue/
+#1586937358
+ls
+#1586937360
+vim Dockerfile
+#1586937386
+cd ../
+#1586937388
+ls
+#1586937390
+cd springboot/
+#1586937390
+ls
+#1586937417
+vim Dockerfile
+#1586937443
+vim /root/docker/Dockerfile
+#1586937449
+vim /root/docker/Dockerfile1
+#1586937472
+vim /root/docker/Dockerfile2
+#1586937509
+cd /tmp
+#1586937510
+ls
+#1586937515
+cd dir1
+#1586937515
+ls
+#1586937520
+cd jenkins-demo/
+#1586937521
+ls
+#1586937534
+cd ../
+#1586937539
+ls
+#1586937542
+tree jenkins-demo/
+#1586937544
+rm -rf jenkins-demo/
+#1586937547
+cd ../
+#1586937548
+ls
+#1586937601
+cd /root/dir1/mydemo2
+#1586937602
+ls
+#1586937615
+vim eureka-server/Dockerfile
+#1586937859
+cp -a eureka-server/Dockerfile ../mydemo1/springboot/
+#1586937863
+cd ../mydemo1/springboot/
+#1586937864
+ls
+#1586937866
+vim Dockerfile
+#1586938923
+git status
+#1586938934
+git checkout -- Dockerfile
+#1586939632
+k9s
+#1587000328
+cd
+#1587000363
+kubectl apply -f testpod.yaml
+#1587000389
+kubectl get pod -o wide | grep nginx-1
+#1587000399
+curl 10.220.58.215
+#1587000866
+vim
+#1587000894
+cd dir1
+#1587000898
+
+#1587000899
+ls
+#1587000902
+git pull
+#1587000996
+
+#1587001067
+kubectl apply -f /root/testpod.yaml
+#1587001081
+kubectl get pod -o wide | grep nginx-1
+#1587001089
+curl 10.220.135.141
+#1587004177
+systemctl status kube-apiserver.service
+#1587004189
+vim /etc/systemd/system/kube-apiserver.service
+#1587004253
+kubectl get podpresets
+#1587004496
+kubectl api-versions | grep settings
+#1587007435
+date
+#1587007440
+crontab -l
+#1587009693
+kubectl delete -f /root/testpod.yaml
+#1587010120
+cd
+#1587010129
+kubectl apply -f testpod.yaml
+#1587010652
+for i in $(seq 1 10); do curl -s http://nginx.k8s.maimaiti.site | grep "Hostname"; done
+#1587010673
+curl -s http://nginx.k8s.maimaiti.site
+#1587010712
+curl -I http://nginx.k8s.maimaiti.site
+#1587010888
+kubectl delete -f testpod.yaml
+#1587010915
+kubectl delete deployment,service,ingress nginx-1
+#1587011073
+docker pull mirrorgooglecontainers/echoserver:1.10
+#1587011201
+kubectl apply -f testpod.yaml
+#1587014600
+for i in $(seq 1 10); do curl -s http://nginx.k8s.maimaiti.site | grep "Hostname"; done
+#1587014617
+curl -s http://nginx.k8s.maimaiti.site
+#1587014636
+kubectl delete deployment,service,ingress nginx-1
+#1587014638
+kubectl delete deployment,service,ingress nginx-2
+#1587014712
+kubectl apply -f testpod.yaml
+#1587014808
+for i in $(seq 1 10); do curl http://nginx.k8s.maimaiti.site; done
+#1587014825
+kubectl get pod -o wide | grep nginx-1
+#1587014830
+curl 10.220.85.230
+#1587014834
+kubectl get pod -o wide | grep nginx-2
+#1587014842
+curl 10.220.135.148
+#1587014875
+kubectl delete deployment,service,ingress nginx-1
+#1587014897
+kubectl apply -f testpod.yaml
+#1587014906
+curl nginx.k8s.maimaiti.site
+#1587014971
+kubectl get service | grep nginx-1
+#1587014977
+curl 10.221.107.237
+#1587015053
+kubectl get pod -o wide | grep nginx-1
+#1587015059
+curl 10.220.58.198
+#1587015096
+curl nginx.k8s.maimaiti.site
+#1587015109
+for i in $(seq 1 10); do curl http://nginx.k8s.maimaiti.site; done
+#1587015472
+kubectl apply -f testpod.yaml
+#1587015503
+for i in $(seq 1 10); do curl -s -H "key1: always" http://nginx.k8s.maimaiti.site; done
+#1587015528
+curl -s -H "key1: always" http://nginx.k8s.maimaiti.site
+#1587015644
+kubectl apply -f testpod.yaml
+#1587015658
+curl -s -H "new: always" http://nginx.k8s.maimaiti.site
+#1587015665
+curl http://nginx.k8s.maimaiti.site
+#1587015701
+kubectl get service | grep nginx-1
+#1587015708
+curl 10.221.107.237
+#1587015713
+kubectl get service | grep nginx-2
+#1587015720
+curl 10.221.87.13
+#1587015778
+kubectl apply -f testpod.yaml
+#1587015787
+curl http://nginx.k8s.maimaiti.site
+#1587015796
+curl -s -H "new: always"  http://canary.example.com
+#1587015821
+kubectl apply -f testpod.yaml
+#1587015844
+curl -s -H "key1: always" http://nginx.k8s.maimaiti.site
+#1587015863
+curl -s -H "key1: alw" http://nginx.k8s.maimaiti.site
+#1587015871
+curl -s -H "key1: never" http://nginx.k8s.maimaiti.site
+#1587015931
+kubectl apply -f testpod.yaml
+#1587015958
+curl -s -H "key1: never" http://nginx.k8s.maimaiti.site
+#1587015963
+curl -s -H "key1: nev" http://nginx.k8s.maimaiti.site
+#1587015972
+curl -s -H "key1: value1" http://nginx.k8s.maimaiti.site
+#1587018253
+helm ls
+#1587018562
+kubectl delete deployment,service,ingress nginx-1
+#1587018564
+kubectl delete deployment,service,ingress nginx-2
+#1587089264
+rsync -avhPnL -e 'ssh -p 10022' --exclude log/* ./ 10.10.0.153:/bqhexin
+#1587112522
+ping yryd.maimaiti.cn
+#1587112728
+cat /etc/redhat-release
+#1587112741
+yum search nslookup
+#1587112756
+yum repolist
+#1587112773
+yum provides nslookup
+#1587112784
+yum -y install bind-utils
+#1587112858
+nslookup -type=A yryd.maimaiti.cn
+#1587113052
+nslookup -type=CNAME adminmallpop.maimaiti.cn
+#1587113094
+vim .bash_history
+#1586759237
+kubectl run -ti --rm alpine --image=alpine -- sh
+#1586761640
+curl http://api-gateway.k8s.maimaiti.site/user-service/user/1
+#1586764755
+telnet api-gateway.k8s.maimaiti.site 80
+#1586764759
+telnet api-gateway.k8s.maimaiti.site 81
+#1586764763
+telnet api-gateway.k8s.maimaiti.site 443
+#1586764833
+curl 10.221.71.30:9201/user-service/user/1
+#1586764890
+kubectl describe ingress api-gateway 
+#1586765013
+curl api-gateway.k8s.maimaiti.site/user-service/user/1
+#1586765019
+curl api-gateway.k8s.maimaiti.site/user/1
+#1586765023
+curl api-gateway.k8s.maimaiti.site/1
+#1586766139
+curl 10.221.71.30:9201/user-service/user/1
+#1586766237
+kubectl get ingress | grep api
+#1586766261
+kubectl describe ingress api-gateway 
+#1586766328
+curl 10.220.135.163:9201/user-service/user/1
+#1586831209
+k9s
+#1587113160
+nslookup yryd.maimaiti.cn
+#1587117612
+cd other/
+#1587117613
+ls
+#1587117616
+rz 
+#1587117627
+vim app.bcyj99.conf 
+#1587117635
+ls
+#1587001828
+fg 1
+#1587449792
+#kubectl run busybox --rm -ti --labels="access=true" --image=busybox /bin/sh
+#1587517447
+ls
+#1587517450
+rz -y
+#1587375608
+vim
+#1587721551
+helm search repo isitio
+#1587721558
+helm search repo istio
+#1587721570
+
+#1587721585
+helm search repo istio
+#1587721595
+helm search repo elastic
+#1587721607
+helm search repo istio
+#1587884504
+helm ls
+#1587866228
+cd dir1
+#1587866229
+ls
+#1587866313
+vim .bashrc
+#1587866323
+vim /root/.bashrc
+#1587866381
+cd /usr/local/
+#1587866382
+ls
+#1587866385
+curl -L https://istio.io/downloadIstio | sh -
+#1587866755
+ls
+#1587866761
+rm -f istio-1.5.2-linux.tar.gz 
+#1587866765
+cd /download/
+#1587866765
+ls
+#1587866818
+rz
+#1587866911
+ls
+#1587878869
+systemctl status kube-apiserver.service 
+#1587878875
+vim /etc/systemd/system/kube-apiserver.service
+#1587881113
+cd
+#1587881118
+vim .kube/config 
+#1587883305
+kubectl get all
+#1587883309
+kubectl get all | grep cephfs
+#1587883329
+kubectl get role | grep cephfs
+#1587883346
+kubectl get clusterrole | grep cephfs
+#1587883416
+kubectl get serviceaccounts | grep ceph
+#1587883422
+kubectl get user
+#1587884454
+kubectl get secret | grep dashb
+#1587884482
+kubectl get secret dashboard-kubernetes-dashboard
+#1587884490
+kubectl describe secret dashboard-kubernetes-dashboard
+#1587884544
+kubectl describe secret dashboard-kubernetes-dashboard-token-swcd7 
+#1587884595
+helm ls
+#1587884718
+kubectl get secret dashboard-kubernetes-dashboard-token-swcd7 
+#1587884727
+kubectl get secret dashboard-kubernetes-dashboard-token-swcd7 -o jsonpath={.data.token} -n kube-system |base64 -d
+#1587884793
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep dashboard-kubernetes-dashboard | awk '{print $1}')
+#1587885490
+kubectl get service | grep  dashboard
+#1587885531
+curl -I  10.221.194.28:443
+#1587885539
+telnet 10.221.194.28 443
+#1587885546
+telnet 10.221.194.28 444
+#1587885588
+curl https://10.221.194.28
+#1587885607
+curl -k https://10.221.194.28 
+#1587885648
+kubectl get ingress | grep  dashboard
+#1587887669
+ping dai.bcyj99.com
+#1587889260
+curl ifconfig.me
+#1587893345
+kubectl delete pods alertmanager-prometheus-operator-alertmanager-0 --grace-period=0 --force
+#1587893358
+helm install prometheus-operator prometheus-operator/
+#1587893659
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1587894145
+rbd status k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1587894170
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1587894760
+rbd status k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1587894780
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1587894796
+rbd status k8s/kubernetes-dynamic-pvc-d78f8cb2-0f8f-4315-bfec-a2c8c891ef9a
+#1587895104
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1587950221
+rbd status k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1587950251
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1587950816
+kubectl delete pods alertmanager-prometheus-operator-alertmanager-0 --grace-period=0 --force
+#1587950827
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1587950831
+rbd status k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1587950897
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1587951026
+helm ls
+#1587951033
+helm ls | grep dash
+#1587951676
+ceph df
+#1587951845
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1587885805
+vim
+#1587885920
+helm uninstall dashboard 
+#1587892934
+helm uninstall prometheus-operator 
+#1587894820
+helm install prometheus-operator prometheus-operator/
+#1587950718
+helm uninstall prometheus-operator 
+#1587950838
+helm install prometheus-operator prometheus-operator/
+#1587952117
+helm uninstall prometheus-operator 
+#1587881388
+k9s
+#1587959072
+ls ssl
+#1587959273
+vim .kube/config 
+#1587959722
+helm ls
+#1587959738
+helm install dashboard dashboard
+#1588226467
+kubectl get events
+#1588229322
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep dashboard-kubernetes-dashboard | awk '{print $1}')
+#1588230792
+kubectl get secret dashboard-kubernetes-dashboard-token-swcd7 -o jsonpath={.data.token} -n kube-system |base64 -d
+#1588230824
+kubectl get secret dashboard-kubernetes-dashboard -o jsonpath={.data.token} -n kube-system |base64 -d
+#1588230872
+kuebdtl get secret | grep dashboard
+#1588230879
+kubectl get secret | grep dashboard
+#1588230917
+kubectl describe secret dashboard-kubernetes-dashboard-token-czsj8
+#1588230935
+kubectl describe secret dashboard-kubernetes-dashboard
+#1588231018
+kubectl get secret dashboard-kubernetes-dashboard-token-czsj8 -o jsonpath={.data.token} -n kube-system |base64 -d
+#1588231088
+cd ssl
+#1588231089
+ls
+#1588231155
+./create_self-signed-cert.sh --ssl-domain=rbacuser
+#1588231335
+vim /etc/ansible/hosts 
+#1588232795
+vim
+#1588234072
+cd
+#1588234074
+vim
+#1588234603
+jobs
+#1588234611
+vim
+#1588495492
+vimdiff prometheus-operator/values.yaml /tmp/prometheus_0503/values.yaml 
+#1588496971
+vimdiff prometheus-operator/charts/grafana/values.yaml /tmp/prometheus_0503/charts/grafana/values.yaml 
+#1588497260
+vim prometheus-operator/values.yaml 
+#1588497293
+vimdiff prometheus-operator/charts/kube-state-metrics/values.yaml /tmp/prometheus_0503/charts/kube-state-metrics/values.yaml 
+#1588497329
+vimdiff prometheus-operator/charts/prometheus-node-exporter/values.yaml /tmp/prometheus_0503/charts/prometheus-node-exporter/values.yaml 
+#1588497497
+helm install prometheus-operator prometheus-operator/
+#1588497513
+vim prometheus-operator/values.yaml 
+#1588497648
+vimdiff prometheus-operator/values.yaml /tmp/prometheus_0503/values.yaml 
+#1588501599
+helm uninstall prometheus-operator 
+#1588501750
+vimdiff prometheus-operator/values.yaml /tmp/prometheus_0503/values.yaml 
+#1588501852
+jobs
+#1588501945
+kubectl delete pods alertmanager-prometheus-operator-alertmanager-0 --grace-period=0 --force
+#1588501987
+kubectl get pv,pvc
+#1588501991
+kubectl get pv,pvc | grep prome
+#1588499145
+k8s
+#1588499147
+k9s
+#1588502027
+helm install prometheus-operator prometheus-operator/
+#1588502571
+docker version
+#1588504434
+helm uninstall prometheus-operator 
+#1588502001
+vimdiff prometheus-operator/values.yaml /tmp/prometheus_0503/values.yaml 
+#1588504500
+vim
+#1588504628
+vimdiff prometheus-operator/values.yaml /tmp/prometheus_0503/values.yaml 
+#1588504711
+vim
+#1588504964
+vimdiff prometheus-operator/values.yaml  /tmp/prometheus-operator/values.yaml 
+#1588505266
+vim
+#1588505350
+vim 
+#1588505790
+vimdiff prometheus-operator/values.yaml  /tmp/prometheus-operator/values.yaml 
+#1588505937
+vim
+#1588507241
+vimdiff prometheus-operator/values.yaml /tmp/prometheus_0503/values.yaml 
+#1588508093
+vim
+#1588508638
+vimdiff prometheus-operator/values.yaml /tmp/prometheus_0503/values.yaml 
+#1588508785
+vim
+#1588508986
+vimdiff prometheus-operator/values.yaml /tmp/prometheus_0503/values.yaml 
+#1588495411
+vim /tmp/prometheus_0503/values.yaml 
+#1588497022
+docker pull grafana/grafana:6.7.3
+#1588497451
+docker tag grafana/grafana:6.7.3 harbor.k8s.maimaiti.site/library/grafana:6.7.3
+#1588497455
+docker push harbor.k8s.maimaiti.site/library/grafana:6.7.3
+#1588497478
+docker rmi grafana/grafana:6.7.3 harbor.k8s.maimaiti.site/library/grafana:6.7.3
+#1588497945
+dcoker pull jettech/kube-webhook-certgen:v1.2.0
+#1588497950
+docker pull jettech/kube-webhook-certgen:v1.2.0
+#1588498093
+dokcer image ls jettech/kube-webhook-certgen:v1.2.0
+#1588498097
+docker image ls jettech/kube-webhook-certgen:v1.2.0
+#1588500028
+kubectl get storageclass
+#1588501641
+cd /mnt/cephfs/
+#1588501642
+ls
+#1588501665
+ls pvc-volumes/kubernetes/kubernetes-dynamic-pvc-7903227f-8d18-11ea-96a3-c6d2dc5f42fb
+#1588501672
+rm -rf pvc-volumes/kubernetes/kubernetes-dynamic-pvc-7903227f-8d18-11ea-96a3-c6d2dc5f42fb
+#1588501690
+rm -rf pvc-volumes/kubernetes/kubernetes-dynamic-pvc-78dee971-8d18-11ea-96a3-c6d2dc5f42fb 
+#1588507924
+cd
+#1588507934
+kubectl get secret | grep ceph
+#1588507966
+kbuectl get secret | grep etcd-certs
+#1588507971
+kubectl get secret | grep etcd-certs
+#1588507987
+kubectl describe secrets etcd-certs
+#1588645710
+hostname
+#1588660985
+top
+#1588660999
+free -h
+#1588742697
+kubectl delete secret alertmanager-prometheus-operator-alertmanager
+#1588742705
+cd /root/dir1
+#1588742732
+cd
+#1588742747
+kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml
+#1588744198
+kubectl get prometheusrules.monitoring.coreos.com 
+#1588744209
+kubectl get prometheusrules.monitoring.coreos.com | grep -v myrules
+#1588744227
+kubectl get prometheusrules.monitoring.coreos.com | grep operator
+#1588744260
+kubectl get prometheusrules.monitoring.coreos.com | grep operator | xargs kubectl delete prometheusrules.monitoring.coreos.com 
+#1588752744
+kubectl get node
+#1588752895
+kubectl get service
+#1588752916
+kubectl get service | grep "58\.210"
+#1588752933
+kubectl get service | grep "168\.133"
+#1588753532
+k9s
+#1588557496
+vim
+#1589175965
+ls /etc/calico/ssl
+#1589176095
+cd /etc/kubernetes/ssl
+#1589176096
+ls
+#1589189927
+cd ssl
+#1589189928
+ls
+#1589189947
+mkdir test
+#1589189948
+ls
+#1589189950
+cd test/
+#1589189951
+ls
+#1589189960
+cfssl print-defaults config > config.json
+#1589189963
+vim config.json 
+#1589190006
+ cfssl print-defaults csr > csr.json
+#1589190261
+vim config.json 
+#1589190423
+ls
+#1589190454
+mv config.json ca-config.json 
+#1589190463
+mv csr.json ca-csr.json
+#1589190464
+ls
+#1589190486
+cfssl gencert -initca ca-csr.json | cfssljson -bare ca
+#1589190488
+ls
+#1588231354
+ls /etc/kubernetes/ssl
+#1588231496
+cd dir1
+#1588231569
+openssl genrsa -out rbacuser.key 2048
+#1588231681
+openssl req -new -key rbacuser.key -out rbacuser.csr -subj "/CN=rbacuser/O=youdianzhis"
+#1588231684
+ls
+#1588231801
+ls /etc/kubernetes/ssl
+#1588231805
+ls /etc/kubernetes/ssl/certs/
+#1588231809
+ls /etc/kubernetes/ssl/certs/serverca 
+#1588232148
+cd /etc/kubernetes/ssl/
+#1588232149
+ls
+#1588232160
+find -name '*.crt'
+#1588232430
+cd /root/dir1
+#1588232521
+openssl x509 -req -in rbacuser.csr -CA /etc/kubernetes/ssl/ca.pem -CAkey /etc/kubernetes/ssl/ca-key.pem -CAcreateserial -out rbacuser.crt -days 500
+#1588232525
+ls
+#1588232560
+ls rbac*
+#1588232756
+kubectl config set-credentials rbacuser --client-certificate=rbacuser.crt  --client-key=rbacuser.key
+#1588232915
+kubectl config set-context rbacuser-context --cluster=cluster1 --namespace=kube-system --user=rbacuser 
+#1588232923
+kubectl config show
+#1588232985
+kubectl config view
+#1588233963
+kubectl config current-context -h
+#1588233978
+kubectl config current-context 
+#1588233994
+kubectl config current-context  -h
+#1588234040
+kubectl --context=rbacuser-context get pod
+#1588234234
+cd
+#1588234242
+kubectl apply -f testrbac.yaml 
+#1588234309
+kubectl --context=rbacuser-context get pod
+#1588234314
+kubectl --context=rbacuser-context get service
+#1588234420
+kubectl create serviceaccount rbacsa
+#1588234427
+kubectl get user
+#1588234915
+kubectl get deployments.apps
+#1588234921
+kubectl get deployments.extensions 
+#1588235011
+kubectl apply -f testrbac.yaml 
+#1588235020
+kubectl --context=rbacuser-context get service
+#1588235089
+vim dir1/mydemo1
+#1588235100
+vim dir1/mydemo1/Jenkinsfile 
+#1588235146
+kubectl --context=rbacuser-context get service
+#1588235166
+kubectl --context=rbacuser-context delete pod redis-6dc489fd96-tn2mn 
+#1588235236
+kubectl get secret | grep rbacsa
+#1588235288
+kubectl get secret rbacsa-token-r9xbc -o jsonpath={.data.token} -n kube-system |base64 -d
+#1588235621
+kubectl get group
+#1588235628
+
+#1588235676
+kubectl api-resources | grep group
+#1588237330
+systemctl status kube-apiserver.service 
+#1588237351
+vim /etc/systemd/system/kube-apiserver.service
+#1588238457
+kubectl api-versions 
+#1588473569
+kubectl apply -f testpod.yaml 
+#1588475438
+cd /mnt/cephfs/
+#1588475438
+ls
+#1588475444
+cd pvc-volumes/kubernetes/
+#1588475444
+ls
+#1588475541
+ll
+#1588475548
+du --max-depth=1 -h ./ | sort -hr
+#1588475575
+rm -rf kubernetes-dynamic-pvc-46803e61-700f-11ea-96a3-c6d2dc5f42fb/ kubernetes-dynamic-pvc-44395f0d-700f-11ea-96a3-c6d2dc5f42fb/
+#1588475577
+ls
+#1588475698
+cd
+#1588475698
+ls
+#1588475736
+kubectl delete -f testpod.yaml
+#1588475748
+kubectl apply -f testpod.yaml 
+#1588475751
+ls
+#1588475833
+cd dir1
+#1588475834
+ls
+#1588475837
+mkdir subpathdir
+#1588478194
+cd
+#1588478197
+kubectl delete -f testpod.yaml
+#1588478203
+kubectl apply -f testpod.yaml 
+#1588478235
+cd dir1
+#1588478235
+ls
+#1588478238
+ls subpathdir
+#1588478243
+mkdir subpathdir
+#1588478332
+ls /root/dir1/subpathdir
+#1588478348
+kubectl delete -f testpod.yaml
+#1588478356
+kubectl apply -f testpod.yaml 
+#1588478360
+cd
+#1588478362
+kubectl delete -f testpod.yaml
+#1588478366
+kubectl apply -f testpod.yaml 
+#1588478595
+kubectl delete -f testpod.yaml
+#1588478597
+kubectl apply -f testpod.yaml 
+#1588487060
+kubectl api-resources 
+#1588487065
+kubectl api-resources  | grep volume
+#1588487074
+kubectl api-resources  | grep -i volume
+#1588492013
+helm ls
+#1588492034
+helm install prometheus-operator prometheus-operator/
+#1588492053
+kubectl delete -f testpod.yaml
+#1588492500
+rbd df -h
+#1588492503
+rbd df
+#1588492507
+ceph df
+#1588492530
+helm uninstall prometheus-operator 
+#1588492728
+ceph df
+#1588492762
+rbd remove -h
+#1588492773
+rbd remove k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1588492806
+
+#1588492857
+rbd remove k8s/kubernetes-dynamic-pvc-44e42b9c-4c11-42b8-bbd7-c49978b03313
+#1588492897
+ceph df
+#1588492913
+rbd remove k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1588492962
+rbd status k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1588493175
+rbd remove k8s/kubernetes-dynamic-pvc-eb53d29b-a3ba-4f76-82fb-36e15805f3e9
+#1588493818
+helm install prometheus-operator prometheus-operator/
+#1588493898
+helm uninstall prometheus-operator 
+#1588493941
+helm install prometheus-operator prometheus-operator/
+#1588494386
+helm uninstall prometheus-operator 
+#1588494499
+rbd remove k8s/kubernetes-dynamic-pvc-f0bcb90c-9c28-4e00-86c2-47f92900c349
+#1588494538
+rbd remove k8s/kubernetes-dynamic-pvc-925fa477-68be-4d66-ac17-dac07d0661e6
+#1588494676
+helm install prometheus-operator prometheus-operator/
+#1588494850
+cd /mnt/cephfs/pvc-volumes/kubernetes/
+#1588494850
+ls
+#1588494931
+cd kubernetes-dynamic-pvc-78dee971-8d18-11ea-96a3-c6d2dc5f42fb/
+#1588494932
+ls
+#1588494936
+du -sh ./
+#1588494942
+ls alertmanager-db/
+#1588494951
+cd ../kubernetes-dynamic-pvc-7903227f-8d18-11ea-96a3-c6d2dc5f42fb/
+#1588494951
+ls
+#1588494955
+ls prometheus-db/
+#1588495074
+cd
+#1588495076
+helm uninstall prometheus-operator 
+#1588495106
+helm repo update
+#1588495121
+helm search prometheus-operator
+#1588495126
+helm search repo prometheus-operator
+#1588495157
+df -h
+#1588495241
+cp -a prometheus-operator/values.yaml /tmp/pro_values.yaml
+#1588495296
+cp -a prometheus-operator /tmp/prometheus_0503
+#1588495298
+ls /tmp/prometheus_0503
+#1588495306
+rm -rf /tmp/pro_values.yaml 
+#1588495308
+ls /tmp/prometheus_0503
+#1588495331
+helm search repo prometheus-operator
+#1588495355
+helm pull --untar stable/prometheus-operator
+#1588495366
+rm -rf prometheus-operator/
+#1588495367
+helm pull --untar stable/prometheus-operator
+#1588496421
+helm search repo prometheus-operator
+#1588496461
+docker pull quay.io/coreos/prometheus-operator: v0.38.1
+#1588496468
+docker pull quay.io/coreos/prometheus-operator:v0.38.1
+#1588496520
+docker tag  quay.io/coreos/prometheus-operator:v0.38.1  harbor.k8s.maimaiti.site/library/prometheus-operator:v0.38.1
+#1588496525
+docker push harbor.k8s.maimaiti.site/library/prometheus-operator:v0.38.1
+#1588496581
+docker rmi quay.io/coreos/prometheus-operator:v0.38.1 harbor.k8s.maimaiti.site/library/prometheus-operator:v0.38.1
+#1588496762
+docker pull quay.io/prometheus/prometheus:v2.17.2
+#1588497400
+docker tag quay.io/prometheus/prometheus:v2.17.2 harbor.k8s.maimaiti.site/library/prometheus:v2.17.2
+#1588497403
+docker push harbor.k8s.maimaiti.site/library/prometheus:v2.17.2
+#1588497420
+docker rmi quay.io/prometheus/prometheus:v2.17.2 harbor.k8s.maimaiti.site/library/prometheus:v2.17.2
+#1588497550
+helm install prometheus-operator prometheus-operator/
+#1588497561
+helm lint prometheus-operator/
+#1588497589
+helm install prometheus-operator prometheus-operator/
+#1588497967
+helm uninstall prometheus-operator 
+#1588498296
+kubectl get secret | grep etcd
+#1588498333
+helm install prometheus-operator prometheus-operator/
+#1588499356
+docker pull harbor.k8s.maimaiti.site/library/grafana:6.7.3
+#1588499375
+docker rmi harbor.k8s.maimaiti.site/library/grafana:6.7.3
+#1588500255
+helm search repo prometheus-operator
+#1588504532
+helm install prometheus-operator prometheus-operator/
+#1588504598
+helm lint prometheus-operator/
+#1588504736
+helm install prometheus-operator prometheus-operator/
+#1588504854
+ls
+#1588504861
+helm install prometheus-operator prometheus-operator/
+#1588504933
+cd /tmp
+#1588504935
+ls
+#1588504945
+helm pull --untar stable/prometheus-operator
+#1588505037
+helm uninstall prometheus-operator 
+#1588505045
+helm install prometheus-operator prometheus-operator/
+#1588505058
+helm uninstall prometheus-operator 
+#1588505062
+cd
+#1588505204
+helm install prometheus-operator prometheus-operator/
+#1588505273
+ls
+#1588505276
+helm install prometheus-operator prometheus-operator/
+#1588505284
+helm lint prometheus-operator/
+#1588505308
+
+#1588505652
+helm uninstall prometheus-operator 
+#1588505760
+helm install prometheus-operator prometheus-operator/
+#1588506811
+curl http://10.220.85.209:9121/metrics
+#1588507231
+helm uninstall prometheus-operator 
+#1588507628
+helm install prometheus-operator prometheus-operator/
+#1588508287
+helm uninstall prometheus-operator 
+#1588508310
+helm install prometheus-operator prometheus-operator/
+#1588508721
+kubectl get secrets | grep etcd
+#1588508869
+kubectl get cs
+#1588509146
+helm uninstall prometheus-operator 
+#1588509254
+helm install prometheus-operator prometheus-operator/
+#1588665690
+crontab -l
+#1588665732
+du -sh /etc/ansible/
+#1588665748
+cd /etc/ansible/.cluster/backup/
+#1588665748
+ls
+#1588665771
+ll -h
+#1588665809
+find -name 'snapshot-*' -mtime 3
+#1588665813
+find -name 'snapshot-*' -mtime +3
+#1588665825
+find -name 'snapshot-*' -mtime +3 | xargs rm -f
+#1588665845
+ls
+#1588665849
+ll -h
+#1588742182
+cd
+#1588742192
+kubectl apply -f testprometheusrule.yaml 
+#1588750776
+top
+#1588750792
+uptime 
+#1588751181
+top
+#1588753673
+rbd status k8s/kubernetes-dynamic-pvc-a7d3fd23-e6b7-44cc-a380-986ac5f6997e
+#1588756173
+kubectl apply -f testprometheusrule.yaml 
+#1588756330
+kubectl delete deployment nginx-1
+#1588756788
+kubectl apply -f testpod.yaml 
+#1588758242
+kubectl delete -f testpod.yaml 
+#1588758319
+kubectl apply -f testpod.yaml 
+#1588814236
+kubectl get node
+#1588815663
+ps aux | grep haproxy
+#1588815674
+kubectl get node
+#1588815925
+netstat -tnlp | grep api
+#1588817332
+ping 10.83.34.214
+#1588823443
+cat .kube/config 
+#1588823481
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUR1RENDQXFDZ0F3SUJBZ0lVVE1WSDd2a0FPbUtLSHNCYk9HSmV2VlJ1dGFJd0RRWUpLb1pJaHZjTkFRRUwKQlFBd1lURUxNQWtHQTFVRUJoTUNRMDR4RVRBUEJnTlZCQWdUQ0VoaGJtZGFhRzkxTVFzd0NRWURWUVFIRXdKWQpVekVNTUFvR0ExVUVDaE1EYXpoek1ROHdEUVlEVlFRTEV3WlRlWE4wWlcweEV6QVJCZ05WQkFNVENtdDFZbVZ5CmJtVjBaWE13SUJjTk1Ua3hNREEzTVRFeU9EQXdXaGdQTWpFeE9UQTVNVE14TVRJNE1EQmFNR0V4Q3pBSkJnTlYKQkFZVEFrTk9NUkV3RHdZRFZRUUlFd2hJWVc1bldtaHZkVEVMTUFrR0ExVUVCeE1DV0ZNeEREQUtCZ05WQkFvVApBMnM0Y3pFUE1BMEdBMVVFQ3hNR1UzbHpkR1Z0TVJNd0VRWURWUVFERXdwcmRXSmxjbTVsZEdWek1JSUJJakFOCkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXdpME9wWllKakx6anRxV3lIdjVxOWRMencxS3AKc1I2VFRXcEJsdmJIQ2o4MDdpMEpZZE1LVjRJaTVzTXpOczF6VTNCL0xwNjZPQVZDd0dEUG9rQXRlbFZiMDFDaAozdVdmUW82UFZxVW9PaDdTNXlncTlQRGk0Qm82VkdSUllUdlUvKzErdHJuTi9qU3pyZlNvRzdZYUtCYmFzNG56CnJUOTlvaDdreFVTanRwUXYwUy9YTHlDRTB5Ykxxem02Vm95enFqOHlNdkxrSGFMM0VCNnFzUzEvd1lpbW5wc08KcGxqRzlaZlNBUTIzakVWb1RRUSt1OEZFNzdENVBxY29GQmtiUjR6Q2JHZHRXU1h6VDlGLzZXa1VtTVBEY1dtago2cDBjQmI0Y1h6K0RoREplZ29ka0EwZHBWc1RBNGQxdCsvbTlSVnViTGZlOWlFMUNIakR3eVZzbm13SURBUUFCCm8yWXdaREFPQmdOVkhROEJBZjhFQkFNQ0FRWXdFZ1lEVlIwVEFRSC9CQWd3QmdFQi93SUJBakFkQmdOVkhRNEUKRmdRVTZpZ016blk2ZUp2aU04UTd4ZW5QM0pjbXhxMHdId1lEVlIwakJCZ3dGb0FVNmlnTXpuWTZlSnZpTThRNwp4ZW5QM0pjbXhxMHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBQWNGQytHaWtDeFVCbzM3R3pKVXdqb0tZTU51CkVuczlWQU5BVDJ0d3BhSlF4S2xGRXhOeXM3MmZnRk1RZWdKdkZUU20zYllMSjByaXM0YWVLUi91SFh1VjdMYXIKTWRjTmFvZGxoN2dwY2lJZ01kTFVsWDJxUjZVcDRZNWpSTHY1UGZ0OXRDL1BmZVhiY21TUGxmaGZOWGtJeTlhUQpDbnVYMjRtaC9vUUtrNnRTMHMyeHpndzBUK0dMYTBISUFLWFU2bk5hdnplSjc5Yi96ay8yeThXd1VDT2ZHRWFECkVHaVlEc3FJYjVENDVHRVBIM0ZleEhBYThtQnc3V2c5VXE3bGEwcStvSnNOVUdqek9HZ2VyNzBIUjR1ZkwzMkoKTlZiUm1OSStDQTk0eUlRa29RMFppd3Z6MjgxRzBWQk9mbmozZVdudnpEdlBINERWUlYrajJNMHFHMG89Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K | base64 -d
+#1588823537
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQxekNDQXIrZ0F3SUJBZ0lVVUQ2SU1nWmFTRU5MMjQrbWd6VVhrRXRERTJNd0RRWUpLb1pJaHZjTkFRRUwKQlFBd1lURUxNQWtHQTFVRUJoTUNRMDR4RVRBUEJnTlZCQWdUQ0VoaGJtZGFhRzkxTVFzd0NRWURWUVFIRXdKWQpVekVNTUFvR0ExVUVDaE1EYXpoek1ROHdEUVlEVlFRTEV3WlRlWE4wWlcweEV6QVJCZ05WQkFNVENtdDFZbVZ5CmJtVjBaWE13SUJjTk1Ua3hNREV3TVRZeU9UQXdXaGdQTWpBMk9UQTVNamN4TmpJNU1EQmFNR2N4Q3pBSkJnTlYKQkFZVEFrTk9NUkV3RHdZRFZRUUlFd2hJWVc1bldtaHZkVEVMTUFrR0ExVUVCeE1DV0ZNeEZ6QVZCZ05WQkFvVApEbk41YzNSbGJUcHRZWE4wWlhKek1ROHdEUVlEVlFRTEV3WlRlWE4wWlcweERqQU1CZ05WQkFNVEJXRmtiV2x1Ck1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBdTR1U2FsMzYxQlViMlVKZkNISTMKclp3YTVJQnZaMmJnRUUrTVJlRHQvY1hzQUI1Wk12V1hOb0o4b2I4WXVYSGg5T3JGSlpPdWw3eVA0Y3FqUUJ5NgpPdzVaRlZwc1o4b0hVU0YwRXRMOTE2SzVjSEZHeEUxaVNzUjNKZUtkZ2hCVXBkemZ0N29SM0tvcktKOFowa2kvCmh1ZGp2QnR0VEdRSzlRYTcrNnJGR3ZxYVpxR2RlbWNiWXM0UW1VQjNsUlpqVXFtSno1TmMxRnd0T1dmSkF2cC8KRzhsb3E2NVBTdllGWlVCanZMM0FXM0RVY3FiNytBREg3RjIzc1YwSFc2RHhaYTJyNHVBdjgyZ1BjZWlkY25KdwpkUXRIM0Y3QThSdU1nQXBwcmp5TVJpbWpEcUJMTisyV0VaM0tpdkpxMkxTREJEai9MTW5hemVYZDhKZDNpR3JrCk1RSURBUUFCbzM4d2ZUQU9CZ05WSFE4QkFmOEVCQU1DQmFBd0hRWURWUjBsQkJZd0ZBWUlLd1lCQlFVSEF3RUcKQ0NzR0FRVUZCd01DTUF3R0ExVWRFd0VCL3dRQ01BQXdIUVlEVlIwT0JCWUVGQVBuZG51U2RNM3c2dExnRVNnRApuRHlmcDNEZ01COEdBMVVkSXdRWU1CYUFGT29vRE01Mk9uaWI0alBFTzhYcHo5eVhKc2F0TUEwR0NTcUdTSWIzCkRRRUJDd1VBQTRJQkFRQ1h3YzlleG9LLzltN2tHRG5TU0dFSm9GTTBDZi9XcGFHOE94RThQNUVJN3p1RlYrWHYKeGtidXArRnVaQWo0ZEgvbFZJcWxjN1c2TjJDTnhRQ0pacmR6WVFZZGJzcnlKRGpJeGhGREFSc2JHamhQUXNDTQo3YXFXODNGU25uZWVrRVFMWkN5TjlZeVJobS9JRnZnNjdCOTdVNThGK1ZUK1V3cmhlUlRQSG5BS0o4b0xoN0p1CjhMSFIwaUt5MnRFWUlFT3RwbWh1Z081cC9HWkZpM1VEUVZ4bVgwLzgxSm5UYVpwc1JmcnB2WWZUVVFIcG8wR3UKZVZGUmtSeDVCbkVLTUdPU2RsM29JQTFKcjM4Q3VGbFBTZFg4THBJYjNTYVJsMVNPZ2wxM24ydVE1TjBoVmNPMAplWFEyQ2kwbStjZTQ5ZHJRU2J3YTJIMys5UDZ1dmsrckp0b08KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= | base64 -d
+#1588823586
+echo LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcFFJQkFBS0NBUUVBdTR1U2FsMzYxQlViMlVKZkNISTNyWndhNUlCdloyYmdFRStNUmVEdC9jWHNBQjVaCk12V1hOb0o4b2I4WXVYSGg5T3JGSlpPdWw3eVA0Y3FqUUJ5Nk93NVpGVnBzWjhvSFVTRjBFdEw5MTZLNWNIRkcKeEUxaVNzUjNKZUtkZ2hCVXBkemZ0N29SM0tvcktKOFowa2kvaHVkanZCdHRUR1FLOVFhNys2ckZHdnFhWnFHZAplbWNiWXM0UW1VQjNsUlpqVXFtSno1TmMxRnd0T1dmSkF2cC9HOGxvcTY1UFN2WUZaVUJqdkwzQVczRFVjcWI3CitBREg3RjIzc1YwSFc2RHhaYTJyNHVBdjgyZ1BjZWlkY25Kd2RRdEgzRjdBOFJ1TWdBcHByanlNUmltakRxQkwKTisyV0VaM0tpdkpxMkxTREJEai9MTW5hemVYZDhKZDNpR3JrTVFJREFRQUJBb0lCQVFDVEY3ZmhWdzVva3BuQgovNjFiaVlHajE2QzhBUVBmUEsrVisxNFFYSWNzbDdRdXI1N1VPZ3k4UXdHUE5yc2tqMjVpVWxRSDBkbUl4dXF1CmMra3dXcGV4dytJWXZrL3g0MkZ6djJJemRXcUVXdXRJaG4remJPSWZ0QkdqRkNibklQblRFUFlpT256UjdtRmwKUGN2Wnd4YjhyclRwanpWZFNjWFNRZExrWXg2dXRlODBlazVZWld5OGV3MkVoRWxxWkM1UEhkNXBxSlpVcWpmUwpKS2JVUnpLRWpSVERqaXplZ21tck54QnZwdEtLa1NXL2o4UVY4a0oyL0dyc0xMRERVQ3VaQUtWTW5oZmRRU2FHCmFBRlZQWXpWR3lWemJtNHJJcUQ4UTIybXJyOEZKaU94Z3pja01XRUZxRnQ2dGVpSWViS1ZYdk1PRTY4akxhdzUKb3EyUEk5ZHhBb0dCQU1ZSDRjUTJUbmIxR1N0dFpIdEpiZ25tUnRBOVI0RXc4RFdzNVJsbFhkUkpCc1FpdGw4dwppdEJVcjB6eDU4Y3pqTjJiVnlHa28yUVZRdDhSaDk4THRTa054TlFjaktkczZRTmhSUmFtazA2NnlSZ05TNXMrCm04MVRwNC85dGZEKzJoSmgxYlVOUGNadFdlOHNONmUvOWNMOFpkajRwemRNZG1GUmsrTkR0RWdsQW9HQkFQSngKNnFiTHJoMW1MQmpsT2tMQmF0Wllzbkc4WUVtdUcyZmtHckI4MDFmNWk0bVh0Zi9vWVBuL21zd3ptbTVaU3doMApFR0QzNzk5MWJ4TnpVSGxDWjRnL3lIVmY2OTRzSXN6bEsvamgzR0hXYlpWbTlFS3d5L1Q4MXpsUzFPYVMwRWZXCmNEVkhzZjNRc1ptejFxYkJpVXkyZ3VnNHl4ZGdYSDFHNjVqcnlsZ2RBb0dCQUpFMzJIUmxpcGFyVjhERDRJcVUKSjNCMUFIcldaU2cwOWdHMmZ1NW5xaTN4TzFmN1NKZDNabVF0cGJ1Y0xXYWp3K29DYnh2SnV0TzZ6Nlg3R2hNVApaODdxUE90NjRCNHF2Smp3N0pRV3BURjN3ZDIwYWp3MjVsUGt3NXpRNVdvTHlXanZlNkxnU2V2SDVzcUFOM1A1ClRjU21DQjNiQWV5SVVzczg0bUVuRmY1TkFvR0JBS0sxZnlTbngxZWxyV3liMHFqZ2crSU1ydDJUN2c4azBQRzkKYllnS2poQVp3dUw1dFVSazRVaUdtWTM0QittTTljVmJsMjVzbDBpaDJJVDJQQWpWWHdSYXdoNjczR0ZEdjZ0QgpGbXkyc0IvZE43Z3Yyemd5elA3Qy9YSlVPOXZ1cGVmQWE1Zm1ZUGNWcTB1YkhURFc3RjFXazY1a0J6RE9FK1JqCngxUGUwdktsQW9HQVk1Tm5vQ2pTS2x5ZE1yMVBXS205RXlNT1A5S3cyNUpOdjMwSHBZeUVVS1owWEdhRXNJc3kKS2pmQ3FzT0hRaGR5OTRaWHpJdjRQN2ZlRy8vQStGTHBLaXhqMUhsMzNIRzZjVDJjRTdBUHE1YlJiazROaFZIOQpSVldBd2xFbTFWbjI1a1dudndEQnVaelpvUDlmS2Z0WHZTZkJUZ3BRRU40WUx1OHFRckxiN2hjPQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo= | base64 -d
+#1588825242
+wget -q -O- www.baidu.com
+#1588825257
+ wget -q -O- www.baidu.com
+#1588825264
+ wget -q  www.baidu.com
+#1588832675
+cd other/
+#1588832676
+ls
+#1588832700
+mv conveyor.yaml /root/dir1
+#1588832701
+ls
+#1588832706
+cd ../
+#1588832708
+ls dir1
+#1588832938
+du -sh /etc/filebeat/data
+#1588832952
+ls /etc/filebeat/data
+#1588832972
+ls /etc/filebeat/filebeat.yaml
+#1588834866
+du -sh /var/filebeat-data
+#1588834870
+ls /var/filebeat-data
+#1588837096
+ceph df
+#1588837827
+kubectl apply -f testconveyor.yaml 
+#1588837854
+kubectl get pod -o wide | grep conve
+#1588837859
+kubectl get pod -o wide | grep testconve
+#1588837921
+k9s
+#1588838494
+kubectl get pod -o wide | grep testconve
+#1588838505
+kubectl get pod -o wide | grep tomcat
+#1588838526
+curl 10.220.135.158
+#1588838532
+curl 10.220.135.158:8080
+#1588839396
+
+#1588843230
+kubectl get service | grep load
+#1588843236
+
+#1588843274
+kubectl get service 
+#1588844242
+helm search repo cert-manger
+#1588844247
+helm search repo cert-ma
+#1588844613
+ls ssl
+#1589003263
+ip a
+#1589166180
+cdd /etc/cni/net.d
+#1589166186
+cd /etc/cni/net.d/
+#1589166186
+ls
+#1589166202
+ls calico-tls/
+#1589166247
+vim calico-kubeconfig 
+#1589167023
+ls
+#1589167032
+vim 10-calico.conflist 
+#1589167111
+ls /opt/kube/images
+#1589167135
+ls /opt/kube/kube-system
+#1589167145
+ls /opot/kube
+#1589167148
+ls /opt/kube
+#1589167154
+tree /opot/kube
+#1589167159
+tree /opt/kube/
+#1589167234
+ls /etc/cni/net.d/
+#1589167242
+vim 10-calico.conflist 
+#1589167264
+ls calico-tls/
+#1589167502
+ifconfig
+#1589167554
+ip a
+#1589167977
+vim /etc/cni/net.d/10-flannel.conflist
+#1589167991
+ls /etc/cni/net.d/10-flannel.conflist
+#1589168022
+vim /etc/cni/net.d/10-calico.conflist 
+#1589171340
+cd /etc/ansible/
+#1589171341
+ls
+#1589171353
+ls bin
+#1589171360
+ls down
+#1589175431
+cd /etc/cni/net.d/
+#1589175432
+ls
+#1589175435
+vim 10-calico.conflist 
+#1589175532
+ls /etc/ansible/
+#1589175578
+vim /etc/ansible/hosts
+#1589175886
+ls
+#1589175894
+ls calico-tls/
+#1589175905
+vim 10-calico.conflist 
+#1589175927
+ll
+#1589175929
+ls -l
+#1589175937
+ls -l calico-tls/
+#1589175943
+pwd
+#1589176576
+netstat -tnlp | grep api
+#1589176641
+vim /etc/systemd/system/kube-controller-manager.service
+#1589187912
+cd
+#1589188125
+vim .kube/config 
+#1589189277
+cd /etc/ansible/.cluster/
+#1589189278
+ls
+#1589189280
+ls ssl
+#1589189291
+ls /etc/ansible/.cluster/
+#1589189295
+ls /etc/kubernetes/ssl/
+#1589191903
+vim .kube/config 
+#1589191924
+#kubectl config set-credentials admin --client-certificate=admin.pem --embed-certs=true --client-key=admin-key.pem
+#1589191935
+#kubectl config set-context kubernetes --cluster=kubernetes --user=admin
+#1589191944
+#kubectl config use-context kubernetes
+#1589191857
+#kubectl config set-cluster kubernetes --certificate-authority=ca.pem --embed-certs=true --server=127.0.0.1:8443
+#1589191892
+vim .kube/config 
+#1589207129
+vim
+#1589194050
+vim .kube/config 
+#1589195264
+vim .bashrc
+#1589206571
+ls /etc/security/limits.d
+#1589206576
+ls /etc/security/limits.d/20-nproc.conf 
+#1589206579
+vim /etc/security/limits.d/20-nproc.conf
+#1589208226
+ls /etc/etcd/ssl
+#1589211718
+cd /etc/etcd/ssl/
+#1589211719
+ls
+#1589211728
+vim etcd-csr.json 
+#1589265472
+for ip in ${NODE_IPS}; do   ETCDCTL_API=3 etcdctl   --endpoints=https://${ip}:2379    --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/etcd/ssl/etcd.pem   --key=/etc/etcd/ssl/etcd-key.pem   endpoint health; done
+#1589265489
+export NODE_IPS="10.83.75.1 10.83.75.2 10.83.75.3"
+#1589265490
+for ip in ${NODE_IPS}; do   ETCDCTL_API=3 etcdctl   --endpoints=https://${ip}:2379    --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/etcd/ssl/etcd.pem   --key=/etc/etcd/ssl/etcd-key.pem   endpoint health; done
+#1589267271
+ps aux | grep etcd
+#1589267279
+netstat -tnlp | grep etcd
+#1589334487
+vim /etc/kubernetes/ssl/kubernetes-csr.json 
+#1589336286
+ls /etc/kubernetes/ssl
+#1589336307
+ls /etc/kubernetes/ssl/certs/
+#1589336310
+ls /etc/kubernetes/ssl/certs/serverca 
+#1589352739
+vim /var/lib/kubelet/config.yaml
+#1589353169
+ls /etc/cni/net.d
+#1589353172
+cd /etc/cni/net.d
+#1589353173
+ls
+#1589353187
+ls calico-tls/
+#1589353209
+vim 10-calico.conflist 
+#1589353590
+ll /etc/calico/ssl
+#1589353608
+ll /etc/cni/net.d/calico-tls/
+#1589353980
+kubectl api-resources | grep kubelet
+#1589192653
+cd /etc/ansible/.cluster/
+#1589192654
+ls
+#1589192662
+cd ssl
+#1589192663
+ls
+#1589192673
+ls admin*
+#1589193009
+ls
+#1589193161
+stat admin.pem 
+#1589193185
+cat admin.pem 
+#1589193193
+stat admin.pem 
+#1589193853
+vim /root/.kube/config 
+#1589194213
+ls
+#1589194218
+cd ../
+#1589194219
+ls
+#1589194222
+vim kube-proxy.kubeconfig 
+#1589194589
+ls
+#1589194590
+cd ssl
+#1589194591
+ls
+#1589194596
+vim admin.csr 
+#1589194607
+vim admin-csr.json 
+#1589194626
+vim kube-proxy-csr.json 
+#1589195944
+ansible-playbook -s shell
+#1589195962
+ansible-playbook -n
+#1589195976
+ansible-playbook --help
+#1589196062
+ansible-playbook -i shell
+#1589196079
+ansible-doc -s shell
+#1589196687
+vim .bashrc
+#1589196694
+vim /root/.bashrc
+#1589196738
+ls /etc/kubernetes/ssl
+#1589200091
+pwd
+#1589200095
+cd ../
+#1589200095
+ls
+#1589204034
+cd /etc/sysctl.d/
+#1589204034
+ls
+#1589204066
+vim 95-k8s-sysctl.conf 
+#1589206292
+ls /etc/systemd/system.conf.d/
+#1589206297
+vim /etc/systemd/system.conf.d/30-k8s-ulimits.conf 
+#1589208580
+vim /etc/systemd/system/etcd.service 
+#1589260962
+vim /etc/hosts
+#1589261063
+vim 95-k8s-sysctl.conf 
+#1589262680
+iptables -h
+#1589264815
+systemctl status docker.service|grep Active
+#1589265007
+vim /etc/systemd/system/docker.service 
+#1589265031
+iptables -L
+#1589265133
+iptables-save|grep FORWARD
+#1589265149
+iptables -L
+#1589265365
+vim /etc/systemd/system/etcd.service 
+#1589267608
+vim /etc/systemd/system/docker.service 
+#1589267661
+vim /etc/docker/daemon.json
+#1589268142
+
+#1589268341
+vim /etc/systemd/system/etcd.service 
+#1589268412
+vim /etc/docker/daemon.json
+#1589272695
+vim /etc/systemd/system/kube-controller-manager.service 
+#1589275331
+vim /etc/kubernetes/ssl/kubernetes-csr.json 
+#1589275432
+ls /etc/kubernetes/ssl
+#1589275472
+vim /etc/kubernetes/ssl/kubernetes-csr.json 
+#1589276208
+dockerd -h
+#1589276214
+etcd -h
+#1589276220
+etcd --help
+#1589276235
+kube-apiserver --help
+#1589276582
+vim /etc/systemd/system/etcd.service 
+#1589276658
+curl -sk https://10.83.75.1:10250/runningpods/
+#1589277373
+vim /etc/systemd/system/kube-apiserver.service 
+#1589340654
+vim /etc/systemd/system/kube-controller-manager.service 
+#1589347212
+vim /etc/systemd/system/kubelet.service 
+#1589347437
+vim /etc/systemd/system/kube-controller-manager.service 
+#1589347828
+vim /etc/systemd/system/kube-apiserver.service 
+#1589349884
+ping 10.83.64.102
+#1589350262
+kubectl get node
+#1589350280
+echo $?
+#1589350421
+vim /etc/systemd/system/etcd.service 
+#1589352582
+vim /etc/systemd/system/kubelet.service 
+#1589426056
+vim
+#1589359222
+vim
+#1589505407
+mount | grep '/var/lib/kubelet'| awk '{print $3}'
+#1589505438
+mount | grep '/var/lib/kubelet'
+#1589512397
+kubectl get service | gep nodeport
+#1589512406
+kubectl get service | grep nodeport
+#1589512418
+kubectl get service --all-namespaces | grep nodeport
+#1589512426
+kubectl get service
+#1589512444
+kubectl get service --all-namespaces 
+#1589356004
+vim
+#1589357474
+docker info
+#1589357479
+docker info | grep -i cgroup 
+#1589358932
+kubectl get node
+#1589359235
+ls /system.slice/kubelet.service
+#1589359268
+ls /system\.slice/kubelet\.service
+#1589359419
+ls /sys/fs/cgroup/cpuset/system.slice/kubelet.service
+#1589363357
+k9s
+#1589422225
+ls /etc/kubernetes/
+#1589422236
+ls /etc/kubernetes/ssl
+#1589425381
+kubectl get node
+#1589427113
+vim /etc/systemd/system/kube-apiserver.service 
+#1589427195
+vim /etc/systemd/system/kube-controller-manager.service 
+#1589427444
+vim /etc/systemd/system/kube-scheduler.service 
+#1589427562
+vim /etc/systemd/system/kubelet.service 
+#1589427612
+vim /var/lib/kubelet/config.yaml
+#1589427665
+vim /etc/systemd/system/kube-proxy.service 
+#1589427715
+vim /etc/systemd/system/etcd.service 
+#1589427906
+ls /etc/etcd/ssl/
+#1589427912
+ls /etc/etcd/
+#1589427914
+ls /etc/etcd/ssl/
+#1589427937
+ls /etc/kubernetes/ssl
+#1589427977
+ls /etc/ansible/.cluster/ssl
+#1589428029
+ls /etc/calico/
+#1589428033
+ls /etc/calico/ssl
+#1589436441
+helm search repo dns
+#1589439503
+ls /etc/calico/ssl
+#1589439513
+ls /etc/etcd/ssl/etcd
+#1589439515
+ls /etc/etcd/ssl/
+#1589439535
+ls /etc/calico/
+#1589469713
+ls /opt/kube/images/
+#1589505461
+mount | grep '/var/lib/kubelet'
+#1589519986
+for ip in ${NODE_IPS}; do   ETCDCTL_API=3 etcdctl   --endpoints=https://${ip}:2379    --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/etcd/ssl/etcd.pem   --key=/etc/etcd/ssl/etcd-key.pem   endpoint health; done
+#1589519995
+export NODE_IPS="10.83.75.1 10.83.75.2 10.83.75.3"
+#1589519997
+for ip in ${NODE_IPS}; do   ETCDCTL_API=3 etcdctl   --endpoints=https://${ip}:2379    --cacert=/etc/kubernetes/ssl/ca.pem   --cert=/etc/etcd/ssl/etcd.pem   --key=/etc/etcd/ssl/etcd-key.pem   endpoint health; done
+#1589520082
+echo '
+https://10.83.75.1:2379 is healthy: successfully committed proposal: took = 1.301023ms
+https://10.83.75.2:2379 is healthy: successfully committed proposal: took = 1.479561ms
+https://10.83.75.3:2379 is healthy: successfully committed proposal: took = 9.849815ms
+'
+#1589520107
+echo '
+https://10.83.75.1:2379 is healthy: successfully committed proposal: took = 1.301023ms
+https://10.83.75.2:2379 is healthy: successfully committed proposal: took = 1.479561ms
+https://10.83.75.3:2379 is healthy: successfully committed proposal: took = 9.849815ms
+' | grep is
+#1589520131
+echo '
+https://10.83.75.1:2379 is healthy: successfully committed proposal: took = 1.301023ms
+https://10.83.75.2:2379 is healthy: successfully committed proposal: took = 1.479561ms
+https://10.83.75.3:2379 is healthy: successfully committed proposal: took = 9.849815ms
+' |grep "is healthy"|sed -n "1p"|cut -d: -f2|cut -d/ -f3
+#1589521732
+etcdctl member list
+#1589521763
+export ETCDCTL_API=3 
+#1589521771
+etcdctl member list
+#1589521900
+etcdctl member list | grep 75.3
+#1589521932
+etcdctl member list | grep 75.3:2380 | 
+#1589521935
+etcdctl member list | grep 75.3:2380 
+#1589521947
+etcdctl member list | grep 75.3:2380 | cut -d',' -f1"
+#1589521967
+etcdctl member list | grep 75.3:2380 | cut -d',' -f1
+#1589522391
+etcdctl member list | grep 75.3:2380 | cut -d' ' -f3|cut -d',' -f1
+#1589532366
+cd /etc/ansible/.cluster/
+#1589532367
+ls
+#1589532370
+ls ssl
+#1589532434
+ls
+#1589532445
+cd backup/
+#1589532445
+ls
+#1589532481
+ETCDCTL_API=3 etcdctl --write-out=table snapshot status backup.db
+#1589532494
+ETCDCTL_API=3 etcdctl --write-out=table snapshot status snapshot.db
+#1589532578
+ls
+#1589533038
+cd /etcd_backup
+#1589533039
+ls
+#1589533079
+ll
+#1589533081
+ll -h
+#1589534176
+ansible-doc -s shell
+#1588226374
+k9s
+#1589362561
+k8s
+#1589362563
+k9s
+#1589530912
+vim
+#1589536053
+cd /etc/ansible/.cluster/
+#1589536053
+ls
+#1589536061
+cd backup/
+#1589536062
+ls
+#1589773205
+cd
+#1589773208
+kubectl delete -f testpod.yaml 
+#1589773341
+kubectl apply -f testpod.yaml 
+#1589773353
+netstat -tnlp | grep 3000
+#1589783225
+vim /etc/systemd/system/etcd.service 
+#1589783257
+vim /etc/systemd/system/kube-apiserver.service 
+#1589783315
+vim /etc/systemd/system/kube-controller-manager.service 
+#1589783419
+vim /etc/systemd/system/kube-scheduler.service 
+#1589783439
+vim /etc/systemd/system/kubelet.service 
+#1589783585
+vim /etc/systemd/system/kube-proxy.service 
+#1589784356
+du --max-depth=1 -h ./ | sort -hr
+#1589789252
+rbd status k8s/kubernetes-dynamic-pvc-a2ef5eb2-f99a-4cc7-8c06-ccc05cc58af9
+#1589789282
+rbd info k8s/kubernetes-dynamic-pvc-a2ef5eb2-f99a-4cc7-8c06-ccc05cc58af9
+#1589793211
+ping 172.16.5.60
+#1589793218
+ping 172.16.5.59
+#1589880215
+iptables -L
+#1589880221
+iptables -L | grep 10.221.99.147
+#1589880232
+iptables -L | grep '10\.221\.99\.147'
+#1589880365
+ipvsadm -ln | grep -C 4 10.221.0.1
+#1589880436
+ipvsadm -ln | grep -C 4 10.221.99.147
+#1589880443
+ipvsadm -ln | grep -C 10 10.221.99.147
+#1589880530
+ipvsadm -ln | grep -C 10 30000
+#1589880608
+ipvsadm -ln | grep -C 10 10.220.85.227
+#1589880668
+ipvsadm -ln | grep -C 10 10.221.99.147
+#1589880676
+ipvsadm -ln | grep -C 50 10.221.99.147
+#1589880738
+ping 10.220.85.227
+#1589880755
+ping 10.221.99.147
+#1589520035
+vim
+#1589957590
+vim /etc/systemd/system/kube-apiserver.service 
+#1589963314
+ls /usr/local/
+#1590026532
 vim testpod.yaml 
+#1590033534
+journalctl -k
+#1590033542
+journalctl -h
+#1590033625
+journalctl -k
+#1590039469
+vim testpod.yaml 
+#1590040758
+cd /etc/ansible/.cluster/
+#1590040758
+ls
+#1590040762
+cd backup/
+#1590040763
+ll
+#1590040765
+ll -h
+#1589964109
+k9s
+#1589957888
+docker info | grep over
+#1589958176
+docker info | grep cgroup
+#1589958335
+vim /etc/systemd/system/docker.service 
+#1590113690
+uname -r
+#1590113138
+vim
+#1590476389
+cd dir1/mydemo2
+#1590476390
+ls
+#1590476400
+cd ../
+#1590476413
+cd mydemo1/springboot/
+#1590476413
+ls
+#1590476421
+cd ../
+#1590476422
+ls
+#1590476425
+vim Jenkinsfile 
+#1590477573
+docker info 
+#1590477592
+docker info | grep overlay
+#1590477815
+docker info | grep cgroup
+#1590570055
+helm search repo eureka
+#1590570080
+helm search repo spring-cloud
+#1590571743
+vim
+#1590571808
+helm search repo operator
+#1590632905
+vim
+#1590632921
+vim /etc/systemd/system/kube-apiserver.service 
+#1590636513
+cd dir1/mydemo2
+#1590636514
+ls
+#1590636518
+cd eureka-server/
+#1590636519
+ls
+#1590636540
+vim src/main/resources/application.yml 
+#1590636637
+ls
+#1590636639
+vim k8s.yaml 
+#1590637260
+ls
+#1590637266
+vim Dockerfile
+#1590643755
+vim
+#1590659069
+kubectl get service nginx-ingress-controller
+#1590481070
+vim
+#1590561330
+k9s
+#1590714909
+kubectl run -ti --rm alpine --image=alpine -- sh
+#1590717058
+vim
+#1590735431
+rbd status k8s/kubernetes-dynamic-pvc-a2ef5eb2-f99a-4cc7-8c06-ccc05cc58af9
+#1590735537
+rbd status k8s/kubernetes-dynamic-pvc-1115d934-965e-499a-b961-34a47a39b8b1
+#1591410822
+ping 10.10.0.91
+#1591417983
+ls
+#1591417988
+cd other/
+#1591417988
+ls
+#1591417997
+vim springboot_deploy.sh 
+#1591423416
+crontab -l
+#1591423418
+date
+#1591584234
+cd /usr/local/
+#1591584234
+ls
+#1591584236
+curl -L https://istio.io/downloadIstio | sh -
+#1591584292
+cd /download/
+#1591584292
+ls
+#1591584340
+wget https://github.com/istio/istio/releases/download/1.6.1/istio-1.6.1-linux-amd64.tar.gz
+#1591584355
+ls
+#1591584364
+rm -f istio-1.*
+#1591584366
+ls
+#1591584456
+rz
+#1591584499
+ls
+#1591584509
+tar -tf istio-1.6.1-linux-amd64.tar.gz 
+#1591584516
+ls
+#1591584523
+tar xf istio-1.6.1-linux-amd64.tar.gz -
+#1591584530
+tar xf istio-1.6.1-linux-amd64.tar.gz -C /usr/local/
+#1591584533
+cd /usr/local/
+#1591584533
+ls
+#1591584536
+cd istio-1.6.1/
+#1591584537
+ls
+#1591584712
+pwd
+#1591584791
+istioctl version
+#1591585056
+cd /usr/local/istio-1.6.1/
+#1591585057
+ls
+#1591585086
+cp -a tools/istioctl.bash /root
+#1591585159
+istioctl profile list
+#1591585351
+istioctl profile dump demo
+#1591586314
+kubectl apply -f testpod.yaml 
+#1591586329
+kubectl get service | grep nginx-1
+#1591586482
+kubectl get service | grep LoadBalancer
+#1591586531
+ping 10.83.75.13
+#1591586536
+ping 10.83.75.12
+#1591586553
+kubectl get service | grep LoadBalancer
+#1591586652
+kubectl delete -f testpod.yaml 
+#1591586927
+ls /download/
+#1591587012
+istioctl manifest apply --set profile=demo
+#1591595470
+crontab -l
+#1591596002
+istioctl manifest apply --set profile=demo
+#1591596058
+kubectl get svc -n istio-system
+#1591596077
+ping 10.83.75.13
+#1591596156
+kubectl get pods -n istio-system
+#1591596369
+kubectl get ns --show-labels 
+#1591596379
+kubectl get ns --show-labels  | grep istio
+#1591596431
+cd /usr/local/istio-1.6.1/
+#1591596432
+ls
+#1591596439
+cd samples/
+#1591596439
+ls
+#1591596448
+cd bookinfo/
+#1591596448
+ls
+#1591596462
+cd platform/kube/
+#1591596462
+ls
+#1591596470
+vim bookinfo.yaml 
+#1591596567
+#kubectl label namespace default istio-injection=enabled
+#1591596587
+cd ../
+#1591596589
+../
+#1591596592
+cd ../
+#1591596593
+ls
+#1591596602
+cd ../
+#1591596605
+ls
+#1591596616
+ kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)
+#1591596708
+kubectl get service
+#1591598113
+kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}') -c ratings -- curl productpage:9080/productpage | grep -o "<title>.*</title>"
+#1591598551
+cd
+#1591598830
+kubectl apply -f testpod.yaml 
+#1591598979
+cd ssl
+#1591598980
+ls
+#1591598990
+./create_self-signed-cert.sh -h
+#1591599542
+vim create_self-signed-cert.sh 
+#1591599967
+helm ls
+#1591599986
+helm fullstatus dashboard
+#1591600165
+kubectl config view
+#1591600263
+ls
+#1591600285
+kubectl delete secrets kubernetes-dashboard-tls
+#1591600368
+kubectl create secret tls kubernetes-dashboard-tls --cert=dashboard.k8s.maimaiti.site.crt --key=dashboard.k8s.maimaiti.site.key 
+#1591600390
+kubectl describe secret kubernetes-dashboard-tls 
+#1591600414
+cd
+#1591600421
+helm uninstall dashboard 
+#1591600710
+helm install dashboard dashboard
+#1591600768
+cd ssl
+#1591600768
+ls
+#1591600820
+./create_self-signed-cert.sh --ssl-domain=*.k8s.maimaiti.site
+#1591600826
+ls
+#1591600866
+./create_self-signed-cert.sh --ssl-domain=*.k8s.maimaiti.site
+#1591600892
+./create_self-signed-cert.sh --ssl-domain=k8s.maimaiti.site
+#1591600894
+ls
+#1591601008
+kubectl create secret tls k8s-maimaiti-site-tls-secret --cert=k8s.maimaiti.site.crt --key=k8s.maimaiti.site.key 
+#1591601166
+kubectl delete -f testpod.yaml 
+#1591601170
+cd
+#1591601172
+kubectl delete -f testpod.yaml 
+#1591601190
+kubectl apply -f testpod.yaml 
+#1591601272
+kubectl delete -f testpod.yaml 
+#1591601285
+cd ssl
+#1591601287
+ls
+#1591601293
+rm -f k8s.maimaiti.site.*
+#1591601294
+ls
+#1591601326
+./create_self-signed-cert.sh --ssl-domain=nginx-1.k8s.maimaiti.site
+#1591601340
+kubectl delete secrets k8s-maimaiti-site-tls-secret 
+#1591601380
+kubectl create secret tls nginx-1-k8s-maimaiti-site-tls-secret --cert=nginx-1.k8s.maimaiti.site.crt --key=nginx-1.k8s.maimaiti.site.key 
+#1591601418
+cd
+#1591601419
+kubectl apply -f testpod.yaml 
+#1591603437
+cd ssl
+#1591603438
+ls
+#1591603450
+rm -f nginx-1.k8s.maimaiti.site.*
+#1591603450
+ls
+#1591603474
+./create_self-signed-cert.sh --ssl-domain="*.k8s.maimaiti.site"
+#1591603486
+ls
+#1591603498
+./create_self-signed-cert.sh --ssl-domain='*.k8s.maimaiti.site'
+#1591603598
+sh -x ./create_self-signed-cert.sh --ssl-domain='*.k8s.maimaiti.site'
+#1591603613
+ls
+#1591603701
+rm -f \*.k8s.maimaiti.site.crt 
+#1591603702
+ls
+#1591603904
+./create_self-signed-cert.sh -h
+#1591604396
+kubectl get service | grep jaeger
+#1591604402
+kubectl get service | grep grafana
+#1591604420
+cd
+#1591604424
+kubectl delete -f testpod.yaml 
+#1591604691
+kubectl get pod -n istio-system | grep  injector
+#1591605149
+cd /usr/local/istio-1.6.1/
+#1591605150
+ls
+#1591605154
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+#1591606624
+cd samples/bookinfo/
+#1591606625
+ls
+#1591606642
+cd networking/
+#1591606642
+ls
+#1591606658
+vim destination-rule-all.yaml 
+#1591606868
+kubectl apply -f destination-rule-all.yaml 
+#1591606895
+kubectl apply -f virtual-service-all-v1.yaml 
+#1591607483
+vim destination-rule-all.yaml 
+#1591607837
+kubectl apply -f virtual-service-reviews-test-v2.yaml 
+#1591608164
+vim virtual-service-reviews-test-v2.yaml
+#1591608609
+kubectl delete -f virtual-service-all-v1.yaml 
+#1591608747
+vim virtual-service-reviews-test-v2.yaml 
+#1591609589
+kubectl apply -f virtual-service-all-v1.yaml
+#1591609599
+kubectl apply -f virtual-service-reviews-test-v2.yaml
+#1591609781
+kubectl apply -f virtual-service-ratings-test-delay.yaml
+#1591609991
+kubectl delete -f virtual-service-all-v1.yaml 
+#1591610434
+ls
+#1591610453
+kubectl apply -f virtual-service-ratings-test-delay.yaml
+#1591610459
+kubectl delete -f virtual-service-ratings-test-delay.yaml
+#1591610461
+vim virtual-service-ratings-test-delay.yaml
+#1591610914
+ls
+#1591610928
+vim bookinfo-gateway.yaml 
+#1591611089
+cp -a bookinfo-gateway.yaml /root/testgateway.yaml
+#1591611672
+cd /root/ssl
+#1591611672
+ls
+#1591611687
+./create_self-signed-cert.sh --ssl-domain=istiografana.k8s.maimaiti.site
+#1591611755
+kubectl create secret tls istiografana.k8s.maimaiti.site-secret --cert=tls.crt --key=tls.key
+#1591612233
+ls
+#1591612237
+mkdir ingressgateway-certs
+#1591612295
+./create_self-signed-cert.sh --ssl-domain=grafana.istio.maimaiti.site
+#1591612346
+mkdir istio-ingressgateway-certs
+#1591612356
+cp -a tls.key tls.crt istio-ingressgateway-certs
+#1591612360
+pwd
+#1591612372
+cd istio-ingressgateway-certs/
+#1591612373
+ls
+#1591612374
+pwd
+#1591612614
+kubectl create secret tls istio-ingressgateway-certs --cert=tls.crt --key=tls.key 
+#1591612668
+cd
+#1591612674
+kubectl apply -f testgateway.yaml 
+#1591664993
+telnet 10.221.177.213 3000
+#1591664999
+telnet 10.221.177.213 3001
+#1591665042
+kubectl get secrets istiografana.k8s.maimaiti.site-secret
+#1591665111
+kubectl get pod | grep grafana
+#1591665145
+kubectl get pod -n istio-system | grep grafana
+#1591665189
+kubectl delete -f testgateway.yaml 
+#1591665203
+kubectl apply -f testgateway.yaml -n istio-system 
+#1591665366
+cd ssl
+#1591665410
+kubectl create secret tls istiografana.k8s.maimaiti.site-secret --cert=istiografana.k8s.maimaiti.site.crt --key=istiografana.k8s.maimaiti.site.key 
+#1591665425
+kubectl delete secret tls istiografana.k8s.maimaiti.site-secret
+#1591665463
+kubectl delete secret tls istiografana.k8s.maimaiti.site-secret -n kube-system 
+#1591665482
+kubectl create secret tls istiografana.k8s.maimaiti.site-secret --cert=istiografana.k8s.maimaiti.site.crt --key=istiografana.k8s.maimaiti.site.key -n istio-system 

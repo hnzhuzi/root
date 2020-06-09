@@ -1,0 +1,49 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: rbacuser-role
+  namespace: kube-system
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rbacuser-rolebinding
+  namespace: kube-system
+subjects:
+- kind: User
+  name: rbacuser
+  apiGroup: ""
+- kind: ServiceAccount
+  name: rbacsa
+  namespace: kube-system
+roleRef:
+  kind: Role
+  name: rbacuser-role
+  apiGroup: ""
+
+
+---
+
+
+# kind: ClusterRoleBinding #无namespace，作用于整个集群
+# apiVersion: rbac.authorization.k8s.io/v1beta1
+# metadata:
+  # name: haimaxy-sa2-clusterrolebinding
+# subjects:
+# - kind: ServiceAccount
+  # name: haimaxy-sa2
+  # namespace: kube-system
+# roleRef:
+  # kind: ClusterRole
+  # name: cluster-admin
+  # apiGroup: rbac.authorization.k8s.io

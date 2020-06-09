@@ -5,6 +5,9 @@ metadata:
 spec:
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true" #自动发现配置，无须新建ServiceMonitor对象，但需要更改prometheus相关配置，麻烦。
+        prometheus.io/port: "9121"
       labels:
         app: redis
     spec:

@@ -6,8 +6,8 @@ metadata:
     storageclass.kubernetes.io/is-default-class: "true"
 # provisioner: ceph.com/rbd
 provisioner: kubernetes.io/rbd
-# reclaimPolicy: Retain
 reclaimPolicy: Retain
+# allowVolumeExpansion: true
 parameters:
   monitors: 10.83.75.6:6789,10.83.75.7:6789,10.83.75.8:6789
   pool: k8s
