@@ -1,60 +1,99 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: grafana-gateway
+  name: kiali-gateway
+  namespace: istio-system
 spec:
   selector:
     istio: ingressgateway # use istio default controller
   servers:
   - port:
-      # number: 80
-      # name: http
-      # protocol: HTTP
-      number: 443
-      name: https
-      protocol: HTTPS
+      number: 80
+      name: http
+      protocol: HTTP
+      # number: 443
+      # name: https
+      # protocol: HTTPS
     hosts:
-    - "grafana.istio.maimaiti.site"
-    tls:
-      mode: SIMPLE
-      serverCertificate: /etc/istio/ingressgateway-certs/tls.crt
-      privateKey: /etc/istio/ingressgateway-certs/tls.key
+    - "kiali.istio.maimaiti.site"
+    # tls:
+      # mode: SIMPLE
+      # serverCertificate: /etc/istio/ingressgateway-certs/tls.crt
+      # privateKey: /etc/istio/ingressgateway-certs/tls.key
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: grafana
+  name: kiali
+  namespace: istio-system
 spec:
   hosts:
-  - "grafana.istio.maimaiti.site"
+  - "kiali.istio.maimaiti.site"
   gateways:
-  - grafana-gateway
+  - kiali-gateway
   http:
   - match:
     - uri:
         prefix: /
     route:
     - destination:
-        host: grafana
+        host: kiali
         port:
-          number: 3000
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: grafana
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-spec:
-  rules:
-  - host: istiografana.k8s.maimaiti.site
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: grafana
-          servicePort: 3000
-  tls:
-  - hosts:
-    - istiografana.k8s.maimaiti.site
-    secretName: "istiografana.k8s.maimaiti.site-secret"
+          number: 20001
+# ---
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+  # name: grafana
+  # namespace: istio-system
+  # annotations:
+    # kubernetes.io/ingress.class: "nginx"
+# spec:
+  # rules:
+  # - host: istiografana.k8s.maimaiti.site
+    # http:
+      # paths:
+      # - path: /
+        # backend:
+          # serviceName: grafana
+          # servicePort: 3000
+  # tls:
+  # - hosts:
+    # - istiografana.k8s.maimaiti.site
+    # secretName: "istiografana.k8s.maimaiti.site-secret"
+
+# ---
+
+# apiVersion: networking.istio.io/v1alpha3
+# kind: Gateway
+# metadata:
+  # name: frognew-gateway
+  # namespace: istio-system
+# spec:
+  # selector:
+    # istio: ingressgateway
+  # servers:
+  # - port:
+      # number: 80
+      # name: http
+      # protocol: HTTP
+    # tls:
+      # httpsRedirect: true
+    # hosts:
+    # - istio-prometheus.frognew.com
+    # - istio-grafana.frognew.com
+    # - istio-jaeger.frognew.com
+    # - istio-kiali.frognew.com
+  # - port:
+      # number: 443
+      # name: https
+      # protocol: HTTPS
+    # tls:
+      # mode: SIMPLE
+      # serverCertificate: /etc/istio/ingressgateway-certs/tls.crt
+      # privateKey: /etc/istio/ingressgateway-certs/tls.key
+    # hosts:
+    # - istio-prometheus.frognew.com
+    # - istio-grafana.frognew.com
+    # - istio-jaeger.frognew.com
+    # - istio-kiali.frognew.com

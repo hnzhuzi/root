@@ -1,9 +1,9 @@
 global:
   resolve_timeout: 5m
   smtp_smarthost: 'smtp.qq.com:25'
-  smtp_from: '454576310@qq.com'
-  smtp_auth_username: '454576310@qq.com'
-  smtp_auth_password: 'nqfjknltrqwvbjdg'
+  smtp_from: '@qq.com'
+  smtp_auth_username: '@qq.com'
+  smtp_auth_password: ''
   smtp_require_tls: false
 route:
   group_by: ['job', 'severity']
@@ -21,7 +21,7 @@ route:
 receivers:
 - name: 'default'
   email_configs:
-  - to: '454576310@qq.com'
+  - to: '@qq.com'
     send_resolved: true
 - name: 'webhook'
   webhook_configs:

@@ -51839,3 +51839,417 @@ kubectl delete secret tls istiografana.k8s.maimaiti.site-secret
 kubectl delete secret tls istiografana.k8s.maimaiti.site-secret -n kube-system 
 #1591665482
 kubectl create secret tls istiografana.k8s.maimaiti.site-secret --cert=istiografana.k8s.maimaiti.site.crt --key=istiografana.k8s.maimaiti.site.key -n istio-system 
+#1591672653
+git status
+#1591672788
+git add --all ./ && git commit -m '20200609' && git push github master
+#1591672808
+git remote show
+#1591672815
+git remote show github
+#1591672821
+git remote show origin
+#1591672848
+git add --all ./ && git commit -m '20200609' && git push 
+#1591672862
+git push
+#1591672941
+cd dir1/mydemo1
+#1591672941
+ls
+#1591672943
+git status
+#1591672957
+git remote show origin
+#1591672966
+git remote show github
+#1591672992
+git push github
+#1591673000
+git push github master
+#1591673046
+git add --all ./ && git commit -m '20200609' && git push github master
+#1591673055
+git status
+#1591673060
+git add --all ./ 
+#1591673064
+git commit -m '20200609'
+#1591673068
+git push github master
+#1591673105
+cd ../
+#1591673109
+cd mydemo2
+#1591673119
+git add --all ./ && git commit -m '20200609' && git push github master
+#1591673127
+git add --all ./
+#1591673133
+git commit -m '20200609'
+#1591673137
+git push github master
+#1591673284
+cd ../
+#1591673288
+ls
+#1591673290
+git status
+#1591673303
+vim .gitignore 
+#1591584736
+vim
+#1591584631
+k9s
+#1591586051
+helm fullstatus metallb
+#1591586095
+k9s
+#1591665562
+ls
+#1591665576
+cd ssl/istio-ingressgateway-certs/
+#1591665590
+kubectl create secret tls istio-ingressgateway-certs --cert=tls.crt --key=tls.key -n istio-system 
+#1591665607
+kubectl delete secrets istio-ingressgateway-certs -n kube-system 
+#1591665860
+mkdir -p /etc/istio/ingressgateway-certs
+#1591665863
+ls
+#1591665885
+mv ./* /etc/istio/ingressgateway-certs
+#1591665887
+ls /etc/istio/ingressgateway-certs
+#1591665891
+cd ../
+#1591665892
+ls
+#1591665897
+find -type d
+#1591665917
+rm -rf ingressgateway-certs istio-ingressgateway-certs/
+#1591665920
+ls
+#1591665954
+ls /etc/istio/ingressgateway-certs/tls.crt
+#1591666192
+cd
+#1591666204
+git status
+#1591669214
+cd other/
+#1591669214
+ls
+#1591669220
+vim springboot_deploy.sh 
+#1591672610
+cd
+#1591672642
+vim .gitignore 
+#1591674958
+ls /etc/istio/ingressgateway-certs/tls.crt
+#1591947198
+cd /usr/local/istio-1.6.1/
+#1591947199
+ls
+#1591947208
+kubectl apply -f samples/sleep/sleep.yaml
+#1591947363
+docker image ls | grep defaultbackend
+#1591948024
+kubectl get ns --show-labels 
+#1591948029
+kubectl get ns --show-labels  | grep inject
+#1591948127
+kubectl get pod -n istio-system | grep  injector
+#1591948261
+kubectl label namespace kube-system istio-injection-
+#1591948274
+kubectl get pod -n istio-system | grep  injector
+#1591948293
+kubectl get ns --show-labels 
+#1591948298
+kubectl get ns --show-labels  | grep inje
+#1591948376
+ kubectl apply -f <(istioctl kube-inject -f samples/sleep/sleep.yaml)
+#1591680642
+vim
+#1591944662
+cd dir1
+#1591944663
+ls
+#1591944667
+vim alertmanager.yaml 
+#1591944713
+cd ../
+#1591944739
+kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml
+#1591949995
+vim
+#1591756664
+k9s
+#1591681105
+kubectl apply -f testgateway.yaml 
+#1591681120
+kubectl delete -f testgateway.yaml 
+#1591681125
+kubectl apply -f testgateway.yaml -n istio-system 
+#1591681236
+ls /etc/istio/ingressgateway-certs/tls.crt
+#1591681244
+ls /etc/istio/ingressgateway-certs/tls.key 
+#1591681636
+kubectl get secret istio-ingressgateway-certs -n istio-system 
+#1591753274
+kubectl delete -f testpod.yaml 
+#1591753293
+kubectl apply -f testgateway.yaml 
+#1591756834
+cd /usr/local/istio-1.6.1/samples/bookinfo/platform/kube/
+#1591756835
+ls
+#1591756923
+cd ../../
+#1591756926
+cd ../
+#1591756937
+find -name 'virtual-service-all-v1.yaml'
+#1591756949
+cd samples/bookinfo/
+#1591756950
+ls
+#1591756952
+cd networking/
+#1591756953
+ls
+#1591756978
+vim destination-rule-all.yaml 
+#1591943971
+cd
+#1591943983
+rbd info k8s/kubernetes-dynamic-pvc-7e835362-a6f8-4406-baf4-7b6bb17d41e5
+#1591944014
+rbd status -p k8s kubernetes-dynamic-pvc-7e835362-a6f8-4406-baf4-7b6bb17d41e5
+#1591944530
+kubectl delete secret alertmanager-prometheus-operator-alertmanager
+#1591944637
+helm ls
+#1591947170
+kubectl label namespace kube-system istio-injection=enabled
+#1591949374
+helm ls
+#1591949381
+helm ls | grep istio
+#1591949388
+helm search repo istio
+#1591949399
+helm repo update
+#1591949416
+helm search repo istio
+#1591949457
+cd /usr/local/istio-1.6.1/
+#1591949457
+ls
+#1591949557
+kubectl get pod | grep jaeger
+#1591949618
+kubectl -n istio-system get pod | grep jaeger
+#1591949626
+kubectl -n istio-system get pod | grep prome
+#1591949637
+kubectl -n istio-system get pod | grep kiali
+#1591950864
+ps aux | grep java
+#1592200891
+cd /usr/local/istio-1.6.1/
+#1592200892
+ls
+#1592200902
+cd samples/bookinfo/networking/
+#1592200903
+ls
+#1592200946
+kubectl apply -f destination-rule-all.yaml virtual-service-all-v1.yaml 
+#1592200959
+
+#1592200984
+kubectl delete -f destination-rule-all.yaml 
+#1592200992
+
+#1592201021
+kubectl -n istio-system apply -f virtual-service-all-v1.yaml 
+#1592201168
+kubectl -n istio-system apply -f virtual-service-reviews-test-v2.yaml
+#1592201448
+kubectl -n istio-system delete -f virtual-service-reviews-test-v2.yaml
+#1592201458
+kubectl -n istio-system delete -f virtual-service-all-v1.yaml 
+#1592201781
+kubectl -n istio-system apply -f virtual-service-all-v1.yaml 
+#1592201803
+kubectl -n istio-system apply -f virtual-service-reviews-test-v2.yaml
+#1592201936
+kubectl -n istio-system apply -f virtual-service-reviews-80-20.yaml
+#1592205452
+cd
+#1592208525
+cd -
+#1592208539
+kubectl -n istio-system apply -f virtual-service-ratings-test-delay.yaml
+#1592210345
+kubectl -n istio-system apply -f virtual-service-ratings-test-abort.yaml
+#1592211058
+kubectl -n istio-system apply -f virtual-service-all-v1.yaml 
+#1592212347
+ls
+#1592212367
+vim destination-rule-all.yaml 
+#1592212458
+ls
+#1592213961
+ls destination-rule-all.yaml 
+#1592214296
+cd
+#1592214297
+ls
+#1592214302
+ls other/
+#1592214318
+cd other/
+#1592214318
+ls
+#1592214335
+cp -a /etc/docker/daemon.json ./
+#1592214336
+ls
+#1592214342
+ls daemon.json 
+#1592214536
+kubectl -n istio-system get service istio-ingressgateway 
+#1592216376
+cd
+#1592216574
+docker exec -ti --rm -u 1337 --privileged 570 sh
+#1592216583
+docker exec -ti -rm -u 1337 --privileged 570 sh
+#1592216621
+docker exec -ti -u 1337 --privileged 570 sh
+#1592216642
+docker exec -ti -u 1337 --privileged 570823f1bffd sh
+#1592216925
+docker exec -ti -u root --privileged 570823f1bffd sh
+#1592272903
+ls /download/
+#1592187811
+kubectl get ns 
+#1592188438
+cd /usr/local/istio-1.6.1/samples/bookinfo/
+#1592188439
+ls
+#1592188449
+vim networking/bookinfo-gateway.yaml 
+#1592188717
+kubectl apply -f networking/bookinfo-gateway.yaml 
+#1592189101
+cd
+#1592189106
+kubectl apply -f testgateway.yaml 
+#1592189514
+ping bookinfo.istio.maimaiti.site
+#1592190651
+ kubectl delete -f <(istioctl kube-inject -f /usr/local/istio-1.6.1/samples/bookinfo/platform/kube/bookinfo.yaml)
+#1592190713
+ kubectl -n istio-system apply -f <(istioctl kube-inject -f /usr/local/istio-1.6.1/samples/bookinfo/platform/kube/bookinfo.yaml)
+#1592190760
+kubectl delete -f /usr/local/istio-1.6.1/samples/bookinfo/networking/bookinfo-gateway.yaml 
+#1592190799
+kubectl -n istio-system apply -f /usr/local/istio-1.6.1/samples/bookinfo/networking/bookinfo-gateway.yaml 
+#1592190845
+cd /usr/local/istio-1.6.1/samples/sleep/
+#1592190846
+ls
+#1592190855
+kubectl delete -f sleep.yaml 
+#1592192661
+ kubectl -n istio-system delete -f <(istioctl kube-inject -f /usr/local/istio-1.6.1/samples/bookinfo/platform/kube/bookinfo.yaml)
+#1592192757
+kubectl -n istio-system apply -f <(istioctl kube-inject -f /usr/local/istio-1.6.1/samples/bookinfo/platform/kube/bookinfo.yaml)
+#1592198956
+cd ../
+#1592198957
+ls
+#1592198961
+cd bookinfo/
+#1592198961
+ls
+#1592198984
+vim networking/destination-rule-all.yaml 
+#1592207672
+ls
+#1592207677
+vim networking/destination-rule-all-mtls.yaml
+#1592208085
+ls
+#1592208115
+kubectl apply -n istio-system -f networking/virtual-service-reviews-test-v2.yaml
+#1592208135
+vim networking/virtual-service-reviews-test-v2.yaml
+#1592186981
+vim
+#1592187754
+k9s
+#1592187797
+vim .k9s/config.yml 
+#1592187865
+k9s
+#1592278952
+cd other/
+#1592278952
+ls
+#1592278980
+rz -y
+#1592279065
+ls
+#1592279074
+rz -y
+#1592279145
+vim declarative_pipeline 
+#1592279173
+vim scripted_pipeline 
+#1592279203
+rz -y
+#1592279298
+vim init.sh 
+#1592279493
+ls *pipe*
+#1592279550
+ls
+#1592279582
+vim core.1103655 
+#1592279587
+rm -rf core.1103655 
+#1592279604
+vim hosts 
+#1592279690
+cd ../
+#1592279691
+ls
+#1592279693
+ls dir1
+#1592279709
+git staus
+#1592279711
+git status
+#1592279748
+crontab -l
+#1592443131
+cd other/
+#1592443131
+ls
+#1592443135
+rz
+#1592445209
+cd
+#1592445211
+git status
