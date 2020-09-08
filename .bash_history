@@ -52253,3 +52253,358 @@ rz
 cd
 #1592445211
 git status
+ls
+cd /tmp
+git clone https://github.com/hnzhuzi/root.git
+ls
+mv root/* /root
+ls /root
+mv root/.bash_history root/.git root/.gitignore /root
+cd
+vim .gitignore 
+vim .bash_history 
+rke version
+rke up --config ./rancher-cluster.yml
+docker ps
+systemcdtl start docker
+systemctl start docker
+systemctl enable docker
+docker ps
+rke up --config ./rancher-cluster.yml
+docker ps
+id
+cat /etc/passwd | grep docker
+cat /etc/group
+cat /etc/group | grep docker
+cat /etc/group | grep rancher
+cat /etc/passwd
+cat /etc/passwd | grep docker
+swapoff -a && sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+vim /etc/fstab 
+vim /etc/fstab
+ls
+cd dir1
+ls
+vim rancher-cluster.yml
+useradd rancher -G docker
+echo "123456" | passwd --stdin rancher
+cd
+su - rancher 
+cd dir1
+ls
+vim init.sh
+cd dir1
+vim rancher-cluster
+vim rancher-cluster.yml 
+vim .bashrc
+. .bashrc
+su - rancher 
+mv dir1/rancher-cluster.yml /home/rancher/
+su - rancher 
+kubectl get node
+su - rancher 
+. .bashrc
+netstat -tnlp
+netstat -tnlp | grep 443
+curl -I 172.16.20.110
+vim
+helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+helm repo update
+kubectl get ns
+kubectl create namespace cattle-system
+ls
+vim rancher/values.yaml 
+helm repo list
+helm repo search
+helm repo search rancher
+helm search repo rancher
+cd /tmp
+helm pull --untar rancher-stable/rancher
+vimdiff rancher/values.yaml /root/rancher/values.yaml 
+vim /root/rancher/values.yaml
+ls
+cd
+ls
+cd other/
+ls
+cd ../
+cd dir1
+ls
+cd
+find -name '*signed*'
+ls
+vim .gitignore 
+ls
+cd ssl
+ls
+./create_self-signed-cert.sh --ssl-domain=rancher.k8s.mysite.com
+cd
+vim .bashrc
+. .bashrc
+vim
+. .bashrc
+kubectl -n cattle-system get secrets 
+kubectl -n cattle-system rollout status deployment rancher 
+helm install rancher rancher-latest/rancher   --namespace cattle-system   --set hostname=rancher.my.org   --set ingress.tls.source=secret \
+cd ssl
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+cd
+ls
+ll rancher*
+ls
+ls rancher
+helm install rancher rancher/ -n cattle-system 
+helm status rancher
+helm -n cattle-system status rancher 
+ helm plugin install https://github.com/marckhouzam/helm-fullstatus
+helm -n cattle-system fullstatus rancher 
+kubectl -n cattle-system rollout status deploy/rancher
+kubectl -n cattle-system get sc
+kubectl -n cattle-system get serviceaccounts 
+kubectl -n cattle-system get secrets 
+cd ssl
+ls
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+ls
+#helm install rancher rancher-latest/rancher \
+  --namespace cattle-system   --set hostname=rancher.my.org   --set ingress.tls.source=secret \
+helm install rancher rancher-latest/rancher   --namespace cattle-system   --set hostname=rancher.my.org   --set ingress.tls.source=secret \
+helm install rancher rancher-latest/rancher   --namespace cattle-system   --set hostname=rancher.my.org   --set ingress.tls.source=secret   --set privateCA=true
+docker ps 
+docker ps | grep kube
+docker ps | grep etcd
+docker ps | grep kube
+docker image ls
+cd
+kubectl get service --all-namespaces 
+rke version
+helm list
+helm -n cattle-system list
+rke version
+cd /opt/rke/etcd-snapshots/
+ls
+ls /opt/cni
+ls /opt/containerd/
+ls /opt/rke/
+ls
+ls /opt/rke/etcd-snapshots/
+ls
+cd /home/rancher/
+ls
+rke etcd snapshot-save --name test1.db --config rancher-cluster.yml
+ansible all -m ping
+ssh node10
+
+ansible nodes -m ping
+vim /home/rancher/rancher-cluster.yml 
+docker version
+uname -r
+ping rancher.k8s.mysite.com
+ls /home/rancher/.ssh
+systemctl status kubelet 
+helm repo add stable http://mirror.azure.cn/kubernetes/charts/
+helm repo list
+ssh node11
+rsync -av .ssh 172.16.20.111:/root
+rsync -av .ssh 172.16.20.112:/root
+ls
+ssh node11
+ssh node12
+vim /etc/hosts
+rsync -av /etc/hosts node11:/etc
+rsync -av /etc/hosts node12:/etc
+yum install ansible
+ansible nodes -m shell -a 'curl https://releases.rancher.com/install-docker/19.03.sh | sh'
+ansible nodes -m shell -a 'systemctl enable docker && systemctl start docker'
+k9s
+ping rancher.k8s.mysite.com
+kubectl -n cattle-system patch  deployments cattle-cluster-agent --patch '{
+    "spec": {
+        "template": {
+            "spec": {
+                "hostAliases": [
+                    {
+                        "hostnames":
+                        [
+                            "rancher.k8s.mysite.com"
+                        ],
+                        "ip": "172.16.20.110"
+                    }
+                ]
+            }
+        }
+    }
+}'
+kubectl -n cattle-system patch  daemonsets cattle-node-agent --patch '{
+    "spec": {
+        "template": {
+            "spec": {
+                "hostAliases": [
+                    {
+                        "hostnames":
+                        [
+                            "rancher.k8s.mysite.com"
+                        ],
+                        "ip": "172.16.20.110"
+                    }
+                ]
+            }
+        }
+    }
+}'
+vim
+sh cleannode.sh 
+docker image ls
+kubectl run -ti --rm alpine --image=alpine -- sh
+ping rancher.k8s.mysite.com
+docker ps
+vim /etc/hosts
+ps aux | grep nginx
+docker ps | grep nginx
+docker ps | grep proxy
+su - rancher 
+ls
+cd dir1
+vim cleannode.sh
+docker image ls
+docker ps
+docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
+docker ps
+rke up --config ./rancher-cluster.yml
+su - rancher 
+cd ssl
+ls
+./create_self-signed-cert.sh --ssl-domain=rancher.localk8s.com
+kubectl create namespace cattle-system
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+systemctl start named
+systemctl status named
+systemctl restart named
+cat /etc/resolv.conf 
+vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+systemctl restart network
+nslookup rancher.localk8s.com
+nslookup baidu.com
+systemctl restart network
+cat /etc/resolv.conf 
+vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+nslookup baidu.com
+nslookup rancher.localk8s.com
+systemctl restart network
+nslookup rancher.localk8s.com
+nslookup baidu.com
+vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+nslookup baidu.com
+nslookup rancher.localk8s.com
+ping rancher.localk8s.com
+cat /etc/resolv.conf 
+systemctl restart network
+ping rancher.localk8s.com
+nslookup rancher.localk8s.com
+yum provides nslookup
+yum install bind-utils
+nslookup rancher.localk8s.com
+cat /etc/resolv.conf 
+vim /etc/resolv.conf
+ansible nodes -m synchronize -a 'src=/etc/hosts dest=/etc/hosts'
+cat /etc/resolv.conf 
+ping rancher.localk8s.com
+helm install rancher rancher/
+helm uninstall rancher 
+helm -n cattle-system install rancher rancher/
+ls
+kubectl get all -n ingress-nginx 
+kubectl run -ti --rm alpine --image=alpine -- sh
+ping 172.16.20.112.xip.io
+named-checkzone "localk8s.com" "/var/named/localk8s.com.zone"
+systemctl restart named
+cat /etc/hosts
+ping rancher.localk8s.com
+netstat -tnlp 
+netstat -tnlp  |grep named
+ansible nodes -m synchronize -a 'src=/etc/resolv.conf dest=/etc/resolv.conf'
+ansible nodes -m shell -a 'systemctl restart network'
+ansible nodes -m shell -a 'ping rancher.localk8s.com'
+vim /etc/hosts
+ansible nodes -m synchronize -a 'src=/etc/hosts dest=/etc/hosts'
+kubectl run -ti --rm alpine --image=alpine -- sh
+cat /etc/resolv.conf 
+systemctl stop named.service 
+yum remove bind
+ansible nodes -m synchronize -a 'src=/etc/resolv.conf dest=/etc/resolv.conf'
+curl 172.16.20.110.xip.io
+ping 172.16.20.110.xip.io
+ping rancher.172.16.20.110.xip.io
+helm -n cattle-system uninstall rancher 
+cat /etc/resolv.conf 
+ping rancher.localk8s.com
+yum install bind
+cp /etc/named.conf /etc/named.conf.backup
+vim /etc/named.conf
+helm -n cattle-system install rancher rancher/
+su - rancher 
+sh dir1/cleannode.sh 
+docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
+docker ps
+su - rancher 
+kubectl create namespace cattle-system
+cd ssl
+./create_self-signed-cert.sh --ssl-domain=rancher.172.16.20.110.xip.io
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+cd
+helm -n cattle-system install rancher rancher/
+cp -a /home/rancher/kube_config_rancher-cluster.yml .kube/config
+. .bashrc
+echo $KUBECONFIG 
+vim rancher/values.yaml 
+k9s
+docker ps
+docker ps -a
+netstat -tnlp
+ps aux
+k9s
+cd
+mv dir1/test-kube-config.yml dir1/test1-kube-config.yml 
+kubectl --kubeconfig dir1/test1-kube-config.yml get pod
+kubecm completion bash > ~/.kube/kubecm.bash.inc
+. .bashrc
+vim rancher/values.yaml 
+cd
+kubectl --kubeconfig dir1/test1-kube-config.yml get pod
+kubectl --kubeconfig dir1/test1-kube-config.yml get node
+kubectl get node
+cd /home/rancher/
+ls
+mkdir backup
+ls
+mv kube_config_rancher-cluster.yml rancher-cluster.rkestate rancher-cluster.yml backup/
+cp -a backup/* ./
+ls
+ls backup/
+cd /dowload/
+ls
+tar xf kubecm_0.8.3_Linux_x86_64.tar.gz 
+ls
+mv kubecm /usr/local/bin/
+cd /dow
+cd /dowload/
+ls
+cd /root/dir1
+ls
+vim test-kube-config.yml
+kubecm add -f dir1/test1-kube-config.yml -c
+cd dir1
+ls
+cd
+kubecm add -f dir1/test1-kube-config.yml -c
+cp -a /home/rancher/kube_config_rancher-cluster.yml .kube/config 
+kubecm add -f dir1/test1-kube-config.yml -n test1
+cp -a /home/rancher/kube_config_rancher-cluster.yml .kube/config
+. .bashrc
+cp -a /home/rancher/kube_config_rancher-cluster.yml .kube/config 
+mv dir1/test1-kube-config.yml dir1/test1.yml
+kubecm add -f dir1/test1.yml 
+kubecm add -f dir1/test1.yml -c
+kubectl --kubeconfig dir1/test1.yml get pod
