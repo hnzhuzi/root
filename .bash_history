@@ -52608,3 +52608,47 @@ mv dir1/test1-kube-config.yml dir1/test1.yml
 kubecm add -f dir1/test1.yml 
 kubecm add -f dir1/test1.yml -c
 kubectl --kubeconfig dir1/test1.yml get pod
+rm -f config.yaml 
+vim dir1/init.sh 
+rm -f localk8s.com.zone 
+git status
+rm -f anaconda-ks.cfg 
+cd dir1
+ls
+cd
+git remote show
+git add --all ./ && git commit -m '20200908' && git push 
+git config --global user.email "root@gmail.com"
+git config --global user.name "root"
+git add --all ./ && git commit -m '20200908' && git push 
+git status
+vim
+cd /etc/ansible/
+ls
+ls roles/
+cd
+netstat -tnlp
+netstat -tnlp | grep 10252
+netstat -tnlp | grep 10251
+k9s
+kubectl get pod
+kubect get node
+kubectl get node
+docker ps | grep kubelet
+docker logs 45fd
+kubectl get node
+ps aux |grep kubelet
+ps aux |grep control
+ps aux |grep sche
+docker ps | grep kubelet
+docker restart 45fd
+docker ps | grep kubelet
+kubectl get node
+ls /root/dir1/cleannode.sh 
+ansible node13 -m synchronize -a 'src=/root/dir1/cleannode.sh dest=/root/dir1/cleannode.sh'
+ansible node13 -m synchronize -a 'src=/root/dir1/cleannode.sh dest=/root/cleannode.sh'
+ansible node11 -m script -a '/root/dir1/cleannode.sh'
+ansible nodes -m script -a '/root/dir1/cleannode.sh'
+ansible node11 -m script -a '/root/dir1/cleannode.sh'
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.7 --server https://rancher.172.16.20.110.xip.io --token nxqpbr7hd7blcrq74v9sx9p8wnc6t6mtvqr97zg5wwjjctj24smhmm --ca-checksum 0acf40073f382064ea8dcc93c2e037502a7957139ec6c4c826d3d9a1e817a377 --address 172.16.20.111 --etcd --controlplane
+telnet node11 2379

@@ -1,0 +1,3 @@
+kubeasz部署时注意:
+1. 注意修改coontroller-manager, scheduler监听地址: --address=0.0.0.0
+2. yum -y install python python-pip python-netaddr
