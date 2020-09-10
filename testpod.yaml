@@ -161,6 +161,7 @@ spec:
                   # - node-affinity-pod
               # topologyKey: kubernetes.io/hostname
       # tolerations:
+      # - operator: Exists
       # - key: node-role.kubernetes.io/master
         # operator: Exists
         # value: value

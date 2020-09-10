@@ -52652,3 +52652,29 @@ ansible nodes -m script -a '/root/dir1/cleannode.sh'
 ansible node11 -m script -a '/root/dir1/cleannode.sh'
 sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.7 --server https://rancher.172.16.20.110.xip.io --token nxqpbr7hd7blcrq74v9sx9p8wnc6t6mtvqr97zg5wwjjctj24smhmm --ca-checksum 0acf40073f382064ea8dcc93c2e037502a7957139ec6c4c826d3d9a1e817a377 --address 172.16.20.111 --etcd --controlplane
 telnet node11 2379
+cd /opt/rke/etcd-snapshots
+ls
+cd
+cd other/
+ls
+cd
+ls
+vim index.html 
+rm -f index.html 
+vim 收集.docx 
+ls
+cd other/
+ls
+vim note.txt
+cd
+rm -f 收集.docx 
+git status
+git add --all ./ && git commit -m '20200908' && git push 
+git status
+kubecm add -f dir1/test1.yml -c
+kubectl -n kube-system get events
+kubectl get events --all-namespaces 
+kubectl get pods --all-namespaces -o go-template='{{range .items}}{{if eq .status.phase "Failed"}}{{if eq .status.reason "Evicted"}}{{.metadata.name}}{{" "}}{{.metadata.namespace}}{{"\n"}}{{end}}{{end}}{{end}}'
+kubectl get pods --all-namespaces -o go-template='{{range .items}}{{if eq .status.phase "Failed"}}{{if eq .status.reason "Evicted"}}{{.metadata.name}}{{" "}}{{.metadata.namespace}}{{"\n"}}{{end}}{{end}}{{end}}' | while read epod enamespace; do kubectl -n $enamespace delete pod $epod; done
+kubectl get pods --all-namespaces -o go-template='{{range .items}}{{if eq .status.phase "Failed"}}{{if eq .status.reason "Evicted"}}{{.metadata.name}}{{" "}}{{.metadata.namespace}}{{"\n"}}{{end}}{{end}}{{end}}' | while read epod enamespace; do kubectl -n $enamespace get pod $epod -o=custom-columns=NAME:.metadata.name,NODE:.spec.nodeName,MSG:.status.message; done
+kubectl run -it --rm --restart=Never busybox --image=busybox:1.28 -- nslookup kubernetes.default
