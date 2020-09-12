@@ -30,6 +30,7 @@ data:
       {{- else if eq $type "gcs" }}
       gcs:
         bucket: {{ $storage.gcs.bucket }}
+        keyfile: /etc/registry/gcs-key.json
         {{- if $storage.gcs.rootdirectory }}
         rootdirectory: {{ $storage.gcs.rootdirectory }}
         {{- end }}
@@ -45,6 +46,9 @@ data:
         {{- end }}
         {{- if $storage.s3.encrypt }}
         encrypt: {{ $storage.s3.encrypt }}
+        {{- end }}
+        {{- if $storage.s3.keyid }}
+        keyid: {{ $storage.s3.keyid }}
         {{- end }}
         {{- if $storage.s3.secure }}
         secure: {{ $storage.s3.secure }}
@@ -136,32 +140,56 @@ data:
           enabled: false
       delete:
         enabled: true
+      redirect:
+        disable: {{ $storage.disableredirect }}
     redis:
       addr: "{{ template "harbor.redis.host" . }}:{{ template "harbor.redis.port" . }}"
-      password: {{ template "harbor.redis.rawPassword" . }}
       db: {{ template "harbor.redis.registryDatabaseIndex" . }}
     http:
-      addr: :5000
+      addr: :{{ template "harbor.registry.containerPort" . }}
+      relativeurls: {{ .Values.registry.relativeurls }}
+      {{- if .Values.internalTLS.enabled }}
+      tls:
+        certificate: /etc/harbor/tls/registry.crt
+        key: /etc/harbor/tls/registry.key
+        minimumtls: tls1.2
+      {{- end }}
       # set via environment variable
       # secret: placeholder
       debug:
         addr: localhost:5001
     auth:
-      token:
-        issuer: harbor-token-issuer
-        realm: "{{ .Values.externalURL }}/service/token"
-        rootcertbundle: /etc/registry/root.crt
-        service: harbor-registry
-    notifications:
-      endpoints:
-        - name: harbor
-          disabled: false
-          url: http://{{ template "harbor.core" . }}/service/notifications
-          timeout: 3000ms
-          threshold: 5
-          backoff: 1s
+      htpasswd:
+        realm: harbor-registry-basic-realm
+        path: /etc/registry/passwd
+    validation:
+      disabled: true
+
+    {{- if .Values.registry.middleware.enabled }}
+    {{- $middleware := .Values.registry.middleware }}
+    {{- $middlewareType := $middleware.type }}
+    {{- if eq $middlewareType "cloudFront" }}
+    middleware:
+      storage:
+        - name: cloudfront
+          options:
+            baseurl: {{ $middleware.cloudFront.baseurl }}
+            privatekey: /etc/registry/pk.pem
+            keypairid: {{ $middleware.cloudFront.keypairid }}
+            duration: {{ $middleware.cloudFront.duration }}
+            ipfilteredby: {{ $middleware.cloudFront.ipfilteredby }}
+    {{- end }}
+    {{- end }}
   ctl-config.yml: |+
     ---
+    {{- if .Values.internalTLS.enabled }}
+    protocol: "https"
+    port: 8443
+    https_config:
+      cert: "/etc/harbor/ssl/registryctl.crt"
+      key: "/etc/harbor/ssl/registryctl.key"
+    {{- else }}
     protocol: "http"
     port: 8080
+    {{- end }}
     log_level: {{ .Values.logLevel }}

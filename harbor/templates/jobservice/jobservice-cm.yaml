@@ -6,8 +6,14 @@ metadata:
 {{ include "harbor.labels" . | indent 4 }}
 data:
   config.yml: |+
-    protocol: "http"
-    port: 8080
+    #Server listening port
+    protocol: "{{ template "harbor.component.scheme" . }}"
+    port: {{ template "harbor.jobservice.containerPort". }}
+    {{- if .Values.internalTLS.enabled }}
+    https_config:
+      cert: "/etc/harbor/ssl/job_service.crt"
+      key: "/etc/harbor/ssl/job_service.key"
+    {{- end }}
     worker_pool:
       workers: {{ .Values.jobservice.maxJobWorkers }}
       backend: "redis"
@@ -37,4 +43,3 @@ data:
     loggers:
       - name: "STD_OUTPUT"
         level: {{ .Values.logLevel | upper }}
-    admin_server: "http://{{ template "harbor.adminserver" . }}"

@@ -52678,3 +52678,648 @@ kubectl get pods --all-namespaces -o go-template='{{range .items}}{{if eq .statu
 kubectl get pods --all-namespaces -o go-template='{{range .items}}{{if eq .status.phase "Failed"}}{{if eq .status.reason "Evicted"}}{{.metadata.name}}{{" "}}{{.metadata.namespace}}{{"\n"}}{{end}}{{end}}{{end}}' | while read epod enamespace; do kubectl -n $enamespace delete pod $epod; done
 kubectl get pods --all-namespaces -o go-template='{{range .items}}{{if eq .status.phase "Failed"}}{{if eq .status.reason "Evicted"}}{{.metadata.name}}{{" "}}{{.metadata.namespace}}{{"\n"}}{{end}}{{end}}{{end}}' | while read epod enamespace; do kubectl -n $enamespace get pod $epod -o=custom-columns=NAME:.metadata.name,NODE:.spec.nodeName,MSG:.status.message; done
 kubectl run -it --rm --restart=Never busybox --image=busybox:1.28 -- nslookup kubernetes.default
+ping 10.124.0.61
+ssh 10.124.0.61
+git status
+git add --all ./ && git commit -m '20200910' && git push 
+cd /dowload/
+ls
+ls tmp
+#1599706707
+history -a
+#1599706763
+wc -l .bash_history 
+#1599706799
+history -a
+#1599718878
+vim /etc/ansible/roles/prepare/tasks/main.yml 
+#1599721658
+ping 10.124.0.61
+#1599721665
+
+#1599721708
+ping 10.124.0.250
+#1599721804
+ping 10.124.0.240
+#1599721818
+ping 10.124.0.245
+#1599722399
+ls
+#1599722416
+ansible-playbook 90.setup.yml
+#1599722425
+cd /etc/ansible/
+#1599722426
+ls
+#1599722431
+ansible-playbook 90.setup.yml
+#1599722717
+cd
+#1599722719
+k9s
+#1599723048
+ls
+#1599723084
+helm repo list
+#1599723093
+helm repo add stable http://mirror.azure.cn/kubernetes/charts/
+#1599723109
+helm repo list
+#1599723113
+helm repo update
+#1599723119
+ls
+#1599723142
+yum -y install nfs-utils
+#1599723162
+systemctl enable nfs-server && systemctl start nfs-server
+#1599723204
+man nfs.conf
+#1599723252
+man exports
+#1599723353
+mkdir /nfs
+#1599723375
+systemctl restart nfs-server
+#1599723406
+showmout -e
+#1599723496
+showmount 
+#1599723499
+showmount -e
+#1599723701
+netstat -tnlp 
+#1599723704
+netstat -tnlp  | grep nfs
+#1599723709
+
+#1599723806
+systemctl restart nfs-server
+#1599723824
+ls /nfs
+#1599723834
+systemctl restart nfs-server
+#1599723900
+netstat -tunlp  | grep nfs
+#1599723907
+netstat -tunlp  | grep rpc
+#1599724039
+showmount -e
+#1599724114
+mount -t nfs 10.124.0.61:/share /mnt
+#1599724146
+systemctl restart nfs-server
+#1599724193
+showmount -e
+#1599724378
+ls /nfs
+#1599724410
+journalctl -n 50 -f -u nfs-server
+#1599724424
+systemctl status nfs-server
+#1599724474
+systemctl stop nfs-server
+#1599724480
+systemctl status nfs-server
+#1599724485
+systemctl start nfs-server
+#1599724489
+systemctl status nfs-server
+#1599724629
+systemctl restart nfs-server
+#1599724635
+systemctl status nfs-server
+#1599724671
+ls /nfs
+#1599724676
+systemctl restart nfs-server
+#1599724678
+systemctl status nfs-server
+#1599724726
+systemctl restart nfs-server
+#1599724731
+systemctl status nfs-server
+#1599724742
+netstat -tnlp |grep rpc
+#1599724771
+kill -9 2606 28743 2605 
+#1599724774
+netstat -tnlp |grep rpc
+#1599724779
+systemctl start nfs-server
+#1599724783
+systemctl status nfs-server
+#1599724825
+showmount -e
+#1599724913
+systemctl restart nfs-server
+#1599724918
+showmount -e
+#1599724965
+man exports
+#1599724995
+systemctl restart nfs-server
+#1599725019
+systemctl stop nfs-server
+#1599725022
+ls
+#1599725032
+netstat -tnlp
+#1599725037
+netstat -tnlp | grep rpcbind
+#1599725045
+netstat -tnlp | grep rpc
+#1599725181
+systemctl restart nfs-server
+#1599725259
+systemctl stop nfs-server
+#1599725266
+netstat -tnlp | grep rpc
+#1599725287
+kill -9 29728 29727 29728
+#1599725292
+systemctl start nfs-server
+#1599725297
+netstat -tnlp | grep rpc
+#1599725331
+ls /nfs
+#1599725343
+chmod 777 /nfs
+#1599725352
+ll -d /nfs
+#1599725392
+ls /nfs
+#1599725982
+vim nfs-client-provisioner/Chart.yaml 
+#1599726034
+helm repo update
+#1599726075
+helm pull -h
+#1599726124
+docker pull stable/nfs-client-provisioner -d /tmp
+#1599726140
+cd /tmp
+#1599726163
+helm pull --untar stable/nfs-client-provisioner -d /tmp
+#1599726167
+ls
+#1599726196
+vimdiff /root/nfs-client-provisioner/values.yaml /tmp/nfs-client-provisioner/values.yaml 
+#1599726596
+vim /tmp/nfs-client-provisioner/values.yaml
+#1599726698
+mv /root/nfs-client-provisioner /tmp/nfs-client-provisioner_bak
+#1599726710
+mv /tmp/nfs-client-provisioner /root
+#1599726713
+ls
+#1599726715
+cd
+#1599726716
+ls
+#1599726805
+kubectl config set-context  context-cluster1-admin --namespace kube-system
+#1599726810
+kubectl get pod
+#1599728162
+helm search repo nfs
+#1599729213
+grep -r additionalLabels nginx-ingress/
+#1599731160
+kubectl --kubeconfig /root/dir1/cluster/message-center-dev.yml get node
+#1599725982
+vim nfs-client-provisioner/Chart.yaml 
+#1599726034
+helm repo update
+#1599726075
+helm pull -h
+#1599726124
+docker pull stable/nfs-client-provisioner -d /tmp
+#1599726140
+cd /tmp
+#1599726163
+helm pull --untar stable/nfs-client-provisioner -d /tmp
+#1599726167
+ls
+#1599726196
+vimdiff /root/nfs-client-provisioner/values.yaml /tmp/nfs-client-provisioner/values.yaml 
+#1599726596
+vim /tmp/nfs-client-provisioner/values.yaml
+#1599726698
+mv /root/nfs-client-provisioner /tmp/nfs-client-provisioner_bak
+#1599726710
+mv /tmp/nfs-client-provisioner /root
+#1599726713
+ls
+#1599726715
+cd
+#1599726716
+ls
+#1599726805
+kubectl config set-context  context-cluster1-admin --namespace kube-system
+#1599726810
+kubectl get pod
+#1599726865
+helm -n kube-sys install rancher rancher/
+#1599726895
+helm -n kube-system install nfs-client-provisioner nfs-client-provisioner/
+#1599727022
+vim metallb/values.yaml 
+#1599727031
+vim metallb/Chart.yaml 
+#1599727060
+helm pull --untar stable/metallb -d /tmp
+#1599727092
+vimdiff /root/metallb/values.yaml /tmp/metallb/values.yaml 
+#1599727390
+vim /etc/ansible/roles/docker/templates/daemon.json.j2 
+#1599727420
+vim /etc/ansible/roles/docker/defaults/main.yml 
+#1599727462
+mv /root/metallb /tmp/metallb_bak
+#1599727471
+mv /tmp/metallb /root
+#1599727495
+helm -n kube-system install metallb metallb/
+#1599727559
+helm -n kube-system uninstall metallb 
+#1599727783
+helm pull --untar bitnami/metallb -d /tmp
+#1599727804
+vimdiff /root/metallb/values.yaml /tmp/metallb/values.yaml 
+#1599727896
+vim /tmp/metallb/values.yaml
+#1599729807
+rm -rf /root/metallb/
+#1599729819
+mv /tmp/metallb /root
+#1599729858
+helm -n kube-system install metallb metallb/
+#1599730022
+helm ls
+#1599743645
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 delete deployments.apps devops-front-global 
+#1599743697
+
+#1599743701
+vim tmp.yml
+#1599742181
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 apply -f tmp.yml 
+#1599742360
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 describe deployments.apps devops-front-global 
+#1599742847
+vim
+#1599743361
+vim tmp.yml 
+#1599741455
+
+#1599741683
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 apply -f tmp.yml 
+#1599741738
+kubectl --kubeconfig cluster/it-devops-dev.yml get ns
+#1599741765
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 describe deployments.apps devops-front-global 
+#1599741818
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 describe resourcequotas 
+#1599741825
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 describe resourcequotas dev-devops-test3-quota75b845072eb24f59a46acdd7a7269104 
+#1599741855
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 edit resourcequotas dev-devops-test3-quota75b845072eb24f59a46acdd7a7269104 
+#1599740544
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 delete pod devops-front-global-5c4b8fcfb4-hdz6g --force --grace-period=0
+#1599740599
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 get pod devops-front-global-5c4b8fcfb4-hdz6g
+#1599740609
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 get pod devops-front-global-5c4b8fcfb4-rtcgm 
+#1599740614
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 get pod devops-front-global-5c4b8fcfb4-rtcgm
+#1599741094
+vim tmp.yml
+#1599736573
+k9s --kubeconfig cluster/message-center-dev.yml
+#1599783504
+k9s --kubeconfig cluster/it-devops-dev.yml 
+#1599784563
+ls
+#1599784862
+docker pull docker.io/bitnami/metallb-speaker:0.9.3-debian-10-r148
+#1599784875
+docker rmi docker.io/bitnami/metallb-speaker:0.9.3-debian-10-r148
+#1599784670
+helm -n kube-system install metallb metallb/
+#1599784963
+helm search repo nginx-ingress
+#1599785140
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+#1599785146
+helm repo update
+#1599785197
+helm search repo nginx-ingress
+#1599785217
+helm search repo ingress
+#1599785299
+helm pull --untar ingress-nginx/ingress-nginx -d /tmp
+#1599785320
+vimdiff /root/nginx-ingress/values.yaml /tmp/ingress-nginx/values.yaml 
+#1599785417
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+#1599785424
+helm repo list
+#1599785435
+helm repo update
+#1599785481
+helm search repo nfs
+#1599785491
+helm list
+#1599784941
+vim
+#1599788515
+ls
+#1599788524
+ls helm
+#1599788526
+ls
+#1599788538
+mv helm/ dir1/
+#1599788539
+ls
+#1599788602
+helm serarch gitlab-ce
+#1599788730
+helm pull --untar stable/gitlab-ce -d /tmp
+#1599788752
+vimdiff gitlab-ce/values.yaml /tmp/gitlab-ce/values.yaml 
+#1599788628
+helm search repo gitlab-ce
+#1599788670
+helm repo update
+#1599788686
+helm search repo gitlab-ce
+#1599786910
+mv /root/nginx-ingress /tmp/nginx-ingress_bak
+#1599786920
+mv /tmp/ingress-nginx /root
+#1599786943
+helm -n kube-system install ingress-nginx ingress-nginx/
+#1599790402
+mv gitlab-ce /tmp/gitlab-ce_bak
+#1599790409
+mv /tmp/gitlab-ce /root
+#1599790429
+ls
+#1599790455
+helm -n kube-system install gitlab-ce gitlab-ce/
+#1599791835
+cd gitlab-ce/
+#1599791868
+grep extensions/v1beta1
+#1599791904
+grep -r 'extensions\/v1beta1' ./
+#1599792105
+helm -n kube-system install gitlab-ce gitlab-ce/
+#1599789322
+vim gitlab-ce/values.yaml 
+#1599784110
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 delete -f tmp.yml
+#1599784195
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 apply -f tmp.yml
+#1599784303
+docker pull 172.16.96.87:8443/deepexi-devops-ci-service/dev â”‚
+#1599784304
+â”‚ -devops/devops-front-global:devops-front-global-develop-20200904105309-1761
+#1599784555
+ls
+#1599784583
+vim metallb/values.yaml 
+#1599783820
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 apply -f tmp.yml 
+#1599783821
+ ’6#’6
+#1599783832
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 delete -f tmp.yml 
+#1599783880
+kubectl --kubeconfig cluster/it-devops-dev.yml -n dev-devops-test3 apply -f tmp.yml 
+#1599783930
+vim tmp.yml 
+#1599793439
+ls /nfs
+#1599794001
+ls
+#1599794477
+ls /tmp
+#1599794488
+helm ls
+#1599796107
+helm repo add harbor https://helm.goharbor.io
+#1599796122
+helm repo update
+#1599793475
+k9s
+#1599794462
+helm search repo harbor
+#1599796250
+vim
+#1599806304
+mv harbor /tmp/harbor_bak
+#1599806308
+mv /tmp/harbor /root
+#1599806335
+helm -n kube-system install harbor harbor/
+#1599796293
+helm pull --untar harbor/harbor -d /tmp
+#1599796311
+vimdiff harbor/values.yaml /tmp/harbor/values.yaml 
+#1599805242
+helm ls
+#1599807556
+helm -n kube-system uninstall gitlab-ce gitlab-ce/
+#1599809588
+helm -n kube-system install gitlab-ce gitlab-ce/
+#1599793370
+k9s
+#1599810093
+k9s
+#1599810376
+helm -n kube-system install gitlab-ce gitlab-ce/
+#1599810460
+helm -n kube-system uninstall gitlab-ce 
+#1599810581
+ping 10.124.0.64
+#1599810975
+ansible 10.124.0.64 -m ping
+#1599811472
+ssh 10.124.0.64
+#1599812804
+ping 10.124.0.64
+#1599813642
+helm -n kube-system uninstall gitlab-ce 
+#1599796691
+vim harbor/values.yaml
+#1599814286
+kubectl get pod 
+#1599814296
+kubectl get pod -o wide
+#1599814316
+kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed'
+#1599814360
+kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed' | awk 'NR>=2'
+#1599814367
+kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed' | awk 'NR>=2{print $2}'
+#1599814406
+kubectl delete pod `kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed' | awk 'NR>=2{print $2}'`
+#1599814555
+kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed' | awk 'NR>=2{print $2}
+#1599814573
+kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed' | awk 'NR>=2{print $2}'
+#1599815339
+easzctl del-node 10.124.0.64
+#1599815483
+easzctl add-node 10.124.0.64
+#1599812922
+helm -n kube-system install gitlab-ce gitlab-ce/
+#1599815641
+vim
+#1599815006
+vim /etc/ansible/roles/prepare/templates/95-k8s-sysctl.conf.j2 
+#1599805998
+vim
+#1599794515
+vim harbor/Chart.yaml 
+#1599823459
+vimdiff /tmp/gitlab-ce_bak/values.yaml gitlab-ce/values.yaml 
+#1599824031
+ping harbor.10.124.0.245.xip.io
+#1599816092
+k9s
+#1599825547
+helm install --dry-run --debug gitlab-ce
+#1599825598
+helm install --dry-run --debug stable/nfs-client-provisioner
+#1599825618
+helm install --dry-run --debug abc stable/nfs-client-provisioner
+#1599825652
+helm install --dry-run --debug abc gitlab-ce
+#1599825672
+helm install --dry-run --debug abc gitlab-ce > tmp.txt
+#1599825679
+cat tmp.txt
+#1599824274
+vim
+#1599816253
+helm -n kube-system install gitlab-ce gitlab-ce/
+#1599825908
+helm install --dry-run --debug abc gitlab-ce > tmp.txt
+#1599825688
+vim tmp.txt
+#1599825974
+helm install --dry-run --debug abc gitlab-ce > tmp.txt
+#1599816195
+vim gitlab-ce/values.yaml 
+#1599826927
+cd dir1
+#1599826927
+ls
+#1599826937
+cd mydemo1
+#1599826940
+ls
+#1599826943
+git status
+#1599826951
+ls
+#1599826965
+cd ../
+#1599826966
+ls
+#1599826977
+rm -rf mydemo1 mydemo2
+#1599827042
+git clone https://github.com/hnzhuzi/mydemo1.git
+#1599827134
+git remote add gitlab http://gitlab.10.124.0.245.xip.io/root/mydemo1.git
+#1599827142
+git remote show
+#1599827167
+git push gitlab
+#1599827226
+git push gitlab master 
+#1599827319
+cd
+#1599827323
+git remote show
+#1599827330
+git remote remove gitlab 
+#1599827340
+cd dir1
+#1599827342
+ls
+#1599827353
+top
+#1599827367
+cd mydemo1/
+#1599827367
+ls
+#1599827375
+git status
+#1599827382
+git remote show
+#1599827398
+git remote add gitlab http://gitlab.10.124.0.245.xip.io/root/mydemo1.git
+#1599827402
+ls
+#1599827414
+git push gitlab 
+#1599827429
+git push gitlab master
+#1599827868
+docker pull alpine
+#1599827994
+docker rmi alpine
+#1599828037
+docker pull nginx:alpine
+#1599828138
+docker tag nginx:alpine harbor.10.124.0.245.xip.io/library/nginx:alpine
+#1599828141
+docker push harbor.10.124.0.245.xip.io/library/nginx:alpine
+#1599828183
+docker login -u admin -p Harbor12345 harbor.10.124.0.245.xip.io
+#1599828191
+docker push harbor.10.124.0.245.xip.io/library/nginx:alpine
+#1599828310
+docekr rmi nginx:alpine
+#1599828315
+docker rmi nginx:alpine
+#1599828326
+docker rmi harbor.10.124.0.245.xip.io/library/nginx:alpine
+#1599828334
+docker pull harbor.10.124.0.245.xip.io/library/nginx:alpine
+#1599823307
+helm -n kube-system uninstall gitlab-ce 
+#1599816165
+vim
+#1599742402
+k9s --kubeconfig cluster/it-devops-dev.yml 
+#1599736918
+kubectl --kubeconfig cluster/message-center-dev.yml -n message-center get pod
+#1599738064
+ls
+#1599738076
+cd cluster/
+#1599738077
+vim
+#1599739487
+ls
+#1599739492
+vim
+#1599739542
+ls
+#1599739553
+mv it-devops-dev it-devops-dev.yml
+#1599741654
+cd
+#1599741659
+vim tmp-bak.yml 
+#1599718805
+vim /etc/ansible/hosts
+#1599893658
+helm repo list

@@ -1,3 +1,7 @@
 kubeasz部署时注意:
 1. 注意修改coontroller-manager, scheduler监听地址: --address=0.0.0.0
 2. yum -y install python python-pip python-netaddr
+
+
+k8s 1.16版本后，相关资源对象版本变更，比如deployment的apiVersion: extensions/v1beta1变成apps/v1,并且
+其spec必须添加selector matchLabels属性。

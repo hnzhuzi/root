@@ -1,5 +1,5 @@
-apiVersion: extensions/v1beta1
-# apiVersion: apps/v1
+# apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 # kind: DaemonSet
 metadata:
@@ -163,7 +163,7 @@ spec:
       # tolerations:
       # - operator: Exists
       # - key: node-role.kubernetes.io/master
-        # operator: Exists
+        # operator: Equal|Exists
         # value: value
         # effect: NoSchedule #NoSchedule PreferNoSchedule NoExecute
 

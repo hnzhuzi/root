@@ -1,6 +1,7 @@
 images/
 go/
 ssl/
+cluster/
 .*
 !.bash_history
 !.gitignore

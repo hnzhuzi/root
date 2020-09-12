@@ -6,8 +6,8 @@ metadata:
 {{ include "harbor.labels" . | indent 4 }}
 spec:
   ports:
-    - port: 80
-      targetPort: 80
+    - port: {{ template "harbor.portal.servicePort" . }}
+      targetPort: {{ template "harbor.portal.containerPort" . }}
   selector:
 {{ include "harbor.matchLabels" . | indent 4 }}
     component: portal

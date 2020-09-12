@@ -1,7 +1,7 @@
 ## Bitnami Redis image version
 ## ref: https://hub.docker.com/r/bitnami/redis/tags/
 ##
-image: harbor.k8s.maimaiti.site/library/redis:3.2.9-r2
+image: bitnami/redis:3.2.9-r2
 
 ## Specify a imagePullPolicy
 ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
@@ -57,10 +57,10 @@ metrics:
 ## Configure resource requests and limits
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
-resources:
-  requests:
-    memory: 256Mi
-    cpu: 100m
+# resources:
+  # requests:
+    # memory: 256Mi
+    # cpu: 100m
 
 ## Node labels and tolerations for pod assignment
 ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector

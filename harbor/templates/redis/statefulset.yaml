@@ -24,6 +24,15 @@ spec:
 {{ toYaml .Values.redis.podAnnotations | indent 8 }}
 {{- end }}
     spec:
+      securityContext:
+        fsGroup: 999
+{{- if .Values.redis.internal.serviceAccountName }}
+      serviceAccountName: {{ .Values.redis.internal.serviceAccountName }}
+{{- end -}}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
       - name: redis
         image: {{ .Values.redis.internal.image.repository }}:{{ .Values.redis.internal.image.tag }}
@@ -31,15 +40,17 @@ spec:
         livenessProbe:
           tcpSocket:
             port: 6379
-          initialDelaySeconds: 1
+          initialDelaySeconds: 300
           periodSeconds: 10
         readinessProbe:
           tcpSocket:
             port: 6379
           initialDelaySeconds: 1
           periodSeconds: 10
+{{- if .Values.redis.internal.resources }}
         resources:
 {{ toYaml .Values.redis.internal.resources | indent 10 }}
+{{- end }}
         volumeMounts:
         - name: data
           mountPath: /var/lib/redis

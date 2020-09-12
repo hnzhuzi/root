@@ -6,11 +6,18 @@ metadata:
   labels:
 {{ include "harbor.labels" . | indent 4 }}
 data:
-  PORT: "9999"
+  PORT: "{{ template "harbor.chartmuseum.containerPort" . }}"
+{{- if .Values.internalTLS.enabled }}
+  TLS_CERT: "/etc/harbor/ssl/chartmuseum.crt"
+  TLS_KEY: "/etc/harbor/ssl/chartmuseum.key"
+{{- end }}
   CACHE: "redis"
   CACHE_REDIS_ADDR: "{{ template "harbor.redis.host" . }}:{{ template "harbor.redis.port" . }}"
   CACHE_REDIS_DB: "{{ template "harbor.redis.chartmuseumDatabaseIndex" . }}"
   BASIC_AUTH_USER: "chart_controller"
+{{- if .Values.chartmuseum.absoluteUrl }}
+  CHART_URL: {{ .Values.externalURL }}/chartrepo
+{{- end }}
   DEPTH: "1"
 {{- if eq .Values.logLevel "debug" }}
   DEBUG: "true"
@@ -22,11 +29,8 @@ data:
   DISABLE_API: "false"
   DISABLE_STATEFILES: "false"
   ALLOW_OVERWRITE: "true"
-  CHART_URL:
   AUTH_ANONYMOUS_GET: "false"
-  TLS_CERT:
-  TLS_KEY:
-  CONTEXT_PATH:
+  CONTEXT_PATH: ""
   INDEX_LIMIT: "0"
   MAX_STORAGE_OBJECTS: "0"
   MAX_UPLOAD_SIZE: "20971520"
@@ -41,10 +45,12 @@ data:
   STORAGE: "microsoft"
   STORAGE_MICROSOFT_CONTAINER: {{ $storage.azure.container }}
   AZURE_STORAGE_ACCOUNT: {{ $storage.azure.accountname }}
+  AZURE_BASE_URL: {{ $storage.azure.realm }}
   STORAGE_MICROSOFT_PREFIX: "/azure/harbor/charts"
 {{- else if eq $storageType "gcs" }}
   STORAGE: "google"
   STORAGE_GOOGLE_BUCKET: {{ $storage.gcs.bucket }}
+  GOOGLE_APPLICATION_CREDENTIALS: /etc/chartmuseum/gcs-key.json
   {{- if $storage.gcs.rootdirectory }}
   STORAGE_GOOGLE_PREFIX: {{ $storage.gcs.rootdirectory }}
   {{- end }}
@@ -61,36 +67,39 @@ data:
   {{- if $storage.s3.accesskey }}
   AWS_ACCESS_KEY_ID: {{ $storage.s3.accesskey }}
   {{- end }}
+  {{- if $storage.s3.keyid }}
+  STORAGE_AMAZON_SSE: aws:kms
+  {{- end }}
 {{- else if eq $storageType "swift" }}
   STORAGE: "openstack"
   STORAGE_OPENSTACK_CONTAINER: {{ $storage.swift.container }}
-  {{- if $storage.swift.secretkey }}
+  {{- if $storage.swift.prefix }}
   STORAGE_OPENSTACK_PREFIX: {{ $storage.swift.prefix }}
   {{- end }}
-  {{- if $storage.swift.secretkey }}
+  {{- if $storage.swift.region }}
   STORAGE_OPENSTACK_REGION: {{ $storage.swift.region }}
   {{- end }}
   OS_AUTH_URL: {{ $storage.swift.authurl }}
   OS_USERNAME: {{ $storage.swift.username }}
-  {{- if $storage.swift.secretkey }}
+  {{- if $storage.swift.tenantid }}
   OS_PROJECT_ID: {{ $storage.swift.tenantid }}
   {{- end }}
-  {{- if $storage.swift.secretkey }}
+  {{- if $storage.swift.tenant }}
   OS_PROJECT_NAME: {{ $storage.swift.tenant }}
   {{- end }}
-  {{- if $storage.swift.secretkey }}
+  {{- if $storage.swift.domainid }}
   OS_DOMAIN_ID: {{ $storage.swift.domainid }}
   {{- end }}
-  {{- if $storage.swift.secretkey }}
+  {{- if $storage.swift.domain }}
   OS_DOMAIN_NAME: {{ $storage.swift.domain }}
   {{- end }}
 {{- else if eq $storageType "oss" }}
   STORAGE: "alibaba"
   STORAGE_ALIBABA_BUCKET: {{ $storage.oss.bucket }}
-  {{- if $storage.oss.secretkey }}
+  {{- if $storage.oss.rootdirectory }}
   STORAGE_ALIBABA_PREFIX: {{ $storage.oss.rootdirectory }}
   {{- end }}
-  {{- if $storage.oss.secretkey }}
+  {{- if $storage.oss.endpoint }}
   STORAGE_ALIBABA_ENDPOINT: {{ $storage.oss.endpoint }}
   {{- end }}
   ALIBABA_CLOUD_ACCESS_KEY_ID: {{ $storage.oss.accesskeyid }}

@@ -11,7 +11,7 @@ image:
   pullPolicy: IfNotPresent
 
 nfs:
-  server: 10.83.22.223
+  server: 10.124.0.61
   path: /nfs
   mountOptions:
 
@@ -34,12 +34,13 @@ storageClass:
   allowVolumeExpansion: true
 
   # Method used to reclaim an obsoleted volume
-  # reclaimPolicy: Delete
-  reclaimPolicy: Retain
+  reclaimPolicy: Delete
 
   # When set to false your PVs will not be archived by the provisioner upon deletion of the PVC.
-  # archiveOnDelete: true
   archiveOnDelete: false
+
+  # Set access mode - ReadWriteOnce, ReadOnlyMany or ReadWriteMany
+  accessModes: ReadWriteMany
 
 ## For RBAC support:
 rbac:
@@ -50,6 +51,9 @@ rbac:
 # https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 podSecurityPolicy:
   enabled: false
+
+## Set pod priorityClassName
+# priorityClassName: ""
 
 serviceAccount:
   # Specifies whether a ServiceAccount should be created
