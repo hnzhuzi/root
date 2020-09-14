@@ -53323,3 +53323,285 @@ vim tmp-bak.yml
 vim /etc/ansible/hosts
 #1599893658
 helm repo list
+#1599896831
+ls
+#1599896833
+git status
+#1599896884
+git add --all ./ && git commit -m '20200912' && git push 
+#1599896454
+vim
+#1599895298
+vim
+#1599896004
+vim jenkins/values.yaml 
+#1599903491
+vim
+#1599894875
+ls
+#1599894916
+cat jenkins/Chart.yaml 
+#1599904771
+docker login -u admin -p Harbor12345 http://harbor.10.124.0.245.xip.io
+#1599904779
+docker login -u admin -p Harbor12345 http://harbor.10.124.0.245.xip.io/
+#1599901902
+ls
+#1599901906
+cd /etc/ansible/
+#1599901907
+ls
+#1599901930
+mkdir /root/other/ansible
+#1599901951
+cp -a hosts roles /root/other/ansible
+#1599901957
+cd /root/other/ansible
+#1599901958
+ls
+#1599901982
+vim roles/docker/defaults/main.yml 
+#1599902086
+vim /etc/ansible/roles/docker/defaults/main.yml 
+#1599904124
+which docker
+#1599904137
+ll /opt/kube/bin/docker
+#1599904145
+ll -h /opt/kube/bin/docker
+#1599900359
+vim /etc/ssh/ssh_config 
+#1599903637
+kubectl app -f testpvc.yaml 
+#1599903643
+kubectl apply -f testpvc.yaml 
+#1599903648
+kubectl get pvc
+#1599903691
+cd /nfs/kube-system-jnlp-pvc-70048f1c-885d-40d7-bd6d-3ed63d407420/
+#1599903691
+ls
+#1599903889
+pwd
+#1599903907
+ls
+#1599903925
+cd apache-maven-3.6.3/
+#1599903926
+ls
+#1599903953
+vim conf/settings.xml 
+#1599904057
+cd ../
+#1599904058
+ls
+#1599904065
+mkdir bin
+#1599904068
+ls
+#1599904192
+cp -a /opt/kube/bin/kubectl /opt/kube/bin/docker ./
+#1599904193
+ls
+#1599904199
+mv docker kubectl bin
+#1599904260
+ls
+#1599904277
+cp -a /root/.kube/config ./
+#1599904278
+ls
+#1599899675
+mv jenkins /tmp/jenkins_bak
+#1599899683
+mv /tmp/jenkins /root
+#1599899706
+helm -n kube-system install jenkins jenkins/
+#1599903709
+cd /dowload/
+#1599903709
+ls
+#1599903741
+wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+#1599903850
+wget http://ftp.cuhk.edu.hk/pub/packages/apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+#1599903902
+tar -xf apache-maven-3.6.3-bin.tar.gz -C /nfs/kube-system-jnlp-pvc-70048f1c-885d-40d7-bd6d-3ed63d407420
+#1599891416
+ping gitlab.10.124.0.245.xip.io
+#1599891552
+ls
+#1599893746
+helm repo add --username=admin --password=Harbor12345 myharbor http://harbor.10.124.0.245.xip.io/chartrepo/library
+#1599893751
+helm repo list
+#1599893840
+vim .bash_history 
+#1599894284
+helm plugin install https://github.com/chartmuseum/helm-push
+#1599894331
+helm push gitlab-ce/ myharbor
+#1599894358
+
+#1599894384
+vim gitlab-ce/Chart.yaml 
+#1599894424
+helm push gitlab-ce/ myharbor
+#1599894429
+helm repo list
+#1599894441
+helm repo list 
+#1599894458
+helm repo list myharbor
+#1599894464
+
+#1599894488
+
+#1599894545
+helm search repo 
+#1599894556
+helm search repo myharbor
+#1599894563
+helm search repo gitlab-ce
+#1599894577
+helm repo update
+#1599894600
+helm search repo gitlab-ce
+#1599894612
+cd /tmp
+#1599894613
+ls
+#1599894642
+helm pull --untar myharbor/gitlab-ce -d /tmp
+#1599894644
+ls /tmp
+#1599894650
+ls /tmp/gitlab-ce
+#1599894664
+rm -rf /tmp/gitlab-ce
+#1599894697
+cd
+#1599894731
+helm chart save gitlab-ce/ harbor.10.124.0.245.xip.io/library/gitlab-ce:t1
+#1599894755
+helm push gitlab-ce/ myharbor
+#1599894933
+helm search repo jenkins
+#1599895106
+helm repo add jenkinsci https://charts.jenkins.io
+#1599895211
+helm repo update
+#1599895411
+helm search repo jenkins
+#1599895451
+helm pull --untar jenkinsci/jenkins -d /tmp
+#1599895473
+vim jenkins/values.yaml /tmp/jenkins/values.yaml 
+#1599895485
+vimdiff jenkins/values.yaml /tmp/jenkins/values.yaml 
+#1599895924
+vim jenkins/values.yaml 
+#1599896013
+vim /tmp/jenkins/values.yaml 
+#1599898168
+vimdiff jenkins/values.yaml /tmp/jenkins/values.yaml 
+#1599898406
+vim /tmp/jenkins/values.yaml
+#1599891274
+k9s
+#1600046783
+git status
+#1600046803
+git add --all ./ && git commit -m '20200914' && git push gitlab
+#1600046823
+git push gitlab
+#1600047761
+vim
+#1600049845
+git add --all ./ && git commit -m '20200914' && git push gitlab
+#1600050226
+git add --all ./ && git commit -m 'V1' && git push gitlab
+#1600050247
+git config --global push.default simple
+#1600050255
+git add --all ./ && git commit -m 'V1' && git push gitlab
+#1600050265
+git push gitlab
+#1600050303
+git add --all ./ && git commit -m 'V1' && git push gitlab
+#1600050322
+git add ./
+#1600050338
+git add --all ./ && git commit -m 'version:V1' && git push gitlab
+#1600050363
+git status
+#1600048050
+cd dir1/mydemo1/
+#1600048051
+ls
+#1600048064
+git add --all ./ && git commit -m '20200914' && git push gitlab
+#1600045659
+cd dir1/mydemo1/
+#1600045659
+ls
+#1600045679
+git add --all ./ && git commit -m '20200912' && git push 
+#1600045710
+git status
+#1600045712
+git push
+#1600045738
+git push gitlab
+#1600046046
+cd
+#1600046046
+ls
+#1600046052
+cd /tmp
+#1600046057
+git clone http://gitlab.10.124.0.245.xip.io/root/mydemo1.git
+#1600046475
+cd /nfs/
+#1600046476
+ls
+#1600046483
+cd kube-system-jnlp-pvc-70048f1c-885d-40d7-bd6d-3ed63d407420/
+#1600046483
+ls
+#1600046499
+ls apache-maven-3.6.3/
+#1600046503
+ls apache-maven-3.6.3/bin
+#1600046513
+ls bin/
+#1600046747
+ls
+#1600047332
+cd ../
+#1600047333
+ls
+#1600047342
+cd kube-system-jnlp-pvc-70048f1c-885d-40d7-bd6d-3ed63d407420/
+#1600047345
+ls
+#1600047525
+find -maxdepth 1 -type d -path './.*' -prune -o -print
+#1600047620
+find -maxdepth 1 -type d \( -path './bin' -o -path './apache-maven-3.6.3' -prune -o -print
+#1600047633
+find -maxdepth 1 -type d \( -path './bin' -o -path './apache-maven-3.6.3' \) -prune -o -print
+#1600047678
+find -maxdepth 1 -type d \( -path './bin' -o -path './apache-maven-3.6.3' \) -prune -o -print | xargs rm -rf 
+#1600047682
+ls
+#1600047699
+vim apache-maven-3.6.3/conf/settings.xml 
+#1600047745
+ls
+#1600049380
+cp -a /root/.kube/config ./
+#1600049381
+ls
+#1600050731
+cd

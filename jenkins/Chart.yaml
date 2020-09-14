@@ -16,10 +16,14 @@ maintainers:
   name: torstenwalter
 - email: garridomota@gmail.com
   name: mogaal
+- email: wmcdona89@gmail.com
+  name: wmcdona89
+- email: timjacomb1@gmail.com
+  name: timja
 name: jenkins
 sources:
 - https://github.com/jenkinsci/jenkins
 - https://github.com/jenkinsci/docker-jnlp-slave
 - https://github.com/maorfr/kube-tasks
 - https://github.com/jenkinsci/configuration-as-code-plugin
-version: 1.9.19
+version: 2.6.4

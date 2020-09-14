@@ -93,6 +93,8 @@ spec:
           # requests:
             # memory: 30Mi
       # hostNetwork: true
+      securityContext:
+        runAsUser: 0
       volumes:
       # - name: data1
         # persistentVolumeClaim:
