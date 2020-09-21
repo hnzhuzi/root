@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx-1
-        image: harbor.k8s.maimaiti.site/library/nginx:alpine
+        image: nginx:alpine
         ports:
         - containerPort: 80
           # hostPort: 81
@@ -93,8 +93,8 @@ spec:
           # requests:
             # memory: 30Mi
       # hostNetwork: true
-      securityContext:
-        runAsUser: 0
+      # securityContext:
+        # runAsUser: 0
       volumes:
       # - name: data1
         # persistentVolumeClaim:
@@ -119,9 +119,9 @@ spec:
       - name: host-time
         hostPath:
           path: /etc/localtime
-      nodeSelector:
+      # nodeSelector:
         # node-role.kubernetes.io/master: ""
-        kubernetes.io/hostname: 10.83.75.9
+        # kubernetes.io/hostname: 10.83.75.9
       # affinity:
         # nodeAffinity:
           # requiredDuringSchedulingIgnoredDuringExecution:
@@ -176,7 +176,7 @@ kind: Service
 metadata:
   name: nginx-1
 spec:
-  # type: NodePort
+  type: NodePort
   # clusterIP: 10.0.171.239
   # type: LoadBalancer
   # loadBalancerIP: 78.11.24.19
@@ -189,7 +189,7 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 80
-      # nodePort: 30000
+      nodePort: 30000
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -216,14 +216,14 @@ metadata:
 
 spec:
   rules:
-  - host: nginx-1.k8s.maimaiti.site
+  - host: nginx-1.10.124.0.245.xip.io
     http:
       paths:
       - path: /
         backend:
           serviceName: nginx-1
           servicePort: 80
-  tls:
-  - hosts:
-    - nginx-1.k8s.maimaiti.site
-    secretName: nginx-1-k8s-maimaiti-site-tls-secret
+  # tls:
+  # - hosts:
+    # - nginx-1.k8s.maimaiti.site
+    # secretName: nginx-1-k8s-maimaiti-site-tls-secret

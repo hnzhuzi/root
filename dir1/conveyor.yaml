@@ -13,12 +13,12 @@ spec:
     spec:
       containers:
       - name: conveyor
-        image: harbor.k8s.maimaiti.site/library/conveyor:latest
+        image: chenjiandongx/conveyor:latest
         resources:
           limits:
             memory: 200Mi
           requests:
-            cpu: 100m
+            # cpu: 100m
             memory: 200Mi
         volumeMounts:
         # 挂载 docker.sock 文件，监听 dockerd 事件

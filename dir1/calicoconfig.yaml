@@ -1,0 +1,28 @@
+# apiVersion: projectcalico.org/v3
+# kind: BGPConfiguration
+# metadata:
+  # name: default
+# spec:
+  # logSeverityScreen: Info
+  # nodeToNodeMeshEnabled: false
+  # asNumber: 64512
+
+
+kind: BGPPeer
+apiVersion: projectcalico.org/v3
+metadata:
+  name: peer-to-rrs
+spec:
+  # 规则1：普通 bgp node 与 rr 建立连接
+  nodeSelector: "!has(i-am-a-route-reflector)"
+  peerSelector: has(i-am-a-route-reflector)
+
+---
+kind: BGPPeer
+apiVersion: projectcalico.org/v3
+metadata:
+  name: rr-mesh
+spec:
+  # 规则2：route reflectors 之间也建立连接
+  nodeSelector: has(i-am-a-route-reflector)
+  peerSelector: has(i-am-a-route-reflector)

@@ -13,7 +13,7 @@ spec:
         run: tomcat
     spec:
       containers:
-      - image: harbor.k8s.maimaiti.site/library/tomcat:8-jre8-alpine
+      - image: tomcat:8-jre8-alpine
         # 可另外挂载空白卷追踪自定义日志文件
         volumeMounts:
          - mountPath: /usr/local/tomcat/logs
