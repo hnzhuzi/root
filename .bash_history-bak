@@ -52743,15 +52743,3 @@ cd /dowload/image/
 ls
 docker pull jenkins/jenkins:lts
 netstat -tnlp | grep 10249
-#1600832462
-cat .bashrc
-#1600832508
-wc -l .bash_history 
-#1600832516
-cp -a .bash_history_bak
-#1600832528
-cp -a .bash_history .bash_history-bak
-#1600832529
-ls
-#1600832546
-vim .gitignore 

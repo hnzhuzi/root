@@ -87,8 +87,8 @@ spec:
             # cpu: 100m
             # memory: 100Mi
           # requests:
-            # cpu: 100m
-            # memory: 100Mi
+            # cpu: 500m
+            # memory: 500Mi
         # resources:
           # requests:
             # memory: 30Mi
@@ -169,61 +169,61 @@ spec:
         # value: value
         # effect: NoSchedule #NoSchedule PreferNoSchedule NoExecute
 
----
+# ---
 
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx-1
-spec:
-  type: NodePort
-  # clusterIP: 10.0.171.239
-  # type: LoadBalancer
-  # loadBalancerIP: 78.11.24.19
-  # externalIPs:
-  # - 10.83.22.224
-  selector:
-    app: nginx-1
-  ports:
-    - name: http
-      protocol: TCP
-      port: 80
-      targetPort: 80
-      nodePort: 30000
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: nginx-1
-  annotations:
-    kubernetes.io/ingress.class: "nginx" #指定使用ingress controller的类别
-    # kubernetes.io/tls-acme: "true" #Cert Manager自动生成证书
-    # nginx.ingress.kubernetes.io/rewrite-target: web.com #maimaiti.site/path/(.*)转向web.com/$1
-    # nginx.ingress.kubernetes.io/use-regex: "true" #path可以使用正则表达式
-    # nginx.ingress.kubernetes.io/proxy-connect-timeout: "600" #连接超时时间，默认为5s
-    # nginx.ingress.kubernetes.io/proxy-send-timeout: "600" #后端服务器回转数据超时时间，默认为60s
-    # nginx.ingress.kubernetes.io/proxy-read-timeout: "600" #后端服务器响应超时时间，默认为60s
-    # nginx.ingress.kubernetes.io/proxy-body-size: "10m" #客户端上传文件，最大大小，默认为1m
-    # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS" #后端端口是443
-    # nginx.ingress.kubernetes.io/ssl-redirect: "false" #若tls开启，则默认为true
+# apiVersion: v1
+# kind: Service
+# metadata:
+  # name: nginx-1
+# spec:
+  # type: NodePort
+  # # clusterIP: 10.0.171.239
+  # # type: LoadBalancer
+  # # loadBalancerIP: 78.11.24.19
+  # # externalIPs:
+  # # - 10.83.22.224
+  # selector:
+    # app: nginx-1
+  # ports:
+    # - name: http
+      # protocol: TCP
+      # port: 80
+      # targetPort: 80
+      # nodePort: 30000
+# ---
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+  # name: nginx-1
+  # annotations:
+    # kubernetes.io/ingress.class: "nginx" #指定使用ingress controller的类别
+    # # kubernetes.io/tls-acme: "true" #Cert Manager自动生成证书
+    # # nginx.ingress.kubernetes.io/rewrite-target: web.com #maimaiti.site/path/(.*)转向web.com/$1
+    # # nginx.ingress.kubernetes.io/use-regex: "true" #path可以使用正则表达式
+    # # nginx.ingress.kubernetes.io/proxy-connect-timeout: "600" #连接超时时间，默认为5s
+    # # nginx.ingress.kubernetes.io/proxy-send-timeout: "600" #后端服务器回转数据超时时间，默认为60s
+    # # nginx.ingress.kubernetes.io/proxy-read-timeout: "600" #后端服务器响应超时时间，默认为60s
+    # # nginx.ingress.kubernetes.io/proxy-body-size: "10m" #客户端上传文件，最大大小，默认为1m
+    # # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS" #后端端口是443
+    # # nginx.ingress.kubernetes.io/ssl-redirect: "false" #若tls开启，则默认为true
 
-    # nginx.ingress.kubernetes.io/canary: "true"
-    # nginx.ingress.kubernetes.io/canary-by-header: "key1" #客户端请求头中包含key1=always/never/其他值
-                                                          #(忽略Header，基于权重为第一优先级)，基于用户请求，适用于灰度发布以及A/B测试场景。
-    # nginx.ingress.kubernetes.io/canary-by-header-value: "value1"
-    # nginx.ingress.kubernetes.io/canary-by-cookie: "key2" #cookie中包含key2=always/never
-    # nginx.ingress.kubernetes.io/canary-weight: "30" #基于权重的流量切分，适用于蓝绿发布场景。
+    # # nginx.ingress.kubernetes.io/canary: "true"
+    # # nginx.ingress.kubernetes.io/canary-by-header: "key1" #客户端请求头中包含key1=always/never/其他值
+                                                          # #(忽略Header，基于权重为第一优先级)，基于用户请求，适用于灰度发布以及A/B测试场景。
+    # # nginx.ingress.kubernetes.io/canary-by-header-value: "value1"
+    # # nginx.ingress.kubernetes.io/canary-by-cookie: "key2" #cookie中包含key2=always/never
+    # # nginx.ingress.kubernetes.io/canary-weight: "30" #基于权重的流量切分，适用于蓝绿发布场景。
 
-spec:
-  rules:
-  - host: nginx-1.10.124.0.245.xip.io
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: nginx-1
-          servicePort: 80
-  # tls:
-  # - hosts:
-    # - nginx-1.k8s.maimaiti.site
-    # secretName: nginx-1-k8s-maimaiti-site-tls-secret
+# spec:
+  # rules:
+  # - host: nginx-1.10.124.0.245.xip.io
+    # http:
+      # paths:
+      # - path: /
+        # backend:
+          # serviceName: nginx-1
+          # servicePort: 80
+  # # tls:
+  # # - hosts:
+    # # - nginx-1.k8s.maimaiti.site
+    # # secretName: nginx-1-k8s-maimaiti-site-tls-secret

@@ -2,5 +2,6 @@ dir1/ssl/
 dir1/cluster/
 .*
 !.bash_history
+!.bash_history-bak
 !.gitignore
 tmp.*
