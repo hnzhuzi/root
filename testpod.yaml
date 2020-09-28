@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx-1
-        image: nginx:alpine
+        image: it-registry.vivo.xyz/library/nginx:alpine
         ports:
         - containerPort: 80
           # hostPort: 81
@@ -119,9 +119,9 @@ spec:
       - name: host-time
         hostPath:
           path: /etc/localtime
-      # nodeSelector:
+      nodeSelector:
         # node-role.kubernetes.io/master: ""
-        # kubernetes.io/hostname: 10.83.75.9
+        kubernetes.io/hostname: dgvxl8006
       # affinity:
         # nodeAffinity:
           # requiredDuringSchedulingIgnoredDuringExecution:

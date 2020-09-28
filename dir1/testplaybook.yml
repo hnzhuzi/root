@@ -1,0 +1,12 @@
+---
+- hosts: 10.124.0.61
+  remote_user: root
+  gather_facts: no
+  tasks:
+  - debug:
+      msg: "{{ item }}"
+    with_items:
+    - 1
+    - 2
+    - 3
+    when: item > 1

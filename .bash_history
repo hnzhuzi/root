@@ -52755,3 +52755,891 @@ cp -a .bash_history .bash_history-bak
 ls
 #1600832546
 vim .gitignore 
+#1600843738
+docker --help
+#1600843746
+docker run --help
+#1600844392
+cd /etc/bash_completion.d/
+#1600844393
+ls
+#1600844413
+curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose
+#1600844636
+cd
+#1600844640
+vim /etc/hosts
+#1600844667
+curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose
+#1600844698
+cd /etc/bash_completion.d/
+#1600844699
+ls
+#1600844721
+cd
+#1600832578
+git status
+#1600832597
+git add --all ./ && git commit -m '20200923' && git push 
+#1600832611
+git push
+#1600833165
+ls
+#1600833173
+vim dir1/docker/Dockerfile
+#1600833218
+vim dir1/mydemo1/springboot/Dockerfile 
+#1600833433
+vim other/note.txt 
+#1600824975
+k9s --kubeconfig dir1/cluster/it-devops-sit.yml 
+#1600845471
+docker-compose up
+#1600825761
+vim testresource.yaml 
+#1600832334
+git status
+#1600845576
+curl localhost:5000
+#1600845587
+ps aux | grep redis
+#1600845600
+netstat -tnlp | grep redis
+#1600846636
+docker ps
+#1600847481
+docker-compose ps
+#1600845659
+docker-compose up 
+#1600847149
+docker-compose up -d
+#1600847174
+docker-compose ps
+#1600847196
+docker-compose stop
+#1600847268
+docker-compose ps
+#1600847279
+docker ps | grep compose
+#1600847285
+docker ps -a | grep compose
+#1600847313
+docker network list
+#1600847347
+docker network inspect composetest_default 
+#1600847355
+docker network inspect bridge 
+#1600847501
+docker volume ls 
+#1600847514
+docker-compose down
+#1600847856
+docker-compose up -d
+#1600847866
+docker-compose logs
+#1600847882
+docker ps | grep compose
+#1600848061
+docker-compose build
+#1600848073
+docker-compose ps
+#1600848080
+docker-compose restart
+#1600848096
+docker-compose rm
+#1600848103
+docker-compose stop
+#1600848106
+docker-compose rm
+#1600848153
+docker-compose start
+#1600848329
+docker-compose up -d
+#1600848336
+docker-compose ps
+#1600848868
+docker-compose down
+#1600848879
+docker-compose down -h
+#1600848922
+cd
+#1600848923
+ls
+#1600848999
+cd /dowload/
+#1600848999
+ls
+#1600849003
+wget https://github.com/goharbor/harbor/releases/download/v2.1.0/harbor-offline-installer-v2.1.0.tgz
+#1600849313
+cd
+#1600849319
+netstat -tnlp | grep 80
+#1600849374
+ansible all -m shell -a "netstat -tnlp | grep -E '80|443'"
+#1600849404
+ansible all -m shell -a "netstat -tnlp | grep -E '\<80|443'"
+#1600849417
+ansible all -m shell -a "netstat -tnlp | grep -E '\<80\>|\<443\>'"
+#1600849711
+ls
+#1600850012
+cd /dowload/
+#1600850012
+ls
+#1600850013
+rz
+#1600850259
+mv /home/vivoadmin/harbor-offline-installer-v2.1.0.tgz ./
+#1600850265
+ls
+#1600850268
+ll -h
+#1600850297
+rz
+#1600850366
+sz
+#1600850369
+ls
+#1600850377
+sz docker-19.03.8.tgz 
+#1600844764
+cd dir1
+#1600844764
+ls
+#1600844780
+mkdir composetest
+#1600844784
+cd composetest
+#1600844784
+ls
+#1600845080
+vim app.py
+#1600859806
+./install.sh --help
+#1600859915
+./install.sh --with-clair --with-chartmuseum
+#1600850836
+ping it-registry.vivo.xyz
+#1600851488
+ls /dowload/
+#1600853834
+ping 10.124.0.57
+#1600853989
+su - vivoadmin 
+#1600854004
+
+#1600854028
+vim /home/vivoadmin/.ssh/authorized_keys 
+#1600854060
+cd /home/vivoadmin/
+#1600854063
+cd .ssh
+#1600854063
+ls
+#1600854066
+vim id_rsa 
+#1600854072
+vim authorized_keys 
+#1600854079
+cd .../
+#1600854082
+cd ../
+#1600854089
+rm -rf .ssh/
+#1600854092
+ls
+#1600854094
+pwd
+#1600854099
+cd /root/.ssh
+#1600854100
+ls
+#1600854103
+vim authorized_keys 
+#1600854111
+ls
+#1600854127
+cd /home/vivoauto/.ssh
+#1600854127
+ls
+#1600854131
+ll -d ./
+#1600854134
+ll
+#1600854136
+pwd
+#1600854156
+vim authorized_keys 
+#1600860061
+cd
+#1600860062
+k9s
+#1600860046
+docker ps
+#1600860135
+ls
+#1600861295
+docker ps
+#1600861304
+docker-compose ps
+#1600861319
+docker-compose restart 
+#1600861334
+docker-compose ps
+#1600861345
+vim install.sh 
+#1600861534
+docker-compose ps
+#1600863001
+ping it-registry.dg.vivo.xyz
+#1600863081
+cd ../
+#1600863082
+ls
+#1600863138
+rsync -av harbor 10.124.0.62:/usr/local/
+#1600863174
+rsync -av /usr/local/bin/docker-compose  10.124.0.62:/usr/local/bin
+#1600850427
+ping 10.70.64.31
+#1600850485
+cd /dowload/
+#1600850486
+ls
+#1600850492
+rz -y
+#1600850536
+ls
+#1600850556
+tar -xf harbor-offline-installer-v2.1.0.tgz -C /usr/local/
+#1600850561
+cd /usr/local/
+#1600850562
+ls
+#1600850567
+cd harbor/
+#1600850568
+ls
+#1600850621
+cp -a harbor.yml.tmpl harbor.yml
+#1600850629
+vim harbor.yml
+#1600846736
+cd dir1/composetest/
+#1600846737
+vim
+#1600846986
+ls
+#1600847016
+docker exec -ti composetest_web_1 sh
+#1600847041
+cd
+#1600847055
+cd dir1/composetest/
+#1600847055
+ls
+#1600847064
+vim
+#1600860412
+cd /usr/local/harbor/
+#1600860413
+ls
+#1600860444
+./install.sh --with-clair --with-chartmuseum
+#1600860469
+ls
+#1600860476
+docker-compose ps
+#1600860526
+ls
+#1600860765
+ls /data
+#1600860787
+du -sh /data
+#1600861054
+cd
+#1600861086
+docker tag nginx:alpine 10.124.0.61/library/nginx:alpine
+#1600861173
+systemctl daemon-reload && systemctl restart docker
+#1600861194
+docker push 10.124.0.61/library/nginx:alpine
+#1600861223
+docker login -u admin 10.124.0.61
+#1600861264
+netstat -tnlp | grep 80
+#1600861545
+docker login -u admin 10.124.0.61
+#1600861556
+docker push 10.124.0.61/library/nginx:alpine
+#1600861600
+docker rmi 10.124.0.61/library/nginx:alpine
+#1600861611
+docker pull 10.124.0.61/library/nginx@sha256:4635b632d2aaf8c37c8a1cf76a1f96d11b899f74caa2c6946ea56d0a5af02c0c
+#1600861621
+docker image ls
+#1600861634
+docker image ls | grep alpine
+#1600861656
+docker pull 10.124.0.61/library/nginx:alpine
+#1600861662
+docker image ls | grep alpine
+#1600861672
+docker rmi 10.124.0.61/library/nginx:alpine
+#1600861759
+helm chart save gitlab-ce/ 10.124.0.61/library/gitlab-ce:v1
+#1600861906
+helm ls
+#1600861909
+helm repo ls
+#1600862181
+helm repo add --username=admin --password=Harbor12345 harbor http://harbor.k8s.maimaiti.site/chartrepo/library
+#1600862232
+helm repo add --username=admin --password=Harbor12345 61harbor http://10.124.0.61/chartrepo/library
+#1600862250
+helm push gitlab-ce/ 61harbor
+#1600860288
+vim
+#1600864191
+docker tag busybox:1.28 10.124.0.61/library/busybox:1.28
+#1600864203
+dockr pull busybox:1.28
+#1600864208
+docker pull busybox:1.28
+#1600864218
+docker tag busybox:1.28 10.124.0.61/library/busybox:1.28
+#1600864225
+docker push 10.124.0.61/library/busybox:1.28
+#1600865226
+docker logout 10.124.0.61
+#1600865248
+docker push --help
+#1600865272
+docker login -u user1 10.124.0.61
+#1600865304
+docker tag nginx:alpine 10.124.0.61/project1/nginx:alpine
+#1600865307
+docker push 10.124.0.61/project1/nginx:alpine
+#1600865471
+docker logout 10.124.0.61
+#1600865484
+docker pull 10.124.0.61/project1/nginx:alpine
+#1600865540
+docker rmi 10.124.0.61/project1/nginx:alpine
+#1600911913
+vim
+#1600913213
+ls /etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org
+#1600913257
+yum --disablerepo=\* --enablerepo=elrepo-kernel install -y kernel-lt.x86_64
+#1600913340
+awk -F\' '$1=="menuentry " {print $2}' /etc/grub2.cfg  
+#1600913365
+grub2-set-default 0
+#1600913373
+shutdown -r now
+#1600909323
+docker tag nginx:alpine 10.124.0.61/project1/nginx:alpine
+#1600909326
+docker push 10.124.0.61/project1/nginx:alpine
+#1600909339
+docker tag nginx:alpine 10.124.0.61/library/nginx:alpine
+#1600909341
+docker push 10.124.0.61/library/nginx:alpine
+#1600909349
+docker login -u user1 10.124.0.61
+#1600909355
+docker login -u admin 10.124.0.61
+#1600909366
+docker push 10.124.0.61/library/nginx:alpine
+#1600909800
+docker ps
+#1600909815
+docker-compose ps
+#1600909846
+docker-compose -f /usr/local/harbor/docker-compose.yml ps
+#1600910154
+yum repolist
+#1600910171
+yum provides docker-compose
+#1600910397
+uname -r
+#1600910403
+docker version
+#1600912528
+k9s
+#1600912952
+uname -r
+#1600913005
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+#1600913016
+rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+#1600913026
+yum --disablerepo=\* --enablerepo=elrepo-kernel repolist
+#1600913053
+yum --disablerepo=\* --enablerepo=elrepo-kernel list kernel*
+#1600913117
+vim /etc/yum.repos.d/elrepo.repo 
+#1600920192
+ping 172.16.178.54
+#1600928557
+ansible all -m shell ping
+#1600928567
+ansible all -m ping
+#1600928628
+ansible all -m shell -a 'uname -r'
+#1600939480
+awk -F\' '$1=="menuentry " {print $2}' /etc/grub2.cfg  
+#1600914996
+cd dir1/cluster/
+#1600914997
+ls
+#1600914998
+vim
+#1600915627
+k9s --kubeconfig it-k8s-prod.yml 
+#1600937003
+k9s
+#1600937037
+ansible all -m ping
+#1600937068
+ansible all -m shell -a 'uname -r'
+#1600937667
+vim /root/.bash_history
+#1600937773
+k9s
+#1600940452
+uname -r
+#1600941152
+awk -F\' '$1=="menuentry " {print $2}' /etc/grub2.cfg
+#1600941162
+grub2-set-default 1
+#1600941165
+uname -r
+#1600941168
+reboot
+#1600941458
+uname -r
+#1600913446
+yum list installed | grep kernel
+#1600913508
+uanme -r
+#1600913510
+uname -r
+#1600913519
+ps aux | grep rpc
+#1600913528
+netstat -tnlp | grep rpc
+#1600913535
+netstat -tnlp | grep bind
+#1600913547
+systemctl status nfs-sever
+#1600913551
+systemctl status nfs-server
+#1600913863
+k9s
+#1600914974
+cd dir1/cluster/
+#1600914974
+ls
+#1600915040
+k9s --kubeconfig it-k8s-prod.yml 
+#1600994629
+ansible all -m shell -a 'df -h | grep 5268d8a8'
+#1600994731
+cd /nfs/kube-system-prometheus-kube-prometheus-stack-prometheus-db-prometheus-kube-prometheus-stack-prometheus-0-pvc-5268d8a8-abe7-4d18-a706-31fb56dbdecf
+#1600994733
+ls
+#1600997803
+cp -a /etc/systemd/system/kube-proxy.service /tmp
+#1600997816
+cat /tmp/kube-proxy.service 
+#1600997826
+vim /tmp/kube-proxy.service
+#1600997853
+sed 's/--proxy-mode=ipvs/& \\\n  --metrics-bind-address=0.0.0.0/' /tmp/kube-proxy.service
+#1600997888
+ansible localhost -m ping
+#1600997903
+ansible localhost -m shell -a 'ifconfig'
+#1600997971
+ansible localhost -m shell -a "sed 's/--proxy-mode=ipvs/& \\\n  --metrics-bind-address=0.0.0.0/' /tmp/kube-proxy.service"
+#1600998045
+vim tmp.sh
+#1600998075
+sh tmp.sh
+#1600998121
+
+#1600998186
+cat /tmp/kube-proxy.service 
+#1600998304
+ansible localhost -m script -a 'tmp.sh'
+#1600998313
+vim /tmp/kube-proxy.service 
+#1600998404
+ansible localhost -m shell -a "sed 's/--proxy-mode=ipvs/& \\\n  --metrics-bind-address=0.0.0.0/' /tmp/kube-proxy.service"
+#1600998637
+lvm vgs
+#1600998643
+vgs
+#1600998863
+ps -eo pid,args --cols=10000 | awk '/\/opt\/logstash\/logstash-1.5.3\// && $1 != PROCINFO["pid"] { print $1 }'
+#1601001538
+ansible localhost -m shell -a "sed 's/--proxy-mode=ipvs/& \\\\\n  --metrics-bind-address=0.0.0.0/' /tmp/kube-proxy.service"
+#1600996721
+ps aux|wc -l
+#1601005053
+ansible-doc -s shell
+#1601005706
+ansible-playbook --syntax-check /testdir/ansible/test.yml
+#1601005756
+ansible-playbook --check test.yml
+#1601015995
+cd dir1
+#1601015995
+ls
+#1601003258
+cd /etc/
+#1601003264
+vimdiff fstab fstab.21745.2020-09-10@15\:21\:09~ 
+#1601003358
+ansible-doc -s set_fact
+#1601003994
+ansible -version
+#1601003999
+ansible -v
+#1601004003
+ansible --version
+#1601016105
+cd
+#1601016117
+ansible-playbook dir1/testplaybook.yml 
+#1600995109
+vim
+#1600995356
+ping a.vivo.xyz
+#1600995601
+cd /etc/ansible/
+#1600995601
+ls
+#1600995606
+vim 01.prepare.yml 
+#1601021878
+vim
+#1601021904
+cd /etc/ansible/
+#1601021904
+ls
+#1601021918
+cd bin
+#1601021919
+ls
+#1601021933
+cd ../
+#1601021934
+ls
+#1601021944
+cd roles/
+#1601021945
+ls
+#1601021946
+vim
+#1601034940
+kubectl --kubeconfig dir1/cluster/it-k8s-prod.yml -n cattle-prometheus delete pod prometheus-cluster-monitoring-0 --grace-period=0 --force
+#1601038328
+ls
+#1601038859
+kubectl --kubeconfig dir1/cluster/devops-dev.yml -n cattle-prometheus top pod prometheus-cluster-monitoring-0
+#1601022514
+cd /etc/ansible/.cluster/
+#1601022515
+ls
+#1601022526
+ls ssl
+#1601023313
+ansible-doc -s yum
+#1601036897
+cd
+#1601036944
+k9s --kubeconfig dir1/cluster/devops-dev.yml 
+#1601038347
+cd dir1/cluster/
+#1601038348
+ls
+#1601038383
+k9s --kubeconfig it-k8s-prod.yml 
+#1601038582
+k9s --kubeconfig devops-dev.yml 
+#1601039088
+k9s --kubeconfig it-k8s-dev.yml 
+#1601086168
+kubectl --kubeconfig devops-dev.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086245
+kubectl --kubeconfig calico-test.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086258
+kubectl --kubeconfig devops-dev.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086270
+kubectl --kubeconfig ipd-dev.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086367
+kubectl --kubeconfig ipd-prod.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086423
+kubectl --kubeconfig ipd-uat.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086489
+kubectl --kubeconfig it-devops-dev.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086517
+kubectl --kubeconfig it-devops-sit.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086568
+kubectl --kubeconfig it-k8s-sit.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086600
+kubectl --kubeconfig it-k8s-uat.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086734
+kubectl --kubeconfig rancherqa.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601087785
+kubectl --kubeconfig devops.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601087869
+kubectl --kubeconfig it-k8s-prod.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601085023
+k9s
+#1601085759
+cd dir1/cluster/
+#1601085759
+ls
+#1601085792
+cd
+#1601085799
+mv dir1/cluster/ ./
+#1601085810
+vim .gitignore 
+#1601085827
+cd cluster/
+#1601085828
+ls
+#1601085847
+k9s --kubeconfig calico-test.yml 
+#1601085915
+k9s --kubeconfig devops-dev.yml 
+#1601088089
+cd
+#1601088089
+vim
+#1601088103
+cd /etc/ansible/roles/
+#1601088104
+ls
+#1601088105
+vim
+#1601090718
+set -g history-limit 16000
+#1601090735
+vim
+#1601088000
+kubectl --kubeconfig rancher.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601088040
+ls
+#1601088052
+rm -f config.yaml tmp tmp1
+#1601088053
+ls
+#1601088692
+systemctl status haproxy
+#1601089708
+cd /etc/ansible/.cluster/backup/
+#1601089709
+ls
+#1601089722
+cd /etc/ansible/.cluster/ssl/
+#1601089723
+ls
+#1601090128
+kubectl get node
+#1601090375
+cd /etc/ansible/
+#1601090376
+ls
+#1601090379
+cd roles/
+#1601090380
+ls
+#1601090389
+grep -r KUBE_VER ./
+#1601091055
+kubectl get node
+#1601092467
+cd
+#1601092468
+cd cluster/
+#1601092469
+ls
+#1601092510
+k9s --kubeconfig it-devops-uat.yml 
+#1601100439
+ping http://rancher.10.124.0.245.xip.io/
+#1601100446
+ping 10.124.0.245
+#1601100512
+kubectl run -it --rm --restart=Never busybox --image=busybox:1.28 -- nslookup kubernetes.default
+#1601100548
+ping 172.20.13.99
+#1601100664
+curl 172.20.13.92
+#1601100667
+curl 172.20.13.92:8080
+#1601100686
+curl 172.20.13.92:8001
+#1601100836
+cd
+#1601100857
+ping  rancher.10.124.0.245.xip.io
+#1601101098
+ls
+#1601085211
+k9s --kubeconfig dir1/cluster/devops-dev.yml 
+#1601085548
+k9s --kubeconfig dir1/cluster/it-devops-dev.yml 
+#1601091726
+cd cluster/
+#1601091726
+ls
+#1601091785
+vim
+#1601091857
+kubectl --kubeconfig it-devops-uat.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601091880
+k9s --kubeconfig it-devops-uat.yml 
+#1601092591
+k9s --kubeconfig it-devops-sit.yml 
+#1601092665
+k9s --kubeconfig it-devops-dev.yml 
+#1601101448
+ping localhost
+#1601101459
+ping 10.124.0.61
+#1601101468
+ping 10.124.0.245
+#1601085981
+cd cluster/
+#1601085981
+ls
+#1601086014
+kubectl --kubeconfig ipd-d
+#1601086059
+ kubectl --kubeconfig devops-dev.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml
+#1601086067
+ kubectl --kubeconfig devops-dev.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep 2000
+#1601086084
+ kubectl --kubeconfig devops-dev.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000
+#1601086096
+ kubectl --kubeconfig devops-dev.yml -n cattle-prometheus get pod prometheus-cluster-monitoring-0 -o yaml | grep -C 3 2000Mi
+#1601086126
+vim
+#1601102849
+k9s --kubeconfig cluster/calico-test.yml 
+#1601106761
+k9s
+#1601109593
+vim
+#1601109603
+cd /etc/ansible/roles/
+#1601109604
+vim
+#1601111880
+kubectl get pod -n kube-system -o wide|grep 'calico-node'
+#1601112403
+docker image ls | grep calico
+#1601112577
+cd /etc/cni/net.d
+#1601112578
+ls
+#1601112587
+vim 10-calico.conflist 
+#1601112620
+vim calico-kubeconfig 
+#1601112626
+ls
+#1601112631
+vim calico-tls/
+#1601112640
+ls calico-
+#1601112642
+ls calico-tls/
+#1601112826
+docker image ls | grep calico
+#1601103772
+ping  rancher.10.124.0.245.xip.io
+#1601104859
+ping it-registry.dg.vivo.xyz
+#1601104872
+docker pull it-registry.dg.vivo.xyz/library/nginx:alpine
+#1601104885
+docker pull it-registry.vivo.xyz/library/nginx:alpine
+#1601104953
+kubectl --kubeconfig cluster/calico-test.yml apply -f testpod.yaml 
+#1601106140
+kubectl --kubeconfig cluster/calico-test.yml delete -f testpod.yaml 
+#1601106145
+kubectl --kubeconfig cluster/calico-test.yml apply -f testpod.yaml 
+#1601106777
+kubectl apply -f testpod.yaml 
+#1601108001
+vim /tmp/k9s-screens-root/cluster1/pods-kube-system-1601107992677791896.csv
+#1601108438
+kubectl get rs nginx-1
+#1601108440
+kubectl get rs 
+#1601108447
+
+#1601108468
+
+#1601108506
+kubectl rollout history deployment nginx-1 -o wide
+#1601108509
+kubectl rollout history deployment nginx-1
+#1601108519
+kubectl get rs | grep nginx-1
+#1601108529
+kubectl get rs -o wide | grep nginx-1
+#1601108546
+kubectl get rs 
+#1601108553
+
+#1601108631
+kubectl get rs | grep nginx-1
+#1601109226
+kubectl --kubeconfig=cluster/it-devops-uat.yml get --all-namespaces deployment 
+#1601109249
+kubectl --kubeconfig=cluster/it-devops-uat.yml get --all-namespaces deployment | grep message
+#1601109279
+kubectl --kubeconfig=cluster/it-devops-uat.yml get --all-namespaces deployment | grep message-center
+#1601109294
+kubectl --kubeconfig=cluster/it-devops-dev.yml get --all-namespaces deployment | grep message-center
+#1601109301
+kubectl --kubeconfig=cluster/it-devops-uat.yml get --all-namespaces deployment | grep message-center
+#1601109318
+kubectl --kubeconfig=cluster/it-k8s-dev get --all-namespaces deployment | grep message-center
+#1601109326
+kubectl --kubeconfig=cluster/it-k8s-dev.yml get --all-namespaces deployment | grep message-center
+#1601109332
+kubectl --kubeconfig=cluster/it-k8s-sit.yml get --all-namespaces deployment | grep message-center
+#1601109339
+kubectl --kubeconfig=cluster/it-k8s-uat.yml get --all-namespaces deployment | grep message-center
+#1601109370
+kubectl --kubeconfig=cluster/devops-dev.yml get --all-namespaces deployment | grep message-center
+#1601109381
+kubectl --kubeconfig=cluster/ipd-dev.yml get --all-namespaces deployment | grep message-center
+#1601109396
+kubectl --kubeconfig=cluster/ipd-prod.yml get --all-namespaces deployment | grep message-center
+#1601109456
+kubectl --kubeconfig=cluster/it-devops-sit.yml get --all-namespaces deployment | grep message-center
+#1601109549
+kubectl --kubeconfig=cluster/it-devops-uat.yml get --all-namespaces deployment | grep message-center
+#1601110528
+ls /etc/calico/ssl
+#1601110662
+ls /etc/kubernetes/ssl
+#1601110708
+ls /opt/kube/bin/
+#1601110719
+ls /etc/kubernetes/ssl
+#1601111459
+vim
