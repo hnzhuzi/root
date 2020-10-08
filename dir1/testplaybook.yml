@@ -1,12 +1,12 @@
 ---
-- hosts: 10.124.0.61
-  remote_user: root
-  gather_facts: no
-  tasks:
-  - debug:
-      msg: "{{ item }}"
-    with_items:
-    - 1
-    - 2
-    - 3
-    when: item > 1
+- hosts: nodes
+  remote_user: vivoauto
+  become: yes
+  gather_facts: false
+  tasks:
+  - name: test shell
+    shell: id user1
+    register: shell_status
+  # - name: test debug
+    # debug: var="shell_status.stdout"
+

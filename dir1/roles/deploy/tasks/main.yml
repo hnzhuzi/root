@@ -1,0 +1,5 @@
+- name: test shell1
+  shell: echo {{ VAR1 }}
+  register: shell_status
+- name: test debug
+  debug: var="shell_status.stdout"

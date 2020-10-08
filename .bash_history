@@ -53643,3 +53643,789 @@ ls /opt/kube/bin/
 ls /etc/kubernetes/ssl
 #1601111459
 vim
+#1601253357
+netstat -tnlp | grep 3306
+#1601253398
+docker run -d --name=mysql -p 127.0.0.1:3306:3306 -e MYSQL_ROOT_PASSWORD=Mysql12345 mysql
+#1601253585
+cd /dowload/
+#1601253586
+ls
+#1601253594
+wget https://github.com/ansible-semaphore/semaphore/releases/download/v2.5.1/semaphore_2.5.1_linux_amd64.rpm
+#1601253606
+rpm -ivh semaphore_2.5.1_linux_amd64.rpm
+#1601253620
+rpm -ql semaphore_2.5.1_linux_amd64.rpm
+#1601253641
+rpm -ql semaphore 
+#1601253692
+semaphore -setup
+#1601253993
+netstat -tnlp | grep 3306
+#1601254049
+docker exec -it mysql sh
+#1601254164
+netstat -tnlp | grep mysql
+#1601254167
+netstat -tnlp | grep 3306
+#1601254337
+ls
+#1601254338
+cd
+#1601254360
+semaphore -setup
+#1601254445
+ping 127.0.0.1:3306
+#1601254452
+telnet 127.0.0.1:3306
+#1601254462
+yum provides telnet
+#1601254491
+yum install telent
+#1601254508
+yum install telnet
+#1601254535
+telnet 127.0.0.1:3306
+#1601254550
+telnet 172.0.0.1:3306
+#1601254566
+netstat -tnlp | grep 3306
+#1601254582
+telnet 127.0.0.1 3306
+#1601254642
+mysql
+#1601254728
+semaphore -config /tmp/config.json &
+#1601254755
+docker stop mysql && docker rm mysql
+#1601254761
+docker rmi mysql
+#1601254784
+yum -y install mariadb-server
+#1601254816
+yum history 
+#1601254835
+yum history undo 13
+#1601254869
+docker run -d --name=mysql -p 127.0.0.1:3306:3306 -e MYSQL_ROOT_PASSWORD=Mysql12345 mysql
+#1601254915
+netstat -tnlp | grep 3306
+#1601254927
+docker exec -it mysql sh
+#1601255013
+rpm -qa
+#1601255017
+rpm -qa | grep sema
+#1601255026
+rpm -ql semaphore 
+#1601255041
+semaphore -setup
+#1601255159
+semaphore -config /tmp/config.json &
+#1601255187
+semaphore -config /tmp/dowload/config.json &
+#1601255256
+docker exec -it mysql sh
+#1601255554
+docker restart mysql
+#1601255560
+docker exec -it mysql sh
+#1601255664
+semaphore -setup
+#1601255755
+vim /tmp/downoad/config.json
+#1601255802
+semaphore -config /tmp/downoad/config.json &
+#1601255813
+docker exec -it mysql sh
+#1601255876
+docker rm mysql
+#1601255879
+docker rm -f mysql
+#1601255889
+yum -y install mariadb-server
+#1601255909
+systemctl start mariadb.service 
+#1601255921
+netstat -tnlp | grep 3306
+#1601255933
+semaphore -setup
+#1601255961
+mysql_secure_installation 
+#1601256021
+mysql -p123456
+#1601256069
+semaphore -setup
+#1601256264
+nohup ./semaphore -config /tmp/download/config.json &
+#1601256298
+netstat -tnlp | grep sema
+#1601256330
+ps aux | grep sema
+#1601256346
+netstat -tnlp | grep 18275
+#1601256373
+semaphore -config /tmp/download/config.json &
+#1601256432
+ps aux | grep semaph
+#1601256443
+netstat -tnlp | grep 19076
+#1601256499
+pkill -9 semaphore 
+#1601256541
+rm -rf /tmp/dowload/ /tmp/semaphore
+#1601256558
+mysql -p123456
+#1601256608
+semaphore -setup
+#1601256701
+nohup semaphore -config /tmp/download/config.json &
+#1601258584
+ls
+#1601258598
+cd dir1/mydemo1/
+#1601258598
+ls
+#1601258606
+git remote show gitlab
+#1601258625
+git status
+#1601258646
+git add --all ./ && git commit -m '20200928' && git push 
+#1601258665
+git push
+#1601258712
+git config --global credential.helper store
+#1601258721
+git show remote gitlab
+#1601258730
+git remote show gitlab
+#1601258980
+cd
+#1601258981
+k9s
+#1601264401
+vim /tmp/download/config.json
+#1601265193
+cd dir1/mydemo1/
+#1601265194
+ls
+#1601265201
+git remote show origin
+#1601265234
+git remote show gitlab 
+#1601265500
+cd
+#1601265556
+vim
+#1601273692
+vim /etc/sudoers
+#1601259065
+helm uninstall gitlab-ce
+#1601259135
+helm install gitlab-ce -n kube-system gitlab-ce/
+#1601259194
+ping a.vivo.xyz
+#1601263156
+git add --all ./ && git commit -m '20200923' && git push gitlab
+#1601263168
+git push gitlab master
+#1601263185
+cd dir1/mydemo1/
+#1601263186
+ls
+#1601263192
+git add --all ./ && git commit -m '20200923' && git push gitlab master
+#1601263196
+git push gitlab
+#1601263200
+git push gitlab master
+#1601263365
+cat /root/.ssh/id_rsa 
+#1601263385
+ls
+#1601263448
+cat /root/.ssh/authorized_keys 
+#1601263457
+vim /root/.ssh/authorized_keys
+#1601263489
+cat /root/.ssh/authorized_keys
+#1601263596
+ping a.vivo.xyz
+#1601276969
+cd ../
+#1601276987
+vim testplaybook.yml 
+#1601277603
+vim
+#1601277101
+ansible-playbook --help
+#1601277145
+cd dir1
+#1601277146
+ls
+#1601277182
+rsync -av 10.124.0.62:/etc/ansible/hosts ./
+#1601277183
+ls
+#1601277188
+vim hosts 
+#1601277317
+ansible-playbook -i hosts testplaybook.yml 
+#1601277801
+hostname
+#1601277845
+ansible-playbook -i hosts testplaybook.yml 
+#1601277888
+ifconfig
+#1601277916
+hostname
+#1601277920
+ansible-playbook -i hosts testplaybook.yml 
+#1601277956
+hostname
+#1601277992
+echo hello `hostname`
+#1601278019
+ansible-playbook -i hosts testplaybook.yml 
+#1601278610
+cp -a testplaybook.yml /root/dir1/test1/
+#1601278626
+cd /root/dir1/test1/
+#1601278627
+ls
+#1601278630
+git status
+#1601278646
+git add --all ./ && git commit -m 'test1' && git push 
+#1601273763
+su - vivoauto 
+#1601274155
+vim /tmp/download/config.json
+#1601274177
+cd /tmp/semaphore
+#1601274243
+cat .ssh/id_rsa 
+#1601274310
+cat /etc/ansible/hosts
+#1601274630
+cd /tmp
+#1601274631
+ls
+#1601274649
+gitl clone git@gitlab.10.124.0.245.xip.io:root/test1.git
+#1601274653
+git clone git@gitlab.10.124.0.245.xip.io:root/test1.git
+#1601274846
+cat /root/.ssh/authorized_keys 
+#1601274884
+git clone git@gitlab.10.124.0.245.xip.io:root/test1.git
+#1601275036
+cd /root/.ssh
+#1601275036
+ls
+#1601275117
+git config --global credential.helper store
+#1601275137
+cd /tmp
+#1601275146
+git clone git@gitlab.10.124.0.245.xip.io:root/test1.git
+#1601275197
+ping gitlab.10.124.0.245.xip.io
+#1601275200
+git clone git@gitlab.10.124.0.245.xip.io:root/test1.git
+#1601275236
+git clone http://gitlab.10.124.0.245.xip.io/root/test1.git
+#1601275244
+ls test1
+#1601275251
+cat test1/test1.txt 
+#1601275261
+rm -rf test1
+#1601275264
+ls
+#1601275279
+git clone http://gitlab.10.124.0.245.xip.io/root/test1.git
+#1601275284
+rm -rf test1
+#1601275295
+git clone git@gitlab.10.124.0.245.xip.io:root/test1.git
+#1601275475
+cat /etc/passwd | grep git
+#1601275629
+cat /root/.ssh/authorized_keys 
+#1601275645
+vim /root/.ssh/authorized_keys
+#1601275695
+ls
+#1601275701
+rm -rf mydemo1
+#1601275719
+docker pull git@github.com:hnzhuzi/mydemo1.git
+#1601275727
+git pull git@github.com:hnzhuzi/mydemo1.git
+#1601275739
+git clone git@github.com:hnzhuzi/mydemo1.git
+#1601275750
+cd mydemo1/
+#1601275750
+ls
+#1601275758
+vim Jenkinsfile 
+#1601275790
+git add --all ./ && git commit -m 'v2' && git push 
+#1601275855
+cd ../
+#1601275859
+rm -rf mydemo1/
+#1601275916
+git clone git@gitlab.10.124.0.245.xip.io:root/mydemo1.git
+#1601276058
+rm -rf /root/.ssh/known_hosts 
+#1601276060
+git clone git@gitlab.10.124.0.245.xip.io:root/mydemo1.git
+#1601276812
+cd
+#1601276819
+cd dir1/
+#1601276820
+ls
+#1601276851
+git clone git@github.com:hnzhuzi/test1.git
+#1601276857
+cd test1
+#1601276858
+ls
+#1601283521
+cd
+#1601283566
+useradd user1 
+#1601283598
+echo user1 | passwd --stdin user1
+#1601283627
+cp -a /root/.ssh/ /home/user1
+#1601283656
+chown -R user1:user1 /home/user1/.ssh
+#1601283661
+ll /home/user1/.ssh
+#1601283683
+cd dir1
+#1601283684
+ls
+#1601283796
+ansible -i hosts -m shell -a 'useradd user1 && echo user1 | passwd --stdin user1 && cp -a /root/.ssh/ /home/user1 && chown -R user1:user1 /home/user1/.ssh'
+#1601283810
+ansible -i hosts nodes -m shell -a 'useradd user1 && echo user1 | passwd --stdin user1 && cp -a /root/.ssh/ /home/user1 && chown -R user1:user1 /home/user1/.ssh'
+#1601283826
+su - user1
+#1601284104
+cat /etc/sudoers
+#1601284184
+echo user1 ALL=(ALL) NOPASSWD:ALL >> /etc/sudoers
+#1601284197
+echo "user1 ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+#1601284202
+cat /etc/sudoers
+#1601284217
+su - user1
+#1601284293
+ls
+#1601284310
+ansible -i hosts nodes -m shell -a 'echo "user1 ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers'
+#1601279192
+cd dir1
+#1601279193
+ls
+#1601279205
+cd test1
+#1601279206
+ls
+#1601279339
+ansible-playbook -i hosts testplaybook.yml 
+#1601279362
+
+#1601279404
+ansible-playbook -i ../hosts testplaybook.yml
+#1601279435
+cp -a ../hosts ./
+#1601279436
+ls
+#1601279491
+ansible-playbook -i hosts testplaybook.yml
+#1601279560
+ls
+#1601279601
+cp -a /etc/ansible/roles/deploy/ ./
+#1601279602
+ls
+#1601279618
+mkdir roles
+#1601279623
+mv deploy/ roles
+#1601279624
+ls
+#1601279641
+cd roles/
+#1601279642
+ls
+#1601279658
+cd deploy/
+#1601279659
+ls
+#1601279680
+vim deploy.yml 
+#1601279699
+cd tasks/
+#1601279700
+ls
+#1601279722
+cp -a /root/dir1/test1/testplaybook.yml main.yml 
+#1601279733
+cd ../
+#1601279733
+ls
+#1601279738
+vim defaults/main.yml 
+#1601279856
+vim tasks/main.yml 
+#1601279869
+vim tasks/create-kubectl-kubeconfig.yml 
+#1601279954
+ls
+#1601279959
+cat tasks/main.yml 
+#1601279968
+cat defaults/main.yml
+#1601279980
+cd ../
+#1601279981
+ls
+#1601279985
+cd ../
+#1601279986
+ls
+#1601280003
+vim roles/deploy/deploy.yml 
+#1601280022
+cp -a roles/deploy/deploy.yml ./
+#1601280023
+ls
+#1601280036
+vim deploy.yml 
+#1601280059
+ansible-playbook -i hosts deploy.yml 
+#1601280240
+ls
+#1601280259
+vim testplaybook.yml 
+#1601280273
+git add --all ./ && git commit -m 'test2' && git push 
+#1601280285
+ls
+#1601280956
+pwd
+#1601280960
+cd /tmp
+#1601280961
+ls
+#1601280973
+git clone git@github.com:hnzhuzi/test1.git
+#1601280980
+rm -rf git@github.com:hnzhuzi/test1.git
+#1601281505
+cd /root/dir1/test1
+#1601281553
+git add --all ./ && git commit -m 'test2' && git push 
+#1601282049
+cd
+#1601282074
+echo hello 61 > /root/dir1/test61.txt
+#1601282186
+cd dir1/test1
+#1601282187
+ls
+#1601282194
+ansible-playbook -i hosts testplaybook.yml 
+#1601282236
+ansible nodes -m shell -a 'ls /root/test61.txt'
+#1601282250
+ansible -i hosts nodes -m shell -a 'ls /root/test61.txt'
+#1601282736
+cd
+#1601282756
+cd /etc/ansible/
+#1601282757
+ls
+#1601282783
+git staus
+#1601282785
+git status
+#1601284708
+cd /root/dir1/
+#1601284710
+cd test1
+#1601284711
+ls
+#1601284716
+ansible-playbook -i hosts testplaybook.yml 
+#1601284741
+
+#1601286300
+ssh 10.124.0.63
+#1601286312
+ansible -i hosts -m ping
+#1601286318
+ansible -i hosts nodes -m ping
+#1601286341
+ssh 10.124.0.62
+#1601284521
+mv /root/.ssh{,.bak}
+#1601284535
+ssh 10.124.0.62
+#1601284563
+ansible nodes -m shell -a 'mv /root/.ssh{,.bak}'
+#1601284574
+ansible nodes -i dir1/hosts -m shell -a 'mv /root/.ssh{,.bak}'
+#1601284596
+cd dir1/test1
+#1601284597
+ls
+#1601286395
+ssh 10.124.0.62
+#1601286408
+ansible -i dir1/hosts nodes -m ping
+#1601286425
+ansible -i dir1/hosts nodes -m shell -a 'id'
+#1601286455
+ssh 10.124.0.62
+#1601286540
+ansible -i dir1/hosts nodes -m shell -a 'id'
+#1601287117
+su - user1
+#1601287206
+ansible -i dir1/hosts nodes -m shell -a 'ls /root'
+#1601287224
+ansible -i dir1/hosts nodes -m shell -a ' sudo ls /root'
+#1601277395
+vim
+#1601286875
+vim
+#1601338687
+cd dir1
+#1601338698
+
+#1601338742
+
+#1601338801
+su - user1
+#1601338864
+ansible-playbook -i hosts testplaybook.yml 
+#1601339007
+ansible -i hosts nodes -m shell -a 'id'
+#1601339056
+ssh 10.124.0.62
+#1601339872
+ansible -i hosts nodes -m shell -a 'id'
+#1601339883
+ssh 10.124.0.62
+#1601339958
+ping 10.124.0.62
+#1601339976
+ls .ssh
+#1601339985
+mv .ssh.bak/ .ssh
+#1601339990
+ssh 10.124.0.62
+#1601339993
+ls .ssh
+#1601340016
+mv .ssh/.ssh.bak/ ./
+#1601340023
+rm -rf .ssh
+#1601340029
+mv .ssh.bak/ .ssh
+#1601340033
+ssh 10.124.0.62
+#1601340041
+cd dir1
+#1601340048
+
+#1601340138
+
+#1601340181
+ansible-playbook -i hosts testplaybook.yml
+#1601340348
+su - user1
+#1601340551
+cat /etc/shadow
+#1601340566
+ansible-playbook -i hosts testplaybook.yml
+#1601340891
+ansible-playbook --help
+#1601340925
+ansible-playbook -i hosts testplaybook.yml -s
+#1601341320
+ansible-playbook -i hosts testplaybook.yml 
+#1601341532
+ansible version
+#1601341536
+ansible --version
+#1601342859
+ansible-doc -s selinux
+#1601342964
+ls /etc/localtime 
+#1601342972
+ll /etc/localtime
+#1601343024
+cat /etc/hosts
+#1601343137
+vim
+#1601360412
+vim /etc/systemd/system/docker.service
+#1601351745
+helm repo list
+#1601351803
+helm repo search fluentd
+#1601351808
+helm repo search flu
+#1601351821
+helm search repo flu
+#1601351913
+helm search repo elasticsearch
+#1601351942
+helm repo list
+#1601352160
+helm ls
+#1601352257
+ls
+#1601365748
+ifconfig
+#1601363920
+vim
+#1601451142
+ls
+#1601451151
+id vivoadmin 
+#1601451155
+id vivoauto 
+#1601451629
+su - vivoauto
+#1601451853
+mv /home/vivoadmin/id_rsa /home/vivoauto/.ssh
+#1601451856
+cd /home/vivoauto/.ssh
+#1601451856
+ls
+#1601451859
+ll -d ./
+#1601451862
+ll
+#1601451881
+chmod 600 id_rsa 
+#1601451882
+ll
+#1601451974
+chown vivoauto:vivoauto id_rsa 
+#1601451976
+ll
+#1601453775
+cd dir1
+#1601454149
+ansible nodes -m ping
+#1601454162
+ansible -i hosts nodes -m ping
+#1601454237
+
+#1601454394
+
+#1601454450
+ansible -u vivoauto -i hosts nodes -m ping 
+#1601454586
+ls
+#1601454590
+cd dir1
+#1601454598
+ansible -u vivoauto -i hosts nodes -m ping 
+#1601454857
+ansible -u vivoauto -i hosts nodes -m shell -a 'cat /etc/shadow'
+#1601454868
+ansible -u vivoauto -b -i hosts nodes -m shell -a 'cat /etc/shadow'
+#1601455073
+ansible -u vivoauto -b -i hosts nodes -m shell -a 'll -d /root/.ssh'
+#1601455079
+cd dir1
+#1601455083
+ansible -u vivoauto -b -i hosts nodes -m shell -a 'll -d /root/.ssh'
+#1601455193
+ansible -u vivoauto -b -i hosts nodes -m shell -a 'id user1'
+#1601455218
+ansible -u vivoauto -b -i hosts all -m shell -a 'id user1'
+#1601455231
+ansible -u vivoauto -b -i hosts all -m shell -a 'userdel -r user1'
+#1601455259
+ansible -u vivoauto -b -i hosts all -m shell -a 'id user1'
+#1601455272
+ansible -u vivoauto -b -i hosts all -m shell -a 'id user1 || echo error'
+#1601455291
+ansible -u vivoauto -b -i hosts all -m shell -a 'id user1 || ls /home/user1'
+#1601453728
+mv test1/roles/ ./
+#1601453741
+mv roles/ test1/
+#1601453759
+cp -a test1/roles/ ./
+#1601453779
+vim
+#1601457369
+vim /etc/sudoers
+#1601457412
+cd dir1
+#1601457413
+ls
+#1601457428
+ansible -u vivoauto -b -i hosts all -m shell -a 'id'
+#1601457467
+sed /user1/d /etc/sudoers
+#1601457486
+sed '/user1/d' /etc/sudoers
+#1601457531
+ansible -u vivoauto -b -i hosts all -m shell -a 'sed -i '/user1/d' /etc/sudoers'
+#1601459019
+vim /home/vivoauto/.ssh/authorized_keys 
+#1601459322
+vim hosts 
+#1601459667
+cd
+#1601459669
+ansible -u vivoauto all -m ping
+#1601453377
+cd dir1
+#1601453606
+vim
+#1601456913
+vim /home/vivoauto/.ssh/authorized_keys 
+#1601457069
+ansible -u vivoauto all -m ping
+#1601457083
+su - vivoauto 
+#1601361211
+mysql -h
+#1601361213
+mysql --help
+#1601361359
+vim
+#1601363059
+docker version
+#1601365332
+k9s
+#1601349614
+k9s --kubeconfig it-k8s-dev
+#1601349628
+k9s --kubeconfig cluster/it-k8s-dev.yml 
+#1601359530
+vim
+#1602118245
+ls
+#1602118247
+ls dir1/
