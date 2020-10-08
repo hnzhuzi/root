@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "calico-test"
+  cluster:
+    server: "https://rancherqa.vivo.xyz/k8s/clusters/c-f4t9h"
+- name: "calico-test-dgvxl8008"
+  cluster:
+    server: "https://10.124.0.55:6443"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN3akNDQ\
+      WFxZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFTTVJBd0RnWURWUVFERXdkcmRXSmwKT\
+      FdOaE1CNFhEVEl3TURjeE9EQXhNekkwTkZvWERUTXdNRGN4TmpBeE16STBORm93RWpFUU1BNEdBM\
+      VVFQXhNSAphM1ZpWlMxallUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ\
+      0VCQU5hNUIyTzQ2Z01YCktLT0JQNTlwLytGZW1hZXo5bkpvUVBHcUpmTllucDFsZmRqcUpYdU42S\
+      GwwcERObWE5UUZ0RGRsQzJDQVJ5blcKOXFhVVZ5eVN6djJOL3NjVnExZlk0azJBQnVHRXRVenoxV\
+      isxK1ZmK0QyWFN0bUR1UElrTzZnZGhaSXZCQ3B0ago1MDFwaGoxNy9FR1hnZU1QWlpvaDZsRmZPV\
+      ERFaW0zSHVPZXc4UW1WSXpkNWpuNG8vU2dPUDN6RXhGS1hidjQ0Ck5qcmlOdXdaemhPakZYWU5HM\
+      mRrZmZnOU9jWGdqTVpESTllL0dVck5oUUlLV3Z3Qm9Ra3lTUDBPWDR2NW5pd00KNyt2cUtkTHVNQ\
+      0lVaXlUNlVReWVpSGZoZy9MU1JJdmVweHZRZVh2V29Ya2tsZ2pZTXBzcTV3MkJ1b2xUNG5vQwo3U\
+      3VDOUpub1Jxa0NBd0VBQWFNak1DRXdEZ1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93U\
+      UZNQU1CCkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBQzNTR2VLWE83QXcrZjUrS0hKa3pIW\
+      jlvSjdlWjlacEFEbDYKemYreG5JSURFNkRWR1B6RU9wczZIYmFIdE5pRmR0cTBQdzdBVk9nL1pOQ\
+      mhNeUVLRHZJZnVqRFRLNFhENW9aTwoweXZ5bnBkaWJDWFVTWTlIam5lTHlZL3l0Vm96bkNWbk9yV\
+      XFBTm5EMjRaUUhiYlVCNnhIZUdOa1pSNjlqNFdJCi9aN2dOYTNYTHNNQnFad28zNWI3ZEp1MWFnV\
+      TZEekJpQ0hEV01ScnVubmhJaE44MW4zK1NNdStRTHkvTGI5UTcKNTlqMjZrVWhQVG9Ya1d5WDRQS\
+      UFwNlpGV1p4bXllL1o0dGY4YlFaZ2lMZWZMbWQwdEZveXZxTm81QzhTYlBDbwp1MGdzYmtFVmwwM\
+      TdzNW1MQ3k3TlFDQWdTTFNGajZNVGMzQkxRWmlkQXJLM3QrNnJBSzA9Ci0tLS0tRU5EIENFUlRJR\
+      klDQVRFLS0tLS0K"
+
+users:
+- name: "calico-test"
+  user:
+    token: "kubeconfig-u-ql52d.c-f4t9h:5r6wbk57qh2djj5wfk8lj7kqgn9vjc88hcrxhx4xc5gt8xg7tchfgv"
+
+contexts:
+- name: "calico-test"
+  context:
+    user: "calico-test"
+    cluster: "calico-test"
+- name: "calico-test-dgvxl8008"
+  context:
+    user: "calico-test"
+    cluster: "calico-test-dgvxl8008"
+
+current-context: "calico-test"

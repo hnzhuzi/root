@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "3"
+    field.cattle.io/publicEndpoints: '[{"addresses":["172.16.96.156"],"port":32107,"protocol":"TCP","serviceName":"pms-uat:pms-wc-basic-service","allNodes":true},{"addresses":["172.16.96.156"],"port":32007,"protocol":"TCP","serviceName":"pms-uat:pms-wc-basic-service","allNodes":true}]'
+  creationTimestamp: "2020-09-22T01:39:27Z"
+  generation: 4
+  labels:
+    app.kubernetes.io/instance: pms-wc-basic-service-uat
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: pms-wc-basic-service
+    app.kubernetes.io/version: 1.16.0
+    helm.sh/chart: pms-wc-basic-service-0.2.0
+  name: pms-wc-basic-service
+  namespace: pms-uat
+  resourceVersion: "51137533"
+  selfLink: /apis/apps/v1/namespaces/pms-uat/deployments/pms-wc-basic-service
+  uid: ff057d98-4ad8-4635-ad1b-b53fabcd7211
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 2
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: pms-wc-basic-service-uat
+      app.kubernetes.io/name: pms-wc-basic-service
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2020-09-22T10:49:00+08:00"
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: pms-wc-basic-service-uat
+        app.kubernetes.io/name: pms-wc-basic-service
+    spec:
+      containers:
+      - env:
+        - name: DUBBO_IP_TO_REGISTRY
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.hostIP
+        - name: ZK_INSTANCE_IP
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.hostIP
+        - name: DUBBO_PORT_TO_REGISTRY
+          value: "32007"
+        - name: DUBBO_PORT_TO_BIND
+          value: "32007"
+        - name: JVM_OPTS
+          value: -Xmx512M -Xms512M -XX:MaxMetaspaceSize=512M -XX:MetaspaceSize=512M
+            -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+ParallelRefProcEnabled -XX:ErrorFile=/home/logs/gc/hs_err_pid%p.log
+            -Xloggc:/home/logs/gc/gc.log -XX:HeapDumpPath=/home/logs/gc -XX:+PrintGCDetails
+            -XX:+PrintGCDateStamps -verbose:class -XX:+HeapDumpOnOutOfMemoryError
+            -XX:+PrintGCApplicationConcurrentTime -XX:+PrintGCApplicationStoppedTime
+            -XX:+PrintHeapAtGC -Dapp.id=vivo-mde-ipd-app -Dapollo.meta=http://172.20.227.160:8080
+            -Denv=uat -Duser.home=/usr/local/data/logs -DDUBBO_PORT_TO_REGISTRY=6613
+            -DDUBBO_PORT_TO_BIND=6613 -Djava.security.egd=file:/dev/./urandom
+        image: it-registry.vivo.xyz/ipd/pms-wc-basic-service:uat-1.0.0
+        imagePullPolicy: Always
+        name: pms-wc-basic-service
+        ports:
+        - containerPort: 8060
+          name: service-port
+          protocol: TCP
+        - containerPort: 32007
+          name: dubbo-port
+          protocol: TCP
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities: {}
+          privileged: false
+          readOnlyRootFilesystem: false
+          runAsNonRoot: false
+        stdin: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        tty: true
+        volumeMounts:
+        - mountPath: /usr/local/data/logs
+          name: vol1
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: default
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: vol1
+        persistentVolumeClaim:
+          claimName: pms-logs-uat

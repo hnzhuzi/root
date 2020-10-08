@@ -54429,3 +54429,13 @@ vim
 ls
 #1602118247
 ls dir1/
+#1602126518
+git status
+#1602126531
+ls
+#1602126536
+rm -f nohup.out 
+#1602126561
+git add --all ./ && git commit -m '20201008' && git push 
+#1602126578
+git push

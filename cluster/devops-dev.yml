@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "devops-dev"
+  cluster:
+    server: "https://rancherqa.vivo.xyz/k8s/clusters/c-4td46"
+- name: "devops-dev-dgvxl5487"
+  cluster:
+    server: "https://172.16.95.168:6443"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN3akNDQ\
+      WFxZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFTTVJBd0RnWURWUVFERXdkcmRXSmwKT\
+      FdOaE1CNFhEVEl3TURVeU1UQXdNalkxTlZvWERUTXdNRFV4T1RBd01qWTFOVm93RWpFUU1BNEdBM\
+      VVFQXhNSAphM1ZpWlMxallUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ\
+      0VCQU9WaHlyNEJ4Ni9aCm9yN0VtUlRscUg0V2h6b1dzR21YUGV5ME01UC9sYlBmWUJUdEJBTnMrc\
+      XppUkZSUENRakUwK1B2TUJqejRjdjUKaXc2OVdFK3pKWHQyZGh3T2lTLzVvR09oVmVkanpCdm5yU\
+      m81ejlsZDJWMDc3RFE1akhqTW5zazhqUDViYW56UgpMRXVWckE5T084NFRBZzhRaGFDeTg0ODdre\
+      nRXNTk0TWVub0tWMUdNSkttMW5hWkdSQXhWUzhFbzlQWk1UUktDCnlmb1g3c25waEpwT2J1YTFFM\
+      XI1dFRaeStGR1prT0IyY1dQR3VPZVUyUUpZVk9ETTltTUxmRFQ1K3kreUY4L1gKRFl6dFdQS0tDN\
+      jVoSVRrenp1ZkRlQXdCSUNUbzRyWXpDYlovVlo3aGhoTG9Rbkx2WnVTTkM3UzgyclNSQjlSLwpvT\
+      W8xQW5GaFZ0MENBd0VBQWFNak1DRXdEZ1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93U\
+      UZNQU1CCkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSENwYnRyQzdDbW1hckZPYlNYVFZuY\
+      k8wYklvaXhUdFpBbW4KbGpDTW1rTDFGcTh6ZmlDZmt1Z2xndnllSXNXL3NZWlBBbmVYaUd6d2IyM\
+      GF6cWFCTjFuVURCM3k4cDdDZVI3dgp6UzhWYTZ5ZzMweGdxOGdiZ0owcWhSOXRGUGlwZlJhSnVGe\
+      VBSeEhlTm9jVnF1bTU0TTNWeEo4eTF1WGdYVzRXCllPdjZPMkNUZHNuUHJvYk50OGxiZ05aaXl6c\
+      UpYRUZmb2FvZzFKdEw1d1gxbkpPK3R4UExweWZDeW9JbjZDTk4KdUhkSUtMbnYvekVuUnRyU0NjZ\
+      HRsOFBVRGdnaThqYkNuWnpLSUd3bUhtMFAvN2xjR2tiNSt1UTF2cnV3OUw4bwpCYVV1UkhXSWRvY\
+      TFaSWgzUTd4WjNRYmlYL3FhWjk3dlZicFRtQ0hxT21oRUJxQ25yc289Ci0tLS0tRU5EIENFUlRJR\
+      klDQVRFLS0tLS0K"
+
+users:
+- name: "devops-dev"
+  user:
+    token: "kubeconfig-u-ql52d.c-4td46:9hg88vsqvlwmhfq8vckx9nx7p5j4fgxmq5b45ssxkz99bnpnd26pk8"
+
+contexts:
+- name: "devops-dev"
+  context:
+    user: "devops-dev"
+    cluster: "devops-dev"
+- name: "devops-dev-dgvxl5487"
+  context:
+    user: "devops-dev"
+    cluster: "devops-dev-dgvxl5487"
+
+current-context: "devops-dev"
+

@@ -1,11 +1,11 @@
 # apiVersion: extensions/v1beta1
 apiVersion: apps/v1
-kind: Deployment
-# kind: DaemonSet
+# kind: Deployment
+kind: DaemonSet
 metadata:
   name: nginx-1
 spec:
-  replicas: 1
+  # replicas: 1
   selector:
     matchLabels:
       app: nginx-1
@@ -121,7 +121,7 @@ spec:
           path: /etc/localtime
       nodeSelector:
         # node-role.kubernetes.io/master: ""
-        kubernetes.io/hostname: dgvxl8006
+        kubernetes.io/hostname: 10.124.0.64
       # affinity:
         # nodeAffinity:
           # requiredDuringSchedulingIgnoredDuringExecution:
