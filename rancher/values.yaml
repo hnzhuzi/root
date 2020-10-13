@@ -36,7 +36,7 @@ debug: false
 #   value: "1.0"
 
 # Fully qualified name to reach your Rancher server
-hostname: rancher.10.124.0.245.xip.io
+hostname: rancher.172.16.20.110.xip.io
 
 ## Optional array of imagePullSecrets containing private registry credentials
 ## Ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/

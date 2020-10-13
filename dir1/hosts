@@ -42,7 +42,6 @@
 
 ## db-[99:101]-node.example.com
 
-10.124.0.61
-[nodes]
-# 10.124.0.[62:63] ansible_ssh_user=user1
-10.124.0.[62:63]
+# 172.16.20.[111:112] ansible_ssh_user=vivoauto
+[rancherfty]
+10.70.64.[37:39]

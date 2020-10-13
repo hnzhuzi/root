@@ -54439,3 +54439,608 @@ rm -f nohup.out
 git add --all ./ && git commit -m '20201008' && git push 
 #1602126578
 git push
+rke --version
+ls
+k9s
+mv /usr/local/bin/rke1.3 /usr/local/bin/rke
+rke version
+rke help
+kubectl get node
+ls /home/vivoauto/kube_config_rancher-cluster.yml
+k9s
+ls cluster/
+git config --global credential.helper store
+git status
+git pull
+git checkout -- .bash_history
+git pull
+k9s --kubeconfig cluster/calico-test.yml 
+
+k9s --kubeconfig cluster/calico-test.yml 
+docker image ls
+docker ps
+docker image prune 
+docker image ls
+docker image prune 
+cd /dowload/
+ls
+cat rancher-images.txt 
+grep tools rancher-images.txt 
+docker tag nginx:1.14  it-registry-fty-dg.vivo.xyz/test1/nginx:1.14
+docker push it-registry-fty-dg.vivo.xyz/test1/nginx:1.14
+docker login -u vivo -p Vivo12## it-registry-fty-dg.vivo.xyz
+docker push it-registry-fty-dg.vivo.xyz/test1/nginx:1.14
+docker rmi it-registry-fty-dg.vivo.xyz/test1/nginx:1.14
+docker image ls | grep hyperkube
+cat rancher-images.txt 
+docker pull rancher/hyperkube:v1.18.3-rancher2
+df -h
+lvs
+df -h
+du -sh /var/lib/docker/
+wc -l rancher-images.txt
+docker image ls
+ls
+docker image ls
+free -h
+ls
+ll rancher-images.tar.gz 
+du -sh rancher-images.tar.gz
+vim /etc/nginx.conf
+ps aux | grep images
+ll
+docker ps
+docker image ls
+docker image ls | grep '^rancher\/'
+ls
+ll
+vim rancher-save-images.sh 
+for read line; do echo $line; done < rancher-images.txt
+ll 
+ll -h
+for i in {1..3}; do echo $i; done
+ll -h
+awk '{print $1}' rancher-images.t
+awk '{print $1}' rancher-images.txt
+ll
+ll -h
+docker image ls
+top
+cd
+git status
+git pull
+git checkout -- .bash_history
+git pull
+git status
+ls
+ls hosts 
+rm -f hosts 
+ls
+rm -rf ssl/
+git status
+su - vivoauto 
+kubectl create namespace cattle-system
+kubectl get pod
+kubectl get node
+ping 172.16.20.113
+ping 172.16.20.112
+docker ps
+docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
+vim /etc/nginx.conf
+ls /dowload/
+ls
+ls /dowload/
+ll 
+ll rke
+ll rke*
+cd /dowload/
+ll rke*
+rke --version
+mv /usr/local/bin/rke /usr/local/bin/rke-1.1.6
+ls
+cat rancher-images.t
+cat rancher-images.txt 
+rke config --system-images
+rke-1.1.6 config --system-images
+rke-1.1.6 --version
+cd /dowload/
+ls
+rm -rf kubecm_0.8.3_Linux_x86_64.tar.gz 
+ls
+cat rancher-images.t
+cat rancher-images.txt
+grep rke-tools rancher-images.txt 
+rke config --system-images
+rke-1.1.6 config --system-images
+ls
+mv rke_linux-amd64 rke_linux-amd64-1.1.6
+ls /dowload/
+ls
+wget https://github.com/rancher/rke/releases/download/v1.1.3/rke_linux-amd64
+ls
+rm -f rke_linux-amd64
+wget http://rancher-mirror.cnrancher.com/rke/v1.1.3/rke_linux-amd64
+ls
+mv rke_linux-amd64 rke_linux-amd64-1.1.3
+ln -s rke_linux-amd64-1.1.3 /usr/local/bin/rke1.3
+ln -s rke_linux-amd64-1.1.6 /usr/local/bin/rke1.6
+rm -f /usr/local/bin/rke-1.1.6 
+ll /usr/local/bin/rke1.3
+ls
+ln -s rke_linux-amd64-1.1.3 /usr/local/bin/rke1.3
+ln -sf rke_linux-amd64-1.1.3 /usr/local/bin/rke1.3
+ln -sf /dowload/rke_linux-amd64-1.1.3 /usr/local/bin/rke1.3
+cd
+ll /usr/local/bin/rke1.3
+rke1.3
+chmod +x /dowload/rke_linux-amd64-1.1.3
+chmod +x /dowload/rke_linux-amd64-1.1.6
+ln -sf /dowload/rke_linux-amd64-1.1.6 /usr/local/bin/rke1.6
+rke1.3 --version
+rke1.6 --version
+rke1.3 config --system-images
+su - vivoauto 
+rke1.3 config --system-images
+cd /dow
+cd /dowload/
+ls
+grep hyperkube rancher-images.t
+grep hyperkube rancher-images.txt 
+ls
+chmod +x rancher-load-images.sh 
+chmod +x rancher-save-images.sh 
+rm -f rancher-images.tar.gz 
+./rancher-save-images.sh --image-list ./rancher-images.txt
+cd
+fdisk -l
+ echo "- - -" >/sys/class/scsi_host/host0/scan 
+fdisk -l
+echo "- - -" >/sys/class/scsi_host/host1/scan 
+echo "- - -" >/sys/class/scsi_host/host2/scan 
+fdisk -l
+pvcreate /dev/sdb
+vgs
+vgextend centos /dev/sdb
+lvs
+lvresize --help
+lvs
+lvresize -l +100%FREE /dev/centos/root
+resize2fs /dev/centos/root
+lvs
+df -h
+resize2fs /dev/mapper/centos-root
+resize2fs /
+resize2fs /dev/mapper/centos-root
+blkid /dev/mapper/centos-root
+xfs_growfs /dev/mapper/centos-root
+df -h
+cd /dowload/
+./rancher-save-images.sh --image-list ./rancher-images.txt
+ll
+ll -h
+rm -rf rancher-images.tar.gz 
+./rancher-save-images.sh --image-list ./rancher-images.txt
+ll -h
+./rancher-load-images.sh --image-list ./rancher-images.txt --registry it-registry-fty-dg.vivo.xyz
+cd
+vim
+vim /home/vivoauto/rancher-cluster.yml 
+k9s --kubeconfig cluster/calico-test.yml 
+vim
+vim /tmp/rancher-cluster-prod.yml
+k9s
+k9s --kubeconfig cluster/it-k8s-uat.yml 
+k9s --kubeconfig cluster/it-k8s-sit.yml 
+cat /etc/resolv.conf 
+docker ps | grep kubelet
+ps aux | grep kubelet
+kubectl --kubeconfig cluster/it-k8s-uat.yml get node
+vim
+jobs
+ping rancher-fty.vivo.xyz
+vim
+cd
+vim
+jobs
+ps aux | grep vim
+vim
+vim
+ipvsadm -ln
+ls /home/vivoauto/
+k9s
+kubectl get node
+su - vivoauto 
+cp -a dir1/cleannode.sh /tmp
+chown vivoauto:vivoauto /tmp/cleannode.sh 
+su - vivoauto 
+sudo su -
+ipvsadm -ln
+su - vivoauto 
+ipvsadm -ln
+k9s
+ipvsadm -ln
+lsmod | grep -e ip_vs -e nf_conntrack_ipv4
+lsmod | grep ip_vs
+ipvsadm -ln
+ls /dowload/
+lsmod | grep ip_vs
+ipvsadm -ln
+docker image ls | grep pause
+su - vivoauto
+su - vivoauto 
+mv /home/vivoauto/config cluster/cluster1
+ll cluster/cluster1
+ll cluster/
+chown root:root cluster/cluster1 
+mv cluster/cluster1 cluster/cluster1.yml
+ll cluster/
+k9s --kubeconfig cluster/cluster1.yml 
+yum provides ipvsadm
+yum -y install ipvsadm
+ipvsadm -ln
+su - vivoauto 
+docker logs kube-scheduler 
+docker ps
+docker logs f885
+
+docker logs --help
+docker logs -f kube-scheduler 
+docker logs --help
+docker logs --tail 50 kube-scheduler 
+docker ps
+ls /etc/iscsi/
+ls /sbin/iscsiadm
+ls /sbin/iscsiadm/
+ansible -u vivoauto -b all -m shell -a 'id'
+k9s
+su - vivoauto 
+vim
+k9s
+kubectl --kubeconfig cluster/it-k8s-dev.yml 
+k9s --kubeconfig it-devops-dev.yml 
+k9s --kubeconfig cluster/it-devops-dev.yml 
+vim
+su - vivoauto 
+k9s
+ansible -u vivoauto all -m ping
+ll /home/vivoauto/
+ll /home/vivoauto/.ssh/
+ll -d /home/vivoauto/.ssh/
+ansible -u vivoauto 10.70.64.37 -m ping
+ansible nodes -m ping
+ansible -u vivoauto nodes -m ping
+ansible -u vivoauto all -m ping
+mv .ssh{,.bak}
+cp -a /home/vivoauto/.ssh ./
+chown -R root:root .ssh
+ll -d .ssh
+ll .ssh
+ansible -u vivoauto all -m ping
+ansible-playbook --help
+ls .ssh
+ansible -u vivoauto all -m ping
+ansible -u vivoauto rancher-fty -m ping
+ansible -i dir1/hosts -u vivoauto rancher-fty -m ping
+ansible -i dir1/hosts -u vivoauto 'rancher-fty' -m ping
+ansible -i dir1/hosts -u vivoauto 'rancher\-fty' -m ping
+ansible -i dir1/hosts -u vivoauto rancherfty -m ping
+ls .ssh
+vim .ssh/authorized_keys 
+ssh vivoauto@10.70.64.37
+ping 10.70.64.37
+su - vivoauto
+ssh 10.124.0.61
+ssh vivoauto@10.124.0.61
+su - vivoauto
+systemctl restart sshd
+ssh vivoauto@10.70.64.37
+ssh vivoauto@10.124.0.61
+ssh vivoauto@10.70.64.37
+ssh -v vivoauto@10.70.64.37
+ssh -v vivoauto@10.70.64.38
+ssh -v vivoauto@10.70.64.39
+ssh -v vivoauto@10.70.64.31
+vim .ssh/authorized_keys 
+vim .ssh/id_rsa
+ll -d /var/lib/docker/
+ls /etc/docker/daemon.json
+ls /usr/lib/systemd/system/docker.servic
+ll -d /var/lib/docker/
+ll /var/lib/docker/
+ansible -i dir1/hosts -u vivoauto rancherfty -m ping
+ansible --private-key /home/vivoadmin/.ssh/id_rsa -i dir1/hosts -u vivoauto rancherfty -m ping
+ansible --private-key /home/vivoauto/.ssh/id_rsa -i dir1/hosts -u vivoauto rancherfty -m ping
+rke --version
+rsync -av /home/vivoauto/rancher-fty/rancher-cluster.yml /dowload/rke_linux-amd64-1.1.3 172.20.113.212:/home/vivoauto/tankui
+ls .ssh
+vim .ssh/authorized_keys 
+rsync -av /home/vivoauto/rancher-fty/rancher-cluster.yml /dowload/rke_linux-amd64-1.1.3 vivoauto@172.20.113.212:/home/vivoauto/tankui
+ls /dowload/
+cd cluster/
+ls
+rsync -av vivoauto@172.20.113.212:/home/vivoauto/tankui/rancher-fty.yml ./
+ls
+ll
+chown root:root rancher-fty.yml 
+ll
+which k9s
+ll /usr/local/bin/k9s
+ll -h /usr/local/bin/k9s
+rsync -av /usr/local/bin/k9s vivoauto@172.20.113.212:/home/vivoauto/tankui/
+ll /usr/local/bin/k9s
+cd
+k9s --kubeconfig cluster/rancher-fty.yml 
+ssh 10.124.0.61
+ssh vivoauto@10.124.0.61
+rsync -av cluster/rancher-fty.yml  vivoauto@10.124.0.61:/home/vivoauto/
+which kubectl
+which helm
+cd /usr/local/bin
+ls
+rsync -av helm kubectl vivoauto@172.20.113.212:/home/vivoauto/tankui/
+cd /tmp
+helm repo list
+helm push rancher it-registry-fty-dg
+helm push rancher/ it-registry-fty-dg
+helm plugin install https://github.com/chartmuseum/helm-push
+helm push rancher/ it-registry-fty-dg
+helm repo list
+helm repo remove it-registry-fty-dg
+helm repo add --username=vivo --password=Vivo12## testharbor https://it-registry-fty-dg.vivo.xyz/chartrepo/library
+helm push rancher/ testharbor
+docker ps
+cd
+vim
+docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
+docker ps
+ls /home/vivoauto/myrancher/kube_config_rancher-cluster.yml
+. .bashrc
+docker tag nginx:1.14 it-registry-fty-dg.vivo.xyz/library/nginx:1.14
+docker push it-registry-fty-dg.vivo.xyz/library/nginx:1.14
+ping 10.70.64.37
+su - vivoauto 
+k9s
+kubectl get node
+ls .kube/config 
+rm -f .kube/config 
+k9s
+. .bashrc
+cd /home/vivoauto/
+ls
+cd myrancher/
+ls
+pwd
+cd
+cd ssl
+cd dir1/ssl
+cd dir1
+ls
+ssh 10.70.64.31
+cd /tmp
+ls
+rsync -av vivoauto@172.20.113.212:/home/vivoauto/tankui/tls* ./
+ls
+ll
+kubectl create namespace cattle-system
+kubectl get node
+cd /tmp
+ls
+kubectl create namespace cattle-system
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+helm -n cattle-system install rancher rancher/
+vim rancher/values.yaml 
+docker ps
+docker restart 845
+
+docker ps
+
+docker ps
+docker logs -f 845c
+ls
+vim
+k9s
+cd /dowload/image/
+ls
+ll -h
+docker image ls | grep gitlab
+docker load -i gitlab-ce.img 
+docker image ls
+docker image ls | grep centos7
+docker imae prune
+docker image prune
+docker image ls | grep centos7
+docker system prune 
+docker image ls | grep centos7
+docker image ls | grep gitlab
+du -sh /var/lib/docker
+docker system df
+cd
+cd /dowload/
+ls
+ll -h
+docker system df
+docker system prune -a
+df -h
+cd
+ls
+mv /dowload/ /download
+cd /download
+ls
+cd image/
+ls
+docker ps
+docker image ls
+du -sh /var/lib/docker
+docker ps
+ls
+docker load -i gitlab-ce.img 
+ls /download/
+ping 10.70.64.31
+su - vivoauto
+docker image prune
+docker image ls
+docker prune
+docker system prune 
+docker image ls
+du -sh /var/lib/docker
+docker pull it-registry.vivo.xyz/library/centos7-jdk1.8:1.0.0
+docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v1
+docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v1
+docker image ls | grep gitlab
+docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v2
+docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v2
+docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v3
+docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v3
+docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v1
+docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v2
+docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v3
+ls
+docker pull nginx:1.15
+docker tag nginx:1.15 it-registry-fty-dg.vivo.xyz/library/nginx:1.15
+docker push it-registry-fty-dg.vivo.xyz/library/nginx:1.15
+docker pull nginx:1.16
+docker tag nginx:1.16 it-registry-fty-dg.vivo.xyz/library/nginx:1.16
+docker push it-registry-fty-dg.vivo.xyz/library/nginx:1.16
+docker image ls | grep gitlab
+docker pull nginx:$version && docker tag nginx:$version it-registry-fty-dg.vivo.xyz/library/nginx:$version && docker push it-registry-fty-dg.vivo.xyz/library/nginx:$version
+version=1.17
+docker pull nginx:$version && docker tag nginx:$version it-registry-fty-dg.vivo.xyz/library/nginx:$version && docker push it-registry-fty-dg.vivo.xyz/library/nginx:$version
+docker logs -f 845c
+helm -n cattle-system uninstall rancher 
+cd dir1
+rsync -av 10.124.0.61:/root/dir1/ssl ./
+./create_self-signed-cert.sh --ssl-domain=rancher.172.16.20.110.xip.io
+cd ssl
+./create_self-signed-cert.sh --ssl-domain=rancher.172.16.20.110.xip.io
+kubectl -n cattle-system delete secret tls-rancher-ingress 
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+cd
+helm -n cattle-system install rancher rancher/
+ping rancher-fty.vivo.xyz
+docker ps
+docker logs -f 845c
+docker ps
+docker ps | grep nginx
+docker logs -f 845c
+docker exec -ti 845c shell
+docker exec -ti 845c sh
+yum provides tcpdump
+ping 10.124.0.61
+tcpdump -i any -c10 -nn port 8443
+yum -y install tcpdump
+tcpdump -i any -c10 -nn port 8443
+tcpdump -i any -c10 -nn port 443
+tcpdump -i any -nn port 443
+tcpdump -i any -nn dst port 443
+docker ps | grep nginx
+docker exec -ti 845c sh
+helm -n cattle-system uninstall rancher 
+helm -n cattle-system install rancher rancher/
+kubectl delete ns cattle-system 
+helm -n cattle-system install rancher rancher/
+kubectl create namespace cattle-system
+cd /tmp
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+cd
+helm -n cattle-system install rancher rancher/
+ping rancher.172.16.20.110.xip.io
+ping rancher.10.124.0.245.xip.io
+ping rancher.172.16.20.110.xip.io
+helm -n cattle-system uninstall rancher 
+mkdir dir1/ssl
+cd dir1/ssl
+ls
+./create_self-signed-cert.sh --ssl-domain=rancher.172.16.20.110.xip.io
+kubectl -n cattle-system delete secret tls-rancher-ingress 
+kubectl -n cattle-system delete secret generic tls-ca 
+ls
+ll -h
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+cd
+helm -n cattle-system install rancher rancher/
+ping rancher.172.16.20.110.xip.io
+su - vivoauto
+rke version
+ls
+cd /download/
+ls
+cp -a rke_linux-amd64-1.1.3 /usr/local/bin/rke
+ll /usr/local/bin/rke
+ls /dowload/rke_linux-amd64-1.1.3
+ls /download/rke_linux-amd64-1.1.3
+rm -f /usr/local/bin/rke
+cp -a rke_linux-amd64-1.1.3 /usr/local/bin/rke
+rke versin
+rke version
+su - vivoauto 
+ping rancher.172.16.20.110.xip.io
+kubectl create namespace cattle-system
+cd ssl
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+cd /tmp
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+helm -n cattle-system install rancher rancher/
+cd
+helm -n cattle-system uninstall rancher 
+vim rancher/values.yaml 
+helm -n cattle-system install rancher rancher/
+su - vivoauto 
+sh dir1/cleannode.sh 
+helm -n cattle-system uninstall rancher 
+ls /tmp
+ls
+ssh 10.124.0.61
+ls .ssh
+mv .ssh{,.bak1}
+ls .ssh.bak
+mv .ssh.bak .ssh
+vim .ssh/authorized_keys 
+ssh 10.124.0.61
+cd /tmp
+ls
+vim /etc/hosts
+rsync -av 10.124.0.61:/root/dir1/ssl/tls* ./
+kubectl -n cattle-system delete secret  tls tls-rancher-ingress
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+rsync -av 10.124.0.61:/root/dir1/ssl/cacerts.pem ./
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+k9s
+cd
+k9s
+docker ps
+docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
+su - vivoauto 
+cd /tmp
+rm -rf /tmp/tls.*
+cd /root/dir1/ssl
+ls
+kubectl create namespace cattle-system
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem
+kubectl -n cattle-system create secret  tls tls-rancher-ingress --cert=tls.crt --key=tls.key
+cd
+helm -n cattle-system install rancher rancher/
+ssh node11
+cat /etc/ansible/hosts
+ansible nodes -m shell -a 'mv /root/.ssh{,.bak}'
+ssh node11
+ansible nodes -m ping
+vim
+vim
+helm -n cattle-system install rancher rancher/
+top
+free -h
+cd /home/vivoauto/
+ls
+id vivoauto
+rm -rf rancher-fty/
+ls
+cd myrancher/
+ls
+vim rancher-cluster.yml
+cd
+vim
+docker tag rancher/rancher-agent:v2.4.7 it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.7
+docker push it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.7
