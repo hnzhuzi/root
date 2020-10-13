@@ -11,4 +11,6 @@ for v1 in $(ls /root/cluster/); do
     echo "$v1 can't access!"
   fi
 done
+done
+done
 

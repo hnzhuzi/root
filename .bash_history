@@ -55044,3 +55044,21 @@ cd
 vim
 docker tag rancher/rancher-agent:v2.4.7 it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.7
 docker push it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.7
+vim
+cd
+git status
+vim .gitignore 
+git add --all ./ && git commit -m '20201013' && git push 
+git config --global credential.helper store
+ls
+cd dir1
+ls
+rsync -av 10.124.0.61:/root/dir1/tmp1.sh ./
+git add --all ./ && git commit -m '20201013' && git push 
+git status
+vim tmp1.sh 
+git status
+cat /root/.gitignore 
+cd
+vim .gitignore 
+ls
