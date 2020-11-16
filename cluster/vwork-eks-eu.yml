@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "vwork-eks-eu"
+  cluster:
+    server: "https://rancher.vivo.xyz/k8s/clusters/c-9txwb"
+
+users:
+- name: "vwork-eks-eu"
+  user:
+    token: "kubeconfig-user-4cdkl:58dclzhmw5qh9xksrn7pnnftg9tbxwsxxktvxzvlzqqm8pt8vr297w"
+
+contexts:
+- name: "vwork-eks-eu"
+  context:
+    user: "vwork-eks-eu"
+    cluster: "vwork-eks-eu"
+
+current-context: "vwork-eks-eu"
+

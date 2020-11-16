@@ -20,3 +20,12 @@ docker run -it -v my-volume:/mydata alpine sh volume在host机器的目录为/va
 需要注意的是，与bind mount不同的是，如果volume是空的而container中的目录有内容，那么docker会将container目录中的内容拷贝到volume中，但是如果volume中已经有内容，则会将container中的目录覆盖。
 
 awk shell -a "", 里面命令如果包含特殊字符 " \ $，要用\进行转义。
+
+K8S 的节点上的资源会被pod和系统进程所使用，如果默认什么都不配置，那么节点上的全部资源都是可以分配给pod使用的，系统进程本身没有保障，这样做很危险：
+1. 集群雪崩：如果节点上调度了大量pod，且pod没有合理的limit限制，节点资源将被耗尽，sshd、kubelet等进程OOM，节点变成not ready状态，pod重新继续调度到其他节点，新节点也被打挂，引起集群雪崩。
+2. 系统进程异常：就算pod设置了limit，但如果机器遇到资源不足，系统进程如docker没有资源保障，会频繁OOM，或者进程hang住无响应，虽然能运行，但容器会反复出问题。
+节点资源主要分为两类：
+可压缩资源：如CPU，即使cpu超配，也可以划分时间片运行，只是运行变慢，进程不会挂。
+不可压缩资源：Memory/Storage，内存不同于CPU，系统内存不足时，会触发OOM杀死进程，按照oom score来确定先kill谁，oom_score_adj值越高，被kill的优先级越高。
+Allocatable(保证Node上所有Pods的request resource不超过Allocatable) = Capacity(Node的所有硬件资源) - Reserved(kube+system)(为系统进程(如内核，systemd 等)和k8s进程预留资源) - Eviction Threshold(当pod实际使用内存大于Allocatable，开始驱逐pod)
+OOM的优先级如下：BestEffort Pod(1000) > Burstable Pod > 其它进程(内核init进程等 0) > Guaranteed Pod(-998) > kubelet/docker/kube-proxy等(-999) > sshd等(-1000)

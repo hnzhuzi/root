@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: testconfigmap
+  name: nginx-1
 data:
   key1: value1
   default.conf: |-
     server {
         listen       82;
+        listen  [::]:82;
         server_name  localhost;
 
         #charset koi8-r;

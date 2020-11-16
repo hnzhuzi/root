@@ -1,1 +1,2 @@
-/nfs 10.124.0.*(rw,sync,insecure,no_subtree_check,no_root_squash)
+# /nfs *(rw,sync,insecure,no_subtree_check,no_root_squash)
+/nfs 172.16.20.0/24(rw,sync,insecure,no_subtree_check,no_root_squash)

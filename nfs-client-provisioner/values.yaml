@@ -11,7 +11,7 @@ image:
   pullPolicy: IfNotPresent
 
 nfs:
-  server: 10.124.0.61
+  server: 172.16.20.110
   path: /nfs
   mountOptions:
 

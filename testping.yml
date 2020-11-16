@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: overlaytest
+spec:
+  selector:
+      matchLabels:
+        name: overlaytest
+  template:
+    metadata:
+      labels:
+        name: overlaytest
+    spec:
+      tolerations:
+      - operator: Exists
+      containers:
+      - image:  it-registry.vivo.xyz/library/busybox:1.28
+      # - image:  busybox:1.28
+        imagePullPolicy: Always
+        name: busybox
+        command: ["sh", "-c", "tail -f /dev/null"]
+        terminationMessagePath: /dev/termination-log
+
+# echo "=> Start network overlay test"
+# alias kubectl="kubectl --kubeconfig cluster/test1.yml"
+# kubectl get pods -l name=overlaytest -o jsonpath='{range .items[*]}{@.metadata.name}{" "}{@.spec.nodeName}{"\n"}{end}' | while read spod shost; do
+  # kubectl get pods -l name=overlaytest -o jsonpath='{range .items[*]}{@.status.podIP}{" "}{@.spec.nodeName}{"\n"}{end}' | while read tip thost; do
+    # kubectl --request-timeout='10s' exec $spod -- /bin/sh -c "ping -c2 $tip > /dev/null 2>&1"
+    # RC=$?
+    # if [ $RC -ne 0 ]; then
+      # echo $shost cannot reach $thost
+    # fi
+  # done
+# done
+# echo "=> End network overlay test"
+
+# export DOMAIN=www.google.com
+# echo "=> Start DNS resolve test"
+# kubectl get pods -l name=dnstest --no-headers -o custom-columns=NAME:.metadata.name,HOSTIP:.status.hostIP | while read pod host; do
+  # kubectl exec $pod -- /bin/sh -c "nslookup $DOMAIN > /dev/null 2>&1"
+  # RC=$?
+  # if [ $RC -ne 0 ]; then echo $host cannot resolve $DOMAIN; fi
+# done
+# echo "=> End DNS resolve test"

@@ -13,7 +13,8 @@ roles:
   ingest: "true"
   data: "true"
 
-replicas: 3
+# replicas: 3
+replicas: 1
 minimumMasterNodes: 2
 
 esMajorVersion: ""
@@ -65,7 +66,8 @@ esJavaOpts: "-Xmx1g -Xms1g"
 resources:
   requests:
     # cpu: "1000m"
-    memory: "1.5Gi"
+    # memory: "1.5Gi"
+    memory: "1.0Gi"
   # limits:
     # cpu: "1000m"
     # memory: "2Gi"

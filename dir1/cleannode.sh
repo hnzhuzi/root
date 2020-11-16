@@ -40,7 +40,7 @@ done
 mv /etc/kubernetes /etc/kubernetes-bak-$(date +"%Y%m%d%H%M")
 mv /var/lib/etcd /var/lib/etcd-bak-$(date +"%Y%m%d%H%M")
 mv /var/lib/rancher /var/lib/rancher-bak-$(date +"%Y%m%d%H%M")
-mv /opt/rke /opt/rke-bak-$(date +"%Y%m%d%H%M")
+# mv /opt/rke /opt/rke-bak-$(date +"%Y%m%d%H%M")
 
 # 删除残留路径
 rm -rf /etc/ceph \

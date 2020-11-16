@@ -668,8 +668,8 @@ endif
 set background=dark
 set t_Co=256
 
-" colorscheme desert
-colorscheme solarized
+colorscheme desert
+" colorscheme solarized
 
 
 " 设置标记一列的背景颜色和数字一行颜色一致
@@ -751,9 +751,9 @@ Plug 'jiangmiao/auto-pairs'
 " Plug 'scrooloose/nerdtree' | Plug 'jistr/vim-nerdtree-tabs'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdcommenter'
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
 Plug 'z0mbix/vim-shfmt'
-Plug 'yianwillis/vimcdoc'
+" Plug 'yianwillis/vimcdoc'
 " Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
@@ -800,7 +800,7 @@ set rtp+=~/.fzf
 
 " shfmt {{{
     nnoremap <leader>m :Shfmt<cr>
-    let g:shfmt_extra_args = '-ci'
+    let g:shfmt_extra_args = '-i 2'
 " }}}
 
 " fzf {{{
