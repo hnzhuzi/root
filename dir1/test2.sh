@@ -93,12 +93,12 @@ image_list1=$(rke1.2.1 config -s --version v1.18.10-rancher1-1 | awk 'NR!=1' | g
 
 
 # image_list1=$(rke config -s --version v1.18.3-rancher2-2 | awk 'NR!=1'| grep -v weaveworks)
-docker login -u vivo -p Vivo12## it-registry-fty-dg.vivo.xyz
+docker login -u abcd -p abcd12## it-registry-fty-dg.abcd.xyz
 for i in $image_list1 $image_list2; do
-  docker pull it-registry-fty-dg.vivo.xyz/$i
+  docker pull it-registry-fty-dg.abcd.xyz/$i
   if [ $? -ne 0 ]; then
-    docker pull $i && docker tag $i it-registry-fty-dg.vivo.xyz/$i \
-      && docker push it-registry-fty-dg.vivo.xyz/$i
+    docker pull $i && docker tag $i it-registry-fty-dg.abcd.xyz/$i \
+      && docker push it-registry-fty-dg.abcd.xyz/$i
   fi
-  docker rmi $i it-registry-fty-dg.vivo.xyz/$i
+  docker rmi $i it-registry-fty-dg.abcd.xyz/$i
 done

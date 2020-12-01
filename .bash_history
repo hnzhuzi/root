@@ -46016,7 +46016,7 @@ ansible all -m shell -a "netstat -tnlp | grep -E '\<80\>|\<443\>'"
 #1600850013
 rz
 #1600850259
-mv /home/vivoadmin/harbor-offline-installer-v2.1.0.tgz ./
+mv /home/abcdadmin/harbor-offline-installer-v2.1.0.tgz ./
 #1600850265
 #1600850268
 #1600850297
@@ -46042,11 +46042,11 @@ vim app.py
 #1600851488
 #1600853834
 #1600853989
-su - vivoadmin
+su - abcdadmin
 #1600854004
 
 #1600854028
-vim /home/vivoadmin/.ssh/authorized_keys
+vim /home/abcdadmin/.ssh/authorized_keys
 #1600854060
 #1600854063
 #1600854063
@@ -46541,9 +46541,9 @@ docker image ls | grep calico
 #1601103772
 #1601104859
 #1601104872
-docker pull it-registry.dg.vivo.xyz/library/nginx:alpine
+docker pull it-registry.dg.abcd.xyz/library/nginx:alpine
 #1601104885
-docker pull it-registry.vivo.xyz/library/nginx:alpine
+docker pull it-registry.abcd.xyz/library/nginx:alpine
 #1601104953
 kubectl --kubeconfig cluster/calico-test.yml apply -f testpod.yaml
 #1601106140
@@ -46841,7 +46841,7 @@ git status
 #1601278646
 git add --all ./ && git commit -m 'test1' && git push
 #1601273763
-su - vivoauto
+su - abcdauto
 #1601274155
 vim /tmp/download/config.json
 #1601274177
@@ -47162,13 +47162,13 @@ ifconfig
 vim
 #1601451142
 #1601451151
-id vivoadmin
+id abcdadmin
 #1601451155
-id vivoauto
+id abcdauto
 #1601451629
-su - vivoauto
+su - abcdauto
 #1601451853
-mv /home/vivoadmin/id_rsa /home/vivoauto/.ssh
+mv /home/abcdadmin/id_rsa /home/abcdauto/.ssh
 #1601451856
 #1601451856
 #1601451859
@@ -47177,7 +47177,7 @@ mv /home/vivoadmin/id_rsa /home/vivoauto/.ssh
 chmod 600 id_rsa
 #1601451882
 #1601451974
-chown vivoauto:vivoauto id_rsa
+chown abcdauto:abcdauto id_rsa
 #1601451976
 #1601453775
 #1601454149
@@ -47193,22 +47193,22 @@ chown vivoauto:vivoauto id_rsa
 #1601454857
 #1601454868
 #1601455073
-ansible -u vivoauto -b -i hosts nodes -m shell -a 'll -d /root/.ssh'
+ansible -u abcdauto -b -i hosts nodes -m shell -a 'll -d /root/.ssh'
 #1601455079
 #1601455083
-ansible -u vivoauto -b -i hosts nodes -m shell -a 'll -d /root/.ssh'
+ansible -u abcdauto -b -i hosts nodes -m shell -a 'll -d /root/.ssh'
 #1601455193
-ansible -u vivoauto -b -i hosts nodes -m shell -a 'id user1'
+ansible -u abcdauto -b -i hosts nodes -m shell -a 'id user1'
 #1601455218
-ansible -u vivoauto -b -i hosts all -m shell -a 'id user1'
+ansible -u abcdauto -b -i hosts all -m shell -a 'id user1'
 #1601455231
-ansible -u vivoauto -b -i hosts all -m shell -a 'userdel -r user1'
+ansible -u abcdauto -b -i hosts all -m shell -a 'userdel -r user1'
 #1601455259
-ansible -u vivoauto -b -i hosts all -m shell -a 'id user1'
+ansible -u abcdauto -b -i hosts all -m shell -a 'id user1'
 #1601455272
-ansible -u vivoauto -b -i hosts all -m shell -a 'id user1 || echo error'
+ansible -u abcdauto -b -i hosts all -m shell -a 'id user1 || echo error'
 #1601455291
-ansible -u vivoauto -b -i hosts all -m shell -a 'id user1 || ls /home/user1'
+ansible -u abcdauto -b -i hosts all -m shell -a 'id user1 || ls /home/user1'
 #1601453728
 mv test1/roles/ ./
 #1601453741
@@ -47222,15 +47222,15 @@ vim /etc/sudoers
 #1601457412
 #1601457413
 #1601457428
-ansible -u vivoauto -b -i hosts all -m shell -a 'id'
+ansible -u abcdauto -b -i hosts all -m shell -a 'id'
 #1601457467
 sed /user1/d /etc/sudoers
 #1601457486
 sed '/user1/d' /etc/sudoers
 #1601457531
-ansible -u vivoauto -b -i hosts all -m shell -a 'sed -i '/user1/d' /etc/sudoers'
+ansible -u abcdauto -b -i hosts all -m shell -a 'sed -i '/user1/d' /etc/sudoers'
 #1601459019
-vim /home/vivoauto/.ssh/authorized_keys
+vim /home/abcdauto/.ssh/authorized_keys
 #1601459322
 vim hosts
 #1601459667
@@ -47239,10 +47239,10 @@ vim hosts
 #1601453606
 vim
 #1601456913
-vim /home/vivoauto/.ssh/authorized_keys
+vim /home/abcdauto/.ssh/authorized_keys
 #1601457069
 #1601457083
-su - vivoauto
+su - abcdauto
 #1601361211
 mysql -h
 #1601361213
@@ -47291,11 +47291,11 @@ docker image prune
 docker image ls
 docker image prune
 grep tools rancher-images.txt
-docker tag nginx:1.14  it-registry-fty-dg.vivo.xyz/test1/nginx:1.14
-docker push it-registry-fty-dg.vivo.xyz/test1/nginx:1.14
-docker login -u vivo -p Vivo12## it-registry-fty-dg.vivo.xyz
-docker push it-registry-fty-dg.vivo.xyz/test1/nginx:1.14
-docker rmi it-registry-fty-dg.vivo.xyz/test1/nginx:1.14
+docker tag nginx:1.14  it-registry-fty-dg.abcd.xyz/test1/nginx:1.14
+docker push it-registry-fty-dg.abcd.xyz/test1/nginx:1.14
+docker login -u abcd -p abcd12## it-registry-fty-dg.abcd.xyz
+docker push it-registry-fty-dg.abcd.xyz/test1/nginx:1.14
+docker rmi it-registry-fty-dg.abcd.xyz/test1/nginx:1.14
 docker image ls | grep hyperkube
 docker pull rancher/hyperkube:v1.18.3-rancher2
 df -h
@@ -47327,7 +47327,7 @@ git status
 rm -f hosts
 rm -rf ssl/
 git status
-su - vivoauto
+su - abcdauto
 kubectl get pod
 kubectl get node
 docker ps
@@ -47360,7 +47360,7 @@ ln -sf /dowload/rke_linux-amd64-1.1.6 /usr/local/bin/rke1.6
 rke1.3 --version
 rke1.6 --version
 rke1.3 config --system-images
-su - vivoauto
+su - abcdauto
 rke1.3 config --system-images
 grep hyperkube rancher-images.t
 grep hyperkube rancher-images.txt
@@ -47393,9 +47393,9 @@ df -h
 ./rancher-save-images.sh --image-list ./rancher-images.txt
 rm -rf rancher-images.tar.gz
 ./rancher-save-images.sh --image-list ./rancher-images.txt
-./rancher-load-images.sh --image-list ./rancher-images.txt --registry it-registry-fty-dg.vivo.xyz
+./rancher-load-images.sh --image-list ./rancher-images.txt --registry it-registry-fty-dg.abcd.xyz
 vim
-vim /home/vivoauto/rancher-cluster.yml
+vim /home/abcdauto/rancher-cluster.yml
 k9s --kubeconfig cluster/calico-test.yml
 vim
 vim /tmp/rancher-cluster-prod.yml
@@ -47416,29 +47416,29 @@ vim
 ipvsadm -ln
 k9s
 kubectl get node
-su - vivoauto
+su - abcdauto
 cp -a dir1/cleannode.sh /tmp
-chown vivoauto:vivoauto /tmp/cleannode.sh
-su - vivoauto
+chown abcdauto:abcdauto /tmp/cleannode.sh
+su - abcdauto
 sudo su -
 ipvsadm -ln
-su - vivoauto
+su - abcdauto
 ipvsadm -ln
 k9s
 ipvsadm -ln
 ipvsadm -ln
 ipvsadm -ln
 docker image ls | grep pause
-su - vivoauto
-su - vivoauto
-mv /home/vivoauto/config cluster/cluster1
+su - abcdauto
+su - abcdauto
+mv /home/abcdauto/config cluster/cluster1
 chown root:root cluster/cluster1
 mv cluster/cluster1 cluster/cluster1.yml
 k9s --kubeconfig cluster/cluster1.yml
 yum provides ipvsadm
 yum -y install ipvsadm
 ipvsadm -ln
-su - vivoauto
+su - abcdauto
 docker logs kube-scheduler
 docker ps
 docker logs f885
@@ -47448,52 +47448,52 @@ docker logs -f kube-scheduler
 docker logs --help
 docker logs --tail 50 kube-scheduler
 docker ps
-ansible -u vivoauto -b all -m shell -a 'id'
+ansible -u abcdauto -b all -m shell -a 'id'
 k9s
-su - vivoauto
+su - abcdauto
 vim
 k9s
 kubectl --kubeconfig cluster/it-k8s-dev.yml
 k9s --kubeconfig it-devops-dev.yml
 k9s --kubeconfig cluster/it-devops-dev.yml
 vim
-su - vivoauto
+su - abcdauto
 k9s
 mv .ssh{,.bak}
-cp -a /home/vivoauto/.ssh ./
+cp -a /home/abcdauto/.ssh ./
 chown -R root:root .ssh
 ansible-playbook --help
 vim .ssh/authorized_keys
-ssh vivoauto@10.70.64.37
-su - vivoauto
+ssh abcdauto@10.70.64.37
+su - abcdauto
 ssh 10.124.0.61
-ssh vivoauto@10.124.0.61
-su - vivoauto
+ssh abcdauto@10.124.0.61
+su - abcdauto
 systemctl restart sshd
-ssh vivoauto@10.70.64.37
-ssh vivoauto@10.124.0.61
-ssh vivoauto@10.70.64.37
-ssh -v vivoauto@10.70.64.37
-ssh -v vivoauto@10.70.64.38
-ssh -v vivoauto@10.70.64.39
-ssh -v vivoauto@10.70.64.31
+ssh abcdauto@10.70.64.37
+ssh abcdauto@10.124.0.61
+ssh abcdauto@10.70.64.37
+ssh -v abcdauto@10.70.64.37
+ssh -v abcdauto@10.70.64.38
+ssh -v abcdauto@10.70.64.39
+ssh -v abcdauto@10.70.64.31
 vim .ssh/authorized_keys
 vim .ssh/id_rsa
 rke --version
-rsync -av /home/vivoauto/rancher-fty/rancher-cluster.yml /dowload/rke_linux-amd64-1.1.3 172.20.113.212:/home/vivoauto/tankui
+rsync -av /home/abcdauto/rancher-fty/rancher-cluster.yml /dowload/rke_linux-amd64-1.1.3 172.20.113.212:/home/abcdauto/tankui
 vim .ssh/authorized_keys
-rsync -av /home/vivoauto/rancher-fty/rancher-cluster.yml /dowload/rke_linux-amd64-1.1.3 vivoauto@172.20.113.212:/home/vivoauto/tankui
-rsync -av vivoauto@172.20.113.212:/home/vivoauto/tankui/rancher-fty.yml ./
+rsync -av /home/abcdauto/rancher-fty/rancher-cluster.yml /dowload/rke_linux-amd64-1.1.3 abcdauto@172.20.113.212:/home/abcdauto/tankui
+rsync -av abcdauto@172.20.113.212:/home/abcdauto/tankui/rancher-fty.yml ./
 chown root:root rancher-fty.yml
 which k9s
-rsync -av /usr/local/bin/k9s vivoauto@172.20.113.212:/home/vivoauto/tankui/
+rsync -av /usr/local/bin/k9s abcdauto@172.20.113.212:/home/abcdauto/tankui/
 k9s --kubeconfig cluster/rancher-fty.yml
 ssh 10.124.0.61
-ssh vivoauto@10.124.0.61
-rsync -av cluster/rancher-fty.yml  vivoauto@10.124.0.61:/home/vivoauto/
+ssh abcdauto@10.124.0.61
+rsync -av cluster/rancher-fty.yml  abcdauto@10.124.0.61:/home/abcdauto/
 which kubectl
 which helm
-rsync -av helm kubectl vivoauto@172.20.113.212:/home/vivoauto/tankui/
+rsync -av helm kubectl abcdauto@172.20.113.212:/home/abcdauto/tankui/
 helm repo list
 helm push rancher it-registry-fty-dg
 helm push rancher/ it-registry-fty-dg
@@ -47501,16 +47501,16 @@ helm plugin install https://github.com/chartmuseum/helm-push
 helm push rancher/ it-registry-fty-dg
 helm repo list
 helm repo remove it-registry-fty-dg
-helm repo add --username=vivo --password=Vivo12## testharbor https://it-registry-fty-dg.vivo.xyz/chartrepo/library
+helm repo add --username=abcd --password=abcd12## testharbor https://it-registry-fty-dg.abcd.xyz/chartrepo/library
 helm push rancher/ testharbor
 docker ps
 vim
 docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
 docker ps
 . .bashrc
-docker tag nginx:1.14 it-registry-fty-dg.vivo.xyz/library/nginx:1.14
-docker push it-registry-fty-dg.vivo.xyz/library/nginx:1.14
-su - vivoauto
+docker tag nginx:1.14 it-registry-fty-dg.abcd.xyz/library/nginx:1.14
+docker push it-registry-fty-dg.abcd.xyz/library/nginx:1.14
+su - abcdauto
 k9s
 kubectl get node
 rm -f .kube/config
@@ -47518,7 +47518,7 @@ k9s
 . .bashrc
 pwd
 ssh 10.70.64.31
-rsync -av vivoauto@172.20.113.212:/home/vivoauto/tankui/tls* ./
+rsync -av abcdauto@172.20.113.212:/home/abcdauto/tankui/tls* ./
 kubectl get node
 vim rancher/values.yaml
 docker ps
@@ -47551,34 +47551,34 @@ docker image ls
 du -sh /var/lib/docker
 docker ps
 docker load -i gitlab-ce.img
-su - vivoauto
+su - abcdauto
 docker image prune
 docker image ls
 docker prune
 docker system prune
 docker image ls
 du -sh /var/lib/docker
-docker pull it-registry.vivo.xyz/library/centos7-jdk1.8:1.0.0
-docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v1
-docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v1
+docker pull it-registry.abcd.xyz/library/centos7-jdk1.8:1.0.0
+docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v1
+docker push it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v1
 docker image ls | grep gitlab
-docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v2
-docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v2
-docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v3
-docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v3
-docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v1
-docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v2
-docker push it-registry-fty-dg.vivo.xyz/test/gitlab-ce:v3
+docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v2
+docker push it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v2
+docker tag gitlab/gitlab-ce:12.3.5-ce.0 it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v3
+docker push it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v3
+docker push it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v1
+docker push it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v2
+docker push it-registry-fty-dg.abcd.xyz/test/gitlab-ce:v3
 docker pull nginx:1.15
-docker tag nginx:1.15 it-registry-fty-dg.vivo.xyz/library/nginx:1.15
-docker push it-registry-fty-dg.vivo.xyz/library/nginx:1.15
+docker tag nginx:1.15 it-registry-fty-dg.abcd.xyz/library/nginx:1.15
+docker push it-registry-fty-dg.abcd.xyz/library/nginx:1.15
 docker pull nginx:1.16
-docker tag nginx:1.16 it-registry-fty-dg.vivo.xyz/library/nginx:1.16
-docker push it-registry-fty-dg.vivo.xyz/library/nginx:1.16
+docker tag nginx:1.16 it-registry-fty-dg.abcd.xyz/library/nginx:1.16
+docker push it-registry-fty-dg.abcd.xyz/library/nginx:1.16
 docker image ls | grep gitlab
-docker pull nginx:$version && docker tag nginx:$version it-registry-fty-dg.vivo.xyz/library/nginx:$version && docker push it-registry-fty-dg.vivo.xyz/library/nginx:$version
+docker pull nginx:$version && docker tag nginx:$version it-registry-fty-dg.abcd.xyz/library/nginx:$version && docker push it-registry-fty-dg.abcd.xyz/library/nginx:$version
 version=1.17
-docker pull nginx:$version && docker tag nginx:$version it-registry-fty-dg.vivo.xyz/library/nginx:$version && docker push it-registry-fty-dg.vivo.xyz/library/nginx:$version
+docker pull nginx:$version && docker tag nginx:$version it-registry-fty-dg.abcd.xyz/library/nginx:$version && docker push it-registry-fty-dg.abcd.xyz/library/nginx:$version
 docker logs -f 845c
 rsync -av 10.124.0.61:/root/dir1/ssl ./
 ./create_self-signed-cert.sh --ssl-domain=rancher.172.16.20.110.xip.io
@@ -47601,16 +47601,16 @@ docker ps | grep nginx
 docker exec -ti 845c sh
 mkdir dir1/ssl
 ./create_self-signed-cert.sh --ssl-domain=rancher.172.16.20.110.xip.io
-su - vivoauto
+su - abcdauto
 rke version
 cp -a rke_linux-amd64-1.1.3 /usr/local/bin/rke
 rm -f /usr/local/bin/rke
 cp -a rke_linux-amd64-1.1.3 /usr/local/bin/rke
 rke versin
 rke version
-su - vivoauto
+su - abcdauto
 vim rancher/values.yaml
-su - vivoauto
+su - abcdauto
 sh dir1/cleannode.sh
 ssh 10.124.0.61
 mv .ssh{,.bak1}
@@ -47624,7 +47624,7 @@ k9s
 k9s
 docker ps
 docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
-su - vivoauto
+su - abcdauto
 rm -rf /tmp/tls.*
 ssh node11
 ansible nodes -m shell -a 'mv /root/.ssh{,.bak}'
@@ -47633,12 +47633,12 @@ vim
 vim
 top
 free -h
-id vivoauto
+id abcdauto
 rm -rf rancher-fty/
 vim rancher-cluster.yml
 vim
-docker tag rancher/rancher-agent:v2.4.7 it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.7
-docker push it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.7
+docker tag rancher/rancher-agent:v2.4.7 it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.7
+docker push it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.7
 vim
 git status
 vim .gitignore
@@ -47949,12 +47949,12 @@ kubectl api-resources | grep cluster
 kubectl api-resources | grep secrets
 docker ps | grep nginx
 docker image ls | grep 295c
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.14
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.14
 docker image ls | grep nginx
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.14
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.14
 docker pull nginx
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.14
-docker push it-registry-fty-dg.vivo.xyz/library/nginx:1.14
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.14
+docker push it-registry-fty-dg.abcd.xyz/library/nginx:1.14
 kubectl --kubeconfig cluster/test1.yml apply -f testpod.yaml
 k9s --kubeconfig cluster/myrancher.yml
 k9s --kubeconfig cluster/rancher-fty.yml
@@ -48017,9 +48017,9 @@ k9s --kubeconfig cluster/devops-dev.yml
 k9s --kubeconfig cluster/myrancher.yml
 du -sh /opt
 pwd
-su - vivoauto
+su - abcdauto
 sh dir1/cleannode.sh
-su - vivoauto
+su - abcdauto
 iptable -L
 iptables -nL
 shutdown -r now
@@ -48035,8 +48035,8 @@ docker ps
 docker ps | less -S
 docker ps | grep k8s_POD | less -S
 docker ps | grep -v k8s_POD | less -S
-su - vivoauto
-su - vivoauto
+su - abcdauto
+su - abcdauto
 ps aux | grep kube
 docker ps -a
 docker volume ls
@@ -48061,7 +48061,7 @@ docker ps
 sh dir1/cleannode.sh
 cp -a /opt/rke-bak-202010200835/* /opt/rke
 cp -a /opt/rke-bak-202010200831/* /opt/rke
-cp -a /home/vivoauto/myrancher/backup/rancher-cluster.rkestate /home/vivoauto/myrancher/
+cp -a /home/abcdauto/myrancher/backup/rancher-cluster.rkestate /home/abcdauto/myrancher/
 ansible nodes -m script -a '/root/dir1/cleannode.sh'
 docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
 mv 20201019.db.zip origin.db.zip
@@ -48098,20 +48098,20 @@ vimdiff /root/rancher/values.yaml rancher/values.yaml
 
 helm show values rancher
 helm show all rancher
-docker login -u vivo -p Vivo12## it-registry.vivo.xyz
-kubectl run -it --rm alpine --image=it-registry.vivo.xyz/library/alpine sh
+docker login -u abcd -p abcd12## it-registry.abcd.xyz
+kubectl run -it --rm alpine --image=it-registry.abcd.xyz/library/alpine sh
 docker pull alpine
-docker tag alpine:latest it-registry.vivo.xyz/library/alpine:latest
-docker push it-registry.vivo.xyz/library/alpine:latest
-kubectl run -it --rm alpine --image=it-registry.vivo.xyz/library/alpine sh
-kubectl run -it --rm alpine --image=it-registry.vivo.xyz/library/alpine sh
-kubectl run -it --rm busybox --image=it-registry.vivo.xyz/library/busybox:1.28 sh
-kubectl run -it --rm alpine --image=it-registry.vivo.xyz/library/alpine sh
-kubectl run -it --rm alpine --image=it-registry.vivo.xyz/library/alpine:my-v1 sh
+docker tag alpine:latest it-registry.abcd.xyz/library/alpine:latest
+docker push it-registry.abcd.xyz/library/alpine:latest
+kubectl run -it --rm alpine --image=it-registry.abcd.xyz/library/alpine sh
+kubectl run -it --rm alpine --image=it-registry.abcd.xyz/library/alpine sh
+kubectl run -it --rm busybox --image=it-registry.abcd.xyz/library/busybox:1.28 sh
+kubectl run -it --rm alpine --image=it-registry.abcd.xyz/library/alpine sh
+kubectl run -it --rm alpine --image=it-registry.abcd.xyz/library/alpine:my-v1 sh
 vim .bash_history
 #helm upgrade rancher rancher-<CHART_REPO>/rancher \
 kubectl get pod -A
-su - vivoauto
+su - abcdauto
 yum install telnet
 telnet localhost 80
 netstat -tnlp | grep 80
@@ -48128,8 +48128,8 @@ telnet localhost 80
 cd docker/
 ls
 docker build -t harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1-myv4 -f /root/docker/Dockerfile2 /root/docker
-docker build -t it-registry.vivo.xyz/library/alpine:my-v1 -f /root/docker/Dockerfile3 /root/docker
-docker build -t it-registry.vivo.xyz/library/alpine:my-v1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker build -t it-registry.abcd.xyz/library/alpine:my-v1 -f /root/docker/Dockerfile3 /root/docker
+docker build -t it-registry.abcd.xyz/library/alpine:my-v1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
 cd
 telnet 172.16.74.79 3306
 telnet localhost 22
@@ -48139,7 +48139,7 @@ echo "" | telnet localhost 23
 jobs
 vim
 git status
-kubectl run -it --rm alpine --image=it-registry.vivo.xyz/library/alpine:my-v1 sh
+kubectl run -it --rm alpine --image=it-registry.abcd.xyz/library/alpine:my-v1 sh
 sh -x dir1/test2.sh
 vim
 rke config --system-images
@@ -48163,9 +48163,9 @@ rke1.2.1 config -l
 rke1.2.1 config -l -a
 rke1.2.1 config -s --version v1.18.10-rancher1-1
 docker image ls | grep alpine
-docker rmi it-registry.vivo.xyz/library/alpine
+docker rmi it-registry.abcd.xyz/library/alpine
 docker image ls | grep alpine
-docker tag alpine:latest it-registry.vivo.xyz/library/alpine:latest
+docker tag alpine:latest it-registry.abcd.xyz/library/alpine:latest
 docker ps
 docker image ls | grep alpine
 docker rmi alpine
@@ -48174,7 +48174,7 @@ docker image ls | grep alpine
 docker pull alpine
 docker image ls | grep alpine
 docker rmi a24bb4013296
-docker rmi alpine it-registry.vivo.xyz/library/alpine
+docker rmi alpine it-registry.abcd.xyz/library/alpine
 docker image ls | grep alpine
 rke1.2.1 config -s --version v1.18.10-rancher1-1 | awk 'NR!=1'
 docker image ls
@@ -48192,8 +48192,8 @@ rke config -s --version v1.18.3-rancher2-2 | awk 'NR!=1' | wc -l
 rke config -s --version v1.18.3-rancher2-2 | awk 'NR!=1' | grep -v weaveworks
 sh dir1/test2.sh
 sh dir1/cleannode.sh
-su - vivoauto
-cp -a /home/vivoauto/myrancher/backup/rancher-cluster.rkestate /home/vivoauto/myrancher/
+su - abcdauto
+cp -a /home/abcdauto/myrancher/backup/rancher-cluster.rkestate /home/abcdauto/myrancher/
 ll /opt/rke/etcd-snapshots/
 docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
 docker logs -f e70
@@ -48218,7 +48218,7 @@ ls
 vim rancher-save-images.sh
 vim rancher-load-images.sh
 ls
-./rancher-load-images.sh --image-list ./rancher-images.txt --registry it-registry-fty-dg.vivo.xyz
+./rancher-load-images.sh --image-list ./rancher-images.txt --registry it-registry-fty-dg.abcd.xyz
 cd
 sh dir1/test2.sh
 docker system prune -a
@@ -48233,10 +48233,10 @@ kubectl --kubeconfig cluster/test1.yml apply -f testpod.yaml
 kubectl --kubeconfig cluster/test1.yml delete -f testpod.yaml
 kubectl --kubeconfig cluster/test1.yml apply -f testpod.yaml
 docker pull nginx:alpine
-docker tag nginx:alpine it-registry-fty-dg.vivo.xyz/test1/nginx:v1
-docker push it-registry-fty-dg.vivo.xyz/test1/nginx:v1
-docker login -u vivo -p Vivo12## it-registry-fty-dg.vivo.xyz
-docker push it-registry-fty-dg.vivo.xyz/test1/nginx:v1
+docker tag nginx:alpine it-registry-fty-dg.abcd.xyz/test1/nginx:v1
+docker push it-registry-fty-dg.abcd.xyz/test1/nginx:v1
+docker login -u abcd -p abcd12## it-registry-fty-dg.abcd.xyz
+docker push it-registry-fty-dg.abcd.xyz/test1/nginx:v1
 kubectl --kubeconfig cluster/test1.yml delete -f testpod.yaml
 kubectl --kubeconfig cluster/test1.yml apply -f testpod.yaml
 kubectl --kubeconfig cluster/test1.yml delete -f testpod.yaml
@@ -48248,23 +48248,23 @@ kubectl --kubeconfig cluster/cluster1.yml create secret docker-registry myreg --
 kubectl --kubeconfig cluster/cluster1.yml apply -f testpod.yaml
 kubectl --kubeconfig cluster/cluster1.yml delete -f testpod.yaml
 kubectl --kubeconfig cluster/cluster1.yml apply -f testpod.yaml
-docker tag nginx:alpine it-registry-fty-dg.vivo.xyz/test1/nginx:alpine
+docker tag nginx:alpine it-registry-fty-dg.abcd.xyz/test1/nginx:alpine
 docker image ls
 docker image ls | grep nginx
-docker tag it-registry.vivo.xyz/library/nginx:alpine it-registry-fty-dg.vivo.xyz/test1/nginx:alpine
-docker logout it-registry-fty-dg.vivo.xyz
-docker push it-registry-fty-dg.vivo.xyz/test1/nginx:alpine
-docker login -u testuser -p Rancher12345 it-registry-fty-dg.vivo.xyz
-docker push it-registry-fty-dg.vivo.xyz/test1/nginx:alpine
-docker pull it-registry-fty-dg.vivo.xyz/test1/nginx:alpine
-docker push it-registry-fty-dg.vivo.xyz/test1/nginx:alpine
-docker logout it-registry-fty-dg.vivo.xyz
-docker pull it-registry-fty-dg.vivo.xyz/test1/nginx:alpine
-docker rmi it-registry-fty-dg.vivo.xyz/test1/nginx:alpine
+docker tag it-registry.abcd.xyz/library/nginx:alpine it-registry-fty-dg.abcd.xyz/test1/nginx:alpine
+docker logout it-registry-fty-dg.abcd.xyz
+docker push it-registry-fty-dg.abcd.xyz/test1/nginx:alpine
+docker login -u testuser -p Rancher12345 it-registry-fty-dg.abcd.xyz
+docker push it-registry-fty-dg.abcd.xyz/test1/nginx:alpine
+docker pull it-registry-fty-dg.abcd.xyz/test1/nginx:alpine
+docker push it-registry-fty-dg.abcd.xyz/test1/nginx:alpine
+docker logout it-registry-fty-dg.abcd.xyz
+docker pull it-registry-fty-dg.abcd.xyz/test1/nginx:alpine
+docker rmi it-registry-fty-dg.abcd.xyz/test1/nginx:alpine
 docker image ls | grep nginx
-docker rmi it-registry.vivo.xyz/library/nginx:alpine
+docker rmi it-registry.abcd.xyz/library/nginx:alpine
 docker image ls | grep nginx
-docker rmi it-registry.vivo.xyz/library/nginx:alpine
+docker rmi it-registry.abcd.xyz/library/nginx:alpine
 vim
 k9s
 k9s --kubeconfig cluster/test1.yml
@@ -48272,34 +48272,34 @@ k9s --kubeconfig cluster/cluster1.yml
 k9s --kubeconfig cluster/test1.yml
 k9s --kubeconfig cluster/cluster1.yml
 sh -x dir1/test2.sh
-docker push it-registry-fty-dg.vivo.xyz/rancher/rke-tools:v0.1.65
+docker push it-registry-fty-dg.abcd.xyz/rancher/rke-tools:v0.1.65
 docker image ls | grep rke-tools
-docker pull it-registry-fty-dg.vivo.xyz/rancher/rke-tools:v0.1.65
+docker pull it-registry-fty-dg.abcd.xyz/rancher/rke-tools:v0.1.65
 $?
-docker pull it-registry-fty-dg.vivo.xyz/rancher/rke-tools:v0.1.66
+docker pull it-registry-fty-dg.abcd.xyz/rancher/rke-tools:v0.1.66
 echo $?
 kubectl get node
 kubectl --kubeconfig cluster/test1.yml get node
 k9s --kubeconfig cluster/test1.yml
 rke1.2.1 config -s --version v1.18.10-rancher1-1 | awk 'NR!=1' | grep -v weaveworks
-docker push it-registry-fty-dg.vivo.xyz/rancher/calico-cni:v3.13.4
-docker push it-registry-fty-dg.vivo.xyz/rancher/calico-cni:v3.13.5
+docker push it-registry-fty-dg.abcd.xyz/rancher/calico-cni:v3.13.4
+docker push it-registry-fty-dg.abcd.xyz/rancher/calico-cni:v3.13.5
 echo $?
-docker push it-registry-fty-dg.vivo.xyz/rancher/calico-cni:v3.13.4
+docker push it-registry-fty-dg.abcd.xyz/rancher/calico-cni:v3.13.4
 echo $?
 docker pull -help
 docker pull --help
 rke1.2.1 config -l -a
-sh dir1/test1.sh vmall.vivo.xyz
+sh dir1/test1.sh vmall.abcd.xyz
 vim
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.14
-docker tag it-registry-fty-dg.vivo.xyz/library/nginx:1.14 it-registry-fty-dg.vivo.xyz/library/nginx:prd-1.14
-docker push it-registry-fty-dg.vivo.xyz/library/nginx:prd-1.14
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.15
-docker tag it-registry-fty-dg.vivo.xyz/library/nginx:1.15 it-registry-fty-dg.vivo.xyz/library/nginx:prd-1.15
-docker push it-registry-fty-dg.vivo.xyz/library/nginx:prd-1.15
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.14
+docker tag it-registry-fty-dg.abcd.xyz/library/nginx:1.14 it-registry-fty-dg.abcd.xyz/library/nginx:prd-1.14
+docker push it-registry-fty-dg.abcd.xyz/library/nginx:prd-1.14
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.15
+docker tag it-registry-fty-dg.abcd.xyz/library/nginx:1.15 it-registry-fty-dg.abcd.xyz/library/nginx:prd-1.15
+docker push it-registry-fty-dg.abcd.xyz/library/nginx:prd-1.15
 helm repo list
-helm repo add --username=vivo --password=Vivo12## harbor-local https://it-registry-fty-dg.vivo.xyz/chartrepo/library
+helm repo add --username=abcd --password=abcd12## harbor-local https://it-registry-fty-dg.abcd.xyz/chartrepo/library
 cd dir1
 helm push helm harbor-local
 cd
@@ -48329,17 +48329,17 @@ helm --kubeconfig cluster/test1.yml status testchart
 cp -a testchart /tmp
 cd /tmp
 docker image ls | grep nginx
-docker pull docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.17
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.17
-docker tag it-registry-fty-dg.vivo.xyz/library/nginx:1.17 it-registry.vivo.xyz/library/nginx:1.17
-docker push it-registry.vivo.xyz/library/nginx:1.17
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.16
-docker tag it-registry-fty-dg.vivo.xyz/library/nginx:1.16 it-registry.vivo.xyz/library/nginx:1.16
-docker push it-registry.vivo.xyz/library/nginx:1.16
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:1.15
-docker pull it-registry-fty-dg.vivo.xyz/library/nginx:prd-1.15
-docker tag it-registry-fty-dg.vivo.xyz/library/nginx:prd-1.15 it-registry.vivo.xyz/library/nginx:1.15
-docker push it-registry.vivo.xyz/library/nginx:1.15
+docker pull docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.17
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.17
+docker tag it-registry-fty-dg.abcd.xyz/library/nginx:1.17 it-registry.abcd.xyz/library/nginx:1.17
+docker push it-registry.abcd.xyz/library/nginx:1.17
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.16
+docker tag it-registry-fty-dg.abcd.xyz/library/nginx:1.16 it-registry.abcd.xyz/library/nginx:1.16
+docker push it-registry.abcd.xyz/library/nginx:1.16
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.15
+docker pull it-registry-fty-dg.abcd.xyz/library/nginx:prd-1.15
+docker tag it-registry-fty-dg.abcd.xyz/library/nginx:prd-1.15 it-registry.abcd.xyz/library/nginx:1.15
+docker push it-registry.abcd.xyz/library/nginx:1.15
 helm push testchart harbor-local
 cd
 helm push testchart harbor-local
@@ -48348,10 +48348,10 @@ helm --kubeconfig cluster/test1.yml install testchart testchart/
 helm --kubeconfig cluster/test1.yml upgrade testchart /tmp/testchart/
 helm --kubeconfig cluster/test1.yml uninstall testchart
 helm push /tmp/testchart harbor-local
-docker build -t it-registry.vivo.xyz/library/1.18-alpine-bash -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
-docker push it-registry.vivo.xyz/library/1.18-alpine-bash
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-bash -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
-docker push it-registry.vivo.xyz/library/nginx:1.18-alpine-bash
+docker build -t it-registry.abcd.xyz/library/1.18-alpine-bash -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker push it-registry.abcd.xyz/library/1.18-alpine-bash
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-bash -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker push it-registry.abcd.xyz/library/nginx:1.18-alpine-bash
 helm --kubeconfig cluster/test1.yml uninstall testchart
 helm --kubeconfig cluster/test1.yml ls
 helm --kubeconfig cluster/cluster1.yml install testchart testchart/
@@ -48375,10 +48375,10 @@ docker info | grep over
 docker info | grep overlay
 k9s --kubeconfig cluster/cluster1.yml
 k9s --kubeconfig cluster/test1.yml
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | awk 'END {print}'
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | grep 47
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | grep 0771
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.vivo.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | awk '{print}'
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | awk 'END {print}'
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | grep 47
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | grep 0771
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | awk '{print}'
 echo tmp.txt
 line1
 line2
@@ -48467,15 +48467,15 @@ ls /tmp/semaphore/output/
 cd
 vim .ssh/id_rsa
 
-su - vivoauto
+su - abcdauto
 cp -a dir1/testplaybook.yml /tmp
-su - vivoauto
-ansible nodes -m shell -a 'id vivoauto'
-rsync -av /home/vivoauto/.ssh node13:/home/vivoauto
-su - vivoauto
+su - abcdauto
+ansible nodes -m shell -a 'id abcdauto'
+rsync -av /home/abcdauto/.ssh node13:/home/abcdauto
+su - abcdauto
 ansible-playbook dir1/testplaybook.yml
 ansible-playbook --help
-ansible-playbook --private-key /home/vivoauto/.ssh/id_rsa dir1/testplaybook.yml
+ansible-playbook --private-key /home/abcdauto/.ssh/id_rsa dir1/testplaybook.yml
 tree
 ansible nodes -m shell -a 'yum -y remove tree'
 ansible-playbook dir1/testplaybook.yml
@@ -48551,12 +48551,12 @@ uname -r
 telnet 10.70.28.31 443
 telnet 10.70.28.31 444
 telnet 10.70.28.31 80
-telnet it-registry-fty-dg.vivo.xyz 443
-telnet it-registry-fty-dg.vivo.xyz 80
+telnet it-registry-fty-dg.abcd.xyz 443
+telnet it-registry-fty-dg.abcd.xyz 80
 telnet 172.17.8.119 443
 telnet 172.17.8.119 80
 telnet 172.17.8.119 443
-su - vivoauto
+su - abcdauto
 vim
 k9s --kubeconfig cluster/cluster1.yml
 k9s --kubeconfig cluster/vwork-dg-pre.yml
@@ -48573,7 +48573,7 @@ kubectl --kubeconfig cluster/cluster1.yml delete -f testpod.yaml
 
 
 kubectl --kubeconfig cluster/vwork-dg-pre.yml apply -f testpod.yaml
-kubectl --kubeconfig cluster/myrancher.yml run busybox --image=it-registry.vivo.xyz/library/busybox:1.28 nslookup kubernetes
+kubectl --kubeconfig cluster/myrancher.yml run busybox --image=it-registry.abcd.xyz/library/busybox:1.28 nslookup kubernetes
 sh tmp1.sh
 cd dir1/docker/
 ls
@@ -48594,12 +48594,12 @@ ls
 docker ps
 docker cp 6ace:/etc/nginx/conf.d/default.conf /root/docker
 ls
-ls 
+ls
 docker cp 6ace:/etc/nginx/conf.d/default.conf /root/docker/default.conf
 docker cp 6ace:/etc/nginx/conf.d/default.conf /root/docker/
 docker cp 6ace:/etc/nginx/conf.d/default.conf ./
 ls
-cat default.conf 
+cat default.conf
 mv default.conf nginx.default.conf
 ls
 cd dir1
@@ -48608,59 +48608,59 @@ rm -f *.txt
 ls
 echo from dir1 > index.html
 ls
-cat index.html 
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+cat index.html
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
 ping 172.17.0.3
 ifconfig
 ping 172.17.0.3
 curl 172.17.0.3
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
 cd docker
 ls
 cd /root/dir1/docker/
 ls
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
 date +%F_%T
 date %T
 date +%T
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
-docker image history it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker image history it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
 docker run --help
 kubectl run --help
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
 sh tmp1.sh
-ping rancher.vivo.xyz
-sh tmp2.sh 
-sh -x tmp2.sh 
+ping rancher.abcd.xyz
+sh tmp2.sh
+sh -x tmp2.sh
 ping --help
-sh tmp2.sh 
-sh tmp1.sh 
+sh tmp2.sh
+sh tmp1.sh
 kubectl --kubeconfig cluster/cluster1.yml delete -f testpod.yaml
 cd dir1/docker/
 ls
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
 ls
 docker run -ti --rm nginx:1.18-alpine sh
-docker run -ti --rm it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 sh
-docker run --name nginx1 -d  it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
+docker run -ti --rm it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 sh
+docker run --name nginx1 -d  it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
 docker exec -ti nginx1 sh
 docker rm -f nginx1
-docker run --name nginx1 -d  it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
+docker run --name nginx1 -d  it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
 docker exec -ti nginx1 sh
-chmod +x test1.sh 
+chmod +x test1.sh
 ll test1.sh
 docker rm -f nginx1
-docker run -ti it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
-docker run -ti it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 echo hello
-docker run -ti it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
-docker run -ti it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 
-docker run -ti it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
-docker run -ti it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 echo hello
-docker run -ti --rm it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 sh
+docker run -ti it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
+docker run -ti it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 echo hello
+docker run -ti it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
+docker run -ti it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
+docker run -ti it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
+docker run -ti it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 echo hello
+docker run -ti --rm it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 sh
 docker ps | grep myq
 docker ps | grep my
-docker run -d --name nginx1 it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
+docker run -d --name nginx1 it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
 docker logs -f nginx1
 docker ps | grep my
 ps aux | grep test1
@@ -48671,21 +48671,21 @@ docker ps -a | grep my
 docker rm -f nginx1
 cd
 git status
-docker run -ti --rm it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 sh
+docker run -ti --rm it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 sh
 docker ps -a | grep my
 tcpdump -i any -c5 -nn src net 172.16.249.41/32 and dst port 6443
 vim
-k9s --kubeconfig cluster/calico-dmz-test.yml 
-k9s --kubeconfig cluster/rancherqa.yml 
-k9s --kubeconfig cluster/calico-dmz-test.yml 
-k9s --kubeconfig cluster/cluster1.yml 
-k9s --kubeconfig cluster/it-devops-dev.yml 
-docker run -ti --rm it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 sh
-kubectl --kubeconfig cluster/calico-dmz-test.yml delete -f testping.yml 
-kubectl --kubeconfig cluster/calico-dmz-test.yml apply -f testpod.yaml 
+k9s --kubeconfig cluster/calico-dmz-test.yml
+k9s --kubeconfig cluster/rancherqa.yml
+k9s --kubeconfig cluster/calico-dmz-test.yml
+k9s --kubeconfig cluster/cluster1.yml
+k9s --kubeconfig cluster/it-devops-dev.yml
+docker run -ti --rm it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 sh
+kubectl --kubeconfig cluster/calico-dmz-test.yml delete -f testping.yml
+kubectl --kubeconfig cluster/calico-dmz-test.yml apply -f testpod.yaml
 sh tmp1.sh
-docker build -t it-registry.vivo.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
-docker push it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
+docker build -t it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 -f /root/dir1/docker/Dockerfile3 /root/dir1/docker
+docker push it-registry.abcd.xyz/library/nginx:1.18-alpine-my1
 vim
 git status
 #kubectl run test --image=busybox --replicas=3 sleep 30000
@@ -48702,13 +48702,13 @@ calicoctl version
 cd
 calicoctl get node
 fg
-k9s --kubeconfig cluster/calico-dmz-test.yml 
-k9s --kubeconfig cluster/cluster1.yml 
-k9s --kubeconfig cluster/cluster1.yml 
+k9s --kubeconfig cluster/calico-dmz-test.yml
+k9s --kubeconfig cluster/cluster1.yml
+k9s --kubeconfig cluster/cluster1.yml
 ps aux | grep vim
 kill -9 10074
 vim
-k9s --kubeconfig cluster/calico-dmz-test.yml 
+k9s --kubeconfig cluster/calico-dmz-test.yml
 kubectl --kubeconfig cluster/cluster1.yml apply -f testpod.yaml
  wget -q -O- www.baidu.com
  wget -O- www.baidu.com
@@ -48716,19 +48716,19 @@ kubectl --kubeconfig cluster/cluster1.yml apply -f testpod.yaml
  wget -O- www.baidu.com
 curl www.baidu.com
 vim
-k9s --kubeconfig cluster/cluster1.yml 
-sh tmp1.sh 
-kubectl --kubeconfig cluster/calico-dmz-test.yml delete -f testpod.yaml 
-kubectl --kubeconfig cluster/calico-dmz-test.yml apply -f testpod.yaml 
-k9s --kubeconfig cluster/cluster1.yml 
 k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml 
-k9s --kubeconfig cluster/it-devops-dev.yml 
+sh tmp1.sh
+kubectl --kubeconfig cluster/calico-dmz-test.yml delete -f testpod.yaml
+kubectl --kubeconfig cluster/calico-dmz-test.yml apply -f testpod.yaml
 k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml 
+k9s --kubeconfig cluster/cluster1.yml
+k9s --kubeconfig cluster/calico-dmz-test.yml
+k9s --kubeconfig cluster/it-devops-dev.yml
+k9s --kubeconfig cluster/cluster1.yml
+k9s --kubeconfig cluster/calico-dmz-test.yml
 k9s --kubeconfig cluster/cluster1.yml
 ping 10.124.0.61
 telnet 10.124.0.61 22
 ping 10.124.0.61
 k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml 
+k9s --kubeconfig cluster/calico-dmz-test.yml

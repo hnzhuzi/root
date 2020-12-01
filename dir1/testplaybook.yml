@@ -1,6 +1,6 @@
 ---
 - hosts: nodes
-  # remote_user: vivoauto
+  # remote_user: abcdauto
   # become: yes
   # gather_facts: false
   tasks:

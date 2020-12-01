@@ -14,7 +14,7 @@ spec:
       tolerations:
       - operator: Exists
       containers:
-      - image:  it-registry.vivo.xyz/library/busybox:1.28
+      - image:  harbor.mysite/library/busybox:1.28
       # - image:  busybox:1.28
         imagePullPolicy: Always
         name: busybox

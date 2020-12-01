@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx-1
-        image: it-registry.vivo.xyz/library/nginx:1.18-alpine-my1
+        image: harbor.mysite/library/nginx:1.18-alpine-my1
         ports:
         - containerPort: 80
           # hostPort: 81
@@ -217,7 +217,7 @@ spec:
   rules:
   # - host: nginx-1.10.124.0.245.xip.io
   # - host: nginx-1.172.16.20.110.xip.io
-  - host: nginx-1.vivo.xyz
+  - host: nginx-1.abcd.xyz
     http:
       paths:
       - path: /

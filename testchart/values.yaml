@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: it-registry.vivo.xyz/library/nginx
+  repository: harbor.mysite/library/nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""

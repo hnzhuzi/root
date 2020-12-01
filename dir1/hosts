@@ -42,6 +42,6 @@
 
 ## db-[99:101]-node.example.com
 
-# 172.16.20.[111:112] ansible_ssh_user=vivoauto
+# 172.16.20.[111:112] ansible_ssh_user=abcdauto
 [rancherfty]
 10.70.64.[37:39]
