@@ -28,7 +28,7 @@
 # Etcd：负责存储网络信息
 # BGP client(BIRD)：将felix生成的路由通过BGP协议发送到网络中，并且接受其他节点通过BGP发送过来的路由，以生成全局的路由信息。
 # Felix：Calico Agent，每个节点都需要运行，主要负责配置路由、配置ACLs、报告状态
-# BGP Route Reflector：大规模部署时需要用到，作为BGP client的中心连接点，可以避免每个节点互联
+# BGP Route Reflector(路由反射器)：大规模部署时需要用到，作为BGP client的中心连接点，可以避免每个节点互联
 # K8S集群运行在同网段kvm虚机上，虚机间没有网络ACL限制，因此可以设置CALICO_IPV4POOL_IPIP=off，如果你的主机位于不同网段，或者运行在公有云上需要打开这个选项 CALICO_IPV4POOL_IPIP=always
 
 # export CALICO_DATASTORE_TYPE=kubernetes
@@ -66,7 +66,7 @@ spec:
   asNumber: 64512
 
 
-kind: BGPPeer
+kind: BGPPeer # BGP对等体
 apiVersion: projectcalico.org/v3
 metadata:
   name: peer-to-rrs
@@ -74,6 +74,9 @@ spec:
   # 规则1：普通 bgp node 与 rr 建立连接
   nodeSelector: "!has(i-am-a-route-reflector)"
   peerSelector: has(i-am-a-route-reflector)
+
+  # nodeSelector: all()
+  # peerSelector: route-reflector == 'true' # kubectl label node k8s-node3 route-reflector=true
 
 ---
 
@@ -101,13 +104,12 @@ metadata:
     kubernetes.io/hostname: 10.124.0.62
     kubernetes.io/os: linux
     kubernetes.io/role: master
-    i-am-a-route-reflector: true
+    # i-am-a-route-reflector: true
   name: dgvxl6775
 spec:
   bgp:
     ipv4Address: 10.124.0.62/24
-    ipv4IPIPTunnelAddr: 172.20.7.128
-    # 设置集群ID
+    # 路由反射器集群ID
     routeReflectorClusterID: 224.0.0.1
   orchRefs:
   - nodeName: 10.124.0.62

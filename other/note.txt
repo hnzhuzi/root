@@ -29,3 +29,8 @@ K8S 的节点上的资源会被pod和系统进程所使用，如果默认什么�
 不可压缩资源：Memory/Storage，内存不同于CPU，系统内存不足时，会触发OOM杀死进程，按照oom score来确定先kill谁，oom_score_adj值越高，被kill的优先级越高。
 Allocatable(保证Node上所有Pods的request resource不超过Allocatable) = Capacity(Node的所有硬件资源) - Reserved(kube+system)(为系统进程(如内核，systemd 等)和k8s进程预留资源) - Eviction Threshold(当pod实际使用内存大于Allocatable，开始驱逐pod)
 OOM的优先级如下：BestEffort Pod(1000) > Burstable Pod > 其它进程(内核init进程等 0) > Guaranteed Pod(-998) > kubelet/docker/kube-proxy等(-999) > sshd等(-1000)
+
+基于Alpine Linux的Docker基础镜像的镜像文件很小， 镜像文件很小是有很大的优势的，这意味这下载的时间大大缩小了。
+但是，基于Alpine Linux的Docker基础镜像的镜像文件很小，也有代价：
+1. 把glibc替换为了musl libc，但是musl libc不支持国际化和本地化， 所以你想显示中文(比如打印中文日志)，还得安装glibc。
+2. 把bash替换为了ash，但是ash不支持数组特性， 但是，我们大多数已经写好的脚本，基本上是以bash为标准的。
