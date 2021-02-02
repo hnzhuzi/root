@@ -1,5 +1,5 @@
-systemctl disable iptables rpcbind rpcbind.socket chronyd firewalld
-systemctl stop iptables rpcbind rpcbind.socket chronyd firewalld
+systemctl disable firewalld NetworkManager NetworkManager-dispatcher NetworkManager-wait-online postfix
+systemctl stop firewalld NetworkManager NetworkManager-dispatcher NetworkManager-wait-online postfix
 
 setenforce 0
 sed -i 's#SELINUX=enforcing#SELINUX=disabled#' /etc/selinux/config
