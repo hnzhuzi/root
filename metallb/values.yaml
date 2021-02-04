@@ -33,7 +33,7 @@ configInline:
   - name: my-ip-space
     protocol: layer2
     addresses:
-    - 10.124.0.245-10.124.0.245
+    - 172.16.195.200-172.16.195.200
 
 ## String to partially override metallb.fullname include (will maintain the release name)
 ##

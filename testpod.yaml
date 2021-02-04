@@ -1,7 +1,7 @@
 # apiVersion: extensions/v1beta1
 apiVersion: apps/v1
-# kind: Deployment
-kind: DaemonSet
+kind: Deployment
+# kind: DaemonSet
 metadata:
   name: nginx-1
 spec:
@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx-1
-        image: harbor.mysite/library/nginx:1.18-alpine-my1
+        image: nginx:1.18-alpine
         ports:
         - containerPort: 80
           # hostPort: 81
@@ -165,8 +165,8 @@ spec:
                   # values:
                   # - node-affinity-pod
               # topologyKey: kubernetes.io/hostname
-      tolerations:
-      - operator: Exists
+      # tolerations:
+      # - operator: Exists
       # - key: node-role.kubernetes.io/master
         # operator: Equal|Exists
         # value: value
@@ -187,10 +187,12 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 38000
+    nodePort: 30000
+
 ---
 
-apiVersion: extensions/v1beta1
+# apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx-1
@@ -215,15 +217,18 @@ metadata:
 
 spec:
   rules:
-  # - host: nginx-1.10.124.0.245.xip.io
-  # - host: nginx-1.172.16.20.110.xip.io
-  - host: nginx-1.abcd.xyz
+  - host: nginx-1.172.16.195.200.xip.io
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: nginx-1
-          servicePort: 80
+          # serviceName: nginx-1
+          # servicePort: 80
+          service:
+            name: nginx-1
+            port:
+              number: 80
   # tls:
   # - hosts:
     # - nginx-1.k8s.maimaiti.site

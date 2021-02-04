@@ -249,7 +249,7 @@ controller:
   ##
   podAnnotations: {}
 
-  replicaCount: 3
+  replicaCount: 2
 
   minAvailable: 1
 
@@ -263,7 +263,8 @@ controller:
   #    memory: 90Mi
     requests:
       # cpu: 100m
-      memory: 500Mi
+      # memory: 500Mi
+      memory: 300Mi
 
   autoscaling:
     enabled: false

@@ -18357,11 +18357,8 @@ du -sh k8s.1-14-1.tar.gz
 rm -rf k8s.1-14-1.tar.gz
 #1570528340
 #1570528340
-wget https://github.com/derailed/k9s/releases/download/0.6.6/k9s_0.6.6_Linux_x86_64.tar.gz
 #1570528340
-tar tf k9s_0.6.6_Linux_x86_64.tar.gz
 #1570528340
-tar xf k9s_0.6.6_Linux_x86_64.tar.gz -C /usr/local/bin/
 #1570528340
 #1570528340
 #1570528340
@@ -18370,14 +18367,12 @@ rm -rf LICENSE README.md
 #1570528340
 echo $PATH
 #1570528340
-k9s
 #1570528340
 top
 #1570528340
 vim
 #1570528340
 #1570528340
-k9s
 #1570528340
 find / -name 'harbor-helm' -type d
 #1570528340
@@ -18497,7 +18492,6 @@ vim
 #1570528340
 rsync -av  10.83.32.226:/root/deployment.yaml ./
 #1570528340
-k9s
 #1570528340
 vim
 #1570528340
@@ -18611,7 +18605,6 @@ helm ls
 #1570528340
 helm ls
 #1570528340
-k9s
 #1570528340
 systemctl start nfs-server
 #1570528340
@@ -18836,7 +18829,6 @@ kubectl get node
 #1570528340
 helm ls
 #1570528340
-k9s
 #1570528340
 #1570528340
 free -h
@@ -18861,34 +18853,26 @@ helm --version
 #1570528340
 helm version
 #1570528340
-rsync -av k9s_0.6.6_Linux_x86_64.tar.gz  10.83.22.222:/root
 #1570528340
 helm version
 #1570528340
 . .bashrc
 #1570528340
-k9s
 #1570528340
 . .bashrc
 #1570528340
-k9s
 #1570528340
 #1570528340
 #1570528340
 #1570528340
 #1570528340
 #1570528340
-wget https://github.com/derailed/k9s/releases/download/0.7.6/k9s_0.7.6_Linux_x86_64.tar.gz
-#1570528340
-tar xf k9s_0.7.6_Linux_x86_64.tar.gz -C /usr/local/bin/
 #1570528340
 #1570528340
 #1570528340
-k9s
 #1570528340
-k9s -h
 #1570528340
-k9s info
+#1570528340
 #1570528340
 kubectl top node node1
 #1570528340
@@ -18953,17 +18937,13 @@ helm ls
 #1570528340
 #1570528340
 #1570528340
-rm -rf k9s_0.6.6_Linux_x86_64.tar.gz
 #1570528340
-rm -rf /usr/local/bin/k9s
 #1570528340
 free -h
 #1570528340
 top
 #1570528340
-rsync -av k9s_0.7.6_Linux_x86_64.tar.gz   10.83.22.222:/root
 #1570528340
-k9s
 #1570528340
 #1570528340
 vim
@@ -18983,7 +18963,6 @@ java -version
 #1570528340
 mkdir download
 #1570528340
-mv k9s_0.7.6_Linux_x86_64.tar.gz jdk-8u211-linux-x64.tar.gz download/
 #1570528340
 #1570528340
 #1570528340
@@ -19955,11 +19934,9 @@ kubectl get node
 #1570528340
 kubectl get pod --all-namespaces
 #1570528340
-k9s
 #1570528340
 #1570528340
 #1570528340
-tar xf /download/k9s_0.7.6_Linux_x86_64.tar.gz -C /usr/local/bin/
 #1570528340
 #1570528340
 #1570528340
@@ -19967,11 +19944,9 @@ tar xf /download/k9s_0.7.6_Linux_x86_64.tar.gz -C /usr/local/bin/
 #1570528340
 rm -rf LICENSE README.md
 #1570528340
-k9s
 #1570528340
 free -h
 #1570528340
-k9s
 #1570528340
 netstat -tnlp
 #1570528340
@@ -20037,7 +20012,6 @@ du -sh /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/bin/java
 #1570528340
 systemctl start kube-apiserver.service kube-controller-manager.service  kube-proxy.service kube-scheduler.service  kubelet.service etcd.service haproxy.service keepalived.service docker.service
 #1570528340
-k9s
 #1570528340
 kubectl get node
 #1570528340
@@ -20051,7 +20025,6 @@ helm get values nginx-ingress
 #1570528340
 helm get values cert-manager
 #1570528340
-k9s
 #1570528340
 systemctl start jenkins
 #1570528340
@@ -25971,23 +25944,16 @@ vim daemon.json
 #1567157231
 #1567157232
 #1567157239
-wget https://github.com/derailed/k9s/releases/download/0.8.4/k9s_0.8.4_Linux_arm64.tar.gz
 #1567157811
 #1567157826
-tar xf k9s_0.8.4_Linux_arm64.tar.gz -C /usr/local
 #1567157844
-ln -s /usr/local/k9s /usr/bin
 #1567157847
-k9s -h
 #1567157856
 #1567157863
-which k9s
 #1567157868
-k9s -h
 #1567157952
 #1567157953
 #1567157958
- tar xf k9s_0.8.4_Linux_arm64.tar.gz -C /usr/local
 #1567157961
 #1567157992
 #1567157993
@@ -25995,61 +25961,41 @@ k9s -h
 #1567158002
 #1567158006
 #1567158015
-rm -rf k9s
 #1567158017
 #1567158022
 #1567158022
 #1567158028
-tar xf k9s_0.8.4_Linux_arm64.tar.gz
 #1567158031
 #1567158079
 #1567158095
-k9s
 #1567158110
-rm -f /usr/bin/k9s
 #1567158113
-k9s
 #1567158135
-which k9s
 #1567158140
 #1567158142
-k9s
 #1567158154
-./k9s -h
 #1567158158
-rm -rf k9s
 #1567158159
 #1567158208
-tar xf k9s_0.8.4_Linux_arm64.tar.gz -C /usr/bin
 #1567158210
-k9s
 #1567158217
 #1567158220
 #1567158226
 #1567158230
 #1567158249
-k9s
 #1567158428
 #1567158429
 #1567158433
-rm -rf k9s_0.8.4_Linux_arm64.tar.gz
 #1567158461
-wget https://github.com/derailed/k9s/releases/download/0.8.4/k9s_0.8.4_Linux_x86_64.tar.gz
 #1567158724
 #1567158740
-rm -rf k9s_0.8.4_Linux_x86_64.tar.gz
 #1567158743
-rm -rf k9s_0.8.4_Linux_x86_64.tar.gz.1
 #1567158743
 #1567158756
-wget https://github.com/derailed/k9s/releases/download/0.8.4/k9s_0.8.4_Linux_x86_64.tar.gz
 #1567159188
 #1567159219
-tar xf k9s_0.8.4_Linux_x86_64.tar.gz -C /usr/bin
 #1567159225
-k9s -h
 #1567159254
-k9s
 #1567159458
 #1567159470
 wget https://storage.googleapis.com/kubernetes-helm/helm-v2.12.3-linux-amd64.tar.gz
@@ -26265,7 +26211,6 @@ helm install metrics-server  ./metrics-server/ --namespace=kube-system
 #1567400659
 kubectl config current-context
 #1567400672
-k9s
 #1567400737
 echo $KUBECONFIG
 #1567400741
@@ -26295,7 +26240,6 @@ kubectl delete deployment tiller-deploy
 #1567401563
 kubectl  get pod  -o wide --all-namespaces | grep -Ev 'Running|Completed'
 #1567401578
-k9s
 #1567401615
 helm ls
 #1567401643
@@ -26353,7 +26297,6 @@ kubectl logs metrics-server-d58fdc7b8-j22g2
 #1567405366
 kubectl top node
 #1567405533
-k9s
 #1567412957
 helm upgrade nginx-ingress --install nginx-ingress/
 #1567412968
@@ -26622,7 +26565,6 @@ vim /etc/ssh/sshd_config
 #1567412152
 passwd root
 #1567413052
-k9s
 #1567423166
 vim helm/values.yaml
 #1567420352
@@ -27388,7 +27330,6 @@ kubectl config view
 #1567574569
 ip a
 #1567574654
-k9s
 #1567761567
 helm delete harbor --purge
 #1567761900
@@ -27763,7 +27704,6 @@ tar -tf nginx-ingress-1.6.0.tgz
 #1567838972
 #1567838973
 #1567839309
-k9s
 #1567839699
 echo $TMOUT
 #1567839894
@@ -28078,7 +28018,6 @@ mv kubeapp/gitlab/* /root/gitlab-deploy/
 rm -rf kubeapp
 #1567902195
 #1567762142
-k9s
 #1567994090
 helm ls
 #1567994120
@@ -28299,7 +28238,6 @@ kubectl apply -f gitlab-deploy/gitlab-deploy.yaml
 #1568106851
 helm upgrade gitlab-runner --install --namespace=kube-system gitlab-runner/
 #1568113165
-k9s
 #1568187791
 vim
 #1568203138
@@ -28636,9 +28574,7 @@ rm -rf cert-manager.bak/
 #1568427895
 #1568427985
 #1568427988
-vim /tmp/k9s-screens-root/kubernetes/Pods-all-1568427975956781935.csv
 #1568428061
-vim /tmp/k9s-screens-root/kubernetes/Pods-all-1568428051125641377.csv
 #1568428087
 #1568428087
 #1568428111
@@ -28802,7 +28738,6 @@ helm ls
 #1568791586
 helm get manifest nginx-ingress
 #1568426784
-k9s
 #1568792735
 vim
 #1568792820
@@ -29179,7 +29114,6 @@ vim
 #1568884776
 systemctl restart nginx
 #1568202813
-k9s
 #1568868603
 systemctl restart jenkins
 #1568868764
@@ -29387,11 +29321,9 @@ vim
 #1569033277
 ansible nodes -m synchronize -a 'src=/etc/hosts dest=/etc/'
 #1569034316
-k9s
 #1569034327
 k8s
 #1569034328
-k9s
 #1569043867
 vim
 #1569044547
@@ -29614,7 +29546,6 @@ tail -f /var/log/nginx/access.log
 #1569203595
 kubectl get node
 #1568946383
-k9s
 #1569204301
 helm status rancher
 #1569204794
@@ -30120,11 +30051,8 @@ helm delete rancher --purge
 #1569204152
 top
 #1569205233
-k9s
 #1569381791
-vim .k9s/config.yml
 #1569381863
-k9s
 #1569319008
 #1569395760
 helm install --name=rancher --namespace=kube-system rancher/
@@ -31238,7 +31166,6 @@ kubectl apply -f testpod.yaml
 #1570065673
 kubectl edit configmaps special-config
 #1570065721
-k9s
 #1570065751
 kubectl edit configmaps special-config
 #1569836760
@@ -32188,12 +32115,9 @@ mkdir /download
 #1570449057
 #1570449195
 #1570449235
-tar xf k9s_0.8.4_Linux_x86_64.tar.gz -C /usr/bin
 #1570449247
-k9s
 #1570528092
 #1570528093
-k9s
 #1570521843
 netstat -tnlp | grep etc
 #1570521872
@@ -32319,11 +32243,8 @@ history -w
 #1570528909
 echo test4
 #1570529352
-k9s
 #1570529430
-k9s -h
 #1570529450
-k9s
 #1570584008
 #1570584008
 #1570584010
@@ -32361,30 +32282,22 @@ kubectl get pod
 #1570531275
 kubectl get all
 #1570533171
-rm -rf /usr/bin/k9s
 #1570533175
 #1570533176
 #1570533179
-rm -rf k9s_0.8.4_Linux_x86_64.tar.gz
 #1570533726
-wget https://github.com/derailed/k9s/releases/download/0.9.1/k9s_0.9.1_Linux_x86_64.tar.gz
 #1570533796
 #1570533796
 #1570533807
-rm -rf .k9s/
 #1570533811
 #1570533818
 #1570533818
 #1570533829
-rm -rf k9s_0.9.1_Linux_x86_64.tar.gz
 #1570533830
 rz
 #1570533845
-tar xf k9s_0.8.4_Linux_x86_64.tar.gz -C /usr/bin
 #1570533854
-tar xf k9s_0.9.1_Linux_x86_64.tar.gz -C /usr/bin
 #1570533857
-k9s
 #1570590675
 #1570590681
 kubectl get deployment
@@ -32493,7 +32406,6 @@ kubectl get pods -n kube-system
 #1570706397
 vim -u /root/.vimrc_tankui -N
 #1570529759
-k9s
 #1570529044
 kubectl get service
 #1570529055
@@ -32790,18 +32702,15 @@ mv metrics-server.bak metrics-server
 #1570790266
 helm install --name=metrics-server --namespace=kube-system metrics-server/
 #1570724256
-k9s
 #1570790529
 #1570790741
 mv .vimrc_tankui .vimrc
 #1570790826
 . .bashrc
 #1570790745
-k9s
 #1570790769
 vim
 #1570790779
-k9s
 #1570796592
 vim /etc/ansible/hosts
 #1570797145
@@ -32947,7 +32856,6 @@ mount -t ceph 10.83.75.6:6789:/ /mnt/cephfs/ -o name=admin,secret=AQBJT6FdDHd+Jh
 #1570875898
 dd if=/dev/zero of=testfile2 bs=2G count=1
 #1571016142
-k9s
 #1571017626
 #1571017644
 #1571017659
@@ -33163,7 +33071,6 @@ git push
 git push origin master
 #1571220209
 #1571220210
-k9s
 #1571274131
 helm ls
 #1571274205
@@ -33625,7 +33532,6 @@ kubectl get service
 #1571190133
 helm search nginx-ingress
 #1571190608
-k9s
 #1571192011
 kubectl describe node 10.83.75.9
 #1571192121
@@ -33835,7 +33741,6 @@ kubectl apply -f testjob.yaml
 #1571294913
 kubectl get jobs
 #1571043279
-k9s
 #1571305794
 #1571305794
 #1571305818
@@ -34450,7 +34355,6 @@ helm delete prometheus-operator --purge
 #1571449165
 helm install --name=prometheus-operator --namespace=kube-system prometheus-operator
 #1571449977
-k9s
 #1571453451
 helm ls
 #1571456405
@@ -34494,13 +34398,10 @@ helm ls
 #1571472096
 kubectl get service | grep alertmanager
 #1571473694
-k9s
 #1571475776
 kubectl delete deployment test
 #1571471063
-k9s
 #1571622794
-vim .k9s/config.yml
 #1571475818
 kubectl run test  --image=alpine --command -- sh -c 'echo hello; sleep 3600'
 #1571619898
@@ -34554,7 +34455,6 @@ ansible kube-node -m shell -a 'docker login -u admin -p Harbor12345 harbor.k8s.m
 #1571629120
 systemctl status jenkins
 #1571622814
-k9s
 #1571640960
 exit
 #1571641054
@@ -34578,7 +34478,6 @@ kubectl -n kube-system get service | grep 9090
 #1571653249
 #1571653473
 #1571652288
-k9s
 #1571657047
 #1571657058
 #1571707062
@@ -35248,11 +35147,8 @@ df -h
 #1572243533
 df -h | grep rbd
 #1572233522
-k9s
 #1572233539
-k9s help
 #1572233551
-k9s -h
 #1572252398
 telnet 10.83.83.84 3389
 #1571915854
@@ -35383,7 +35279,6 @@ kubectl edit pv pvc-d1ac78f6-8ffe-42a1-9e83-d98153276448
 #1572255868
 rbd status k8s/kubernetes-dynamic-pvc-7307f1da-0671-41d4-9d20-4b6d26d15339
 #1571809970
-k9s
 #1572487538
 kubectl get pod --all-namespaces -o wide | grep '10.83.75.9'
 #1572487632
@@ -35871,7 +35766,6 @@ kubectl get service nginxtest1
 #1573019969
 vim
 #1573019876
-k9s
 #1573014192
 #1573014196
 #1573014197
@@ -36048,7 +35942,6 @@ git add ./ && git commit -m 'commit' && git push
 #1573090691
 vim
 #1573090678
-k9s
 #1573524891
 #1573524897
 pwd
@@ -36147,7 +36040,6 @@ git branch
 #1573712295
 git add ./ && git commit -m 'commit1' && git push
 #1573640769
-k9s
 #1573701039
 vim
 #1573711738
@@ -36187,7 +36079,6 @@ git show origin
 #1573736585
 git add ./ && git commit -m 'commit1' && git push
 #1573736680
-k9s
 #1573735318
 vim
 #1573816169
@@ -36225,7 +36116,6 @@ rbd ls -l -p k8s
 #1574067101
 rbd du kubernetes-dynamic-pvc-9ecd421c-f59a-49a8-88fe-f67ed84bfa39 -p k8s
 #1574068704
-k9s
 #1574321535
 kubectl apply -f testpod.yaml
 #1574321562
@@ -36245,7 +36135,6 @@ kubectl edit deployment nginx-1
 #1574320566
 vim testpod.yaml
 #1574321543
-k9s
 #1574418691
 exit
 #1574768544
@@ -36350,7 +36239,6 @@ id ceph
 id ceph
 #1574930377
 #1575255861
-k9s
 #1575272771
 helm status metrics-server
 #1575272778
@@ -36431,7 +36319,6 @@ kubectl get service | grep alert
 #1575427144
 kubectl edit statefulsets.apps alertmanager-prometheus-operator-alertmanager
 #1575427547
-k9s
 #1575428322
 kubectl get crd | grep core
 #1575428362
@@ -36443,7 +36330,6 @@ kubectl get statefulsets.apps
 #1575428519
 kubectl get prometheusrules
 #1575428539
-k9s
 #1575428863
 vim
 #1575430063
@@ -36510,7 +36396,6 @@ vim
 #1575426326
 kubectl get service -l app=prometheus-operator-alertmanager
 #1575426359
-k9s
 #1575264734
 #1575264734
 #1575264941
@@ -36521,7 +36406,6 @@ helm version
 #1575267135
 vim .bashrc
 #1575268397
-k9s
 #1576462963
 helm version
 #1576463016
@@ -37487,11 +37371,8 @@ mkdir /download
 rsync -av 10.41.2.11:/download/ ./
 #1576462847
 #1576462870
-which k9s
 #1576462931
-tar xf k9s_0.9.3_Linux_x86_64.tar.gz -C /usr/bin
 #1576462936
-k9s
 #1577432869
 vim rbd/examples/class.yaml
 #1577432959
@@ -37704,7 +37585,6 @@ rbd info kubernetes-dynamic-pvc-988e8a0b-62da-46a8-a8a0-c6894f87d779
 #1577433408
 rbd info k8s/kubernetes-dynamic-pvc-988e8a0b-62da-46a8-a8a0-c6894f87d779
 #1577675765
-k9s
 #1577928373
 #1577928374
 #1577929190
@@ -38093,7 +37973,6 @@ vim
 #1578391490
 vim Jenkinsfile
 #1578279122
-k9s
 #1578448143
 git add ./ && git commit -m 'commitv7' && git push
 #1578451264
@@ -38101,7 +37980,6 @@ ln -h
 #1578451278
 man ln
 #1578451392
-k9s
 #1578452470
 #1578452471
 #1578452495
@@ -38366,7 +38244,6 @@ vim Dockerfile
 #1578462256
 git add ./ && git commit -m 'commitv7' && git push
 #1578462329
-k9s
 #1578966297
 #1578966299
 #1578966299
@@ -38841,7 +38718,6 @@ netstat -tnlp
 #1578965795
 netstat -tnlp | grep 80
 #1578965893
-k9s
 #1581928365
 docker image ls | grep pause
 #1581928378
@@ -39015,7 +38891,6 @@ ceph df
 #1582078606
 du -sh ./
 #1582082292
-k9s
 #1582165701
 vim testpod.yaml
 #1582250258
@@ -39166,11 +39041,9 @@ kubectl get endpoints | grep nginxran
 #1582009206
 kubectl describe endpoints nginxrancher
 #1582009264
-k9s
 #1582010045
 helm ls
 #1582019165
-k9s
 #1582521906
 ceph df
 #1582522106
@@ -39387,7 +39260,6 @@ kubectl get pod | grep opera
 helm ls
 #1582883832
 #1582773803
-k9s
 #1583120249
 vim dashboard/values.yaml
 #1583141791
@@ -39559,7 +39431,6 @@ rm -rf dashboard2
 #1583117393
 mv dashboard1 dashboard
 #1583121002
-k9s
 #1583286789
 kubectl get hpa php-apache
 #1583286793
@@ -39652,7 +39523,6 @@ vim harbor/values.yaml
 #1583314479
 kubectl edit configmaps nginx-ingress-controller
 #1583300206
-k9s
 #1583380399
 
 #1583307583
@@ -40164,32 +40034,23 @@ docker image ls | grep jnlp
 docker push harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1-my1
 #1583632898
 #1583632903
-wget https://github.com/derailed/k9s/releases/download/v0.17.5/k9s_Linux_x86_64.tar.gz
 #1583633433
 #1583633437
 k9v -v
 #1583633440
-k9s -v
 #1583633459
 #1583633530
 vim /root/.bash_history
 #1583633577
 which k8s
 #1583633579
-which k9s
 #1583633590
-k9s -h
 #1583633607
-k9s version
 #1583633619
-rm -rf /usr/bin/k9s
 #1583633622
 #1583633640
-rm -f k9s_0.9.3_Linux_x86_64.tar.gz
 #1583633677
-tar xf k9s_Linux_x86_64.tar.gz -C /usr/local/bin/
 #1583633684
-k9s version
 #1583544877
 #1583544916
 #1583545009
@@ -40250,9 +40111,7 @@ wget https://get.helm.sh/helm-v3.1.1-linux-amd64.tar.gz
 #1583634002
 ks9
 #1583634004
-k9s
 #1583380421
-k9s
 #1583636545
 #1583636545
 #1583636557
@@ -40316,7 +40175,6 @@ df -h
 #1583641545
 vim
 #1583633693
-k9s
 #1583641669
 vim .bash_history
 #1583642652
@@ -40337,9 +40195,7 @@ cp -a .bash_history rbd/ cephfs/ testpod.yaml testpvc.yaml tmp1
 #1583646283
 rm -rf tmp1
 #1583636414
-vim .k9s/config.yml
 #1583636535
-k9s
 #1583650794
 vim
 #1583654885
@@ -40360,7 +40216,6 @@ yum repolist
 #1583724424
 sz kubectl
 #1583724717
-k9s
 #1583726646
 vim
 #1583726664
@@ -40641,7 +40496,6 @@ vim /root/docker/bashrc1
 #1583746734
 docker build -t harbor.k8s.maimaiti.site/library/jnlp-slave:3.27-1-myv2 -f /root/docker/Dockerfile2 /root/docker
 #1583808496
-k9s
 #1583809649
 vim /usr/local/apache-maven-3.6.1/bin/mvn
 #1583810618
@@ -40663,7 +40517,6 @@ kubectl rollout history deployment jenkins-demo-springboot
 kubectl rollout history deployment jenkins-demo-springboot --revision=9
 #1583823040
 #1583823048
-k9s
 #1583745796
 vim
 #1583830178
@@ -40796,7 +40649,6 @@ helm install jenkins jenkins
 #1583833939
 helm fullstatus jenkins
 #1583720326
-k9s
 #1583830195
 vim
 #1583891923
@@ -40819,7 +40671,6 @@ printenv | grep -E 'BuildTag|PATH'
 #1583892423
 vim
 #1583890004
-k9s
 #1584063422
 vim
 #1583722048
@@ -40875,7 +40726,6 @@ ceph df
 #1584499464
 #su - elasticsearch -c "nohup /usr/local/elasticsearch/bin/elasticsearch >/dev/null 2>&1 &"
 #1584409441
-k9s
 #1584409445
 vim
 #1584512399
@@ -40893,12 +40743,9 @@ vim
 #1585203792
 #1585203832
 #1585123502
-k9s
 #1585216943
 #1585278536
-k9s
 #1585278690
-k9s
 #1585301482
 kubectl get pod -l 'app=nginx-1'
 #1585301486
@@ -41930,7 +41777,6 @@ vim k8s.yaml
 #1585709069
 kubectl apply -f k8s.yaml
 #1585709603
-k9s
 #1585731892
 #1585731893
 vim
@@ -42747,7 +42593,6 @@ vim
 #1586250553
 kubectl run -ti --rm alpine --image=alpine -- sh
 #1586309454
-k9s
 #1586324994
 kubectl delete -f k8s.yaml
 #1586325008
@@ -43122,7 +42967,6 @@ kubectl delete -f k8s.yaml
 #1586414271
 kubectl get service | grep elastic
 #1586414292
-k9s
 #1586415340
 kubectl delete /root/testlogpilot.yaml
 #1586415363
@@ -43219,9 +43063,7 @@ vim k8s.yaml
 #1586401031
 vim testpod.yaml
 #1586765567
-k9s
 #1586332763
-k9s
 #1586830589
 vim
 #1586834482
@@ -43471,7 +43313,6 @@ kubectl get service | grep ingress
 #1586929185
 #1586929697
 #1586930945
-rm -rf /tmp/k9s-screens-root/cluster1/*
 #1586930959
 #1586930959
 #1586930962
@@ -43555,7 +43396,6 @@ git status
 #1586938934
 git checkout -- Dockerfile
 #1586939632
-k9s
 #1587000328
 #1587000363
 kubectl apply -f testpod.yaml
@@ -43707,7 +43547,6 @@ kubectl get ingress | grep api
 kubectl describe ingress api-gateway
 #1586766328
 #1586831209
-k9s
 #1587113160
 nslookup yryd.maimaiti.cn
 #1587117612
@@ -43857,7 +43696,6 @@ helm install prometheus-operator prometheus-operator/
 #1587952117
 helm uninstall prometheus-operator
 #1587881388
-k9s
 #1587959072
 #1587959273
 vim .kube/config
@@ -43929,7 +43767,6 @@ kubectl get pv,pvc | grep prome
 #1588499145
 k8s
 #1588499147
-k9s
 #1588502027
 helm install prometheus-operator prometheus-operator/
 #1588502571
@@ -44029,7 +43866,6 @@ kubectl get service | grep "58\.210"
 #1588752933
 kubectl get service | grep "168\.133"
 #1588753532
-k9s
 #1588557496
 vim
 #1589175965
@@ -44441,7 +44277,6 @@ kubectl get pod -o wide | grep conve
 #1588837859
 kubectl get pod -o wide | grep testconve
 #1588837921
-k9s
 #1588838494
 kubectl get pod -o wide | grep testconve
 #1588838505
@@ -44726,7 +44561,6 @@ kubectl get node
 #1589359268
 #1589359419
 #1589363357
-k9s
 #1589422225
 #1589422236
 #1589425381
@@ -44821,11 +44655,9 @@ ETCDCTL_API=3 etcdctl --write-out=table snapshot status snapshot.db
 #1589534176
 ansible-doc -s shell
 #1588226374
-k9s
 #1589362561
 k8s
 #1589362563
-k9s
 #1589530912
 vim
 #1589536053
@@ -44902,7 +44734,6 @@ vim testpod.yaml
 #1590040763
 #1590040765
 #1589964109
-k9s
 #1589957888
 docker info | grep over
 #1589958176
@@ -44958,7 +44789,6 @@ kubectl get service nginx-ingress-controller
 #1590481070
 vim
 #1590561330
-k9s
 #1590714909
 kubectl run -ti --rm alpine --image=alpine -- sh
 #1590717058
@@ -45303,11 +45133,9 @@ vim .gitignore
 #1591584736
 vim
 #1591584631
-k9s
 #1591586051
 helm fullstatus metallb
 #1591586095
-k9s
 #1591665562
 #1591665576
 #1591665590
@@ -45373,7 +45201,6 @@ kubectl create secret generic alertmanager-prometheus-operator-alertmanager --fr
 #1591949995
 vim
 #1591756664
-k9s
 #1591681105
 kubectl apply -f testgateway.yaml
 #1591681120
@@ -45540,11 +45367,8 @@ vim networking/virtual-service-reviews-test-v2.yaml
 #1592186981
 vim
 #1592187754
-k9s
 #1592187797
-vim .k9s/config.yml
 #1592187865
-k9s
 #1592278952
 #1592278952
 #1592278980
@@ -45669,7 +45493,6 @@ rsync -av /etc/hosts node11:/etc
 rsync -av /etc/hosts node12:/etc
 yum install ansible
 ansible nodes -m shell -a 'systemctl enable docker && systemctl start docker'
-k9s
     "spec": {
         "template": {
             "spec": {
@@ -45773,12 +45596,10 @@ cp -a /home/rancher/kube_config_rancher-cluster.yml .kube/config
 . .bashrc
 echo $KUBECONFIG
 vim rancher/values.yaml
-k9s
 docker ps
 docker ps -a
 netstat -tnlp
 ps aux
-k9s
 mv dir1/test-kube-config.yml dir1/test1-kube-config.yml
 kubectl --kubeconfig dir1/test1-kube-config.yml get pod
 kubecm completion bash > ~/.kube/kubecm.bash.inc
@@ -45819,7 +45640,6 @@ vim
 netstat -tnlp
 netstat -tnlp | grep 10252
 netstat -tnlp | grep 10251
-k9s
 kubectl get pod
 kubect get node
 kubectl get node
@@ -45860,7 +45680,6 @@ git add --all ./ && git commit -m '20200910' && git push
 rsync -av  .vim .vimrc .bashrc .bash_history 10.124.0.61:/root
 rm -rf LICENSE README.md tmp
 rsync -av  /dowload 10.124.0.61:/
-rsync -av  helm k9s kubecm 10.124.0.61:/usr/local/bin/
 rm -f istioctl.bash
 rsync -avPhn --exclude='.*' ./ 10.124.0.61:/root
 rsync -avPh --exclude='.*' ./ 10.124.0.61:/root
@@ -45878,12 +45697,10 @@ vim /etc/ssh/sshd_config
 mkidr cluster
 mkdir cluster
 rsync -av 10.124.0.61:/root/cluster/message-center-dev.yml ./
-k9s --kubeconfig cluster/message-center-dev.yml
 docker pull gitlab/gitlab-ce:13.3.5-ce.0
 mkdir image
 docker save gitlab/gitlab-ce:13.3.5-ce.0 -o gitlab-ce.img
 rsync -av gitlab-ce.img 10.124.0.64:/root
-k9s
 docker info | grep -C 5 Registry
 docker pull centos
 docker info | grep -C 5 Registry
@@ -45927,7 +45744,6 @@ vim dir1/mydemo1/springboot/Dockerfile
 #1600833433
 vim other/note.txt
 #1600824975
-k9s --kubeconfig dir1/cluster/it-devops-sit.yml
 #1600845471
 docker-compose up
 #1600825761
@@ -46076,7 +45892,6 @@ pwd
 vim authorized_keys
 #1600860061
 #1600860062
-k9s
 #1600860046
 docker ps
 #1600860135
@@ -46241,7 +46056,6 @@ uname -r
 #1600910403
 docker version
 #1600912528
-k9s
 #1600912952
 uname -r
 #1600913005
@@ -46266,16 +46080,13 @@ awk -F\' '$1=="menuentry " {print $2}' /etc/grub2.cfg
 #1600914998
 vim
 #1600915627
-k9s --kubeconfig it-k8s-prod.yml
 #1600937003
-k9s
 #1600937037
 #1600937068
 ansible all -m shell -a 'uname -r'
 #1600937667
 vim /root/.bash_history
 #1600937773
-k9s
 #1600940452
 uname -r
 #1600941152
@@ -46305,11 +46116,9 @@ systemctl status nfs-sever
 #1600913551
 systemctl status nfs-server
 #1600913863
-k9s
 #1600914974
 #1600914974
 #1600915040
-k9s --kubeconfig it-k8s-prod.yml
 #1600994629
 ansible all -m shell -a 'df -h | grep 5268d8a8'
 #1600994731
@@ -46400,15 +46209,11 @@ vim
 ansible-doc -s yum
 #1601036897
 #1601036944
-k9s --kubeconfig dir1/cluster/devops-dev.yml
 #1601038347
 #1601038348
 #1601038383
-k9s --kubeconfig it-k8s-prod.yml
 #1601038582
-k9s --kubeconfig devops-dev.yml
 #1601039088
-k9s --kubeconfig it-k8s-dev.yml
 #1601086168
 #1601086245
 #1601086258
@@ -46423,7 +46228,6 @@ k9s --kubeconfig it-k8s-dev.yml
 #1601087785
 #1601087869
 #1601085023
-k9s
 #1601085759
 #1601085759
 #1601085792
@@ -46434,9 +46238,7 @@ vim .gitignore
 #1601085827
 #1601085828
 #1601085847
-k9s --kubeconfig calico-test.yml
 #1601085915
-k9s --kubeconfig devops-dev.yml
 #1601088089
 #1601088089
 vim
@@ -46473,7 +46275,6 @@ kubectl get node
 #1601092468
 #1601092469
 #1601092510
-k9s --kubeconfig it-devops-uat.yml
 #1601100439
 #1601100446
 #1601100512
@@ -46485,20 +46286,15 @@ k9s --kubeconfig it-devops-uat.yml
 #1601100857
 #1601101098
 #1601085211
-k9s --kubeconfig dir1/cluster/devops-dev.yml
 #1601085548
-k9s --kubeconfig dir1/cluster/it-devops-dev.yml
 #1601091726
 #1601091726
 #1601091785
 vim
 #1601091857
 #1601091880
-k9s --kubeconfig it-devops-uat.yml
 #1601092591
-k9s --kubeconfig it-devops-sit.yml
 #1601092665
-k9s --kubeconfig it-devops-dev.yml
 #1601101448
 #1601101459
 #1601101468
@@ -46513,9 +46309,7 @@ kubectl --kubeconfig ipd-d
 #1601086126
 vim
 #1601102849
-k9s --kubeconfig cluster/calico-test.yml
 #1601106761
-k9s
 #1601109593
 vim
 #1601109603
@@ -46553,7 +46347,6 @@ kubectl --kubeconfig cluster/calico-test.yml apply -f testpod.yaml
 #1601106777
 kubectl apply -f testpod.yaml
 #1601108001
-vim /tmp/k9s-screens-root/cluster1/pods-kube-system-1601107992677791896.csv
 #1601108438
 kubectl get rs nginx-1
 #1601108440
@@ -46762,7 +46555,6 @@ git show remote gitlab
 git remote show gitlab
 #1601258980
 #1601258981
-k9s
 #1601264401
 vim /tmp/download/config.json
 #1601265193
@@ -47252,11 +47044,8 @@ vim
 #1601363059
 docker version
 #1601365332
-k9s
 #1601349614
-k9s --kubeconfig it-k8s-dev
 #1601349628
-k9s --kubeconfig cluster/it-k8s-dev.yml
 #1601359530
 vim
 #1602118245
@@ -47271,20 +47060,16 @@ git add --all ./ && git commit -m '20201008' && git push
 #1602126578
 git push
 rke --version
-k9s
 mv /usr/local/bin/rke1.3 /usr/local/bin/rke
 rke version
 rke help
 kubectl get node
-k9s
 git config --global credential.helper store
 git status
 git pull
 git checkout -- .bash_history
 git pull
-k9s --kubeconfig cluster/calico-test.yml
 
-k9s --kubeconfig cluster/calico-test.yml
 docker image ls
 docker ps
 docker image prune
@@ -47396,12 +47181,8 @@ rm -rf rancher-images.tar.gz
 ./rancher-load-images.sh --image-list ./rancher-images.txt --registry it-registry-fty-dg.abcd.xyz
 vim
 vim /home/abcdauto/rancher-cluster.yml
-k9s --kubeconfig cluster/calico-test.yml
 vim
 vim /tmp/rancher-cluster-prod.yml
-k9s
-k9s --kubeconfig cluster/it-k8s-uat.yml
-k9s --kubeconfig cluster/it-k8s-sit.yml
 docker ps | grep kubelet
 ps aux | grep kubelet
 kubectl --kubeconfig cluster/it-k8s-uat.yml get node
@@ -47414,7 +47195,6 @@ ps aux | grep vim
 vim
 vim
 ipvsadm -ln
-k9s
 kubectl get node
 su - abcdauto
 cp -a dir1/cleannode.sh /tmp
@@ -47424,7 +47204,6 @@ sudo su -
 ipvsadm -ln
 su - abcdauto
 ipvsadm -ln
-k9s
 ipvsadm -ln
 ipvsadm -ln
 ipvsadm -ln
@@ -47434,7 +47213,6 @@ su - abcdauto
 mv /home/abcdauto/config cluster/cluster1
 chown root:root cluster/cluster1
 mv cluster/cluster1 cluster/cluster1.yml
-k9s --kubeconfig cluster/cluster1.yml
 yum provides ipvsadm
 yum -y install ipvsadm
 ipvsadm -ln
@@ -47449,16 +47227,11 @@ docker logs --help
 docker logs --tail 50 kube-scheduler
 docker ps
 ansible -u abcdauto -b all -m shell -a 'id'
-k9s
 su - abcdauto
 vim
-k9s
 kubectl --kubeconfig cluster/it-k8s-dev.yml
-k9s --kubeconfig it-devops-dev.yml
-k9s --kubeconfig cluster/it-devops-dev.yml
 vim
 su - abcdauto
-k9s
 mv .ssh{,.bak}
 cp -a /home/abcdauto/.ssh ./
 chown -R root:root .ssh
@@ -47485,9 +47258,6 @@ vim .ssh/authorized_keys
 rsync -av /home/abcdauto/rancher-fty/rancher-cluster.yml /dowload/rke_linux-amd64-1.1.3 abcdauto@172.20.113.212:/home/abcdauto/tankui
 rsync -av abcdauto@172.20.113.212:/home/abcdauto/tankui/rancher-fty.yml ./
 chown root:root rancher-fty.yml
-which k9s
-rsync -av /usr/local/bin/k9s abcdauto@172.20.113.212:/home/abcdauto/tankui/
-k9s --kubeconfig cluster/rancher-fty.yml
 ssh 10.124.0.61
 ssh abcdauto@10.124.0.61
 rsync -av cluster/rancher-fty.yml  abcdauto@10.124.0.61:/home/abcdauto/
@@ -47511,10 +47281,8 @@ docker ps
 docker tag nginx:1.14 it-registry-fty-dg.abcd.xyz/library/nginx:1.14
 docker push it-registry-fty-dg.abcd.xyz/library/nginx:1.14
 su - abcdauto
-k9s
 kubectl get node
 rm -f .kube/config
-k9s
 . .bashrc
 pwd
 ssh 10.70.64.31
@@ -47529,7 +47297,6 @@ docker ps
 docker ps
 docker logs -f 845c
 vim
-k9s
 docker image ls | grep gitlab
 docker load -i gitlab-ce.img
 docker image ls
@@ -47620,8 +47387,6 @@ ssh 10.124.0.61
 vim /etc/hosts
 rsync -av 10.124.0.61:/root/dir1/ssl/tls* ./
 rsync -av 10.124.0.61:/root/dir1/ssl/cacerts.pem ./
-k9s
-k9s
 docker ps
 docker run -d --restart=unless-stopped   -p 80:80 -p 443:443   -v /etc/nginx.conf:/etc/nginx/nginx.conf   nginx:1.14
 su - abcdauto
@@ -47654,14 +47419,11 @@ vim
 
 
 
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/rancher-fty.yml
 echo 1
 vim .gitignore
 echo 2
 rke config --system-images
 rm -f myrancher.yml
-k9s --kubeconfig cluster/test1.yml
 vim rancher-fty.yml
 vim rancher-fty.yml
 git status
@@ -47732,23 +47494,14 @@ sh dir1/test1.sh srm
 rm -rf tmp*
 kubectl --kubeconfig cluster/myrancher.yml
 kubectl --kubeconfig cluster/myrancher.yml  get node
-k9s --kubeconfig cluster/cluster1.yml
 vim
 kubectl --kubeconfig cluster/cluster1.yml apply -f testpod.yaml
 tcpdump -i any -c5 -nn src net 10.47.44.0/24 and dst port 80
 tcpdump -i eth0 -vnn \( src host 172.16.1.2 and dst port 22 \) or \( src host 172.16.1.65 and dst port 80 \)
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/test1.yml
 kubectl --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/myrancher.yml
 shutdown -r now
-k9s --kubeconfig cluster/it-devops-dev.yml
 
 top
-k9s --kubeconfig cluster/it-k8s-prod.yml
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/devops-dev.yml
-k9s --kubeconfig cluster/it-k8s-dev.yml
 echo "
 net.bridge.bridge-nf-call-ip6tables=1
 net.bridge.bridge-nf-call-iptables=1
@@ -47825,12 +47578,8 @@ kernel.sysrq=1
 
 
 " >> /etc/sysctl.conf
-k9s --kubeconfig cluster/it-k8s-dev.yml
 vim
-k9s --kubeconfig cluster/cluster1.yml
 
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/test1.yml
 vim
 helm upgrade --help
 helm ls
@@ -47886,12 +47635,9 @@ ssh node11
 
 ansible nodes -m synchronize -a 'src=/etc/security/limits.conf dest=/etc/security/limits.conf'
 ansible nodes -m shell -a 'sysctl -p'
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/test1.yml
 vim
 jobs
 fg 1
-k9s --kubeconfig cluster/cluster1.yml get node
 kubectl --kubeconfig cluster/cluster1.yml get node
 kubectl --kubeconfig cluster/myrancher.yml get node
 kubectl --kubeconfig cluster/test1.yml get node
@@ -47914,12 +47660,8 @@ rm -f /usr/local/bin/kubecm
 mv /usr/local/bin/kubectl18 /usr/local/bin/kubectl
 kubectl --kubeconfig cluster/myrancher.yml get node
 kubectl --kubeconfig cluster/myrancher.yml apply -f testpod.yaml
-k9s --kubeconfig cluster/myrancher.yml
 kubectl --kubeconfig cluster/myrancher.yml get node
-k9s --kubeconfig cluster/myrancher.yml
 kubectl --kubeconfig cluster/myrancher.yml get node
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/myrancher.yml
 helm ls
 vim
 
@@ -47956,18 +47698,7 @@ docker pull nginx
 docker pull it-registry-fty-dg.abcd.xyz/library/nginx:1.14
 docker push it-registry-fty-dg.abcd.xyz/library/nginx:1.14
 kubectl --kubeconfig cluster/test1.yml apply -f testpod.yaml
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/rancher-fty.yml
 docker ps | grep nginx
-k9s --kubeconfig cluster/test1.yml
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/it-devops-dev.yml
-k9s --kubeconfig cluster/it-devops-uat.yml
-k9s --kubeconfig cluster/it-devops-dev.yml
-k9s --kubeconfig cluster/it-k8s-prod.yml
-k9s --kubeconfig cluster/it-devops-dev.yml
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/test1.yml
 vim
 kubectl --kubeconfig cluster/test1.yml apply -f testconfigmap.yaml
 kubectl --kubeconfig cluster/test1.yml apply -f testpod.yaml
@@ -47983,22 +47714,13 @@ kubectl --kubeconfig cluster/test1.yml delete -f testpod.yaml
 kubectl --kubeconfig cluster/test1.yml apply -f testpod.yaml
 hostname -s
 docker image ls
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/test1.yml
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/test1.yml  get node
 kubectl --kubeconfig cluster/test1.yml  get node
-k9s --kubeconfig cluster/it-k8s-dev.yml
 
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/test1.yml
 vim testuser.yml
 kubectl --kubeconfig /tmp/testuser.yml get node
 kubectl --kubeconfig /tmp/testuser.yml get pod
 kubectl --kubeconfig /tmp/testuser.yml delete pod nginx-1-85d746ddf6-7hl8v
 rm -f /tmp/testuser.yml
-k9s --kubeconfig cluster/test1.yml
-k9s --kubeconfig cluster/test1.yml
 netstat -atlnup | grep $port | awk '{print $7}'
 netstat -atlnup | grep 80 | awk '{print $7}'
 netstat -tnlp
@@ -48013,8 +47735,6 @@ netstat -atlnup | grep 2379 | awk '{print $7}' | awk -F '/' '{print $1}' | grep 
 ps -ef | grep -v grep | grep kube | awk '{print $2}'
 mount | grep tmpfs | grep '/var/lib/kubelet'
 vim
-k9s --kubeconfig cluster/devops-dev.yml
-k9s --kubeconfig cluster/myrancher.yml
 du -sh /opt
 pwd
 su - abcdauto
@@ -48028,8 +47748,6 @@ vim
 vim
 pwd
 
-k9s
-k9s
 
 docker ps
 docker ps | less -S
@@ -48053,7 +47771,6 @@ rm -rf /var/lib/etcd-bak-2020*
 rm -rf /var/lib/rancher-bak-2020*
 rm -rf /opt/rke-bak-2020*
 rm -rf /opt/rke/etcd-snapshots/2020-10-1*
-k9s
 sh dir1/cleannode.sh
 shutdown -r now
 kubectl get node
@@ -48266,11 +47983,6 @@ docker rmi it-registry.abcd.xyz/library/nginx:alpine
 docker image ls | grep nginx
 docker rmi it-registry.abcd.xyz/library/nginx:alpine
 vim
-k9s
-k9s --kubeconfig cluster/test1.yml
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/test1.yml
-k9s --kubeconfig cluster/cluster1.yml
 sh -x dir1/test2.sh
 docker push it-registry-fty-dg.abcd.xyz/rancher/rke-tools:v0.1.65
 docker image ls | grep rke-tools
@@ -48280,7 +47992,6 @@ docker pull it-registry-fty-dg.abcd.xyz/rancher/rke-tools:v0.1.66
 echo $?
 kubectl get node
 kubectl --kubeconfig cluster/test1.yml get node
-k9s --kubeconfig cluster/test1.yml
 rke1.2.1 config -s --version v1.18.10-rancher1-1 | awk 'NR!=1' | grep -v weaveworks
 docker push it-registry-fty-dg.abcd.xyz/rancher/calico-cni:v3.13.4
 docker push it-registry-fty-dg.abcd.xyz/rancher/calico-cni:v3.13.5
@@ -48373,8 +48084,6 @@ du --max-depth=1 -h ./ | sort -hr
 docker info | grep fs
 docker info | grep over
 docker info | grep overlay
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/test1.yml
 sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | awk 'END {print}'
 sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | grep 47
 sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run it-registry-fty-dg.abcd.xyz/rancher/rancher-agent:v2.4.5 --server https://rancher.172.16.20.110.xip.io --token qwq7b257jldrqh8hf9db67h86wnc2xzbf4p47t87rlkzhcm8669zgw --ca-checksum e980a26b1aaa86794c6408c3166df17ee05599c73a8039db6ff7442a7bd5f0f3 --worker | grep 0771
@@ -48384,7 +48093,6 @@ line1
 line2
 eof
 
-k9s --kubeconfig cluster/it-devops-uat.yml
 vim
 cd /download/
 ls
@@ -48510,17 +48218,10 @@ sh tmp1.sh
 docker stop mysql
 sh tmp1.sh
 vim
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/it-devops-uat.yml
-k9s --kubeconfig cluster/it-k8s-uat.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml
 sh tmp1.sh
 sh tmp1.sh
 sh tmp1.sh
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/it-devops-dev.yml
 sh tmp1.sh
-k9s --kubeconfig cluster/it-devops-dev.yml
 sh tmp1.sh
 sh tmp1.sh
 sh tmp1.sh
@@ -48528,15 +48229,8 @@ sh -x tmp1.sh
 sh tmp1.sh
 
 sh tmp1.sh
-k9s --kubeconfig cluster/it-devops-dev.yml
 kubectl --kubeconfig cluster/calico-dmz-test.yml --request-timeout=10s exec overlaytest-gkkq5 -- /bin/sh -c 'echo hello'
 vim
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/calico-test.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/ipd-dev.yml
-k9s --kubeconfig cluster/rancherqa.yml
 ls /opt/rke/etcd-snapshots/
 ct /etc/nginx.conf.bak
 ls other/nginx.conf
@@ -48558,14 +48252,7 @@ telnet 172.17.8.119 80
 telnet 172.17.8.119 443
 su - abcdauto
 vim
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/vwork-dg-pre.yml
-k9s --kubeconfig cluster/myrancher.yml
 docker ps
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/vwork-dg-pre.yml
-k9s --kubeconfig cluster/it-devops-dev.yml
 sh dir1/test1.sh vwork-infoma
 sh tmp1.sh
 sh tmp1.sh
@@ -48577,11 +48264,6 @@ kubectl --kubeconfig cluster/myrancher.yml run busybox --image=it-registry.abcd.
 sh tmp1.sh
 cd dir1/docker/
 ls
-k9s --kubeconfig cluster/test1.yml
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/myrancher.yml
-k9s --kubeconfig cluster/vwork-dg-pre.yml
-k9s --kubeconfig cluster/vwork-dg-pre.yml
 sh tmp.sh
 vim
 fg 1
@@ -48675,11 +48357,6 @@ docker run -ti --rm it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 sh
 docker ps -a | grep my
 tcpdump -i any -c5 -nn src net 172.16.249.41/32 and dst port 6443
 vim
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/rancherqa.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/it-devops-dev.yml
 docker run -ti --rm it-registry.abcd.xyz/library/nginx:1.18-alpine-my1 sh
 kubectl --kubeconfig cluster/calico-dmz-test.yml delete -f testping.yml
 kubectl --kubeconfig cluster/calico-dmz-test.yml apply -f testpod.yaml
@@ -48702,13 +48379,9 @@ calicoctl version
 cd
 calicoctl get node
 fg
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/cluster1.yml
 ps aux | grep vim
 kill -9 10074
 vim
-k9s --kubeconfig cluster/calico-dmz-test.yml
 kubectl --kubeconfig cluster/cluster1.yml apply -f testpod.yaml
  wget -q -O- www.baidu.com
  wget -O- www.baidu.com
@@ -48716,19 +48389,268 @@ kubectl --kubeconfig cluster/cluster1.yml apply -f testpod.yaml
  wget -O- www.baidu.com
 curl www.baidu.com
 vim
-k9s --kubeconfig cluster/cluster1.yml
 sh tmp1.sh
 kubectl --kubeconfig cluster/calico-dmz-test.yml delete -f testpod.yaml
 kubectl --kubeconfig cluster/calico-dmz-test.yml apply -f testpod.yaml
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/it-devops-dev.yml
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml
-k9s --kubeconfig cluster/cluster1.yml
 ping 10.124.0.61
 telnet 10.124.0.61 22
 ping 10.124.0.61
-k9s --kubeconfig cluster/cluster1.yml
-k9s --kubeconfig cluster/calico-dmz-test.yml
+history -a
+wc -l .bash_history
+cp -a /tmp/root/.bash_history .bash_history
+wc -l .bash_history
+ls .vim
+vim
+vim .vimrc
+ls
+shutdown -h now
+git status
+git pull
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+作者：lifeihu
+链接：https://www.jianshu.com/p/0c83e6aed270
+来源：简书
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ls .vim
+yum list | grep shellcheck
+yum list | grep -i shellcheck
+yum -y install ShellCheck
+yum list | grep shfmt
+mkdir /download
+cd /download/
+ls
+wget https://github.com/mvdan/sh/releases/download/v3.2.2/shfmt_v3.2.2_linux_amd64
+ls
+ls -l
+ls /usr/local/bin
+cp -a shfmt_v3.2.2_linux_amd64 /usr/local/bin/shfmt
+chmod +x /usr/local/bin/shfmt
+shfmt
+shfmt -h
+rpm -qa | grep vim
+cp -a .vim/plugged/vim-colors-solarized/colors/solarized.vim /usr/share/vim/vim80/colors/
+ls .ssh
+mkdir .ssh
+chmod 700 .ssh
+ll -d .ssh
+cd .ssh
+cp -a /root/other/authorized_keys /root/other/id_rsa ./
+ls
+ll
+chmod 600 ./*
+ll
+cd ../
+rsync -av .ssh 172.16.195.101:/root
+rsync -av .ssh 172.16.195.102:/root
+ssh 172.16.195.102
+ls
+vim
+vim
+vim .vimrc
+vim
+shfmt -h
+vim
+ls /etc/ansible/
+ls /etc/ansible/roles/
+ls /etc/kubeasz/roles/
+cd /etc/kubeasz/
+ls
+vim /etc/hosts
+
+rsync -av /etc/hosts 172.16.195.102:/root
+rsync -av /etc/hosts 172.16.195.103:/
+rsync -av /etc/hosts 172.16.195.102:/etc
+rsync -av /etc/hosts 172.16.195.103:/etc
+python -version
+python --version
+yum  install python python-pip python-netaddr
+yum -y install python python-pip python-netaddr
+yum repo clean
+yum clean all
+yum -y install python python-pip python-netaddr
+yum -y install ansible
+export release=3.0.0
+cd /download/
+ls
+curl -C- -fLO --retry 3 https://github.com/easzlab/kubeasz/releases/download/${release}/ezdown
+chmod +x ./ezdown
+./ezdown -D
+ls
+docker
+docker info
+ls
+rm -rf docker-19.03.14.tgz
+./ezdown -D
+cd
+cd /etc/kubeasz/
+ls
+./ezctl setup k8s-01 all
+netstat -tnlp | grep proxy
+netstat -tnlp | grep 10250
+netstat -tnlp | grep 1025
+netstat -tnlp | grep 1024
+netstat -tnlp | grep contro
+
+netstat -tnlp | grep kube
+ansible-playbook /etc/kubeasz/playbooks/99.clean.yml
+cd /download/
+ls
+ls
+ls
+rm -f LICENSE README.md
+ls
+ll /usr/local/bin/
+wget https://get.helm.sh/helm-v3.5.1-linux-amd64.tar.gz
+ls
+tar xf helm-v3.5.1-linux-amd64.tar.gz
+ls
+ls linux-amd64/
+mv linux-amd64/helm /usr/local/bin
+ls /usr/local/bin
+ll /usr/local/bin
+rm -rf linux-amd64/
+helm
+helm repo list
+ls
+ll
+ls
+ll docker-19.03.14.tgz
+ll -h docker-19.03.14.tgz
+ls /etc/kubeasz/
+ls /etc/ansible/
+ll -h docker-19.03.14.tgz
+ls
+ll -h docker-19.03.14.tgz
+docker info
+cat /etc/docker/daemon.json
+systemctl status docker
+cd /etc/kubeasz/
+ls
+du -sh ./
+ezctl new k8s-01
+ls
+ll
+./ezctl new k8s-01
+cd /etc/kubeasz/clusters/
+ls
+cd k8s-01/
+ls
+vim hosts
+ansible-playbook -i /etc/kubeasz/clusters/k8s-01/hosts /etc/kubeasz/playbooks/99.clean.yml
+cd /etc/kubeasz/
+ls
+cp -a ezctl /usr/local/bin
+ezctl --help
+ezctl list
+ezctl help destroy
+ezctl destroy k8s-01
+vim
+wc -l /root/.bash_history
+ansible all -m ping
+ansible nodes -m shell -a 'shutdown -r now'
+ls
+uptime
+shutdown -r now
+ezctl setupk8s-01 all
+ezctl setup k8s-01 all
+vim
+free -h
+kubectl top node 172.16.195.101
+calicoctl node status
+cd /etc/kubeasz/
+ls
+cd clusters/k8s-01/
+ls
+cd ../
+ls
+cd ../
+ls
+ls example/
+vim example/config.yml
+ls
+cd playbooks/
+ls
+cat 90.setup.yml
+ls
+ls ../clusters/k8s-01/backup/
+ls -a ../clusters/k8s-01/backup/
+ansible-playbook -i ../clusters/k8s-01/hosts 94.backup.yml
+vim 94.backup.yml
+vim ../
+vim 01.prepare.yml
+cd ../
+cd roles/
+ls
+vim prepare/tasks/main.yml
+vim calico/tasks/main.yml
+ls
+cd ../
+ls
+cd roles/
+ls
+cd ../
+ls
+cd clusters/k8s-01/
+ls
+cd backup/
+ls
+cd ../
+ls
+ls ssl
+ls yml
+ls
+vim hosts
+vim /usr/local/bin/ezctl
+ansible-playbook -i "clusters/$1/hosts" -e "@clusters/$1/config.yml" "playbooks/$PLAY_BOOK"
+ping harbor.172.16.159.200.xip.io
+cd /etc/kubeasz/
+grep -ri CALICO_NETWORKING_BACKEND
+vim docs/release-notes/kubeasz-2.2.2.md
+cd
+cd /etc/kubeasz/clusters/
+ls
+cd k8s-01/
+ls
+ls ssl
+ls yml
+ls backup/
+ls
+vim kubectl.kubeconfig
+ls
+cd
+vim .bash_history
+ ansible-playbook -i "$BASE/clusters/$1/hosts" "$BASE/playbooks/04.kube-master.yml" -t restart_master -e "@clusters/$1/config.yml" 
+ ansible-playbook -i "$BASE/clusters/$1/hosts" "$BASE/playbooks/31.deletcd.yml" -e "ETCD_TO_DEL=$2" -e "CLUSTER=$1" -e "@clusters/$1/config.yml"
+netstat -tnlp | grep 8080
+cd /etc/kubeasz/
+ls
+grep -ri cluster-dns ./
+kubectl get svc -n kube-system | grep kube-dns | awk '{ print $3 }'
+kubectl get svc -n kube-system | grep kube-dns
+cd
+vim
+k9s
+ls
+helm repo list
+helm init
+ls
+helm install metallb -n kube-system metallb/
+helm install nginx-ingress -n kube-system nginx-ingress/
+helm install ingress-nginx -n kube-system ingress-nginx/
+helm ls
+helm list
+helm ls -n kube-system
+helm ls 
+helm ls -n kube-system
+kubectl apply -f testpod.yaml 
+kubectl get node
+kubectl delete -f testpod.yaml 
+kubectl apply -f testpod.yaml 
+kubectl api-resources | grep ingress
+kubectl api-resources | grep 'networking.k8s.io\/v1'
+kubectl api-versions | grep settings
+kubectl api-versions | grep 'networking.k8s.io\/v1'
+kubectl apply -f testpod.yaml 
+kubectl delete -f testpod.yaml
+kubectl apply -f testpod.yaml 
+vim

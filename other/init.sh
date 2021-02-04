@@ -9,7 +9,12 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 yum clean all
 yum -y install bash-completion bash-completion-extras net-tools vim-enhanced tree wget git iptables-services ntpdate \
-lrzsz
+lrzsz ShellCheck
+
+rpm -Uvh http://mirror.ghettoforge.org/distributions/gf/gf-release-latest.gf.el7.noarch.rpm
+rpm --import http://mirror.ghettoforge.org/distributions/gf/RPM-GPG-KEY-gf.el7
+rpm -e --nodeps vim-minimal vim-filesystem vim-common vim-enhanced
+yum -y --enablerepo=gf-plus install vim-enhanced
 
 chattr -i /etc/ssh/sshd_config
 sed -i 's#PermitRootLogin no#PermitRootLogin yes#' /etc/ssh/sshd_config
