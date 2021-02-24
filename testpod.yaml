@@ -5,7 +5,7 @@ kind: Deployment
 metadata:
   name: nginx-1
 spec:
-  # replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: nginx-1
@@ -101,7 +101,7 @@ spec:
       volumes:
       # - name: data1
         # persistentVolumeClaim:
-          # claimName: nfspvc
+          # claimName: pv1
       # - name: data2
         # persistentVolumeClaim:
           # claimName: rbdpvc
@@ -217,7 +217,7 @@ metadata:
 
 spec:
   rules:
-  - host: nginx-1.172.16.195.200.xip.io
+  - host: nginx-1.172.16.195.210.xip.io
     http:
       paths:
       - path: /

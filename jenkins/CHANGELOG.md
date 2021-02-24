@@ -4,11 +4,251 @@ This file documents all notable changes to the Jenkins Helm Chart.
 The release numbering uses [semantic versioning](http://semver.org).
 
 Use the following links to reference issues, PRs, and commits prior to v2.6.0.
+
 * Issue:  `https://github.com/helm/charts/issues/[issue#]`
 * PR:     `https://github.com/helm/charts/pull/[pr#]`
 * Commit: `https://github.com/helm/charts/commit/[commit]/stable/jenkins`
 
-The change log until v1.5.7 was auto-generated based on git commits. Those entries include a reference to the git commit to be able to get more details.
+The change log until v1.5.7 was auto-generated based on git commits.
+Those entries include a reference to the git commit to be able to get more details.
+## 3.1.9
+
+Upgrade kubernetes plugin t0 1.29.0 and CasC plugin to 1.47
+
+## 3.1.8
+
+Fix init scripts config map name
+
+## 3.1.7
+
+Fix missing newline when `httpsKeyStore` is enabled
+
+## 3.1.6
+
+Mount controller init scripts from ConfigMap
+
+## 3.1.5
+
+Fix `namespaceOverride` not applied when loading JCasC
+
+## 3.1.4
+
+Update Git plugin version to v4.5.2
+
+## 3.1.3
+
+Update Jenkins image and appVersion to jenkins lts release version 2.263.3
+
+## 3.1.2
+
+Enable setting maxRequestsPerHostStr to change the max concurrent connections to Kubernetes API
+
+## 3.1.1
+
+Update Jenkins image and appVersion to jenkins lts release version 2.263.2
+
+## 3.1.0
+
+* Added `.Values.controller.podSecurityContextOverride` and `.Values.backup.podSecurityContextOverride`.
+* Added simple default values tests for `jenkins-backup-cronjob.yaml`.
+
+## 3.0.14
+
+Enable to only backup job folder instead of whole jenkins
+
+## 3.0.13
+
+Improve Documentation around JCasc and Custom Image
+
+## 3.0.12
+
+Added GitHub Action testing on Kind 1.16, 1.17, 1.18, 1.19 & 1.20
+
+## 3.0.11
+
+Fixes & unit tests for Ingress resources on Kubernetes 1.19 and above
+
+## 3.0.10
+
+Ingress resources on Kubernetes 1.19 (or above) are created with the version `networking.k8s.io/v1`
+
+## 3.0.9
+
+Added support for backing up to Azure Blob Storage.
+
+## 3.0.8
+
+* Typo in documentation
+
+## 3.0.7
+
+* Add support for setting default agent workspaceVolume
+
+## 3.0.6
+
+Use 2.263.1 image
+
+## 3.0.5
+
+* Update appVersion to reflect new jenkins lts release version 2.263.1
+
+## 3.0.4
+
+* Fix documentation for additional secret mounts
+
+## 3.0.3
+
+* Update `README.md` with explanation on how to mount additional secrets
+
+## 3.0.2
+
+* Fix `.Values.controller.tolerations` and `.Values.controller.nodeSelector` variable names in templates\jenkins-backup-cronjob.yaml
+
+## 3.0.1
+
+* added 'runAsNonroot' to security context
+
+## 3.0.0
+
+* Chart uses StatefulSet instead of Deployment
+* XML configuration was removed in favor of JCasC
+* chart migrated to helm 3.0.0 (apiVersion v2)
+* offending terms have been removed
+* values have been renamed and re-ordered to make it easier to use
+* already deprecated items have been removed
+* componentName for the controller is now `jenkins-controller`
+* componentName for the agent is now `jenkins-agent`
+* container names are now
+  * `init` for the init container which downloads Jenkins plugins
+  * `jenkins` for the Jenkins controller
+  * `config-reload` for the sidecar container which automatically reloads JCasC
+* Updated UI tests to use official `bats/bats` image instead of `dduportal/bats`
+
+For migration instructions from previous versions and additional information check README.md.
+
+## 2.19.0
+
+* Use lts version 2.249.3
+* Update kubernetes, workflow-aggregator, git and configuration-as-code plugins.
+* Fail apply_config.sh script if an error occurs.
+
+## 2.18.2
+
+Fix: `master.javaOpts` issue with quoted values
+
+## 2.18.1
+
+Recommend installing plugins in custom image
+
+## 2.18.0
+
+Removed /tmp volume. Making /tmp a volume causes permission issues with jmap/jstack on certain Kubernetes clusters
+
+## 2.17.1
+
+Fix location of jenkins.war file.
+It is located in `/usr/share/jenkins/jenkins.war` and can be fonfigured via `master.jenkinsWar`.
+
+## 2.17.0
+
+Add support for plugin-installation-manager-tool
+
+## 2.16.0
+
+Added Startup probe for Jenkins pod when Kubernetes cluster is 1.16 or newer
+
+## 2.15.5
+
+scriptApproval is taken into account when enableXmlConfig is false.
+
+## 2.15.4
+
+Add Tilt support for easier helm chart development.
+
+## 2.15.3
+
+Fix error on missing `ingress.paths` value
+
+## 2.15.2
+
+Added documentation for ingress and jenkins url
+
+## 2.15.1
+
+Fix priorityClassName entry in values.yaml file
+
+## 2.15.0
+
+Added support for disabling the helm.sh/chart annotation
+
+## 2.14.0
+
+Added support for annotations in podTemplates
+
+## 2.13.2
+
+Add nodeSelector in the backup pod
+Fix tolerations in the backup pod
+
+## 2.13.1
+
+Update list of maintainers
+
+## 2.13.0
+
+Added Support for websockets in the default Jcasc config
+Added trailing slash to JENKINS_URL env var
+
+## 2.12.2
+
+Added unit tests for most resources in the Helm chart.
+
+## 2.12.1
+
+Helm chart README update
+
+## 2.12.0
+
+Add option to configure securityContext capabilities
+
+## 2.11.0
+
+Added configurable security context for jenkins backup CronJob and annotations to its serviceaccount.
+
+## 2.10.0
+
+Make activeDeadlineSeconds for backup job configurable
+
+## 2.9.0
+
+Make namespace of PrometheusRule configurable
+
+## 2.8.2
+
+Bumped configuration-as-code plugin version from 1.41 to 1.43.
+See [configuration-as-code plugin issue #1478](https://github.com/jenkinsci/configuration-as-code-plugin/issues/1478)
+
+## 2.8.1
+
+Fix indentation of JAVA_OPTS
+
+## 2.8.0
+
+Add support for helm unittest and include first tests
+
+## 2.7.2
+
+Target port of container `jenkins-sc-config` taken the value from values.yaml.
+
+## 2.7.0
+
+Add a secondary ingress template for those who want a second ingress with different labels or annotations or whatever else.
+
+Example: You want /github-webhook to be on a public ingress, while the main Jenkins intance to be on a private locked down ingress.
+
+## 2.6.5
+
+Update configScripts example
 
 ## 2.6.4
 
@@ -23,7 +263,7 @@ Update k8s-sidecar image to 0.1.193
 Only mount empty dir secrets-dir if either `master.enableXmlConfig` or `master.secretsFilesSecret` is set
 Fixes #19
 
-## 2.6.1 Do not render emty JCasC templates
+## 2.6.1 Do not render empty JCasC templates
 
 ## 2.6.0 First release in jenkinsci GitHub org
 
@@ -437,7 +677,7 @@ Update kubernetes-plugin to version 1.18.2 which fixes frequently encountered [J
 
 ## 1.7.1
 
-Update the default requirements for jenkins-slave to 512Mi which fixes frequently encountered [issue #3723](https://github.com/helm/charts/issues/3723)
+Update the default requirements for jenkins-agent to 512Mi which fixes frequently encountered [issue #3723](https://github.com/helm/charts/issues/3723)
 
 ## 1.7.0
 

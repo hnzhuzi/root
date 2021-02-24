@@ -1,0 +1,6 @@
+NAME                           	URL                                                               
+stable                         	http://mirror.azure.cn/kubernetes/charts/                         
+bitnami                        	https://charts.bitnami.com/bitnami                                
+jenkins                        	https://charts.jenkins.io                                         
+ingress-nginx                  	https://kubernetes.github.io/ingress-nginx                        
+nfs-subdir-external-provisioner	https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/

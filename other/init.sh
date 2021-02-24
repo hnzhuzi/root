@@ -33,3 +33,4 @@ echo abc@123 | passwd --stdin root
 sed -i '/TMOUT=600/d' /etc/profile
 chage -M 99999 weblogic; chage -M 99999 bqadm
 
+helm repo add bitnami https://charts.bitnami.com/bitnami

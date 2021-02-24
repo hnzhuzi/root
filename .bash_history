@@ -25837,11 +25837,6 @@ systemctl stop kubelet
  kubeadm init --image-repository gcr.azk8s.cn/google_containers --pod-network-cidr=10.244.0.0/16
 #1567154234
 ansible all -m shell -a 'yum -y remove docker-ce'
-#1567154250
-#1567154299
-yum install docker-ce.3:18.09.0
-#1567154314
-yum install docker-ce.18.09.0
 #1567154340
 yum install docker-ce-18.09.0
 #1567154431
@@ -48619,7 +48614,7 @@ vim kubectl.kubeconfig
 ls
 cd
 vim .bash_history
- ansible-playbook -i "$BASE/clusters/$1/hosts" "$BASE/playbooks/04.kube-master.yml" -t restart_master -e "@clusters/$1/config.yml" 
+ ansible-playbook -i "$BASE/clusters/$1/hosts" "$BASE/playbooks/04.kube-master.yml" -t restart_master -e "@clusters/$1/config.yml"
  ansible-playbook -i "$BASE/clusters/$1/hosts" "$BASE/playbooks/31.deletcd.yml" -e "ETCD_TO_DEL=$2" -e "CLUSTER=$1" -e "@clusters/$1/config.yml"
 netstat -tnlp | grep 8080
 cd /etc/kubeasz/
@@ -48640,17 +48635,674 @@ helm install ingress-nginx -n kube-system ingress-nginx/
 helm ls
 helm list
 helm ls -n kube-system
-helm ls 
+helm ls
 helm ls -n kube-system
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 kubectl get node
-kubectl delete -f testpod.yaml 
-kubectl apply -f testpod.yaml 
+kubectl delete -f testpod.yaml
+kubectl apply -f testpod.yaml
 kubectl api-resources | grep ingress
 kubectl api-resources | grep 'networking.k8s.io\/v1'
 kubectl api-versions | grep settings
 kubectl api-versions | grep 'networking.k8s.io\/v1'
-kubectl apply -f testpod.yaml 
+kubectl apply -f testpod.yaml
 kubectl delete -f testpod.yaml
+kubectl apply -f testpod.yaml
+vim
+helm list
+helm ls -n kube-system
+helm ls
+helm ls -n kube-system
+kubectl apply -f testpod.yaml
+kubectl get node
+kubectl delete -f testpod.yaml
+kubectl apply -f testpod.yaml
+kubectl api-resources | grep ingress
+kubectl api-resources | grep 'networking.k8s.io\/v1'
+kubectl api-versions | grep settings
+kubectl api-versions | grep 'networking.k8s.io\/v1'
+kubectl apply -f testpod.yaml
+kubectl delete -f testpod.yaml
+kubectl apply -f testpod.yaml
+vim
+history -a
+vim
+history -a
+yum list docker-ce.x86_64 --showduplicates | sort -r
+yum -y install docker-ce-[VERSION]
+yum -y install docker-ce-19.03.14
+yum install -y kubelet kubeadm kubectl
+yum list kubectl  --showduplicates | sort -r
+docker info | grep -i driver
+systemctl enable docker && systemctl start docker
+docker info | grep -i driver
+systemctl daemon-reload && systemctl restart docker
+docker info
+cat /etc/docker/daemon.json 
+kubeadm version
+systemctl enable kubelet
+cat /etc/hosts
+ls
+shutdown -h now
+kubeadm config print init-defaults > kubeadm.yaml
+kubeadm --help
+yum list kubelet kubeadm kubectl  --showduplicates|sort -r
+git status
+vim kubeadm.yaml 
+kubeadm config images list --config /data/kubeadm/config/kubeadm.yml
+kubeadm config images list --config kubeadm.yaml 
+kubeadm config images pull --config kubeadm.yaml 
+iptables -nvL
+iptables -nL
+mkdir .kube
+cp -a /etc/kubernetes/admin.conf .kube/config
+k9s
+systemctl status kubelet
+kubeadm token create --print-join-command
+kubectl get node
+kubeadm init --config kubeadm.yaml
+k9s
+cd test1
+ls
+curl https://docs.projectcalico.org/manifests/calico.yaml -O
+ls
+vim calico.yaml 
+cd ../
+vim calico.yaml 
+cd dir1
+ls
+wget https://docs.projectcalico.org/v3.15/manifests/calico.yaml
+vim calico.yaml 
+vim
+ vim
+kubectl get node
+systemctl status kubelet.service 
+kubectl apply -f dir1/calico.yaml
+k9s
+mv kubeadm.yaml dir1
+ls
+cd dir1
+ls
+rm -f calico.yaml.bak 
+ls
+k9s
+vim
+helm install metallb -n kube-system metallb/
+helm install metrics-server -n kube-system metrics-server/
+helm --help
+helm repo list
+helm version
+helm repo add stable https://charts.helm.sh/stable
+helm repo add
+helm repo list
+helm repo add stable https://charts.helm.sh/stable
+helm repo add stable https://kubernetes-charts.storage.googleapis.com
+helm repo add stable https://charts.helm.sh/stable
+helm repo add stable http://mirror.azure.cn/kubernetes/charts/
+helm update
+helm repo update
+helm search repo metrics-server
+cat metrics-server/Chart.yaml 
+grep -ri bitnami ./
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm search repo metrics-server
+cd /tmp
+helm fetch --untar bitnami/metrics-server
+vimdiff /root/metrics-server/values.yaml metrics-server/values.yaml 
+ls
+c
+cd
+helm -n kube-system  uninstall metrics-server
+helm install ingress-nginx -n kube-system ingress-nginx/
 kubectl apply -f testpod.yaml 
+k9s
+vim metrics-server/values.yaml 
+mv metrics-server /tmp/metrics-server.bak
+ls
+cp -a /tmp/metrics-server ./
+ls
+helm install metrics-server -n kube-system metrics-server/
+helm -n kube-system  uninstall metrics-server
+helm install metrics-server -n kube-system metrics-server/
+kubectl top node 
+ls /etc/calico/ssl/calico-key.pem
+cat dir1/calico.yaml 
+wget https://github.com/projectcalico/calicoctl/releases/download/v3.15.4/calicoctl -O /download/
+wget https://github.com/projectcalico/calicoctl/releases/download/v3.15.4/calicoctl -O /usr/local/bin/calicoctl
+ll /usr/local/bin
+chmod +x /usr/local/bin/calicoctl 
+ls /etc/calico/calicoctl.cfg
+cd /tmp
+ls
+cat > 1.txt <<line1
+line2
+eof
+
+cat 1.txt 
+mkidr /etc/calico/
+mkdir /etc/calico/
+calicoctl get node
+calicoctl node status
+cd
+netstat -tnlp | grep contr
+netstat -tnlp | grep sche
+cd /etc/kubernetes/
+cd manifests/
+ls
+mv kube-controller-manager.yaml /tmp
+ls
+netstat -tnlp | grep contr
+mv /tmp/kube-controller-manager.yaml ./
+ls
+netstat -tnlp | grep contr
+mv kube-scheduler.yaml /tmp
+mv /tmp/kube-scheduler.yaml ./
+netstat -tnlp | grep sche
+systemctl status kublet
+systemctl status kubelet.service 
+
+
+netstat -tnulp | grep etcd
+netstat -tnulp | grep kube-proxy
+
+netstat -tnulp | grep kube-proxy
+date +%s
+kubectl patch deployment <deployment-name> \
+kubectl patch deployment <deployment-name> -p '{"spec":{"template":{"spec":{"containers":[{"name":"<container-name>","env":[{"name":"RESTART_","value":"'$(date +%s)'"}]}]}}}}'
+kubectl patch deployment nginx-1 -p '{"spec":{"template":{"spec":{"containers":[{"name":"nginx-1","env":[{"name":"RESTART_","value":"'$(date +%s)'"}]}]}}}}'
+kubectl rollout restart deployment nginx-1
+cat .bashrc
+cd
+cat .bashrc
+. .bashrc
+ls /tmp
+vim
+k9s
+vim
+
+kubectl rollout restart deployment nginx-1
+ps aux | grep vim
+vim
+systemctl cat kubelet
+docker ps
+docker ps | grep sche
+docker stop 67ec
+docker ps | grep sche
+systemctl cat kubelet
+crontab -l
+cat other/clear.sh 
+ip link
+shutdown -h now
+pstree
+ps aux | grep vim
+ps aux | grep bash
+k9s
+ls
+vim
+cd /etc/kubernetes/
+ls
+pwd
+ls pki/
+k9s
+ansible -m ping
+
+ansible all -m shell -a 'yum -y install nfs-utils'
+yum list | grep nfs
+netstat -tnlp | grep nfs
+systemctl enable nfs-server && systemctl start nfs-server
+netstat -tnlp | grep nfs
+netstat -tnlp 
+cp -a other/exports /etc
+systemctl restart nfs-server
+cd /nfs
+ls
+rm -f 1.txt
+cd
+helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
+helm -n kube-system ls
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+kubectl config view
+kubectl config set-context kubernetes-admin@kubernetes-01 --namespace kube-system
+kubectl config view
+kubectl get pod
+helm list
+kubectl get pv
+kubectl get pvc
+kubectl delete -f testpod.yaml 
+kubectl -n default delete -f testpod.yaml 
+kubectl apply -f testpod.yaml 
+kubectl apply -f testpvc.yaml 
+cd /nfs
+ls
+cd
+kubectl delete -f testpod.yaml 
+kubectl apply -f testpod.yaml 
+kubectl delete -f testpod.yaml 
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+cd /nfs
+ls
+>2.txt
+ls
+cd
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+showmount -e 172.16.195.111
+helm -n kube-system  uninstall nfs-client-provisioner 
+helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
+kubectl apply -f testpvc.yaml 
+cd /nfs
+ls
+pwd
+ls
+systemctl status rpcbind
+cd
+kubectl apply -f testpvc.yaml 
+cd /nfs
+ls
+cd
+helm -n kube-system  uninstall nfs-client-provisioner 
+kubectl delete -f testpvc.yaml 
+kubectl apply -f testpvc.yaml 
+cd /nfs
+ls
+cd
+kubectl apply -f testpod.yaml 
+cd /nfs
+ls
+cd
+kubectl delete -f testpod.yaml 
+kubectl delete -f testpvc.yaml 
+cd /nfs
+ls
+rm -rf index.html 
+ls
+cd
+helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
+kubectl apply -f testpvc.yaml 
+helm ls
+kubectl apply -f testpvc.yaml 
+helm -n kube-system  uninstall nfs-client-provisioner 
+helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
+kubectl get node
+kubectl logs -f nfs-client-provisioner-549b4ccc47-pssrg 
+cd /nfs
+ls
+docker login --username=hnzhuzi registry.cn-shenzhen.aliyuncs.com
+docker image ls
+docker pull alpine
+docker tag alpine registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v1
+docker push registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v1
+cd /tmp
+ls
+git clone https://github.com/hnzhuzi/mydemo1.git
+git remote show
+cd mydemo1/
+ls
+git remote show
+git remote show origin
+git remote add aliyun https://codeup.aliyun.com/602f241a640593207be34424/mydemo1.git
+git add .
+git commit 
+git add --all ./ && git commit -m 'v1' && git push aliyun
+git config --global user.name "hnzhuzi"
+git config --global user.email ""
+git push aliyun
+cd
+ls
+cd /tmp
+ls
+mkdir testdir
+cd testdir
+ls
+git clone https://codeup.aliyun.com/602f241a640593207be34424/mydemo1.git
+cd
+cd /tmp/testdir
+ls
+git clone https://codeup.aliyun.com/602f241a640593207be34424/mydemo1.git
+cd ../
+ls
+rm -rf testdir
+ls
+cd mydemo1/
+ls
+cd springboot/
+ls
+cd /download/
+ls
+wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+ls
+cd /tmp/mydemo1/
+ls
+git remote add origin https://github.com/hnzhuzi/mydemo3.git
+git remote add origin3 https://github.com/hnzhuzi/mydemo3.git
+git push origin3
+git add --all ./ && git commit -m 'v1' && git push origin3
+git config --global user.name "hnzhuzi"
+git config --global user.email ""
+git push origin3
+git push origin3 master
+cd ../
+ls
+rm -rf mydemo1/
+git clone https://github.com/hnzhuzi/mydemo3.git
+git remote show origin
+git remote show 
+cd mydemo3
+ls
+git remote show origin 
+cd
+kubectl delete pvc nfspvc 
+kubectl apply -f testpvc.yaml 
+cd /download/
+ls
+wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz 
+tar -xf apache-maven-3.6.3-bin.tar.gz -C /nfs/kube-system-jnlp-pvc-53cf47d9-f89f-4689-9fd8-128e9e371df4/
+cd /nfs/kube-system-jnlp-pvc-53cf47d9-f89f-4689-9fd8-128e9e371df4/
+ls
+vim apache-maven-3.6.3/conf/settings.xml 
+ls
+mkdir bin
+cd bin
+which kubectl
+ll kubectl
+ll /usr/bin/kubectl
+cp -a /usr/bin/kubectl ./
+ls
+which docker
+ll /usr/bin/docker
+cp -a /usr/bin/docker ./
+ls
+cd ../
+ls
+cp -a /root/.kube/config ./
+ls
+ls /var/run/docker.sock
+cd
+helm install jenkins -n kube-system jenkins/
+helm -n kube-system  uninstall jenkins 
+helm install jenkins -n kube-system jenkins/
+helm -n kube-system  uninstall jenkins 
+helm install jenkins -n kube-system jenkins/
+helm repo list
+helm repo add jenkins https://charts.jenkins.io
+helm search repo jenkins
+cat jenkins/Chart.yaml 
+cat jenkins/README.md 
+helm search repo jenkins
+helm repo list
+helm -n kube-system  uninstall jenkins 
+helm install jenkins -n kube-system jenkins/
+helm repo add jenkins https://charts.jenkins.io
+helm repo update 
+helm -n kube-system  uninstall jenkins 
+cd /tmp
+ls
+helm search repo jenkins
+cd
+
+helm search repo jenkins
+cat jenkins/Chart.yaml 
+helm pull --untar jenkins/jenkins -C /tmp
+helm pull --untar jenkins/jenkins -d /tmp
+cd /tmp
+ls
+helm install jenkins -n kube-system jenkins/
+docker pull jenkins/jenkins:2.263.3
+cd mydemo3/
+ls
+git add --all ./ && git commit -m 'v1' && git push
+git config --global user.name "hnzhuzi"
+git config --global user.email ""
+git add --all ./ && git commit -m 'v1' && git push
+git push
+git add --all ./ && git commit -m 'v1' && git push
+git push
+git add --all ./ && git commit -m 'v1'
+git status
+git push
+git status
+git push origin master
+git status
+git push orgin master
+git push origin master
+git status
+git push
+git remote show origin 
+git push
+git status
+git --version
+git push -u origin master
+git status
+git --version
+git push
+git config --global push.default matching
+git push
+ls
+>1.txt
+git status
+git add --all ./ && git commit -m 'v2'
+git status
+git push
+git status
+git push -u origin master
+cd ../
+rm -rf mydemo3/
+git clone https://github.com/hnzhuzi/mydemo3.git
+cd mydemo3/
+ls
+git status
+> 1.txt
+git add --all ./ 
+git status
+git commit -m 'test'
+git config --global user.name "hnzhuzi"
+git config --global user.email ""
+git commit -m 'test'
+git config --global user.email "you@example.com"
+git commit -m 'test'
+git push
+rm -f 1.txt 
+ls
+git status
+git add --all ./ && git commit -m 'v1' && git push
+cd
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:a629a19
+docker image ls
+docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v1 
+docker image ls
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:a629a19
+docker tag alpine registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
+docker push registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
+docker rmi alpine:latest registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
+docker image ls
+docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2 
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:a629a19
+cd /tmp/mydemo3/
+ls
+git add --all ./ && git commit -m 'v2' && git push
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:a629a19
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d94
+"registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d94
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d941
+cat /etc/docker/daemon.json 
+systemctl daemon-reload && systemctl restart docker
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d941
+systemctl daemon-reload && systemctl restart docker
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/flannel:v0.11.0-amd64
+docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/flannel:v0.11.0-amd64
+git status
+cd springboot/
+ls
+cd ../
+ls
+git status
+git add --all ./ && git commit -m 'v2' && git push
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:0cf6f2d
+docker login --username=hnzhuzi registry.cn-shenzhen.aliyuncs.com
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:0cf6f2d
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/nginx-ingress-controller:0.24.1
+ls
+cd ../
+ls
+cp -a mydemo3{,.bak}
+cd mydemo3.bak/
+ls
+cd springboot/
+ls
+pwd
+cd
+ls
+cd /tmp/mydemo3.bak/
+ls
+cd springboot/
+ls
+docker pull docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:0cf6f2d
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:0cf6f2d
+cd /root/dir1/docker/
+ls
+cp -a /tmp/mydemo3/springboot/Dockerfile Dockerfile4
+docker build -t registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1 -f Dockerfile4 ./
+docker push registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
+docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
+docker image ls
+docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
+docker image ls
+docker rmi openjdk:8-jre-alpine 
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
+docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:0cf6f2d
+docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d941
+cd /download/
+ls
+wget https://github.com/goharbor/harbor/releases/download/v2.2.0-rc2/harbor-offline-installer-v2.2.0-rc2.tgz
+wget http://rancher-mirror.cnrancher.com/docker-compose/v1.28.4/docker-compose-Linux-x86_64
+ls
+tar xf harbor-offline-installer-v2.2.0-rc2.tgz -C /usr/local/
+ll
+cp -a docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+docker-compose version
+cd /usr/local/harbor/
+ls
+cp -a harbor.yml.tmpl harbor.yml
+vim harbor.yml
+./install.sh 
+cd
+docker tag alpine 172.16.195.111/library/alpine:v1
+docker pull alpine
+docker tag alpine 172.16.195.111/library/alpine:v1
+docker push 172.16.195.111/library/alpine:v1
+ansible nodes -m synchronize -a 'src=/etc/docker/daemon.json dest=/etc/docker/daemon.json'
+ansible all -m shell -a 'systemctl daemon-reload && systemctl restart docker'
+docker push 172.16.195.111/library/alpine:v1
+docker login -u admin -p Harbor12345 172.16.195.111
+docker-compose status
+docker-compose ps
+cd /usr/local/harbor/
+ls
+docker-compose ps
+netstat -tnlp | grep 80
+docker-compose up
+docker-compose restart
+systemctl status docker
+docker-compose rm
+docker-compose up
+docker login -u admin -p Harbor12345 172.16.195.111
+docker push 172.16.195.111/library/alpine:v1
+docker rmi alpine:latest 
+docker rmi 172.16.195.111/library/alpine:v1
+docker pull 172.16.195.111/library/alpine:v1
+docker pull 172.16.195.111/library/jenkins-demo-springboot:ad656ab
+cd
+cat .bashrc
+kubectl get ingress
+kubectl get ingress,deployment
+kubectl get deployment,service,ingress
+kubectl get deployment,service,ingress jenkins-demo-springboot
+kubectl delete deployment,service,ingress jenkins-demo-springboot
+cp -a /tmp/mydemo3/springboot/k8s.yaml testk8s.yaml
+cp -a /tmp/mydemo3/springboot/k8s.yaml tmp1.yaml
+kubectl apply -f tmp1.yaml 
+cd /tmp/mydemo3
+ls
+cd
+vim .ssh/authorized_keys 
+git config credential.helper store
+cd /tmp/mydemo3
+ls
+git status
+git add --all ./ && git commit -m 'v2' && git push
+git add --all ./ && git commit -m 'v3' && git push
+ssh node12
+cd /tmp/mydemo3
+ls
+cd springboot/
+git status
+git add --all ./ && git commit -m 'v4' && git push
+cd
+kubeadm alpha certs check-expiration
+kubectl logs --hep
+kkubecctl logs --help
+kubecctl logs --help
+kubectl logs --help
+kubectl logs -p podname -n namespace|less
+kubectl logs -p podname -n namespace|less
+ls
+cat .ssh/authorized_keys 
+kubectl get node --show-labels
+kubectl get node --help
+kubectl get node --show-labels
+kubectl get node -l kubernetes.io/hostname=node13
+kubectl get node -l node-role.kubernetes.io/master=
+kubectl logs --help
+kubectl logs -n platform-backend ske-gateway-v2-xxxxx-xxxxx  --tail=10 -f
+
+kubectl -n default apply -f testpod.yaml 
+kubectl -n default delete -f testpod.yaml 
+kubectl -n default apply -f testpod.yaml 
+kubectl edit -n default deployemnt nginx-1
+kubectl edit -n default deployment nginx-1
+cat .bashrc
+. .bashrc
+kubectl get pod
+kubectl get node
+shutdown -r now
+cd /usr/local/
+cd harbor/
+docker-compose ps
+vim
+cd
+vim
+ls
+docker ps
+top
+free -h
+cd /usr/local/
+cd harbor/
+ls
+docker-compose ps
+docker-compose up -d
+docker-compose ps
+netstat -tnlp | grep 80
+k9s
+cd
+cat /etc/issue
+at /etc/issue
+cat /etc/issue
+cat /etc/lsb-release
+cat .bashrc
+ansible-playbook --help
+vim
+kubectl get pod
+cd /etc/kubernetes/manifests/
+ls
 vim
