@@ -10,7 +10,8 @@ maintainers:
 - email: gianrubio@gmail.com
   name: gianrubio
 - name: vsliouniaev
+- name: bismarck
 name: prometheus-node-exporter
 sources:
 - https://github.com/prometheus/node_exporter/
-version: 1.11.2
+version: 1.14.2

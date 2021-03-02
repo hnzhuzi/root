@@ -49306,3 +49306,334 @@ kubectl get pod
 cd /etc/kubernetes/manifests/
 ls
 vim
+vimdiff kube-prometheus-stack/values.yaml /tmp/kube-prometheus-stack/values.yaml 
+vim
+vimdiff kube-prometheus-stack/values.yaml /tmp/kube-prometheus-stack/values.yaml 
+vim
+
+ssh node12 sudo hostname
+ssh node12 sudo -i hostname
+k9s
+netstat -tunlp | grep sche
+kuectl get cs
+kubectl get cs
+netstat -tunlp | grep sche
+cd /tmp
+helm -n kube-system  uninstall kube-prometheus-stack 
+netstat -tunlp | grep contr
+cd /etc/kubernetes/pki/etcd 
+ls
+kubectl create secret generic etcd-certs --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.crt --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.key --from-file=/etc/kubernetes/pki/etcd/ca.crt
+cd
+vim /tmp/kube-prometheus-stack/values.yaml 
+cd /tmp
+ls
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+ls
+cd
+ls
+cd /tmp
+ls
+rm -f scheduler-service*
+ls
+helm  install test kube-prometheus-stack/  --dry-run --debug > tmp.txt
+vim tmp.txt 
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+helm ls
+helm -n kube-system  uninstall kube-prometheus-stack 
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+cd
+cat .kube/config | grep certificate-authority-data
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1ESXlOREEzTlRnek1Wb1hEVE14TURJeU1qQTNOVGd6TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTWR3CmhwWFF5dWtWTG9KUWVsTFlDcGtPcVI3MS85SStEaXMyNnhlOUFoOU14UVE0VHpVb0ZkUmVrWi9iZkdvWElUMnQKNTQ1Slg1WjVPallBUFQvbUs4ZXQ0SEpZZjlvWnplWHRnekZIdGtvMUtyOThjMnlSNGdWUFVrSWZWd0RLdjZjWgpGc2NQbS8yK3VpejgxTnFPTVZ5QytYOU83ZnVvYWh0RU92cmFyanZFaDlGYnl2cjNaZXhRNXhPKzFoVithNy95CllnTnRHb2diVy91bkx5SWFkbmw4UThrcjgwMkZON0d3a3RJQkNGT2pWMFRXcm9zTS9taUdZLzF5Uk1sbndKWUQKamxDOFMvWDZQcmx1N3BvQ05kc25LZzNpYUpqaGFMRTI0YXR6akxjbmRobCt2dVdnSTcwZXlrd3ZsUjRNUXdQUwpxRmFuYXBsb2Q4c01WOWFieW9FQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZOYlhjdWFZdGJ4ZFNDL29YaHNSbUp5d3pqdzNNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFCOCtTa2hycWU5OG9ycWFqVGdCN0VFVmhqOWtISWd6Z0NyVlhiWkdCbzg1MkpRNHBKbwozZnNXZ0xmQVFjQ2xSeThpQy9FTXlySlJ1VFpJc1JaK21saFM2cm5XbmRMSFJVUGhaOU9weUg2YUlYYjcwQUpVCk8zakVGaUFvb1c0UzNJZzZnbWx6SUh0bzNRSkU2N0xITUpSZ1YrVmRBWUJMSnZ2Skk0aHB1bWtxNG1tN0N0ZnoKbG9JRmZJUmhlR3hINzQxOUV6ejk3K0xnRnhVL3hXOXY0amhZNEdkOHhPZWlyc1NQeTkxSkxRaVBhS1Q5RjRxeQpkQ09QTjMvNkh6WFBRdDEvT056WUh5dDB2eXZPWm4zT0dtMDdhZ3VNUFovVkhIclp5OW00TGU3K1pGREZJRmp6CmtjSFdzRkI2Z1ZUYjByRlJJZ3dVdjlId204eXc5N25xRTY1VQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== | base64 -d
+cat .kube/config | grep client-certificate-data
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFekNDQWZ1Z0F3SUJBZ0lJSmh2M016RXQ3b0V3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TVRBeU1qUXdOelU0TXpGYUZ3MHlNakF5TWpRd056VTRNekphTURReApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1Sa3dGd1lEVlFRREV4QnJkV0psY201bGRHVnpMV0ZrCmJXbHVNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXdWcjlPVVVvSGMyQjhrTDEKTDFJaEhZZmVBb3lycnhvZ0RkL3hSRE1zaFQybDJHcTcwb1ZCdTZHeWVQcVdLcVM5SGQxdVhJUmVwMVNXVi9LVQpHNUVHRTl5NmxqdTB1S0thanFzVmtrQmZXVXhhOFdHZ3pGODJhNUJzZTRhRGMrT2pIRXhRY1l4UUVrKzBqaWV4ClcwditMcXRrenlrczcxUHpWVWE0UkxMNG4rNXlrR1JOd1pZMksweGdsZE5zODZrOEVZOXZ2b0xPRG5tRFJ5QzYKc2dDeEwzaFNmZFAwTUR4NFI3UXpIbW43Y1lWRGs1RDZ3V21EVTVjeVhqOSsyZ0o3dVYwbEZ2dWVMMUQzckptRwpyNGIxTVNLcmV4azZHaFVrSzZZN1NVMTU5bTdwT2F4NmloL3JzWjNEblhndlR1a2RhNG9NN1h4c3pNakd3OEJBCjJmQ0I5d0lEQVFBQm8wZ3dSakFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdJd0h3WURWUjBqQkJnd0ZvQVUxdGR5NXBpMXZGMUlMK2hlR3hHWW5MRE9QRGN3RFFZSktvWklodmNOQVFFTApCUUFEZ2dFQkFHMS90NWRSRjM1dHdyWW5mODVValgxNHphSjdmRjdGUUlid0EzRHZ2TUFqTjQ4ajBuWW12c3NmCnBHTHRWM2V1b1pCcWRDaERwZklaMEtXMnBGMk9FakNhMGZCUFkxWDRoaDBKbUQ4YVk3dFlicTF2cnFxZGlkVGgKMjIxWFV6RkFrVVVlNUphWDVEekZibjJpZm9PUXlSQytzL1lyTFVjeDBCWHdyUXNJdy93V2F5cW9XVnJpOXl5cgpVQm1WcnFsUWE3NGtpZlB5R3ROL0VHTURlb3pCOHVjbWM3WFRFY3YxQm5STmdOMGFHVVdqL0h5d2x6Ti9xZXF1CmJ6aGZoTmVOT3lLSnJGV0FhMDNLeWZoRFBKNVR3K0JPTERXNXQxRk5kV0hRSmZtS29vMEJ4YnhLcUwrdHVIR0oKT1ZoWGxacVVZOEtQMlR2Y2Jhckl4WVJ6S2h2cnN2VT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= | base64 -d
+cat .kube/config | grep client-key-data
+echo LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBd1ZyOU9VVW9IYzJCOGtMMUwxSWhIWWZlQW95cnJ4b2dEZC94UkRNc2hUMmwyR3E3CjBvVkJ1Nkd5ZVBxV0txUzlIZDF1WElSZXAxU1dWL0tVRzVFR0U5eTZsanUwdUtLYWpxc1Zra0JmV1V4YThXR2cKekY4MmE1QnNlNGFEYytPakhFeFFjWXhRRWsrMGppZXhXMHYrTHF0a3p5a3M3MVB6VlVhNFJMTDRuKzV5a0dSTgp3WlkySzB4Z2xkTnM4Nms4RVk5dnZvTE9Ebm1EUnlDNnNnQ3hMM2hTZmRQME1EeDRSN1F6SG1uN2NZVkRrNUQ2CndXbURVNWN5WGo5KzJnSjd1VjBsRnZ1ZUwxRDNySm1HcjRiMU1TS3JleGs2R2hVa0s2WTdTVTE1OW03cE9heDYKaWgvcnNaM0RuWGd2VHVrZGE0b003WHhzek1qR3c4QkEyZkNCOXdJREFRQUJBb0lCQUJaVE9pKzFvM2NsZGw2UgppcHZISU5tM0NWUkVCOEsxQW9SM21mVGs3N3dHclRKNnlHcjdSZWF6T2Rjc0g5Q1dxdHRhNk5ZMzFuSDltMHBXClVQR0o0aWpDOEt4T0FvVGJDWHQxbDQwR2I3dnd6QU5ZNFdjWGkwSUtMK3huVUtBOTVXUnNEMUc5QUxYTWpDMXAKdWRtdndZNkQ3YVRadlQxNDlQeWdxTUFONWhVWkVLL09XdjM1ZG1zdTkzWWVtczRkTHNmU1dOSFo0M3ArQURFSAo3YVpVRnR3L00vYXgvWXBQSHpvZXIvYllZbHhkM2U2STRUSDNyZGpPam44M0FRMmlITzBuM3dxMytVSGxsU01wCnVUUWFheHMrY0ZtbmE4bXJWb2owY3hRNDZLSFRJckhWZjhnaW4wejVLdFE0Wm1HUWVMcmZSU3dKb2RWbHpXY0gKYThuaDg0a0NnWUVBMmVJd1gvV1hvODVGd1NtVGxqNldHK2ozR1dITWtUNnUxZUNVc29MT3NoaVdUOWg3aWpSUwp0RFloQTdXajZrQlpZdVFud1pBcFQ5R3Z4QmpsQ2dUcFl1Rk9qcmdOckt0a044VXNhUkdLeENSVmFOR2MyeFJBCi9WWUxWeXM1NllrL3JuZmtRd0xlc2VKSlRiQmZ3QlF5K0JmMjBtYkRBdnRLaUF5bW9oTUdtLzBDZ1lFQTR5NVIKNEZJbk9USlJac2xpV1ZhNFhENFMwVzdhN3VMQk55QTk3VDhBMVYwLzJjZ0dHRTQ4VkZtaldvYWlnUEhVOUprZgphYjdGUStZcWNKenMxYUt2SG53VHVSaHN4dTBsSEhEUnJ1VE9jZUhBQzlHVlc0QlRzQ1ViMGY2L3phTFFqWER6CitUbExVNXBWcHNQaHBENXdHdjhRbzVoa0J5cHlpOUp4QzhWRHhnTUNnWUI0REMwVklnN2IzUklIM0sySmtaQkoKYm5GL0ZhaU51bGpBVk0zNUVTTnJjeXFXY2JPWHNUNkVObks0UllNNzFScXE1d1NVbktaMmFSVUwyWitRaHFaRQpxZGtMdjVNaE9RbXR4TUMwWDByeXlRWWFDNnY5OVVuZGkyUVNNaW5sWjQ2anhVRUtQdkdPVnh5R1pwQkxGNVlCCnBjcURvTVQveG84SktOZEM0M0szelFLQmdEMVYzaWt3UlFLK1FSZjlPeDVmdVhxK0Q1cVgwV2c1dEd6THVheDYKSENGL0FhUXN5dWg1QnZUSEZzRjBKQitvS3hTMjJySlVIVEpOekJ1SFlySHpNRkNNczA1Lzk2NWxqR1YzV0VWZAo1UmIrR2ptV3BqcUVGUlF6a0tWTG9FRkd1Z1BXQVNqQ2ZVSGZJMHpaQ2V5c0p0eEREUnorSWRPRmRGT254M21rCkVyNDlBb0dCQUpIWjZBR1U3NDdwVVYwb1BhTExiVGdOQVl0WFhxNXVGZWhQc0VWNXpyRkNCOXR0clV0d0FvQUoKb3lFTVByUytZa1I4YkxKNm9GbjBscHhkckZGTlJqVWFEUGJnVzlzcEw2Y1hCcXFZSDJta2I3aVh6dEdRMDlBdQpoTE9PUUdxb3kzZnN4OHgyYXFkQ29peTMwRjc5NzdFVU1aa1VmSUhzTzJUZE5yL3JwVUZMCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg== | base64 -d
+cat /etc/hosts
+grep node /etc/hosts
+git reset --hard origin/master
+git status
+git logs
+git log
+git status
+cd /tmp/mydemo3/
+ls
+> 1.txt
+git status
+git add 1.txt
+git status
+git reset HEAD 1.txt
+git status
+echo hello 1 . 1.txt
+echo hello1 > 1.txt
+ls
+git status
+git add 1.txzt
+git add 1.txt
+git status
+echo hello2 >> 1.txt
+git status
+cat 1.txt 
+git cehckout -- 1.txt
+git checkout -- 1.txt
+cat 1.txt 
+git status
+git logs
+git 
+git log
+ls
+git status
+git commit -m 'add 1.txt'
+git status
+git log
+git reset --hard ad9e
+ls
+git log
+git status
+ls
+> 1.txt
+git add 1.txt
+git commit -m 'add 1.txt'
+git status
+ls
+git reset --hard HEAD^
+git log
+git reflog
+ls
+git reset --hard ad9e
+git log
+ls
+git reflog
+git reset --hard d145
+ls
+git status
+git log
+git reset --hard origin/master 
+ls
+> 1.txt
+git add 1.txt ./ && git commit -m 'add 1.txt'
+git status
+ls
+rm -f 1.txt
+git status
+git add --all ./ 
+git status
+ls
+git reset HEAD 1.txt
+git status
+ls
+git add 1.txt
+git version
+ls
+git status
+cd ../
+ls
+rm -rf mydemo3/
+ls
+git clone git@github.com:hnzhuzi/mydemo3.git
+ls
+cd mydemo3/
+ls
+> 1.txt
+git add --all ./ && git commit -m 'add 1.txt' && git push
+git log
+git branch dev1
+git checkout dev1
+ls
+> dev1.txt
+git add dev1.txt ./ && git commit -m 'add dev1.txt'
+ls
+git push
+git status
+git push -u origin dev1
+git remote show origin 
+git push --help
+cd
+ls
+cd /tmp/mydemo3/
+ls
+echo hello1 > dev1.txt 
+git add --all ./ && git commit -m 'modify dev1.txt' && git push
+git branch master
+git checkout master
+git merge dev1
+git status
+ls
+git reset --hard origin/master 
+ls
+git branch 
+git branch -d dev1
+git branch
+git pull
+git branch
+git pull --help
+ls
+cat 1.txt
+echo master > 1.txt
+ git checkout -b dev1
+git remote show origin 
+git branch 
+ls
+it status
+git status
+echo dev1 > 1.txt 
+cat 1.txt
+git branch master
+git merge dev1
+ls
+cat 1.txt 
+echo master > 1.txt
+cat 1.txt 
+git merge dev1
+git branch -d dev1
+git branch
+git checkout master
+git branch -d dev1
+cat 1.txt 
+ git checkout -b dev1
+cat 1.txt 
+echo dev1 > 1.txt
+git add --all ./ && git commit -m 'test1'
+git checkout master
+git add --all ./ && git commit -m 'test1'
+ls
+cat 1.txt 
+cat 1.txt
+ git checkout -b dev1
+git branch -d dev1
+git branch -D dev1
+git branch 
+ls
+cat 1.txt 
+echo master > 1.txt
+ls
+cat 1.txt 
+git add --all ./ && git commit -m 'test1'
+ git checkout -b dev1
+cat 1.txt 
+echo dev1 > 1.txt 
+ls
+cat 1.txt 
+git add --all ./ && git commit -m 'test1'
+git checkout master
+git merge dev1
+cat 1.txt 
+git branch 
+git branch -d dev1
+cat 1.txt 
+echo master > 1.txt
+cat 1.txt 
+git add --all ./ && git commit -m 'test1'
+ git checkout -b dev1
+cat 1.txt 
+cd
+kubectl logs --help
+kubectl logs nginx-1-54fb65cd76-k6xrk
+kubectl logs -l app=nginx-1
+kubectl logs -l app=nginx-1 -c  nginx-1
+kubectl -n kube-haproxy-staging logs -l app=kube-haproxy -c haproxy | grep -i alert
+sudo --help
+sudo -i
+sudo -i
+cd /tmp
+ls
+cd mydemo3/
+ls
+cat 1.txt
+git branch 
+cat 1.txt 
+echo dev1 > 1.txt
+ls
+git add --all ./ && git commit -m 'dev1'
+git log
+git checkout master
+echo master1 > 1.txt 
+git add --all ./ && git commit -m 'master1'
+git merge dev1
+vim 1.txt
+git status
+vim 1.txt 
+git add 1.txt
+git commit -m 'modified 1.txt'
+ls
+cat 1.txt 
+git log
+ git log --graph --pretty=oneline --abbrev-commit
+ls
+cat 1.txt 
+git branch dev1
+git checkout dev1
+ls
+cat 1.txt 
+ls
+> 2.txt
+ls
+git add --all ./ && git commit -m 'add 2.txt'
+git checkout master
+ls
+cat 1.txt
+git merge dev1
+cat 1.txt 
+git branch -d dev1
+git branch
+cat 1.txt 
+ls
+rm -f 2.txt
+ls
+cat 1.txt
+ls
+git log
+ git log --graph --pretty=oneline --abbrev-commit
+ git checkout -b dev1
+git branch 
+ls
+cat 1.txt 
+ls
+> 2.txt
+ls
+git add --all ./ && git commit -m 'add 2.txt'
+git checkout master
+git merge --no-ff -m "merge with no-ff" dev1
+git log
+ git log --graph --pretty=oneline --abbrev-commit
+git log
+ls
+cat 1.txt 
+cat 2.txt 
+git merge --help
+git merge --no-ff origin/{{MR_BRANCH1}}
+cat /etc/hosts
+awk '$NF'
+awk '$NF' /etc/hosts
+awk '' /etc/hosts
+awk '{}' /etc/hosts
+awk '{print0}' /etc/hosts
+awk '{print}' /etc/hosts
+awk '{print $NF}' /etc/hosts
+awk '$NF=`node' /etc/hosts
+awk '$NF=~' /etc/hosts
+awk '$NF=~node' /etc/hosts
+awk '$NF=~"node"' /etc/hosts
+cat /etc/passwd
+awk -F: '{print $3}' /etc/passwd
+awk -F: '$3>=1000{print $3}' /etc/passwd
+awk -F: '$3>=1000' /etc/passwd
+awk -F: '$3=~1' /etc/passwd
+awk -F: '$3=~/1/' /etc/passwd
+awk -F: '$3~/1/' /etc/passwd
+awk -F: '$3=~/1/' /etc/passwd
+awk -F: '$3~/1/' /etc/passwd
+k9s
+top
+ntstat -rn
+netstat -rn
+route -n
+ping 172.16.195.151
+ping 172.16.195.129
+systemctl list-unit-files  --type=service | grep enabled
+yum list | grep ssh
+rpm -qa | grep ssh
+date
+hostnamectl status 
+yum repolist
+vim /etc/sysconfig/network-scripts/ifcfg-ens33
