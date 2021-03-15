@@ -1,8 +1,8 @@
 global:
   resolve_timeout: 5m
   smtp_smarthost: 'smtp.qq.com:25'
-  smtp_from: '@qq.com'
-  smtp_auth_username: '@qq.com'
+  smtp_from: '454576310@qq.com'
+  smtp_auth_username: '454576310@qq.com'
   smtp_auth_password: ''
   smtp_require_tls: false
 route:
@@ -13,6 +13,7 @@ route:
   group_wait: 30s
   group_interval: 5m
   repeat_interval: 12h
+  # 如果一个报警信息已经发送成功了，等待 repeat_interval 时间来重新发送他们
   receiver: default
   # 上面所有的属性都由所有子路由继承，并且可以在每个子路由上进行覆盖。
   routes:
@@ -22,8 +23,8 @@ route:
 receivers:
 - name: 'default'
   email_configs:
-  - to: '@qq.com'
-    send_resolved: true
+  - to: '454576310@qq.com'
+    send_resolved: true # 接受告警恢复的通知
 - name: 'webhook'
   webhook_configs:
   - url: 'http://dingtalk-hook.kube-ops:5000'

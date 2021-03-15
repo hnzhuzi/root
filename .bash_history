@@ -49637,3 +49637,362 @@ date
 hostnamectl status 
 yum repolist
 vim /etc/sysconfig/network-scripts/ifcfg-ens33
+free -h
+ping 172.16.195.210
+helm -n kube-system  uninstall ingress-nginx 
+helm install ingress-nginx -n kube-system ingress-nginx/
+vim
+
+vimdiff kube-prometheus-stack/values.yaml /tmp/values.yaml 
+vim
+top
+free -h
+k9s
+kubectl -n default logs -l app=nginx-1
+kubectl -n default logs -l app=nginx-1 -f
+kubectl -n default logs -f -l app=nginx-1
+kubectl -n default logs -f -l app=nginx-1 -c nginx-1
+kubectl -n default logs -l app=nginx-1 -c nginx-1
+kubectl 
+kubectl logs -l app=nginx-1 -c nginx-1
+kubectl logs -l app=nginx-1 
+kubectl logs -f -l app=nginx-1 
+kubectl logs -f -l app.kubernetes.io/name=ingress-nginx
+helm -n kube-system  uninstall kube-prometheus-stack 
+ls /nfs
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+helm -n kube-system  uninstall kube-prometheus-stack 
+rm -rf kube-prometheus-stack/
+mv /tmp/kube-prometheus-stack/ ./
+ls
+kubectl apply -f testpvc.yaml 
+ls /nfs
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+helm ls
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+helm -n kube-system  uninstall kube-prometheus-stack 
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+cd /tmp
+ls
+cd
+helm lint kube-prometheus-stack/
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+ct /tmp
+cd /tmp
+ls
+wget https://raw.githubusercontent.com/hnzhuzi/root/master/kube-prometheus-stack/values.yaml
+cd
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+kubectl get configmap --all-namespaces
+kubectl get configmap --all-namespaces | grep prome
+kubectl get ns
+kubectl get pod
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+kubecctl get crd
+kubectl get crd
+kubectl get crd | grep -i alert
+kubectl get configmap --all-namespaces | grep prome
+kubectl get configmap --all-namespaces | grep -i prome
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+cd /tmp
+wget https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagerconfigs.yaml
+kubectl apply -f monitoring.coreos.com_alertmanagerconfigs.yaml 
+wget https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/example/prometheus-operator-crd/monitoring.coreos.com_prometheuses.yaml
+kubectl apply -f monitoring.coreos.com_prometheuses.yaml 
+cd
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+helm -n kube-system  uninstall kube-prometheus-stack 
+kubectl apply -f  https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.45.0/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagers.yaml
+kubectl delete crd alertmanagers.monitoring.coreos.com
+kubectl apply -f  https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.45.0/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagers.yaml
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1ESXlOREEzTlRnek1Wb1hEVE14TURJeU1qQTNOVGd6TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTWR3CmhwWFF5dWtWTG9KUWVsTFlDcGtPcVI3MS85SStEaXMyNnhlOUFoOU14UVE0VHpVb0ZkUmVrWi9iZkdvWElUMnQKNTQ1Slg1WjVPallBUFQvbUs4ZXQ0SEpZZjlvWnplWHRnekZIdGtvMUtyOThjMnlSNGdWUFVrSWZWd0RLdjZjWgpGc2NQbS8yK3VpejgxTnFPTVZ5QytYOU83ZnVvYWh0RU92cmFyanZFaDlGYnl2cjNaZXhRNXhPKzFoVithNy95CllnTnRHb2diVy91bkx5SWFkbmw4UThrcjgwMkZON0d3a3RJQkNGT2pWMFRXcm9zTS9taUdZLzF5Uk1sbndKWUQKamxDOFMvWDZQcmx1N3BvQ05kc25LZzNpYUpqaGFMRTI0YXR6akxjbmRobCt2dVdnSTcwZXlrd3ZsUjRNUXdQUwpxRmFuYXBsb2Q4c01WOWFieW9FQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZOYlhjdWFZdGJ4ZFNDL29YaHNSbUp5d3pqdzNNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFCOCtTa2hycWU5OG9ycWFqVGdCN0VFVmhqOWtISWd6Z0NyVlhiWkdCbzg1MkpRNHBKbwozZnNXZ0xmQVFjQ2xSeThpQy9FTXlySlJ1VFpJc1JaK21saFM2cm5XbmRMSFJVUGhaOU9weUg2YUlYYjcwQUpVCk8zakVGaUFvb1c0UzNJZzZnbWx6SUh0bzNRSkU2N0xITUpSZ1YrVmRBWUJMSnZ2Skk0aHB1bWtxNG1tN0N0ZnoKbG9JRmZJUmhlR3hINzQxOUV6ejk3K0xnRnhVL3hXOXY0amhZNEdkOHhPZWlyc1NQeTkxSkxRaVBhS1Q5RjRxeQpkQ09QTjMvNkh6WFBRdDEvT056WUh5dDB2eXZPWm4zT0dtMDdhZ3VNUFovVkhIclp5OW00TGU3K1pGREZJRmp6CmtjSFdzRkI2Z1ZUYjByRlJJZ3dVdjlId204eXc5N25xRTY1VQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== | base64 -d
+grep certificate-authority-data .kube/config 
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1ESXlOREEzTlRnek1Wb1hEVE14TURJeU1qQTNOVGd6TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTWR3CmhwWFF5dWtWTG9KUWVsTFlDcGtPcVI3MS85SStEaXMyNnhlOUFoOU14UVE0VHpVb0ZkUmVrWi9iZkdvWElUMnQKNTQ1Slg1WjVPallBUFQvbUs4ZXQ0SEpZZjlvWnplWHRnekZIdGtvMUtyOThjMnlSNGdWUFVrSWZWd0RLdjZjWgpGc2NQbS8yK3VpejgxTnFPTVZ5QytYOU83ZnVvYWh0RU92cmFyanZFaDlGYnl2cjNaZXhRNXhPKzFoVithNy95CllnTnRHb2diVy91bkx5SWFkbmw4UThrcjgwMkZON0d3a3RJQkNGT2pWMFRXcm9zTS9taUdZLzF5Uk1sbndKWUQKamxDOFMvWDZQcmx1N3BvQ05kc25LZzNpYUpqaGFMRTI0YXR6akxjbmRobCt2dVdnSTcwZXlrd3ZsUjRNUXdQUwpxRmFuYXBsb2Q4c01WOWFieW9FQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZOYlhjdWFZdGJ4ZFNDL29YaHNSbUp5d3pqdzNNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFCOCtTa2hycWU5OG9ycWFqVGdCN0VFVmhqOWtISWd6Z0NyVlhiWkdCbzg1MkpRNHBKbwozZnNXZ0xmQVFjQ2xSeThpQy9FTXlySlJ1VFpJc1JaK21saFM2cm5XbmRMSFJVUGhaOU9weUg2YUlYYjcwQUpVCk8zakVGaUFvb1c0UzNJZzZnbWx6SUh0bzNRSkU2N0xITUpSZ1YrVmRBWUJMSnZ2Skk0aHB1bWtxNG1tN0N0ZnoKbG9JRmZJUmhlR3hINzQxOUV6ejk3K0xnRnhVL3hXOXY0amhZNEdkOHhPZWlyc1NQeTkxSkxRaVBhS1Q5RjRxeQpkQ09QTjMvNkh6WFBRdDEvT056WUh5dDB2eXZPWm4zT0dtMDdhZ3VNUFovVkhIclp5OW00TGU3K1pGREZJRmp6CmtjSFdzRkI2Z1ZUYjByRlJJZ3dVdjlId204eXc5N25xRTY1VQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== | base64 -d
+grep client-certificate-data .kube/config 
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFekNDQWZ1Z0F3SUJBZ0lJSmh2M016RXQ3b0V3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TVRBeU1qUXdOelU0TXpGYUZ3MHlNakF5TWpRd056VTRNekphTURReApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1Sa3dGd1lEVlFRREV4QnJkV0psY201bGRHVnpMV0ZrCmJXbHVNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXdWcjlPVVVvSGMyQjhrTDEKTDFJaEhZZmVBb3lycnhvZ0RkL3hSRE1zaFQybDJHcTcwb1ZCdTZHeWVQcVdLcVM5SGQxdVhJUmVwMVNXVi9LVQpHNUVHRTl5NmxqdTB1S0thanFzVmtrQmZXVXhhOFdHZ3pGODJhNUJzZTRhRGMrT2pIRXhRY1l4UUVrKzBqaWV4ClcwditMcXRrenlrczcxUHpWVWE0UkxMNG4rNXlrR1JOd1pZMksweGdsZE5zODZrOEVZOXZ2b0xPRG5tRFJ5QzYKc2dDeEwzaFNmZFAwTUR4NFI3UXpIbW43Y1lWRGs1RDZ3V21EVTVjeVhqOSsyZ0o3dVYwbEZ2dWVMMUQzckptRwpyNGIxTVNLcmV4azZHaFVrSzZZN1NVMTU5bTdwT2F4NmloL3JzWjNEblhndlR1a2RhNG9NN1h4c3pNakd3OEJBCjJmQ0I5d0lEQVFBQm8wZ3dSakFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdJd0h3WURWUjBqQkJnd0ZvQVUxdGR5NXBpMXZGMUlMK2hlR3hHWW5MRE9QRGN3RFFZSktvWklodmNOQVFFTApCUUFEZ2dFQkFHMS90NWRSRjM1dHdyWW5mODVValgxNHphSjdmRjdGUUlid0EzRHZ2TUFqTjQ4ajBuWW12c3NmCnBHTHRWM2V1b1pCcWRDaERwZklaMEtXMnBGMk9FakNhMGZCUFkxWDRoaDBKbUQ4YVk3dFlicTF2cnFxZGlkVGgKMjIxWFV6RkFrVVVlNUphWDVEekZibjJpZm9PUXlSQytzL1lyTFVjeDBCWHdyUXNJdy93V2F5cW9XVnJpOXl5cgpVQm1WcnFsUWE3NGtpZlB5R3ROL0VHTURlb3pCOHVjbWM3WFRFY3YxQm5STmdOMGFHVVdqL0h5d2x6Ti9xZXF1CmJ6aGZoTmVOT3lLSnJGV0FhMDNLeWZoRFBKNVR3K0JPTERXNXQxRk5kV0hRSmZtS29vMEJ4YnhLcUwrdHVIR0oKT1ZoWGxacVVZOEtQMlR2Y2Jhckl4WVJ6S2h2cnN2VT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= | base64 -d
+grep client-key-data .kube/config 
+echo LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBd1ZyOU9VVW9IYzJCOGtMMUwxSWhIWWZlQW95cnJ4b2dEZC94UkRNc2hUMmwyR3E3CjBvVkJ1Nkd5ZVBxV0txUzlIZDF1WElSZXAxU1dWL0tVRzVFR0U5eTZsanUwdUtLYWpxc1Zra0JmV1V4YThXR2cKekY4MmE1QnNlNGFEYytPakhFeFFjWXhRRWsrMGppZXhXMHYrTHF0a3p5a3M3MVB6VlVhNFJMTDRuKzV5a0dSTgp3WlkySzB4Z2xkTnM4Nms4RVk5dnZvTE9Ebm1EUnlDNnNnQ3hMM2hTZmRQME1EeDRSN1F6SG1uN2NZVkRrNUQ2CndXbURVNWN5WGo5KzJnSjd1VjBsRnZ1ZUwxRDNySm1HcjRiMU1TS3JleGs2R2hVa0s2WTdTVTE1OW03cE9heDYKaWgvcnNaM0RuWGd2VHVrZGE0b003WHhzek1qR3c4QkEyZkNCOXdJREFRQUJBb0lCQUJaVE9pKzFvM2NsZGw2UgppcHZISU5tM0NWUkVCOEsxQW9SM21mVGs3N3dHclRKNnlHcjdSZWF6T2Rjc0g5Q1dxdHRhNk5ZMzFuSDltMHBXClVQR0o0aWpDOEt4T0FvVGJDWHQxbDQwR2I3dnd6QU5ZNFdjWGkwSUtMK3huVUtBOTVXUnNEMUc5QUxYTWpDMXAKdWRtdndZNkQ3YVRadlQxNDlQeWdxTUFONWhVWkVLL09XdjM1ZG1zdTkzWWVtczRkTHNmU1dOSFo0M3ArQURFSAo3YVpVRnR3L00vYXgvWXBQSHpvZXIvYllZbHhkM2U2STRUSDNyZGpPam44M0FRMmlITzBuM3dxMytVSGxsU01wCnVUUWFheHMrY0ZtbmE4bXJWb2owY3hRNDZLSFRJckhWZjhnaW4wejVLdFE0Wm1HUWVMcmZSU3dKb2RWbHpXY0gKYThuaDg0a0NnWUVBMmVJd1gvV1hvODVGd1NtVGxqNldHK2ozR1dITWtUNnUxZUNVc29MT3NoaVdUOWg3aWpSUwp0RFloQTdXajZrQlpZdVFud1pBcFQ5R3Z4QmpsQ2dUcFl1Rk9qcmdOckt0a044VXNhUkdLeENSVmFOR2MyeFJBCi9WWUxWeXM1NllrL3JuZmtRd0xlc2VKSlRiQmZ3QlF5K0JmMjBtYkRBdnRLaUF5bW9oTUdtLzBDZ1lFQTR5NVIKNEZJbk9USlJac2xpV1ZhNFhENFMwVzdhN3VMQk55QTk3VDhBMVYwLzJjZ0dHRTQ4VkZtaldvYWlnUEhVOUprZgphYjdGUStZcWNKenMxYUt2SG53VHVSaHN4dTBsSEhEUnJ1VE9jZUhBQzlHVlc0QlRzQ1ViMGY2L3phTFFqWER6CitUbExVNXBWcHNQaHBENXdHdjhRbzVoa0J5cHlpOUp4QzhWRHhnTUNnWUI0REMwVklnN2IzUklIM0sySmtaQkoKYm5GL0ZhaU51bGpBVk0zNUVTTnJjeXFXY2JPWHNUNkVObks0UllNNzFScXE1d1NVbktaMmFSVUwyWitRaHFaRQpxZGtMdjVNaE9RbXR4TUMwWDByeXlRWWFDNnY5OVVuZGkyUVNNaW5sWjQ2anhVRUtQdkdPVnh5R1pwQkxGNVlCCnBjcURvTVQveG84SktOZEM0M0szelFLQmdEMVYzaWt3UlFLK1FSZjlPeDVmdVhxK0Q1cVgwV2c1dEd6THVheDYKSENGL0FhUXN5dWg1QnZUSEZzRjBKQitvS3hTMjJySlVIVEpOekJ1SFlySHpNRkNNczA1Lzk2NWxqR1YzV0VWZAo1UmIrR2ptV3BqcUVGUlF6a0tWTG9FRkd1Z1BXQVNqQ2ZVSGZJMHpaQ2V5c0p0eEREUnorSWRPRmRGT254M21rCkVyNDlBb0dCQUpIWjZBR1U3NDdwVVYwb1BhTExiVGdOQVl0WFhxNXVGZWhQc0VWNXpyRkNCOXR0clV0d0FvQUoKb3lFTVByUytZa1I4YkxKNm9GbjBscHhkckZGTlJqVWFEUGJnVzlzcEw2Y1hCcXFZSDJta2I3aVh6dEdRMDlBdQpoTE9PUUdxb3kzZnN4OHgyYXFkQ29peTMwRjc5NzdFVU1aa1VmSUhzTzJUZE5yL3JwVUZMCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg== | base64 -d
+kubectl get service
+ping 10.96.0.10
+curl 10.96.0.10:9153/metrics
+free -h
+date
+ssh node12 date
+ssh node13 date
+ssh node13 date && date
+ssh node12 date && date
+git status
+git add --all ./ && git commit -m '0302' && git push
+git status
+kubectl delete secret alertmanager-prometheus-operator-alertmanager
+kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml
+kubectl delete secret alertmanager-prometheus-operator-alertmanager 
+kubectl delete secret alertmanager-kube-prometheus-stack-alertmanager 
+kubectl create secret generic alertmanager-kube-prometheus-stack-alertmanager  --from-file=dir1/alertmanager.yaml
+netstat -tnlp | grep etcd
+cd /tmp
+helm  install test /root/kube-prometheus-stack/  --dry-run --debug > tmp.txt
+vim tmp.txt 
+curl kube-prometheus-stack-coredns:9153/metrics
+curl http://192.168.226.98:9153/metrics
+df -h
+fdisk -l
+df -h
+curl 192.168.72.52:8080
+curl 192.168.72.52:8080/metrcis
+http://192.168.72.52:8080/metrics
+curl http://192.168.72.52:8080/metrics
+curl 192.168.72.52:8080/metrics
+
+curl 192.168.72.52:8080/metrics
+curl 192.168.72.52:8080/metrics | grep type
+curl 192.168.72.52:8080/metrics | grep node_filesystem_readonly
+curl 192.168.72.52:8080/metrics > tmp.txt
+cat tmp.txt 
+vim tmp.txt 
+kubectl get role
+kubecctl get node
+kubectl get node
+cd
+kubectl delete -f testpod.yaml 
+kubectl -n default apply -f testpod
+kubectl -n default apply -f testpod.yaml 
+kubectl -n default get node
+kubectl -n default get pod
+top
+iostat
+yum list | grep iostat
+yum provides iostat
+yum clean all
+yum makecache 
+yum repolist
+yum provides iostat
+yum provides tree
+cd /tmp
+curl 192.168.72.52:8080
+192.168.72.52:8080
+curl 192.168.72.52:8080/metrics
+curl 192.168.72.52:8080/metrics > tmp.txt
+
+curl 192.168.72.52:8080/metrics | grep kube_pod_status_phase
+curl 192.168.72.52:8080/metrics | grep kube_pod_container_status_last_terminated_reason
+kubectl get ingress
+kubectl get ingress -A
+kubectl edit -h
+kubctl options
+kubectl options
+kubectl get -h
+kubectl get ingress -A
+kubectl get pod
+kubectl get pod -o wide
+kubectl get ingress
+kubectl get ingress -owide
+kubectl  get service -A apo-config-th-server-dev
+kubectl  get pod 
+kubectl  get pod -A
+kubectl  get service -A
+kubectl  get service 
+kubectl get service --all-namespaces 
+kubectl get service --all-namespaces  nginx-1
+kubectl get pod
+kubectl get service
+helm  install test /root/jenkins  --dry-run --debug > tmp.txt
+vim tmp.txt 
+ls 
+helm repo add grafana https://grafana.github.io/helm-charts
+helm search repo grafana
+helm pull --untar grafana/grafana -d /tmp
+helm install grafanatest -n kube-system grafana/
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+netstat -tnlp | grep 30000
+kubectl describe service grafanatest 
+kubectl get ingress grafanatest -o yaml 
+kubectl get ingress grafanatest -o yaml > grafanatest.yml
+cd
+kubectl -n default delete -f testpod.yaml 
+kubectl apply -f testpod2.yaml 
+kubectl apply -f testpod3.yaml 
+kubectl apply -f /tmp/testpath.yml 
+kubectl delete -f /tmp/testpath.yml 
+kubectl apply -f /tmp/testpath.yml 
+kubectl get service
+curl 10.104.82.21
+curl 10.104.82.21/testdir
+curl 10.104.82.21/testdir/index.html
+curl 10.104.82.21/testdir/
+curl 10.104.82.21/testdir
+curl 10.104.82.21/testdir/
+kubectl apply -f /tmp/testpath.yml 
+curl 10.104.82.21/testdir/
+curl 10.104.82.21/testdir
+kubectl apply -f /tmp/grafanatest.yml 
+cd /tmp
+cat tmp.txt 
+grep -E '.{3}/' tmp.txt
+grep -E '[^/]{3}/' tmp.txt
+kubectl apply -f /tmp/grafanatest.yml 
+helm ls
+kubectl apply -f /tmp/grafanatest.yml 
+cat /tmp/tmp.txt 
+grep '.?/' tmp.txt
+grep -E '.?/' tmp.txt
+grep -E '^.?/' tmp.txt
+kubectl apply -f /tmp/grafanatest.yml 
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+cd grafana/
+ls
+grep -r 'root_url' ./
+
+kubectl scale deployment httpdtest1 --replicas=2
+kubectl -n get pod
+kubecctl get ingress
+kubectl get ingress -A
+kubectl get all -A
+watch kuectl get pod
+watch kubectl get pod
+vim other/note.txt 
+ls
+vim .vimrc
+cp -a .vim/plugged/vim-colors-solarized/colors/solarized.vim /usr/share/vim/vim80/colors/
+ls /usr/share/vim/vim80/colors/
+vim .vimrc
+vim other/springboot.sh 
+vim other/note.txt 
+ls
+vim other/note.txt 
+calicoctl.cfg  elasticsearch  kube-prometheus-stack            other               testenv.yaml       testnetworkpolicy.yaml   testprometheusredis.yaml  tmp1.yaml
+cephfs         gitlab-ce      me
+ls
+cd /tmp/demo1/
+ls
+git add --all ./ && git commit -m '0302' && git push
+cd /tmp/mydemo3/
+ls
+git status
+ls
+ls -h
+ls -a
+cd
+ls
+cd /tmp
+ls
+cd mydemo3
+ls
+ls -a
+cd
+rm -rf mydemo3
+ls
+cd /tmp
+git clone git@github.com:hnzhuzi/mydemo3.git
+ls
+ls mydemo3/
+rm -rf mydemo3/
+ls
+git clone git@github.com:hnzhuzi/mydemo3.git
+cd mydemo3/
+ls
+git remote add garena https://git.garena.com/kui.tan/mydemo3.git
+git push -u garena master
+cd
+cat .ssh/authorized_keys 
+cd /tmp/mydemo3/
+ls
+rm -f 1.txt
+git remote remove garena
+git remote add garena gitlab@git.garena.com:kui.tan/mydemo3.git
+git push -u garena master
+ls
+git add --all ./ && git commit -m '0310' && git push
+git remote show origin
+git remote show garena 
+ls
+rm -rf .git
+git status
+git init 
+cd ../
+mv mydemo3/ demo1
+ls
+cd demo1/
+ls
+git remote add origin gitlab@git.garena.com:kui.tan/demo1.git
+git config --global user.name "Kui Tan"
+git config --global user.email "kui.tan@shopee.com"
+git push -u origin master
+git status
+git add --all ./ && git commit -m '0310'
+git push -u origin master
+vim Jenkinsfile 
+vim .vimrc 
+ls
+kubectl get node
+helm ls
+vim .vimrc
+rsync -av .ssh 172.16.195.151:/root
+ssh node13
+yum repolist
+git status
+git version
+locale
+vim other/note.txt 
+helm search nfs-client-provisioner
+helm search repo nfs-client-provisioner
+helm list
+helm search repo nfs
+helm list
+helm repo list
+helm search repo nfs
+vim
+rpm -q -h
+rpm -help
+rpm --help
+apt-file search tree
+yum search tree
+rpm -qR nginx
+rpm --help
+rpm --usage
+rpm -qR nginx
+rpm -h
+rpm --help
+rpm --help | grep 'R'
+rpm -qf
+rpm -qf nginx
+yum deplist nginx
+vim .bash_history 
+cp -a .bash_history{,.20210312bak}
+vim .bash_history
+git status
+hostnamectl status 
+git status
+git version
+git status
+locale
+ls
+ls /etc/
+ls /etc/
+ls /etc
+ls /etc/passwd
+ls
+git status
+local
+locale
+git status
+ls
+vim .vimrc
+ls
+vim .vimrc 
+ls
+ls
+vim .vimrc
+vim .vimrc
+echo test 01
+cat .bash_history
+echo test 02
