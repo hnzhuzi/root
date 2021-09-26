@@ -34,3 +34,5 @@ sed -i '/TMOUT=600/d' /etc/profile
 chage -M 99999 weblogic; chage -M 99999 bqadm
 
 helm repo add bitnami https://charts.bitnami.com/bitnami
+
+# 免密ssh 时间同步(*/1 * * * * /usr/sbin/ntpdate ntp.aliyun.com >/dev/null 2>&1 )
