@@ -9,7 +9,7 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 yum clean all
 yum -y install bash-completion bash-completion-extras net-tools vim-enhanced tree wget git iptables-services ntpdate \
-lrzsz ShellCheck
+lrzsz ShellCheck the_silver_searcher
 
 rpm -Uvh http://mirror.ghettoforge.org/distributions/gf/gf-release-latest.gf.el7.noarch.rpm
 rpm --import http://mirror.ghettoforge.org/distributions/gf/RPM-GPG-KEY-gf.el7
