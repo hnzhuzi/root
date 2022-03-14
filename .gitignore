@@ -1,0 +1,7 @@
+dir1/ssl/
+.*
+!.bash_history
+!.bash_history-bak
+!.gitignore
+**/tmp*
+

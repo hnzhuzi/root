@@ -48678,7 +48678,11 @@ systemctl enable docker && systemctl start docker
 docker info | grep -i driver
 systemctl daemon-reload && systemctl restart docker
 docker info
+<<<<<<< HEAD
 cat /etc/docker/daemon.json
+=======
+cat /etc/docker/daemon.json 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubeadm version
 systemctl enable kubelet
 cat /etc/hosts
@@ -48688,10 +48692,17 @@ kubeadm config print init-defaults > kubeadm.yaml
 kubeadm --help
 yum list kubelet kubeadm kubectl  --showduplicates|sort -r
 git status
+<<<<<<< HEAD
 vim kubeadm.yaml
 kubeadm config images list --config /data/kubeadm/config/kubeadm.yml
 kubeadm config images list --config kubeadm.yaml
 kubeadm config images pull --config kubeadm.yaml
+=======
+vim kubeadm.yaml 
+kubeadm config images list --config /data/kubeadm/config/kubeadm.yml
+kubeadm config images list --config kubeadm.yaml 
+kubeadm config images pull --config kubeadm.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 iptables -nvL
 iptables -nL
 mkdir .kube
@@ -48706,6 +48717,7 @@ cd test1
 ls
 curl https://docs.projectcalico.org/manifests/calico.yaml -O
 ls
+<<<<<<< HEAD
 vim calico.yaml
 cd ../
 vim calico.yaml
@@ -48717,13 +48729,30 @@ vim
  vim
 kubectl get node
 systemctl status kubelet.service
+=======
+vim calico.yaml 
+cd ../
+vim calico.yaml 
+cd dir1
+ls
+wget https://docs.projectcalico.org/v3.15/manifests/calico.yaml
+vim calico.yaml 
+vim
+ vim
+kubectl get node
+systemctl status kubelet.service 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl apply -f dir1/calico.yaml
 k9s
 mv kubeadm.yaml dir1
 ls
 cd dir1
 ls
+<<<<<<< HEAD
 rm -f calico.yaml.bak
+=======
+rm -f calico.yaml.bak 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 k9s
 vim
@@ -48742,22 +48771,36 @@ helm repo add stable http://mirror.azure.cn/kubernetes/charts/
 helm update
 helm repo update
 helm search repo metrics-server
+<<<<<<< HEAD
 cat metrics-server/Chart.yaml
+=======
+cat metrics-server/Chart.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 grep -ri bitnami ./
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm search repo metrics-server
 cd /tmp
 helm fetch --untar bitnami/metrics-server
+<<<<<<< HEAD
 vimdiff /root/metrics-server/values.yaml metrics-server/values.yaml
+=======
+vimdiff /root/metrics-server/values.yaml metrics-server/values.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 c
 cd
 helm -n kube-system  uninstall metrics-server
 helm install ingress-nginx -n kube-system ingress-nginx/
+<<<<<<< HEAD
 kubectl apply -f testpod.yaml
 k9s
 vim metrics-server/values.yaml
+=======
+kubectl apply -f testpod.yaml 
+k9s
+vim metrics-server/values.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 mv metrics-server /tmp/metrics-server.bak
 ls
 cp -a /tmp/metrics-server ./
@@ -48765,6 +48808,7 @@ ls
 helm install metrics-server -n kube-system metrics-server/
 helm -n kube-system  uninstall metrics-server
 helm install metrics-server -n kube-system metrics-server/
+<<<<<<< HEAD
 kubectl top node
 ls /etc/calico/ssl/calico-key.pem
 cat dir1/calico.yaml
@@ -48772,6 +48816,15 @@ wget https://github.com/projectcalico/calicoctl/releases/download/v3.15.4/calico
 wget https://github.com/projectcalico/calicoctl/releases/download/v3.15.4/calicoctl -O /usr/local/bin/calicoctl
 ll /usr/local/bin
 chmod +x /usr/local/bin/calicoctl
+=======
+kubectl top node 
+ls /etc/calico/ssl/calico-key.pem
+cat dir1/calico.yaml 
+wget https://github.com/projectcalico/calicoctl/releases/download/v3.15.4/calicoctl -O /download/
+wget https://github.com/projectcalico/calicoctl/releases/download/v3.15.4/calicoctl -O /usr/local/bin/calicoctl
+ll /usr/local/bin
+chmod +x /usr/local/bin/calicoctl 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls /etc/calico/calicoctl.cfg
 cd /tmp
 ls
@@ -48779,7 +48832,11 @@ cat > 1.txt <<line1
 line2
 eof
 
+<<<<<<< HEAD
 cat 1.txt
+=======
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 mkidr /etc/calico/
 mkdir /etc/calico/
 calicoctl get node
@@ -48800,7 +48857,11 @@ mv kube-scheduler.yaml /tmp
 mv /tmp/kube-scheduler.yaml ./
 netstat -tnlp | grep sche
 systemctl status kublet
+<<<<<<< HEAD
 systemctl status kubelet.service
+=======
+systemctl status kubelet.service 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 
 
 netstat -tnulp | grep etcd
@@ -48831,7 +48892,11 @@ docker stop 67ec
 docker ps | grep sche
 systemctl cat kubelet
 crontab -l
+<<<<<<< HEAD
 cat other/clear.sh
+=======
+cat other/clear.sh 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ip link
 shutdown -h now
 pstree
@@ -48852,7 +48917,11 @@ yum list | grep nfs
 netstat -tnlp | grep nfs
 systemctl enable nfs-server && systemctl start nfs-server
 netstat -tnlp | grep nfs
+<<<<<<< HEAD
 netstat -tnlp
+=======
+netstat -tnlp 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cp -a other/exports /etc
 systemctl restart nfs-server
 cd /nfs
@@ -48861,8 +48930,13 @@ rm -f 1.txt
 cd
 helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
 helm -n kube-system ls
+<<<<<<< HEAD
 kubectl apply -f testpvc.yaml
 kubectl delete -f testpvc.yaml
+=======
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl config view
 kubectl config set-context kubernetes-admin@kubernetes-01 --namespace kube-system
 kubectl config view
@@ -48870,6 +48944,7 @@ kubectl get pod
 helm list
 kubectl get pv
 kubectl get pvc
+<<<<<<< HEAD
 kubectl delete -f testpod.yaml
 kubectl -n default delete -f testpod.yaml
 kubectl apply -f testpod.yaml
@@ -48882,11 +48957,26 @@ kubectl apply -f testpod.yaml
 kubectl delete -f testpod.yaml
 kubectl apply -f testpvc.yaml
 kubectl delete -f testpvc.yaml
+=======
+kubectl delete -f testpod.yaml 
+kubectl -n default delete -f testpod.yaml 
+kubectl apply -f testpod.yaml 
+kubectl apply -f testpvc.yaml 
+cd /nfs
+ls
+cd
+kubectl delete -f testpod.yaml 
+kubectl apply -f testpod.yaml 
+kubectl delete -f testpod.yaml 
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd /nfs
 ls
 >2.txt
 ls
 cd
+<<<<<<< HEAD
 kubectl apply -f testpvc.yaml
 kubectl delete -f testpvc.yaml
 kubectl apply -f testpvc.yaml
@@ -48897,12 +48987,25 @@ showmount -e 172.16.195.111
 helm -n kube-system  uninstall nfs-client-provisioner
 helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
 kubectl apply -f testpvc.yaml
+=======
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+kubectl apply -f testpvc.yaml 
+kubectl delete -f testpvc.yaml 
+showmount -e 172.16.195.111
+helm -n kube-system  uninstall nfs-client-provisioner 
+helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
+kubectl apply -f testpvc.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd /nfs
 ls
 pwd
 ls
 systemctl status rpcbind
 cd
+<<<<<<< HEAD
 kubectl apply -f testpvc.yaml
 cd /nfs
 ls
@@ -48932,6 +49035,37 @@ helm -n kube-system  uninstall nfs-client-provisioner
 helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
 kubectl get node
 kubectl logs -f nfs-client-provisioner-549b4ccc47-pssrg
+=======
+kubectl apply -f testpvc.yaml 
+cd /nfs
+ls
+cd
+helm -n kube-system  uninstall nfs-client-provisioner 
+kubectl delete -f testpvc.yaml 
+kubectl apply -f testpvc.yaml 
+cd /nfs
+ls
+cd
+kubectl apply -f testpod.yaml 
+cd /nfs
+ls
+cd
+kubectl delete -f testpod.yaml 
+kubectl delete -f testpvc.yaml 
+cd /nfs
+ls
+rm -rf index.html 
+ls
+cd
+helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
+kubectl apply -f testpvc.yaml 
+helm ls
+kubectl apply -f testpvc.yaml 
+helm -n kube-system  uninstall nfs-client-provisioner 
+helm install nfs-client-provisioner -n kube-system nfs-client-provisioner
+kubectl get node
+kubectl logs -f nfs-client-provisioner-549b4ccc47-pssrg 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd /nfs
 ls
 docker login --username=hnzhuzi registry.cn-shenzhen.aliyuncs.com
@@ -48949,7 +49083,11 @@ git remote show
 git remote show origin
 git remote add aliyun https://codeup.aliyun.com/602f241a640593207be34424/mydemo1.git
 git add .
+<<<<<<< HEAD
 git commit
+=======
+git commit 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git add --all ./ && git commit -m 'v1' && git push aliyun
 git config --global user.name "hnzhuzi"
 git config --global user.email ""
@@ -48993,6 +49131,7 @@ ls
 rm -rf mydemo1/
 git clone https://github.com/hnzhuzi/mydemo3.git
 git remote show origin
+<<<<<<< HEAD
 git remote show
 cd mydemo3
 ls
@@ -49007,6 +49146,22 @@ tar -xf apache-maven-3.6.3-bin.tar.gz -C /nfs/kube-system-jnlp-pvc-53cf47d9-f89f
 cd /nfs/kube-system-jnlp-pvc-53cf47d9-f89f-4689-9fd8-128e9e371df4/
 ls
 vim apache-maven-3.6.3/conf/settings.xml
+=======
+git remote show 
+cd mydemo3
+ls
+git remote show origin 
+cd
+kubectl delete pvc nfspvc 
+kubectl apply -f testpvc.yaml 
+cd /download/
+ls
+wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz 
+tar -xf apache-maven-3.6.3-bin.tar.gz -C /nfs/kube-system-jnlp-pvc-53cf47d9-f89f-4689-9fd8-128e9e371df4/
+cd /nfs/kube-system-jnlp-pvc-53cf47d9-f89f-4689-9fd8-128e9e371df4/
+ls
+vim apache-maven-3.6.3/conf/settings.xml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 mkdir bin
 cd bin
@@ -49026,13 +49181,20 @@ ls
 ls /var/run/docker.sock
 cd
 helm install jenkins -n kube-system jenkins/
+<<<<<<< HEAD
 helm -n kube-system  uninstall jenkins
 helm install jenkins -n kube-system jenkins/
 helm -n kube-system  uninstall jenkins
+=======
+helm -n kube-system  uninstall jenkins 
+helm install jenkins -n kube-system jenkins/
+helm -n kube-system  uninstall jenkins 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 helm install jenkins -n kube-system jenkins/
 helm repo list
 helm repo add jenkins https://charts.jenkins.io
 helm search repo jenkins
+<<<<<<< HEAD
 cat jenkins/Chart.yaml
 cat jenkins/README.md
 helm search repo jenkins
@@ -49042,13 +49204,28 @@ helm install jenkins -n kube-system jenkins/
 helm repo add jenkins https://charts.jenkins.io
 helm repo update
 helm -n kube-system  uninstall jenkins
+=======
+cat jenkins/Chart.yaml 
+cat jenkins/README.md 
+helm search repo jenkins
+helm repo list
+helm -n kube-system  uninstall jenkins 
+helm install jenkins -n kube-system jenkins/
+helm repo add jenkins https://charts.jenkins.io
+helm repo update 
+helm -n kube-system  uninstall jenkins 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd /tmp
 ls
 helm search repo jenkins
 cd
 
 helm search repo jenkins
+<<<<<<< HEAD
 cat jenkins/Chart.yaml
+=======
+cat jenkins/Chart.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 helm pull --untar jenkins/jenkins -C /tmp
 helm pull --untar jenkins/jenkins -d /tmp
 cd /tmp
@@ -49074,7 +49251,11 @@ git push orgin master
 git push origin master
 git status
 git push
+<<<<<<< HEAD
 git remote show origin
+=======
+git remote show origin 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git push
 git status
 git --version
@@ -49099,7 +49280,11 @@ cd mydemo3/
 ls
 git status
 > 1.txt
+<<<<<<< HEAD
 git add --all ./
+=======
+git add --all ./ 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git status
 git commit -m 'test'
 git config --global user.name "hnzhuzi"
@@ -49108,14 +49293,22 @@ git commit -m 'test'
 git config --global user.email "you@example.com"
 git commit -m 'test'
 git push
+<<<<<<< HEAD
 rm -f 1.txt
+=======
+rm -f 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 git status
 git add --all ./ && git commit -m 'v1' && git push
 cd
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:a629a19
 docker image ls
+<<<<<<< HEAD
 docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v1
+=======
+docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v1 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 docker image ls
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:a629a19
 docker tag alpine registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
@@ -49123,7 +49316,11 @@ docker push registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
 docker rmi alpine:latest registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
 docker image ls
+<<<<<<< HEAD
 docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2
+=======
+docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/alpine:v2 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:a629a19
 cd /tmp/mydemo3/
 ls
@@ -49132,7 +49329,11 @@ docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:a6
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d94
 "registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d94
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d941
+<<<<<<< HEAD
 cat /etc/docker/daemon.json
+=======
+cat /etc/docker/daemon.json 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 systemctl daemon-reload && systemctl restart docker
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:010d941
 systemctl daemon-reload && systemctl restart docker
@@ -49176,7 +49377,11 @@ docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
 docker image ls
 docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
 docker image ls
+<<<<<<< HEAD
 docker rmi openjdk:8-jre-alpine
+=======
+docker rmi openjdk:8-jre-alpine 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
 docker rmi registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:v1
 docker pull registry.cn-shenzhen.aliyuncs.com/hnzhuzi/jenkins-demo-springboot:0cf6f2d
@@ -49195,7 +49400,11 @@ cd /usr/local/harbor/
 ls
 cp -a harbor.yml.tmpl harbor.yml
 vim harbor.yml
+<<<<<<< HEAD
 ./install.sh
+=======
+./install.sh 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd
 docker tag alpine 172.16.195.111/library/alpine:v1
 docker pull alpine
@@ -49218,7 +49427,11 @@ docker-compose rm
 docker-compose up
 docker login -u admin -p Harbor12345 172.16.195.111
 docker push 172.16.195.111/library/alpine:v1
+<<<<<<< HEAD
 docker rmi alpine:latest
+=======
+docker rmi alpine:latest 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 docker rmi 172.16.195.111/library/alpine:v1
 docker pull 172.16.195.111/library/alpine:v1
 docker pull 172.16.195.111/library/jenkins-demo-springboot:ad656ab
@@ -49231,11 +49444,19 @@ kubectl get deployment,service,ingress jenkins-demo-springboot
 kubectl delete deployment,service,ingress jenkins-demo-springboot
 cp -a /tmp/mydemo3/springboot/k8s.yaml testk8s.yaml
 cp -a /tmp/mydemo3/springboot/k8s.yaml tmp1.yaml
+<<<<<<< HEAD
 kubectl apply -f tmp1.yaml
 cd /tmp/mydemo3
 ls
 cd
 vim .ssh/authorized_keys
+=======
+kubectl apply -f tmp1.yaml 
+cd /tmp/mydemo3
+ls
+cd
+vim .ssh/authorized_keys 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git config credential.helper store
 cd /tmp/mydemo3
 ls
@@ -49257,7 +49478,11 @@ kubectl logs --help
 kubectl logs -p podname -n namespace|less
 kubectl logs -p podname -n namespace|less
 ls
+<<<<<<< HEAD
 cat .ssh/authorized_keys
+=======
+cat .ssh/authorized_keys 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl get node --show-labels
 kubectl get node --help
 kubectl get node --show-labels
@@ -49266,9 +49491,15 @@ kubectl get node -l node-role.kubernetes.io/master=
 kubectl logs --help
 kubectl logs -n platform-backend ske-gateway-v2-xxxxx-xxxxx  --tail=10 -f
 
+<<<<<<< HEAD
 kubectl -n default apply -f testpod.yaml
 kubectl -n default delete -f testpod.yaml
 kubectl -n default apply -f testpod.yaml
+=======
+kubectl -n default apply -f testpod.yaml 
+kubectl -n default delete -f testpod.yaml 
+kubectl -n default apply -f testpod.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl edit -n default deployemnt nginx-1
 kubectl edit -n default deployment nginx-1
 cat .bashrc
@@ -49306,9 +49537,15 @@ kubectl get pod
 cd /etc/kubernetes/manifests/
 ls
 vim
+<<<<<<< HEAD
 vimdiff kube-prometheus-stack/values.yaml /tmp/kube-prometheus-stack/values.yaml
 vim
 vimdiff kube-prometheus-stack/values.yaml /tmp/kube-prometheus-stack/values.yaml
+=======
+vimdiff kube-prometheus-stack/values.yaml /tmp/kube-prometheus-stack/values.yaml 
+vim
+vimdiff kube-prometheus-stack/values.yaml /tmp/kube-prometheus-stack/values.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 vim
 
 ssh node12 sudo hostname
@@ -49319,6 +49556,7 @@ kuectl get cs
 kubectl get cs
 netstat -tunlp | grep sche
 cd /tmp
+<<<<<<< HEAD
 helm -n kube-system  uninstall kube-prometheus-stack
 netstat -tunlp | grep contr
 cd /etc/kubernetes/pki/etcd
@@ -49326,6 +49564,15 @@ ls
 kubectl create secret generic etcd-certs --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.crt --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.key --from-file=/etc/kubernetes/pki/etcd/ca.crt
 cd
 vim /tmp/kube-prometheus-stack/values.yaml
+=======
+helm -n kube-system  uninstall kube-prometheus-stack 
+netstat -tunlp | grep contr
+cd /etc/kubernetes/pki/etcd 
+ls
+kubectl create secret generic etcd-certs --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.crt --from-file=/etc/kubernetes/pki/etcd/healthcheck-client.key --from-file=/etc/kubernetes/pki/etcd/ca.crt
+cd
+vim /tmp/kube-prometheus-stack/values.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd /tmp
 ls
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
@@ -49337,10 +49584,17 @@ ls
 rm -f scheduler-service*
 ls
 helm  install test kube-prometheus-stack/  --dry-run --debug > tmp.txt
+<<<<<<< HEAD
 vim tmp.txt
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
 helm ls
 helm -n kube-system  uninstall kube-prometheus-stack
+=======
+vim tmp.txt 
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+helm ls
+helm -n kube-system  uninstall kube-prometheus-stack 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
 cd
 cat .kube/config | grep certificate-authority-data
@@ -49373,6 +49627,7 @@ git add 1.txt
 git status
 echo hello2 >> 1.txt
 git status
+<<<<<<< HEAD
 cat 1.txt
 git cehckout -- 1.txt
 git checkout -- 1.txt
@@ -49380,6 +49635,15 @@ cat 1.txt
 git status
 git logs
 git
+=======
+cat 1.txt 
+git cehckout -- 1.txt
+git checkout -- 1.txt
+cat 1.txt 
+git status
+git logs
+git 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git log
 ls
 git status
@@ -49408,7 +49672,11 @@ git reset --hard d145
 ls
 git status
 git log
+<<<<<<< HEAD
 git reset --hard origin/master
+=======
+git reset --hard origin/master 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 > 1.txt
 git add 1.txt ./ && git commit -m 'add 1.txt'
@@ -49416,7 +49684,11 @@ git status
 ls
 rm -f 1.txt
 git status
+<<<<<<< HEAD
 git add --all ./
+=======
+git add --all ./ 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git status
 ls
 git reset HEAD 1.txt
@@ -49446,22 +49718,36 @@ ls
 git push
 git status
 git push -u origin dev1
+<<<<<<< HEAD
 git remote show origin
+=======
+git remote show origin 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git push --help
 cd
 ls
 cd /tmp/mydemo3/
 ls
+<<<<<<< HEAD
 echo hello1 > dev1.txt
+=======
+echo hello1 > dev1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git add --all ./ && git commit -m 'modify dev1.txt' && git push
 git branch master
 git checkout master
 git merge dev1
 git status
 ls
+<<<<<<< HEAD
 git reset --hard origin/master
 ls
 git branch
+=======
+git reset --hard origin/master 
+ls
+git branch 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git branch -d dev1
 git branch
 git pull
@@ -49471,37 +49757,63 @@ ls
 cat 1.txt
 echo master > 1.txt
  git checkout -b dev1
+<<<<<<< HEAD
 git remote show origin
 git branch
 ls
 it status
 git status
 echo dev1 > 1.txt
+=======
+git remote show origin 
+git branch 
+ls
+it status
+git status
+echo dev1 > 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cat 1.txt
 git branch master
 git merge dev1
 ls
+<<<<<<< HEAD
 cat 1.txt
 echo master > 1.txt
 cat 1.txt
+=======
+cat 1.txt 
+echo master > 1.txt
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git merge dev1
 git branch -d dev1
 git branch
 git checkout master
 git branch -d dev1
+<<<<<<< HEAD
 cat 1.txt
  git checkout -b dev1
 cat 1.txt
+=======
+cat 1.txt 
+ git checkout -b dev1
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 echo dev1 > 1.txt
 git add --all ./ && git commit -m 'test1'
 git checkout master
 git add --all ./ && git commit -m 'test1'
 ls
+<<<<<<< HEAD
 cat 1.txt
+=======
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cat 1.txt
  git checkout -b dev1
 git branch -d dev1
 git branch -D dev1
+<<<<<<< HEAD
 git branch
 ls
 cat 1.txt
@@ -49526,6 +49838,32 @@ cat 1.txt
 git add --all ./ && git commit -m 'test1'
  git checkout -b dev1
 cat 1.txt
+=======
+git branch 
+ls
+cat 1.txt 
+echo master > 1.txt
+ls
+cat 1.txt 
+git add --all ./ && git commit -m 'test1'
+ git checkout -b dev1
+cat 1.txt 
+echo dev1 > 1.txt 
+ls
+cat 1.txt 
+git add --all ./ && git commit -m 'test1'
+git checkout master
+git merge dev1
+cat 1.txt 
+git branch 
+git branch -d dev1
+cat 1.txt 
+echo master > 1.txt
+cat 1.txt 
+git add --all ./ && git commit -m 'test1'
+ git checkout -b dev1
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd
 kubectl logs --help
 kubectl logs nginx-1-54fb65cd76-k6xrk
@@ -49540,18 +49878,28 @@ ls
 cd mydemo3/
 ls
 cat 1.txt
+<<<<<<< HEAD
 git branch
 cat 1.txt
+=======
+git branch 
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 echo dev1 > 1.txt
 ls
 git add --all ./ && git commit -m 'dev1'
 git log
 git checkout master
+<<<<<<< HEAD
 echo master1 > 1.txt
+=======
+echo master1 > 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git add --all ./ && git commit -m 'master1'
 git merge dev1
 vim 1.txt
 git status
+<<<<<<< HEAD
 vim 1.txt
 git add 1.txt
 git commit -m 'modified 1.txt'
@@ -49565,6 +49913,21 @@ git branch dev1
 git checkout dev1
 ls
 cat 1.txt
+=======
+vim 1.txt 
+git add 1.txt
+git commit -m 'modified 1.txt'
+ls
+cat 1.txt 
+git log
+ git log --graph --pretty=oneline --abbrev-commit
+ls
+cat 1.txt 
+git branch dev1
+git checkout dev1
+ls
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 > 2.txt
 ls
@@ -49573,10 +49936,17 @@ git checkout master
 ls
 cat 1.txt
 git merge dev1
+<<<<<<< HEAD
 cat 1.txt
 git branch -d dev1
 git branch
 cat 1.txt
+=======
+cat 1.txt 
+git branch -d dev1
+git branch
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 rm -f 2.txt
 ls
@@ -49585,9 +49955,15 @@ ls
 git log
  git log --graph --pretty=oneline --abbrev-commit
  git checkout -b dev1
+<<<<<<< HEAD
 git branch
 ls
 cat 1.txt
+=======
+git branch 
+ls
+cat 1.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 > 2.txt
 ls
@@ -49598,8 +49974,13 @@ git log
  git log --graph --pretty=oneline --abbrev-commit
 git log
 ls
+<<<<<<< HEAD
 cat 1.txt
 cat 2.txt
+=======
+cat 1.txt 
+cat 2.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git merge --help
 git merge --no-ff origin/{{MR_BRANCH1}}
 cat /etc/hosts
@@ -49634,16 +50015,28 @@ systemctl list-unit-files  --type=service | grep enabled
 yum list | grep ssh
 rpm -qa | grep ssh
 date
+<<<<<<< HEAD
 hostnamectl status
+=======
+hostnamectl status 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 yum repolist
 vim /etc/sysconfig/network-scripts/ifcfg-ens33
 free -h
 ping 172.16.195.210
+<<<<<<< HEAD
 helm -n kube-system  uninstall ingress-nginx
 helm install ingress-nginx -n kube-system ingress-nginx/
 vim
 
 vimdiff kube-prometheus-stack/values.yaml /tmp/values.yaml
+=======
+helm -n kube-system  uninstall ingress-nginx 
+helm install ingress-nginx -n kube-system ingress-nginx/
+vim
+
+vimdiff kube-prometheus-stack/values.yaml /tmp/values.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 vim
 top
 free -h
@@ -49653,6 +50046,7 @@ kubectl -n default logs -l app=nginx-1 -f
 kubectl -n default logs -f -l app=nginx-1
 kubectl -n default logs -f -l app=nginx-1 -c nginx-1
 kubectl -n default logs -l app=nginx-1 -c nginx-1
+<<<<<<< HEAD
 kubectl
 kubectl logs -l app=nginx-1 -c nginx-1
 kubectl logs -l app=nginx-1
@@ -49666,11 +50060,30 @@ rm -rf kube-prometheus-stack/
 mv /tmp/kube-prometheus-stack/ ./
 ls
 kubectl apply -f testpvc.yaml
+=======
+kubectl 
+kubectl logs -l app=nginx-1 -c nginx-1
+kubectl logs -l app=nginx-1 
+kubectl logs -f -l app=nginx-1 
+kubectl logs -f -l app.kubernetes.io/name=ingress-nginx
+helm -n kube-system  uninstall kube-prometheus-stack 
+ls /nfs
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+helm -n kube-system  uninstall kube-prometheus-stack 
+rm -rf kube-prometheus-stack/
+mv /tmp/kube-prometheus-stack/ ./
+ls
+kubectl apply -f testpvc.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls /nfs
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
 helm ls
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+<<<<<<< HEAD
 helm -n kube-system  uninstall kube-prometheus-stack
+=======
+helm -n kube-system  uninstall kube-prometheus-stack 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
 cd /tmp
 ls
@@ -49696,22 +50109,39 @@ kubectl get configmap --all-namespaces | grep -i prome
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
 cd /tmp
 wget https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagerconfigs.yaml
+<<<<<<< HEAD
 kubectl apply -f monitoring.coreos.com_alertmanagerconfigs.yaml
 wget https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/example/prometheus-operator-crd/monitoring.coreos.com_prometheuses.yaml
 kubectl apply -f monitoring.coreos.com_prometheuses.yaml
 cd
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
 helm -n kube-system  uninstall kube-prometheus-stack
+=======
+kubectl apply -f monitoring.coreos.com_alertmanagerconfigs.yaml 
+wget https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/master/example/prometheus-operator-crd/monitoring.coreos.com_prometheuses.yaml
+kubectl apply -f monitoring.coreos.com_prometheuses.yaml 
+cd
+helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
+helm -n kube-system  uninstall kube-prometheus-stack 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl apply -f  https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.45.0/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagers.yaml
 kubectl delete crd alertmanagers.monitoring.coreos.com
 kubectl apply -f  https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.45.0/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagers.yaml
 helm install kube-prometheus-stack  -n kube-system kube-prometheus-stack/
 echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1ESXlOREEzTlRnek1Wb1hEVE14TURJeU1qQTNOVGd6TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTWR3CmhwWFF5dWtWTG9KUWVsTFlDcGtPcVI3MS85SStEaXMyNnhlOUFoOU14UVE0VHpVb0ZkUmVrWi9iZkdvWElUMnQKNTQ1Slg1WjVPallBUFQvbUs4ZXQ0SEpZZjlvWnplWHRnekZIdGtvMUtyOThjMnlSNGdWUFVrSWZWd0RLdjZjWgpGc2NQbS8yK3VpejgxTnFPTVZ5QytYOU83ZnVvYWh0RU92cmFyanZFaDlGYnl2cjNaZXhRNXhPKzFoVithNy95CllnTnRHb2diVy91bkx5SWFkbmw4UThrcjgwMkZON0d3a3RJQkNGT2pWMFRXcm9zTS9taUdZLzF5Uk1sbndKWUQKamxDOFMvWDZQcmx1N3BvQ05kc25LZzNpYUpqaGFMRTI0YXR6akxjbmRobCt2dVdnSTcwZXlrd3ZsUjRNUXdQUwpxRmFuYXBsb2Q4c01WOWFieW9FQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZOYlhjdWFZdGJ4ZFNDL29YaHNSbUp5d3pqdzNNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFCOCtTa2hycWU5OG9ycWFqVGdCN0VFVmhqOWtISWd6Z0NyVlhiWkdCbzg1MkpRNHBKbwozZnNXZ0xmQVFjQ2xSeThpQy9FTXlySlJ1VFpJc1JaK21saFM2cm5XbmRMSFJVUGhaOU9weUg2YUlYYjcwQUpVCk8zakVGaUFvb1c0UzNJZzZnbWx6SUh0bzNRSkU2N0xITUpSZ1YrVmRBWUJMSnZ2Skk0aHB1bWtxNG1tN0N0ZnoKbG9JRmZJUmhlR3hINzQxOUV6ejk3K0xnRnhVL3hXOXY0amhZNEdkOHhPZWlyc1NQeTkxSkxRaVBhS1Q5RjRxeQpkQ09QTjMvNkh6WFBRdDEvT056WUh5dDB2eXZPWm4zT0dtMDdhZ3VNUFovVkhIclp5OW00TGU3K1pGREZJRmp6CmtjSFdzRkI2Z1ZUYjByRlJJZ3dVdjlId204eXc5N25xRTY1VQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== | base64 -d
+<<<<<<< HEAD
 grep certificate-authority-data .kube/config
 echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1ESXlOREEzTlRnek1Wb1hEVE14TURJeU1qQTNOVGd6TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTWR3CmhwWFF5dWtWTG9KUWVsTFlDcGtPcVI3MS85SStEaXMyNnhlOUFoOU14UVE0VHpVb0ZkUmVrWi9iZkdvWElUMnQKNTQ1Slg1WjVPallBUFQvbUs4ZXQ0SEpZZjlvWnplWHRnekZIdGtvMUtyOThjMnlSNGdWUFVrSWZWd0RLdjZjWgpGc2NQbS8yK3VpejgxTnFPTVZ5QytYOU83ZnVvYWh0RU92cmFyanZFaDlGYnl2cjNaZXhRNXhPKzFoVithNy95CllnTnRHb2diVy91bkx5SWFkbmw4UThrcjgwMkZON0d3a3RJQkNGT2pWMFRXcm9zTS9taUdZLzF5Uk1sbndKWUQKamxDOFMvWDZQcmx1N3BvQ05kc25LZzNpYUpqaGFMRTI0YXR6akxjbmRobCt2dVdnSTcwZXlrd3ZsUjRNUXdQUwpxRmFuYXBsb2Q4c01WOWFieW9FQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZOYlhjdWFZdGJ4ZFNDL29YaHNSbUp5d3pqdzNNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFCOCtTa2hycWU5OG9ycWFqVGdCN0VFVmhqOWtISWd6Z0NyVlhiWkdCbzg1MkpRNHBKbwozZnNXZ0xmQVFjQ2xSeThpQy9FTXlySlJ1VFpJc1JaK21saFM2cm5XbmRMSFJVUGhaOU9weUg2YUlYYjcwQUpVCk8zakVGaUFvb1c0UzNJZzZnbWx6SUh0bzNRSkU2N0xITUpSZ1YrVmRBWUJMSnZ2Skk0aHB1bWtxNG1tN0N0ZnoKbG9JRmZJUmhlR3hINzQxOUV6ejk3K0xnRnhVL3hXOXY0amhZNEdkOHhPZWlyc1NQeTkxSkxRaVBhS1Q5RjRxeQpkQ09QTjMvNkh6WFBRdDEvT056WUh5dDB2eXZPWm4zT0dtMDdhZ3VNUFovVkhIclp5OW00TGU3K1pGREZJRmp6CmtjSFdzRkI2Z1ZUYjByRlJJZ3dVdjlId204eXc5N25xRTY1VQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== | base64 -d
 grep client-certificate-data .kube/config
 echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFekNDQWZ1Z0F3SUJBZ0lJSmh2M016RXQ3b0V3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TVRBeU1qUXdOelU0TXpGYUZ3MHlNakF5TWpRd056VTRNekphTURReApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1Sa3dGd1lEVlFRREV4QnJkV0psY201bGRHVnpMV0ZrCmJXbHVNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXdWcjlPVVVvSGMyQjhrTDEKTDFJaEhZZmVBb3lycnhvZ0RkL3hSRE1zaFQybDJHcTcwb1ZCdTZHeWVQcVdLcVM5SGQxdVhJUmVwMVNXVi9LVQpHNUVHRTl5NmxqdTB1S0thanFzVmtrQmZXVXhhOFdHZ3pGODJhNUJzZTRhRGMrT2pIRXhRY1l4UUVrKzBqaWV4ClcwditMcXRrenlrczcxUHpWVWE0UkxMNG4rNXlrR1JOd1pZMksweGdsZE5zODZrOEVZOXZ2b0xPRG5tRFJ5QzYKc2dDeEwzaFNmZFAwTUR4NFI3UXpIbW43Y1lWRGs1RDZ3V21EVTVjeVhqOSsyZ0o3dVYwbEZ2dWVMMUQzckptRwpyNGIxTVNLcmV4azZHaFVrSzZZN1NVMTU5bTdwT2F4NmloL3JzWjNEblhndlR1a2RhNG9NN1h4c3pNakd3OEJBCjJmQ0I5d0lEQVFBQm8wZ3dSakFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdJd0h3WURWUjBqQkJnd0ZvQVUxdGR5NXBpMXZGMUlMK2hlR3hHWW5MRE9QRGN3RFFZSktvWklodmNOQVFFTApCUUFEZ2dFQkFHMS90NWRSRjM1dHdyWW5mODVValgxNHphSjdmRjdGUUlid0EzRHZ2TUFqTjQ4ajBuWW12c3NmCnBHTHRWM2V1b1pCcWRDaERwZklaMEtXMnBGMk9FakNhMGZCUFkxWDRoaDBKbUQ4YVk3dFlicTF2cnFxZGlkVGgKMjIxWFV6RkFrVVVlNUphWDVEekZibjJpZm9PUXlSQytzL1lyTFVjeDBCWHdyUXNJdy93V2F5cW9XVnJpOXl5cgpVQm1WcnFsUWE3NGtpZlB5R3ROL0VHTURlb3pCOHVjbWM3WFRFY3YxQm5STmdOMGFHVVdqL0h5d2x6Ti9xZXF1CmJ6aGZoTmVOT3lLSnJGV0FhMDNLeWZoRFBKNVR3K0JPTERXNXQxRk5kV0hRSmZtS29vMEJ4YnhLcUwrdHVIR0oKT1ZoWGxacVVZOEtQMlR2Y2Jhckl4WVJ6S2h2cnN2VT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= | base64 -d
 grep client-key-data .kube/config
+=======
+grep certificate-authority-data .kube/config 
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1ESXlOREEzTlRnek1Wb1hEVE14TURJeU1qQTNOVGd6TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTWR3CmhwWFF5dWtWTG9KUWVsTFlDcGtPcVI3MS85SStEaXMyNnhlOUFoOU14UVE0VHpVb0ZkUmVrWi9iZkdvWElUMnQKNTQ1Slg1WjVPallBUFQvbUs4ZXQ0SEpZZjlvWnplWHRnekZIdGtvMUtyOThjMnlSNGdWUFVrSWZWd0RLdjZjWgpGc2NQbS8yK3VpejgxTnFPTVZ5QytYOU83ZnVvYWh0RU92cmFyanZFaDlGYnl2cjNaZXhRNXhPKzFoVithNy95CllnTnRHb2diVy91bkx5SWFkbmw4UThrcjgwMkZON0d3a3RJQkNGT2pWMFRXcm9zTS9taUdZLzF5Uk1sbndKWUQKamxDOFMvWDZQcmx1N3BvQ05kc25LZzNpYUpqaGFMRTI0YXR6akxjbmRobCt2dVdnSTcwZXlrd3ZsUjRNUXdQUwpxRmFuYXBsb2Q4c01WOWFieW9FQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZOYlhjdWFZdGJ4ZFNDL29YaHNSbUp5d3pqdzNNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFCOCtTa2hycWU5OG9ycWFqVGdCN0VFVmhqOWtISWd6Z0NyVlhiWkdCbzg1MkpRNHBKbwozZnNXZ0xmQVFjQ2xSeThpQy9FTXlySlJ1VFpJc1JaK21saFM2cm5XbmRMSFJVUGhaOU9weUg2YUlYYjcwQUpVCk8zakVGaUFvb1c0UzNJZzZnbWx6SUh0bzNRSkU2N0xITUpSZ1YrVmRBWUJMSnZ2Skk0aHB1bWtxNG1tN0N0ZnoKbG9JRmZJUmhlR3hINzQxOUV6ejk3K0xnRnhVL3hXOXY0amhZNEdkOHhPZWlyc1NQeTkxSkxRaVBhS1Q5RjRxeQpkQ09QTjMvNkh6WFBRdDEvT056WUh5dDB2eXZPWm4zT0dtMDdhZ3VNUFovVkhIclp5OW00TGU3K1pGREZJRmp6CmtjSFdzRkI2Z1ZUYjByRlJJZ3dVdjlId204eXc5N25xRTY1VQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== | base64 -d
+grep client-certificate-data .kube/config 
+echo LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFekNDQWZ1Z0F3SUJBZ0lJSmh2M016RXQ3b0V3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TVRBeU1qUXdOelU0TXpGYUZ3MHlNakF5TWpRd056VTRNekphTURReApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1Sa3dGd1lEVlFRREV4QnJkV0psY201bGRHVnpMV0ZrCmJXbHVNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXdWcjlPVVVvSGMyQjhrTDEKTDFJaEhZZmVBb3lycnhvZ0RkL3hSRE1zaFQybDJHcTcwb1ZCdTZHeWVQcVdLcVM5SGQxdVhJUmVwMVNXVi9LVQpHNUVHRTl5NmxqdTB1S0thanFzVmtrQmZXVXhhOFdHZ3pGODJhNUJzZTRhRGMrT2pIRXhRY1l4UUVrKzBqaWV4ClcwditMcXRrenlrczcxUHpWVWE0UkxMNG4rNXlrR1JOd1pZMksweGdsZE5zODZrOEVZOXZ2b0xPRG5tRFJ5QzYKc2dDeEwzaFNmZFAwTUR4NFI3UXpIbW43Y1lWRGs1RDZ3V21EVTVjeVhqOSsyZ0o3dVYwbEZ2dWVMMUQzckptRwpyNGIxTVNLcmV4azZHaFVrSzZZN1NVMTU5bTdwT2F4NmloL3JzWjNEblhndlR1a2RhNG9NN1h4c3pNakd3OEJBCjJmQ0I5d0lEQVFBQm8wZ3dSakFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdJd0h3WURWUjBqQkJnd0ZvQVUxdGR5NXBpMXZGMUlMK2hlR3hHWW5MRE9QRGN3RFFZSktvWklodmNOQVFFTApCUUFEZ2dFQkFHMS90NWRSRjM1dHdyWW5mODVValgxNHphSjdmRjdGUUlid0EzRHZ2TUFqTjQ4ajBuWW12c3NmCnBHTHRWM2V1b1pCcWRDaERwZklaMEtXMnBGMk9FakNhMGZCUFkxWDRoaDBKbUQ4YVk3dFlicTF2cnFxZGlkVGgKMjIxWFV6RkFrVVVlNUphWDVEekZibjJpZm9PUXlSQytzL1lyTFVjeDBCWHdyUXNJdy93V2F5cW9XVnJpOXl5cgpVQm1WcnFsUWE3NGtpZlB5R3ROL0VHTURlb3pCOHVjbWM3WFRFY3YxQm5STmdOMGFHVVdqL0h5d2x6Ti9xZXF1CmJ6aGZoTmVOT3lLSnJGV0FhMDNLeWZoRFBKNVR3K0JPTERXNXQxRk5kV0hRSmZtS29vMEJ4YnhLcUwrdHVIR0oKT1ZoWGxacVVZOEtQMlR2Y2Jhckl4WVJ6S2h2cnN2VT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= | base64 -d
+grep client-key-data .kube/config 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 echo LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBd1ZyOU9VVW9IYzJCOGtMMUwxSWhIWWZlQW95cnJ4b2dEZC94UkRNc2hUMmwyR3E3CjBvVkJ1Nkd5ZVBxV0txUzlIZDF1WElSZXAxU1dWL0tVRzVFR0U5eTZsanUwdUtLYWpxc1Zra0JmV1V4YThXR2cKekY4MmE1QnNlNGFEYytPakhFeFFjWXhRRWsrMGppZXhXMHYrTHF0a3p5a3M3MVB6VlVhNFJMTDRuKzV5a0dSTgp3WlkySzB4Z2xkTnM4Nms4RVk5dnZvTE9Ebm1EUnlDNnNnQ3hMM2hTZmRQME1EeDRSN1F6SG1uN2NZVkRrNUQ2CndXbURVNWN5WGo5KzJnSjd1VjBsRnZ1ZUwxRDNySm1HcjRiMU1TS3JleGs2R2hVa0s2WTdTVTE1OW03cE9heDYKaWgvcnNaM0RuWGd2VHVrZGE0b003WHhzek1qR3c4QkEyZkNCOXdJREFRQUJBb0lCQUJaVE9pKzFvM2NsZGw2UgppcHZISU5tM0NWUkVCOEsxQW9SM21mVGs3N3dHclRKNnlHcjdSZWF6T2Rjc0g5Q1dxdHRhNk5ZMzFuSDltMHBXClVQR0o0aWpDOEt4T0FvVGJDWHQxbDQwR2I3dnd6QU5ZNFdjWGkwSUtMK3huVUtBOTVXUnNEMUc5QUxYTWpDMXAKdWRtdndZNkQ3YVRadlQxNDlQeWdxTUFONWhVWkVLL09XdjM1ZG1zdTkzWWVtczRkTHNmU1dOSFo0M3ArQURFSAo3YVpVRnR3L00vYXgvWXBQSHpvZXIvYllZbHhkM2U2STRUSDNyZGpPam44M0FRMmlITzBuM3dxMytVSGxsU01wCnVUUWFheHMrY0ZtbmE4bXJWb2owY3hRNDZLSFRJckhWZjhnaW4wejVLdFE0Wm1HUWVMcmZSU3dKb2RWbHpXY0gKYThuaDg0a0NnWUVBMmVJd1gvV1hvODVGd1NtVGxqNldHK2ozR1dITWtUNnUxZUNVc29MT3NoaVdUOWg3aWpSUwp0RFloQTdXajZrQlpZdVFud1pBcFQ5R3Z4QmpsQ2dUcFl1Rk9qcmdOckt0a044VXNhUkdLeENSVmFOR2MyeFJBCi9WWUxWeXM1NllrL3JuZmtRd0xlc2VKSlRiQmZ3QlF5K0JmMjBtYkRBdnRLaUF5bW9oTUdtLzBDZ1lFQTR5NVIKNEZJbk9USlJac2xpV1ZhNFhENFMwVzdhN3VMQk55QTk3VDhBMVYwLzJjZ0dHRTQ4VkZtaldvYWlnUEhVOUprZgphYjdGUStZcWNKenMxYUt2SG53VHVSaHN4dTBsSEhEUnJ1VE9jZUhBQzlHVlc0QlRzQ1ViMGY2L3phTFFqWER6CitUbExVNXBWcHNQaHBENXdHdjhRbzVoa0J5cHlpOUp4QzhWRHhnTUNnWUI0REMwVklnN2IzUklIM0sySmtaQkoKYm5GL0ZhaU51bGpBVk0zNUVTTnJjeXFXY2JPWHNUNkVObks0UllNNzFScXE1d1NVbktaMmFSVUwyWitRaHFaRQpxZGtMdjVNaE9RbXR4TUMwWDByeXlRWWFDNnY5OVVuZGkyUVNNaW5sWjQ2anhVRUtQdkdPVnh5R1pwQkxGNVlCCnBjcURvTVQveG84SktOZEM0M0szelFLQmdEMVYzaWt3UlFLK1FSZjlPeDVmdVhxK0Q1cVgwV2c1dEd6THVheDYKSENGL0FhUXN5dWg1QnZUSEZzRjBKQitvS3hTMjJySlVIVEpOekJ1SFlySHpNRkNNczA1Lzk2NWxqR1YzV0VWZAo1UmIrR2ptV3BqcUVGUlF6a0tWTG9FRkd1Z1BXQVNqQ2ZVSGZJMHpaQ2V5c0p0eEREUnorSWRPRmRGT254M21rCkVyNDlBb0dCQUpIWjZBR1U3NDdwVVYwb1BhTExiVGdOQVl0WFhxNXVGZWhQc0VWNXpyRkNCOXR0clV0d0FvQUoKb3lFTVByUytZa1I4YkxKNm9GbjBscHhkckZGTlJqVWFEUGJnVzlzcEw2Y1hCcXFZSDJta2I3aVh6dEdRMDlBdQpoTE9PUUdxb3kzZnN4OHgyYXFkQ29peTMwRjc5NzdFVU1aa1VmSUhzTzJUZE5yL3JwVUZMCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg== | base64 -d
 kubectl get service
 ping 10.96.0.10
@@ -49727,13 +50157,22 @@ git add --all ./ && git commit -m '0302' && git push
 git status
 kubectl delete secret alertmanager-prometheus-operator-alertmanager
 kubectl create secret generic alertmanager-prometheus-operator-alertmanager --from-file=dir1/alertmanager.yaml
+<<<<<<< HEAD
 kubectl delete secret alertmanager-prometheus-operator-alertmanager
 kubectl delete secret alertmanager-kube-prometheus-stack-alertmanager
+=======
+kubectl delete secret alertmanager-prometheus-operator-alertmanager 
+kubectl delete secret alertmanager-kube-prometheus-stack-alertmanager 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl create secret generic alertmanager-kube-prometheus-stack-alertmanager  --from-file=dir1/alertmanager.yaml
 netstat -tnlp | grep etcd
 cd /tmp
 helm  install test /root/kube-prometheus-stack/  --dry-run --debug > tmp.txt
+<<<<<<< HEAD
 vim tmp.txt
+=======
+vim tmp.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 curl kube-prometheus-stack-coredns:9153/metrics
 curl http://192.168.226.98:9153/metrics
 df -h
@@ -49749,15 +50188,26 @@ curl 192.168.72.52:8080/metrics
 curl 192.168.72.52:8080/metrics | grep type
 curl 192.168.72.52:8080/metrics | grep node_filesystem_readonly
 curl 192.168.72.52:8080/metrics > tmp.txt
+<<<<<<< HEAD
 cat tmp.txt
 vim tmp.txt
+=======
+cat tmp.txt 
+vim tmp.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl get role
 kubecctl get node
 kubectl get node
 cd
+<<<<<<< HEAD
 kubectl delete -f testpod.yaml
 kubectl -n default apply -f testpod
 kubectl -n default apply -f testpod.yaml
+=======
+kubectl delete -f testpod.yaml 
+kubectl -n default apply -f testpod
+kubectl -n default apply -f testpod.yaml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl -n default get node
 kubectl -n default get pod
 top
@@ -49765,7 +50215,11 @@ iostat
 yum list | grep iostat
 yum provides iostat
 yum clean all
+<<<<<<< HEAD
 yum makecache
+=======
+yum makecache 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 yum repolist
 yum provides iostat
 yum provides tree
@@ -49789,21 +50243,35 @@ kubectl get pod -o wide
 kubectl get ingress
 kubectl get ingress -owide
 kubectl  get service -A apo-config-th-server-dev
+<<<<<<< HEAD
 kubectl  get pod
 kubectl  get pod -A
 kubectl  get service -A
 kubectl  get service
 kubectl get service --all-namespaces
+=======
+kubectl  get pod 
+kubectl  get pod -A
+kubectl  get service -A
+kubectl  get service 
+kubectl get service --all-namespaces 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl get service --all-namespaces  nginx-1
 kubectl get pod
 kubectl get service
 helm  install test /root/jenkins  --dry-run --debug > tmp.txt
+<<<<<<< HEAD
 vim tmp.txt
 ls
+=======
+vim tmp.txt 
+ls 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 helm repo add grafana https://grafana.github.io/helm-charts
 helm search repo grafana
 helm pull --untar grafana/grafana -d /tmp
 helm install grafanatest -n kube-system grafana/
+<<<<<<< HEAD
 helm -n kube-system  uninstall grafanatest
 helm install grafanatest -n kube-system grafana/
 netstat -tnlp | grep 30000
@@ -49817,6 +50285,21 @@ kubectl apply -f testpod3.yaml
 kubectl apply -f /tmp/testpath.yml
 kubectl delete -f /tmp/testpath.yml
 kubectl apply -f /tmp/testpath.yml
+=======
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+netstat -tnlp | grep 30000
+kubectl describe service grafanatest 
+kubectl get ingress grafanatest -o yaml 
+kubectl get ingress grafanatest -o yaml > grafanatest.yml
+cd
+kubectl -n default delete -f testpod.yaml 
+kubectl apply -f testpod2.yaml 
+kubectl apply -f testpod3.yaml 
+kubectl apply -f /tmp/testpath.yml 
+kubectl delete -f /tmp/testpath.yml 
+kubectl apply -f /tmp/testpath.yml 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 kubectl get service
 curl 10.104.82.21
 curl 10.104.82.21/testdir
@@ -49824,6 +50307,7 @@ curl 10.104.82.21/testdir/index.html
 curl 10.104.82.21/testdir/
 curl 10.104.82.21/testdir
 curl 10.104.82.21/testdir/
+<<<<<<< HEAD
 kubectl apply -f /tmp/testpath.yml
 curl 10.104.82.21/testdir/
 curl 10.104.82.21/testdir
@@ -49847,6 +50331,31 @@ helm install grafanatest -n kube-system grafana/
 helm -n kube-system  uninstall grafanatest
 helm install grafanatest -n kube-system grafana/
 helm -n kube-system  uninstall grafanatest
+=======
+kubectl apply -f /tmp/testpath.yml 
+curl 10.104.82.21/testdir/
+curl 10.104.82.21/testdir
+kubectl apply -f /tmp/grafanatest.yml 
+cd /tmp
+cat tmp.txt 
+grep -E '.{3}/' tmp.txt
+grep -E '[^/]{3}/' tmp.txt
+kubectl apply -f /tmp/grafanatest.yml 
+helm ls
+kubectl apply -f /tmp/grafanatest.yml 
+cat /tmp/tmp.txt 
+grep '.?/' tmp.txt
+grep -E '.?/' tmp.txt
+grep -E '^.?/' tmp.txt
+kubectl apply -f /tmp/grafanatest.yml 
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+helm -n kube-system  uninstall grafanatest 
+helm install grafanatest -n kube-system grafana/
+helm -n kube-system  uninstall grafanatest 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 helm install grafanatest -n kube-system grafana/
 cd grafana/
 ls
@@ -49859,16 +50368,27 @@ kubectl get ingress -A
 kubectl get all -A
 watch kuectl get pod
 watch kubectl get pod
+<<<<<<< HEAD
 vim other/note.txt
+=======
+vim other/note.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 vim .vimrc
 cp -a .vim/plugged/vim-colors-solarized/colors/solarized.vim /usr/share/vim/vim80/colors/
 ls /usr/share/vim/vim80/colors/
 vim .vimrc
+<<<<<<< HEAD
 vim other/springboot.sh
 vim other/note.txt
 ls
 vim other/note.txt
+=======
+vim other/springboot.sh 
+vim other/note.txt 
+ls
+vim other/note.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 calicoctl.cfg  elasticsearch  kube-prometheus-stack            other               testenv.yaml       testnetworkpolicy.yaml   testprometheusredis.yaml  tmp1.yaml
 cephfs         gitlab-ce      me
 ls
@@ -49903,7 +50423,11 @@ ls
 git remote add garena https://git.garena.com/kui.tan/mydemo3.git
 git push -u garena master
 cd
+<<<<<<< HEAD
 cat .ssh/authorized_keys
+=======
+cat .ssh/authorized_keys 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd /tmp/mydemo3/
 ls
 rm -f 1.txt
@@ -49913,11 +50437,19 @@ git push -u garena master
 ls
 git add --all ./ && git commit -m '0310' && git push
 git remote show origin
+<<<<<<< HEAD
 git remote show garena
 ls
 rm -rf .git
 git status
 git init
+=======
+git remote show garena 
+ls
+rm -rf .git
+git status
+git init 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 cd ../
 mv mydemo3/ demo1
 ls
@@ -49930,8 +50462,13 @@ git push -u origin master
 git status
 git add --all ./ && git commit -m '0310'
 git push -u origin master
+<<<<<<< HEAD
 vim Jenkinsfile
 vim .vimrc
+=======
+vim Jenkinsfile 
+vim .vimrc 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 kubectl get node
 helm ls
@@ -49942,7 +50479,11 @@ yum repolist
 git status
 git version
 locale
+<<<<<<< HEAD
 vim other/note.txt
+=======
+vim other/note.txt 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 helm search nfs-client-provisioner
 helm search repo nfs-client-provisioner
 helm list
@@ -49966,11 +50507,19 @@ rpm --help | grep 'R'
 rpm -qf
 rpm -qf nginx
 yum deplist nginx
+<<<<<<< HEAD
 vim .bash_history
 cp -a .bash_history{,.20210312bak}
 vim .bash_history
 git status
 hostnamectl status
+=======
+vim .bash_history 
+cp -a .bash_history{,.20210312bak}
+vim .bash_history
+git status
+hostnamectl status 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 git status
 git version
 git status
@@ -49988,7 +50537,11 @@ git status
 ls
 vim .vimrc
 ls
+<<<<<<< HEAD
 vim .vimrc
+=======
+vim .vimrc 
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
 ls
 ls
 vim .vimrc
@@ -49996,6 +50549,7 @@ vim .vimrc
 echo test 01
 cat .bash_history
 echo test 02
+<<<<<<< HEAD
 ifconfig
 systemctl status dockerd
 systemctl status docker
@@ -51079,3 +51633,138 @@ cd /etc/ansible/
 ls
 cd
 vim
+=======
+>>>>>>> 9a3beb83cf65256efb9604062620c45bc1ea4faf
+git status
+ls
+cd /tmp/root/
+ls
+git status
+ls
+pwd
+git status
+ls
+git status
+ls
+pwd
+ls -a
+ls
+mv .git ~/
+ls
+ls -a
+cd ~
+ls
+git status
+ls -a
+ls -a | grep git
+cd .git/
+ls
+cd ../
+ls
+git status
+ls .git
+cd
+git status
+cd .git
+ls
+cd objects/
+ls
+cd 
+git status
+ls
+git init
+git status
+git add --all ./ && git commit -m '20220314'
+git config --global user.name "hnzhuzi"
+git config --global user.email "hnzhuzi@gmail.com"
+git status
+git remote add origin https://github.com/hnzhuzi/root.git
+git push 
+cat .ssh/authorized_keys 
+git push 
+cd /tmp
+ls
+git clone 
+git clone https://github.com/hnzhuzi/mydemo4.git
+ls
+cd mydemo4/
+ls
+ls -a
+echo hello 1 > 1.txt
+ls
+git add --all ./ && git commit -m '*'
+git push 
+git push
+ls
+echo hello 2 > 2.txt
+git add --all ./ && git commit -m '*'
+git push
+git status
+git branch -M main
+git push -u origin main
+git remote show
+git remote show origin
+git branch
+cd
+vim other/note.txt 
+ls
+git status
+git branch -M main
+git push
+git add --all ./ && git commit -m '20220314'
+git branch -M main
+git remote show origin
+git status
+git push -u origin main
+ls
+rm -rf jdy-production*
+ls
+git add --all ./ && git commit -m '20220314'
+git push
+git push -u origin main
+ls
+git status
+git remote show
+git remote show origin 
+git push
+git push -u origin master
+git branch
+git branch --help
+git branch
+git branch -M master
+git branch
+git push -u origin master
+ls
+du -sh ./
+cp -a /root{,.bak}
+du -sh /root.bak/
+cd /root.bak/
+ls
+cd
+cd ~
+ls
+git pull
+vim other/test_sh.sh 
+vim other/note.txt 
+git status
+git add --all ./ && git commit -m '20220314'
+git push
+git status
+git branch
+git push -u origin master
+git pull
+git push
+git status
+git push
+git pull
+git pull origin master
+vim other/note.txt 
+git push -f origin master
+ls
+vim other/note.txt 
+vim testpod.yaml 
+cp -a /root.bak/* ./
+vim /root.bak/testpod.yaml 
+vimdiff /root.bak/testpod.yaml /root/testpod.yaml 
+cp -af /root.bak ./
+git status

@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/\vasuser
+~MSle0~/\vreplica
 
 # Last Substitute Search Pattern:
 ~MSle0&\vkubeadm.k8s.io\/v1alpha3
@@ -162,6 +162,8 @@ $
 |2,0,1638845770,,"sp"
 
 # Search String History (newest to oldest):
+?/\vreplica
+|2,1,1647238785,47,"\\vreplica"
 ? \s\+$
 |2,1,1646992289,,"\\s\\+$"
 ?/\vasuser
@@ -352,237 +354,259 @@ $
 |3,0,36,0,1,0,1645424147,"]"
 
 # File marks:
-'0  23  0  ~/other/note.txt
-|4,48,23,0,1647232647,"~/other/note.txt"
-'1  58  0  ~/other/test_sh.sh
-|4,49,58,0,1647232637,"~/other/test_sh.sh"
-'2  46  0  ~/other/test_sh.sh
-|4,50,46,0,1647232632,"~/other/test_sh.sh"
-'3  46  0  ~/other/test_sh.sh
-|4,51,46,0,1647232632,"~/other/test_sh.sh"
-'4  47  0  ~/other/note.txt
-|4,52,47,0,1647231610,"~/other/note.txt"
-'5  47  0  ~/other/note.txt
-|4,53,47,0,1647231610,"~/other/note.txt"
-'6  46  0  ~/other/test_sh.sh
-|4,54,46,0,1647222711,"~/other/test_sh.sh"
-'7  46  0  ~/other/test_sh.sh
-|4,55,46,0,1647222711,"~/other/test_sh.sh"
-'8  2  0  ~/testpod.yaml
-|4,56,2,0,1646733625,"~/testpod.yaml"
-'9  2  0  ~/testpod.yaml
-|4,57,2,0,1646733625,"~/testpod.yaml"
+'0  1  0  ~/testpod.yaml
+|4,48,1,0,1647238809,"~/testpod.yaml"
+'1  8  2  /root.bak/testpod.yaml
+|4,49,8,2,1647238786,"/root.bak/testpod.yaml"
+'2  200  8  ~/testpod.yaml
+|4,50,200,8,1647238746,"~/testpod.yaml"
+'3  200  8  ~/testpod.yaml
+|4,51,200,8,1647238746,"~/testpod.yaml"
+'4  1  0  ~/other/note.txt
+|4,52,1,0,1647238724,"~/other/note.txt"
+'5  200  8  ~/testpod.yaml
+|4,53,200,8,1647238634,"~/testpod.yaml"
+'6  200  8  ~/testpod.yaml
+|4,54,200,8,1647238634,"~/testpod.yaml"
+'7  246  4  /root.bak/testpod.yaml
+|4,55,246,4,1647238597,"/root.bak/testpod.yaml"
+'8  246  4  /root.bak/testpod.yaml
+|4,56,246,4,1647238597,"/root.bak/testpod.yaml"
+'9  246  4  /root.bak/testpod.yaml
+|4,57,246,4,1647238597,"/root.bak/testpod.yaml"
 
 # Jumplist (newest first):
--'  23  0  ~/other/note.txt
-|4,39,23,0,1647232647,"~/other/note.txt"
--'  47  0  ~/other/note.txt
-|4,39,47,0,1647232642,"~/other/note.txt"
--'  58  0  ~/other/test_sh.sh
-|4,39,58,0,1647232637,"~/other/test_sh.sh"
--'  58  0  ~/other/test_sh.sh
-|4,39,58,0,1647232637,"~/other/test_sh.sh"
--'  46  0  ~/other/test_sh.sh
-|4,39,46,0,1647232636,"~/other/test_sh.sh"
--'  46  0  ~/other/test_sh.sh
-|4,39,46,0,1647232636,"~/other/test_sh.sh"
--'  46  0  ~/other/test_sh.sh
-|4,39,46,0,1647232632,"~/other/test_sh.sh"
--'  46  0  ~/other/test_sh.sh
-|4,39,46,0,1647232632,"~/other/test_sh.sh"
--'  47  0  ~/other/note.txt
-|4,39,47,0,1647231610,"~/other/note.txt"
--'  47  0  ~/other/note.txt
-|4,39,47,0,1647231610,"~/other/note.txt"
--'  47  0  ~/other/note.txt
-|4,39,47,0,1647231610,"~/other/note.txt"
--'  47  0  ~/other/note.txt
-|4,39,47,0,1647231610,"~/other/note.txt"
--'  34  0  ~/other/note.txt
-|4,39,34,0,1647231587,"~/other/note.txt"
--'  34  0  ~/other/note.txt
-|4,39,34,0,1647231587,"~/other/note.txt"
--'  34  0  ~/other/note.txt
-|4,39,34,0,1647231587,"~/other/note.txt"
--'  34  0  ~/other/note.txt
-|4,39,34,0,1647231587,"~/other/note.txt"
--'  34  0  ~/other/note.txt
-|4,39,34,0,1647231587,"~/other/note.txt"
--'  46  0  ~/other/test_sh.sh
-|4,39,46,0,1647222711,"~/other/test_sh.sh"
--'  46  0  ~/other/test_sh.sh
-|4,39,46,0,1647222711,"~/other/test_sh.sh"
--'  46  0  ~/other/test_sh.sh
-|4,39,46,0,1647222711,"~/other/test_sh.sh"
--'  46  0  ~/other/test_sh.sh
-|4,39,46,0,1647222711,"~/other/test_sh.sh"
--'  47  117  ~/other/test_sh.sh
-|4,39,47,117,1646992273,"~/other/test_sh.sh"
--'  47  117  ~/other/test_sh.sh
-|4,39,47,117,1646992273,"~/other/test_sh.sh"
--'  47  117  ~/other/test_sh.sh
-|4,39,47,117,1646992273,"~/other/test_sh.sh"
--'  47  117  ~/other/test_sh.sh
-|4,39,47,117,1646992273,"~/other/test_sh.sh"
--'  47  117  ~/other/test_sh.sh
-|4,39,47,117,1646992273,"~/other/test_sh.sh"
--'  47  117  ~/other/test_sh.sh
-|4,39,47,117,1646992273,"~/other/test_sh.sh"
--'  47  117  ~/other/test_sh.sh
-|4,39,47,117,1646992273,"~/other/test_sh.sh"
--'  47  117  ~/other/test_sh.sh
-|4,39,47,117,1646992273,"~/other/test_sh.sh"
--'  1  0  ~/other/test_sh.sh
-|4,39,1,0,1646990869,"~/other/test_sh.sh"
--'  1  0  ~/other/test_sh.sh
-|4,39,1,0,1646990869,"~/other/test_sh.sh"
--'  1  0  ~/other/test_sh.sh
-|4,39,1,0,1646990869,"~/other/test_sh.sh"
--'  1  0  ~/other/test_sh.sh
-|4,39,1,0,1646990869,"~/other/test_sh.sh"
--'  1  0  ~/other/test_sh.sh
-|4,39,1,0,1646990869,"~/other/test_sh.sh"
--'  1  0  ~/other/test_sh.sh
-|4,39,1,0,1646990869,"~/other/test_sh.sh"
--'  1  0  ~/other/test_sh.sh
-|4,39,1,0,1646990869,"~/other/test_sh.sh"
--'  1  0  ~/other/test_sh.sh
-|4,39,1,0,1646990869,"~/other/test_sh.sh"
--'  32  0  ~/other/test_sh.sh
-|4,39,32,0,1646990868,"~/other/test_sh.sh"
--'  32  0  ~/other/test_sh.sh
-|4,39,32,0,1646990868,"~/other/test_sh.sh"
--'  32  0  ~/other/test_sh.sh
-|4,39,32,0,1646990868,"~/other/test_sh.sh"
--'  32  0  ~/other/test_sh.sh
-|4,39,32,0,1646990868,"~/other/test_sh.sh"
--'  32  0  ~/other/test_sh.sh
-|4,39,32,0,1646990868,"~/other/test_sh.sh"
--'  32  0  ~/other/test_sh.sh
-|4,39,32,0,1646990868,"~/other/test_sh.sh"
--'  32  0  ~/other/test_sh.sh
-|4,39,32,0,1646990868,"~/other/test_sh.sh"
--'  32  0  ~/other/test_sh.sh
-|4,39,32,0,1646990868,"~/other/test_sh.sh"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646979381,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
--'  2  0  ~/testpod.yaml
-|4,39,2,0,1646733625,"~/testpod.yaml"
 -'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
--'  1  0  ~/testpod.yaml
-|4,39,1,0,1646733275,"~/testpod.yaml"
+|4,39,1,0,1647238809,"~/testpod.yaml"
+-'  200  4  ~/testpod.yaml
+|4,39,200,4,1647238807,"~/testpod.yaml"
+-'  8  2  /root.bak/testpod.yaml
+|4,39,8,2,1647238786,"/root.bak/testpod.yaml"
+-'  8  2  /root.bak/testpod.yaml
+|4,39,8,2,1647238786,"/root.bak/testpod.yaml"
+-'  108  6  /root.bak/testpod.yaml
+|4,39,108,6,1647238785,"/root.bak/testpod.yaml"
+-'  108  6  /root.bak/testpod.yaml
+|4,39,108,6,1647238785,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238757,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238757,"/root.bak/testpod.yaml"
+-'  173  8  /root.bak/testpod.yaml
+|4,39,173,8,1647238756,"/root.bak/testpod.yaml"
+-'  173  8  /root.bak/testpod.yaml
+|4,39,173,8,1647238756,"/root.bak/testpod.yaml"
+-'  200  8  ~/testpod.yaml
+|4,39,200,8,1647238746,"~/testpod.yaml"
+-'  200  8  ~/testpod.yaml
+|4,39,200,8,1647238746,"~/testpod.yaml"
+-'  1  0  ~/other/note.txt
+|4,39,1,0,1647238724,"~/other/note.txt"
+-'  1  0  ~/other/note.txt
+|4,39,1,0,1647238724,"~/other/note.txt"
+-'  1  0  ~/other/note.txt
+|4,39,1,0,1647238724,"~/other/note.txt"
+-'  1  0  ~/other/note.txt
+|4,39,1,0,1647238724,"~/other/note.txt"
+-'  1  0  ~/other/note.txt
+|4,39,1,0,1647238724,"~/other/note.txt"
+-'  1  0  ~/other/note.txt
+|4,39,1,0,1647238724,"~/other/note.txt"
+-'  1  0  ~/other/note.txt
+|4,39,1,0,1647238724,"~/other/note.txt"
+-'  1  0  ~/other/note.txt
+|4,39,1,0,1647238724,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238719,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238719,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238719,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238719,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238719,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238719,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238719,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238719,"~/other/note.txt"
+-'  200  8  ~/testpod.yaml
+|4,39,200,8,1647238634,"~/testpod.yaml"
+-'  200  8  ~/testpod.yaml
+|4,39,200,8,1647238634,"~/testpod.yaml"
+-'  200  8  ~/testpod.yaml
+|4,39,200,8,1647238634,"~/testpod.yaml"
+-'  200  8  ~/testpod.yaml
+|4,39,200,8,1647238634,"~/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  246  4  /root.bak/testpod.yaml
+|4,39,246,4,1647238597,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  1  0  /root.bak/testpod.yaml
+|4,39,1,0,1647238588,"/root.bak/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  33  8  ~/testpod.yaml
+|4,39,33,8,1647238459,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  2  0  ~/testpod.yaml
+|4,39,2,0,1647238454,"~/testpod.yaml"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238442,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238442,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238442,"~/other/note.txt"
+-'  67  0  ~/other/note.txt
+|4,39,67,0,1647238442,"~/other/note.txt"
 
 # Buffer list:
-%~/other/note.txt	23	0
+%~/testpod.yaml	1	0
 
 # History of marks within files (newest to oldest):
 
+> ~/testpod.yaml
+	*	1647238808	0
+	"	1	0
+	^	127	38
+	.	97	0
+	+	28	0
+	+	8	12
+	+	2	0
+	+	28	0
+	+	111	0
+	+	115	0
+	+	127	37
+	+	111	0
+	+	115	0
+	+	127	0
+	+	246	11
+	+	97	0
+
+> /root.bak/testpod.yaml
+	*	1647238786	0
+	"	8	2
+
 > ~/other/note.txt
-	*	1647232645	0
-	"	23	0
+	*	1647238720	0
+	"	1	0
 	^	57	102
 	.	57	0
 	+	47	57
@@ -657,24 +681,6 @@ $
 	+	47	117
 	+	47	0
 	+	44	126
-
-> ~/testpod.yaml
-	*	1646979381	0
-	"	2	0
-	^	127	38
-	.	97	0
-	+	28	0
-	+	8	12
-	+	2	0
-	+	28	0
-	+	111	0
-	+	115	0
-	+	127	37
-	+	111	0
-	+	115	0
-	+	127	0
-	+	246	11
-	+	97	0
 
 > /tmp/kubectl-edit-4fh7n.yaml
 	*	1645175499	0
@@ -769,8 +775,4 @@ $
 
 > /tmp/kubectl-edit-ml7pr.yaml
 	*	1643178920	0
-	"	1	0
-
-> /tmp/kubectl-edit-fqftw.yaml
-	*	1643176023	0
 	"	1	0
