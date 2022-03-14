@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:BaseSvc-Gray-Fileserver
+    traefik.ingress.kubernetes.io/rewrite-target: /fileserver
+  name: ingress-v7-fileserver-gray
+  namespace: ns-basesvc
+spec:
+  tls:
+  - hosts:
+    - tf.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: tf.jdy.com
+    http:
+      paths:
+      - path: /gray/fileserver
+        backend:
+          serviceName: bos-fileserver-gray
+          servicePort: 8101

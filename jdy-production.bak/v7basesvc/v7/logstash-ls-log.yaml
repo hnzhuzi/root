@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: logstash-ls-log
+  namespace: ns-basesvc
+spec:
+  template:
+    metadata:
+      labels:
+        type: logstash-ls-log
+    spec:
+      containers:
+      - image: 10.190.2.171/base/logstash:7.3.0
+        name: logstash
+        command:
+        - logstash
+        - '-f'
+        - '/etc/logstash/logstash.conf'
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2000Mi
+          requests:
+            cpu: 300m
+            memory: 500Mi
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/logstash/
+      volumes:
+        - name: config-volume
+          configMap:
+            name: logstash-config-ls
+            items:
+              - key: logstash.conf
+                path: logstash.conf
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-long-websocket
+  namespace: ns-basesvc
+  labels:
+    k8s-app: v7-long
+spec:
+  selector:
+    k8s-app: v7-long
+  ports:
+  - port: 6380
+    targetPort: 6380
+    name: websocket

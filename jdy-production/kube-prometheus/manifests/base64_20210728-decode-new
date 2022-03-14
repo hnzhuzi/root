@@ -1,0 +1,31 @@
+global:
+  resolve_timeout: 5m
+  wechat_api_corp_id: 'ww3d1761164def9d22'
+  wechat_api_url: 'https://qyapi.weixin.qq.com/cgi-bin/'
+  wechat_api_secret: 'EzSIySXUZ3rh0JyR67Sq1XZmhkWiHQWtvxJLBRrteHk'
+templates:
+  - '/etc/alertmanager/config/wechat.tmpl'
+route:
+  group_by: ['alertname']
+  group_wait: 60s
+  group_interval: 60s
+  repeat_interval: 10m
+  receiver: 'my-receiver'
+  routes:
+  - receiver: 'my-receiver'
+    match:
+      severity: 'warning'
+receivers:
+- name: 'my-receiver'
+  wechat_configs:
+  - send_resolved: true 
+    to_user: '@all'
+    agent_id: '1000002'
+    corp_id: 'ww3d1761164def9d22'
+    api_url: 'https://qyapi.weixin.qq.com/cgi-bin/'
+    api_secret: 'EzSIySXUZ3rh0JyR67Sq1XZmhkWiHQWtvxJLBRrteHk'
+  webhook_configs:
+  - url: 'http://10.244.3.63:5050/yzj'
+  - url: 'http://10.244.3.63:8060/dingtalk/jdy/send'
+  - url: 'http://10.190.2.222:8080/webhooks/prometheus'
+  - url: 'http://10.190.2.243:5056/jfile'

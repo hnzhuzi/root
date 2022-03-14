@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jdy-tf-message
+  namespace: ns-fork0
+  labels:
+    k8s-app: jdy-tf-message
+spec:
+  selector:
+    k8s-app: jdy-tf-message
+  ports:
+  - port: 6113
+    name: jdy-tf-message
+    targetPort: 6113
+  type: ExternalName
+  externalName: jdy-tf-message.ns-basesvc.svc.cluster.local

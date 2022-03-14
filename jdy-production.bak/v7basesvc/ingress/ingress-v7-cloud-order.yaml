@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:BaseSvc-CloudOrder
+  name: ingress-v7-cloud-order
+  namespace: ns-basesvc
+spec:
+  tls:
+  - hosts:
+    - sc.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: sc.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: cloud-order
+          servicePort: 80

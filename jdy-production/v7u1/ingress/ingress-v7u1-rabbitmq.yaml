@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:V7U1
+  name: ingress-v7u1-rabbitmq
+  namespace: ns-v7u1
+spec:
+  tls:
+  - hosts:
+    - rmq-u1.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: rmq-u1.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: rmq-u1
+          servicePort: 15672

@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v7-qianliyan
+  namespace: ns-basesvc
+  labels:
+    k8s-app: v7-qianliyan
+spec:
+  selector:
+    matchLabels:
+      k8s-app: v7-qianliyan
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-qianliyan
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-qianliyan
+        image: 10.190.2.171/sinbad/jdy-qianliyan-v7:v1.0.1
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+        - name : TF-HOST
+          value: 'tf.jdy.com'
+        - name : ENV_MYSQL
+          value: '{"jdy_qianliyan_v7":{"host":"rm-bp17cw7r459xfhb6j35910.mysql.rds.aliyuncs.com","port":"3306","usr":"sa","pwd":"GXJ8paKoA$YE","db":"jdy_qianliyan_v7"}}'
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2500Mi
+          requests:
+            cpu: 300m
+            memory: 1500Mi
+        ports:
+ 
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-qianliyan
+  namespace: ns-basesvc
+  labels:
+    k8s-app: v7-qianliyan
+spec:
+  selector:
+    k8s-app: v7-qianliyan
+  ports:
+  - port: 80

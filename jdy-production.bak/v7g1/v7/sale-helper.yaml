@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sale-helper
+  namespace: ns-v7g1
+  labels:
+    k8s-app: sale-helper
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s-app: sale-helper
+  template:
+    metadata:
+      labels:
+        k8s-app: sale-helper
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: sale-helper
+        image: 10.190.2.171/v7/sale-helper:0311_1811
+        imagePullPolicy: IfNotPresent
+        - name: MALLOC_ARENA_MAX
+          value: "4"
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        ports:
+      serviceAccountName: sa-v7g1
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sale-helper
+  namespace: ns-v7g1
+  labels:
+    k8s-app: sale-helper
+spec:
+  selector:
+    k8s-app: sale-helper
+  ports:
+  - port: 80

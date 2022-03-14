@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:MONITORING
+  name: ingress-v7-grafana
+  namespace: monitoring
+spec:
+  tls:
+  - hosts:
+    - grafana-ali.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: grafana-ali.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ack-prometheus-operator-grafana
+          servicePort: 80

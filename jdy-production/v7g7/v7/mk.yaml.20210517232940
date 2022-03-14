@@ -1,0 +1,92 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v7-mk
+  namespace: ns-v7g7
+  labels:
+    k8s-app: v7-mk
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: v7-mk
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-mk
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-mk
+        image: 10.190.2.171/v7/mk:v2.10.13_v2.0.39_v1.0.8
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+        - name : configUrl
+          value: mse-d7385ec0-zk.mse.aliyuncs.com:2181
+        - name : JVM_OPTS
+          value: "-server -XX:+UseContainerSupport -Xms2500M -Xmx2500M  -XX:MaxMetaspaceSize=512M  -XX:+DisableExplicitGC -Duser.timezone=GMT+8 -Dfile.encoding=UTF-8 -XX:CompressedClassSpaceSize=128m -javaagent:/jmx_prometheus_javaagent-0.12.0.jar=1234:/jmx_config.yaml"
+        - name : clusterName
+          value: ns-v7g7
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 4Gi
+          requests:
+            cpu: 1000m
+            memory: 4Gi
+        ports:
+        - name: web
+          containerPort: 20880
+        - name: health
+          containerPort: 9998
+        - name: jvm
+          containerPort: 1234
+        livenessProbe:
+          httpGet:
+            path: /monitor/healthDubbo
+            port: health
+          failureThreshold: 3
+          initialDelaySeconds: 70
+          periodSeconds: 10
+          timeoutSeconds: 2
+        readinessProbe:
+          httpGet:
+            path: /monitor/healthDubbo
+            port: health
+          failureThreshold: 3
+          initialDelaySeconds: 50
+          periodSeconds: 6
+          timeoutSeconds: 2
+      serviceAccountName: sa-v7g7
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-mk
+  namespace: ns-v7g7
+  labels:
+    k8s-app: v7-mk
+    prometheus: jvm
+spec:
+  selector:
+    k8s-app: v7-mk
+  ports:
+  - name: web
+    port: 20880
+    targetPort: 20880
+  - name: jvm
+    port: 1234
+    targetPort: 1234

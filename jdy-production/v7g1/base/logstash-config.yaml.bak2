@@ -1,0 +1,48 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: logstash-config
+  namespace: ns-v7g1
+data:
+  logstash.conf: |
+   input {    
+    kafka {
+        bootstrap_servers => "10.190.2.191:9092,10.190.2.190:9092,10.190.2.192:9092"
+        group_id => "logstash"
+        topics => "jdy-v7-ali"       
+        consumer_threads => 5
+        decorate_events => false
+        codec => json        
+      }   
+    }
+   filter {
+    geoip {
+    source => "clientIp"
+    database => "/GeoLite2-City.mmdb"
+    target => "geoip"i
+   # add_tag => [ "geoip" ]
+   # add_field => [ "[geoip][coordinates]", "%{[geoip][longitude]}" ]
+   # add_field => [ "[geoip][coordinates]", "%{[geoip][latitude]}"  ]
+    fields => ["city_name", "country_code2", "country_name", "region_name", "latitude" , "longitude", "timezone", "country_code3"]
+    }
+    }
+   mutate {
+    convert => ["[geoip][latitude]", "float"]
+    }
+   mutate {
+    convert => ["[geoip][longitude]", "float"]
+    }
+   mutate {
+    convert => ["[geoip][location]", "float"]
+    }
+   output {
+    elasticsearch { 
+     hosts => ["10.190.2.189:9200","10.190.2.21:9200","10.190.2.22:9200"]
+     document_type => "v7log" 
+     template_name => "v7log-*"
+     template_overwrite => true
+     manage_template => true
+     index => "v7-%{logtype}-%{+YYYY.MM.dd}"     
+     codec => json
+      }  
+    } 

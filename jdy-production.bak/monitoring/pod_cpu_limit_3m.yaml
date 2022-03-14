@@ -1,0 +1,24 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    app: ack-prometheus-operator
+    chart: ack-prometheus-operator-5.7.0
+    heritage: Tiller
+    release: ack-prometheus-operator
+  name: ack-prometheus-pod-cpu-used-alert3m.rules
+  namespace: monitoring
+spec:
+  groups:
+  - name: PodCpuUsedLimit-alert3m.rules
+    rules:
+    - alert: PodCpuUsedLimit-alert3m
+      annotations:
+        #summary: 'Pod: {{ $labels.container }} restart'
+        description: 'namespace: {{ $labels.namespace }}, pod: {{ $labels.pod }} cpu used alert {{ $value }} percent in 3 minute, will kill this pod'
+      #expr: sum(rate(container_cpu_usage_seconds_total{image!="",namespace!="monitoring"}[1m])) by (pod_name, namespace) / (sum(container_spec_cpu_quota{image!=""}/100000) by (pod_name, namespace)) * 100 >80
+      expr: sum(rate(container_cpu_usage_seconds_total{image!="",namespace!="monitoring",pod_name!~"v7-bos-qing(.*)"}[1m])) by (pod_name, namespace) / (sum(container_spec_cpu_quota{image!=""}/100000) by (pod_name, namespace)) * 100 >80
+      #expr: sum by(pod_name, namespace) (rate(container_cpu_usage_seconds_total{image!="",namespace!="monitoring",pod_name!~"v7-bos-qing(.*)",pod_name!~"jdy-costing-service(.*)"}[1m])) / (sum by(pod_name, namespace) (container_spec_cpu_quota{image!=""} / 100000)) * 100 > 80
+      for: 3m
+      lables:
+        severity: warning

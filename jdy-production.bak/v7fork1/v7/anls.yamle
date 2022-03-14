@@ -1,0 +1,67 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: v7-anls
+  namespace: ns-fork1
+  labels:
+    k8s-app: v7-anls
+spec:
+  selector:
+    matchLabels:
+      k8s-app: v7-anls
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-anls
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-anls
+        image: 10.190.2.171/v7/anls:v1.0.9
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+        - name : JVM_XMS
+          value: 3000M
+        - name : JVM_XMX
+          value: 3000M
+        - name : appName
+          value: v7-analysis
+        - name : appId
+          value: v7-anls
+        - name : apolloMeta
+          value: http://10.190.2.165:8080,http://10.190.2.166:8080
+        - name : env
+          value: PRO
+        - name : clusterName
+          value: ns-fork1        
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 3500Mi
+          requests:
+            cpu: 1000m
+            memory: 2500Mi
+        ports:
+        - containerPort: 8011
+      serviceAccountName: sa-fork1
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-anls
+  namespace: ns-fork1
+  labels:
+    k8s-app: v7-anls
+spec:
+  selector:
+    k8s-app: v7-anls
+  ports:
+  - port: 8011

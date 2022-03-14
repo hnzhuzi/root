@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    traefik.frontend.rule.type: PathPrefixStrip
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:V7G5-Smart
+  name: ingress-v7-smart
+  namespace: ns-v7g5
+spec:
+  tls:
+  - hosts:
+    - tf.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: tf.jdy.com
+    http:
+      paths:
+      - path: /smart
+        backend:
+          serviceName: v7-smart
+          servicePort: 56789

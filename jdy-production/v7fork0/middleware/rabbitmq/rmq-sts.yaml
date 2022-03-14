@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: rmq-fork0
+  namespace: ns-fork0
+  labels:
+    app: rmq-fork0
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rmq-fork0
+  serviceName: rmq-fork0
+  template:
+    metadata:
+      labels:
+        app: rmq-fork0
+    spec:
+      serviceAccountName: sa-fork0
+      imagePullSecrets:
+      - name: regsecret
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: rabbitmq
+        image: 10.190.2.171/base/rabbitmq:3.7-management
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 15672
+          name: http
+          protocol: TCP
+        - containerPort: 5672
+          name: amqp
+          protocol: TCP
+        command:
+        - sh
+        args:
+        - -c
+        - cp -v /etc/rabbitmq/rabbitmq.conf ${RABBITMQ_CONFIG_FILE}; exec docker-entrypoint.sh
+          rabbitmq-server
+        env:
+        - name: RABBITMQ_DEFAULT_USER
+          valueFrom:
+            secretKeyRef:
+              key: username
+              name: rmq-fork0-secret
+        - name: RABBITMQ_DEFAULT_PASS
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: rmq-fork0-secret
+        - name: RABBITMQ_ERLANG_COOKIE
+          valueFrom:
+            secretKeyRef:
+              key: cookie
+              name: rmq-fork0-secret
+        - name: K8S_SERVICE_NAME
+          value: rmq-fork0
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: RABBITMQ_USE_LONGNAME
+          value: "true"
+        - name: RABBITMQ_NODENAME
+          value: rabbit@$(POD_NAME).rmq-fork0.$(POD_NAMESPACE).svc.cluster.local
+        - name: RABBITMQ_CONFIG_FILE
+          value: /var/lib/rabbitmq/rabbitmq.conf
+        livenessProbe:
+          exec:
+            command:
+            - rabbitmqctl
+            - status
+          initialDelaySeconds: 30
+          timeoutSeconds: 10
+        readinessProbe:
+          exec:
+            command:
+            - rabbitmqctl
+            - status
+          initialDelaySeconds: 10
+          timeoutSeconds: 10
+        volumeMounts:
+        - name: rmq-fork0-config
+          mountPath: /etc/rabbitmq
+          readOnly: false
+        - name: rmq-fork0-storage
+          mountPath: /var/lib/rabbitmq
+          readOnly: false
+      volumes:
+      - name: rmq-fork0-config
+        configMap:
+          items:
+          - key: rabbitmq.conf
+            path: rabbitmq.conf
+          - key: enabled_plugins
+            path: enabled_plugins
+          name: rmq-fork0-config
+      - name: rmq-fork0-storage
+        persistentVolumeClaim:
+          claimName: pvc-rmq-fork0

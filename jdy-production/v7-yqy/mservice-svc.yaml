@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-03-24T08:21:23Z"
+  labels:
+    app: mservice
+    name: mservice
+  name: mservice
+  namespace: clustername
+  resourceVersion: "139255"
+  selfLink: /api/v1/namespaces/clustername/services/mservice
+  uid: 72df06f9-6da8-11ea-ab79-08002792b40b
+spec:
+  clusterIP: 10.24.119.14
+  ports:
+  - name: kcs-service-0
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: mservice
+    cluster: clustername
+    sname: mservice
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,46 @@
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+  # name: pv1
+# spec:
+  # capacity:
+    # storage: 1Gi
+  # accessModes:
+  # - ReadWriteMany
+  # persistentVolumeReclaimPolicy: Delete
+  # nfs:
+    # server: 172.16.195.111
+    # path: /nfs
+
+# # ---
+
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+  # name: pv1
+# spec:
+  # accessModes:
+  # - ReadWriteMany
+    # # - ReadWriteOnce
+    # # - ReadWriteMany/ReadOnlyMany
+  # # storageClassName: rbd
+  # # volumeName: pvc-707b2ac0-7444-4744-b70e-b50113978086 # 先删pvc: 删除对应pv中的claimRef属性, 然后重新创建pvc。
+  # # 先删pv: 删除pv中finalizers属性，然后重新部署pv。二者操作都要记得提前保存pv,pvc。
+  # resources:
+    # requests:
+      # storage: 1Gi
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana
+spec:
+  accessModes:
+    - ReadWriteOnce
+    # - ReadWriteMany/ReadOnlyMany
+  storageClassName: nfs
+  resources:
+    requests:
+      storage: 10Gi

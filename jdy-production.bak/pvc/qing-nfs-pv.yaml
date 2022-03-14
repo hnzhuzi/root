@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-v7-qing
+  labels:
+    pv: nfs-qing
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 500Gi
+  mountOptions:
+  - vers=3
+  - noacl,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport
+  nfs:
+    path: /
+    server: 00e8648a-7l0d.cn-hangzhou.extreme.nas.aliyuncs.com
+  persistentVolumeReclaimPolicy: Retain

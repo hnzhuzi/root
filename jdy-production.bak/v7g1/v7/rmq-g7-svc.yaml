@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rmq-g7
+  namespace: ns-v7g1
+  labels:
+    k8s-app: rmq-g7
+spec:
+  selector:
+    k8s-app: rmq-g7
+  ports:
+  - port: 5672
+    targetPort: 5672
+  type: ExternalName
+  externalName: rmq-g7.ns-v7g7.svc.cluster.local

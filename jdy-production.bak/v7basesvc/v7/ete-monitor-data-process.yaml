@@ -1,0 +1,106 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ete-monitor-data-process-conf
+  namespace: ns-basesvc
+  labels:
+    name: ete-monitor-data-process-conf
+data:
+  application.yml: |
+    spring:
+      profiles:
+        active: core
+      kafka:
+        bootstrap-servers: 10.190.2.191:9092,10.190.2.190:9092,10.190.2.192:9092
+        consumer:
+          group-id: ete-monitor-produce
+          auto-offset-reset: earliest
+          max-poll-records: 1000
+          auto-commit-interval: 1000
+          enable-auto-commit: true
+    logging:
+      level:
+        com.jdy.dataprocess: error
+    mybatis-plus:
+      mapper-locations: classpath*:/mappers/*.xml
+      configuration:
+        map-underscore-to-camel-case: true
+    storage:
+      # es:
+      #   enabled: false
+      #   address: 192.168.22.243:9200
+      #   indexPrefix: ete
+      db:
+        enabled: true
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://pgm-bp11662lng9pce7a117930.pg.rds.aliyuncs.com:1921/ete_monitor?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf8&currentSchema=public
+        #driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+        #url: jdbc:p6spy:postgresql://pgm-bp11662lng9pce7a117930.pg.rds.aliyuncs.com:1921/ete_monitor?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf8&currentSchema=public
+        username: monitor_user
+        password: JIG2vjSpNF22Qp40
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ete-monitor-data-process
+  namespace: ns-basesvc
+  labels:
+    k8s-app: ete-monitor-data-process
+spec:
+  selector:
+    matchLabels:
+      k8s-app: ete-monitor-data-process
+  template:
+    metadata:
+      labels:
+        k8s-app: ete-monitor-data-process
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      imagePullSecrets:
+        - name: regsecret
+      volumes:
+        - name: ete-monitor-data-process
+          configMap:
+            name: ete-monitor-data-process-conf
+            items:
+              - key: application.yml
+                path: path/to/application.yaml
+      containers:
+        - name: ete-monitor-data-process
+          image: 10.190.2.171/ete-monitor/ete-monitor-data-process:v0.5
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: ete-monitor-data-process
+              mountPath: /etc/application.yml
+              subPath: path/to/application.yaml
+          env:
+            - name: JAVA_OPTIONS
+              value: "-Xms1024M -Xmx1024M"
+            - name: APP_OPTIONS
+              value: "-Dspring.config.location=/etc/application.yml"
+          resources:
+            limits:
+              cpu: 2000m
+              memory: 1500Mi
+            requests:
+              cpu: 500m
+              memory: 1000Mi
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ete-monitor-data-process
+  namespace: ns-basesvc
+  labels:
+    k8s-app: ete-monitor-data-process
+spec:
+  selector:
+    k8s-app: ete-monitor-data-process
+  ports:
+    - port: 8080
+

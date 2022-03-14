@@ -1,0 +1,22 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    app: ack-prometheus-operator
+    chart: ack-prometheus-operator-5.7.0
+    heritage: Tiller
+    release: ack-prometheus-operator
+  name: ack-prometheus-cpu-1000.rules
+  namespace: monitoring
+spec:
+  groups:
+  - name: container-cpu-1000.rules
+    rules:
+    - alert: PodCpuUsedHigh
+      annotations:
+        description: '{{ $labels.name }} pod cpu used above limit(60%) ,(current values is: {{ $value }})'
+      #expr: ceil(sum by(name) (rate(container_cpu_usage_seconds_total{name=~".+"}[1m])) * 1000) / (sum(container_spec_cpu_quota{image!=""}/100) by (name))  >  0.6
+      expr: ceil(ceil(sum by(name) (rate(container_cpu_usage_seconds_total{name=~".+"}[1m])) * 1000) / (sum(container_spec_cpu_quota{image!=""}/10000) by (name)))  >  60
+      for: 3m
+      lables:
+        severity: warning

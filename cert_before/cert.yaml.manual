@@ -1,0 +1,18 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: dashboard.local-cert
+  namespace: default
+spec:
+  secretName: dashboard.local-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+  - dashboard.local
+  acme:
+    config:
+    - http01:
+        ingressClass: nginx
+      domains:
+      - dashboard.local

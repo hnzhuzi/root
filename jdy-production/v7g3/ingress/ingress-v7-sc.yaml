@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:v7g1-sc
+  name: ingress-v7-sc
+  namespace: ns-v7g3
+spec:
+  tls:
+  - hosts:
+    - sc.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: sc.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: node-mid
+          servicePort: 3000

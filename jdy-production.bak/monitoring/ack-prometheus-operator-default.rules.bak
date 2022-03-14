@@ -1,0 +1,100 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  creationTimestamp: 2019-12-24T04:33:07Z
+  generation: 1
+  labels:
+    app: ack-prometheus-operator
+    chart: ack-prometheus-operator-5.7.0
+    heritage: Tiller
+    release: ack-prometheus-operator
+  name: ack-prometheus-operator-default.rules
+  namespace: monitoring
+  resourceVersion: "116120862"
+  selfLink: /apis/monitoring.coreos.com/v1/namespaces/monitoring/prometheusrules/ack-prometheus-operator-default.rules
+  uid: 7ba5d340-2606-11ea-b1a5-00163e0a4713
+spec:
+  groups:
+  - name: default.rules
+    rules:
+    - alert: NodeCPURequestExceed
+      annotations:
+        message: Node "{{ $labels.node }}" CPU request exceed 90%
+      expr: sum by (node) (kube_pod_container_resource_requests{job="kube-state-metrics",resource="cpu"})/on(node)
+        group_left sum by (node)(kube_node_status_allocatable_cpu_cores{job="kube-state-metrics"})>0.9
+      for: 5m
+      labels:
+        severity: critical
+    - alert: NodeMemoryRequestExceed
+      annotations:
+        message: Node "{{ $labels.node }}" memory request exceed 90%
+      expr: sum by (node) (kube_pod_container_resource_requests{job="kube-state-metrics",resource="memory"})/on(node)
+        group_left  sum by (node)(kube_node_status_allocatable_memory_bytes{job="kube-state-metrics"})
+        >0.9
+      for: 5m
+      labels:
+        severity: critical
+    - alert: NodeCPUUsageExceed
+      annotations:
+        message: Node "{{ $labels.instance }}" CPU usage exceed 90%
+      expr: avg by(instance)(sum by (cpu,instance) (rate(node_cpu_seconds_total{job="node-exporter",
+        mode!="idle"}[5m]))* 100)> 90
+      for: 5m
+      labels:
+        severity: critical
+    - alert: NodeMemoryUsageExceed
+      annotations:
+        message: Node "{{ $labels.instance }}" memory usage exceed 90%
+      expr: sum by(instance)(((node_memory_MemTotal_bytes{job="node-exporter"}- node_memory_MemFree_bytes{
+        job="node-exporter"}- node_memory_Buffers_bytes{job="node-exporter"}) / node_memory_MemTotal_bytes{
+        job="node-exporter"}) * 100)> 95
+      for: 5m
+      labels:
+        severity: warning
+    - alert: NodeIncodeUsageExceed
+      annotations:
+        message: Node "{{ $labels.instance }}" Incode usage exceed 90%
+      expr: sum by (instance)((( node_filesystem_files{ job="node-exporter",device!~'rootfs'}-
+        node_filesystem_files_free{ job="node-exporter",device!~'rootfs'}) / node_filesystem_files{
+        job="node-exporter",device!~'rootfs'}  ) * 100)> 90
+      for: 5m
+      labels:
+        severity: critical
+    - alert: NodeDiskUsageExceed
+      annotations:
+        message: Node "{{ $labels.instance }}" disk usage exceed 90%
+      expr: node_filesystem_avail_bytes{device="/dev/vda1"}/node_filesystem_size_bytes{device="/dev/vda1"}<
+        0.1
+      for: 5m
+      labels:
+        severity: critical
+    - alert: NamespaceQuotaExceed
+      annotations:
+        message: Namespace "{{ $labels.namespace }}" quota exceed the limit
+      expr: kube_resourcequota{type="used"} /on(resource, namespace,resource) group_left  kube_resourcequota{type="hard"}>1
+      for: 5m
+      labels:
+        severity: critical
+    - alert: JobFailed
+      annotations:
+        message: Cluster execute job "{{ $labels.job }}" failed
+      expr: kube_job_status_failed{job="kube-state-metrics"}> 0
+      for: 10m
+      labels:
+        severity: critical
+    - alert: PodStartFailed
+      annotations:
+        message: Pod "{{ $labels.pod }}" start failed
+      expr: kube_pod_status_phase{phase="Failed"}==1
+      for: 3m
+      labels:
+        severity: critical
+    - alert: ClusterResourceQuotaExceed
+      annotations:
+        message: Cluster resource quota "{{ $labels.resource }}" in namespace "{{
+          $labels.kubernetes_namespace }}" exceed 90%
+      expr: sum(kube_resourcequota{type="used"})/sum(kube_resourcequota{type="hard"})
+        *100 >90
+      for: 1h
+      labels:
+        severity: warning

@@ -1,0 +1,58 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jdy-tf-service
+  namespace: ns-basesvc
+  labels:
+    k8s-app: jdy-tf-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s-app: jdy-tf-service
+  template:
+    metadata:
+      labels:
+        k8s-app: jdy-tf-service
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: jdy-tf-service
+        image: 10.190.2.171/v7/jdy-tf-service:v1.0.1
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+          - name : JAVA_OPTIONS
+            value: "-Xms1500M -Xmx1500M -Dapollo.meta=http://10.190.2.165:8080,http://10.190.2.166:8080 -Dapp.id=jdy-tf-service -Denv=PRO"
+          - name : k8s_namespace
+            value: "ns-basesvc"
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2500Mi
+          requests:
+            cpu: 500m
+            memory: 1500Mi
+        ports:
+        - containerPort: 6114
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jdy-tf-service
+  namespace: ns-basesvc
+  labels:
+    k8s-app: jdy-tf-service
+spec:
+  selector:
+    k8s-app: jdy-tf-service
+  ports:
+  - port: 6114

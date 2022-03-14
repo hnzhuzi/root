@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v7-smart
+  namespace: ns-v7g10
+  labels:
+    k8s-app: v7-smart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s-app: v7-smart
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-smart
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-smart
+        image: 10.190.2.171/sinbad/jdy-smart-v7:1.0.55
+        imagePullPolicy: IfNotPresent
+        env:
+        - name : ENV_MYSQL
+          value: '{"smart":{"host":"rm-bp17cw7r459xfhb6j35910.mysql.rds.aliyuncs.com","port":"3306","usr":"sa","pwd":"GXJ8paKoA$YE","db":"smart"}}'
+        - name: RETAIL_SERVICE_NAME
+          value: 'http://v7-webapp-bosv1:8080/ierp/'
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2000Mi
+          requests:
+            cpu: 500m
+            memory: 1000Mi
+        ports:
+        - containerPort: 56789
+      serviceAccountName: sa-v7g10
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-smart
+  namespace: ns-v7g10
+  labels:
+    k8s-app: v7-smart
+spec:
+  selector:
+    k8s-app: v7-smart
+  ports:
+  - port: 56789
+    targetPort: 56789
+    name: v7-smart
+

@@ -1,0 +1,10 @@
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: zk-pdb
+spec:
+  minAvailable: 2 # 保证驱逐时 zookeeper 至少有两个副本可用
+  # maxUnavailable: 1 # 保证驱逐时 zookeeper 最多有一个副本不可用，相当于逐个删除并在其它节点重建
+  selector:
+    matchLabels:
+      app: zookeeper

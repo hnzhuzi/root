@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:V7G15
+  name: ingress-v7g15-rabbitmq
+  namespace: ns-v7g15
+spec:
+  tls:
+  - hosts:
+    - rmq-g15.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: rmq-g15.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: rmq-7g15
+          servicePort: 15672

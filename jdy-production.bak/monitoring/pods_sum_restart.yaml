@@ -1,0 +1,24 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    app: ack-prometheus-operator
+    chart: ack-prometheus-operator-5.7.0
+    heritage: Tiller
+    release: ack-prometheus-operator
+  name: ack-prometheus-pods-restart.rules
+  namespace: monitoring
+spec:
+  groups:
+  - name: pods-restart-sum-large-than-5.rules
+    rules:
+    - alert: PodsRestartSum
+      annotations:
+        summary: 'At least 5 pod containers restart'
+        description: 'namespace: {{ $labels.namespace }}, restart {{ $value }} times'
+        #description: 'namespace: {{ $namespace }}, restart {{ $value }} times'
+      expr: count(changes(kube_pod_container_status_restarts_total[10m]) != 0) by (namespace) > 4
+      #expr: count(changes(kube_pod_container_status_restarts_total[10m]) != 0)  > 5
+      #for: 1m
+      lables:
+        severity: critical

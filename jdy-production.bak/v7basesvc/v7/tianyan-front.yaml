@@ -1,0 +1,48 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: tianyan-front
+  namespace: ns-basesvc
+  labels:
+    k8s-app: tianyan-front
+spec:
+  selector:
+    matchLabels:
+      k8s-app: tianyan-front
+  template:
+    metadata:
+      labels:
+        k8s-app: tianyan-front
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: tianyan-front
+        image: 10.190.2.171/sinbad/tianyan-front:V1.0.1
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 1000Mi
+          requests:
+            cpu: 300m
+            memory: 800Mi
+        ports:
+        - containerPort: 80
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tianyan-front
+  namespace: ns-basesvc
+  labels:
+    k8s-app: tianyan-front
+spec:
+  selector:
+    k8s-app: tianyan-front
+  ports:
+  - port: 80

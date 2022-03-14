@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testnginx
+  namespace: ns-v7g1
+  labels:
+    k8s-app: testnginx
+spec:
+  selector:
+    matchLabels:
+      k8s-app: testnginx
+  template:
+    metadata:
+      labels:
+        k8s-app: testnginx
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: testnginx
+        image: 10.190.2.171/base/nginx:1.19
+        lifecycle:
+          postStart:
+            exec:
+              command: ["/bin/sh", "-c", "mkdir -pv /data/level1/BucketGroup{1,2} /data/level2/BucketGroup{1,2}"]
+        imagePullPolicy: IfNotPresent
+        - name: MALLOC_ARENA_MAX
+          value: "4"
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 1000Mi
+          requests:
+            cpu: 1000m
+            memory: 800Mi
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: data1
+          mountPath: /data/level1/BucketGroup1
+        - name: data2
+          mountPath: /data/level1/BucketGroup2
+        - name: data3
+          mountPath: /data/level2/BucketGroup1
+        - name: data4 
+          mountPath: /data/level2/BucketGroup2
+      volumes:
+      - name: data1
+        nfs:
+          path: /data
+          server: 10.190.2.6 
+      - name: data2
+        nfs:
+          path: /data
+          server: 10.190.2.7
+      - name: data3
+        nfs:
+          path: /data
+          server: 10.190.2.8
+      - name: data4
+        nfs:
+          path: /data
+          server: 10.190.2.9
+      serviceAccountName: sa-v7g1
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: testnginx
+  namespace: ns-v7g1
+  labels:
+    k8s-app: testnginx
+spec:
+  selector:
+    k8s-app: testnginx
+  ports:
+  - port: 80

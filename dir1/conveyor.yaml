@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: conveyor
+spec:
+  selector:
+    matchLabels:
+      name: conveyor
+  template:
+    metadata:
+      labels:
+        name: conveyor
+    spec:
+      containers:
+      - name: conveyor
+        image: chenjiandongx/conveyor:latest
+        resources:
+          limits:
+            memory: 200Mi
+          requests:
+            # cpu: 100m
+            memory: 200Mi
+        volumeMounts:
+        # 挂载 docker.sock 文件，监听 dockerd 事件
+        - name: docker-sock
+          mountPath: /var/run/docker.sock
+        # 挂载 / 路径，只读权限，用于日志收集
+        - name: docker-log
+          mountPath: /host
+          readOnly: true
+        - name: filebeat-data
+          mountPath: /etc/filebeat/data
+        - name: filebeat-config
+          mountPath: /etc/filebeat/filebeat.yaml
+          subPath: filebeat.yaml
+      volumes:
+      - name: docker-sock
+        hostPath:
+          path: /var/run/docker.sock
+      - name: docker-log
+        hostPath:
+          path: /
+      - name: filebeat-data
+        hostPath:
+          path: /var/filebeat-data
+      - name: filebeat-config
+        configMap:
+          name: filebeat-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: filebeat-config
+data:
+  filebeat.yaml: |
+    setup.ilm.enabled: false
+    setup.template.enabled: true
+    setup.template.name: filebeat
+    setup.template.pattern: filebeat-*
+    filebeat.config.inputs:
+      enabled: true
+      path: /etc/filebeat/configs/*.yaml
+      reload.enabled: true
+      reload.period: 10s
+    # elasticsearch 输出端示例
+    output.elasticsearch:
+      hosts: ["http://elasticsearch-master:9200"]
+      index: "filebeat-%{[fields.index]}-%{+yyyy.MM.dd}"

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scrm-sale-helper
+  namespace: ns-basesvc
+  labels:
+    k8s-app: scrm-sale-helper
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s-app: scrm-sale-helper
+  template:
+    metadata:
+      labels:
+        k8s-app: scrm-sale-helper
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: scrm-sale-helper
+        image: 10.190.2.171/v7/scrm-sale-helper:0311_1811
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        ports:
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scrm-sale-helper
+  namespace: ns-basesvc
+  labels:
+    k8s-app: scrm-sale-helper
+spec:
+  selector:
+    k8s-app: scrm-sale-helper
+  ports:
+  - port: 80

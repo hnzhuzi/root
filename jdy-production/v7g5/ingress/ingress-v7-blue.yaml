@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:V7G5-Blue
+  name: ingress-v7-blue
+  namespace: ns-v7g5
+spec:
+  tls:
+  - hosts:
+    - tf.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: tf.jdy.com
+    http:
+      paths:
+      - path: /sky/blue
+        backend:
+          serviceName: v7-blue
+          servicePort: 6789

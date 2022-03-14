@@ -1,0 +1,28 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: sc-rmq-g14
+#  namespace: ns-v7g11
+mountOptions:
+- nolock,tcp,noresvport
+- vers=3
+parameters:
+  driver: flexvolume
+  server: "00d4b9dd-5hvc.cn-hangzhou.extreme.nas.aliyuncs.com:/share/ns-v7g14/rabbitmq"
+provisioner: alicloud/nas
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-rmq-g14
+  namespace: ns-v7g14
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 39Gi
+  storageClassName: sc-rmq-g14
+

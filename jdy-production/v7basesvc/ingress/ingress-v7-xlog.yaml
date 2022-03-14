@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:BaseSvc-Xlog
+  name: ingress-v7-xlog
+  namespace: ns-basesvc
+spec:
+  tls:
+  - hosts:
+    - xlog.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: xlog.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: xlog-portal
+          servicePort: 8080

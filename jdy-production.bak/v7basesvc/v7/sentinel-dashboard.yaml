@@ -1,0 +1,60 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sentinel-dashboard
+  namespace: ns-basesvc
+  labels:
+    k8s-app: sentinel-dashboard
+spec:
+  selector:
+    matchLabels:
+      k8s-app: sentinel-dashboard
+  template:
+    metadata:
+      labels:
+        k8s-app: sentinel-dashboard
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: sentinel-dashboard
+        #image: 10.190.2.171/sentinel/sentinel-dashboard:v1.0.3
+        image: 10.190.2.171/sentinel/sentinel-dashboard:4acfaef5
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+          - name : APP_OPTIONS
+            value: "-Dserver.port=8888 -Dproject.name=sentinel-dashboard -Dsentinel.dashboard.auth.username=kingdee -Dsentinel.dashboard.auth.password=king100@ts.com"
+          - name : JAVA_OPTIONS
+            value: "-Xms1500M -Xmx1500M"
+          - name : ZK_OPTIONS
+            value: "-Dzk.remote-address=10.190.2.181:2181,10.190.2.182:2181,10.190.2.183:2181"
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2000Mi
+          requests:
+            cpu: 500m
+            memory: 1500Mi
+        ports:
+        - containerPort: 8888
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sentinel-dashboard
+  namespace: ns-basesvc
+  labels:
+    k8s-app: sentinel-dashboard
+spec:
+  selector:
+    k8s-app: sentinel-dashboard
+  ports:
+  - port: 8888

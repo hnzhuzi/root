@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+   # traefik.frontend.rule.type: PathPrefixStrip
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:V7G6-Promotion
+  name: ingress-v7-promotion
+  namespace: ns-v7g6
+spec:
+  tls:
+  - hosts:
+    - tf.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: tf.jdy.com
+    http:
+      paths:
+      - path: /promotion
+        backend:
+          serviceName: v7-promotion
+          servicePort: 5680

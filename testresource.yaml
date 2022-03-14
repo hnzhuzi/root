@@ -1,0 +1,125 @@
+# apiVersion: v1
+# kind: Pod
+# metadata:
+  # name: memory-demo
+# spec:
+  # containers:
+  # - name: memory-demo
+    # image: polinux/stress
+    # resources:
+      # requests:
+        # memory: "50Mi"
+      # limits:
+        # memory: "300Mi"
+    # command: ["stress"]
+    # args: ["--vm", "1", "--vm-bytes", "250M", "--vm-hang", "1"]
+
+---
+
+# apiVersion: v1
+# kind: Pod
+# metadata:
+  # name: cpu-demo
+# spec:
+  # containers:
+  # - name: cpu-demo
+    # image: vish/stress
+    # resources:
+      # limits:
+        # cpu: "1"
+      # requests:
+        # cpu: "0.5"
+    # args:
+    # - -cpus
+    # - "2"
+
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: testrq
+  namespace: testns
+spec:
+  hard:
+    requests.cpu: "1"
+    requests.memory: 1Gi
+    # limits.cpu: "2"
+    # limits.memory: 2Gi
+    # pods: "3"
+
+    # configmaps: "10"
+    # persistentvolumeclaims: "4"
+    # replicationcontrollers: "20"
+    # secrets: "10"
+    # services: "10"
+    # services.loadbalancers: "2"
+
+# ---
+# apiVersion: v1
+# kind: LimitRange
+# metadata:
+  # name: mem-limit-range
+  # namespace: testns
+# spec:
+  # limits:
+  # - default:  # default limit
+      # memory: 512Mi
+      # cpu: 1
+    # defaultRequest:  # default request
+      # memory: 256Mi
+      # cpu: 0.5
+    # max:  # max limit
+      # memory: 800Mi
+      # cpu: 2
+    # min:  # min request
+      # memory: 100Mi
+      # cpu: 0.3
+    # maxLimitRequestRatio:  # max value for limit / request
+      # memory: 2
+      # cpu: 2
+    # type: Container # limit type, support: Container / Pod / PersistentVolumeClaim
+    # Pod不能设置Default Request和Default Limit参数
+
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: mylimits
+spec:
+  limits:
+  - max:
+      cpu: "4"
+      memory: 2Gi
+    min:
+      cpu: 200m
+      memory: 6Mi
+    maxLimitRequestRatio:
+      cpu: 3
+      memory: 2
+    type: Pod
+  - default:
+      cpu: 300m
+      memory: 200Mi
+    defaultRequest:
+      cpu: 200m
+      memory: 100Mi
+    max:
+      cpu: "2"
+      memory: 1Gi
+    min:
+      cpu: 100m
+      memory: 3Mi
+    maxLimitRequestRatio:
+      cpu: 5
+      memory: 4
+    type: Container
+
+ # 解读：
+# 1. 不论是CPU还是内存，在LimitRange中，Pod和Container都可以设置Min、Max和MaxLimit/RequestsRatio参数。Container还可以设置Default Request和Default Limit参数，而Pod不能设置Default Request和DefaultLimit参数。
+# 2. 对Pod和Container的参数解释如下：
+# Container的Min（如上图100m和3Mi）是Pod中所有容器的Requests值下限；Container的Max（如上图2和1Gi）是Pod中所有容器的Limits值上限；Container的Default Request（如上图200m和100Mi）是Pod中所有未指定Requests值的容器的默认Requests值；Container的DefaultLimit（如上图300m和200Mi）是Pod中所有未指定Limits值的容器的默认Limits值。对于同一资源类型，这4个参数必须满足以下关系：Min ≤ Default Request ≤ Default Limit ≤ Max。
+# Pod的Min（如上图200m和6Mi）是Pod中所有容器的Requests值的总和下限；Pod的Max（如上图4和2Gi）是Pod中所有容器的Limits值的总和上限。当容器未指定Requests值或者Limits值时，将使用Container的Default Request值或者Default Limit值。
+# Container的Max Limit/Requests Ratio（如上图5和4）限制了Pod中所有容器的Limits值与Requests值的比例上限；而Pod的MaxLimit/RequestsRatio（如上图3和2）限制了Pod中所有容器的Limits值总和与Requests值总和的比例上限。
+# 3. 如果设置了Container的Max，那么对于该类资源而言，整个集群中的所有容器都必须设置Limits，否则无法成功创建。Pod内的容器未配置Limits时，将使用Default Limit的值（本例中的300mCPU和200MiB内存），如果也未配置Default，则无法成功创建。
+# 4. 如果设置了Container的Min，那么对于该类资源而言，整个集群中的所有容器都必须设置Requests。如果创建Pod的容器时未配置该类资源的Requests，那么在创建过程中会报验证错误。Pod里容器的Requests在未配置时，可以使用默认值default Request（本例中的200mCPU和100MiB内存）；如果未配置而又没有使用默认值default Request，那么会默认等于该容器的Limits；如果此时Limits也未定义，就会报错。
+# 5. 对于任意一个Pod而言，该Pod中所有容器的Requests总和必须大于或等于6MiB，而且所有容器的Limits总和必须小于或等于1GiB；同样，所有容器的CPU Requests总和必须大于或等于200m，而且所有容器的CPU Limits总和必须小于或等于2。
+# 6. Pod里任何容器的Limits与Requests的比例都不能超过Container的MaxLimit/RequestsRatio；Pod里所有容器的Limits总和与Requests的总和的比例不能超过Pod的MaxLimit/RequestsRatio。

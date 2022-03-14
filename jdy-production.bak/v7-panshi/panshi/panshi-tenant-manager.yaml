@@ -1,0 +1,97 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: panshi-tenant-manager
+  namespace: ns-panshi
+  labels:
+    k8s-app: panshi-tenant-manager
+spec:
+  selector:
+    matchLabels:
+      k8s-app: panshi-tenant-manager
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        k8s-app: panshi-tenant-manager
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: panshi-tenant-manager
+        image: 10.190.2.171/panshi/panshi-tenant-manager:v1.0.23
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          postStart:
+            exec:
+              command: ["/bin/sh", "-c", "mkdir -pv /var/local/extends"]
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+        - name : JAVA_OPTIONS
+          value: "-Xms3000M -Xmx3000M"
+        - name : APOLLO_OPTIONS
+          value: "-Denv=PRO -Dapp.id=panshi-aliyun -Dapollo.meta=http://10.190.2.165:8080,http://10.190.2.166:8080"
+        resources:
+          limits:
+            cpu: 4
+            memory: 3500Mi
+          requests:
+            cpu: 2
+            memory: 3000Mi
+        ports:
+        - name: web
+          containerPort: 9093
+        livenessProbe:
+          httpGet:
+            path: /api/tenantManager/health
+            port: web
+          failureThreshold: 3
+          initialDelaySeconds: 50
+          periodSeconds: 6
+          timeoutSeconds: 2
+        readinessProbe:
+          httpGet:
+            path: /api/tenantManager/health
+            port: web
+          failureThreshold: 3
+          initialDelaySeconds: 35
+          periodSeconds: 6
+          timeoutSeconds: 2
+        volumeMounts:
+        - name: storage
+          mountPath: /var/local/panshi
+        - name: extends
+          mountPath: /var/local/extends
+      volumes:
+      - name: storage
+        nfs:
+          server: 08c394bba9-pnf21.cn-hangzhou.nas.aliyuncs.com
+          path: /ns-v7g2
+      - name: extends
+        nfs:
+          server: 0acc749e3f-phk67.cn-hangzhou.nas.aliyuncs.com
+          path: /extends
+      serviceAccountName: sa-panshi
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: panshi-tenant-manager
+  namespace: ns-panshi
+  labels:
+    k8s-app: panshi-tenant-manager
+spec:
+  selector:
+    k8s-app: panshi-tenant-manager
+  ports:
+  - port: 9093

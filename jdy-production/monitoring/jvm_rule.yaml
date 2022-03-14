@@ -1,0 +1,29 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    app: ack-prometheus-operator
+    chart: ack-prometheus-operator-5.7.0
+    heritage: Tiller
+    release: ack-prometheus-operator
+  name: ack-prometheus-operator-jvm.rules
+  namespace: monitoring
+spec:
+  groups:
+  - name: jvm.rules
+    rules:
+    - alert: JvmThreadHigh
+      annotations:
+        description: '{{ $labels.namespace }} / {{ $labels.pod }} jvm thread  above 800 ,(current values is: {{ $value }} )'
+      expr: jvm_threads_current > 800
+      for: 3m
+      lables:
+        severity: warning
+    - alert: JvmMemoryUsedHigh
+      annotations:
+        description: '{{ $labels.namespace }} / {{ $labels.pod }} Jvm memory used above 90%,(current values is: {{ $value }} )'
+        summary: Jvm memory used above 90%
+      expr: sum by(pod, namespace) (jvm_memory_pool_bytes_used{pool="G1 Old Gen",}) / sum by(pod, namespace) (jvm_memory_pool_bytes_committed{pool="G1 Old Gen",})  * 100 > 95
+      for: 2m
+      lables:
+        severity: warning

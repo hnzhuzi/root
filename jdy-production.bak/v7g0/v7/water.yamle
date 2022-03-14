@@ -1,0 +1,54 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: v7-water
+  namespace: ns-v7g0
+  labels:
+    k8s-app: v7-water
+spec:
+  selector:
+    matchLabels:
+      k8s-app: v7-water
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-water
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-water
+        image: 10.190.2.171/sinbad/water:ali-v1.0.4
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: RETAIL_SERVICE_NAME
+          value: "http://v7-webapp-bosv1:8080/ierp/"
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 1200Mi
+          requests:
+            cpu: 1000m
+            memory: 800Mi
+        ports:
+        - containerPort: 5680
+      serviceAccountName: sa-v7g0
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-water
+  namespace: ns-v7g0
+  labels:
+    k8s-app: v7-water
+spec:
+  selector:
+    k8s-app: v7-water
+  ports:
+  - port: 5680
+    targetPort: 5680
+    name: water
+

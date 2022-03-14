@@ -1,0 +1,16 @@
+---
+- hosts: nodes
+  # remote_user: abcdauto
+  # become: yes
+  # gather_facts: false
+  tasks:
+  # - name: test shell
+    # shell: id
+    # register: shell_status
+  # - name: test debug
+    # debug: var="shell_status.stdout"
+  - name: test yum
+    yum: name=tree state=present
+  # - name: test copy
+    # copy: src=/root/dir1/test61.txt dest=/root
+

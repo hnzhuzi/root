@@ -1,0 +1,68 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: logstash-config-redis
+  namespace: ns-v7g1
+data:
+  logstash.conf: |
+   input {
+     redis {
+         data_type => "list"
+         key => "tf-ali-access"
+         host => "log-redis"
+     }
+    }
+   input {
+     redis {
+         data_type => "list"
+         key => "tftmc-ali-access"
+         host => "log-redis"
+     }
+    }
+   input {
+     redis {
+         data_type => "list"
+         key => "tf-long-access"
+         host => "log-redis"
+     }
+    }
+   filter {
+     if [url] =~ ".*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|txt|js|css|ttf)$" {
+        drop { }
+    }
+    if "/web/heartbeat" in [url] {
+        drop {} 
+    }
+    if "/live.html" in [url] { 
+        drop {}
+    }
+    mutate {
+      gsub => ["message", "\\x", "\\\x"]
+      gsub => ["message", ":-,", ":0,"]
+    }
+    json{
+        source => "message"
+        remove_field => ["beat","message"]
+    }
+    if "-" in [responseTime] {
+      mutate {
+        replace => {
+          "responseTime" => "0"
+        }
+      }
+    }
+    ruby { 
+       code => "event.set('index_day', event.timestamp.time.localtime.strftime('%Y.%m.%d'))" 
+      }
+    urldecode {
+     all_fields=>true
+     } 
+    }
+    output {
+      elasticsearch {
+        hosts=> "10.190.2.189:9200"
+        index => "logstash-%{type}-%{index_day}"
+        template_overwrite => true
+        template => "/usr/local/success.json"
+     }
+    } 

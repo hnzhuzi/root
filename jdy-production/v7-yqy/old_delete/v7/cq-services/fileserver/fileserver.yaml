@@ -1,0 +1,123 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ # annotations:
+ #   com.kingdee.kcs.clusterenv: ""
+ #   com.kingdee.kcs.deploytime: "1585036268"
+ #   deployment.kubernetes.io/revision: "1"
+ # creationTimestamp: "2020-03-24T07:51:08Z"
+ # generation: 1
+  labels:
+   # cluster: ns-v7yqy
+    app: fileserver
+  name: fileserver
+  namespace: ns-v7yqy
+ # resourceVersion: "136264"
+ # selfLink: /apis/extensions/v1beta1/namespaces/clustername/deployments/fileserver
+ # uid: 39092a68-6da4-11ea-ab79-08002792b40b
+spec:
+#  progressDeadlineSeconds: 600
+  replicas: 1
+ # revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: fileserver
+    #  cluster: ns-v7yqy
+    #  sname: fileserver
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+ #     annotations:
+ #       com.kingdee.kcs.zid: "5"
+ #     creationTimestamp: null
+      labels:
+        app: fileserver
+ #       cluster: ns-v7yqy
+ #       sname: fileserver
+    spec:
+      serviceAccountName: sa-v7yqy
+      containers:
+      - env:
+        - name: JETTY_PORT
+          value: "8100"
+        - name: JAVA_OPTS
+          value: -server -Xms2048m -Xmx2048m -XX:MaxMetaspaceSize=512m -XX:+DisableExplicitGC
+            -Duser.timezone=GMT+8 -Dfile.encoding=UTF-8
+        image: kcr.kingdee.com/support/fileserver:V3.0-20201223
+       # serviceAccountName: sa-v7yqy
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 600
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 8100
+          timeoutSeconds: 3
+        name: fileserver
+        ports:
+        - containerPort: 8100
+          protocol: TCP
+        - containerPort: 8765
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 8100
+          timeoutSeconds: 3
+        resources:
+          limits:
+            cpu: "2"
+            memory: 4Gi
+          requests:
+            cpu: 300m
+            memory: 4Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/localtime
+          name: v-015850362680
+          readOnly: true
+        - mountPath: /kddata
+          name: fileserver-data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+     # schedulerName: default-scheduler
+  #    securityContext: {}
+  #    terminationGracePeriodSeconds: 30
+      volumes:
+      - hostPath:
+          path: /etc/localtime
+          type: ""
+        name: v-015850362680
+      - name: fileserver-data
+        persistentVolumeClaim:
+          claimName: cq-fileserver-pvc
+      nodeSelector:
+        cq: v7yqy
+ #status:
+ # availableReplicas: 1
+ # conditions:
+ # - lastTransitionTime: "2020-03-24T07:51:42Z"
+ #   lastUpdateTime: "2020-03-24T07:51:42Z"
+ #   message: Deployment has minimum availability.
+ #   reason: MinimumReplicasAvailable
+ #   status: "True"
+ #   type: Available
+ # - lastTransitionTime: "2020-03-24T07:51:08Z"
+ #   lastUpdateTime: "2020-03-24T07:51:42Z"
+ #   message: ReplicaSet "fileserver-6b6f89d596" has successfully progressed.
+ #   reason: NewReplicaSetAvailable
+ #   status: "True"
+ #   type: Progressing
+ # observedGeneration: 1
+ # readyReplicas: 1
+ # replicas: 1
+ # updatedReplicas: 1

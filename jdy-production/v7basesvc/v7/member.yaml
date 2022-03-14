@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v7-nginx-tfcm
+  namespace: ns-basesvc
+  labels:
+    k8s-app: v7-nginx-tfcm
+spec:
+  selector:
+    matchLabels:
+      k8s-app: v7-nginx-tfcm
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-nginx-tfcm
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-nginx-tfcm
+        image: 10.190.2.171/jdy-web/member:v1.0.1
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 1000Mi
+          requests:
+            cpu: 300m
+            memory: 800Mi
+        ports:
+        - containerPort: 80
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-nginx-tfcm
+  namespace: ns-basesvc
+  labels:
+    k8s-app: v7-nginx-tfcm
+spec:
+  selector:
+    k8s-app: v7-nginx-tfcm
+  ports:
+  - port: 80

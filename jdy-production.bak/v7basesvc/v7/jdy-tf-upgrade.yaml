@@ -1,0 +1,55 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jdy-tf-upgrade
+  namespace: ns-basesvc
+  labels:
+    k8s-app: jdy-tf-upgrade
+spec:
+  selector:
+    matchLabels:
+      k8s-app: jdy-tf-upgrade
+  template:
+    metadata:
+      labels:
+        k8s-app: jdy-tf-upgrade
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: jdy-tf-upgrade
+        image: 10.190.2.171/v7/jdy-tf-upgrade:v1.0.1
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+          - name : JAVA_OPTIONS
+            value: "-Xms4g -Xmx4g -Dapollo.meta=http://10.190.2.165:8080,http://10.190.2.166:8080 -Dapp.id=tf-upgrade -Denv=PRO"
+        resources:
+          limits:
+            cpu: 3000m
+            memory: 6Gi
+          requests:
+            cpu: 500m
+            memory: 4Gi
+        ports:
+        - containerPort: 6111
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jdy-tf-upgrade
+  namespace: ns-basesvc
+  labels:
+    k8s-app: jdy-tf-upgrade
+spec:
+  selector:
+    k8s-app: jdy-tf-upgrade
+  ports:
+  - port: 6111

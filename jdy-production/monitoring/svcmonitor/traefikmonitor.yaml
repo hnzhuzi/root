@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: traefik
+  namespace: monitoring
+  labels:
+    k8s-app: traefik-ingress-lb
+    release: ack-prometheus-operator
+spec:
+  namespaceSelector:
+    matchNames:
+    - ns-v7g2
+  selector:
+    matchLabels:
+      k8s-app: traefik-ingress-lb
+  endpoints:
+  - port: admin
+    scheme: http
+    path: '/metrics/'
+    interval: 15s

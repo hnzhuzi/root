@@ -1,0 +1,22 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: jvm
+  namespace: monitoring
+  labels:
+    k8s-app: jvm
+    release: ack-prometheus-operator
+spec:
+  namespaceSelector:
+    matchNames:
+    - ns-v7g1
+  #  any: true
+  selector:
+    matchLabels:
+      prometheus: jvm 
+  endpoints:
+  - port: jmx
+    scheme: http
+    path: '/metrics/'
+    interval: 30s
+    targetPort: 3010

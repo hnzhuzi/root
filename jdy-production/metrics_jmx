@@ -1,0 +1,353 @@
+HTTP/1.1 200 OK
+Date: Tue, 29 Jun 2021 03:16:44 GMT
+Content-type: text/plain; version=0.0.4; charset=utf-8
+Content-length: 28799
+
+# HELP jvm_classes_loaded The number of classes that are currently loaded in the JVM
+# TYPE jvm_classes_loaded gauge
+jvm_classes_loaded 32793.0
+# HELP jvm_classes_loaded_total The total number of classes that have been loaded since the JVM has started execution
+# TYPE jvm_classes_loaded_total counter
+jvm_classes_loaded_total 33568.0
+# HELP jvm_classes_unloaded_total The total number of classes that have been unloaded since the JVM has started execution
+# TYPE jvm_classes_unloaded_total counter
+jvm_classes_unloaded_total 775.0
+# HELP jvm_memory_bytes_used Used bytes of a given JVM memory area.
+# TYPE jvm_memory_bytes_used gauge
+jvm_memory_bytes_used{area="heap",} 3.784305648E9
+jvm_memory_bytes_used{area="nonheap",} 3.92119112E8
+# HELP jvm_memory_bytes_committed Committed (bytes) of a given JVM memory area.
+# TYPE jvm_memory_bytes_committed gauge
+jvm_memory_bytes_committed{area="heap",} 6.442450944E9
+jvm_memory_bytes_committed{area="nonheap",} 4.25984E8
+# HELP jvm_memory_bytes_max Max (bytes) of a given JVM memory area.
+# TYPE jvm_memory_bytes_max gauge
+jvm_memory_bytes_max{area="heap",} 6.442450944E9
+jvm_memory_bytes_max{area="nonheap",} 8.8080384E8
+# HELP jvm_memory_bytes_init Initial bytes of a given JVM memory area.
+# TYPE jvm_memory_bytes_init gauge
+jvm_memory_bytes_init{area="heap",} 6.442450944E9
+jvm_memory_bytes_init{area="nonheap",} 6.7108864E7
+# HELP jvm_memory_pool_bytes_used Used bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_used gauge
+jvm_memory_pool_bytes_used{pool="Code Cache",} 1.6819392E8
+jvm_memory_pool_bytes_used{pool="Metaspace",} 2.01343752E8
+jvm_memory_pool_bytes_used{pool="Compressed Class Space",} 2.258144E7
+jvm_memory_pool_bytes_used{pool="G1 Eden Space",} 9.14358272E8
+jvm_memory_pool_bytes_used{pool="G1 Survivor Space",} 9.437184E7
+jvm_memory_pool_bytes_used{pool="G1 Old Gen",} 2.775575536E9
+# HELP jvm_memory_pool_bytes_committed Committed bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_committed gauge
+jvm_memory_pool_bytes_committed{pool="Code Cache",} 1.75112192E8
+jvm_memory_pool_bytes_committed{pool="Metaspace",} 2.2413312E8
+jvm_memory_pool_bytes_committed{pool="Compressed Class Space",} 2.6738688E7
+jvm_memory_pool_bytes_committed{pool="G1 Eden Space",} 2.963275776E9
+jvm_memory_pool_bytes_committed{pool="G1 Survivor Space",} 9.437184E7
+jvm_memory_pool_bytes_committed{pool="G1 Old Gen",} 3.384803328E9
+# HELP jvm_memory_pool_bytes_max Max bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_max gauge
+jvm_memory_pool_bytes_max{pool="Code Cache",} 2.097152E8
+jvm_memory_pool_bytes_max{pool="Metaspace",} 5.36870912E8
+jvm_memory_pool_bytes_max{pool="Compressed Class Space",} 1.34217728E8
+jvm_memory_pool_bytes_max{pool="G1 Eden Space",} -1.0
+jvm_memory_pool_bytes_max{pool="G1 Survivor Space",} -1.0
+jvm_memory_pool_bytes_max{pool="G1 Old Gen",} 6.442450944E9
+# HELP jvm_memory_pool_bytes_init Initial bytes of a given JVM memory pool.
+# TYPE jvm_memory_pool_bytes_init gauge
+jvm_memory_pool_bytes_init{pool="Code Cache",} 6.7108864E7
+jvm_memory_pool_bytes_init{pool="Metaspace",} 0.0
+jvm_memory_pool_bytes_init{pool="Compressed Class Space",} 0.0
+jvm_memory_pool_bytes_init{pool="G1 Eden Space",} 3.37641472E8
+jvm_memory_pool_bytes_init{pool="G1 Survivor Space",} 0.0
+jvm_memory_pool_bytes_init{pool="G1 Old Gen",} 6.104809472E9
+# HELP jvm_gc_collection_seconds Time spent in a given JVM garbage collector in seconds.
+# TYPE jvm_gc_collection_seconds summary
+jvm_gc_collection_seconds_count{gc="G1 Young Generation",} 4532.0
+jvm_gc_collection_seconds_sum{gc="G1 Young Generation",} 281.608
+jvm_gc_collection_seconds_count{gc="G1 Old Generation",} 0.0
+jvm_gc_collection_seconds_sum{gc="G1 Old Generation",} 0.0
+# HELP jvm_memory_pool_allocated_bytes_total Total bytes allocated in a given JVM memory pool. Only updated after GC, not continuously.
+# TYPE jvm_memory_pool_allocated_bytes_total counter
+jvm_memory_pool_allocated_bytes_total{pool="G1 Old Gen",} 9.669056072E10
+jvm_memory_pool_allocated_bytes_total{pool="Code Cache",} 3.84469376E8
+jvm_memory_pool_allocated_bytes_total{pool="G1 Eden Space",} 1.5485942890496E13
+jvm_memory_pool_allocated_bytes_total{pool="G1 Survivor Space",} 3.2562479104E10
+jvm_memory_pool_allocated_bytes_total{pool="Compressed Class Space",} 2.302208E7
+jvm_memory_pool_allocated_bytes_total{pool="Metaspace",} 2.03573232E8
+# HELP jvm_threads_current Current thread count of a JVM
+# TYPE jvm_threads_current gauge
+jvm_threads_current 416.0
+# HELP jvm_threads_daemon Daemon thread count of a JVM
+# TYPE jvm_threads_daemon gauge
+jvm_threads_daemon 355.0
+# HELP jvm_threads_peak Peak thread count of a JVM
+# TYPE jvm_threads_peak gauge
+jvm_threads_peak 446.0
+# HELP jvm_threads_started_total Started thread count of a JVM
+# TYPE jvm_threads_started_total counter
+jvm_threads_started_total 84714.0
+# HELP jvm_threads_deadlocked Cycles of JVM-threads that are in deadlock waiting to acquire object monitors or ownable synchronizers
+# TYPE jvm_threads_deadlocked gauge
+jvm_threads_deadlocked 0.0
+# HELP jvm_threads_deadlocked_monitor Cycles of JVM-threads that are in deadlock waiting to acquire object monitors
+# TYPE jvm_threads_deadlocked_monitor gauge
+jvm_threads_deadlocked_monitor 0.0
+# HELP jvm_threads_state Current count of threads by state
+# TYPE jvm_threads_state gauge
+jvm_threads_state{state="NEW",} 0.0
+jvm_threads_state{state="RUNNABLE",} 36.0
+jvm_threads_state{state="BLOCKED",} 4.0
+jvm_threads_state{state="TERMINATED",} 0.0
+jvm_threads_state{state="TIMED_WAITING",} 180.0
+jvm_threads_state{state="WAITING",} 196.0
+# HELP jmx_exporter_build_info A metric with a constant '1' value labeled with the version of the JMX exporter.
+# TYPE jmx_exporter_build_info gauge
+jmx_exporter_build_info{version="0.15.0",name="jmx_prometheus_javaagent",} 1.0
+# HELP jmx_config_reload_success_total Number of times configuration have successfully been reloaded.
+# TYPE jmx_config_reload_success_total counter
+jmx_config_reload_success_total 0.0
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_FiveMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>FiveMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_FiveMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_FiveMinuteRate 0.4680741785609963
+# HELP kd_metrics_kd_metrics_sql_execute_slow1second_OneMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow1second><>OneMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow1second_OneMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow1second_OneMinuteRate 28.532465034117433
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_Count Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>Count)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_Count untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_Count 4.6563831E7
+# HELP kd_metrics_kd_metrics_dubbo_consumer_errors_MeanRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.errors><>MeanRate)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_errors_MeanRate untyped
+kd_metrics_kd_metrics_dubbo_consumer_errors_MeanRate 3.8385331596541655E-6
+# HELP kd_metrics_kd_metrics_sql_execute_slow60second_Count Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow60second><>Count)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow60second_Count untyped
+kd_metrics_kd_metrics_sql_execute_slow60second_Count 27678.0
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Max Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>Max)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Max untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Max 4249.130432
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_50thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>50thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_50thPercentile untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_50thPercentile 16.257037999999998
+# HELP kd_metrics_kd_metrics_sql_execute_slow5second_FiveMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow5second><>FiveMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow5second_FiveMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow5second_FiveMinuteRate 3.8337543545161927
+# HELP kd_metrics_kd_metrics_sql_execute_slow60second_MeanRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow60second><>MeanRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow60second_MeanRate untyped
+kd_metrics_kd_metrics_sql_execute_slow60second_MeanRate 0.10624314420298923
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Mean Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>Mean)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Mean untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Mean 90.69038660292404
+# HELP kd_metrics_kd_metrics_dubbo_consumer_errors_Count Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.errors><>Count)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_errors_Count untyped
+kd_metrics_kd_metrics_dubbo_consumer_errors_Count 1.0
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_MeanRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>MeanRate)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_MeanRate untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_MeanRate 178.73493942976668
+# HELP kd_metrics_kd_metrics_sql_execute_slow5second_FifteenMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow5second><>FifteenMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow5second_FifteenMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow5second_FifteenMinuteRate 3.8327777983550426
+# HELP kd_metrics_kd_metrics_sql_execute_slow30second_MeanRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow30second><>MeanRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow30second_MeanRate untyped
+kd_metrics_kd_metrics_sql_execute_slow30second_MeanRate 0.11898710112057473
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_StdDev Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>StdDev)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_StdDev untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_StdDev 0.10095500094029307
+# HELP kd_metrics_kd_metrics_sql_execute_slow30second_FifteenMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow30second><>FifteenMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow30second_FifteenMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow30second_FifteenMinuteRate 0.3115934777408829
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_Min Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>Min)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_Min untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_Min 6.72E-4
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_OneMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>OneMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_OneMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_OneMinuteRate 0.5046803165253824
+# HELP kd_metrics_kd_metrics_sql_execute_slow60second_OneMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow60second><>OneMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow60second_OneMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow60second_OneMinuteRate 0.2981567617437422
+# HELP kd_metrics_kd_metrics_sql_execute_slow1second_MeanRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow1second><>MeanRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow1second_MeanRate untyped
+kd_metrics_kd_metrics_sql_execute_slow1second_MeanRate 8.484508084074026
+# HELP kd_metrics_kd_metrics_dubbo_consumer_errors_FiveMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.errors><>FiveMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_errors_FiveMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_consumer_errors_FiveMinuteRate 1.4821969375E-313
+# HELP kd_metrics_kd_metrics_sql_execute_slow1second_FiveMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow1second><>FiveMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow1second_FiveMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow1second_FiveMinuteRate 26.307964380726034
+# HELP kd_metrics_kd_metrics_dubbo_consumer_errors_OneMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.errors><>OneMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_errors_OneMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_consumer_errors_OneMinuteRate 2.964393875E-314
+# HELP kd_metrics_kd_metrics_sql_execute_slow60second_FifteenMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow60second><>FifteenMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow60second_FifteenMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow60second_FifteenMinuteRate 0.27700814468677887
+# HELP kd_metrics_kd_metrics_sql_execute_slow30second_FiveMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow30second><>FiveMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow30second_FiveMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow30second_FiveMinuteRate 0.29801362764952427
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Min Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>Min)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Min untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Min 1.27616
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_Max Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>Max)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_Max untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_Max 2.330713
+# HELP kd_metrics_kd_metrics_sql_execute_slow30second_OneMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow30second><>OneMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow30second_OneMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow30second_OneMinuteRate 0.29816493737442173
+# HELP kd_metrics_kd_metrics_sql_execute_slow10second_Count Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow10second><>Count)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow10second_Count untyped
+kd_metrics_kd_metrics_sql_execute_slow10second_Count 181199.0
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_98thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>98thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_98thPercentile untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_98thPercentile 0.054431999999999994
+# HELP kd_metrics_kd_metrics_sql_execute_slow30second_Count Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow30second><>Count)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow30second_Count untyped
+kd_metrics_kd_metrics_sql_execute_slow30second_Count 30998.0
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Count Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>Count)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Count untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_Count 41491.0
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_75thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>75thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_75thPercentile untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_75thPercentile 0.031561
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_95thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>95thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_95thPercentile untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_95thPercentile 0.045609
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_Mean Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>Mean)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_Mean untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_Mean 0.033710627694271994
+# HELP kd_metrics_kd_metrics_sql_execute_slow10second_FiveMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow10second><>FiveMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow10second_FiveMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow10second_FiveMinuteRate 2.0073266847950157
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_MeanRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>MeanRate)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_MeanRate untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_MeanRate 0.15926458097018079
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_50thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>50thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_50thPercentile untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_50thPercentile 0.027263
+# HELP kd_metrics_kd_metrics_dubbo_consumer_errors_FifteenMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.errors><>FifteenMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_errors_FifteenMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_consumer_errors_FifteenMinuteRate 3.909124133994486E-127
+# HELP kd_metrics_kd_metrics_sql_execute_slow5second_Count Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow5second><>Count)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow5second_Count untyped
+kd_metrics_kd_metrics_sql_execute_slow5second_Count 318678.0
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_FifteenMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>FifteenMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_FifteenMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_FifteenMinuteRate 0.4727431325570519
+# HELP kd_metrics_kd_metrics_sql_execute_slow10second_FifteenMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow10second><>FifteenMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow10second_FifteenMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow10second_FifteenMinuteRate 2.0351829328326403
+# HELP kd_metrics_kd_metrics_sql_execute_slow10second_OneMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow10second><>OneMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow10second_OneMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow10second_OneMinuteRate 2.101592257168089
+# HELP kd_metrics_kd_metrics_sql_execute_slow5second_OneMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow5second><>OneMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow5second_OneMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow5second_OneMinuteRate 3.912851841758567
+# HELP kd_metrics_kd_metrics_sql_execute_slow60second_FiveMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow60second><>FiveMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow60second_FiveMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow60second_FiveMinuteRate 0.2801477328636301
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_99thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>99thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_99thPercentile untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_99thPercentile 664.3084259999999
+# HELP kd_metrics_kd_metrics_sql_execute_slow1second_Count Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow1second><>Count)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow1second_Count untyped
+kd_metrics_kd_metrics_sql_execute_slow1second_Count 2210347.0
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_FiveMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>FiveMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_FiveMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_FiveMinuteRate 192.49078218906953
+# HELP kd_metrics_kd_metrics_sql_execute_slow5second_MeanRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow5second><>MeanRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow5second_MeanRate untyped
+kd_metrics_kd_metrics_sql_execute_slow5second_MeanRate 1.223258668607997
+# HELP kd_metrics_kd_metrics_mq_consumer_activeConsumers_Count Attribute exposed for management (kd.metrics<name=kd.metrics.mq.consumer.activeConsumers><>Count)
+# TYPE kd_metrics_kd_metrics_mq_consumer_activeConsumers_Count untyped
+kd_metrics_kd_metrics_mq_consumer_activeConsumers_Count 0.0
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_FifteenMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>FifteenMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_FifteenMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_FifteenMinuteRate 192.4650858102648
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_999thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>999thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_999thPercentile untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_999thPercentile 2.330713
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_95thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>95thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_95thPercentile untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_95thPercentile 663.3101389999999
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_StdDev Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>StdDev)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_StdDev untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_StdDev 309.7561540979249
+# HELP kd_metrics_kd_metrics_sql_execute_slow1second_FifteenMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow1second><>FifteenMinuteRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow1second_FifteenMinuteRate untyped
+kd_metrics_kd_metrics_sql_execute_slow1second_FifteenMinuteRate 26.7362976440849
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_999thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>999thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_999thPercentile untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_999thPercentile 4249.130432
+# HELP kd_metrics_kd_metrics_dubbo_maxThreads_Value Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.maxThreads><>Value)
+# TYPE kd_metrics_kd_metrics_dubbo_maxThreads_Value untyped
+kd_metrics_kd_metrics_dubbo_maxThreads_Value 200.0
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_OneMinuteRate Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>OneMinuteRate)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_OneMinuteRate untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_OneMinuteRate 193.0305327076737
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_75thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>75thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_75thPercentile untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_75thPercentile 61.483337
+# HELP kd_metrics_kd_metrics_sql_execute_slow10second_MeanRate Attribute exposed for management (kd.metrics<name=kd.metrics.sql.execute.slow10second><>MeanRate)
+# TYPE kd_metrics_kd_metrics_sql_execute_slow10second_MeanRate untyped
+kd_metrics_kd_metrics_sql_execute_slow10second_MeanRate 0.6955398479851527
+# HELP kd_metrics_kd_metrics_dubbo_thread_queuewait_99thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.thread.queuewait><>99thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_thread_queuewait_99thPercentile untyped
+kd_metrics_kd_metrics_dubbo_thread_queuewait_99thPercentile 0.062663
+# HELP kd_metrics_kd_metrics_dubbo_consumer_requestTimer_98thPercentile Attribute exposed for management (kd.metrics<name=kd.metrics.dubbo.consumer.requestTimer><>98thPercentile)
+# TYPE kd_metrics_kd_metrics_dubbo_consumer_requestTimer_98thPercentile untyped
+kd_metrics_kd_metrics_dubbo_consumer_requestTimer_98thPercentile 664.3084259999999
+# HELP jmx_scrape_duration_seconds Time this JMX scrape took, in seconds.
+# TYPE jmx_scrape_duration_seconds gauge
+jmx_scrape_duration_seconds 0.006240521
+# HELP jmx_scrape_error Non-zero if this scrape failed.
+# TYPE jmx_scrape_error gauge
+jmx_scrape_error 0.0
+# HELP jmx_scrape_cached_beans Number of beans with their matching rule cached
+# TYPE jmx_scrape_cached_beans gauge
+jmx_scrape_cached_beans 0.0
+# HELP jmx_config_reload_failure_total Number of times configuration have failed to be reloaded.
+# TYPE jmx_config_reload_failure_total counter
+jmx_config_reload_failure_total 0.0
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 67740.84
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.624676079027E9
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 1256.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1048576.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 8.69015552E9
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 7.713288192E9
+# HELP jvm_info VM version info
+# TYPE jvm_info gauge
+jvm_info{runtime="Java(TM) SE Runtime Environment",vendor="Oracle Corporation",version="1.8.0_202-b08",} 1.0
+# HELP jvm_buffer_pool_used_bytes Used bytes of a given JVM buffer pool.
+# TYPE jvm_buffer_pool_used_bytes gauge
+jvm_buffer_pool_used_bytes{pool="direct",} 1.6690346E7
+jvm_buffer_pool_used_bytes{pool="mapped",} 2.1767952E7
+# HELP jvm_buffer_pool_capacity_bytes Bytes capacity of a given JVM buffer pool.
+# TYPE jvm_buffer_pool_capacity_bytes gauge
+jvm_buffer_pool_capacity_bytes{pool="direct",} 1.6690344E7
+jvm_buffer_pool_capacity_bytes{pool="mapped",} 2.1767952E7
+# HELP jvm_buffer_pool_used_buffers Used buffers of a given JVM buffer pool.
+# TYPE jvm_buffer_pool_used_buffers gauge
+jvm_buffer_pool_used_buffers{pool="direct",} 53.0
+jvm_buffer_pool_used_buffers{pool="mapped",} 1.0
+# HELP jmx_config_reload_failure_created Number of times configuration have failed to be reloaded.
+# TYPE jmx_config_reload_failure_created gauge
+jmx_config_reload_failure_created 1.624676079386E9
+# HELP jmx_config_reload_success_created Number of times configuration have successfully been reloaded.
+# TYPE jmx_config_reload_success_created gauge
+jmx_config_reload_success_created 1.624676079382E9
+# HELP jvm_memory_pool_allocated_bytes_created Total bytes allocated in a given JVM memory pool. Only updated after GC, not continuously.
+# TYPE jvm_memory_pool_allocated_bytes_created gauge
+jvm_memory_pool_allocated_bytes_created{pool="G1 Old Gen",} 1.624676096336E9
+jvm_memory_pool_allocated_bytes_created{pool="Code Cache",} 1.624676083332E9
+jvm_memory_pool_allocated_bytes_created{pool="G1 Eden Space",} 1.624676083332E9
+jvm_memory_pool_allocated_bytes_created{pool="G1 Survivor Space",} 1.624676083332E9
+jvm_memory_pool_allocated_bytes_created{pool="Compressed Class Space",} 1.624676083332E9
+jvm_memory_pool_allocated_bytes_created{pool="Metaspace",} 1.624676083332E9

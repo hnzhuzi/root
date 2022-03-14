@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v7-long
+  namespace: ns-v7g5
+  labels:
+    k8s-app: v7-long
+spec:
+  selector:
+    matchLabels:
+      k8s-app: v7-long
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-long
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-long
+        image: 10.190.2.171/sinbad/long:ali-v1.0.1
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2000Mi
+          requests:
+            cpu: 1000m
+            memory: 1500Mi
+        ports:
+        - containerPort: 6388
+        - containerPort: 6380
+      serviceAccountName: sa-v7g5
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-long
+  namespace: ns-v7g5
+  labels:
+    k8s-app: v7-long
+spec:
+  selector:
+    k8s-app: v7-long
+  ports:
+  - port: 6380
+    targetPort: 6380
+    name: wswebsocket
+  - port: 6388
+    targetPort: 6388
+    name: wshttp
+

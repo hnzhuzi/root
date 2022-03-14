@@ -1,0 +1,64 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-headless
+spec:
+  ports:
+  - port: 80
+    name: web
+  clusterIP: None
+  selector:
+    app: nginx
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  ports:
+  - port: 80
+    name: web
+  # clusterIP: None
+  selector:
+    app: nginx
+
+---
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nginx
+spec:
+  # podManagementPolicy: Parallel
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  serviceName: nginx-headless
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: harbor.k8s.maimaiti.site/library/nginx:alpine
+        ports:
+        - containerPort: 80
+          name: web
+        # volumeMounts:
+        # - name: www
+          # mountPath: /usr/share/nginx/html
+  # updateStrategy:
+    # type: RollingUpdate
+  # volumeClaimTemplates:
+  # - metadata:
+      # name: www
+    # spec:
+      # accessModes: [ "ReadWriteOnce" ]
+      # resources:
+        # requests:
+          # storage: 1Gi
+      # storageClassName: cephfs

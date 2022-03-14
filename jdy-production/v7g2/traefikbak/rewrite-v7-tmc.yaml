@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  name: rewrite-v7-tmc
+  namespace: ns-stable
+spec:
+  tls:
+  - hosts:
+    - v7tmc.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: v7tmc.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: v7-tmc
+          servicePort: 8080

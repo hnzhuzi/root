@@ -1,0 +1,233 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-2
+  # minReadySeconds: 5
+  # strategy:
+    # type: RollingUpdate
+    # rollingUpdate:
+      # maxSurge: 1
+      # maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: nginx-2
+    spec:
+      containers:
+      - name: nginx-2
+        image: nginx:1.18-alpine
+        ports:
+        - containerPort: 80
+          # hostPort: 81
+        # livenessProbe:
+          # httpGet:
+            # path: /
+            # port: 80
+        # readinessProbe:
+          # httpGet:
+            # path: /
+            # port: 80
+        # lifecycle:
+          # preStop:
+            # exec:
+              # command: ["/bin/sh", "-c", "sleep 30"]
+        # command: [ "/bin/sh", "-c", "echo $(KEY1)" ]
+        # args:
+        # - sh
+        # - -c
+        # - sleep 360000
+        # env:
+          # - name: KEY1
+            # valueFrom:
+              # configMapKeyRef:
+                # name: testconfigmap
+                # key: key1
+          # - name: DEMO_GREETING
+            # value: "Hello from the environment"
+          # - name: NODE_NAME
+            # valueFrom:
+              # fieldRef:
+                # fieldPath: spec.nodeName
+          # - name: POD_NAME
+            # valueFrom:
+              # fieldRef:
+                # fieldPath: metadata.name
+          # - name: POD_NAMESPACE
+            # valueFrom:
+              # fieldRef:
+                # fieldPath: metadata.namespace
+          # - name: POD_IP
+            # valueFrom:
+              # fieldRef:
+                # fieldPath: status.podIP
+        volumeMounts:
+        - name: data1
+          mountPath: "/usr/share/nginx/html/"
+        # - name: data2
+          # mountPath: "/usr/share/nginx/html/data2"
+        # - name: default-conf
+          # mountPath: /etc/nginx/conf.d/default.conf
+          # subPath: default.conf
+        # - name: subpathdir
+          # mountPath: /usr/share/nginx/html
+          # subPath: data3
+        - name: host-time
+          mountPath: /etc/localtime
+          readOnly: true
+
+        # resources:
+          # limits:
+            # cpu: 100m
+            # memory: 100Mi
+          # requests:
+            # cpu: 500m
+            # memory: 500Mi
+        # resources:
+          # limits:
+            # cpu: 500m
+            # memory: 1000Mi
+      # hostNetwork: true
+      # securityContext:
+        # runAsUser: 0
+      # imagePullSecrets:
+      # - name: myreg
+      volumes:
+      - name: data1
+        # persistentVolumeClaim:
+          # claimName: pv1
+      # - name: data2
+        # persistentVolumeClaim:
+          # claimName: rbdpvc
+      # - name: subpathdir
+        # emptyDir: {}
+        # hostPath:
+          # path: /root/subpathdir
+        # secret:
+          # secretName: testsecret
+        configMap:
+          name: nginx-1
+          # items:
+          # - key: test1.html
+            # path: test11.html
+      # - name: default-conf
+        # configMap:
+          # name: nginx-2
+      - name: host-time
+        hostPath:
+          path: /etc/localtime
+      # nodeSelector:
+        # # node-role.kubernetes.io/master: ""
+        # kubernetes.io/hostname: 10.124.0.64
+      # affinity:
+        # nodeAffinity:
+          # requiredDuringSchedulingIgnoredDuringExecution:
+            # nodeSelectorTerms:
+            # - matchExpressions:
+              # - key: kubernetes.io/hostname
+                # operator: NotIn
+                # values:
+                # - 192.168.1.140
+                # - 192.168.1.161
+              # - key: node-role.kubernetes.io/master
+                # operator: Exists
+          # preferredDuringSchedulingIgnoredDuringExecution:
+          # - weight: 1
+            # preference:
+              # matchExpressions:
+              # - key: source
+                # operator: In
+                # values:
+                # - qikqiak
+        # podAffinity:
+          # requiredDuringSchedulingIgnoredDuringExecution:
+          # - labelSelector:
+              # matchExpressions:
+              # - key: app
+                # operator: In
+                # values:
+                # - busybox-pod
+            # topologyKey: kubernetes.io/hostname
+        # podAntiAffinity:
+          # preferredDuringSchedulingIgnoredDuringExecution:
+          # - weight: 1
+            # podAffinityTerm:
+              # labelSelector:
+                # matchExpressions:
+                # - key: app
+                  # operator: In
+                  # values:
+                  # - node-affinity-pod
+              # topologyKey: kubernetes.io/hostname
+      # tolerations:
+      # - operator: Exists
+      # - key: node-role.kubernetes.io/master
+        # operator: Equal|Exists
+        # value: value
+        # effect: NoSchedule #NoSchedule PreferNoSchedule NoExecute
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-2
+spec:
+  type: NodePort
+  selector:
+    app: nginx-2
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30002
+
+---
+
+# # apiVersion: extensions/v1beta1
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+  # name: nginx-2
+  # annotations:
+    # kubernetes.io/ingress.class: "nginx" #指定使用ingress controller的类别
+    # # kubernetes.io/tls-acme: "true" #Cert Manager自动生成证书
+    # # nginx.ingress.kubernetes.io/rewrite-target: web.com #maimaiti.site/path/(.*)转向web.com/$1
+    # # nginx.ingress.kubernetes.io/use-regex: "true" #path可以使用正则表达式
+    # # nginx.ingress.kubernetes.io/proxy-connect-timeout: "600" #连接超时时间，默认为5s
+    # # nginx.ingress.kubernetes.io/proxy-send-timeout: "600" #后端服务器回转数据超时时间，默认为60s
+    # # nginx.ingress.kubernetes.io/proxy-read-timeout: "600" #后端服务器响应超时时间，默认为60s
+    # # nginx.ingress.kubernetes.io/proxy-body-size: "10m" #客户端上传文件，最大大小，默认为1m
+    # # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS" #后端端口是443
+    # # nginx.ingress.kubernetes.io/ssl-redirect: "false" #若tls开启，则默认为true
+
+    # # nginx.ingress.kubernetes.io/canary: "true"
+    # # nginx.ingress.kubernetes.io/canary-by-header: "key1" #客户端请求头中包含key1=always/never/其他值
+                                                          # #(忽略Header，基于权重为第一优先级)，基于用户请求，适用于灰度发布以及A/B测试场景。
+    # # nginx.ingress.kubernetes.io/canary-by-header-value: "value1"
+    # # nginx.ingress.kubernetes.io/canary-by-cookie: "key2" #cookie中包含key2=always/never
+    # # nginx.ingress.kubernetes.io/canary-weight: "30" #基于权重的流量切分，适用于蓝绿发布场景。
+
+# spec:
+  # rules:
+  # - host: nginx-2.172.16.195.210.xip.io
+    # http:
+      # paths:
+      # - path: /
+        # pathType: Prefix
+        # backend:
+          # # serviceName: nginx-2
+          # # servicePort: 80
+          # service:
+            # name: nginx-2
+            # port:
+              # number: 80
+  # # tls:
+  # # - hosts:
+    # # - nginx-2.k8s.maimaiti.site
+    # # secretName: nginx-2-k8s-maimaiti-site-tls-secret

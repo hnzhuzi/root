@@ -1,0 +1,114 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ete-monitor-receiver-conf
+  namespace: ns-basesvc
+  labels:
+    name: ete-monitor-receiver-conf
+data:
+  application.yml: |
+    server:
+      port: 8080
+      servlet:
+        context-path: /
+    spring:
+      profiles:
+        active: core
+      application:
+        name: receiver
+      kafka:
+        bootstrap-servers: 10.190.2.191:9092,10.190.2.190:9092,10.190.2.192:9092
+        producer:
+          retries: 0
+          batch-size: 16384
+          buffer-memory: 33554432
+          key-serializer: org.apache.kafka.common.serialization.StringSerializer
+          value-serializer: org.apache.kafka.common.serialization.StringSerializer
+          acks: 1
+        consumer:
+          group-id: ete-monitor-produce
+    panshi:
+      host: panshi-master.jdy.com
+      accountUri: /api/tenantManager/dataCenter/ids
+      authUri: /api/auth/login
+      authUsername: 17673641366
+      authPassword: tomgs1993326
+      commonMsgExecutorCapacity: 15000
+      errorMsgExecutorCapacity: 10000
+      checkEnable: false
+    logging:
+      level:
+        #com.jdy.receiver : debug
+        com.jdy.receiver: info
+    swagger:
+      title: 端到端
+      description: 端到端Http接口设计
+      version: 1.9.0.RELEASE
+      base-package: com.jdy
+      base-path: /**
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ete-monitor-receiver
+  namespace: ns-basesvc
+  labels:
+    k8s-app: ete-monitor-receiver
+spec:
+  selector:
+    matchLabels:
+      k8s-app: ete-monitor-receiver
+  template:
+    metadata:
+      labels:
+        k8s-app: ete-monitor-receiver
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      imagePullSecrets:
+      - name: regsecret
+      volumes:
+      - name: ete-monitor-receiver
+        configMap:
+          name: ete-monitor-receiver-conf
+          items:
+          - key: application.yml
+            path: path/to/application.yaml
+      containers:
+      - name: ete-monitor-receiver
+        image: 10.190.2.171/ete-monitor/ete-monitor-receiver:master
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: ete-monitor-receiver
+          mountPath: /etc/application.yml
+          subPath: path/to/application.yaml
+        env:
+        - name: JAVA_OPTIONS
+          value: "-Xms1024M -Xmx1024M"
+        - name: APP_OPTIONS
+          value: "-Dspring.config.location=/etc/application.yml"
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 1500Mi
+          requests:
+            cpu: 500m
+            memory: 1000Mi
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ete-monitor-receiver
+  namespace: ns-basesvc
+  labels:
+    k8s-app: ete-monitor-receiver
+spec:
+  selector:
+    k8s-app: ete-monitor-receiver
+  ports:
+    - port: 8080
+

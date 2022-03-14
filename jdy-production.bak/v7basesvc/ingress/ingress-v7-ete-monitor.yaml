@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/custom-response-headers: Env:BaseSvc-ete-receiver
+  name: ete-monitor-receiver
+  namespace: ns-basesvc
+spec:
+  tls:
+  - hosts:
+    - monitor.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: monitor.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ete-monitor-receiver
+          servicePort: 8080

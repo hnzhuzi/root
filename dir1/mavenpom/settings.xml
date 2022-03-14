@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<!--localRepository>D:\01_work\repository</localRepository>  -->
+	<servers>
+		<server>
+			<id>releases</id>
+			<username>admin</username>
+			<password>admin123</password>
+		</server>
+		<server>
+			<id>snapshots</id>
+			<username>admin</username>
+			<password>admin123</password>
+		</server>
+	</servers>
+	<mirrors>
+		<mirror>
+			<id>alimaven</id>
+			<name>aliyun maven</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<mirrorOf>central</mirrorOf>        
+		</mirror>
+		<mirror>
+			<id>nexus</id>
+			<url>http://nexus.bqjr.club:8081/nexus/content/groups/public/</url>
+			<mirrorOf>*</mirrorOf>
+		</mirror>
+	</mirrors>
+	<profiles>
+		<profile>
+			<id>nexus</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>nexus</id>
+					<name>nexus</name>
+					<url>http://nexus.bqjr.club:8081/nexus/content/groups/public/</url>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>plugin-repo</id>
+					<name>plugin-repository</name>
+					<url>http://nexus.bqjr.club:8081/nexus/content/groups/public/</url>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+			
+			
+			
+		</profile>
+	</profiles>
+</settings> 

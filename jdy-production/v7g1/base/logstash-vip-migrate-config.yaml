@@ -1,0 +1,28 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: logstash-migrate-config
+  namespace: ns-basesvc
+data:
+  logstash.conf: |
+   input {    
+    kafka {
+        bootstrap_servers => "10.190.2.191:9092,10.190.2.190:9092,10.190.2.192:9092"
+        group_id => "logstash"
+        topics => "topic-jdyapp-log"       
+        consumer_threads => 5
+        decorate_events => false
+        codec => json        
+      }   
+    }
+   output {
+    elasticsearch { 
+     hosts => ["10.190.2.189:9200"]
+     document_type => "v3migrate" 
+     template_name => "v3migrate-*"
+     template_overwrite => true
+     manage_template => true
+     index => "v3migrate-%{+YYYY.MM.dd}"     
+     codec => json
+      }  
+    } 

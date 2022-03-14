@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  name: ingress-log-redis
+  namespace: ns-v7g2
+spec:
+  tls:
+  - hosts:
+    - v7log-redis.jdy.com
+    secretName: tls-secret
+  rules:
+  - host: v7log-redis.jdy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: log-redis
+          servicePort: 6379

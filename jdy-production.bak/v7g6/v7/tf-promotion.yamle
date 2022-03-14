@@ -1,0 +1,51 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: v7-promotion
+  namespace: ns-v7g6
+  labels:
+    k8s-app: v7-promotion
+spec:
+  selector:
+    matchLabels:
+      k8s-app: v7-promotion
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-promotion
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-promotion
+        image: 10.190.2.171/sinbad/tf-promotion:ali-v1.0.4
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 1200Mi
+          requests:
+            cpu: 1000m
+            memory: 800Mi
+        ports:
+        - containerPort: 5680
+      serviceAccountName: sa-v7g6
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-promotion
+  namespace: ns-v7g6
+  labels:
+    k8s-app: v7-promotion
+spec:
+  selector:
+    k8s-app: v7-promotion
+  ports:
+  - port: 5680
+    targetPort: 5680
+    name: promotion
+

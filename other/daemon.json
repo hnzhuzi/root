@@ -1,0 +1,12 @@
+{
+  "registry-mirrors": ["https://dockerhub.azk8s.cn", "https://docker.mirrors.ustc.edu.cn","http://f1361db2.m.daocloud.io"],
+  "insecure-registries": ["harbor.k8s.maimaiti.site"],
+  "max-concurrent-downloads": 10,
+  "log-driver": "json-file",
+  "log-level": "warn",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+    },
+  "data-root": "/var/lib/docker"
+}

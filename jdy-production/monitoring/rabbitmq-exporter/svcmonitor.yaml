@@ -1,0 +1,52 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app: prometheus-rabbitmq-exporter
+    release: ack-prometheus-operator
+  name: rabbitmq-exporter
+  namespace: monitoring
+spec:
+  endpoints:
+  - interval: 30s
+    path: /metrics
+    port: rabbitmq-exporter
+    scheme: http
+    targetPort: 9419
+  namespaceSelector:
+    matchNames:
+    - ns-v7g7
+    - ns-v7g8
+    - ns-v7g9
+    - ns-v7g11
+    - ns-v7g15
+    - ns-basesvc
+    - ns-fork1
+    - ns-fork0
+  selector:
+    matchLabels:
+      app: prometheus-rabbitmq-exporter
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app: prometheus-rabbitmq-exporter
+    release: ack-prometheus-operator
+  name: rabbitmq-exporter-g1
+  namespace: monitoring
+spec:
+  endpoints:
+  - interval: 30s
+    scrapeTimeout: 30s
+    path: /metrics
+    port: rabbitmq-exporter
+    scheme: http
+    targetPort: 9419
+  namespaceSelector:
+    matchNames:
+    - ns-v7g1
+  selector:
+    matchLabels:
+      app: prometheus-rabbitmq-exporter

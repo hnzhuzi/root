@@ -1,0 +1,57 @@
+kubeasz部署时注意:
+1. 注意修改coontroller-manager, scheduler监听地址: --address=0.0.0.0，以及增加kube-proxy的地址--metrics-bind-address 0.0.0.0
+2. yum -y install python python-pip python-netaddr
+
+
+v1.16.0 对以下四种类型资源的 API 做出调整:
+DaemonSet, Deployment, StatefulSet 和 ReplicaSet 从 extensions/v1beta1 改用 apps/v1 其Deployment spec必须添加selector matchLabels属性
+NetworkPolicies 从 extensions/v1beta1 改用 networking.k8s.io/v1
+PodSecurityPolicies 从 extensions/v1beta1 改用 policy/v1beta1
+Ingress 从 extensions/v1beta1 改用 networking.k8s.io/v1beta1 其backend service配置也已经改变.
+
+Docker的数据持久化即使数据不随着container的结束而结束，数据存在于host机器上——要么存在于host的某个指定目录中（使用bind mount），要么使用docker自己管理的volume（/var/lib/docker/volumes下）。
+1. 使用bind mount：docker run -it -v $(pwd)/host-dava:/container-data alpine sh
+host机器的目录路径必须为全路径(准确的说需要以/或~/开始的路径)，不然docker会将其当做volume处理
+如果host机器上的目录不存在，docker会自动创建该目录
+如果container中的目录不存在，docker会自动创建该目录
+如果container中的目录已经有内容，那么docker会使用host上的目录将其覆盖掉
+2. 使用volume
+volume也是绕过container的文件系统，直接将数据写到host机器上，只是volume是被docker管理的，docker下所有的volume都在host机器上的指定目录下/var/lib/docker/volumes。
+docker run -it -v my-volume:/mydata alpine sh volume在host机器的目录为/var/lib/docker/volumes/my-volume/_data。此时，如果my-volume不存在，那么docker会自动创建my-volume，然后再挂载。
+也可以不指定host上的volume(docker run -it -v /mydata alpine sh)，此时docker将自动创建一个匿名的volume，并将其挂载到container中的/mydata目录。
+在Dockerfile中，我们也可以使用VOLUME指令来申明contaienr中的某个目录需要映射到某个volume，这表示，在docker运行时，docker会创建一个匿名的volume，并将此volume绑定到container的/foo目录中。也即，Dockerfile中的VOLUME /foo与docker run -v /foo alpine的效果一样。
+需要注意的是，与bind mount不同的是，如果volume是空的而container中的目录有内容，那么docker会将container目录中的内容拷贝到volume中，但是如果volume中已经有内容，则会将container中的目录覆盖。
+
+awk shell -a "", 里面命令如果包含特殊字符 " \ $，要用\进行转义。
+
+K8S 的节点上的资源会被pod和系统进程所使用，如果默认什么都不配置，那么节点上的全部资源都是可以分配给pod使用的，系统进程本身没有保障，这样做很危险：
+1. 集群雪崩：如果节点上调度了大量pod，且pod没有合理的limit限制，节点资源将被耗尽，sshd、kubelet等进程OOM，节点变成not ready状态，pod重新继续调度到其他节点，新节点也被打挂，引起集群雪崩。
+2. 系统进程异常：就算pod设置了limit，但如果机器遇到资源不足，系统进程如docker没有资源保障，会频繁OOM，或者进程hang住无响应，虽然能运行，但容器会反复出问题。
+节点资源主要分为两类：
+可压缩资源：如CPU，即使cpu超配，也可以划分时间片运行，只是运行变慢，进程不会挂。
+不可压缩资源：Memory/Storage，内存不同于CPU，系统内存不足时，会触发OOM杀死进程，按照oom score来确定先kill谁，oom_score_adj值越高，被kill的优先级越高。
+Allocatable(保证Node上所有Pods的request resource不超过Allocatable) = Capacity(Node的所有硬件资源) - Reserved(kube+system)(为系统进程(如内核，systemd 等)和k8s进程预留资源) - Eviction Threshold(当pod实际使用内存大于Allocatable，开始驱逐pod)
+OOM的优先级如下：BestEffort Pod(1000) > Burstable Pod > 其它进程(内核init进程等 0) > Guaranteed Pod(-998) > kubelet/docker/kube-proxy等(-999) > sshd等(-1000)
+ephemeral-storage是kubernetes1.8开始引入的一个资源限制的对象，kubernetes 1.10版本中kubelet默认已经打开的了,到目前1.11还是beta阶段，主要是用于对本地临时存储使用空间大小的限制，如对pod的empty dir、/var/lib/kubelet、日志、容器可读写层的使用大小的限制。
+/var/lib/docker: 用于持久化容器相关的数据，比如容器镜像、容器可写层数据、容器标准日志输出、通过 docker 创建的 volume 等。
+/var/lib/kubelet: 用于存储插件信息、Pod 相关的状态以及挂载的 volume (比如 emptyDir, ConfigMap, Secret)。
+
+基于Alpine Linux的Docker基础镜像的镜像文件很小， 镜像文件很小是有很大的优势的，这意味这下载的时间大大缩小了。
+但是，基于Alpine Linux的Docker基础镜像的镜像文件很小，也有代价：
+1. 把glibc替换为了musl libc，但是musl libc不支持国际化和本地化， 所以你想显示中文(比如打印中文日志)，还得安装glibc。
+2. 把bash替换为了ash，但是ash不支持数组特性， 但是，我们大多数已经写好的脚本，基本上是以bash为标准的。
+
+bgkyofuscrprbggi
+
+kubectl drain 172.16.21.26 --delete-local-data --ignore-daemonsets --force 
+–delete-local-data: 即使pod使用了emptyDir也删除
+–ignore-daemonsets: 忽略deamonset控制器的pod，如果不忽略，deamonset控制器控制的pod被删除后可能马上又在此节点上启动起来,会成为死循环；
+–force: 不加force参数只会删除该NODE上由ReplicationController, ReplicaSet, DaemonSet,StatefulSet or Job创建的Pod，加了后还会删除’裸奔的pod’(没有绑定到任何replication controller)
+
+目前kubernetes中存在两种eviction机制，分别由kube-controller-manager和kubelet实现。
+kube-controller-manager主要由多个控制器构成，而eviction的功能主要由node controller这个控制器实现。该Eviction会周期性检查所有节点状态，当节点处于NotReady状态超过一段时间后，驱逐该节点上所有pod。
+如果节点处于资源压力，那么kubelet就会执行驱逐策略。驱逐会考虑Pod的优先级，资源使用和资源申请。当优先级相同时，资源使用/资源申请最大的Pod会被首先驱逐。
+kube-controller-manager的eviction机制是粗粒度的，即驱赶一个节点上的所有pod，而kubelet则是细粒度的，它驱赶的是节点上的某些Pod，驱赶哪些Pod与Pod的Qos机制有关。该Eviction会周期性检查本节点内存、磁盘等资源，当资源不足时，按照优先级驱逐部分pod。
+如果是由kube-controller-manager触发的驱逐，会留下一个状态为Terminating的pod；直到容器所在节点状态恢复后，pod才会自动删除。如果节点已经删除或者其他原因导致的无法恢复，可以使用“强制删除”删除pod。
+如果是由kubelet触发的驱逐，会留下一个状态为Evicted的pod，此pod只是方便后期定位的记录，可以直接删除
+kubectl get pods <namespace> | grep Evicted | awk '{print $1}' | xargs kubectl delete pod <namespace>

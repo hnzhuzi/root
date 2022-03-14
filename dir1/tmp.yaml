@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  index.html: |
+    k8s 1.12.6
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2021-12-15T10:46:30Z
+  name: nginx
+  namespace: default
+  resourceVersion: "1528"
+  selfLink: /api/v1/namespaces/default/configmaps/nginx
+  uid: 431fd1a2-5d94-11ec-b360-000c299231ca

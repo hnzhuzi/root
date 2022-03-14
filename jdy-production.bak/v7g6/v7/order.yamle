@@ -1,0 +1,94 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: v7-order-bosv1
+  namespace: ns-v7g6
+  labels:
+    k8s-app: v7-order-bosv1
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s-app: v7-order-bosv1
+  template:
+    metadata:
+      labels:
+        k8s-app: v7-order-bosv1
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: v7-order-bosv1
+        image: 10.190.2.171/v7/order:v2.0.100_v2.0.309_v4.6.14
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+        - name : configUrl
+          value: 10.190.2.181:2181,10.190.2.182:2181,10.190.2.183:2181
+        - name : JVM_OPTS
+          value: "-server -XX:+UseContainerSupport -Xms3g -Xmx3g -XX:MaxMetaspaceSize=512M -XX:+DisableExplicitGC -XX:InitiatingHeapOccupancyPercent=60 -Duser.timezone=GMT+8 -Dfile.encoding=UTF-8 -XX:CompressedClassSpaceSize=128m -XX:NativeMemoryTracking=detail -javaagent:/jmx_prometheus_javaagent-0.15.0.jar=3010:/jmx_exporter.yml -javaagent:/usr/local/ppagent/pinpoint-bootstrap-2.0.4.jar -Dpinpoint.applicationName=ns-v7g6 -Dpinpoint.agentId=order"
+        - name : clusterName
+          value: ns-v7g6
+        - name : sentinelDashboardServer
+          value: "sentinel-dashboard:8888"
+        resources:
+          limits:
+            cpu: 3000m
+            memory: 4500Mi
+          requests:
+            cpu: 1000m
+            memory: 2000Mi
+        ports:
+        - name: web
+          containerPort: 20880
+        - name: health
+          containerPort: 9998
+        - name: jmx
+          containerPort: 3010
+        livenessProbe:
+          httpGet:
+            path: /monitor/healthDubbo
+            port: health
+          failureThreshold: 3
+          initialDelaySeconds: 70
+          periodSeconds: 10
+          timeoutSeconds: 2
+        readinessProbe:
+          httpGet:
+            path: /monitor/healthDubbo
+            port: health
+          failureThreshold: 3
+          initialDelaySeconds: 50
+          periodSeconds: 6
+          timeoutSeconds: 2
+      serviceAccountName: sa-v7g6
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v7-order-bosv1
+  namespace: ns-v7g6
+  labels:
+    k8s-app: v7-order-bosv1
+    prometheus: jvm
+spec:
+  selector:
+    k8s-app: v7-order-bosv1
+  ports:
+  - name: web 
+    port: 20880
+    targetPort: 20880
+  - name: jmx
+    port: 3010
+    targetPort: 3010

@@ -1,0 +1,113 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{},"name":"zk","namespace":"ns-v7g7"},"spec":{"podManagementPolicy":"OrderedReady","replicas":3,"selector":{"matchLabels":{"app":"zk"}},"serviceName":"zk-hs","template":{"metadata":{"labels":{"app":"zk"}},"spec":{"containers":[{"command":["sh","-c","start-zookeeper           --servers=3           --data_dir=/var/lib/zookeeper/data           --data_log_dir=/var/lib/zookeeper/data/log           --conf_dir=/opt/zookeeper/conf           --client_port=2181           --election_port=3888           --server_port=2888           --tick_time=2000           --init_limit=10           --sync_limit=5           --heap=512M           --max_client_cnxns=100           --snap_retain_count=3           --purge_interval=12           --max_session_timeout=60000           --min_session_timeout=5000           --log_level=INFO"],"image":"10.190.2.171/base/zookeeper:3.4.10","imagePullPolicy":"IfNotPresent","livenessProbe":{"exec":{"command":["sh","-c","zookeeper-ready 2181"]},"initialDelaySeconds":10,"timeoutSeconds":5},"name":"zk","ports":[{"containerPort":2181,"name":"client"},{"containerPort":2888,"name":"server"},{"containerPort":3888,"name":"leader-election"}],"readinessProbe":{"exec":{"command":["sh","-c","zookeeper-ready 2181"]},"initialDelaySeconds":10,"timeoutSeconds":5},"resources":{"limits":{"cpu":3,"memory":"2Gi"},"requests":{"cpu":1,"memory":"2Gi"}},"volumeMounts":[{"mountPath":"/var/lib/zookeeper","name":"datadir"}]}],"imagePullSecrets":[{"name":"regsecret"}],"serviceAccountName":"sa-v7g7"}},"updateStrategy":{"type":"RollingUpdate"},"volumeClaimTemplates":[{"metadata":{"name":"datadir"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"10Gi"}},"storageClassName":"g7-midware-nas"}}]}}
+  creationTimestamp: 2020-11-27T08:26:23Z
+  generation: 1
+  name: zk
+  namespace: ns-v7g7
+  resourceVersion: "168024521"
+  selfLink: /apis/apps/v1/namespaces/ns-v7g7/statefulsets/zk
+  uid: 3bef5e00-308a-11eb-9991-00163e0fd0a4
+spec:
+  podManagementPolicy: OrderedReady
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: zk
+  serviceName: zk-hs
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: zk
+    spec:
+      containers:
+      - command:
+        - sh
+        - -c
+        - start-zookeeper           --servers=3           --data_dir=/var/lib/zookeeper/data           --data_log_dir=/var/lib/zookeeper/data/log           --conf_dir=/opt/zookeeper/conf           --client_port=2181           --election_port=3888           --server_port=2888           --tick_time=2000           --init_limit=10           --sync_limit=5           --heap=512M           --max_client_cnxns=100           --snap_retain_count=3           --purge_interval=12           --max_session_timeout=60000           --min_session_timeout=5000           --log_level=INFO
+        image: 10.190.2.171/base/zookeeper:3.4.10
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - zookeeper-ready 2181
+          failureThreshold: 3
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: zk
+        ports:
+        - containerPort: 2181
+          name: client
+          protocol: TCP
+        - containerPort: 2888
+          name: server
+          protocol: TCP
+        - containerPort: 3888
+          name: leader-election
+          protocol: TCP
+        readinessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - zookeeper-ready 2181
+          failureThreshold: 3
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: "3"
+            memory: 2Gi
+          requests:
+            cpu: "1"
+            memory: 2Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/zookeeper
+          name: datadir
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: regsecret
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: sa-v7g7
+      serviceAccountName: sa-v7g7
+      terminationGracePeriodSeconds: 30
+  updateStrategy:
+    type: RollingUpdate
+  volumeClaimTemplates:
+  - metadata:
+      creationTimestamp: null
+      name: datadir
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      dataSource: null
+      resources:
+        requests:
+          storage: 10Gi
+      storageClassName: g7-midware-nas
+    status:
+      phase: Pending
+status:
+  collisionCount: 0
+  currentReplicas: 3
+  currentRevision: zk-765976bf96
+  observedGeneration: 1
+  readyReplicas: 3
+  replicas: 3
+  updateRevision: zk-765976bf96
+  updatedReplicas: 3

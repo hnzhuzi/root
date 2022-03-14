@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jdy-tf-message
+  namespace: ns-basesvc
+  labels:
+    k8s-app: jdy-tf-message
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      k8s-app: jdy-tf-message
+  template:
+    metadata:
+      labels:
+        k8s-app: jdy-tf-message
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: jdy-tf-message
+        image: 10.190.2.171/v7/jdy-tf-message:v1.1.22
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+             exec:
+              command: ["/bin/bash", "-c", "PID=`ps -ef | grep java| grep -v grep | awk '{print $2}'` && kill -SIGTERM $PID && while ps -p $PID > /dev/null; do sleep 1; done;"]
+        env:
+          - name : JAVA_OPTIONS
+            value: "-Xms1500M -Xmx1500M -Dapollo.meta=http://10.190.2.165:8080,http://10.190.2.166:8080 -Dapp.id=jdy-tf-message  -javaagent:/jmx_prometheus_javaagent-0.15.0.jar=3010:/jmx_exporter.yml"
+          - name : k8s_namespace
+            value: master
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2000Mi
+          requests:
+            cpu: 300m
+            memory: 1500Mi
+        ports:
+        - name: web 
+          containerPort: 6113
+        - name: jmx 
+          containerPort: 3010
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jdy-tf-message
+  namespace: ns-basesvc
+  labels:
+    k8s-app: jdy-tf-message
+    prometheus: jvm
+spec:
+  selector:
+    k8s-app: jdy-tf-message
+  ports:
+  - name: web
+    port: 6113
+    targetPort: 6113
+  - name: jmx 
+    port: 3010
+    targetPort: 3010

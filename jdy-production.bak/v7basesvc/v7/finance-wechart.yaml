@@ -1,0 +1,48 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: finance-wechart
+  namespace: ns-basesvc
+  labels:
+    k8s-app: finance-wechart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s-app: finance-wechart
+  template:
+    metadata:
+      labels:
+        k8s-app: finance-wechart
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+    spec:
+      containers:
+      - name: finance-wechart
+        image: 10.190.2.171/v7/finance-wechart:20201225.10.04
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 200m
+            memory: 200Mi
+        ports:
+      serviceAccountName: sa-basesvc
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: finance-wechart
+  namespace: ns-basesvc
+  labels:
+    k8s-app: finance-wechart
+spec:
+  selector:
+    k8s-app: finance-wechart
+  ports:
+  - port: 80

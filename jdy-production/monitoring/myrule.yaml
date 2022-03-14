@@ -1,0 +1,223 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    app: ack-prometheus-operator
+    chart: ack-prometheus-operator-5.7.0
+    heritage: Tiller
+    release: ack-prometheus-operator
+  name: ack-prometheus-my.rules
+  namespace: monitoring
+spec:
+  groups:
+  - name: node-alert.rules
+    rules:
+    - alert: AverageNodeCPURequestedHigh
+      annotations:
+        description: 'Average Node CPU Requested above 80% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: sum(kube_pod_container_resource_requests{resource="cpu",unit="core"}) / sum(kube_node_status_allocatable{resource="cpu",unit="core"}) * 100 > 80
+      for: 5m
+      labels:
+        severity: warning
+    - alert: AverageNodeMemoryRequestedHigh
+      annotations:
+        description: 'Average Node Memory Requested above 80% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: sum(kube_pod_container_resource_requests{resource="memory", unit="byte"}) / sum(kube_node_status_allocatable{resource="memory",unit="byte"}) * 100 > 80
+      for: 5m
+      labels:
+        severity: warning
+    - alert: AverageNodeCPUUsedHigh
+      annotations:
+        description: 'Average Node CPU Used above 60% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: (sum(rate(container_cpu_usage_seconds_total{id='/'}[2m])) / sum(kube_node_status_allocatable{resource='cpu',unit='core'})) * 100 > 60
+      for: 5m
+      labels:
+        severity: warning
+    - alert: AverageNodeMemoryUsedHigh
+      annotations:
+        description: 'Average Node Memory Used above 60% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: sum(container_memory_working_set_bytes{container_name!="", container_name!="POD"}) / sum(kube_node_status_allocatable{resource="memory",unit="byte"}) * 100 > 60
+      for: 5m
+      labels:
+        severity: warning
+    - alert: NodeHighCPUUsage
+      annotations:
+        description: 'Node: {{ $labels.instance }} CPU Used above 85% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: (1 - avg by(instance, job) (irate(node_cpu_seconds_total{job=~"node-exporter",mode="idle"}[5m]))) * 100 > 85
+      for: 5m
+      labels:
+        severity: warning
+    - alert: NodeCPULoadHigh
+      annotations:
+        description: 'Node: {{ $labels.instance }} Average CPU Load above 2 (current value: {{ printf "%0.2f" $value }})'
+      expr: sum by(instance) (node_load1) / count by (instance) (node_cpu_seconds_total{mode="system"}) > 2
+      for: 10m
+      labels:
+        severity: warning          
+    - alert: NodeHighMemUsage
+      annotations:
+        description: 'Node: {{ $labels.instance }} Memory Used above 85% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: 100 - ((node_memory_MemFree_bytes{job="node-exporter"} + node_memory_Cached_bytes{job="node-exporter"} + node_memory_Buffers_bytes{job="node-exporter"}) / node_memory_MemTotal_bytes{job="node-exporter"}) * 100 > 85
+      for: 5m
+      labels:
+        severity: warning
+    - alert: NodeFilesystemReadonly
+      annotations:
+        description: 'Node: {{ $labels.instance }} mountpoint: {{ $labels.device }} {{ $labels.mountpoint }} is readonly.'
+      expr: sum by(device, instance, mountpoint) (node_filesystem_readonly{device!~"tmpfs|lxcfs",mountpoint!~"/run.*"}) > 0
+      for: 5m
+      labels:
+        severity: warning
+    - alert: NodeCPUiowaitHigh
+      annotations:
+        description: 'Node: {{ $labels.instance }} CPU IoWait above 30% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: avg by(instance) (irate(node_cpu_seconds_total{mode="iowait"}[1m])) * 100 > 30
+      for: 5m
+      labels:
+        severity: warning
+    - alert: NodeDiskIOHigh
+      annotations:
+        description: 'Node: {{ $labels.instance }} Disk io utilisation above 95% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: node:node_disk_utilisation:avg_irate * 100 > 95
+      for: 5m
+      labels:
+        severity: warning      
+    - alert: NodeConditionAbnormal
+      annotations:
+        description: 'Node: {{ $labels.node }} encounter {{ $labels.condition }}, please check it!'
+      expr: sum by (condition, node, status) (kube_node_status_condition{condition!~"Ready", status="true"}) > 0
+      for: 5m
+      labels:
+        severity: warning   
+    - alert: NodeConditionUnknown
+      annotations:
+        description: 'Node: {{ $labels.node }} encounter {{ $labels.condition }}={{ $labels.status }}, node may hang up, please check it!'
+      expr: sum by(condition, node, status) (kube_node_status_condition{condition!~"Ready",status="unknown"}) > 0
+      for: 5m
+      labels:
+        severity: warning       
+    - alert: NodeNotReady
+      annotations:
+        description: 'Node: {{ $labels.node }} has been unready for more than 5 minutes.'
+      expr: kube_node_status_condition{condition="Ready",job="kube-state-metrics",status="true"} == 0
+      for: 5m
+      labels:
+        severity: warning       
+    - alert: NodeReadinessFlapping
+      annotations:
+        description: 'Node: {{ $labels.node }} Readines state changes {{ $value }} times in the last 15 minutes.'
+      expr: sum(changes(kube_node_status_condition{status="true",condition="Ready"}[15m])) by (node) > 2
+      for: 0m
+      labels:
+        severity: warning
+    - alert: NodeUnreachable
+      annotations:
+        description: 'Node: {{ $labels.node }} is Unreachable'
+      expr: kube_node_spec_taint{job="kube-state-metrics",key="node.kubernetes.io/unreachable",effect="NoSchedule"} == 1
+      for: 5m
+      labels:
+        severity: warning
+    - alert: NodeUnschedulable
+      annotations:
+        description: 'Node: {{ $labels.node }} is Unschedulable'
+      expr: kube_node_spec_unschedulable == 1
+      for: 5m
+      labels:
+        severity: warning
+    - alert: NodeHighNumberConntrackEntriesUsed
+      annotations:
+        description: 'Node: {{ $labels.instance }} Conntrack Entries Used above 80% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: (node_nf_conntrack_entries / node_nf_conntrack_entries_limit) * 100 > 80
+      for: 5m
+      labels:
+        severity: warning       
+
+  - name: pod-alert.rules
+    rules:
+    - alert: PodCodeCacheUsedHigh
+      annotations:
+        description: 'Pod: {{ $labels.namespace }}/{{ $labels.pod }} Code Cache usage above 95% (current value: {{ printf "%0.2f" $value }}%)'
+      expr: jvm_memory_pool_bytes_committed{pool="Code Cache"}/jvm_memory_pool_bytes_max{pool="Code Cache"}*100 > 95
+      for: 10m
+      labels:
+        severity: warning
+    - alert: PodCPUUsageHigh
+      annotations:
+        description: 'Pod: {{ $labels.namespace }}/{{ $labels.pod_name }} CPU usage above 2000 (current value: {{ printf "%0.2f" $value }}%)'
+      expr: sum by(namespace, pod_name) (rate(container_cpu_usage_seconds_total{image!="",pod_name!~"(.*)prometheus(.*)"}[1m])) * 1000 > 2000
+      for: 10m
+      labels:
+        severity: warning
+    - alert: PodCPUUsageExceed
+      annotations:
+        description: 'Pod: {{ $labels.namespace }}/{{ $labels.pod_name }} CPU usage above 100% CPU Limit (current value: {{ printf "%0.2f" $value }}%)'
+      expr: 100 * (sum(rate(container_cpu_usage_seconds_total{pod_name!~"(.*)prometheus(.*)", image!=""}[1m])) by (namespace,pod_name) / sum(label_replace(kube_pod_container_resource_limits_cpu_cores, "pod_name", "$1", "pod", "(.*)")) by (namespace,pod_name)) > 100
+      for: 10m
+      labels:
+        severity: warning
+    - alert: PodMemUsageExceed
+      annotations:
+        description: 'Pod: {{ $labels.namespace }}/{{ $labels.pod_name }} Memory usage above 99.8% Memory Limit (current value: {{ printf "%0.2f" $value }}%)'
+      expr: 100 * (sum(container_memory_working_set_bytes{pod_name!~"(.*)prometheus(.*)", image!=""}) by (namespace,pod_name) / sum(label_replace(kube_pod_container_resource_limits_memory_bytes, "pod_name", "$1", "pod", "(.*)")) by (namespace,pod_name)) > 99.8
+      for: 10m
+      labels:
+        severity: warning
+    - alert: PodNotRunning
+      annotations:
+        description: 'Pod: {{ $labels.namespace }}/{{ $labels.pod }} has been in a non-running state(current state: {{ $labels.phase }})'
+      expr: sum by(namespace, pod, phase) (kube_pod_status_phase{phase!~"Running|Succeeded"}) > 0
+      for: 5m
+      labels:
+        severity: warning
+    - alert: PodNotReady
+      annotations:
+        description: 'Pod: {{ $labels.namespace }}/{{ $labels.pod }} has been in a non-ready state for longer than 5 minutes.'
+      expr: min_over_time(sum by (namespace, pod) (kube_pod_status_phase{phase=~"Pending|Unknown|Failed"})[5m:30s]) > 0
+      for: 0m
+      labels:
+        severity: warning
+    - alert: PodRestart
+      annotations:
+        description: 'Pod: {{ $labels.namespace }}/{{ $labels.pod }} restart {{ $value }} times'
+      expr: sum (floor (increase (kube_pod_container_status_restarts_total{}[2m]))) by (namespace,pod) > 0
+      for: 0m
+      labels:
+        severity: warning
+    - alert: PodRestartNamespace
+      annotations:
+        description: '{{ $labels.namespace }} restart {{ $value }} pods in the last 10 minutes'
+      expr: count (increase (kube_pod_container_status_restarts_total{}[10m]) != 0) by (namespace) > 4
+      for: 0m
+      labels:
+        severity: warning
+    - alert: PodOOMKiller
+      annotations:
+        description: 'Pod: {{ $labels.namespace }}/{{ $labels.pod }} has been OOMKilled {{ $value }} times in the last 5 minutes.'
+      expr: (kube_pod_container_status_restarts_total - kube_pod_container_status_restarts_total offset 5m >= 1) and ignoring (reason) min_over_time(kube_pod_container_status_last_terminated_reason{reason="OOMKilled"}[5m]) == 1
+      for: 0m
+      labels:
+        severity: warning
+    - alert: PVCPending
+      annotations:
+        description: 'PersistentVolumeClaim {{ $labels.namespace }}/{{ $labels.persistentvolumeclaim }} is pending'
+      expr: kube_persistentvolumeclaim_status_phase{phase="Pending"} == 1
+      for: 5m
+      labels:
+        severity: warning
+
+  - name: component-alert.rules
+    rules:
+    - alert: AllCoreDnsDown
+      annotations:
+        description: 'All CoreDns are down or have disappeared from Prometheus target discovery.'
+      expr: absent(up{job="coredns"} == 1)
+      for: 5m
+      labels:
+        severity: warning        
+    - alert: CoreDnsDown
+      annotations:
+        description: 'CoreDns down on node Node: {{ $labels.instance }}'
+      expr: up{job="coredns"} == 0
+      for: 5m
+      labels:
+        severity: warning             

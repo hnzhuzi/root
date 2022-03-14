@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: cq-qing-pv
+  namespace: ns-v7yqy
+  labels:
+    pv: cq-qing-pv
+spec:
+  capacity:
+    storage: 50Gi
+ # storageClassName: qing-nas
+  accessModes:
+    - ReadWriteMany
+  flexVolume:
+    driver: "alicloud/nas"
+    options:
+      server: "00abc4a7-iteq.cn-hangzhou.extreme.nas.aliyuncs.com"
+      path: "/share/data/QingStorageCloud"
+      vers: "3"
+      options: "nolock,tcp,noresvport"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cq-qing-pvc
+  namespace: ns-v7yqy
+spec:
+  accessModes:
+    - ReadWriteMany
+ # storageClassName: qing-nas
+  resources:
+    requests:
+      storage: 50Gi
+  selector:
+    matchLabels:
+      pv: cq-qing-pv
+---
